@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<!--
+		You don't need complicated code to make a nice website. Y'dig?
+
+		Anyway, this site is pretty threadbare. If you're a web designer who has
+		ever tried to make their own website you'd know why; the constant want to
+		change everything all the time can be paralysing at the best of times and
+		a distraction from what you should be doing at the worst. So I'm just
+		keeping it simple for the time being. Sorry if you expected something more.
+		We're still cool, right?
+
+		If you want to know more about my actual work, contact me via one of those
+		cool links below.
+	-->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:900&amp;text=キンブリ・グレ">
+	<style>
+		html,
+		body {
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			background-color: rgb(251, 159, 251);
+			background-image: linear-gradient(to bottom right, rgb(251, 159, 251), rgb(86, 240, 242));
+			font-family: monospace;
+			overflow: hidden;
+			perspective: 6vw;
+
+		}
+		body::before,
+		body::after {
+			content: '';
+			width: 100vw;
+			position: absolute;
+		}
+		body::before {
+			height: 100vh;
+			top: 0;
+			background-image: repeating-linear-gradient(to bottom, transparent, transparent 6px, rgba(255, 255, 255, .1) 6px, rgba(255, 255, 255, .1) 12px);
+		}
+		body::after {
+			height: 50vh;
+			bottom: 0;
+			background-color: rgb(100, 86, 250);
+			background-image:
+				repeating-linear-gradient(to bottom, transparent, transparent 25px, rgb(206, 160, 246) 25px, rgb(206, 160, 246) 26px),
+				repeating-linear-gradient(to right, transparent, transparent 25px, rgb(206, 160, 246) 25px, rgb(206, 160, 246) 26px)
+			;
+			background-position: center;
+			transform: rotateX(60deg) scaleX(16.667); /* 100 / (vw perspective on body element) */
+			animation: comeAlong .33s linear infinite;
+			opacity: .74;
+		}
+		.wrapper {
+			padding: 8% 5%;
+			position: relative;
+			z-index: 1;
+			color: #fff;
+			text-align: center;
+		}
+		.name {
+			margin: 0;
+			background-image: radial-gradient(closest-side, rgba(251, 159, 251, .46), transparent);
+			font-family: 'Noto Sans JP', sans-serif;
+			font-size: 10vmin;
+			font-weight: bold;
+			text-shadow: -4px -4px 0 rgba(251, 159, 251, .5), 4px 4px 0 rgba(86, 240, 242, .5);
+			line-height: 1;
+			white-space: nowrap;
+			animation: likeADream 4.62s ease-in-out infinite;
+		}
+		.name__part {
+			display: inline-flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		.name__translation,
+		.description,
+		.contact {
+			font-family: monospace;
+			font-weight: normal;
+		}
+		.description,
+		.contact {
+			margin-top: 8%;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 0 rgba(251, 159, 251, .76);
+		}
+		.description {
+			padding-left: 1vw;
+			font-size: 2vmax;
+			letter-spacing: 1vw;
+		}
+		.contact {
+			margin-bottom: 0;
+			padding: 0;
+			font-size: 1.25vmax;
+			list-style-type: none;
+		}
+		.contact li {
+			display: inline-block;
+		}
+		.contact li + li::before {
+			content: '\00B7';
+			margin-right: .5em;
+		}
+		.contact a {
+			display: inline-block;
+			color: inherit;
+			text-shadow: 2px 2px 0 rgba(251, 159, 251, .76);
+			transform: translateY(0);
+			transition-property: text-shadow, transform;
+			transition-duration: .33s;
+			transition-timing-function: linear;
+		}
+		.contact a:hover,
+		.contact a:focus {
+			transform: scale(1.25);
+			text-shadow: 1px 1px 0 rgba(86, 240, 242, .76), 2px 2px 0 rgba(86, 240, 242, .66), 3px 3px 0 rgba(86, 240, 242, .56);
+		}
+		@keyframes comeAlong {
+			0% { background-position: 0 0; }
+			100% { background-position: 0 26px; }
+		}
+		@keyframes likeADream {
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-2vh);
+			}
+		}
+	</style>
+	<title>Kimberly Grey - website and UI designer in Bristol</title>
+</head>
+<body>
+	
+	<div class="wrapper">
+		<h1 class="name" lang="jp">
+			<ruby class="name__part"><span>キンブリ</span><rt class="name__translation" lang="en">Kimberly</rt></ruby>・<ruby class="name__part"><span>グレ</span><rt class="name__translation" lang="en">Grey</rt></ruby>
+		</h1>
+		<div class="description">Website/UI designer</div>
+		<ul class="contact">
+			<li><a href="mailto:hi@berly.kim">hi@berly.kim</a></li>
+			<li><a href="https://twitter.com/kimpegasus">Twitter</a></li>
+			<li><a href="https://github.com/querkmachine">GitHub</a></li>
+			<li><a href="https://www.linkedin.com/in/querkmachine/">LinkedIn</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>
