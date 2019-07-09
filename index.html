@@ -16,38 +16,47 @@
 		cool links below.
 	-->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:900&amp;text=キンブリ・グレ">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:900&amp;text=キンブリ・グレ&amp;display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323&display=swap">
 	<style>
 		html,
 		body {
-			height: 100vh;
 			margin: 0;
 			padding: 0;
+			font-family: VT323, monospace;
+			font-size: 110%;
 		}
-		body {
+		.name__translation,
+		.description,
+		.contact,
+		.clients {
+			font-family: VT323, monospace;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+		.header {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			height: 100vh;
 			position: relative;
 			background-color: rgb(251, 159, 251);
 			background-image: linear-gradient(to bottom right, rgb(251, 159, 251), rgb(86, 240, 242));
-			font-family: monospace;
 			overflow: hidden;
 			perspective: 6vw;
-
 		}
-		body::before,
-		body::after {
+		.header::before,
+		.header::after {
 			content: '';
 			width: 100vw;
 			position: absolute;
 		}
-		body::before {
+		.header::before {
 			height: 100vh;
 			top: 0;
 			background-image: repeating-linear-gradient(to bottom, transparent, transparent 6px, rgba(255, 255, 255, .1) 6px, rgba(255, 255, 255, .1) 12px);
 		}
-		body::after {
+		.header::after {
 			height: 50vh;
 			bottom: 0;
 			background-color: rgb(100, 86, 250);
@@ -60,7 +69,7 @@
 			animation: comeAlong .33s linear infinite;
 			opacity: .74;
 		}
-		.wrapper {
+		.inner {
 			padding: 8% 5%;
 			position: relative;
 			z-index: 1;
@@ -71,8 +80,8 @@
 			margin: 0;
 			background-image: radial-gradient(closest-side, rgba(251, 159, 251, .46), transparent);
 			font-family: 'Noto Sans JP', sans-serif;
-			font-size: 10vmin;
-			font-weight: bold;
+			font-size: 12vmin;
+			font-weight: 900;
 			text-shadow: -4px -4px 0 rgba(251, 159, 251, .5), 4px 4px 0 rgba(86, 240, 242, .5);
 			line-height: 1;
 			white-space: nowrap;
@@ -83,27 +92,20 @@
 			flex-direction: column-reverse;
 			align-items: center;
 		}
-		.name__translation,
-		.description,
-		.contact {
-			font-family: monospace;
-			font-weight: normal;
-		}
 		.description,
 		.contact {
 			margin-top: 8%;
-			text-transform: uppercase;
 			text-shadow: 2px 2px 0 rgba(251, 159, 251, .76);
 		}
 		.description {
 			padding-left: 1vw;
-			font-size: 2vmax;
+			font-size: 3vmax;
 			letter-spacing: 1vw;
 		}
 		.contact {
 			margin-bottom: 0;
 			padding: 0;
-			font-size: 1.25vmax;
+			font-size: 2vmax;
 			list-style-type: none;
 		}
 		.contact li {
@@ -127,6 +129,41 @@
 			transform: scale(1.25);
 			text-shadow: 1px 1px 0 rgba(86, 240, 242, .76), 2px 2px 0 rgba(86, 240, 242, .66), 3px 3px 0 rgba(86, 240, 242, .56);
 		}
+		.clients {
+			padding: 8%;
+			color: #fff;
+			background-color: rgb(229, 159, 225);
+			background-image: 
+				url(data:image/png;base64,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),
+				linear-gradient(to bottom, rgb(229, 159, 225), rgb(223, 111, 210));
+			background-size: auto, 100% 100%;
+			background-repeat: repeat, no-repeat;
+			text-align: center;
+		}
+		.clients__title {
+			font-weight: 400;
+		}
+		.clients__list {
+			margin: 0;
+			padding: 0;
+			column-width: 14rem;
+			column-gap: 2rem;
+			list-style-type: none;
+			line-height: 1.2;
+		}
+		.clients__item {
+			display: block;
+			padding-top: 1.2em;
+			-webkit-column-break-inside: avoid;
+			break-inside: avoid-column;
+		}
+		.blinker {
+			display: inline-block;
+			width: .4em;
+			height: .7em;
+			background-color: rgb(86, 240, 242);
+			animation: noSleep 1.5s steps(5, start) infinite;
+		}
 		@keyframes comeAlong {
 			0% { background-position: 0 0; }
 			100% { background-position: 0 26px; }
@@ -140,23 +177,56 @@
 				transform: translateY(-2vh);
 			}
 		}
+		@keyframes noSleep {
+			to { visibility: hidden; }
+		}
 	</style>
 	<title>Kimberly Grey - website and UI designer in Bristol</title>
 </head>
 <body>
-	
-	<div class="wrapper">
-		<h1 class="name" lang="jp">
-			<ruby class="name__part"><span>キンブリ</span><rt class="name__translation" lang="en">Kimberly</rt></ruby>・<ruby class="name__part"><span>グレ</span><rt class="name__translation" lang="en">Grey</rt></ruby>
-		</h1>
-		<div class="description">Website/UI designer</div>
-		<ul class="contact">
-			<li><a href="mailto:hi@berly.kim">hi@berly.kim</a></li>
-			<li><a href="https://twitter.com/kimpegasus">Twitter</a></li>
-			<li><a href="https://github.com/querkmachine">GitHub</a></li>
-			<li><a href="https://www.linkedin.com/in/querkmachine/">LinkedIn</a></li>
+	<header class="header">
+		<div class="inner">
+			<h1 class="name" lang="jp">
+				<ruby class="name__part"><span>キンブリ</span><rt class="name__translation" lang="en">Kimberly</rt></ruby>・<ruby class="name__part"><span>グレ</span><rt class="name__translation" lang="en">Grey</rt></ruby>
+			</h1>
+			<div class="description">Website/UI developer</div>
+			<ul class="contact">
+				<li><a href="mailto:hi@berly.kim">hi@berly.kim</a></li>
+				<li><a href="https://twitter.com/kimpegasus">Twitter</a></li>
+				<li><a href="https://github.com/querkmachine">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/querkmachine/">LinkedIn</a></li>
+			</ul>
+		</div>
+	</header>
+	<section class="clients">
+		<header class="clients__header">
+			<h2 class="clients__title">I've done some stuff with folks like these<span class="blinker" aria-hidden="true"></span></h2>
+		</header>
+		<ul class="clients__list">
+			<li class="clients__item">Arcadia Spectacular</li>
+			<li class="clients__item">BACP</li>
+			<li class="clients__item">The BMJ</li>
+			<li class="clients__item">College of Policing</li>
+			<li class="clients__item">Continental Tyres</li>
+			<li class="clients__item">Consol</li>
+			<li class="clients__item">Drinkaware</li>
+			<li class="clients__item">Heineken</li>
+			<li class="clients__item">Jack Daniel's</li>
+			<li class="clients__item">The Kennel Club</li>
+			<li class="clients__item">LBD Vodka</li>
+			<li class="clients__item">Macmillan</li>
+			<li class="clients__item">MINI</li>
+			<li class="clients__item">Rolls-Royce Motor Cars</li>
+			<li class="clients__item">The Royal Photographic Society</li>
+			<li class="clients__item">Southern Comfort</li>
+			<li class="clients__item">Ski Club of Great Britain</li>
+			<li class="clients__item">The Space</li>
+			<li class="clients__item">Stila</li>
+			<li class="clients__item">Virgin Atlantic</li>
 		</ul>
-	</div>
-
+	</section>
+	<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.23.6'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 </body>
 </html>
