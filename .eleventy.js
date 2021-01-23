@@ -1,6 +1,4 @@
 const { DateTime } = require("luxon");
-const sass = require("sass");
-const fs = require("fs");
 
 const pluginImages = require("@11ty/eleventy-img");
 const pluginNavigation = require("@11ty/eleventy-navigation");
@@ -57,6 +55,7 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  // Date formats
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "d LLLL yyyy"
@@ -65,11 +64,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
-  });
-
-  // min filter
-  eleventyConfig.addFilter("min", (...numbers) => {
-    return Math.min.apply(null, numbers);
   });
 
   // Get the first `n` elements of a collection.
