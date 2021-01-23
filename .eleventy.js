@@ -1,14 +1,20 @@
 const { DateTime } = require("luxon");
+const sass = require("sass");
+const fs = require("fs");
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginImages = require("@11ty/eleventy-img");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginSass = require("eleventy-plugin-sass");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   // Load plugins
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginSass, {
+    outputDir: "./_site/",
+  });
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   // Global settings
@@ -23,10 +29,10 @@ module.exports = function (eleventyConfig) {
         throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
       }
 
-      let metadata = await Image(src, {
-        widths: [300, 600, 900],
+      let metadata = await pluginImages(src, {
+        widths: [300, 600, 900, null],
         formats: ["webp", "jpeg"],
-        urlPath: "./images/",
+        urlPath: "/images/",
         outputDir: "./_site/images/",
       });
 
@@ -75,5 +81,5 @@ module.exports = function (eleventyConfig) {
   });
 
   // Layouts
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("blog-post", "layouts/blog-post.njk");
 };

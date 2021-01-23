@@ -1,5 +1,6 @@
 ---
 title: Consolidating all of my existing blogs into one easy to manage personal place
+date: 2020-10-18
 tags: [random]
 ---
 

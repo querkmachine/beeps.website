@@ -1,5 +1,6 @@
 ---
 title: The deed is done
+date: 2015-08-29
 tags: [transition]
 ---
 

@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+
+<main>
+	<article>
+		<h1>{{ title }}</h1>
+		<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+		<div>
+			{{ content | safe }}
+		</div>
+	</article>
+</main>
