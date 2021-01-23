@@ -138,16 +138,22 @@ s {
 h1 {
   @include heading;
   @include font-size-jumbo;
+  page-break-after: avoid;
   strong {
     font-weight: inherit;
   }
 }
 
 h2 {
+  @include font-size-large;
   @include heading;
+  page-break-after: avoid;
 }
 
 h3 {
+  @include font-size-body;
+  font-weight: 700;
+  page-break-after: avoid;
 }
 
 p,
@@ -155,6 +161,7 @@ ul,
 ol,
 figure,
 blockquote,
+img,
 iframe {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
@@ -162,8 +169,8 @@ iframe {
 
 figcaption,
 blockquote {
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 figure {
@@ -171,6 +178,8 @@ figure {
   margin-left: 0;
   img {
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   figcaption {
     @include font-size-small;
@@ -186,6 +195,13 @@ ol {
   }
   ::marker {
     color: var(--global-text-color-secondary);
+  }
+  ul,
+  ol {
+    padding-left: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
   }
 }
 
