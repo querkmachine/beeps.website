@@ -1,0 +1,38 @@
+{
+  "name": "berly.kim",
+  "version": "2.0.0",
+  "description": "Kim's funky website.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx eleventy --serve",
+    "build": "npx eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/querkmachine/berly.kim.git"
+  },
+  "author": "Kimberly Grey <hi@berly.kim>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/querkmachine/berly.kim/issues"
+  },
+  "homepage": "https://github.com/querkmachine/berly.kim#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^0.6.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "husky": "^4.3.6",
+    "luxon": "^1.25.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

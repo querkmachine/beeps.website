@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+---
+
+<h1>Hi, I'm <strong>Kimberly Grey</strong>. I build websites and try to make the world a better place.</h1>
+
+<p>Kim (that's me!) is a Bristol-based front-end developer specialising in design systems, accessibility, and the semantic web.</p>
+<p>I currently work as the front-end developer and accessibility &amp; inclusivity advocate at <a href="//felinesoft.com">Felinesoft</a>.</p>
+
+<h2>A bit on the side</h2>
+<p>Select side projects separate from my actual job.</p>
+<ul>
+    <li><a href="//severnbronies.co.uk">Severn Bronies</a> &mdash; an open and inclusive social group that has met up (nearly) every week since 2012</li>
+    <li><a href="//placeponi.es">Placeponi.es</a> and <a href="//placeholder.rocks">Placeholder.rocks</a> &mdash; surprisingly popular placeholder image services</li>
+    <li><a href="//github.com/querkmachine/rainbow-dashboard">Rainbow Dashboard</a> &mdash; a home status dashboard built with Vue</li>
+    <li><a href="//github.com/querkmachine/kickstart8">Kickstart8</a> &mdash; a quick-start, Fractal-powered front-end design-system framework</li>
+    <li><a href="http://projects.greysadventures.com/lockdown/index.html">Lockdown restrictions</a> &mdash; informing folks about what they can and can't do in lockdown</li>
+</ul>
+
+<h2>Kim Does Blog</h2>
+<p>My assorted inane ramblings about virtually everything <em>except</em> web development.</p>
+
+{% set postslist = collections.blog | head(-5) %}
+{% set postslistCounter = collections.blog | length %}
+<ol>
+{% for post in postslist | reverse %}
+  <li>
+    <a href="{{ post.url | url }}" {%- if post.url == url %} aria-current="page"{% endif %}>
+    	{%- if post.data.title -%}
+    		{{ post.data.title }}
+    	{%- else -%}
+    		{{ post.url }}
+    	{%- endif -%}
+    </a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+{% endfor %}
+</ol>
+<a href="{{ '/blog/archive/' | url }}">All posts</a>
+
+<h2>Contact</h2>
+<ul>
+    <li><a href="mailto:hi@berly.kim">hi@berly.kim</a></li>
+    <li><a href="//github.com/querkmachine">GitHub</a></li>
+    <li><a href="//twitter.com/kimpegasus">Twitter</a></li>
+    <li><a href="//www.linkedin.com/in/querkmachine/">LinkedIn</a></li>
+</ul>

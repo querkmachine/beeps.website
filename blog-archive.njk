@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+permalink: "/blog/archive/"
+---
+
+<h1>Kim Does Blog</h1>
+{% set postslistCounter = collections.blog | length %}
+<ol>
+{% for post in collections.blog | reverse %}
+  <li>
+    <a href="{{ post.url | url }}" {%- if post.url == url %} aria-current="page"{% endif %}>
+      {%- if post.data.title -%}
+        {{ post.data.title }}
+      {%- else -%}
+        {{ post.url }}
+      {%- endif -%}
+    </a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+{% endfor %}
+</ol>
