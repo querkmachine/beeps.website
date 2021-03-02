@@ -12,16 +12,13 @@ $bp-desktop: 800px;
 
 :root {
   --global-text-color: #fff;
-  --global-text-color-secondary: #c3c6c8;
-  --global-background-color: #39414d;
+  --global-text-color-secondary: rgba(255, 255, 255, 0.69);
+  --global-background-color: #786999;
   --global-body-font-stack: "IBM Plex Sans", system, -apple-system,
     ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue",
     "Lucida Grande", sans-serif;
-  --global-header-font-stack: "IBM Plex Serif", "Palatino Linotype", Palatino,
-    Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style",
-    "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond",
-    "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook",
-    "Century Schoolbook L", Georgia, serif;
+  --global-header-font-stack: "Space Mono", "SF Mono", "Monaco", "Inconsolata",
+    "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace, monospace;
 }
 
 @media print {
@@ -34,7 +31,7 @@ $bp-desktop: 800px;
 
 @mixin heading {
   font-family: var(--global-header-font-stack);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @mixin font-size-body {
@@ -87,7 +84,7 @@ html {
 
 body {
   @include font-size-body;
-  max-width: 32em;
+  max-width: 34em;
   margin: 0 auto;
   padding-top: 2rem;
   padding-left: calc(1rem + env(safe-area-inset-left));
