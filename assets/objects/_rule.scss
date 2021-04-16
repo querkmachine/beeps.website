@@ -1,0 +1,19 @@
+@use "../settings";
+@use "../helpers/spacing";
+
+.kimRule {
+  margin: 0;
+  border: 0;
+  &--xl {
+    @include spacing.kim-responsive-margin(8, $direction: top);
+    @include spacing.kim-responsive-margin(8, $direction: bottom);
+  }
+  &--l {
+    @include spacing.kim-responsive-margin(6, $direction: top);
+    @include spacing.kim-responsive-margin(6, $direction: bottom);
+  }
+  &--m {
+    @include spacing.kim-responsive-margin(4, $direction: top);
+    @include spacing.kim-responsive-margin(4, $direction: bottom);
+  }
+}

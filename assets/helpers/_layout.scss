@@ -1,0 +1,66 @@
+@use "../settings";
+@use "media-queries";
+
+@use "sass:map";
+@use "sass:string";
+
+// Main wrapper definition
+@mixin kim-width-container {
+  $gutter-safe-area-right: calc(
+    #{settings.$kim-page-gutter / 2} + env(safe-area-inset-right)
+  );
+  $gutter-safe-area-left: calc(
+    #{settings.$kim-page-gutter / 2} + env(safe-area-inset-left)
+  );
+  display: block;
+  max-width: settings.$kim-page-width;
+  margin-right: settings.$kim-page-gutter / 2;
+  margin-left: settings.$kim-page-gutter / 2;
+  @supports (margin: max(calc(0px))) {
+    margin-right: max(
+      #{settings.$kim-page-gutter / 2},
+      #{$gutter-safe-area-right}
+    );
+    margin-left: max(
+      #{settings.$kim-page-gutter / 2},
+      #{$gutter-safe-area-left}
+    );
+  }
+  @include media-queries.kim-mq($from: tablet) {
+    $gutter-safe-area-right: calc(
+      #{settings.$kim-page-gutter} + env(safe-area-inset-right)
+    );
+    $gutter-safe-area-left: calc(
+      #{settings.$kim-page-gutter} + env(safe-area-inset-left)
+    );
+    margin-right: settings.$kim-page-gutter;
+    margin-left: settings.$kim-page-gutter;
+    @supports (margin: max(calc(0px))) {
+      margin-right: max(
+        #{settings.$kim-page-gutter},
+        #{$gutter-safe-area-right}
+      );
+      margin-left: max(#{settings.$kim-page-gutter}, #{$gutter-safe-area-left});
+    }
+  }
+  @include media-queries.kim-mq(
+    $and:
+      "(min-width: #{(settings.$kim-page-width + settings.$kim-page-gutter * 2)})"
+  ) {
+    margin-right: auto;
+    margin-left: auto;
+    @supports (margin: max(calc(0px))) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+// Non-overflow based clearfix
+@mixin kim-clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

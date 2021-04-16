@@ -1,0 +1,196 @@
+@use "sass:map";
+
+$kim-breakpoints: (
+  large-mobile: 400px,
+  tablet: 650px,
+  desktop: 800px,
+);
+
+$kim-color-palette: (
+  "white": #fff,
+  "black": #1c1924,
+  "purple": #786999,
+  "grey": #4b5475,
+);
+$kim-focus-color: #fc0;
+$kim-focus-color-text: #000;
+$kim-canvas-background-color: map.get($kim-color-palette, "purple");
+$kim-body-background-color: $kim-canvas-background-color;
+$kim-body-text-color: map.get($kim-color-palette, "white");
+
+$kim-font-stacks: (
+  body: (
+    stack: (
+      -apple-system,
+      ".SFNSText-Regular",
+      "San Francisco",
+      "Roboto",
+      "Segoe UI",
+      "Helvetica Neue",
+      "Lucida Grande",
+      sans-serif,
+    ),
+    regular: 400,
+    bold: 700,
+  ),
+  header: (
+    stack: (
+      "Space Mono",
+      "SF Mono",
+      "Monaco",
+      "Inconsolata",
+      "Fira Mono",
+      "Droid Sans Mono",
+      "Source Code Pro",
+      monospace,
+      monospace,
+    ),
+    regular: 400,
+    bold: 400,
+  ),
+  header-alt: (
+    stack: (
+      "Space Grotesk",
+      -apple-system,
+      ".SFNSText-Regular",
+      "San Francisco",
+      "Roboto",
+      "Segoe UI",
+      "Helvetica Neue",
+      "Lucida Grande",
+      sans-serif,
+    ),
+    regular: 400,
+    bold: 400,
+  ),
+  code: (
+    stack: (
+      "SF Mono",
+      "Monaco",
+      "Inconsolata",
+      "Fira Mono",
+      "Droid Sans Mono",
+      "Source Code Pro",
+      monospace,
+      monospace,
+    ),
+    regular: 400,
+    bold: 700,
+  ),
+);
+
+$kim-font-sizes-root: 16px;
+$kim-font-sizes: (
+  14: (
+    null: (
+      font-size: 12px,
+      line-height: 15px,
+    ),
+    tablet: (
+      font-size: 14px,
+      line-height: 18px,
+    ),
+  ),
+  16: (
+    null: (
+      font-size: 14px,
+      line-height: 18px,
+    ),
+    tablet: (
+      font-size: 16px,
+      line-height: 22px,
+    ),
+  ),
+  19: (
+    null: (
+      font-size: 16px,
+      line-height: 22px,
+    ),
+    tablet: (
+      font-size: 19px,
+      line-height: 27px,
+    ),
+  ),
+  24: (
+    null: (
+      font-size: 18px,
+      line-height: 20px,
+    ),
+    tablet: (
+      font-size: 24px,
+      line-height: 30px,
+    ),
+  ),
+  36: (
+    null: (
+      font-size: 24px,
+      line-height: 25px,
+    ),
+    tablet: (
+      font-size: 36px,
+      line-height: 40px,
+    ),
+  ),
+  48: (
+    null: (
+      font-size: 32px,
+      line-height: 35px,
+    ),
+    tablet: (
+      font-size: 48px,
+      line-height: 50px,
+    ),
+  ),
+  80: (
+    null: (
+      font-size: 53px,
+      line-height: 55px,
+    ),
+    tablet: (
+      font-size: 80px,
+      line-height: 80px,
+    ),
+  ),
+);
+
+$kim-page-width: 60rem;
+$kim-page-gutter: 1.875rem;
+
+$kim-spacing: (
+  0: (
+    null: 0,
+  ),
+  1: (
+    null: 5px,
+  ),
+  2: (
+    null: 10px,
+  ),
+  3: (
+    null: 15px,
+  ),
+  4: (
+    null: 15px,
+    tablet: 20px,
+  ),
+  5: (
+    null: 15px,
+    tablet: 25px,
+  ),
+  6: (
+    null: 20px,
+    tablet: 30px,
+  ),
+  7: (
+    null: 26px,
+    tablet: 40px,
+  ),
+  8: (
+    null: 30px,
+    tablet: 50px,
+  ),
+  9: (
+    null: 40px,
+    tablet: 60px,
+  ),
+);

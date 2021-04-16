@@ -4,54 +4,47 @@ eleventyNavigation:
   key: Home
   order: 1
 title: Kimberly Grey — Bristol-based web developer
+foot: |
+  <script>
+    // Funky letter swapping fun
+    (() => {
+      const $logo = document.querySelector(".kimMasthead_switcheroo");
+      const children = $logo.children;
+      const effects = ['text', 'flipX', 'flipY', 'flipZ'];
+      const getRandom = (arr) => {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+      const addRandomEffect = () => {
+        const $child = getRandom(children);
+        $child.classList.add(getRandom(effects));
+      };
+      const removeRandomEffect = () => {
+        const $child = getRandom(children);
+        $child.classList.remove(getRandom($child.classList));
+      }
+      const changeSomething = () => {
+        const functions = [addRandomEffect, removeRandomEffect];
+        getRandom(functions)();
+      }
+      setInterval(changeSomething, 100);
+    })();
+  </script>
 ---
 
-<h1>Hi, I&rsquo;m <strong>Kimberly&nbsp;Grey</strong>. I&nbsp;build websites and try to make the world a better&nbsp;place.</h1>
-
-<p>I&rsquo;m a Bristol-based front-end developer specialising in design systems, accessibility, and the semantic web.</p>
-<p>I currently work as a front-end developer &amp; accessibility and inclusivity advocate at <a href="//felinesoft.com">Felinesoft</a>.</p>
-
-<h2>A bit on the side</h2>
-<p>Selected side projects that I&rsquo;m quite proud of.</p>
-<ul>
-    <li>
-        <a href="//severnbronies.co.uk">Severn Bronies</a><br>&mdash; An inclusive social group for the <em>My Little Pony</em> fandom, that has met up (nearly) every week since 2012.
-        <ul>
-            <li><a href="//github.com/severnbronies/plimsoll">Plimsoll</a><br>&mdash; The Severn Bronies website itself.</li>
-            <li><a href="//github.com/severnbronies/streamer">Severn Bronies Streamer</a><br>&mdash; Webapp using websockets to control stream interfaces and allow attendees to interact with their phones.</li>
-        </ul>
-    </li>
-    <li><a href="//placeponi.es">Placeponi.es</a> and <a href="//placeholder.rocks">Placeholder.rocks</a><br>&mdash; Surprisingly popular placeholder image services.</li>
-    <li><a href="http://projects.greysadventures.com/lockdown/">Lockdown restrictions</a><br>&mdash; Informing folks about what they can and can&rsquo;t do in lockdown.</li>
-    <li><a href="//github.com/querkmachine/kickstart8">Kickstart8</a><br>&mdash; Latest version of Kickstart, my quick-start, Fractal-powered front-end design-system framework.</li>
-    <li><a href="//github.com/querkmachine/rainbow-dashboard">Rainbow Dashboard</a><br>&mdash; A home status dashboard built with Vue.</li>
-</ul>
-
-<h2>Kim Does Blog</h2>
-<p>My assorted inane ramblings about virtually everything <em>except</em> web development.</p>
-
-{% set postslist = collections.blog | head(-5) %}
-{% set postslistCounter = collections.blog | length %}
-<ol>
-{% for post in postslist | reverse %}
-  <li>
-    <a href="{{ post.url | url }}" {%- if post.url == url %} aria-current="page"{% endif %}>
-    	{%- if post.data.title -%}
-    		{{ post.data.title }}
-    	{%- else -%}
-    		{{ post.url }}
-    	{%- endif -%}
-    </a>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-  </li>
-{% endfor %}
-</ol>
-<p><a href="{{ '/blog/' | url }}">All blog posts</a></p>
-
-<h2>Contact</h2>
-<ul>
-    <li><a href="mailto:hi@berly.kim">hi@berly.kim</a></li>
-    <li><a href="//github.com/querkmachine">GitHub</a></li>
-    <li><a href="//twitter.com/batbeeps">Twitter</a> / <a href="//awoo.space/@kimpegasus">Mastodon</a></li>
-    <li><a href="//www.linkedin.com/in/querkmachine/">LinkedIn</a></li>
-</ul>
+<div class="kim-!-padding-top-6 kim-!-padding-bottom-6 kim-!-background-color-black kim-!-text-color-white">
+  <div class="kimWrapper">
+    <div class="">
+    
+      {% responsiveImage "./images/emy.png", "Illustration of a robotic bat." %}
+    
+      <h1 class="kimHeading-xl">Hi, I&rsquo;m Kimberly&nbsp;Grey.</h1>
+      
+      <p class="kimBody">I&rsquo;m a Bristol-based front-end developer specialising in design systems, accessibility, and the semantic web. I currently work as lead front-end developer &amp; accessibility and inclusivity advocate at <a href="//felinesoft.com">Felinesoft</a>.</p>
+      
+      <p class="kimBody">In my spare time I masquerade as <a href="{{ '/me' | url }}">a robotic bat</a> on the internet.</p>
+      
+      <p class="kimBody">This is my personal website where I <a href="{{ '/projects' | url }}">host random junk</a> and <a href="{{ '/blog' | url }}">blog</a> occassional nonsense.</p>
+      
+    </div>
+  </div>
+</div>

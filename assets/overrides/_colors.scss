@@ -1,0 +1,10 @@
+@use "../settings";
+
+@each $name, $color in settings.$kim-color-palette {
+  .kim-\!-text-color-#{$name} {
+    color: $color !important;
+  }
+  .kim-\!-background-color-#{$name} {
+    background-color: $color !important;
+  }
+}

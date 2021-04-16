@@ -1,0 +1,7 @@
+@use "../settings";
+@use "../helpers/colors";
+
+a:not([class]) {
+  color: colors.kim-color("white");
+  text-decoration-style: dotted;
+}

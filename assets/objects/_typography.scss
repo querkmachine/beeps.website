@@ -1,0 +1,72 @@
+@use "../settings";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+
+// Headings
+.kimHeading-xl,
+.kimHeading-l,
+.kimHeading-m,
+.kimHeading-s {
+  @include spacing.kim-responsive-margin(0, $direction: top);
+  @include typography.kim-font-stack(header, $weight: bold);
+}
+
+.kimHeading-xl {
+  @include spacing.kim-responsive-margin(8, $direction: bottom);
+  @include typography.kim-font-size(48);
+}
+
+.kimHeading-l {
+  @include spacing.kim-responsive-margin(6, $direction: bottom);
+  @include typography.kim-font-size(36);
+}
+
+.kimHeading-m {
+  @include spacing.kim-responsive-margin(4, $direction: bottom);
+  @include typography.kim-font-size(24);
+}
+
+.kimHeading-s {
+  @include spacing.kim-responsive-margin(4, $direction: bottom);
+  @include typography.kim-font-size(19);
+}
+
+// Subheadings
+.kimSubheading-xl,
+.kimSubheading-l,
+.kimSubheading-m {
+  @include typography.kim-font-stack(header, $weight: regular);
+}
+
+.kimSubheading-xl {
+  @include spacing.kim-responsive-margin(1, $direction: bottom);
+  @include typography.kim-font-size(36);
+}
+
+.kimSubheading-l {
+  @include typography.kim-font-size(24);
+}
+
+.kimSubheading-m {
+  @include typography.kim-font-size(19);
+}
+
+// Body copy
+.kimBody,
+.kimBody-l,
+.kimBody-s {
+  @include spacing.kim-responsive-margin(0, $direction: top);
+  @include spacing.kim-responsive-margin(3, $direction: bottom);
+}
+
+.kimBody {
+  @include typography.kim-font-size(19);
+}
+
+.kimBody-l {
+  @include typography.kim-font-size(24);
+}
+
+.kimBody-s {
+  @include typography.kim-font-size(16);
+}

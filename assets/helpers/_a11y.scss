@@ -1,0 +1,23 @@
+@use "../settings";
+
+// Keyboard focus style
+@mixin kim-focus-ring($fill: false) {
+  outline: 3px solid settings.$kim-focus-color;
+  outline-offset: 0;
+  @if $fill {
+    background-color: settings.$kim-focus-color;
+    color: settings.$kim-focus-color-text;
+  }
+}
+
+// Hide elements while keeping them available to screen readers
+@mixin kim-visually-hidden($important: false) {
+  position: absolute if($important, !important, null);
+  width: 1px if($important, !important, null);
+  height: 1px if($important, !important, null);
+  margin: -1px if($important, !important, null);
+  padding: 0 if($important, !important, null);
+  border: 0 if($important, !important, null);
+  overflow: hidden if($important, !important, null);
+  clip: rect(0 0 0 0) if($important, !important, null);
+}

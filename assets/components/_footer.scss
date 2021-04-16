@@ -1,0 +1,38 @@
+@use "../settings";
+@use "../helpers/reset";
+@use "../helpers/colors";
+@use "../helpers/typography";
+@use "../helpers/spacing";
+
+.kimFooter {
+  @include spacing.kim-responsive-padding(6, $direction: top);
+  @include spacing.kim-responsive-padding(6, $direction: bottom);
+  text-align: center;
+  &_inner {
+  }
+  &_social {
+    &_list {
+      @include reset.kim-reset-list;
+    }
+    &_item {
+      @include spacing.kim-responsive-margin(1, $direction: right);
+      @include spacing.kim-responsive-margin(1, $direction: left);
+      display: inline;
+    }
+    &_link {
+      @include spacing.kim-responsive-padding(2, $direction: right);
+      @include spacing.kim-responsive-padding(2, $direction: left);
+      display: inline-block;
+    }
+    &_icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      fill: white;
+    }
+  }
+  &_boilerplate {
+    @include spacing.kim-responsive-margin(6, $direction: top);
+    @include typography.kim-font-size(14);
+    display: block;
+  }
+}

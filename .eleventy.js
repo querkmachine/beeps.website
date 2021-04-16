@@ -1,22 +1,45 @@
-const { DateTime } = require("luxon");
+const fs = require("fs-extra");
 
+// Other packages
+const { DateTime } = require("luxon");
+const sass = require("sass");
+const postcss = require("postcss");
+const postcssPresetEnv = require("postcss-preset-env");
+
+// 11ty plugins
 const pluginImages = require("@11ty/eleventy-img");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSass = require("eleventy-plugin-sass");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   // Load plugins
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSass, {
-    outputDir: "./_site/",
-  });
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   // Global settings
   eleventyConfig.setDataDeepMerge(true);
+
+  // Sass/PostCSS pipeline
+  eleventyConfig.on("beforeBuild", () => {
+    const result = sass.renderSync({
+      file: "assets/stylesheet.scss",
+      sourceMap: false,
+      outputStyle: "compressed",
+    });
+    console.log("Sass compiled.");
+
+    let css = result.css.toString();
+    postcss([postcssPresetEnv()])
+      .process(css, { from: "stylesheet.scss", to: "assets/stylesheet.css" })
+      .then((result) => {
+        fs.outputFile("_site/assets/stylesheet.css", result.css, (err) => {
+          if (err) console.error(err);
+          console.log("PostCSS transformations complete.");
+        });
+      });
+  });
 
   // Responsive images shortcode
   eleventyConfig.addNunjucksAsyncShortcode(

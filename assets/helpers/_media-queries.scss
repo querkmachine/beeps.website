@@ -1,0 +1,26 @@
+@use "../settings";
+
+@use "sass:map";
+
+// Media query helper
+@mixin kim-mq($from: null, $to: null, $and: null) {
+  $map: settings.$kim-breakpoints;
+  $query: "";
+  @if map.has-key($map, $from) {
+    $query: "#{$query} (min-width: #{map.get($map, $from)})";
+  }
+  @if $to {
+    @if map.has-key($map, $from) and map.has-key($map, $to) {
+      $query: "#{$query} and";
+    }
+    @if map.has-key($map, $to) {
+      $query: "#{$query} (max-width: #{map.get($map, $to) - 1px})";
+    }
+  }
+  @if $and {
+    $query: "#{$query} #{$and}";
+  }
+  @media screen and #{$query} {
+    @content;
+  }
+}

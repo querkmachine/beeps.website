@@ -1,0 +1,21 @@
+@use "../settings";
+@use "../helpers/colors";
+
+.kimSexyLink {
+  $shadow-length: 3px;
+  transform: translate(0, 0);
+  filter: drop-shadow(0 0 0 colors.kim-color("grey"))
+    drop-shadow(0 0 0 colors.kim-color("black"));
+  transition-property: filter, transform;
+  transition-duration: 0.42s;
+  transition-timing-function: linear;
+  &:hover {
+    transform: translate(#{0 - $shadow-length * 2}, #{0 - $shadow-length * 2});
+    filter: drop-shadow(
+        #{$shadow-length} #{$shadow-length} 0 colors.kim-color("grey")
+      )
+      drop-shadow(
+        #{$shadow-length} #{$shadow-length} 0 colors.kim-color("black")
+      );
+  }
+}

@@ -3,5 +3,9 @@ layout: layouts/layout.njk
 ---
 
 {% include 'header.njk' %}
-{{ content | safe }}
+
+<main id="content">
+  {{ content | safe }}
+</main>
+
 {% include 'footer.njk' %}

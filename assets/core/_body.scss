@@ -1,0 +1,43 @@
+@use "../settings";
+@use "../helpers/typography";
+@use "../helpers/colors";
+
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+.kimPage {
+  background-color: settings.$kim-canvas-background-color;
+  text-size-adjust: 100%;
+  @if settings.$kim-font-sizes-root != 16px {
+    font-size: settings.$kim-font-sizes-root;
+  }
+  &_body {
+    @include typography.kim-typography-common;
+    @include typography.kim-font-stack(body);
+    @include typography.kim-font-size(19);
+    margin: 0;
+    color: settings.$kim-body-text-color;
+    background-color: settings.$kim-body-background-color;
+    &::before {
+      $height: 22px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: $height;
+      background-image: linear-gradient(
+        to bottom,
+        colors.kim-color("black"),
+        colors.kim-color("black") $height / 3,
+        colors.kim-color("grey") $height / 3,
+        colors.kim-color("grey") $height / 3 * 2,
+        colors.kim-color("white") $height / 3 * 2,
+        colors.kim-color("white")
+      );
+    }
+  }
+}

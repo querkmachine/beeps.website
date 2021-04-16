@@ -1,0 +1,49 @@
+@use "../settings";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+@use "../helpers/colors";
+@use "../helpers/media-queries";
+
+.kimMasthead {
+  @include spacing.kim-responsive-margin(3, $direction: bottom);
+  @include spacing.kim-responsive-padding(3, $direction: top);
+  @include spacing.kim-responsive-padding(3, $direction: bottom);
+  color: var(--masthead-text, inherit);
+  background-color: var(--masthead-background, transparent);
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    @include media-queries.kim-mq($from: tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &_brand {
+  }
+  &_logo {
+    @include typography.kim-font-size(24);
+    color: colors.kim-color("white");
+    text-decoration: none;
+  }
+  &_switcheroo {
+    > span {
+      @include typography.kim-font-stack("header", $weight: regular);
+      display: inline-block;
+      &.text {
+        @include typography.kim-font-stack("header-alt", $weight: regular);
+      }
+      &.flipX {
+        transform: rotateX(180deg);
+      }
+      &.flipY {
+        transform: rotateY(180deg);
+      }
+      &.flipZ {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+  &_nav {
+  }
+}

@@ -1,0 +1,20 @@
+@use "../settings";
+@use "../helpers/reset";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+
+.kimNavigation {
+  &_list {
+    @include reset.kim-reset-list;
+    display: inline-flex;
+    gap: spacing.kim-spacing(3);
+  }
+  &_item {
+    display: inline-block;
+  }
+  &_link {
+    @include typography.kim-font-stack("header-alt", $weight: regular);
+    color: currentColor;
+    text-decoration: none;
+  }
+}

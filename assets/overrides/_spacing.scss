@@ -1,0 +1,21 @@
+@use "../settings";
+@use "../helpers/spacing";
+
+@each $size, $map in settings.$kim-spacing {
+  @each $dir in (all, top, right, bottom, left) {
+    .kim-\!-margin#{if($dir != "all", "-" + $dir, null)}-#{$size} {
+      @include spacing.kim-responsive-margin(
+        $spacing-point: $size,
+        $direction: $dir,
+        $important: true
+      );
+    }
+    .kim-\!-padding#{if($dir != "all", "-" + $dir, null)}-#{$size} {
+      @include spacing.kim-responsive-padding(
+        $spacing-point: $size,
+        $direction: $dir,
+        $important: true
+      );
+    }
+  }
+}
