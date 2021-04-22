@@ -24,3 +24,10 @@
     @content;
   }
 }
+
+// Print media query
+@mixin kim-print {
+  @media print {
+    @content;
+  }
+}

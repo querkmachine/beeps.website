@@ -1,0 +1,11 @@
+@use "../settings";
+@use "../helpers/media-queries";
+
+@include media-queries.kim-print {
+  *,
+  *::before,
+  *::after {
+    color: black !important;
+    background-color: white !important;
+  }
+}

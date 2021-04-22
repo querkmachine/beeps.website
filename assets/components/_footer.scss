@@ -3,25 +3,34 @@
 @use "../helpers/colors";
 @use "../helpers/typography";
 @use "../helpers/spacing";
+@use "../helpers/media-queries";
 
 .kimFooter {
-  @include spacing.kim-responsive-padding(6, $direction: top);
-  @include spacing.kim-responsive-padding(6, $direction: bottom);
   text-align: center;
+  @include media-queries.kim-mq($from: large-mobile) {
+    text-align: right;
+  }
+  @include media-queries.kim-print {
+    display: none;
+  }
   &_inner {
+    @include spacing.kim-responsive-padding(6, $direction: top);
+    position: relative;
+    @include media-queries.kim-mq($from: large-mobile) {
+      @include spacing.kim-responsive-padding(6, $direction: bottom);
+    }
   }
   &_social {
     &_list {
       @include reset.kim-reset-list;
     }
     &_item {
-      @include spacing.kim-responsive-margin(1, $direction: right);
-      @include spacing.kim-responsive-margin(1, $direction: left);
+      @include spacing.kim-responsive-margin(3, $direction: left);
       display: inline;
     }
     &_link {
-      @include spacing.kim-responsive-padding(2, $direction: right);
       @include spacing.kim-responsive-padding(2, $direction: left);
+      @include spacing.kim-responsive-padding(1, $direction: right);
       display: inline-block;
     }
     &_icon {
@@ -34,5 +43,37 @@
     @include spacing.kim-responsive-margin(6, $direction: top);
     @include typography.kim-font-size(14);
     display: block;
+  }
+  &_beep {
+    @include spacing.kim-responsive-margin(6, $direction: top);
+    line-height: 0;
+    pointer-events: none;
+    @include media-queries.kim-mq($from: large-mobile) {
+      position: absolute;
+      bottom: 0;
+      left: -5rem;
+    }
+    picture {
+      display: inline-block;
+    }
+    img {
+      width: 100%;
+      max-width: 14rem;
+      max-height: 10rem;
+      object-fit: cover;
+      object-position: top center;
+      @include media-queries.kim-mq($from: large-mobile) {
+        max-width: 14rem;
+        max-height: 10rem;
+      }
+      @include media-queries.kim-mq($from: tablet) {
+        max-width: 17rem;
+        max-height: 12rem;
+      }
+      @include media-queries.kim-mq($from: desktop) {
+        max-width: 22rem;
+        max-height: 13.75rem;
+      }
+    }
   }
 }

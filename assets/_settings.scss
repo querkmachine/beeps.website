@@ -11,16 +11,18 @@ $kim-color-palette: (
   "black": #1c1924,
   "purple": #786999,
   "grey": #4b5475,
+  "highlight": #b9e587,
 );
 $kim-focus-color: #fc0;
 $kim-focus-color-text: #000;
-$kim-canvas-background-color: map.get($kim-color-palette, "purple");
-$kim-body-background-color: $kim-canvas-background-color;
+$kim-canvas-background-color: map.get($kim-color-palette, "black");
+$kim-body-background-color: map.get($kim-color-palette, "purple");
 $kim-body-text-color: map.get($kim-color-palette, "white");
 
 $kim-font-stacks: (
   body: (
     stack: (
+      "Space Grotesk",
       -apple-system,
       ".SFNSText-Regular",
       "San Francisco",

@@ -1,6 +1,7 @@
 @use "../settings";
 @use "../helpers/typography";
 @use "../helpers/colors";
+@use "../helpers/media-queries";
 
 * {
   box-sizing: border-box;
@@ -17,25 +18,42 @@
     font-size: settings.$kim-font-sizes-root;
   }
   &_body {
+    $bar-height: 22px;
     @include typography.kim-typography-common;
     @include typography.kim-font-stack(body);
     @include typography.kim-font-size(19);
     margin: 0;
     color: settings.$kim-body-text-color;
     background-color: settings.$kim-body-background-color;
-    &::before {
-      $height: 22px;
+    &::before,
+    &::after {
       content: "";
       display: block;
       width: 100%;
-      height: $height;
+      height: $bar-height;
+      @include media-queries.kim-print {
+        display: none;
+      }
+    }
+    &::before {
       background-image: linear-gradient(
         to bottom,
         colors.kim-color("black"),
-        colors.kim-color("black") $height / 3,
-        colors.kim-color("grey") $height / 3,
-        colors.kim-color("grey") $height / 3 * 2,
-        colors.kim-color("white") $height / 3 * 2,
+        colors.kim-color("black") $bar-height / 3,
+        colors.kim-color("grey") $bar-height / 3,
+        colors.kim-color("grey") $bar-height / 3 * 2,
+        colors.kim-color("white") $bar-height / 3 * 2,
+        colors.kim-color("white")
+      );
+    }
+    &::after {
+      background-image: linear-gradient(
+        to top,
+        colors.kim-color("black"),
+        colors.kim-color("black") $bar-height / 3,
+        colors.kim-color("grey") $bar-height / 3,
+        colors.kim-color("grey") $bar-height / 3 * 2,
+        colors.kim-color("white") $bar-height / 3 * 2,
         colors.kim-color("white")
       );
     }

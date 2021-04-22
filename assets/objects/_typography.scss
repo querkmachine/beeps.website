@@ -56,17 +56,19 @@
 .kimBody-l,
 .kimBody-s {
   @include spacing.kim-responsive-margin(0, $direction: top);
-  @include spacing.kim-responsive-margin(3, $direction: bottom);
 }
 
 .kimBody {
   @include typography.kim-font-size(19);
+  @include typography.kim-vr-margin(19);
 }
 
 .kimBody-l {
   @include typography.kim-font-size(24);
+  @include typography.kim-vr-margin(24);
 }
 
 .kimBody-s {
   @include typography.kim-font-size(16);
+  @include typography.kim-vr-margin(16);
 }

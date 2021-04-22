@@ -7,19 +7,22 @@ title: Kim Does Blog
 permalink: "/blog/"
 ---
 
-<h1>Kim Does Blog</h1>
-{% set postslistCounter = collections.blog | length %}
-<ol>
-{% for post in collections.blog | reverse %}
-  <li>
-    <a href="{{ post.url | url }}" {%- if post.url == url %} aria-current="page"{% endif %}>
-      {%- if post.data.title -%}
-        {{ post.data.title }}
-      {%- else -%}
-        {{ post.url }}
-      {%- endif -%}
-    </a>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-  </li>
-{% endfor %}
-</ol>
+<hr class="kimRule kimRule--m kimRule--visible">
+<div class="kimWrapper kim-!-padding-top-9 kim-!-padding-bottom-9">
+  <h1 class="kimHeading-xl">Kim Does Blog</h1>
+  {% set postslistCounter = collections.blog | length %}
+  <ol class="kimGrid">
+  {% for post in collections.blog | reverse %}
+    <li class="kim-!-padding-3 kim-!-background-color-white kim-!-text-color-black">
+      <a href="{{ post.url | url }}" {%- if post.url == url %} aria-current="page"{% endif %}>
+        {%- if post.data.title -%}
+          {{ post.data.title }}
+        {%- else -%}
+          {{ post.url }}
+        {%- endif -%}
+      </a>
+      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    </li>
+  {% endfor %}
+  </ol>
+</div>

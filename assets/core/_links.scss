@@ -1,7 +1,23 @@
 @use "../settings";
 @use "../helpers/colors";
+@use "../helpers/media-queries";
 
 a:not([class]) {
   color: colors.kim-color("white");
-  text-decoration-style: dotted;
+  text-decoration-color: colors.kim-color("purple");
+  text-decoration-style: wavy;
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
+  &:hover,
+  &:focus {
+    text-decoration-color: colors.kim-color("white");
+    text-decoration-style: solid;
+  }
+  @include media-queries.kim-print {
+    &::after {
+      content: " (" attr(href) ")";
+      display: inline;
+      font-size: smaller;
+    }
+  }
 }

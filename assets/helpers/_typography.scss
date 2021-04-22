@@ -70,6 +70,36 @@
   }
 }
 
+// Get line height for a given font size (used for vertical rhythm)
+@mixin kim-vr-margin($size, $direction: "bottom", $important: false) {
+  @if not map.has-key(settings.$kim-font-sizes, $size) {
+    @error "Unknown font size `#{$size}` - expected a point from the typography scale.";
+  }
+  $property: "margin";
+  @if $direction != "all" {
+    $property: "margin-" + $direction;
+  }
+  $size-map: map.get(settings.$kim-font-sizes, $size);
+  @each $breakpoint, $breakpoint-map in $size-map {
+    $font-size: map.get($breakpoint-map, "font-size");
+    $line-height: _kim-line-height(
+        map-get($breakpoint-map, "line-height"),
+        $font-size
+      ) *
+      1em;
+    @if $important {
+      $line-height: $line-height !important;
+    }
+    @if ($breakpoint == null) {
+      #{$property}: $line-height;
+    } @else {
+      @include media-queries.kim-mq($from: $breakpoint) {
+        #{$property}: $line-height;
+      }
+    }
+  }
+}
+
 // Activate tabular figures (only works if the font supports it)
 @mixin kim-tabular-figures {
   font-variant-numeric: tabular-nums;

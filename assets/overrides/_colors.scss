@@ -1,10 +1,17 @@
 @use "../settings";
+@use "../helpers/media-queries";
 
 @each $name, $color in settings.$kim-color-palette {
   .kim-\!-text-color-#{$name} {
     color: $color !important;
+    @include media-queries.kim-print {
+      color: black !important;
+    }
   }
   .kim-\!-background-color-#{$name} {
     background-color: $color !important;
+    @include media-queries.kim-print {
+      color: white !important;
+    }
   }
 }
