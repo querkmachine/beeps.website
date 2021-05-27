@@ -8,12 +8,13 @@ permalink: "/blog/"
 ---
 
 <hr class="kimRule kimRule--m kimRule--visible">
-<div class="kimWrapper kim-!-padding-top-9 kim-!-padding-bottom-9">
+<div class="kim-!-padding-top-9 kim-!-padding-bottom-9 kim-!-background-color-white">
+<div class="kimWrapper">
   <h1 class="kimHeading-xl">Kim Does Blog</h1>
   {% set postslistCounter = collections.blog | length %}
   <ol class="kimGrid">
   {% for post in collections.blog | reverse %}
-    <li class="kim-!-padding-3 kim-!-background-color-white kim-!-text-color-black">
+    <li class="kim-!-padding-3">
       <a href="{{ post.url | url }}" {%- if post.url == url %} aria-current="page"{% endif %}>
         {%- if post.data.title -%}
           {{ post.data.title }}
@@ -25,4 +26,5 @@ permalink: "/blog/"
     </li>
   {% endfor %}
   </ol>
+</div>
 </div>

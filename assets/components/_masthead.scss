@@ -4,11 +4,23 @@
 @use "../helpers/colors";
 @use "../helpers/media-queries";
 
+@use "sass:color";
+
 .kimMasthead {
+  --text: inherit;
+  --background: #{color.change(colors.kim-color("white"), $alpha: 0.9)};
   @include spacing.kim-responsive-padding(4, $direction: top);
   @include spacing.kim-responsive-padding(4, $direction: bottom);
-  color: var(--masthead-text, inherit);
-  background-color: var(--masthead-background, transparent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: var(--text);
+  background-color: var(--background);
+  backdrop-filter: blur(1rem);
+  @include media-queries.kim-dark {
+    --text: #{colors.kim-color("white")};
+    --background: ##{color.change(colors.kim-color("black"), $alpha: 0.9)};
+  }
   @include media-queries.kim-print {
     display: none;
   }
@@ -24,26 +36,12 @@
   &_brand {
   }
   &_logo {
+    @include typography.kim-font-stack("header-alt", $weight: regular);
     @include typography.kim-font-size(24);
-    color: colors.kim-color("white");
+    color: colors.kim-color("kimberly");
     text-decoration: none;
-  }
-  &_switcheroo {
-    > span {
-      @include typography.kim-font-stack("header", $weight: regular);
-      display: inline-block;
-      &.text {
-        @include typography.kim-font-stack("header-alt", $weight: regular);
-      }
-      &.flipX {
-        transform: rotateX(180deg);
-      }
-      &.flipY {
-        transform: rotateY(180deg);
-      }
-      &.flipZ {
-        transform: rotateZ(180deg);
-      }
+    @include media-queries.kim-dark {
+      color: colors.kim-color("highlight");
     }
   }
   &_nav {

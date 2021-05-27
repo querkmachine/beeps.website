@@ -21,11 +21,15 @@
     @include spacing.kim-responsive-padding(2, $direction: top);
     @include spacing.kim-responsive-padding(2, $direction: bottom);
   }
+  &--xs {
+    @include spacing.kim-responsive-padding(1, $direction: top);
+    @include spacing.kim-responsive-padding(1, $direction: bottom);
+  }
   &--visible {
     background-image: repeating-linear-gradient(
       45deg,
-      #{colors.kim-color("black")},
-      #{colors.kim-color("black")} 9px,
+      #{colors.kim-color("kimberly")},
+      #{colors.kim-color("kimberly")} 9px,
       transparent 9px,
       transparent 18px
     );

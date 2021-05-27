@@ -31,3 +31,10 @@
     @content;
   }
 }
+
+// Dark mode
+@mixin kim-dark {
+  @media only screen and (prefers-color-scheme: dark) {
+    @content;
+  }
+}

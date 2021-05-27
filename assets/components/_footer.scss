@@ -6,7 +6,12 @@
 @use "../helpers/media-queries";
 
 .kimFooter {
+  color: colors.kim-color("white");
+  background-color: colors.kim-color("black");
   text-align: center;
+  @include media-queries.kim-dark {
+    background-color: #000; // What's blacker than black?
+  }
   @include media-queries.kim-mq($from: large-mobile) {
     text-align: right;
   }

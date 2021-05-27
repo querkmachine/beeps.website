@@ -3,15 +3,18 @@
 @use "../helpers/media-queries";
 
 a:not([class]) {
-  color: colors.kim-color("white");
-  text-decoration-color: colors.kim-color("purple");
+  --color: #{colors.kim-color("kimberly")};
+  @include media-queries.kim-dark {
+    --color: #{colors.kim-color("highlight")};
+  }
+  color: var(--color);
+  text-decoration-color: var(--color);
   text-decoration-style: wavy;
   text-decoration-line: underline;
   text-underline-offset: 0.2em;
   &:hover,
   &:focus {
-    text-decoration-color: colors.kim-color("white");
-    text-decoration-style: solid;
+    color: var(--color);
   }
   @include media-queries.kim-print {
     &::after {

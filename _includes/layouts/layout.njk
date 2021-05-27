@@ -13,6 +13,9 @@
   <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   
+  {# JavaScript - no-js #}
+  <script>let d = document.documentElement; d.classList.remove('no-js'); d.classList.add('js');</script>
+  
   {# Stylesheets #}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="{{ googleFontsUrl }}">
