@@ -20,9 +20,13 @@
     --background: #{colors.kim-color("black")};
   }
   background-color: colors.kim-color("black");
+  font-size: max(16px, 1.22vw);
   text-size-adjust: 100%;
   @if settings.$kim-font-sizes-root != 16px {
     font-size: settings.$kim-font-sizes-root;
+  }
+  @include media-queries.kim-dark {
+    background-color: #000; // Match the even darker footer color
   }
   &_body {
     $bar-height: 22px;

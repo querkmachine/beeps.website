@@ -1,114 +1,46 @@
 ---
 layout: layouts/layout.njk
-title: Kimberly Grey's Curriculum Vitae (or resumé if you're so inclined)
+title: Kimberly Grey's Curriculum Vitae
 permalink: "/cv/"
+head: |
+  <style>
+      dl {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      dl div {
+          margin-right: 1.5rem;
+          margin-bottom: .5rem;
+      }
+      dl dt {
+          display: inline-block;
+          margin-right: .125em;
+          font-weight: bold;
+      }
+      dl dt::after {
+          content: ':';
+      }
+      dl dd {
+          display: inline;
+          margin: 0;
+      }
+      dl dd + dd::before {
+          content: '\2022';
+          margin: 0 .25em 0 .125em; 
+      }
+      
+  </style>
 ---
 
-<style>
-	body {
-		max-width: 50em;
-	}
-	dl {
-
-	}
-	dl div {
-		margin-bottom: .5rem;
-	}
-	dt {
-		display: inline-block;
-		margin-right: .125em;
-		font-weight: bold;
-	}
-	dt::after {
-		content: ':';
-	}
-	dd {
-		display: inline;
-		margin: 0;
-	}
-	dd + dd::before {
-		content: '\2022';
-		margin: 0 .25em 0 .125em; 
-	}
-	.intro,
-	.section,
-	.block {
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: 1fr;
-	}
-	.intro {
-		grid-template-areas: 'header' 'details';
-	}
-	.intro header {
-		grid-area: header;
-	}
-	.intro dl {
-		grid-area: details;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.intro dl div {
-		margin-right: 1.5rem;
-	}
-	.section {
-		grid-template-areas: 'header';
-		margin-top: 5rem;
-	}
-	.section header {
-		grid-area: header;
-	}
-	.block {
-		grid-column: span 2;
-		grid-template-areas: 'date' 'title' 'description';
-	}
-	.block h3 {
-		grid-area: title;
-		margin: 0;
-	}
-	.block time {
-		grid-area: date;
-	}
-	.block div {
-		grid-area: description;
-	}
-	.block div :first-child { margin-top: 0; }
-	.block div :last-child { margin-bottom: 0; }
-	footer {
-		text-align: left;
-	}
-	@media (min-width: 650px) {
-		.intro,
-		.section,
-		.block {
-			grid-column-gap: 3rem;
-			grid-row-gap: 1.5rem;
-			grid-template-columns: 1fr 3fr;
-		}
-		.intro {
-			grid-template-areas: '. header' '. details';
-		}
-		.section {
-			grid-template-areas: '. header';
-		}
-		.block {
-			grid-template-rows: auto 1fr;
-			grid-template-areas: 'date title' 'date description'; 
-		}
-	}
-	@media print {
-		html { font-size: 8pt; }
-	}
-</style>
-
-<main>
-	<article>
-
-		<section class="intro">
-			<header>
-				<h1>Hi, I&rsquo;m Kimberly Grey</h1>
-			</header>
-			<dl>
+<div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+	<div class="kimWrapper">
+		<div class="kimGrid">
+			<h1 class="kimGrid_a2-a6 kimHeading-xl">
+			Hi, I'm Kimberly Grey
+			</h1>
+		</div>
+		<div class="kimGrid">
+			<dl class="kimGrid_a2-a6">
 				<div>
 					<dt>Pronouns</dt>
 					<dd>she/her</dd>
@@ -134,87 +66,126 @@ permalink: "/cv/"
 					<dd><a href="//linkedin.com/in/querkmachine">querkmachine</a></dd>
 				</div>
 			</dl>
-		</section>
-
-		<section class="section">
-			<header>
-				<h2>Experience</h2>
+		</div>
+		<section class="kim-!-margin-top-8">
+			<header class="kimGrid">
+				<h2 class="kimGrid_a2-a6 kimHeading-l">Experience</h2>
 			</header>
-			<section class="block">
-				<h3>
-					Lead front-end developer &amp; accessibility and inclusivity advocate at<br>
-					Felinesoft, Bristol
-				</h3>
-				<time datetime="2014-06/">June 2014&ndash;present</time>
-				<div>
-					<p>Felinesoft is a Microsoft .NET development agency, so my role here is primarily to take pre-conceived designs and code them into design systems; embedding progressive enhancement principles, accessibility and responsive design in the process; working with dozens of clients including the Royal Photographic Society, Rolls-Royce Motor Cars, Jack Daniel&rsquo;s, the Kennel Club, and Les Mills.</p>
-					<p>In carrying out this role I produced a raft of open- and closed-source frameworks including FSForms, a best-practice forms library; Kickstart, a Fractal-based design system framework; and Felafel, a services-oriented bootstrapping library.</p>
-					<p>I’ve also worked as a PHP developer, graphic designer, UX and UI designer on disparate projects where those skills were required.</p>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<time class="kimGrid_a1-a2" datetime="2014-06/">June 2014&ndash;present</time>
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Lead front-end developer &amp; accessibility and inclusivity advocate<br>
+						at Felinesoft, Bristol
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>Felinesoft is a flat-hierarchy Microsoft .NET development agency. my role here is primarily to take pre-conceived designs and code them into design systems; embedding progressive enhancement principles, accessibility and responsive design in the process; working with dozens of clients including the Royal Photographic Society, Rolls-Royce Motor Cars, Jack Daniel&rsquo;s, The Kennel Club, and the British Association for Counselling and Psychotherapy.</p>
+						<p>In carrying out this role I defined evolutionary (and at times, revolutionary) process changes to embed best practice into every part of the design and development process. I also created a raft of open- and closed-source frameworks including FSForms, a best-practice forms library; Kickstart, a Fractal-based design system framework; and Felafel, a services-oriented bootstrapping library.</p>
+						<p>I’ve also worked as a PHP developer, graphic designer, UX and UI designer on disparate projects where those skills were required.</p>
+					</div>
 				</div>
 			</section>
-			<section class="block">
-				<h3>
-					Founder &amp; managing director at<br>
-					Severn Bronies
-				</h3>
-				<time datetime="2012-07/">July 2012&ndash;present</time>
-				<div>
-					<p>Originally the Bristol Bronies, the Severn Bronies is a community hub serving the My Little Pony fandom in south-west England and south Wales. We organise and hold meets every week, ranging from small socials to elaborate events incorporating gaming, cosplay, vendors, live programming, and more. We’ve popped up in the media a few times, including in the Bristol Post, BBC Points West, BBC Inside Out, and Jeremy Vine’s Radio 2 show.</p>
-					<p>We make efforts to be active in the community and have fundraised for local charities, as well as having our own network for supporting transgender and gender non-conforming individuals. </p>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<time class="kimGrid_a1-a2" datetime="2012-07/">July 2012&ndash;present</time>
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Founder and managing director<br>
+						at Severn Bronies
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>Originally the Bristol Bronies, the Severn Bronies is a community hub serving the My Little Pony fandom in south-west England and south Wales. We organise and hold meets every week, ranging from small socials to elaborate events incorporating gaming, cosplay, vendors, live programming, and more. We’ve popped up in the media a few times, including in the Bristol Post, BBC Points West, BBC Inside Out, and Jeremy Vine’s Radio 2 show.</p>
+						<p>We make efforts to be active in the community and have fundraised for local charities, as well as having our own network for supporting transgender and gender non-conforming individuals. I organise the meets, perform administrative and financial duties, and design and maintain the group's website and brand identity.</p>
+					</div>
 				</div>
 			</section>
-			<section class="block">
-				<h3>
-					Freelance web developer
-				</h3>
-				<time datetime="2013-04/2014-06">April 2013&ndash;June 2014</time>
-				<div>
-					<p>Self-employed website designer and developer, doing contracted work for agencies and small companies in and around Bristol.</p>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<time class="kimGrid_a1-a2" datetime="2013-04/2014-06">April 2013&ndash;June 2014</time>
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Freelance web developer
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>Self-employed website designer and developer, doing contracted work for agencies and small companies in and around Bristol.</p>
+					</div>
 				</div>
 			</section>
-			<section class="block">
-				<h3>
-					Full-stack web developer at<br>Goram + Vincent, Bristol
-				</h3>
-				<time datetime="2012-07/2013-04">July 2012&ndash;April 2013</time>
-				<div>
-					<p>Industrial placement year at a small full-service agency in Bristol. I worked across the stack doing front- and back-end development, CMS management and server administration work for a number of high-profile clients, including Drinkaware, Brothers Cider, and Glorious Brands; working as lead developer on some projects. </p>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<time class="kimGrid_a1-a2" datetime="2012-07/2013-04">July 2012&ndash;April 2013</time>
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Full-stack web developer<br>
+						at Goram + Vincent, Bristol
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>Industrial placement year at a small full-service agency in Bristol. I worked across the stack doing front- and back-end development, CMS management and server administration work for a number of high-profile clients, including Drinkaware, Brothers Cider, and Glorious Brands; working as lead developer on some projects. </p>
+					</div>
+				</div>
+			</section>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Bits on the side
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>In the past I've also served time as a wiki administrator (2008&ndash;2012), charity retail volunteer (2011&ndash;2012), social media administrator (2007&ndash;2011), editor-in-chief of a fanzine (2007&ndash;2010), and as a classroom assistant (2006&ndash;2008).</p>
+						<p>In my free time I've written some open-source stuff, including <a href="//github.com/querkmachine/vanilla-validation">Vanilla Validation</a> (a styling layer over ValidityState), <a href="//github.com/querkmachine/nova-randomize-everything">Randomize Everything</a> (a Nova editor extension), and <a href="//github.com/querkmachine/felafel">Felafel</a> (an extensible boilerplate component library).</p>
+					</div>
 				</div>
 			</section>
 		</section>
-
-		<section class="section">
-			<header>
-				<h2>Education</h2>
+		<section class="kim-!-margin-top-8">
+			<header class="kimGrid">
+				<h2 class="kimGrid_a2-a6 kimHeading-l">Education</h2>
 			</header>
-			<section class="block">
-				<h3>
-					2:1 Web Design BSc (Hons) at<br>University of the West of England, Bristol
-				</h3>
-				<time datetime="2010-2014">2010&ndash;2014</time>
-				<div>
-					<p>An extensive course focused on website design and development, including focuses on designing information, user experience and programming in a range of front-end and back-end languages. This course was heavily vocational, with several modules focusing on real world applications with real world clients. Actively involved in the university&rsquo;s video gaming and sci-fi/fantasy societies (and vaguely involved in the Quidditch society too.)</p>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<time class="kimGrid_a1-a2" datetime="2010/2014">2010&ndash;2014</time>
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						2:1 Web Design BSc (Hons)<br>at the University of the West of England, Bristol
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>An extensive course focused on website design and development, including focuses on designing information, user experience and programming in a range of front-end and back-end languages. This course was heavily vocational, with several modules focusing on real world applications with real world clients. Actively involved in the university&rsquo;s video gaming and sci-fi/fantasy societies (and vaguely involved in the Quidditch society too.)</p>
+					</div>
 				</div>
 			</section>
-			<section class="block">
-				<h3>
-					Aquinas College, Stockport
-				</h3>
-				<time datetime="2008-2010">2008&ndash;2010</time>
-				<div>
-					<p>Achieved grade C in A-Level Computing, Politics &amp; General Studies. Achieved grade D in Applied ICT. Also tried my hand at Philosophy, which was super fun, but unfortunately failed the subject.</p>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<time class="kimGrid_a1-a2" datetime="2008/2010">2008&ndash;2010</time>
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Aquinas College, Stockport
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<div class="kimGrid_a2-a6 kimProse">
+						<p>Achieved grade C in A-Level Computing, Politics &amp; General Studies. Achieved grade D in Applied ICT. Also tried my hand at Philosophy, which was super fun, but unfortunately failed the subject.</p>
+					</div>
 				</div>
 			</section>
 		</section>
-
-		<section class="section">
-			<header>
-				<h2>Skills</h2>
+		<section class="kim-!-margin-top-8">
+			<header class="kimGrid">
+				<h2 class="kimGrid_a2-a6 kimHeading-l">Skills</h2>
 			</header>
-			<section class="block">
-				<h3>Concepts</h3>
-				<div>
-					<dl>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Concepts
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<dl class="kimGrid_a2-a6">
 						<div>
 							<dt>Fluent</dt>
 							<dd>Responsive design</dd>
@@ -234,19 +205,24 @@ permalink: "/cv/"
 					</dl>
 				</div>
 			</section>
-			<section class="block">
-				<h3>Languages</h3>
-				<div>
-					<dl>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Languages
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<dl class="kimGrid_a2-a6">
 						<div>
 							<dt>Fluent</dt>
 							<dd>HTML</dd>
 							<dd>CSS</dd>
-							<dd>JavaScript</dd>
-							<dd>Sass</dd>
+							<dd>JavaScript (vanilla!)</dd>
+							<dd>Sass/SCSS</dd>
 							<dd>Nunjucks</dd>
 							<dd>Twig</dd>
 							<dd>Liquid</dd>
+							<dd>Wikicode</dd>
 						</div>
 						<div>
 							<dt>Experienced</dt>
@@ -256,27 +232,29 @@ permalink: "/cv/"
 							<dd>Shell scripting</dd>
 							<dd>Haml</dd>
 							<dd>Coffeescript</dd>
-							<dd>JSX</dd>
 						</div>
 					</dl>
 				</div>
 			</section>
-			<section class="block">
-				<h3>Frameworks and tools</h3>
-				<div>
-					<dl>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Frameworks and tools
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<dl class="kimGrid_a2-a6">
 						<div>
 							<dt>Fluent</dt>
-							<dd>git</dd>
+							<dd>git / git flow</dd>
 							<dd>Gulp</dd>
 							<dd>Vue.js</dd>
 							<dd>Node.js</dd>
-							<dd>npm and Yarn</dd>
+							<dd>npm / Yarn</dd>
 							<dd>Babel</dd>
-							<dd>PostCSS</dd>
-							<dd>Puppeteer</dd>
 							<dd>Mailchimp</dd>
 							<dd>WordPress (including Timber)</dd>
+							<dd>MediaWiki</dd>
 							<dd>Eleventy</dd>
 							<dd>Jekyll</dd>
 						</div>
@@ -288,26 +266,31 @@ permalink: "/cv/"
 							<dd>Webpack</dd>
 							<dd>Express.js</dd>
 							<dd>Socket.io</dd>
-							<dd>Jest</dd>
+							<dd>Jest / Puppeteer</dd>
 							<dd>D3.js</dd>
 							<dd>React</dd>
 							<dd>React Native</dd>
 							<dd>Umbraco</dd>
+							<dd>Craft</dd>
 							<dd>ExpressionEngine</dd>
 						</div>
 					</dl>
 				</div>
 			</section>
-			<section class="block">
-				<h3>Software</h3>
-				<div>
-					<dl>
+			<section class="kim-!-margin-top-4">
+				<header class="kimGrid">
+					<h3 class="kimGrid_a2-a6 kimHeading-s">
+						Software
+					</h3>
+				</header>
+				<div class="kimGrid">
+					<dl class="kimGrid_a2-a6">
 						<div>
 							<dt>Fluent</dt>
 							<dd>Adobe Photoshop</dd>
 							<dd>Adobe Illustrator</dd>
-							<dd>Most Unix-like terminals running Bash or Zsh (I use Zsh in iTerm)</dd>
-							<dd>Most code editors (I use Sublime Text)</dd>
+							<dd>Most Unix-like terminals running Bash or Zsh (I use Zsh)</dd>
+							<dd>Most code editors (I currently use Nova)</dd>
 							<dd>The usual office software</dd>
 						</div>
 						<div>
@@ -321,10 +304,10 @@ permalink: "/cv/"
 				</div>
 			</section>
 		</section>
-
-		<footer>
-			<small>Please note: I legally changed my name in 2015 for personal reasons. As a result, certifications, references and other documentation from before then (as well as certain documents from afterwards) may be under a different name. Don’t be surprised if you reach out to my university and they’ve never heard of me!</small>
+		<footer class="kimGrid kim-!-margin-top-8">
+			<div class="kimGrid_a2-a6 kimBody-s">
+				Please note: I legally changed my name in 2015 for personal reasons. As a result, certifications, references and other documentation from before then (as well as certain documents from afterwards) may be under a different name. Don’t be surprised if you reach out to my university and they’ve never heard of me!
+			</div>
 		</footer>
-
-	</article>
-</main>
+	</div>
+</div>

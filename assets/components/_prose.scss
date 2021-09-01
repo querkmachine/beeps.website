@@ -1,0 +1,31 @@
+@use "../settings";
+@use "../helpers/spacing";
+
+@forward "../objects/rule";
+@forward "../objects/typography";
+@forward "../objects/lists";
+
+.kimProse {
+  p {
+    @extend .kimBody;
+  }
+  h2 {
+    @extend .kimHeading-l;
+  }
+  h3 {
+    @extend .kimHeading-m;
+  }
+  h4 {
+    @extend .kimHeading-s;
+  }
+  ol,
+  ul {
+    @extend .kimList;
+  }
+  ol {
+    @extend .kimList-numbered;
+  }
+  ul {
+    @extend .kimList-bulleted;
+  }
+}

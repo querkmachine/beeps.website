@@ -1,5 +1,7 @@
 @use "../settings";
 @use "../helpers/reset";
+@use "../helpers/colors";
+@use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
@@ -13,8 +15,18 @@
     display: inline-block;
   }
   &_link {
+    --color: #{colors.kim-color("kimberly")};
+    @include media-queries.kim-dark {
+      --color: #{colors.kim-color("highlight")};
+    }
     @include typography.kim-font-stack("header-alt", $weight: regular);
-    color: currentColor;
+    color: var(--color);
     text-decoration: none;
+    &[aria-current] {
+      text-decoration-color: var(--color);
+      text-decoration-style: wavy;
+      text-decoration-line: underline;
+      text-underline-offset: 0.2em;
+    }
   }
 }

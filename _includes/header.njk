@@ -1,3 +1,5 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
 <header class="kimMasthead">
   <div class="kimWrapper kimMasthead_inner">
     <strong class="kimMasthead_brand">
@@ -7,15 +9,13 @@
     </strong>
     <nav class="kimNavigation kimMasthead_nav" role="navigation" aria-label="Primary">
       <ul class="kimNavigation_list">
-        <li class="kimNavigation_item">
-          <a class="kimNavigation_link" href="{{ '/me' | url }}">About</a>
-        </li>
-        <li class="kimNavigation_item">
-          <a class="kimNavigation_link" href="{{ '/projects' | url }}">Projects</a>
-        </li>
-        <li class="kimNavigation_item">
-          <a class="kimNavigation_link" href="{{ '/blog' | url }}">Blog</a>
-        </li>
+        {%- for item in navPages %}
+          <li class="kimNavigation_item">
+            <a class="kimNavigation_link" href="{{ item.url | url }}" {%- if item.url === page.url %} aria-current="page"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+        {%- endfor %}
       </ul>
     </nav>
   </div>

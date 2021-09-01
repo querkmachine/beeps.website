@@ -1,0 +1,27 @@
+@use "../settings";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+
+.kimList {
+  @include spacing.kim-responsive-margin(0);
+  @include spacing.kim-responsive-padding(0);
+  @include typography.kim-font-size(19);
+  @include typography.kim-vr-margin(19);
+  list-style-type: none;
+  li + li {
+    @include spacing.kim-responsive-margin(1, $direction: top);
+  }
+  &-bulleted {
+    padding-left: 2em;
+    list-style-type: square;
+  }
+  &-numbered {
+    padding-left: 2em;
+    list-style-type: decimal;
+  }
+  &-spaced {
+    li + li {
+      @include spacing.kim-responsive-margin(3, $direction: top);
+    }
+  }
+}

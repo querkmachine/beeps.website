@@ -2,12 +2,24 @@
 layout: layouts/base.njk
 ---
 
-<main>
-  <article>
-    <h1>{{ title }}</h1>
-    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-    <div>
-      {{ content | safe }}
+<main id="content">
+  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+    <div class="kimWrapper">
+      <article>
+        <h1 class="kimHeading-xl">
+          {{ title }}
+        </h1>
+        <div class="kim-!-margin-bottom-5">
+          <time class="kimBody-l" datetime="{{ date | htmlDateString }}">
+            {{ date | readableDate }}
+          </time>
+        </div>
+        <div class="kimGrid">
+          <div class="kimGrid_a1-a4 kimProse">
+            {{ content | safe }}
+          </div>
+        </div>
+      </article>
     </div>
-  </article>
+  </div>
 </main>

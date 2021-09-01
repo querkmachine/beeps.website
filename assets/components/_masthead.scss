@@ -38,10 +38,10 @@
   &_logo {
     @include typography.kim-font-stack("header-alt", $weight: regular);
     @include typography.kim-font-size(24);
-    color: colors.kim-color("kimberly");
+    color: colors.kim-color("black");
     text-decoration: none;
     @include media-queries.kim-dark {
-      color: colors.kim-color("highlight");
+      color: colors.kim-color("white");
     }
   }
   &_nav {

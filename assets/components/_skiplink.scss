@@ -1,0 +1,24 @@
+@use "../settings";
+@use "../helpers/colors";
+@use "../helpers/media-queries";
+@use "../helpers/spacing";
+
+.kimSkiplink {
+  @include spacing.kim-responsive-padding(2);
+  --color: #{colors.kim-color("white")};
+  --background-color: #{colors.kim-color("kimberly")};
+  @include media-queries.kim-dark {
+    --color: #{colors.kim-color("black")};
+    --background-color: #{colors.kim-color("highlight")};
+  }
+  display: block;
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+  color: var(--color);
+  background-color: var(--background-color);
+  text-align: center;
+  &:focus {
+    position: static;
+  }
+}

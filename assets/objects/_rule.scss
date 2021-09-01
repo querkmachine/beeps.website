@@ -5,27 +5,27 @@
 .kimRule {
   margin: 0;
   border: 0;
-  &--xl {
+  &-xl {
     @include spacing.kim-responsive-padding(8, $direction: top);
     @include spacing.kim-responsive-padding(8, $direction: bottom);
   }
-  &--l {
+  &-l {
     @include spacing.kim-responsive-padding(6, $direction: top);
     @include spacing.kim-responsive-padding(6, $direction: bottom);
   }
-  &--m {
+  &-m {
     @include spacing.kim-responsive-padding(4, $direction: top);
     @include spacing.kim-responsive-padding(4, $direction: bottom);
   }
-  &--s {
+  &-s {
     @include spacing.kim-responsive-padding(2, $direction: top);
     @include spacing.kim-responsive-padding(2, $direction: bottom);
   }
-  &--xs {
+  &-xs {
     @include spacing.kim-responsive-padding(1, $direction: top);
     @include spacing.kim-responsive-padding(1, $direction: bottom);
   }
-  &--visible {
+  &-visible {
     background-image: repeating-linear-gradient(
       45deg,
       #{colors.kim-color("kimberly")},
