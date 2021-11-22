@@ -28,7 +28,10 @@ head: |
           content: '\2022';
           margin: 0 .25em 0 .125em; 
       }
-      
+      @media print {
+          html { font-size: 16px; }
+          h1, h2, h3, h4 { page-break-after: avoid; }
+      }
   </style>
 ---
 
@@ -36,7 +39,7 @@ head: |
 	<div class="kimWrapper">
 		<div class="kimGrid">
 			<h1 class="kimGrid_a2-a6 kimHeading-xl">
-			Hi, I'm Kimberly Grey
+			Hi, I&rsquo;m Kimberly Grey
 			</h1>
 		</div>
 		<div class="kimGrid">
@@ -81,7 +84,7 @@ head: |
 				</header>
 				<div class="kimGrid">
 					<div class="kimGrid_a2-a6 kimProse">
-						<p>Felinesoft is a flat-hierarchy Microsoft .NET development agency. my role here is primarily to take pre-conceived designs and code them into design systems; embedding progressive enhancement principles, accessibility and responsive design in the process; working with dozens of clients including the Royal Photographic Society, Rolls-Royce Motor Cars, Jack Daniel&rsquo;s, The Kennel Club, and the British Association for Counselling and Psychotherapy.</p>
+						<p>Felinesoft is a flat-hierarchy Microsoft .NET development agency. My primary role is to take designs and turn them into design systems whilst embedding progressive enhancement principles, accessibility and responsive design in the process. Here I’ve worked with dozens of clients including the Royal Photographic Society, Rolls-Royce Motor Cars, Jack Daniel&rsquo;s, The Kennel Club, and the British Association for Counselling and Psychotherapy.</p>
 						<p>In carrying out this role I defined evolutionary (and at times, revolutionary) process changes to embed best practice into every part of the design and development process. I also created a raft of open- and closed-source frameworks including FSForms, a best-practice forms library; Kickstart, a Fractal-based design system framework; and Felafel, a services-oriented bootstrapping library.</p>
 						<p>I’ve also worked as a PHP developer, graphic designer, UX and UI designer on disparate projects where those skills were required.</p>
 					</div>
@@ -98,7 +101,7 @@ head: |
 				<div class="kimGrid">
 					<div class="kimGrid_a2-a6 kimProse">
 						<p>Originally the Bristol Bronies, the Severn Bronies is a community hub serving the My Little Pony fandom in south-west England and south Wales. We organise and hold meets every week, ranging from small socials to elaborate events incorporating gaming, cosplay, vendors, live programming, and more. We’ve popped up in the media a few times, including in the Bristol Post, BBC Points West, BBC Inside Out, and Jeremy Vine’s Radio 2 show.</p>
-						<p>We make efforts to be active in the community and have fundraised for local charities, as well as having our own network for supporting transgender and gender non-conforming individuals. I organise the meets, perform administrative and financial duties, and design and maintain the group's website and brand identity.</p>
+						<p>We make efforts to be active in the community and have fundraised for local charities, as well as having our own network for supporting transgender and gender non-conforming individuals. I organise the meets, perform administrative and financial duties, and design and maintain the group’s website and brand identity.</p>
 					</div>
 				</div>
 			</section>
@@ -125,7 +128,7 @@ head: |
 				</header>
 				<div class="kimGrid">
 					<div class="kimGrid_a2-a6 kimProse">
-						<p>Industrial placement year at a small full-service agency in Bristol. I worked across the stack doing front- and back-end development, CMS management and server administration work for a number of high-profile clients, including Drinkaware, Brothers Cider, and Glorious Brands; working as lead developer on some projects. </p>
+						<p>Industrial placement year at a small full-service agency in Bristol. I worked across the stack doing front- and back-end development, CMS management and server administration work for a number of high-profile clients, including Drinkaware, Brothers Cider, the BMJ, and Glorious Brands; working as lead developer on some projects. </p>
 					</div>
 				</div>
 			</section>
@@ -137,8 +140,8 @@ head: |
 				</header>
 				<div class="kimGrid">
 					<div class="kimGrid_a2-a6 kimProse">
-						<p>In the past I've also served time as a wiki administrator (2008&ndash;2012), charity retail volunteer (2011&ndash;2012), social media administrator (2007&ndash;2011), editor-in-chief of a fanzine (2007&ndash;2010), and as a classroom assistant (2006&ndash;2008).</p>
-						<p>In my free time I've written some open-source stuff, including <a href="//github.com/querkmachine/vanilla-validation">Vanilla Validation</a> (a styling layer over ValidityState), <a href="//github.com/querkmachine/nova-randomize-everything">Randomize Everything</a> (a Nova editor extension), and <a href="//github.com/querkmachine/felafel">Felafel</a> (an extensible boilerplate component library).</p>
+						<p>In the past I’ve also served time as a wiki administrator (2008&ndash;2012), charity retail volunteer (2011&ndash;2012), social media administrator (2007&ndash;2011), editor-in-chief of a fanzine (2007&ndash;2010), and as a classroom assistant (2006&ndash;2008).</p>
+						<p>In my free time I’ve written some open-source stuff, including <a href="//github.com/querkmachine/vanilla-validation">Vanilla Validation</a> (a styling layer over ValidityState), <a href="//github.com/querkmachine/nova-randomize-everything">Randomize Everything</a> (a Nova editor extension), and <a href="//github.com/querkmachine/felafel">Felafel</a> (an extensible boilerplate component library).</p>
 					</div>
 				</div>
 			</section>
@@ -188,19 +191,20 @@ head: |
 					<dl class="kimGrid_a2-a6">
 						<div>
 							<dt>Fluent</dt>
-							<dd>Responsive design</dd>
-							<dd>Progressive enhancement</dd>
 							<dd>Design systems</dd>
+							<dd>Progressive enhancement</dd>
+							<dd>Responsive design</dd>
 							<dd>Semantic web</dd>
-							<dd>UX design</dd>
-							<dd>Information architecture</dd>
+							<dd>Web accessibility</dd>
 						</div>
 						<div>
 							<dt>Experienced</dt>
-							<dd>Service design</dd>
-							<dd>Internationalisation and localisation</dd>
 							<dd>Data visualisation</dd>
+							<dd>Internationalisation and localisation</dd>
+							<dd>Information architecture</dd>
 							<dd>Progressive web apps</dd>
+							<dd>Service design</dd>
+							<dd>UX design</dd>
 						</div>
 					</dl>
 				</div>
@@ -215,23 +219,23 @@ head: |
 					<dl class="kimGrid_a2-a6">
 						<div>
 							<dt>Fluent</dt>
-							<dd>HTML</dd>
 							<dd>CSS</dd>
+							<dd>HTML</dd>
 							<dd>JavaScript (vanilla!)</dd>
-							<dd>Sass/SCSS</dd>
-							<dd>Nunjucks</dd>
-							<dd>Twig</dd>
 							<dd>Liquid</dd>
-							<dd>Wikicode</dd>
+							<dd>Markdown</dd>
+							<dd>Nunjucks</dd>
+							<dd>Sass/SCSS</dd>
+							<dd>Twig</dd>
+							<dd>Wikitext</dd>
 						</div>
 						<div>
 							<dt>Experienced</dt>
-							<dd>PHP</dd>
-							<dd>MySQL</dd>
-							<dd>Regular Expressions</dd>
-							<dd>Shell scripting</dd>
-							<dd>Haml</dd>
 							<dd>Coffeescript</dd>
+							<dd>Haml</dd>
+							<dd>MySQL</dd>
+							<dd>PHP</dd>
+							<dd>Regular Expressions</dd>
 						</div>
 					</dl>
 				</div>

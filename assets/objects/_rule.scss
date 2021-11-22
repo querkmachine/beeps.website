@@ -3,27 +3,28 @@
 @use "../helpers/spacing";
 
 .kimRule {
+  height: 1rem;
   margin: 0;
   border: 0;
   &-xl {
-    @include spacing.kim-responsive-padding(8, $direction: top);
-    @include spacing.kim-responsive-padding(8, $direction: bottom);
+    @include spacing.kim-responsive-margin(8, $direction: top);
+    @include spacing.kim-responsive-margin(8, $direction: bottom);
   }
   &-l {
-    @include spacing.kim-responsive-padding(6, $direction: top);
-    @include spacing.kim-responsive-padding(6, $direction: bottom);
+    @include spacing.kim-responsive-margin(6, $direction: top);
+    @include spacing.kim-responsive-margin(6, $direction: bottom);
   }
   &-m {
-    @include spacing.kim-responsive-padding(4, $direction: top);
-    @include spacing.kim-responsive-padding(4, $direction: bottom);
+    @include spacing.kim-responsive-margin(4, $direction: top);
+    @include spacing.kim-responsive-margin(4, $direction: bottom);
   }
   &-s {
-    @include spacing.kim-responsive-padding(2, $direction: top);
-    @include spacing.kim-responsive-padding(2, $direction: bottom);
+    @include spacing.kim-responsive-margin(2, $direction: top);
+    @include spacing.kim-responsive-margin(2, $direction: bottom);
   }
   &-xs {
-    @include spacing.kim-responsive-padding(1, $direction: top);
-    @include spacing.kim-responsive-padding(1, $direction: bottom);
+    @include spacing.kim-responsive-margin(1, $direction: top);
+    @include spacing.kim-responsive-margin(1, $direction: bottom);
   }
   &-visible {
     background-image: repeating-linear-gradient(

@@ -1,5 +1,6 @@
 @use "../settings";
 @use "../helpers/spacing";
+@use "../helpers/typography";
 
 @forward "../objects/rule";
 @forward "../objects/typography";
@@ -27,5 +28,15 @@
   }
   ul {
     @extend .kimList-bulleted;
+  }
+  img {
+    @include typography.kim-vr-margin(19);
+    width: 100%;
+    height: auto;
+  }
+  hr {
+    @extend .kimRule;
+    @extend .kimRule-l;
+    @extend .kimRule-visible;
   }
 }
