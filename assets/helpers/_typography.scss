@@ -18,7 +18,7 @@
     math.unit($line-height) ==
     math.unit($font-size)
   {
-    $line-height: $line-height / $font-size;
+    $line-height: math.div($line-height, $font-size);
   }
   @return $line-height;
 }

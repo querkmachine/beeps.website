@@ -4,6 +4,8 @@
 @use "../helpers/graphics";
 @use "../helpers/media-queries";
 
+@use "sass:math";
+
 * {
   box-sizing: border-box;
   &::before,
@@ -53,12 +55,12 @@
       background-image: linear-gradient(
         to right,
         colors.kim-color("black"),
-        colors.kim-color("black") $bar-height / 4,
-        colors.kim-color("grey") $bar-height / 4,
-        colors.kim-color("grey") $bar-height / 4 * 2,
-        colors.kim-color("white") $bar-height / 4 * 2,
-        colors.kim-color("white") $bar-height / 4 * 3,
-        colors.kim-color("kimberly") $bar-height / 4 * 3,
+        colors.kim-color("black") math.div($bar-height, 4),
+        colors.kim-color("grey") math.div($bar-height, 4),
+        colors.kim-color("grey") math.div($bar-height, 4 * 2),
+        colors.kim-color("white") math.div($bar-height, 4 * 2),
+        colors.kim-color("white") math.div($bar-height, 4 * 3),
+        colors.kim-color("kimberly") math.div($bar-height, 4 * 3),
         colors.kim-color("kimberly")
       );
     }

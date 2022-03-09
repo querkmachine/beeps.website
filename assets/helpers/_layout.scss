@@ -2,27 +2,28 @@
 @use "media-queries";
 
 @use "sass:map";
+@use "sass:math";
 @use "sass:string";
 
 // Main wrapper definition
 @mixin kim-width-container {
   $gutter-safe-area-right: calc(
-    #{settings.$kim-page-gutter / 2} + env(safe-area-inset-right)
+    #{math.div(settings.$kim-page-gutter, 2)} + env(safe-area-inset-right)
   );
   $gutter-safe-area-left: calc(
-    #{settings.$kim-page-gutter / 2} + env(safe-area-inset-left)
+    #{math.div(settings.$kim-page-gutter, 2)} + env(safe-area-inset-left)
   );
   display: block;
   max-width: settings.$kim-page-width;
-  margin-right: settings.$kim-page-gutter / 2;
-  margin-left: settings.$kim-page-gutter / 2;
+  margin-right: math.div(settings.$kim-page-gutter, 2);
+  margin-left: math.div(settings.$kim-page-gutter, 2);
   @supports (margin: max(calc(0px))) {
     margin-right: max(
-      #{settings.$kim-page-gutter / 2},
+      #{math.div(settings.$kim-page-gutter, 2)},
       #{$gutter-safe-area-right}
     );
     margin-left: max(
-      #{settings.$kim-page-gutter / 2},
+      #{math.div(settings.$kim-page-gutter, 2)},
       #{$gutter-safe-area-left}
     );
   }

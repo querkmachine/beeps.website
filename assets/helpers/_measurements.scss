@@ -7,5 +7,5 @@
   @if (math.is-unitless($value)) {
     $value: $value * 1px;
   }
-  @return $value / settings.$kim-font-sizes-root * 1rem;
+  @return math.div($value, settings.$kim-font-sizes-root) * 1rem;
 }
