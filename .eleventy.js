@@ -24,6 +24,9 @@ module.exports = function (eleventyConfig) {
   // Copy UI images
   eleventyConfig.addPassthroughCopy("assets/images");
 
+  // Copy .htaccess
+  eleventyConfig.addPassthroughCopy(".htaccess");
+
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
     const result = sass.renderSync({
