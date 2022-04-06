@@ -6,6 +6,7 @@
 @use "../helpers/media-queries";
 
 .kimFooter {
+  border-top: 0.5rem solid colors.kim-color("kimberly");
   color: colors.kim-color("white");
   background-color: colors.kim-color("black");
   text-align: center;

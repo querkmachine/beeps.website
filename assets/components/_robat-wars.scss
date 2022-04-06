@@ -1,8 +1,6 @@
 @use "../settings";
-@use "../helpers/reset";
 @use "../helpers/colors";
 @use "../helpers/spacing";
-@use "../helpers/media-queries";
 
 .kimRobatWars {
   $offset: spacing.kim-spacing(8);
