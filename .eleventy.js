@@ -90,7 +90,6 @@ module.exports = function (eleventyConfig) {
       "d LLLL yyyy"
     );
   });
-
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
@@ -101,6 +100,15 @@ module.exports = function (eleventyConfig) {
       return array.slice(n);
     }
     return array.slice(0, n);
+  });
+
+  // Generate a string we can use for asset cachebusting
+  // https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
+  eleventyConfig.addFilter("cachebust", (url) => {
+    const [urlPart, paramPart] = url.split("?");
+    const params = new URLSearchParams(paramPart || "");
+    params.set("v", DateTime.local().toFormat("X"));
+    return `${urlPart}?${params}`;
   });
 
   // Layouts

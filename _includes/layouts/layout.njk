@@ -23,7 +23,7 @@
   <noscript>
     <link rel="stylesheet" href="{{ googleFontsUrl }}">
   </noscript>
-  <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url }}" media="all">
+  <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
   
   {# Page-specific head content #}
   {{ head | safe }}
