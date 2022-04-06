@@ -49,36 +49,4 @@
     @include typography.kim-font-size(14);
     display: block;
   }
-  &_beep {
-    @include spacing.kim-responsive-margin(6, $direction: top);
-    line-height: 0;
-    pointer-events: none;
-    @include media-queries.kim-mq($from: large-mobile) {
-      position: absolute;
-      bottom: 0;
-      left: -5rem;
-    }
-    picture {
-      display: inline-block;
-    }
-    img {
-      width: 100%;
-      max-width: 14rem;
-      max-height: 10rem;
-      object-fit: cover;
-      object-position: top center;
-      @include media-queries.kim-mq($from: large-mobile) {
-        max-width: 14rem;
-        max-height: 10rem;
-      }
-      @include media-queries.kim-mq($from: tablet) {
-        max-width: 17rem;
-        max-height: 12rem;
-      }
-      @include media-queries.kim-mq($from: desktop) {
-        max-width: 22rem;
-        max-height: 13.75rem;
-      }
-    }
-  }
 }

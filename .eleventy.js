@@ -21,6 +21,9 @@ module.exports = function (eleventyConfig) {
   // Global settings
   eleventyConfig.setDataDeepMerge(true);
 
+  // Copy UI images
+  eleventyConfig.addPassthroughCopy("assets/images");
+
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
     const result = sass.renderSync({

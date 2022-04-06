@@ -39,30 +39,9 @@
     color: var(--text);
     background-color: var(--background);
     background-image: graphics.kim-topography-bg(#f8f4ff);
+    border-top: 0.5rem solid colors.kim-color("kimberly");
     @include media-queries.kim-dark {
       background-image: graphics.kim-topography-bg(#000);
-    }
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: $bar-height;
-      @include media-queries.kim-print {
-        display: none;
-      }
-    }
-    &::before {
-      background-image: linear-gradient(
-        to right,
-        colors.kim-color("black"),
-        colors.kim-color("black") math.div($bar-height, 4),
-        colors.kim-color("grey") math.div($bar-height, 4),
-        colors.kim-color("grey") math.div($bar-height, 4 * 2),
-        colors.kim-color("white") math.div($bar-height, 4 * 2),
-        colors.kim-color("white") math.div($bar-height, 4 * 3),
-        colors.kim-color("kimberly") math.div($bar-height, 4 * 3),
-        colors.kim-color("kimberly")
-      );
     }
   }
 }
