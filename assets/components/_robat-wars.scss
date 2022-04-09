@@ -1,0 +1,19 @@
+@use "../settings";
+@use "../helpers/colors";
+@use "../helpers/spacing";
+
+.kimRobatWars {
+  $offset: spacing.kim-spacing(8);
+  height: clamp(12rem, 30vh, 15rem);
+  background-color: var(--color-accent);
+  pointer-events: none;
+  &_inner {
+    height: calc(100% + #{$offset});
+    position: relative;
+    top: 0 - $offset;
+    background-image: url("/assets/images/robats.png");
+    background-repeat: repeat-x;
+    background-position: top 0 left 50%;
+    background-size: auto 125%;
+  }
+}

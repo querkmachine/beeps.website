@@ -15,15 +15,11 @@
     display: inline-block;
   }
   &_link {
-    --color: #{colors.kim-color("kimberly")};
-    @include media-queries.kim-dark {
-      --color: #{colors.kim-color("highlight")};
-    }
     @include typography.kim-font-stack("header-alt", $weight: regular);
-    color: var(--color);
+    color: var(--color-accent);
     text-decoration: none;
     &[aria-current] {
-      text-decoration-color: var(--color);
+      text-decoration-color: var(--color-accent);
       text-decoration-style: wavy;
       text-decoration-line: underline;
       text-underline-offset: 0.2em;

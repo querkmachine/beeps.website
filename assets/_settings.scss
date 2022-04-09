@@ -1,9 +1,10 @@
 @use "sass:map";
 
 $kim-breakpoints: (
-  large-mobile: 400px,
-  tablet: 650px,
-  desktop: 800px,
+  constitution: 400px,
+  galaxy: 600px,
+  defiant: 768px,
+  intrepid: 1000px
 );
 
 $kim-color-palette: (
@@ -11,7 +12,8 @@ $kim-color-palette: (
   "black": #1c1924,
   "kimberly": #786999,
   "grey": #4b5475,
-  "highlight": #b9e587,
+  "emy": #b9e587,
+  "neon-magenta": #ff0090,
 );
 $kim-focus-color: #fc0;
 $kim-focus-color-text: #000;
@@ -80,12 +82,18 @@ $kim-font-stacks: (
 
 $kim-font-sizes-root: 16px;
 $kim-font-sizes: (
+  12: (
+    null: (
+      font-size: 12px,
+      line-height: 15px,
+    ) 
+  ),
   14: (
     null: (
       font-size: 12px,
       line-height: 15px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 14px,
       line-height: 18px,
     ),
@@ -95,7 +103,7 @@ $kim-font-sizes: (
       font-size: 14px,
       line-height: 18px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 16px,
       line-height: 22px,
     ),
@@ -105,7 +113,7 @@ $kim-font-sizes: (
       font-size: 16px,
       line-height: 22px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 19px,
       line-height: 27px,
     ),
@@ -115,7 +123,7 @@ $kim-font-sizes: (
       font-size: 18px,
       line-height: 20px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 24px,
       line-height: 30px,
     ),
@@ -125,7 +133,7 @@ $kim-font-sizes: (
       font-size: 24px,
       line-height: 25px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 36px,
       line-height: 40px,
     ),
@@ -135,7 +143,7 @@ $kim-font-sizes: (
       font-size: 32px,
       line-height: 35px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 48px,
       line-height: 50px,
     ),
@@ -145,7 +153,7 @@ $kim-font-sizes: (
       font-size: 53px,
       line-height: 55px,
     ),
-    tablet: (
+    galaxy: (
       font-size: 80px,
       line-height: 80px,
     ),
@@ -170,29 +178,38 @@ $kim-spacing: (
   ),
   4: (
     null: 15px,
-    tablet: 20px,
+    galaxy: 20px,
   ),
   5: (
     null: 15px,
-    tablet: 25px,
+    galaxy: 25px,
   ),
   6: (
     null: 20px,
-    tablet: 30px,
+    galaxy: 30px,
   ),
   7: (
     null: 26px,
-    tablet: 40px,
-    desktop: 50px,
+    galaxy: 40px,
+    defiant: 50px,
   ),
   8: (
     null: 30px,
-    tablet: 50px,
-    desktop: 75px,
+    galaxy: 50px,
+    defiant: 75px,
   ),
   9: (
     null: 40px,
-    tablet: 60px,
-    desktop: 90px,
+    galaxy: 60px,
+    defiant: 90px,
   ),
+);
+
+$kim-grid-widths: (
+  "oneQuarter": 25%,
+  "oneHalf": 50%,
+  "threeQuarters": 75%,
+  "oneThird": 33.33333%,
+  "twoThirds": 66.66666%,
+  "full": 100%
 );

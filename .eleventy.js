@@ -21,6 +21,12 @@ module.exports = function (eleventyConfig) {
   // Global settings
   eleventyConfig.setDataDeepMerge(true);
 
+  // Copy UI images
+  eleventyConfig.addPassthroughCopy("assets/images");
+
+  // Copy .htaccess
+  eleventyConfig.addPassthroughCopy(".htaccess");
+
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
     const result = sass.renderSync({
@@ -84,7 +90,6 @@ module.exports = function (eleventyConfig) {
       "d LLLL yyyy"
     );
   });
-
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
@@ -97,6 +102,21 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
+  // Generate a string we can use for asset cachebusting
+  // https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
+  eleventyConfig.addFilter("cachebust", (url) => {
+    const [urlPart, paramPart] = url.split("?");
+    const params = new URLSearchParams(paramPart || "");
+    params.set("v", DateTime.local().toFormat("X"));
+    return `${urlPart}?${params}`;
+  });
+
   // Layouts
-  eleventyConfig.addLayoutAlias("blog-post", "layouts/blog-post.njk");
+  eleventyConfig.addLayoutAlias("blog-post", "blog-post.njk");
+
+  return {
+    dir: {
+      layouts: "_layouts",
+    },
+  };
 };

@@ -1,7 +1,6 @@
 @use "../settings";
 @use "../helpers/typography";
 @use "../helpers/colors";
-@use "../helpers/graphics";
 @use "../helpers/media-queries";
 
 @use "sass:math";
@@ -14,55 +13,35 @@
   }
 }
 
-.kimPage {
-  --text: #{colors.kim-color("black")};
-  --background: #{colors.kim-color("white")};
-  @include media-queries.kim-dark {
-    --text: #{colors.kim-color("white")};
-    --background: #{colors.kim-color("black")};
+:root {
+  --color-text: #{colors.kim-color("black")};
+  --color-background: #{colors.kim-color("white")};
+  --color-subtle: #{colors.kim-color("grey")};
+  --color-accent: #{colors.kim-color("kimberly")};
+}
+
+@include media-queries.kim-dark {
+  :root {
+    --color-text: #{colors.kim-color("white")};
+    --color-background: #{colors.kim-color("black")};
+    --color-subtle: #{colors.kim-color("grey")};
+    --color-accent: #{colors.kim-color("neon-magenta")};
   }
-  background-color: colors.kim-color("black");
-  font-size: max(16px, 1.22vw);
+}
+
+.kimPage {
+  font-size: clamp(16px, 1.22vw, 30px);
   text-size-adjust: 100%;
   @if settings.$kim-font-sizes-root != 16px {
     font-size: settings.$kim-font-sizes-root;
   }
-  @include media-queries.kim-dark {
-    background-color: #000; // Match the even darker footer color
-  }
   &_body {
-    $bar-height: 22px;
     @include typography.kim-typography-common;
     @include typography.kim-font-stack(body);
     @include typography.kim-font-size(19);
+    min-height: 100vh;
     margin: 0;
-    color: var(--text);
-    background-color: var(--background);
-    background-image: graphics.kim-topography-bg(#f8f4ff);
-    @include media-queries.kim-dark {
-      background-image: graphics.kim-topography-bg(#000);
-    }
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: $bar-height;
-      @include media-queries.kim-print {
-        display: none;
-      }
-    }
-    &::before {
-      background-image: linear-gradient(
-        to right,
-        colors.kim-color("black"),
-        colors.kim-color("black") math.div($bar-height, 4),
-        colors.kim-color("grey") math.div($bar-height, 4),
-        colors.kim-color("grey") math.div($bar-height, 4 * 2),
-        colors.kim-color("white") math.div($bar-height, 4 * 2),
-        colors.kim-color("white") math.div($bar-height, 4 * 3),
-        colors.kim-color("kimberly") math.div($bar-height, 4 * 3),
-        colors.kim-color("kimberly")
-      );
-    }
+    color: var(--color-text);
+    background-color: var(--color-background);
   }
 }

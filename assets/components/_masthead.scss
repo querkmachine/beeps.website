@@ -1,33 +1,29 @@
 @use "../settings";
+@use "../helpers/colors";
+@use "../helpers/links";
+@use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
-@use "../helpers/colors";
-@use "../helpers/media-queries";
 
 @use "sass:color";
 
 .kimMasthead {
-  --text: inherit;
-  --background: #{color.change(colors.kim-color("white"), $alpha: 0.9)};
-  @include spacing.kim-responsive-padding(4, $direction: top);
-  @include spacing.kim-responsive-padding(4, $direction: bottom);
   position: sticky;
   top: 0;
   z-index: 1000;
-  color: var(--text);
-  background-color: var(--background);
-  backdrop-filter: blur(1rem);
-  @include media-queries.kim-dark {
-    --text: #{colors.kim-color("white")};
-    --background: ##{color.change(colors.kim-color("black"), $alpha: 0.9)};
-  }
+  color: var(--color-text);
+  background-color: var(--color-background);
   @include media-queries.kim-print {
     display: none;
   }
   &_inner {
+    @include spacing.kim-responsive-padding(4, $direction: top);
+    @include spacing.kim-responsive-padding(4, $direction: bottom);
     display: flex;
     flex-direction: column;
-    @include media-queries.kim-mq($from: tablet) {
+    border-top: .5rem solid var(--color-accent);
+    border-bottom: 1px solid var(--color-subtle);
+    @include media-queries.kim-mq($from: galaxy) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -38,11 +34,7 @@
   &_logo {
     @include typography.kim-font-stack("header-alt", $weight: regular);
     @include typography.kim-font-size(24);
-    color: colors.kim-color("black");
-    text-decoration: none;
-    @include media-queries.kim-dark {
-      color: colors.kim-color("white");
-    }
+    @include links.kim-link($underlineOnHoverOnly: true);
   }
   &_nav {
   }

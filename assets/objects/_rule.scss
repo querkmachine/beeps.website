@@ -3,36 +3,9 @@
 @use "../helpers/spacing";
 
 .kimRule {
+  @include spacing.kim-responsive-margin(8, $direction: top);
+  @include spacing.kim-responsive-margin(8, $direction: bottom);
   height: 1rem;
-  margin: 0;
   border: 0;
-  &-xl {
-    @include spacing.kim-responsive-margin(8, $direction: top);
-    @include spacing.kim-responsive-margin(8, $direction: bottom);
-  }
-  &-l {
-    @include spacing.kim-responsive-margin(6, $direction: top);
-    @include spacing.kim-responsive-margin(6, $direction: bottom);
-  }
-  &-m {
-    @include spacing.kim-responsive-margin(4, $direction: top);
-    @include spacing.kim-responsive-margin(4, $direction: bottom);
-  }
-  &-s {
-    @include spacing.kim-responsive-margin(2, $direction: top);
-    @include spacing.kim-responsive-margin(2, $direction: bottom);
-  }
-  &-xs {
-    @include spacing.kim-responsive-margin(1, $direction: top);
-    @include spacing.kim-responsive-margin(1, $direction: bottom);
-  }
-  &-visible {
-    background-image: repeating-linear-gradient(
-      45deg,
-      #{colors.kim-color("kimberly")},
-      #{colors.kim-color("kimberly")} 9px,
-      transparent 9px,
-      transparent 18px
-    );
-  }
+  background-color: var(--color-accent);
 }

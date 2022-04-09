@@ -27,7 +27,7 @@
       #{$gutter-safe-area-left}
     );
   }
-  @include media-queries.kim-mq($from: tablet) {
+  @include media-queries.kim-mq($from: galaxy) {
     $gutter-safe-area-right: calc(
       #{settings.$kim-page-gutter} + env(safe-area-inset-right)
     );

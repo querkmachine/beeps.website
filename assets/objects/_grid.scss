@@ -1,31 +1,31 @@
 @use "../settings";
+@use "../helpers/layout";
 @use "../helpers/media-queries";
 
 @use "sass:list";
 
-// A compound grid, cuz why not, let's try it.
-// HT: Andy Clarke
-// https://stuffandnonsense.co.uk/blog/get-started-quickly-with-a-4-5-compound-grid
 
-$grid-lines: (a1, a2, b2, a3, b3, a4, b4, a5, a6);
 
 .kimGrid {
-  $self: &;
-  display: grid;
-  grid-template-columns: 1fr;
-  @include media-queries.kim-mq($from: tablet) {
-    grid-gap: settings.$kim-page-gutter;
-    grid-template-columns: [a1] 6fr [a2] 1fr [b2] 4fr [a3] 3fr [b3] 3fr [a4] 4fr [b4] 1fr [a5] 6fr [a6];
-    @each $line1 in $grid-lines {
-      $i: list.index($grid-lines, $line1);
-      @each $line2 in $grid-lines {
-        $j: list.index($grid-lines, $line2);
-        @if ($line1 != $line2) and ($j >= $i) {
-          #{$self}_#{$line1}-#{$line2} {
-            grid-column: #{$line1} / #{$line2};
-          }
-        }
-      }
+  $half-gutter: settings.$kim-page-gutter * .5;
+  @include layout.kim-clearfix;
+  margin-right: 0 - $half-gutter;
+  margin-left: 0 - $half-gutter;
+  &_column {
+    padding-right: $half-gutter;
+    padding-left: $half-gutter;
+    float: left;
+  }
+}
+
+@each $name, $width in settings.$kim-grid-widths {
+  .kimGrid_column-#{$name} { width: $width; }
+}
+
+@each $breakpoint, $value in settings.$kim-breakpoints {
+  @include media-queries.kim-mq($from: $breakpoint) {
+    @each $name, $width in settings.$kim-grid-widths {
+      .#{$breakpoint}\:kimGrid_column-#{$name} { width: $width; }
     }
   }
 }
