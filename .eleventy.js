@@ -112,5 +112,11 @@ module.exports = function (eleventyConfig) {
   });
 
   // Layouts
-  eleventyConfig.addLayoutAlias("blog-post", "layouts/blog-post.njk");
+  eleventyConfig.addLayoutAlias("blog-post", "blog-post.njk");
+
+  return {
+    dir: {
+      layouts: "_layouts",
+    },
+  };
 };

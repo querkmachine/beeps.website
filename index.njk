@@ -1,74 +1,35 @@
 ---
-layout: layouts/base.njk
 title: Kimberly Grey — Bristol-based web developer
-head: |
-  <style media="screen">
-    .js-switcheroo > span { display: inline-block; }
-    .js-switcheroo .flipX { transform: rotateX(180deg); }
-    .js-switcheroo .flipY { transform: rotateY(180deg); }
-    .js-switcheroo .flipZ { transform: rotateZ(180deg); }
-    .js-switcheroo .flipX.flipY { transform: rotateX(180deg) rotateY(180deg); }
-    .js-switcheroo .flipX.flipZ { transform: rotateX(180deg) rotateZ(180deg); }
-    .js-switcheroo .flipY.flipZ { transform: rotateY(180deg) rotateZ(180deg); }
-    .js-switcheroo .flipX.flipY.flipZ { transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg); }
-    .js-switcheroo .text { text-transform: uppercase; }
-  </style>
-foot: |
-  <script>
-    // Funky letter swapping fun
-    (() => {
-      const $logo = document.querySelector(".js-switcheroo");
-      const children = $logo.children;
-      const effects = ['text', 'flipX', 'flipY', 'flipZ'];
-      const getRandom = (arr) => {
-        return arr[Math.floor(Math.random() * arr.length)];
-      }
-      const addRandomEffect = () => {
-        const $child = getRandom(children);
-        $child.classList.add(getRandom(effects));
-      };
-      const removeRandomEffect = () => {
-        const $child = getRandom(children);
-        $child.classList.remove(getRandom($child.classList));
-      }
-      const changeSomething = () => {
-        const functions = [addRandomEffect, removeRandomEffect];
-        getRandom(functions)();
-      }
-      setInterval(changeSomething, 100);
-    })();
-  </script>
 ---
 
-<div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
-  <div class="kimWrapper">
-    <h1 class="kimHeading-xl">
-      Hi, I&rsquo;m<br>
-      <span class="kim-!-sr">Kimberly&nbsp;Grey</span><!--
-    --><span class="js-switcheroo" aria-hidden="true"><!--
-      --><span>K</span><!--
-      --><span>i</span><!--
-      --><span>m</span><!--
-      --><span>b</span><!--
-      --><span>e</span><!--
-      --><span>r</span><!--
-      --><span>l</span><!--
-      --><span>y</span><!--
-      --><span>&nbsp;</span><!--
-      --><span>G</span><!--
-      --><span>r</span><!--
-      --><span>e</span><!--
-      --><span>y</span><!--
-    --></span>.
-    </h1>
-    <div class="kimGrid">
-      <div class="kimGrid_a2-a4">
-        <p class="kimBody">I&rsquo;m a Bristol-based front-end developer specialising in accessibility, design systems, and the semantic web. I currently work as a front-end developer at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>.</p>
-      </div>
-      <div class="kimGrid_a4-a6">
-        <p class="kimBody">I'm trans, ace, and in my spare time I'm a robot bat on the internet.</p>
-        <p class="kimBody">This is my personal website which is perpetually unfinished.</p>
+{% extends '_layouts/layout.njk' %}
+
+{% block main %}
+  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf">
+          <h1 class="kimHeading-xl">
+            Hi, I&rsquo;m<br>
+            <span class="AND-100-PERCENT-REASON-TO-REMEMBER-THE-NAME">Kimberly&nbsp;Grey</span>
+          </h1>
+        </div>
+        <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf intrepid:kimGrid_column-oneQuarter">
+          <p class="kimBody">I&rsquo;m a Bristol-based front-end developer specialising in accessibility, design systems, and the semantic web. I currently work as a front-end developer at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>.</p>
+        </div>
+        <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf intrepid:kimGrid_column-oneQuarter">
+          <p class="kimBody">I'm trans, ace, and in my spare time I'm a robot bat on the internet.</p>
+          <p class="kimBody">This is my personal website which is perpetually unfinished.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{% endblock %}
+
+{% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
+
+{% block head %}
+  <style media="screen">
+    .AND-100-PERCENT-REASON-TO-REMEMBER-THE-NAME { color: var(--color-accent); }
+  </style>
+{% endblock %}

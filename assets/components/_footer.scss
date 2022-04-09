@@ -6,48 +6,23 @@
 @use "../helpers/media-queries";
 
 .kimFooter {
-  border-top: 0.5rem solid colors.kim-color("kimberly");
-  color: colors.kim-color("white");
-  background-color: colors.kim-color("black");
+  position: sticky;
+  top: 100%;
   text-align: center;
-  @include media-queries.kim-dark {
-    background-color: #000; // What's blacker than black?
-  }
-  @include media-queries.kim-mq($from: large-mobile) {
+  @include media-queries.kim-mq($from: galaxy) {
     text-align: right;
   }
   @include media-queries.kim-print {
     display: none;
   }
   &_inner {
-    @include spacing.kim-responsive-padding(6, $direction: top);
+    @include spacing.kim-responsive-padding(3, $direction: top);
+    @include spacing.kim-responsive-padding(3, $direction: bottom);
+    border-bottom: .5rem solid var(--color-accent);
     position: relative;
-    @include media-queries.kim-mq($from: large-mobile) {
-      @include spacing.kim-responsive-padding(6, $direction: bottom);
-    }
-  }
-  &_social {
-    &_list {
-      @include reset.kim-reset-list;
-    }
-    &_item {
-      @include spacing.kim-responsive-margin(3, $direction: left);
-      display: inline;
-    }
-    &_link {
-      @include spacing.kim-responsive-padding(2, $direction: left);
-      @include spacing.kim-responsive-padding(1, $direction: right);
-      display: inline-block;
-    }
-    &_icon {
-      width: 2.2rem;
-      height: 2.2rem;
-      fill: white;
-    }
   }
   &_boilerplate {
-    @include spacing.kim-responsive-margin(6, $direction: top);
-    @include typography.kim-font-size(14);
+    @include typography.kim-font-size(12);
     display: block;
   }
 }

@@ -36,7 +36,22 @@
   }
   hr {
     @extend .kimRule;
-    @extend .kimRule-l;
-    @extend .kimRule-visible;
+  }
+  figure {
+    margin: 0;
+    @include typography.kim-vr-margin(19);
+    img {
+      margin-bottom: 0;
+    }
+    figcaption {
+      @include typography.kim-font-size(14);
+      text-align: right;
+    }
+  }
+  blockquote {
+    margin: 0;
+    @include typography.kim-vr-margin(19);
+    padding-left: 1rem;
+    border-left: .5rem solid var(--color-subtle);
   }
 }
