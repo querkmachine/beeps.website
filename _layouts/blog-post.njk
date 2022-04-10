@@ -4,17 +4,23 @@
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
       <article>
-        <h1 class="kimHeading-xl">
-          {{ title }}
-        </h1>
+        {% block title %}
+          <h1 class="kimHeading-xl">
+            {{ title }}
+          </h1>
+        {% endblock %}
         <div class="kim-!-margin-bottom-5">
-          <time class="kimBody-l" datetime="{{ date | htmlDateString }}">
-            {{ date | readableDate }}
-          </time>
+          {% block date %}
+            <time class="kimBody-l" datetime="{{ date | htmlDateString }}">
+              {{ date | readableDate }}
+            </time>
+          {% endblock %}
         </div>
         <div class="kimGrid">
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse">
-            {{ content | safe }}
+            {% block content  %}
+              {{ content | smartquotes | safe }}
+            {% endblock %}
           </div>
         </div>
       </article>

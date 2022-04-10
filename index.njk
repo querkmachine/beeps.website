@@ -5,7 +5,7 @@ title: Kimberly Grey — Bristol-based web developer
 {% extends '_layouts/layout.njk' %}
 
 {% block main %}
-  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+  <div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
     <div class="kimWrapper">
       <div class="kimGrid">
         <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf">
@@ -18,12 +18,41 @@ title: Kimberly Grey — Bristol-based web developer
           <p class="kimBody">I&rsquo;m a Bristol-based front-end developer specialising in accessibility, design systems, and the semantic web. I currently work as a front-end developer at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>.</p>
         </div>
         <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf intrepid:kimGrid_column-oneQuarter">
-          <p class="kimBody">I'm trans, ace, and in my spare time I'm a robot bat on the internet.</p>
+          <p class="kimBody">I'm trans (she/her), ace, and in my spare time I'm a robot bat on the internet.</p>
           <p class="kimBody">This is my personal website which is perpetually unfinished.</p>
         </div>
       </div>
     </div>
   </div>
+  <section class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf" aria-hidden="true">&nbsp;</div>
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf">
+          <header class="kim-!-margin-bottom-3">
+            <h2 class="kimHeading-l">Kim Does Blog</h2>
+          </header>
+          <ol class="kimList kimList-spaced">
+            {% for post in collections.blog | reverse | head(3) %}
+              <li>
+                <a href="{{ post.url | url }}" class="kimLink">
+                  {%- if post.data.title -%}
+                    {{ post.data.title }}
+                  {%- else -%}
+                    {{ post.url }}
+                  {%- endif -%}
+                </a><br>
+                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+              </li>
+            {% endfor %}
+          </ol>
+          <footer>
+            <a href="{{ '/blog' | url }}" class="kimLink">More blog posts &rarr;</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}
 
 {% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}

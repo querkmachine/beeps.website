@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
 
       let metadata = await pluginImages(src, {
         widths: [300, 600, 900, null],
-        formats: ["webp", "jpeg"],
+        formats: ["webp", "jpeg", "png"],
         urlPath: "/images/",
         outputDir: "./_site/images/",
       });
@@ -111,10 +111,33 @@ module.exports = function (eleventyConfig) {
     return `${urlPart}?${params}`;
   });
 
+  // Smartquotes filter so I stop getting annoyed at seeing incorrect quote marks everywhere
+  // https://charliepark.org/smartquotes_in_eleventy/
+  eleventyConfig.addFilter("smartquotes", (post) => {
+    const apostrophes = new RegExp(/(?<=<(h|l|p[^r]).*)\b'\b/g);
+    const years = new RegExp(/(?<=\s)'(?=\d)/g);
+    const openDoubles = new RegExp(/(?<=<(h|l|p[^r]).*)(?<=\s|>)&quot;/g);
+    const closeDoubles = new RegExp(
+      /(?<=<(h|l|p[^r]).*“.*)&quot;(?=(\s|\p{P}|<))/gu
+    );
+    const openSingles = new RegExp(/(?<=<(h|l|p[^r]).*)(?<=\s|>)'/g);
+    const closeSingles = new RegExp(
+      /(?<=<(h|l|p[^r]).*‘.*)'(?=(\s|\p{P}|<))/gu
+    );
+    return post
+      .replace(apostrophes, "’")
+      .replace(years, "’")
+      .replace(openDoubles, "“")
+      .replace(closeDoubles, "”")
+      .replace(openSingles, "‘")
+      .replace(closeSingles, "’");
+  });
+
   // Layouts
   eleventyConfig.addLayoutAlias("blog-post", "blog-post.njk");
 
   return {
+    markdownTemplateEngine: "njk",
     dir: {
       layouts: "_layouts",
     },

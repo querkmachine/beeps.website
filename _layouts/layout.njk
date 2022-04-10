@@ -12,6 +12,9 @@
   {%- if description or metadata.description %}
     <meta name="description" content="{{ description or metadata.description }}">
   {%- endif %}
+  {%- if noRobots %}
+    <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
   
   {# JavaScript - no-js #}
   <script>let d = document.documentElement; d.classList.remove('no-js'); d.classList.add('js');</script>
@@ -62,7 +65,7 @@
         <small class="kimFooter_boilerplate">
           {% block footnotes %}{% endblock %}
           {% block boilerplate %}
-            Made by Kim. <a href="//github.com/querkmachine/berly.kim">Keep circulating the HTML.</a>
+            Made by Kim and <a href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
           {% endblock %}
         </small>
       </div>
