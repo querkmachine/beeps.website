@@ -12,6 +12,9 @@
   {%- if description or metadata.description %}
     <meta name="description" content="{{ description or metadata.description }}">
   {%- endif %}
+  {%- if noRobots %}
+    <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
   
   {# JavaScript - no-js #}
   <script>let d = document.documentElement; d.classList.remove('no-js'); d.classList.add('js');</script>
