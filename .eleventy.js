@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
 
       let metadata = await pluginImages(src, {
         widths: [300, 600, 900, null],
-        formats: ["webp", "jpeg"],
+        formats: ["webp", "jpeg", "png"],
         urlPath: "/images/",
         outputDir: "./_site/images/",
       });
@@ -137,6 +137,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("blog-post", "blog-post.njk");
 
   return {
+    markdownTemplateEngine: "njk",
     dir: {
       layouts: "_layouts",
     },
