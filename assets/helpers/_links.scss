@@ -1,4 +1,5 @@
 @use "../settings";
+@use "a11y";
 @use "media-queries";
 
 @mixin _kim-link-underline {
@@ -23,6 +24,9 @@
     @if $underlineOnHoverOnly {
       @include _kim-link-underline;
     }
+  }
+  &:focus {
+    @include a11y.kim-focus-ring($fill: true);
   }
   @include media-queries.kim-print {
     &::after {
