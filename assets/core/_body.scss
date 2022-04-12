@@ -30,6 +30,7 @@
 }
 
 .kimPage {
+  background-color: var(--color-background);
   font-size: clamp(16px, 1.22vw, 30px);
   text-size-adjust: 100%;
   @if settings.$kim-font-sizes-root != 16px {
