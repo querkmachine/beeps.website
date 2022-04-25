@@ -61,12 +61,12 @@ module.exports = function (eleventyConfig) {
 
       let metadata = await pluginImages(src, {
         widths: [300, 600, 900, null],
-        formats: ["webp", "jpeg", "png"],
+        formats: ["webp"],
         urlPath: "/images/",
         outputDir: "./_site/images/",
       });
 
-      let lowsrc = metadata.jpeg[0];
+      let originalSize = metadata.webp[metadata.webp.length - 1];
 
       return `<picture>
       ${Object.values(metadata)
@@ -79,9 +79,9 @@ module.exports = function (eleventyConfig) {
         })
         .join("\n")}
         <img
-          src="${lowsrc.url}"
-          width="${lowsrc.width}"
-          height="${lowsrc.height}"
+          src="${originalSize.url}"
+          width="${originalSize.width}"
+          height="${originalSize.height}"
           alt="${alt}">
       </picture>`;
     }
