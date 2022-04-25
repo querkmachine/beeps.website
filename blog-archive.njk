@@ -9,24 +9,20 @@ permalink: "/blog/"
 
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
-    <div class="kimWrapper">
+    <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
       <div class="kimGrid">
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-          <h1 class="kimHeading-l">Kim Does Blog</h1>
-          <p class="kimBody-l">This is my personal blog. To be honest, the stuff I write here is often vague and intended for my own future reference moreso than to be read by anyone else. I should probably work on that.</p>
+          <h1 class="kimHeading-l" itemprop="name">Kim Does Blog</h1>
+          <p class="kimBody-l" itemprop="description">This is my personal blog. To be honest, the stuff I write here is often vague and intended for my own future reference moreso than to be read by anyone else. I should probably work on that.</p>
         </div>
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <ol class="kimList kimList-spaced">
             {% for post in collections.blog | reverse %}
-              <li>
-                <a href="{{ post.url | url }}">
-                  {%- if post.data.title -%}
-                    {{ post.data.title }}
-                  {%- else -%}
-                    {{ post.url }}
-                  {%- endif -%}
+              <li itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                <a href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
+                  <span itemprop="name">{{ post.data.title }}</span>
                 </a><br>
-                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                <time datetime="{{ post.date | htmlDateString }}" itemprop="dateCreated">{{ post.date | readableDate }}</time>
               </li>
             {% endfor %}
           </ol>
