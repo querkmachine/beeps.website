@@ -3,13 +3,13 @@
 <!doctype html>
 <html lang="en" class="kimPage no-js">
 <head>
-  {# Tech metadata #}
+  {#- Tech metadata #}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ff0090" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#786999">
   
-  {# Content metadata #}
+  {#- Content metadata #}
   <title>{{ title or metadata.title }}</title>
   {%- if description or metadata.description %}
     <meta name="description" content="{{ description or metadata.description }}">
@@ -17,18 +17,19 @@
   {%- if noRobots %}
     <meta name="robots" content="noindex, nofollow">
   {%- endif %}
+  <link rel="alternate" type="application/atom+xml" title="Blog" href="{{ '/feed.xml' | url }}" />
   
-  {# JavaScript - no-js #}
+  {#- JavaScript - no-js #}
   <script>let d = document.documentElement; d.classList.remove('no-js'); d.classList.add('js');</script>
   
-  {# Stylesheets #}
+  {#- Stylesheets #}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="{{ googleFontsUrl }}">
   <link rel="stylesheet" href="{{ googleFontsUrl }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ googleFontsUrl }}"></noscript>
   <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
   
-  {# Page-specific head content #}
+  {#- Page-specific head content #}
   {% block head %}{% endblock %}
   
 </head>
