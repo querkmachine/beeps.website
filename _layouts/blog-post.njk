@@ -6,7 +6,7 @@
       <article itemscope itemtype="https://schema.org/BlogPosting">
         {% block title %}
           <h1 class="kimHeading-xl" itemprop="name">
-            <a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">{{ title }}</a>
+            {{ title }}
           </h1>
         {% endblock %}
         <div class="kim-!-margin-bottom-5">
@@ -23,6 +23,7 @@
             {% endblock %}
           </div>
         </div>
+        <div class="kim-!-sr"><a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">Permalink to this article</a></div>
       </article>
     </div>
   </div>
