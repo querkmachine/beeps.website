@@ -30,6 +30,11 @@ module.exports = function (eleventyConfig) {
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(".htaccess");
 
+  // Copy icons
+  eleventyConfig.addPassthroughCopy("favicon*");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
+
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
     const result = sass.renderSync({

@@ -6,8 +6,14 @@
   {#- Tech metadata #}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {#- Icons #}
   <meta name="theme-color" content="#ff0090" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#786999">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url | cachebust }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url | cachebust }}">
+  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#786999">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url | cachebust }}">
   
   {#- Content metadata #}
   <title>{{ title or metadata.title }}</title>
