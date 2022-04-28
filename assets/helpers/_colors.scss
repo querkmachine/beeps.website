@@ -10,15 +10,3 @@
 @function kim-color($color) {
   @return map.get(settings.$kim-color-palette, $color);
 }
-
-// URL encode hexadecimal color string
-// This is often needed for inline SVG in CSS
-// HT: https://gist.github.com/certainlyakey/e9c0d8f5c87ff47e3d5b#gistcomment-3458258
-@function kim-urlencode($string) {
-  @if meta.type-of($string) == "color" and string.index(#{$string}, "#") == 1 {
-    $hex: string.slice(color.ie-hex-str($string), 4);
-    $string: string.unquote("#{$hex}");
-    @return "%23" + $string;
-  }
-  @return $string;
-}
