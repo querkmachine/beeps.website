@@ -1,0 +1,20 @@
+@use "../settings";
+@use "../helpers/colors";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+
+code {
+	@include spacing.kim-responsive-padding(1, $direction: right);
+	@include spacing.kim-responsive-padding(1, $direction: left);
+	@include typography.kim-font-stack(code);
+	color: colors.kim-color("white");
+	background-color: colors.kim-color("grey");
+	font-size: .9em;
+}
+
+pre code {
+	@include spacing.kim-responsive-padding(1, $direction: top);
+	@include spacing.kim-responsive-padding(1, $direction: bottom);
+	display: block;
+	overflow-x: auto;
+}
