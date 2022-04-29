@@ -1,24 +1,25 @@
 ---
-title: My brand! - Kim-brand-ly Grey
+title: Kim-brand-ly Grey (aka, my personal bit of branding)
 description: Style guide for my personal projects.
 ---
 
 {% extends '_layouts/layout.njk' %}
 
-{% macro _swatch(colorHex, colorName) %}
+{% macro _swatch(colorName) %}
   <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
     <div class="page-swatch">
-      <div class="page-swatch__sample" aria-hidden="true" style="background-color:{{ colorHex }}"></div>
-      <span><code>{{ colorName }}</code><br>{{ colorHex }}</span>
+      <div class="page-swatch__sample" aria-hidden="true" style="background-color:var(--demo-color-{{ colorName }})"></div>
+      <span>{{ colorName }}</span>
     </div>
   </div>
 {% endmacro %}
 
 {% macro _combo(textColor, backgroundColor, text) %}
   <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-    <div class="page-combo" aria-hidden="true" style="color:{{ textColor }};background-color:{{ backgroundColor }}">
+    <div class="page-combo" aria-hidden="true" style="color:var(--demo-color-{{ textColor }});background-color:var(--demo-color-{{ backgroundColor }})">
       {{ text }}
     </div>
+    <p class="kimBody">{{ textColor }} and {{ backgroundColor }}</p>
   </div>
 {% endmacro %}
 
@@ -26,18 +27,19 @@ description: Style guide for my personal projects.
 <div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
   <div class="kimWrapper">
   
-    <h1 class="kimHeading-xl">My brand!</h1>
-    <p class="kimBody-l">A lot of famous individuals are well known for <a href="https://edition.cnn.com/2015/10/09/world/gallery/decision-fatigue-same-clothes/index.html">always wearing the same clothes</a>. Usually they credit this to reducing &ldquo;decision fatigue&rdquo; &ndash; not having to choose how to dress every day leaves time to mull over the more important decisions. I don&rsquo;t wear exactly the same clothes every day, but when it comes to building random pages and side projects, I usually spend more time thinking about how it looks than how it works.</p>
-    <p class="kimBody-l">Since late-2021, I&rsquo;ve tried to cut down on decision fatigue by making my projects use the same set of basic rules.</p>
+    <h1 class="kimHeading-xl">Kim-brand-ly Grey <div class="kimSubheading-l kim-!-margin-top-2">(aka, my personal bit of branding)</div></h1>
+    <p class="kimBody-l">A lot of famous individuals are well known for <a href="https://edition.cnn.com/2015/10/09/world/gallery/decision-fatigue-same-clothes/index.html">always wearing the same clothes</a>. Usually they credit this to reducing &ldquo;decision fatigue&rdquo; &ndash; not having to choose how to dress every day leaves time to mull over the more important decisions.</p>
+    <p class="kimBody">I don&rsquo;t wear exactly the same clothes every day, but when it comes to building random pages and side projects, I usually spend more time thinking about how it looks than how it works. Consequentially, since late-2021, I&rsquo;ve tried to cut down on decision fatigue by making my personal projects follow the same set of basic design rules.</p>
     
     <section class="kim-!-margin-top-9">
-      <h2 class="kimHeading-l">Typography</h2>
+      <h2 class="kimHeading-l" id="typography">Typography</h2>
+      <p class="kimBody">Generally the italic forms are not used (Grotesk doesn&rsquo;t even have one). The bold weight is also used fairly sparingly.</p>
       <div class="page-row">
         <div class="page-typerun" aria-hidden="true" style="font-family: 'Space Mono'">
           UNIT-01 will trigger instrumentality. 
         </div>
         <p class="kimBody">
-          <strong>Space Mono</strong> is used for headings and as a stylistic alternative for small amounts of body copy. It&rsquo;s best used with ligatures disabled: <code>font-feature-settings: "liga" 0;</code>
+          <a href="https://fonts.google.com/specimen/Space+Mono">Space Mono</a> is used for headings and as a stylistic alternative for small amounts of text. It&rsquo;s best used with ligatures disabled: <code>font-feature-settings: "liga" 0;</code>
         </p>
       </div>
       <div class="page-row">
@@ -45,37 +47,49 @@ description: Style guide for my personal projects.
           Get in the damn robot, Shinji Ikari.
         </div>
         <p class="kimBody">
-          <strong>Space Grotesk</strong> is used primary copy.
+          <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a> is used for other text.
         </p>
       </div>
     </section>
     
     <section class="kim-!-margin-top-9">
-      <h2 class="kimHeading-l">Colours</h2>
+      <h2 class="kimHeading-l" id="colours">Colours</h2>
       <div class="page-row">
+        <p class="kimBody">Six colours. Shades and tints allowed but not provided.</p>
         <div class="kimGrid">
-          {{ _swatch("#786999", "kimberly") }}
-          {{ _swatch("#4b5475", "grey") }}
-          {{ _swatch("#1c1924", "bastille") }}
-          {{ _swatch("#b9e587", "emy") }}
-          {{ _swatch("#ff0090", "neon") }}
-          {{ _swatch("#ffffff", "white") }}
+          {{ _swatch("kimberly") }}
+          {{ _swatch("grey") }}
+          {{ _swatch("black") }}
+          {{ _swatch("emy") }}
+          {{ _swatch("neon") }}
+          {{ _swatch("white") }}
         </div>
       </div>
     </section>
     
     <section class="kim-!-margin-top-9">
-      <h2 class="kimHeading-l">Colour combos</h2>
+      <h2 class="kimHeading-l" id="#colour-combinations">Colour combinations</h2>
       <div class="page-row">
-        <div class="kimGrid">
-          {{ _combo("#786999", "#ffffff", "Con") }}
-          {{ _combo("#4b5475", "#ffffff", "gra") }}
-          {{ _combo("#1c1924", "#ffffff", "tul") }}
-          {{ _combo("#ff0090", "#1c1924", "ati") }}
-          {{ _combo("#b9e587", "#1c1924", "ons") }}
-          {{ _combo("#ffffff", "#1c1924", "!!!") }}
-        </div>
         <p class="kimBody">There are no hard and fast rules around how colours are used together, but these combinations tend to work well together (and are accessible!).</p>
+        <div class="kimGrid">
+          {{ _combo("kimberly", "white", "Con") }}
+          {{ _combo("grey", "white", "gra") }}
+          {{ _combo("black", "white", "tul") }}
+          {{ _combo("neon", "black", "ati") }}
+          {{ _combo("emy", "black", "ons") }}
+          {{ _combo("white", "black", "!!!") }}
+        </div>
+      </div>
+    </section>
+    
+    <section class="kim-!-margin-top-9">
+      <h2 class="kimHeading-l" id="logo">Logo?</h2>
+      <div class="page-row">
+        <p class="kimBody">This isn&rsquo;t used a whole lot, but in places where a logo or icon is needed—and the space is either too small or a dabbing robot bat would be inappropriate—there&rsquo;s an icon.</p>
+        <p class="kimBody">This is a very recent addition, so will probably be tweaked and refined a bit before it settles down.</p>
+        <div style="max-width:320px;background-color:white" class="kim-!-margin-bottom-6 kim-!-padding-6">
+          <img src="{{ '/safari-pinned-tab.svg' | url }}" alt="Robot bat icon">
+        </div>
       </div>
     </section>
     
@@ -85,6 +99,14 @@ description: Style guide for my personal projects.
 
 {% block head %}
 <style>
+  :root {
+    --demo-color-kimberly: #786999;
+    --demo-color-grey: #4b5475;
+    --demo-color-emy: #b9e587;
+    --demo-color-neon: #ff0090;
+    --demo-color-black: #1c1924;
+    --demo-color-white: #ffffff;
+  }
   .page-row {
     border-bottom: 1px solid var(--color-subtle);
   }
