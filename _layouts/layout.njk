@@ -1,7 +1,7 @@
 {%- set googleFontsUrl = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Space+Mono&display=swap" -%}
 
 <!doctype html>
-<html lang="en" class="kimPage no-js">
+<html lang="en-GB" class="kimPage no-js">
 <head>
   {#- Tech metadata #}
   <meta charset="UTF-8">
@@ -18,12 +18,23 @@
   
   {#- Content metadata #}
   <title>{{ title or metadata.title }}</title>
+  <meta property="og:title" content="{{ title or metadata.title }}">
+  <meta property="og:site_name" content="Kimberly Grey">
+  <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
+  <meta property="og:image" content="{{ siteDomain }}{{ '/opengraph.png' | url }}">
+  <meta property="og:type" content="{% if (page.url | isBlogPost) %}article{% else %}website{% endif %}">
+  <meta property="og:locale" content="en_GB">
   {%- if description or metadata.description %}
     <meta name="description" content="{{ description or metadata.description }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
   {%- endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@batbeeps">
+  <meta name="twitter:creator" content="@batbeeps">
   {%- if noRobots %}
     <meta name="robots" content="noindex, nofollow">
   {%- endif %}
+  <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
   <link rel="alternate" type="application/atom+xml" title="Blog" href="{{ '/feed.xml' | url }}">
   <link rel="me" href="https://awoo.space/@batbeeps">
   
@@ -86,6 +97,5 @@
 
   {% block scripts %}{% endblock %}
   
-  <!-- Current page: {{ page.url | url }} -->
 </body>
 </html>

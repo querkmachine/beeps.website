@@ -26,10 +26,11 @@ module.exports = function (eleventyConfig) {
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(".htaccess");
 
-  // Copy icons
+  // Copy favicons/OpenGraph images
   eleventyConfig.addPassthroughCopy("favicon*");
   eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
+  eleventyConfig.addPassthroughCopy("opengraph.png");
 
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
@@ -135,6 +136,13 @@ module.exports = function (eleventyConfig) {
       .replace(closeDoubles, "”")
       .replace(openSingles, "‘")
       .replace(closeSingles, "’");
+  });
+
+  // Helper function (filter?) that determines if the current page is a blog
+  // post or not by looking for /blog/ in the URL. Yeah, I don't know if
+  // there's a better way of doing this in Eleventy.
+  eleventyConfig.addFilter("isBlogPost", (postUrl) => {
+    return postUrl.substring(0, 6) === "/blog/" ? true : false;
   });
 
   // Layouts
