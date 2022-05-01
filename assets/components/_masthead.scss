@@ -8,9 +8,6 @@
 @use "sass:color";
 
 .kimMasthead {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   color: var(--color-text);
   background-color: var(--color-background);
   @include media-queries.kim-print {
