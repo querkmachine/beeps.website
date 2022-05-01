@@ -1,7 +1,7 @@
 {%- set googleFontsUrl = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Space+Mono&display=swap" -%}
 
 <!doctype html>
-<html lang="en-GB" class="kimPage no-js">
+<html lang="en-GB" class="kimPage">
 <head>
   {#- Tech metadata #}
   <meta charset="UTF-8">
@@ -37,9 +37,6 @@
   <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
   <link rel="alternate" type="application/atom+xml" title="Blog" href="{{ '/feed.xml' | url }}">
   <link rel="me" href="https://awoo.space/@batbeeps">
-  
-  {#- JavaScript - no-js #}
-  <script>let d = document.documentElement; d.classList.remove('no-js'); d.classList.add('js');</script>
   
   {#- Stylesheets #}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
