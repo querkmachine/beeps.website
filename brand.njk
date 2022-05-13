@@ -5,11 +5,13 @@ description: Style guide for my personal projects.
 
 {% extends '_layouts/layout.njk' %}
 
-{% macro _swatch(colorName) %}
+{% macro _swatch(colorName, colorHex) %}
   <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
     <div class="page-swatch">
       <div class="page-swatch__sample" aria-hidden="true" style="background-color:var(--demo-color-{{ colorName }})"></div>
-      <span>{{ colorName }}</span>
+      <div>
+        <span>{{ colorName }}</span> <code>{{ colorHex }}</code>
+      </div>
     </div>
   </div>
 {% endmacro %}
@@ -57,12 +59,12 @@ description: Style guide for my personal projects.
       <div class="page-row">
         <p class="kimBody">Six colours. Shades and tints allowed but not provided.</p>
         <div class="kimGrid">
-          {{ _swatch("kimberly") }}
-          {{ _swatch("grey") }}
-          {{ _swatch("black") }}
-          {{ _swatch("emy") }}
-          {{ _swatch("neon") }}
-          {{ _swatch("white") }}
+          {{ _swatch("kimberly", "#786999") }}
+          {{ _swatch("grey", "#4b5475") }}
+          {{ _swatch("black", "#1c1924") }}
+          {{ _swatch("emy", "#b9e587") }}
+          {{ _swatch("neon", "#ff0090") }}
+          {{ _swatch("white", "#ffffff") }}
         </div>
       </div>
     </section>
@@ -72,12 +74,12 @@ description: Style guide for my personal projects.
       <div class="page-row">
         <p class="kimBody">There are no hard and fast rules around how colours are used together, but these combinations tend to work well together (and are accessible!).</p>
         <div class="kimGrid">
-          {{ _combo("kimberly", "white", "Con") }}
-          {{ _combo("grey", "white", "gra") }}
-          {{ _combo("black", "white", "tul") }}
-          {{ _combo("neon", "black", "ati") }}
-          {{ _combo("emy", "black", "ons") }}
-          {{ _combo("white", "black", "!!!") }}
+          {{ _combo("black", "white", "Con") }}
+          {{ _combo("kimberly", "white", "gra") }}
+          {{ _combo("grey", "white", "tul") }}
+          {{ _combo("white", "black", "ati") }}
+          {{ _combo("neon", "black", "ons") }}
+          {{ _combo("emy", "black", "!!!") }}
         </div>
       </div>
     </section>
