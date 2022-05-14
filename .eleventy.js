@@ -66,6 +66,9 @@ module.exports = function (eleventyConfig) {
         formats: ["webp"],
         urlPath: "/images/",
         outputDir: "./_site/images/",
+        sharpOptions: {
+          animated: true,
+        },
       });
 
       let originalSize = metadata.webp[metadata.webp.length - 1];
