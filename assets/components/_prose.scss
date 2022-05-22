@@ -10,6 +10,9 @@
   p {
     @extend .kimBody;
   }
+  h1 {
+    @extend .kimHeading-xl;
+  }
   h2 {
     @extend .kimHeading-l;
   }
