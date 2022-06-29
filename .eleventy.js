@@ -11,8 +11,13 @@ const pluginImages = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
-  // Some static data
-  eleventyConfig.addGlobalData("siteDomain", "https://berly.kim");
+  // Set the site domain
+  // If the script is simply 'eleventy' then it's the build script,
+  // so use the actual domain for that.
+  eleventyConfig.addGlobalData(
+    "siteDomain",
+    process.env.npm_lifecycle_script === "eleventy" ? "https://berly.kim" : null
+  );
 
   // Load plugins
   eleventyConfig.addPlugin(pluginRss);
