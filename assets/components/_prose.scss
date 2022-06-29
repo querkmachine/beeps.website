@@ -1,4 +1,5 @@
 @use "../settings";
+@use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
@@ -54,5 +55,17 @@
     @include typography.kim-vr-margin(19);
     padding-left: 1rem;
     border-left: .5rem solid var(--color-subtle);
+  }
+  &_aside {
+    @include typography.kim-vr-margin(19);
+    width: 100%;
+    text-align: center;
+    @include media-queries.kim-mq($from: galaxy) {
+      @include spacing.kim-responsive-margin(3, $direction: left);
+      width: 30%;
+      max-width: 17.5rem;
+      float: right;
+      clear: right;
+    }
   }
 }

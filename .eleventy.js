@@ -60,7 +60,7 @@ module.exports = function (eleventyConfig) {
   // Responsive images shortcode
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    async function (src, alt, sizes = "100vw") {
+    async function (src, alt, aside = false) {
       if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
@@ -85,10 +85,11 @@ module.exports = function (eleventyConfig) {
             imageFormat[0].format
           }" srcset="${imageFormat
             .map((entry) => entry.srcset)
-            .join(", ")}" sizes="${sizes}">`;
+            .join(", ")}" sizes="100vw">`;
         })
         .join("\n")}
         <img
+          class="${aside ? "kimProse_aside" : null}"
           src="${originalSize.url}"
           width="${originalSize.width}"
           height="${originalSize.height}"
