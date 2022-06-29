@@ -6,7 +6,7 @@ tags: [web development, design]
 
 Behold, a deliberately provocative, clickbait title! Sorry about that, but the general notion holds true—when it comes to good accessibility practice, a lot of websites produced by the furry fandom are hot garbage.
 
-In my experience this is true of everything from established art galleries, to social media services and convention sites, many of them make fundamental accessibility mistakes that make them anywhere from unpleasant to impossible for assistive technologies to use.
+In my experience this is true of everything from established art galleries, to social media services and convention sites. Many of them have fundamental accessibility issues that make them anywhere from unpleasant to impossible for assistive technology users to actually use.
 
 ## This isn’t surprising
 
