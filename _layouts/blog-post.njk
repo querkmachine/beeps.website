@@ -4,26 +4,30 @@
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
       <article itemscope itemtype="https://schema.org/BlogPosting">
-        {% block title %}
-          <h1 class="kimHeading-xl" itemprop="name">
-            {{ title }}
-          </h1>
-        {% endblock %}
-        <div class="kim-!-margin-bottom-5">
-          {% block date %}
-            <time class="kimBody-l" datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
-              {{ date | readableDate }}
-            </time>
-          {% endblock %}
+        <div class="kimGrid">
+          <header class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+            {% block title %}
+              <h1 class="kimHeading-xl" itemprop="name">
+                {{ title }}
+              </h1>
+            {% endblock %}
+          </header>
         </div>
         <div class="kimGrid">
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
+            {% block date %}
+              <time class="kimBody-l" datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
+                {{ date | readableDate }}
+              </time>
+            {% endblock %}
+          </div>
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
             {% block content  %}
               {{ content | smartquotes | safe }}
             {% endblock %}
           </div>
         </div>
-        <div class="kim-!-sr"><a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">Permalink to this article</a></div>
+        <div class="kim-!-sr"><a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">Permalink to this blog post</a></div>
       </article>
     </div>
   </div>
