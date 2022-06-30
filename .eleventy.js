@@ -25,8 +25,9 @@ module.exports = function (eleventyConfig) {
   // Global settings
   eleventyConfig.setDataDeepMerge(true);
 
-  // Copy UI images
+  // Copy JS and UI images
   eleventyConfig.addPassthroughCopy("assets/images");
+  eleventyConfig.addPassthroughCopy("assets/js");
 
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(".htaccess");
