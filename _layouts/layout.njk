@@ -81,7 +81,7 @@
         </div>
       {% endblock %}
       <div class="kimWrapper kimFooter_inner">
-        <button type="button" data-theme-toggle hidden></button>
+        <button class="kimFooter_themeSwitch" type="button" data-theme-toggle hidden></button>
         <small class="kimFooter_boilerplate">
           {% block boilerplate %}
             Made by <a href="{{ '/contact/' | url }}">Kim</a> and <a href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
@@ -92,7 +92,7 @@
   {% endblock %}
   {% block afterFooter %}{% endblock %}
 
-  <script src="{{ '/assets/js/theme-switcher.js' | url | cachebust }}"></script>
+  <script type="module" src="{{ '/assets/js/theme-switcher.js' | url | cachebust }}"></script>
   {% block scripts %}{% endblock %}
   
 </body>
