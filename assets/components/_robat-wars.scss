@@ -11,9 +11,9 @@
     height: calc(100% + #{$offset});
     position: relative;
     top: 0 - $offset;
-    background-image: url("/assets/images/robats.png");
+    background-image: url("/assets/images/robats-v2.webp");
     background-repeat: repeat-x;
     background-position: top 0 left 50%;
-    background-size: auto 125%;
+    background-size: auto 100%;
   }
 }
