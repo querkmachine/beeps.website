@@ -5,7 +5,7 @@ class ThemeSwitcher {
     this.query = window.matchMedia("(prefers-color-scheme: dark)");
     this.themePreference = localStorage.getItem("theme-preference") || "auto";
     this.themeOptions = {
-      auto: "🤖 Auto",
+      auto: "🤖 Auto theme",
       dark: "🌜 Always dark",
       light: "☀️ Always light",
     };
