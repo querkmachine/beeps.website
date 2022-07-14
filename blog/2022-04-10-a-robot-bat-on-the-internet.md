@@ -40,7 +40,7 @@ I made my first website in 2003, a simple site about _The Sims_ that I think cap
 
 In 2005, I first became involved in the furry fandom. In the space of a couple of years I had gotten involved in several websites: a fanzine, a news site, a media organisation, a wiki, a social network. I was designing and/or writing code for all of them. I pretty rapidly went from working on dinky, little personal websites that had gotten a couple of thousand visitors in their entire lifetimes to sites that were doing those numbers every day.
 
-I learned an _immense_ amount working on those projects. Not only in writing code, but in design, collaboration, source control, security, managing a community, managing attacks against that community, working for scale, and probably a thousand other things. Keep in mind this was all when I was still a teenager! I was volunteering time after school and on weekends, helping others pursue passion projects with little hope of ever breaking event—never mind a profit.
+I learned an _immense_ amount working on those projects. Not only in writing code, but in design, collaboration, source control, security, managing a community, managing attacks against that community, working for scale, and probably a thousand other things. Keep in mind this was all when I was still a teenager! I was volunteering time after school and on weekends, helping others pursue passion projects with little hope of ever breaking even—never mind make a profit.
 
 I owe a huge debt of gratitude to the furry fandom for aiding in my development, and it was projects such as these that filled out my early CVs and job applications. It would be disingenuous to hide or deny my connections now, so why bother?
 
