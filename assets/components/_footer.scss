@@ -16,12 +16,12 @@
     @include spacing.kim-responsive-padding(3, $direction: bottom);
     display: flex;
     flex-direction: column;
-    gap: settings.$kim-page-gutter * .5;
-    border-bottom: .5rem solid var(--color-accent);
+    gap: settings.$kim-page-gutter * 0.5;
+    border-bottom: 0.5rem solid var(--color-accent);
     position: relative;
     @include media-queries.kim-mq($from: galaxy) {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
     }
   }

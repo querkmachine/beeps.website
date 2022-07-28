@@ -5,6 +5,22 @@
 
 @use "sass:math";
 
+:root {
+  --color-text: #{colors.kim-color("black")};
+  --color-background: #{colors.kim-color("white")};
+  --color-subtle: #{colors.kim-color("grey")};
+  --color-accent: #{colors.kim-color("kimberly")};
+}
+
+@include media-queries.kim-dark {
+  :root {
+    --color-text: #{colors.kim-color("white")};
+    --color-background: #{colors.kim-color("black")};
+    --color-subtle: #{colors.kim-color("grey")};
+    --color-accent: #{colors.kim-color("neon")};
+  }
+}
+
 * {
   box-sizing: border-box;
   &::before,
@@ -14,10 +30,6 @@
 }
 
 .kimPage {
-  --color-text: #{colors.kim-color("black")};
-  --color-background: #{colors.kim-color("white")};
-  --color-subtle: #{colors.kim-color("grey")};
-  --color-accent: #{colors.kim-color("kimberly")};
   background-color: var(--color-background);
   font-size: clamp(16px, 1.22vw, 30px);
   text-size-adjust: 100%;
@@ -32,11 +44,5 @@
     margin: 0;
     color: var(--color-text);
     background-color: var(--color-background);
-  }
-  &[data-theme="dark"] {
-    --color-text: #{colors.kim-color("white")};
-    --color-background: #{colors.kim-color("black")};
-    --color-subtle: #{colors.kim-color("grey")};
-    --color-accent: #{colors.kim-color("neon")};
   }
 }
