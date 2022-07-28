@@ -16,10 +16,26 @@
         <div class="kimGrid">
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
             {% block date %}
-              <time class="kimBody-l" datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
-                {{ date | readableDate }}
-              </time>
+              <div class="kimBody-l">
+                <time datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
+                  {{ date | readableDate }}
+                </time>
+              </div>
             {% endblock %}
+            {%- if tags %}
+              <nav aria-label="Post tags">
+                <p class="kimBody kim-!-margin-bottom-1">Tagged as:</p>
+                <ul class="kimList">
+                  {% for tag in tags | filterTagList | sort %}
+                    {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+                    <li>
+                      <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+            {%- endif %}
+            <hr class="kimRule">
           </div>
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
             {% block content  %}

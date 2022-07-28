@@ -1,21 +1,29 @@
 ---
-title: Blog
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter: [all]
+eleventyComputed:
+  title: Blog posts tagged '{{ tag }}'
 description: Archive of Kim's blog posts.
-permalink: "/blog/"
+permalink: "/blog/{{ tag | slugify }}/"
 ---
+
 {% extends '_layouts/layout.njk' %}
+{% set postsList = collections[tag] %}
 
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
-    <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
+    <div class="kimWrapper">
       <div class="kimGrid">
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
           {% include "_includes/blog-archive-sidebar.njk" %}
         </div>
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <ol class="kimList kimList-spaced">
-            {% for post in collections.blog | reverse %}
-              <li itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+            {% for post in postsList | reverse %}
+              <li itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
                 <a href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
                   <span itemprop="name">{{ post.data.title }}</span>
                 </a><br>

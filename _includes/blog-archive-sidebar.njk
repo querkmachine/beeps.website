@@ -1,0 +1,27 @@
+<h1 class="kimHeading-l" itemprop="name">
+  <span class="kim-!-sr">Kimberly Grey's</span>
+  Blog
+  {%- if tag %}
+    posts tagged as &lsquo;{{ tag }}&rsquo;
+  {%- endif %}
+</h1>
+
+{%- if not tag %}
+  <p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here we are.</p>
+{%- endif %}
+
+<nav aria-label="Tags">
+  <ul class="kimList">
+    <li>
+      <a href="{{ '/blog/' | url }}" {%- if page.url === '/blog/' %} aria-current="true"{% endif %}>all posts</a>
+    </li>
+    {% for tag in collections.tagList %}
+      {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+      <li>
+        <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<hr class="kimRule">

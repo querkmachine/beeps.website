@@ -38,6 +38,26 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
   eleventyConfig.addPassthroughCopy("opengraph.png");
 
+  // Create an array of all tags
+  eleventyConfig.addCollection("tagList", function (collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+    tagSet = filterTagList([...tagSet]);
+    return tagSet.sort();
+  });
+
+  // Create a function to filter tags in template
+  eleventyConfig.addFilter("filterTagList", filterTagList);
+
+  // Tag filter helper function
+  function filterTagList(tags) {
+    return (tags || []).filter(
+      (tag) => ["all", "blog", "nav", "post", "posts"].indexOf(tag) === -1
+    );
+  }
+
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
     const result = sass.renderSync({
@@ -161,6 +181,7 @@ module.exports = function (eleventyConfig) {
   return {
     markdownTemplateEngine: "njk",
     dir: {
+      includes: "_includes",
       layouts: "_layouts",
     },
   };
