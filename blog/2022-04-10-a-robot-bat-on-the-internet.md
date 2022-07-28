@@ -1,7 +1,7 @@
 ---
 title: A robot bat on the internet
 date: 2022-04-10
-tags: [random]
+tags: [random, self-identity]
 ---
 
 Anyone who has perused any recent bio of mine, or the homepage of this very website, will have seen one particular phrase listed alongside various other identifiers.
