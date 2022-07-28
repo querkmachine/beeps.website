@@ -1,7 +1,7 @@
 ---
 title: Furry websites have trash accessibility (and it’s not their fault)
 date: 2022-06-28
-tags: [web development, design]
+tags: [web development, design, furry fandom]
 ---
 
 Behold, a deliberately provocative, clickbait title! Sorry about that, but the general notion holds true—when it comes to good accessibility practice, a lot of websites produced by the furry fandom are hot garbage.
