@@ -1,6 +1,7 @@
 ---
 title: Discovery
 date: 2022-07-27
+updated: 2022-07-28
 tags: [transition, self-identity, furry fandom]
 eleventyExcludeFromCollections: true
 noRobots: true
@@ -97,3 +98,5 @@ I'm not sure where I might go from there. This is really just an initial explora
 The journey of self-discovery is an endless one, after all, and they won't let me off this train.
 
 Thank you.
+
+Edit (2022-07-28): I've penned some [questions and answers relating to this post in a follow-up]({{ '/blog/2022-07-28-discovery-faq/' | url }}).

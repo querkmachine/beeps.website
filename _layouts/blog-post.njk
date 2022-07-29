@@ -19,11 +19,22 @@
         <div class="kimGrid">
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
             {% block date %}
-              <div class="kimBody-l">
-                <time datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
-                  {{ date | readableDate }}
-                </time>
-              </div>
+              {%- if date %}
+                <p class="kimBody-l">
+                  <time datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
+                    <span class="kim-!-sr">Posted on</span>
+                    {{ date | readableDate }}
+                  </time>
+                </p>
+              {%- endif %}
+              {%- if updated %}
+                <p class="kimBody-l">
+                  <time datetime="{{ updated | htmlDateString }}" itemprop="dateModified">
+                    <span class="kimBody">Last updated:</span><br>
+                    {{ updated | readableDate }}
+                  </time>
+                </p>
+              {%- endif %}
             {% endblock %}
             {%- if tags %}
               <nav aria-label="Post tags">
