@@ -1,7 +1,7 @@
 ---
 title: Discovery - Q&A
 date: 2022-07-28
-updated: 2022-07-29
+updated: 2022-07-30
 tags: [transition, self-identity]
 eleventyExcludeFromCollections: true
 noRobots: true
@@ -63,7 +63,7 @@ I'm still processing what terminology I want to use when describing myself.
 
 For the time being I've settled on 'alterhuman', as the term is tightly defined and that definition fits closely with my identity. For the avoidance of doubt, I've tried to make it clear that it means a non-human identity wherever I've used it.
 
-'Otherkin' is technically correct too, based on the most common definition, but in my mind, 'kinning' involves an association with specific people or characters and not concepts. Nothing intended to anyone who does use otherkin in that way, it just doesn't feel right to me.
+<ins datetime="2022-07-30">Removed, see 2022-07-30 edit.</ins> <del datetime="2022-07-30">'Otherkin' is technically correct too, based on the most common definition, but in my mind, 'kinning' involves an association with specific people or characters and not concepts. Nothing intended to anyone who does use otherkin in that way, it just doesn't feel right to me.</del>
 
 The related terms 'robotkin', 'androidkin', 'machinekin' and 'AIkin' are useful identifiers when looking for resources and interacting with the wider alterhuman community, but I probably won't use them outside of this context.
 
@@ -71,9 +71,11 @@ The related terms 'robotkin', 'androidkin', 'machinekin' and 'AIkin' are useful 
 
 When sharing information about my identity exploration with one friend group, I had one person call me 'voidpunk'. I didn't know what this means, but having looked it up, it seems to be a visual aesthetic that is related to (what I'm calling) alterhuman identities. Related, but not exactly what I'm going for.
 
-For now, alterhuman it is!
+For now, alterhuman or nonhuman it is!
 
 Edit (2022-07-29): Added robotkin section. Reworded parts for clarity.
+
+Edit (2022-07-30): I've been informed that 'otherkin' is not necessarily the correct term to describe my experiences, as there is no spiritual component to this identity and I don't personally hold any religious or spiritual beliefs. There also seem to be some debate around whether robot-identifying people can be considered otherkin at all, on the basis that a machine cannot have a soul or spirit. I'm not ready to wade into that argument.
 
 ---
 
