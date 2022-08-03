@@ -4,27 +4,39 @@ description: Giving credit to the people and tools that made this website possib
 eleventyExcludeFromCollections: true
 ---
 
-{% extends '_layouts/blog-post.njk' %}
+{% extends '_layouts/layout.njk' %}
 
-{% block date %}{% endblock%}
-
-{% block content %}
-  <p>A colophon is a short section you can find at the back of some books, giving some details about the creation of the book. I quite like making these for some of my websites, as a little exercise in being thankful and giving some link love to the open source projects and individual contributors that helped make it happen.</p>
-  
-  <h2>Code</h2>
-  <p>This website was built by me, Kim. The code for this site is <a href="https://github.com/querkmachine/berly.kim">open source and available on GitHub</a>.</p>
-  <p>I use the static site generator <a href="http://11ty.dev">Eleventy</a> with the following plugins: <a href="https://github.com/11ty/eleventy-img">eleventy-img</a> and <a href="https://github.com/11ty/eleventy-plugin-rss">eleventy-plugin-rss</a>.</p>
-  <p>Certain aspects of the code, in particular the CSS architectural style, is cribbed from <a href="https://github.com/alphagov/govuk-frontend">GOV.UK Frontend</a>—a project I now work on!—which itself is a modified version of <a href="https://itcss.io">ITCSS</a>.</p>
-  <p><a href="https://sass-lang.com/">Sass</a> and <a href="https://postcss.org">PostCSS</a> are used for CSS generation. <a href="https://prettier.io/">Prettier</a> is used to keep the code beautiful.</p>
-  <p>I use Panic's <a href="http://nova.app">Nova</a> as my code editor, accompanied by <a href="https://iterm2.com/">iTerm</a> and <a href="https://ohmyz.sh/">Oh My Zsh</a>.</p>
-  <p>Hat tips to the following folks for contributing something that currently exists in the site's code: <a href="https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/">Rob Hudson</a>, <a href="https://charliepark.org/smartquotes_in_eleventy/">Charlie Park</a>.</p>
-  <p>This website is hosted by <a href="http://opalstack.com/">Opalstack</a>, who have obscenely good customer support.</p>
-  
-  <h2>Design</h2>
-  <p>Headings are set in <a href="https://fonts.google.com/specimen/Space+Mono">Space Mono</a>, created by <a href="https://www.colophon-foundry.org">Colophon Foundry</a> for Google. Body text is set in <a href="https://floriankarsten.github.io/space-grotesk/">Space Grotesk</a>, created by <a href="https://fonts.floriankarsten.com">Florian Karsten</a> and based on Space Mono.</p>
-  
-  <h2>Content</h2>
-  <p>Words are my own, unless otherwise specified.</p>
-  <p>The robot bats are <a href="/blog/2022-04-10-a-robot-bat-on-the-internet/">my own original character</a>, designed with help from my friend <a href="https://twitter.com/Samael101">Samael</a>. The bats were illustrated by myself, based on the art style of the game <em><a href="https://animalroyale.com">Super Animal Royale</a></em> by <a href="https://pixilestudios.com">Pixile Studios</a>, which is really fun.</p>
-  
+{% block main %}
+<div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+  <div class="kimWrapper">
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        <h1 class="kimHeading-xl">
+          Colophon
+        </h1>
+        
+        <div class="kimProse">
+          <p>A colophon is a short section you can find at the back of some books, giving some details about the creation of the book. I quite like making these for some of my websites, as a little exercise in being thankful and giving some link love to the open source projects and individual contributors that helped make it happen.</p>
+          
+          <h2>Code</h2>
+          <p>This website was built by me, Kim. The code for this site is <a href="https://github.com/querkmachine/berly.kim">open source and available on GitHub</a>.</p>
+          <p>I use the static site generator <a href="http://11ty.dev">Eleventy</a> with the following plugins: <a href="https://github.com/11ty/eleventy-img">eleventy-img</a> and <a href="https://github.com/11ty/eleventy-plugin-rss">eleventy-plugin-rss</a>.</p>
+          <p>Certain aspects of the code, in particular the CSS architectural style, is cribbed from <a href="https://github.com/alphagov/govuk-frontend">GOV.UK Frontend</a>—a project I now work on!—which itself is a modified version of <a href="https://itcss.io">ITCSS</a>.</p>
+          <p><a href="https://sass-lang.com/">Sass</a> and <a href="https://postcss.org">PostCSS</a> are used for CSS generation. <a href="https://prettier.io/">Prettier</a> is used to keep the code beautiful.</p>
+          <p>I use Panic's <a href="http://nova.app">Nova</a> as my code editor, accompanied by <a href="https://iterm2.com/">iTerm</a> and <a href="https://ohmyz.sh/">Oh My Zsh</a>.</p>
+          <p>Hat tips to the following folks for contributing something that currently exists in the site's code: <a href="https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/">Rob Hudson</a>, <a href="https://charliepark.org/smartquotes_in_eleventy/">Charlie Park</a>.</p>
+          <p>This website is hosted by <a href="http://opalstack.com/">Opalstack</a>, who have obscenely good customer support.</p>
+          
+          <h2>Design</h2>
+          <p>Headings are set in <a href="https://fonts.google.com/specimen/Space+Mono">Space Mono</a>, created by <a href="https://www.colophon-foundry.org">Colophon Foundry</a> for Google. Body text is set in <a href="https://floriankarsten.github.io/space-grotesk/">Space Grotesk</a>, created by <a href="https://fonts.floriankarsten.com">Florian Karsten</a> and based on Space Mono.</p>
+          
+          <h2>Content</h2>
+          <p>Words are my own, unless otherwise specified.</p>
+          <p>The robot bats are <a href="/blog/2022-04-10-a-robot-bat-on-the-internet/">my own original character</a>, designed with help from my friend <a href="https://twitter.com/Samael101">Samael</a>. The bats were illustrated by myself, based on the art style of the game <em><a href="https://animalroyale.com">Super Animal Royale</a></em> by <a href="https://pixilestudios.com">Pixile Studios</a>, which is really fun.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
