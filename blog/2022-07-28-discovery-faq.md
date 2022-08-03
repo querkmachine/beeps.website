@@ -1,7 +1,7 @@
 ---
 title: Discovery - Q&A
 date: 2022-07-28
-updated: 2022-07-30
+updated: 2022-08-01
 tags: [transition, self-identity]
 eleventyExcludeFromCollections: true
 noRobots: true
@@ -93,10 +93,16 @@ Edit (2022-07-29): Added question.
 
 ## θΔ? What's this?
 
-θΔ (theta-delta) is a [furtive shibboleth](https://en.wikipedia.org/wiki/Shibboleth#Furtive_shibboleths) used by non-humans as a way of identifying one another, without being recognised by those unfamiliar with the symbolism.
+θΔ (theta-delta) is a [furtive shibboleth](https://en.wikipedia.org/wiki/Shibboleth#Furtive_shibboleths) used by non-humans as a way of identifying one another, without being recognised by those unfamiliar with the symbolism. I've started placing it on some of my public-facing profiles.
 
 The use of the theta-delta symbols originated in the [the therian community](https://en.wikipedia.org/wiki/Therianthropy#Modern_therianthropy). Theta was chosen for it's similarity to the word 'therian'. Delta for its mathematical usage representing difference; in this case, difference from humanity.
 
 Although the symbolism started with therians, it is no longer considered specific to that community.
 
+Specifically machine-identifying individuals sometimes swap the theta for the power symbol, forming ⏻Δ, though this isn't in widespread usage.
+
 Edit (2022-07-29): Added question.
+
+Edit (2022-07-30): Expanded answer.
+
+Edit (2022-08-01): Added information about ⏻Δ.
