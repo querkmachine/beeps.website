@@ -19,7 +19,7 @@
   {#- Content metadata #}
   <title>{{ title or metadata.title }}</title>
   <meta property="og:title" content="{{ title or metadata.title }}">
-  <meta property="og:site_name" content="Kimberly Grey">
+  <meta property="og:site_name" content="Beeps">
   <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
   <meta property="og:image" content="{{ siteDomain }}{{ '/opengraph.png' | url }}">
   <meta property="og:type" content="{% if (page.url | isBlogPost) %}article{% else %}website{% endif %}">
@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex, nofollow">
   {%- endif %}
   <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
-  <link rel="alternate" type="application/atom+xml" title="Kim Does Blog" href="{{ '/feed.xml' | url }}">
+  <link rel="alternate" type="application/atom+xml" title="Beeps' Blogs" href="{{ '/feed.xml' | url }}">
   <link rel="me" href="https://awoo.space/@batbeeps">
   
   {#- Stylesheets #}
@@ -59,7 +59,9 @@
       <div class="kimWrapper kimMasthead_inner">
         <strong class="kimMasthead_brand">
           <a class="kimMasthead_logo" href="{{ '/' | url }}">
-            &larr; Kimberly Grey
+            &larr;
+            <span class="kim-!-sr">Back to home</span>
+            <span aria-hidden="true">beeps</span>
           </a>
         </strong>
       </div>
@@ -83,7 +85,7 @@
       <div class="kimWrapper kimFooter_inner">
         <small class="kimFooter_boilerplate">
           {% block boilerplate %}
-            Made by <a href="{{ '/contact/' | url }}">Kim</a> and <a href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
+            Made by <a href="{{ '/contact/' | url }}">beeps</a> and <a href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
           {% endblock %}
         </small>
       </div>
