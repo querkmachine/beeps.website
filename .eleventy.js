@@ -118,6 +118,24 @@ module.exports = function (eleventyConfig) {
       </picture>`;
     }
   );
+  
+  // Split text across several lines based on max number of characters per line
+  // https://fettblog.eu/11ty-automatic-twitter-cards/
+  eleventyConfig.addFilter('splitlines', function(input, maxChars = 20) {
+      const parts = input.split(' ');
+      const lines = parts.reduce(function(prev, current) {
+      if (!prev.length) {
+          return [current];
+      }
+      let lastOne = prev[prev.length - 1];
+      if (lastOne.length + current.length > maxChars) {
+          return [...prev, current];
+      }
+      prev[prev.length - 1] = lastOne + ' ' + current;
+      return prev;
+      }, []);
+      return lines;
+  });
 
   // Date formats
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -126,7 +144,7 @@ module.exports = function (eleventyConfig) {
     );
   });
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISODate();
   });
 
   // Get the first `n` elements of a collection.
@@ -173,6 +191,28 @@ module.exports = function (eleventyConfig) {
   // there's a better way of doing this in Eleventy.
   eleventyConfig.addFilter("isBlogPost", (postUrl) => {
     return postUrl.substring(0, 6) === "/blog/" ? true : false;
+  });
+  
+  // Generate Opengraph images
+  // https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/
+  eleventyConfig.on("afterBuild", () => {
+      const socialPreviewImagesDir = "./_site/images/opengraph/";
+      fs.readdir(socialPreviewImagesDir, (err, files) => {
+        if(err) throw err
+        files.forEach(filename => {
+          if(filename.endsWith(".svg")) {
+            let imageUrl = socialPreviewImagesDir + filename
+            pluginImages(imageUrl, {
+              formats: ["png"],
+              outputDir: socialPreviewImagesDir,
+              filenameFormat: (id, src, width, format, options) => {
+                let outputFilename = filename.substring(0, (filename.length - 4));
+                return `${outputFilename}.${format}`
+              }
+            })
+          }
+        })
+      })
   });
 
   // Layouts

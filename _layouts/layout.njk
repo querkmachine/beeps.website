@@ -19,20 +19,25 @@
   {#- Content metadata #}
   <title>{{ title or metadata.title }}</title>
   <meta property="og:title" content="{{ title or metadata.title }}">
-  <meta property="og:site_name" content="Beeps">
+  <meta property="og:site_name" content="beeps">
   <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
-  <meta property="og:image" content="{{ siteDomain }}{{ '/opengraph.png' | url }}">
-  <meta property="og:type" content="{% if (page.url | isBlogPost) %}article{% else %}website{% endif %}">
+  {%- if page.url | isBlogPost %}
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/' +  (date | htmlDateString) + '-' + (title | slugify) + '.png' | url }}">
+  {%- else %}
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/default.png' | url }}">
+  {%- endif %}
   <meta property="og:locale" content="en_GB">
   {%- if description or metadata.description %}
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta property="og:description" content="{{ description or metadata.description }}">
+  <meta name="description" content="{{ description or metadata.description }}">
+  <meta property="og:description" content="{{ description or metadata.description }}">
   {%- endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@batbeeps">
   <meta name="twitter:creator" content="@batbeeps">
   {%- if noRobots %}
-    <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow">
   {%- endif %}
   <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
   <link rel="alternate" type="application/atom+xml" title="Beeps' Blogs" href="{{ '/feed.xml' | url }}">
