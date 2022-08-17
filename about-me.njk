@@ -1,0 +1,53 @@
+---
+title: About beeps
+description: I'm pretty weird, tbh.
+---
+
+{% extends '_layouts/layout.njk' %}
+
+{% macro _item(heading) %}
+<section>
+  <h2 class="kimHeading-m">{{ heading | safe }}</h2>
+  {{ caller() if caller }}
+</section>
+<hr class="kimRule">
+{% endmacro %}
+
+{% block main %}
+<div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+  <div class="kimWrapper">
+    <div class="kimGrid">
+    <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+      <h1 class="kimHeading-xl">
+        About beeps
+      </h1>
+      
+      <div class="kim-!-margin-top-9">
+        {% call _item("📇 My name is beeps.") %}
+          <p class="kimBody">I also go by Kim (or Kimberly) Grey in more formal contexts, but I prefer folks call me beeps in casual conversation.</p>
+        {% endcall %}
+        {% call _item("🏳️‍⚧️ My pronouns are it/its.") %}
+          <p class="kimBody">I'm <a href="https://www.lgbtqia.wiki/wiki/Agender">agender</a> and use <a href="https://en.pronouns.page/it/its">it/its</a> as my primary pronouns, though I also accept <a href="https://en.pronouns.page/they/them">they/them</a> if you're not comfortable using it/its.</p>
+          <p class="kimBody">I consider myself to be trans and take hormones with the intention of being more physically androgynous.</p>
+        {% endcall %}
+        {% call _item("🌈 I&rsquo;m panromantic and asexual.") %}
+          <p class="kimBody">I'm <a href="https://www.lgbtqia.wiki/wiki/Panromantic">panromantic</a>: sex and gender plays no role in who I can fall in love with.</p>
+          <p class="kimBody">I'm also a <a href="https://www.lgbtqia.wiki/wiki/Sex-Repulsed">repulsed asexual</a>: I don't experience physical or sexual attraction, and find the very concept of sex off-putting.</p>
+        {% endcall %}
+        {% call _item("🤖 I&rsquo;m a robot.") %}
+          <p class="kimBody">I'm an <a href="https://alt-h.net/educate/faq.php">alterhuman</a>, <a href="https://roboticidentity.carrd.co">machine-identifying individual</a>. I don't relate well to my biological humanity and have significant physical dysphoria—which is why you won't find photos of me anywhere.</p>
+          <p>Relating myself to machines helps alleviate some of that dyphoria.</p>
+        {% endcall %}
+        {% call _item("🦇 I&rsquo;m a furry.") %}
+          <p class="kimBody">I've been involved in the <a href="https://en.wikipedia.org/wiki/Furry_fandom">furry fandom</a> for over half of my life. <a href="https://twitter.com/batbeeps/status/1500837853173006338">My fursona</a> is a Honduran white bat named Emy who, appropriately enough, is a robot.</p>
+        {% endcall %}
+        {% call _item("🧑‍💻 I make websites.") %}
+          <p class="kimBody">I've been making websites as a hobby since 2003 and as a profession since 2012. I do lots of bits and bobs, but specialise in front-end development with a focus on web accessibility and inclusivity, design systems, and semantics.</p>
+        {% endcall %}
+        <p class="kimBody">If you want, you can <a href="{{ '/contact/' | url }}">contact me through any of the listed services</a>.</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+{% endblock %}
