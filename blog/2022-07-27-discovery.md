@@ -3,8 +3,6 @@ title: Discovery
 date: 2022-07-27
 updated: 2022-07-28
 tags: [transition, self-identity, furry fandom]
-eleventyExcludeFromCollections: true
-noRobots: true
 ---
 
 The journey of self-discovery is an endless one. It may not feel like it to some: those who are happy with their gender assigned at birth, their sexuality, their identity, or have just never taken the time to explore anything outside of life's 'defaults' may find themselves perfectly satisfied with their lot in life.

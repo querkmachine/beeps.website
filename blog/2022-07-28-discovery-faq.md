@@ -3,8 +3,6 @@ title: Discovery - Q&A
 date: 2022-07-28
 updated: 2022-08-01
 tags: [transition, self-identity]
-eleventyExcludeFromCollections: true
-noRobots: true
 ---
 
 A collection of questions, and maybe even some answers, relating to my previous blog post, ["Discovery"]({{ '/blog/2022-07-27-discovery/' | url }}).
