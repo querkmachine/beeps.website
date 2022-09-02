@@ -11,13 +11,8 @@ const pluginImages = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
-  // Set the site domain
-  // If the script is simply 'eleventy' then it's the build script,
-  // so use the actual domain for that.
-  eleventyConfig.addGlobalData(
-    "siteDomain",
-    process.env.npm_lifecycle_script === "eleventy" ? "https://berly.kim" : null
-  );
+  // Set global constants
+  eleventyConfig.addGlobalData("siteDomain", "https://beeps.website");
 
   // Load plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -118,23 +113,23 @@ module.exports = function (eleventyConfig) {
       </picture>`;
     }
   );
-  
+
   // Split text across several lines based on max number of characters per line
   // https://fettblog.eu/11ty-automatic-twitter-cards/
-  eleventyConfig.addFilter('splitlines', function(input, maxChars = 20) {
-      const parts = input.split(' ');
-      const lines = parts.reduce(function(prev, current) {
+  eleventyConfig.addFilter("splitlines", function (input, maxChars = 20) {
+    const parts = input.split(" ");
+    const lines = parts.reduce(function (prev, current) {
       if (!prev.length) {
-          return [current];
+        return [current];
       }
       let lastOne = prev[prev.length - 1];
       if (lastOne.length + current.length > maxChars) {
-          return [...prev, current];
+        return [...prev, current];
       }
-      prev[prev.length - 1] = lastOne + ' ' + current;
+      prev[prev.length - 1] = lastOne + " " + current;
       return prev;
-      }, []);
-      return lines;
+    }, []);
+    return lines;
   });
 
   // Date formats
@@ -192,27 +187,27 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isBlogPost", (postUrl) => {
     return postUrl.substring(0, 6) === "/blog/" ? true : false;
   });
-  
+
   // Generate Opengraph images
   // https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/
   eleventyConfig.on("afterBuild", () => {
-      const socialPreviewImagesDir = "./_site/images/opengraph/";
-      fs.readdir(socialPreviewImagesDir, (err, files) => {
-        if(err) throw err
-        files.forEach(filename => {
-          if(filename.endsWith(".svg")) {
-            let imageUrl = socialPreviewImagesDir + filename
-            pluginImages(imageUrl, {
-              formats: ["png"],
-              outputDir: socialPreviewImagesDir,
-              filenameFormat: (id, src, width, format, options) => {
-                let outputFilename = filename.substring(0, (filename.length - 4));
-                return `${outputFilename}.${format}`
-              }
-            })
-          }
-        })
-      })
+    const socialPreviewImagesDir = "./_site/images/opengraph/";
+    fs.readdir(socialPreviewImagesDir, (err, files) => {
+      if (err) throw err;
+      files.forEach((filename) => {
+        if (filename.endsWith(".svg")) {
+          let imageUrl = socialPreviewImagesDir + filename;
+          pluginImages(imageUrl, {
+            formats: ["png"],
+            outputDir: socialPreviewImagesDir,
+            filenameFormat: (id, src, width, format, options) => {
+              let outputFilename = filename.substring(0, filename.length - 4);
+              return `${outputFilename}.${format}`;
+            },
+          });
+        }
+      });
+    });
   });
 
   // Layouts
