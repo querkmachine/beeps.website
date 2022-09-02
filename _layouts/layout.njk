@@ -7,6 +7,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Eleventy">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="{{ googleFontsUrl }}">
   
   {#- Icons #}
   <meta name="theme-color" content="#ff0090" media="(prefers-color-scheme: dark)">
@@ -44,8 +46,6 @@
   <link rel="me" href="https://awoo.space/@batbeeps">
   
   {#- Stylesheets #}
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="{{ googleFontsUrl }}">
   <link rel="stylesheet" href="{{ googleFontsUrl }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ googleFontsUrl }}"></noscript>
   <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
