@@ -19,7 +19,7 @@ permalink: "/blog/"
                 <a href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
                   <span itemprop="name">{{ post.data.title }}</span>
                 </a><br>
-                <time datetime="{{ post.date | htmlDateString }}" itemprop="dateCreated">{{ post.date | readableDate }}</time>
+                <time datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">{{ post.date | formatDate('human') }}</time>
               </li>
             {% endfor %}
           </ol>

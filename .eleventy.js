@@ -133,13 +133,15 @@ module.exports = function (eleventyConfig) {
   });
 
   // Date formats
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "d LLLL yyyy"
-    );
-  });
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISODate();
+  eleventyConfig.addFilter("formatDate", (dateObj, format) => {
+    const date = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    if (format === "iso") {
+      return date.toISODate();
+    } else if (format === "human") {
+      return date.toFormat("d LLLL yyyy");
+    } else {
+      return date.toFormat(format);
+    }
   });
 
   // Get the first `n` elements of a collection.

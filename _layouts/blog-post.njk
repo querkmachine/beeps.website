@@ -21,17 +21,17 @@
             {% block date %}
               {%- if date %}
                 <p class="kimBody-l">
-                  <time datetime="{{ date | htmlDateString }}" itemprop="dateCreated">
+                  <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
                     <span class="kim-!-sr">Posted on</span>
-                    {{ date | readableDate }}
+                    {{ date | formatDate('human') }}
                   </time>
                 </p>
               {%- endif %}
               {%- if updated %}
                 <p class="kimBody-l">
-                  <time datetime="{{ updated | htmlDateString }}" itemprop="dateModified">
+                  <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
                     <span class="kimBody">Last updated:</span><br>
-                    {{ updated | readableDate }}
+                    {{ updated | formatDate('human') }}
                   </time>
                 </p>
               {%- endif %}

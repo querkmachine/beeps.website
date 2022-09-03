@@ -3,7 +3,7 @@ pagination:
   data: collections.blog
   size: 1
   alias: preview
-permalink: "/images/opengraph/{{ preview.data.date | htmlDateString }}-{{ preview.data.title | slugify }}.svg"
+permalink: "/images/opengraph/{{ preview.data.date | formatDate('iso') }}-{{ preview.data.title | slugify }}.svg"
 eleventyExcludeFromCollections: true
 ---
 {%- set titleLines = preview.data.title | splitlines(20) -%}
@@ -28,7 +28,7 @@ eleventyExcludeFromCollections: true
   
   <!-- Post date -->
   <text text-anchor="start" font-family="'Space Mono', monospace" font-size="40" fill="#ffffff">
-    <tspan x="60" y="540">{{ preview.date | readableDate }}</tspan>
+    <tspan x="60" y="540">{{ preview.date | formatDate('human') }}</tspan>
   </text>
   
   <!-- Robat -->

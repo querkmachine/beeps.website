@@ -44,7 +44,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
                     {{ post.url }}
                   {%- endif -%}
                 </a><br>
-                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                <time datetime="{{ post.date | formatDate('iso') }}">{{ post.date | formatDate('human') }}</time>
               </li>
             {% endfor %}
           </ol>
