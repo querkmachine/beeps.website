@@ -1,7 +1,7 @@
 {
-  "name": "berly.kim",
+  "name": "beeps.website",
   "version": "3.0.0",
-  "description": "Kim's funky website.",
+  "description": "beep's funky website.",
   "main": "index.js",
   "scripts": {
     "start": "npm run serve",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/querkmachine/berly.kim.git"
+    "url": "git+https://github.com/querkmachine/beeps.website.git"
   },
-  "author": "Kim Grey <hi@berly.kim>",
+  "author": "Kim 'beeps' Grey <hi@berly.kim>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/querkmachine/berly.kim/issues"
+    "url": "https://github.com/querkmachine/beeps.website/issues"
   },
-  "homepage": "https://github.com/querkmachine/berly.kim#readme",
+  "homepage": "https://github.com/querkmachine/beeps.website#readme",
   "browserslist": "last 2 versions and last 2 years and not dead",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
