@@ -16,23 +16,14 @@
   &_inner {
     @include spacing.kim-responsive-padding(4, $direction: top);
     @include spacing.kim-responsive-padding(4, $direction: bottom);
-    display: flex;
-    flex-direction: column;
     border-top: .5rem solid var(--color-accent);
     border-bottom: 1px solid var(--color-subtle);
-    @include media-queries.kim-mq($from: galaxy) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-  &_brand {
   }
   &_logo {
     @include typography.kim-font-stack("header-alt", $weight: regular);
+  }
+  a {
     @include typography.kim-font-size(24);
     @include links.kim-link($underlineOnHoverOnly: true);
-  }
-  &_nav {
   }
 }

@@ -62,13 +62,13 @@
   {% block masthead %}
     <header class="kimMasthead">
       <div class="kimWrapper kimMasthead_inner">
-        <strong class="kimMasthead_brand">
-          <a class="kimMasthead_logo" href="{{ '/' | url }}">
-            &larr;
-            <span class="kim-!-sr">Back to home</span>
-            <span aria-hidden="true">beeps.website</span>
-          </a>
-        </strong>
+        <a class="kimMasthead_logo" href="{{ '/' | url }}">
+          <span class="kim-!-sr">Back to home</span>
+          <span aria-hidden="true">beeps.website</span>
+        </a>
+        {% for item in mastheadBreadcrumbs %}
+        &rarr; <a href="{{ item.url | url }}">{{ item.label }}</a>
+        {% endfor %}
       </div>
     </header>
   {% endblock %}

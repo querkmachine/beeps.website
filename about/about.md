@@ -2,6 +2,7 @@
 title: About beeps
 description: I'm pretty weird, tbh.
 permalink: "/about/"
+mastheadBreadcrumbs: null
 ---
 
 **[My name is beeps]({{ '/about/name/' | url }})**, with or without an uppercase 'b'. I also go by Kim (or Kimberly) Grey in other contexts, but I prefer you call me beeps.

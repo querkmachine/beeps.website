@@ -1,3 +1,7 @@
 {
-  "layout": "about"
+  "layout": "about",
+  "mastheadBreadcrumbs": [{
+    "url": "/about/",
+    "label": "about"
+  }]
 }
