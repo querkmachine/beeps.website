@@ -12,6 +12,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   // Set global constants
+  eleventyConfig.addGlobalData("siteName", "beeps.website");
   eleventyConfig.addGlobalData("siteDomain", "https://beeps.website");
 
   // Load plugins

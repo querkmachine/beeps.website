@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url | cachebust }}">
   
   {#- Content metadata #}
-  <title>{{ title or metadata.title }}</title>
+  <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ siteName }}</title>
   <meta property="og:title" content="{{ title or metadata.title }}">
   <meta property="og:site_name" content="beeps">
   <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
@@ -64,7 +64,7 @@
       <div class="kimWrapper kimMasthead_inner">
         <a class="kimMasthead_logo" href="{{ '/' | url }}">
           <span class="kim-!-sr">Back to home</span>
-          <span aria-hidden="true">beeps.website</span>
+          <span aria-hidden="true">{{ siteName }}</span>
         </a>
         {% for item in mastheadBreadcrumbs %}
         &rarr; <a href="{{ item.url | url }}">{{ item.label }}</a>
