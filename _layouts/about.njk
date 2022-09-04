@@ -1,0 +1,24 @@
+{% extends '_layouts/layout.njk' %}
+
+{% block main %}
+  <div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        {%- if page.url != '/about/' %}
+          <div class="kimSubheading-m kim-!-margin-bottom-3">
+            <a href="{{ '/about/' | url }}">&larr; About beeps</a>
+          </div>
+        {%- endif %}
+        <h1 class="kimHeading-xl">
+          {{ title }}
+        </h1>
+        
+        <div class="kimProse">
+          {{ content | smartquotes | safe }}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+{% endblock %}
