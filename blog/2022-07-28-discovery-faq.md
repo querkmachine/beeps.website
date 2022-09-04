@@ -1,7 +1,7 @@
 ---
 title: Discovery - Q&A
 date: 2022-07-28
-updated: 2022-08-01
+updated: 2022-09-04
 tags: [transition, self-identity]
 ---
 
@@ -74,6 +74,8 @@ For now, alterhuman or nonhuman it is!
 Edit (2022-07-29): Added robotkin section. Reworded parts for clarity.
 
 Edit (2022-07-30): I've been informed that 'otherkin' is not necessarily the correct term to describe my experiences, as there is no spiritual component to this identity and I don't personally hold any religious or spiritual beliefs. There also seem to be some debate around whether robot-identifying people can be considered otherkin at all, on the basis that a machine cannot have a soul or spirit. I'm not ready to wade into that argument.
+
+Edit (2022-09-04): I recently did an informal poll and it seems that, although some people do assume a spiritual relationship when the term 'otherkin' is used, none of the people polled consider it to be a requirement, or that the term is for exclusive use of people with such a relationship. Therefore, it doesn't seem like it would be controversial if I were to describe myself as being otherkin, machinekin or robotkin.
 
 ---
 

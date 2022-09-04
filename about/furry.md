@@ -19,4 +19,10 @@ My [fursona](https://en.wikipedia.org/wiki/Fursona) is a Honduran white bat name
 
 Art by [Integration](https://twitter.com/integration_art).
 
+## I am not my fursona
+
+Some people assume that because [I identify as a robot]({{ '/about/robot/' | url }}), and my fursona is a robot, that I identify as my fursona specifically.
+
+This is not the case. I have a different perception of myself as a robot that is separate from and unrelated to my fursona, barring some shared aesthetics (because, unsurprisingly, those are aesthetics that I like). My fursona is a representation of me as an individual, but she is not specifically me.
+
 {% endblock %}
