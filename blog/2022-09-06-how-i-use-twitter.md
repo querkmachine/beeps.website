@@ -8,7 +8,7 @@ I originally joined Twitter in July 2007, slightly more than a year after the se
 
 I've never stopped using it in the fifteen years since.
 
-There's no denying that Twitter has had a massive impact on the world. Hashtags are everywhere, news breaks faster than on 24-hour news channels, and it's never been easier to complain to a supermarket about  
+There's no denying that Twitter has had a massive impact on the world. Hashtags are everywhere, news breaks faster than on 24-hour news channels, and it's never been easier to complain to a supermarket about the salad you just bought having frogs in it.
 
 But like much of social media and Big Tech&#8482;, that impact hasn't always been for the better. Twitter has made lots of questionable decisions over the years (NFTs, removing tweets from LGBTQIA+ activists, the simultaneous failure to flag or remove disinformation from far-right sources, Elon Musk, and more).
 
@@ -30,7 +30,7 @@ Twitter has recently introduced a 'Circles' feature (like the one Google+ had ba
 
 Third-party clients have been shafted by Twitter over the years, either not receiving new features added to the platform or getting heavily nerfed versions of them (e.g. polls).
 
-Regardless, clients are, I think, the best way to use Twitter. You don't have to deal with ads, you don't have trending topics pushed in your face, and you don't get random likes put in your for-some-reason algorithmically sorted timeline. 
+Regardless, clients are, I think, the best way to use Twitter. You don't have to deal with ads, you don't have trending topics pushed in your face, and you don't get random likes put in your for-some-reason algorithmically sorted timeline.
 
 Instead, you get the pure, original Twitter experience. Tweets, in chronological order, in a list. Amazing.
 
@@ -50,7 +50,7 @@ Follows are never endorsements.
 
 ### Lists
 
-You'd think, with following so (relatively) few people, that I wouldn't have much use for Twitter lists. Not so! I maintain two Twitter lists: one permanent, one situational. 
+You'd think, with following so (relatively) few people, that I wouldn't have much use for Twitter lists. Not so! I maintain two Twitter lists: one permanent, one situational.
 
 My 'Express' list is a subset of accounts I follow belonging to good friends and content that I usually don't want to miss, such as breaking news. It's relatively slow-moving, and come morning, I'll usually scroll back to see what I've missed on Express.
 
@@ -100,7 +100,7 @@ I share some politically-partisan information on @sudo_batbeeps, as this is not 
 
 ### Content and trigger warnings
 
-I usually avoid posting topics that are likely to be sensitive to a significant number of people on @batbeeps. 
+I usually avoid posting topics that are likely to be sensitive to a significant number of people on @batbeeps.
 
 If I do, I aim to place a content warning before it, by starting the tweet with either "CW:" or "TW:", followed by the nature of the warning. Doing this causes the contents of the tweet to be hidden if you use an extension such as [Better TweetDeck](https://better.tw/).
 
