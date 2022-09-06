@@ -52,9 +52,9 @@ Follows are never endorsements.
 
 You'd think, with following so (relatively) few people, that I wouldn't have much use for Twitter lists. Not so! I maintain two Twitter lists: one permanent, one situational.
 
-My 'Express' list is a subset of accounts I follow belonging to good friends and content that I usually don't want to miss, such as breaking news. It's relatively slow-moving, and come morning, I'll usually scroll back to see what I've missed on Express.
+My 'Express' list is a subset of accounts I follow belonging to good friends and content that I don't want to miss, such as breaking news. It's relatively slow-moving, and come morning, I'll usually scroll back to see what I've missed on Express.
 
-My other list, 'Contextual' is usually used when I'm at an event of some sort. If I'm attending a conference, for example, it may include accounts associated with the conference, the transport companies I'm using to get there, and the accounts of speakers, staff and other attendees. It's a little bit of up-front work, but it often proves useful!
+My other list, 'Contextual' is used when I'm at an event of some sort. If I'm attending a conference, for example, it may include accounts associated with the conference, the transport companies I'm using to get there, and the accounts of speakers, staff and other attendees. It's a little bit of up-front work, but it often proves useful!
 
 ## What I post
 
@@ -88,7 +88,7 @@ I do not post, like or retweet explicit or NSFW content on any public-facing acc
 
 ### Politics
 
-I work as a civil servant in a politically-restricted role. It is a requirement of my job that I follow the [Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code) and remain politically impartial in public spaces, including on publicly-accessible social media.
+I work as a civil servant in a politically-restricted role. It is a requirement of my job that I follow the [Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code) and remain politically impartial in public spaces, including on publicly accessible social media.
 
 As a consequence, I cannot tweet or retweet party political viewpoints; political party media or press releases; criticisms or praises of specific politicians, parties or policies; or respond to any queries relating to these topics, as much as I might have an opinion about them.
 
@@ -96,23 +96,23 @@ Note that issues relating to civil liberties (such as LGBTQIA+ rights), union an
 
 Sharing views about current affairs from outside of the UK is, in my interpretation, acceptable, though this depends on the nature of the news.
 
-I share some politically-partisan information on @sudo_batbeeps, as this is not a publicly accessible account.
+I share some politically partisan information on @sudo_batbeeps, as that isn't a publicly accessible account.
 
 ### Content and trigger warnings
 
-I usually avoid posting topics that are likely to be sensitive to a significant number of people on @batbeeps.
+I avoid posting topics that are likely to be sensitive to a significant number of people on @batbeeps.
 
 If I do, I aim to place a content warning before it, by starting the tweet with either "CW:" or "TW:", followed by the nature of the warning. Doing this causes the contents of the tweet to be hidden if you use an extension such as [Better TweetDeck](https://better.tw/).
 
 If the post contains a relatively niche trigger (for example, triggers relating to specific people, media, or phobias) then it probably won't get tagged. Sorry.
 
-Posts relating to physical health, mental health and medical matters will usually be restricted to @sudo_batbeeps and will usually not come with a content warning unless graphic imagery is present.
+Posts relating to physical health, mental health and medical matters will be restricted to @sudo_batbeeps and will usually not come with a content warning unless graphic imagery is present.
 
 ### Signal boosts and callout posts
 
 I do not share posts that ask to be reshared for "signal boosting" or "callout" purposes.
 
-Whilst I am sympathetic to people struggling to pay bills, find work, and escape abusive living conditions. There are an awful lot of these around at the moment, and it would be easy to completely flood my timelines if I actually shared every one I saw.
+Whilst I am sympathetic to people struggling to pay bills, find work, and escape abusive living conditions, there are an awful lot of these around at the moment and it would be easy to completely flood my timelines if I actually shared every one I saw.
 
 Similarly, tweets calling out individuals or organisations for being shitty cross my path incredibly frequently. I don't want to flood my timelines and those of others by sharing them all, especially as the content of these tweets can often be triggering.
 
