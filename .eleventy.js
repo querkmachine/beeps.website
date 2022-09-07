@@ -5,6 +5,8 @@ const { DateTime } = require("luxon");
 const sass = require("sass");
 const postcss = require("postcss");
 const postcssPresetEnv = require("postcss-preset-env");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 // 11ty plugins
 const pluginImages = require("@11ty/eleventy-img");
@@ -33,6 +35,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
   eleventyConfig.addPassthroughCopy("opengraph.png");
+
+  // Markdown configuration
+  const markdownLibary = markdownIt({
+    html: true,
+    typographer: true,
+  }).use(markdownItAnchor, {
+    tabIndex: false,
+  });
+  eleventyConfig.setLibrary("md", markdownLibary);
 
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
@@ -160,28 +171,6 @@ module.exports = function (eleventyConfig) {
     const params = new URLSearchParams(paramPart || "");
     params.set("v", DateTime.local().toFormat("X"));
     return `${urlPart}?${params}`;
-  });
-
-  // Smartquotes filter so I stop getting annoyed at seeing incorrect quote marks everywhere
-  // https://charliepark.org/smartquotes_in_eleventy/
-  eleventyConfig.addFilter("smartquotes", (post) => {
-    const apostrophes = new RegExp(/(?<=<(h|l|p[^r]).*)\b'\b/g);
-    const years = new RegExp(/(?<=\s)'(?=\d)/g);
-    const openDoubles = new RegExp(/(?<=<(h|l|p[^r]).*)(?<=\s|>)&quot;/g);
-    const closeDoubles = new RegExp(
-      /(?<=<(h|l|p[^r]).*“.*)&quot;(?=(\s|\p{P}|<))/gu
-    );
-    const openSingles = new RegExp(/(?<=<(h|l|p[^r]).*)(?<=\s|>)'/g);
-    const closeSingles = new RegExp(
-      /(?<=<(h|l|p[^r]).*‘.*)'(?=(\s|\p{P}|<))/gu
-    );
-    return post
-      .replace(apostrophes, "’")
-      .replace(years, "’")
-      .replace(openDoubles, "“")
-      .replace(closeDoubles, "”")
-      .replace(openSingles, "‘")
-      .replace(closeSingles, "’");
   });
 
   // Helper function (filter?) that determines if the current page is a blog
