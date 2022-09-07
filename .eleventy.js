@@ -202,9 +202,6 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Layouts
-  eleventyConfig.addLayoutAlias("blog-post", "blog-post.njk");
-
   return {
     markdownTemplateEngine: "njk",
     dir: {
