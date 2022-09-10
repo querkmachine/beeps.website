@@ -7,6 +7,7 @@ const postcss = require("postcss");
 const postcssPresetEnv = require("postcss-preset-env");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const yargs = require("yargs").argv;
 
 // 11ty plugins
 const pluginImages = require("@11ty/eleventy-img");
@@ -15,7 +16,10 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
   // Set global constants
   eleventyConfig.addGlobalData("siteName", "beeps.website");
-  eleventyConfig.addGlobalData("siteDomain", "https://beeps.website");
+  eleventyConfig.addGlobalData(
+    "siteDomain",
+    yargs.serve ? "" : "https://beeps.website"
+  );
 
   // Load plugins
   eleventyConfig.addPlugin(pluginRss);
