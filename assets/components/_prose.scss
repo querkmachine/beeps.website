@@ -16,12 +16,15 @@
   }
   h2 {
     @extend .kimHeading-l;
+    @include spacing.kim-responsive-margin(9, $direction: block-start);
   }
   h3 {
     @extend .kimHeading-m;
+    @include spacing.kim-responsive-margin(7, $direction: block-start);
   }
   h4 {
     @extend .kimHeading-s;
+    @include spacing.kim-responsive-margin(5, $direction: block-start);
   }
   ol,
   ul {
