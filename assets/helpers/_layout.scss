@@ -14,17 +14,12 @@
     #{math.div(settings.$kim-page-gutter, 2)} + env(safe-area-inset-left)
   );
   display: block;
-  max-width: settings.$kim-page-width;
-  margin-right: math.div(settings.$kim-page-gutter, 2);
-  margin-left: math.div(settings.$kim-page-gutter, 2);
+  max-inline-size: settings.$kim-page-width;
+  margin-inline: math.div(settings.$kim-page-gutter, 2);
   @supports (margin: max(calc(0px))) {
-    margin-right: max(
+    margin-inline: max(
       #{math.div(settings.$kim-page-gutter, 2)},
       #{$gutter-safe-area-right}
-    );
-    margin-left: max(
-      #{math.div(settings.$kim-page-gutter, 2)},
-      #{$gutter-safe-area-left}
     );
   }
   @include media-queries.kim-mq($from: galaxy) {
@@ -48,11 +43,9 @@
     $and:
       "(min-width: #{(settings.$kim-page-width + settings.$kim-page-gutter * 2)})"
   ) {
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
     @supports (margin: max(calc(0px))) {
-      margin-right: auto;
-      margin-left: auto;
+      margin-inline: auto;
     }
   }
 }

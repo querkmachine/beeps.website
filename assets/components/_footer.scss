@@ -7,17 +7,16 @@
 
 .kimFooter {
   position: sticky;
-  top: 100%;
+  inset-block-start: 100%;
   @include media-queries.kim-print {
     display: none;
   }
   &_inner {
-    @include spacing.kim-responsive-padding(3, $direction: top);
-    @include spacing.kim-responsive-padding(3, $direction: bottom);
+    @include spacing.kim-responsive-padding(3, $direction: block);
     display: flex;
     flex-direction: column;
     gap: settings.$kim-page-gutter * 0.5;
-    border-bottom: 0.5rem solid var(--color-accent);
+    border-block-end: 0.5rem solid var(--color-accent);
     position: relative;
     @include media-queries.kim-mq($from: galaxy) {
       flex-direction: row;

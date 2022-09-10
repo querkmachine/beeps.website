@@ -7,28 +7,28 @@
 .kimHeading-l,
 .kimHeading-m,
 .kimHeading-s {
-  @include spacing.kim-responsive-margin(0, $direction: top);
+  @include spacing.kim-responsive-margin(0, $direction: block-start);
   @include typography.kim-font-stack(header, $weight: bold);
   font-feature-settings: "liga" 0;
 }
 
 .kimHeading-xl {
-  @include spacing.kim-responsive-margin(8, $direction: bottom);
+  @include spacing.kim-responsive-margin(8, $direction: block-end);
   @include typography.kim-font-size(48);
 }
 
 .kimHeading-l {
-  @include spacing.kim-responsive-margin(6, $direction: bottom);
+  @include spacing.kim-responsive-margin(6, $direction: block-end);
   @include typography.kim-font-size(36);
 }
 
 .kimHeading-m {
-  @include spacing.kim-responsive-margin(4, $direction: bottom);
+  @include spacing.kim-responsive-margin(4, $direction: block-end);
   @include typography.kim-font-size(24);
 }
 
 .kimHeading-s {
-  @include spacing.kim-responsive-margin(4, $direction: bottom);
+  @include spacing.kim-responsive-margin(4, $direction: block-end);
   @include typography.kim-font-size(19);
 }
 
@@ -40,7 +40,7 @@
 }
 
 .kimSubheading-xl {
-  @include spacing.kim-responsive-margin(1, $direction: bottom);
+  @include spacing.kim-responsive-margin(1, $direction: block-end);
   @include typography.kim-font-size(36);
 }
 
@@ -56,7 +56,7 @@
 .kimBody,
 .kimBody-l,
 .kimBody-s {
-  @include spacing.kim-responsive-margin(0, $direction: top);
+  @include spacing.kim-responsive-margin(0, $direction: block-end);
 }
 
 .kimBody {

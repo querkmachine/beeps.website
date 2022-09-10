@@ -1,16 +1,30 @@
 @use "../settings";
 @use "../helpers/spacing";
 
+$directions: (
+  all: null,
+  block: block,
+  block-start: block-start,
+  block-end: block-end,
+  inline: inline,
+  inline-start: inline-start,
+  inline-end: inline-end,
+  top: block-start,
+  right: inline-end,
+  bottom: block-end,
+  left: inline-start
+);
+
 @each $size, $map in settings.$kim-spacing {
-  @each $dir in (all, top, right, bottom, left) {
-    .kim-\!-margin#{if($dir != "all", "-" + $dir, null)}-#{$size} {
+  @each $key, $dir in $directions {
+    .kim-\!-margin#{if($key != "all", "-" + $key, null)}-#{$size} {
       @include spacing.kim-responsive-margin(
         $spacing-point: $size,
         $direction: $dir,
         $important: true
       );
     }
-    .kim-\!-padding#{if($dir != "all", "-" + $dir, null)}-#{$size} {
+    .kim-\!-padding#{if($key != "all", "-" + $key, null)}-#{$size} {
       @include spacing.kim-responsive-padding(
         $spacing-point: $size,
         $direction: $dir,

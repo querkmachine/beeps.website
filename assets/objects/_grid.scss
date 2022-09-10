@@ -9,23 +9,21 @@
 .kimGrid {
   $half-gutter: settings.$kim-page-gutter * .5;
   @include layout.kim-clearfix;
-  margin-right: 0 - $half-gutter;
-  margin-left: 0 - $half-gutter;
+  margin-inline: 0 - $half-gutter;
   &_column {
-    padding-right: $half-gutter;
-    padding-left: $half-gutter;
-    float: left;
+    padding-inline: $half-gutter;
+    float: inline-start;
   }
 }
 
 @each $name, $width in settings.$kim-grid-widths {
-  .kimGrid_column-#{$name} { width: $width; }
+  .kimGrid_column-#{$name} { inline-size: $width; }
 }
 
 @each $breakpoint, $value in settings.$kim-breakpoints {
   @include media-queries.kim-mq($from: $breakpoint) {
     @each $name, $width in settings.$kim-grid-widths {
-      .#{$breakpoint}\:kimGrid_column-#{$name} { width: $width; }
+      .#{$breakpoint}\:kimGrid_column-#{$name} { inline-size: $width; }
     }
   }
 }

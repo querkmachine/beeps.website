@@ -13,8 +13,8 @@
 // Hide elements while keeping them available to screen readers
 @mixin kim-visually-hidden($important: false) {
   position: absolute if($important, !important, null);
-  width: 1px if($important, !important, null);
-  height: 1px if($important, !important, null);
+  inline-size: 1px if($important, !important, null);
+  block-size: 1px if($important, !important, null);
   margin: -1px if($important, !important, null);
   padding: 0 if($important, !important, null);
   border: 0 if($important, !important, null);

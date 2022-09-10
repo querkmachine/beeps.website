@@ -3,9 +3,8 @@
 @use "../helpers/spacing";
 
 .kimRule {
-  @include spacing.kim-responsive-margin(4, $direction: top);
-  @include spacing.kim-responsive-margin(4, $direction: bottom);
-  height: .5rem;
+  @include spacing.kim-responsive-margin(4, $direction: block);
+  block-size: .5rem;
   border: 0;
   background-color: var(--color-accent);
 }

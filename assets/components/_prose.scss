@@ -43,29 +43,29 @@
     margin: 0;
     @include typography.kim-vr-margin(19);
     img {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
     figcaption {
       @include typography.kim-font-size(14);
-      text-align: right;
+      text-align: end;
     }
   }
   blockquote {
     margin: 0;
     @include typography.kim-vr-margin(19);
-    padding-left: 1rem;
-    border-left: .5rem solid var(--color-subtle);
+    padding-inline-start: 1rem;
+    border-inline-start: .5rem solid var(--color-subtle);
   }
   &_aside {
     @include typography.kim-vr-margin(19);
-    width: 100%;
+    inline-size: 100%;
     text-align: center;
     @include media-queries.kim-mq($from: galaxy) {
       @include spacing.kim-responsive-margin(3, $direction: left);
-      width: 30%;
-      max-width: 17.5rem;
-      float: right;
-      clear: right;
+      inline-size: 30%;
+      max-inline-size: 17.5rem;
+      float: inline-end;
+      clear: inline-end;
     }
   }
 }

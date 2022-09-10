@@ -40,7 +40,7 @@
     @include typography.kim-typography-common;
     @include typography.kim-font-stack(body);
     @include typography.kim-font-size(19);
-    min-height: 100vh;
+    min-block-size: 100vh;
     margin: 0;
     color: var(--color-text);
     background-color: var(--color-background);
