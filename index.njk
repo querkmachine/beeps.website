@@ -33,18 +33,9 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
           <header class="kim-!-margin-bottom-3">
             <h2 class="kimHeading-l">Blog</h2>
           </header>
-          <ol class="kimList kimList-spaced">
+          <ol class="kimList">
             {% for post in collections.blog | reverse | head(3) %}
-              <li>
-                <a href="{{ post.url | url }}" class="kimLink">
-                  {%- if post.data.title -%}
-                    {{ post.data.title }}
-                  {%- else -%}
-                    {{ post.url }}
-                  {%- endif -%}
-                </a><br>
-                <time datetime="{{ post.date | formatDate('iso') }}">{{ post.date | formatDate('human') }}</time>
-              </li>
+              {% include "_includes/blog-card.njk" %}
             {% endfor %}
           </ol>
           <footer>

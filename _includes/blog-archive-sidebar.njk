@@ -2,7 +2,7 @@
   <span class="kim-!-sr">beeps'</span>
   Blog
   {%- if tag %}
-    posts tagged as &lsquo;{{ tag }}&rsquo;
+    posts tagged as {{ tag | tagify }}
   {%- endif %}
 </h1>
 
@@ -18,7 +18,7 @@
     {% for tag in collections.tagList %}
       {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
       <li>
-        <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
       </li>
     {% endfor %}
   </ul>

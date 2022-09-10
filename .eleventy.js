@@ -168,6 +168,11 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
+  // Format tags like hashtags (but with dashes)
+  eleventyConfig.addFilter("tagify", (tag) => {
+    return `#${tag.replace(" ", "-")}`;
+  });
+
   // Generate a string we can use for asset cachebusting
   // https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
   eleventyConfig.addFilter("cachebust", (url) => {

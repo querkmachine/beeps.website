@@ -21,14 +21,9 @@ permalink: "/blog/{{ tag | slugify }}/"
           {% include "_includes/blog-archive-sidebar.njk" %}
         </div>
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-          <ol class="kimList kimList-spaced">
+          <ol class="kimList">
             {% for post in postsList | reverse %}
-              <li itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
-                <a href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
-                  <span itemprop="name">{{ post.data.title }}</span>
-                </a><br>
-                <time datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">{{ post.date | formatDate('human') }}</time>
-              </li>
+              {% include "_includes/blog-card.njk" %}
             {% endfor %}
           </ol>
         </div>

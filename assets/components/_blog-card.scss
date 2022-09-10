@@ -1,0 +1,47 @@
+@use "../helpers/links";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+
+.kimBlogCard {
+  @include spacing.kim-responsive-padding(4, $direction: block);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-block-end: 1px solid var(--color-accent);
+  &_heading {
+    @include typography.kim-font-size(24);
+  }
+  &_link {
+    @include links.kim-link($underlineOnHoverOnly: true);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+    }
+  }
+  &_date,
+  &_tags {
+    @include typography.kim-font-size(14);
+  }
+  &_date {
+    @include spacing.kim-responsive-margin(1, $direction: block-end);
+    order: -1;
+  }
+  &_tags {
+    @include spacing.kim-responsive-margin(4, $direction: block-start);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0;
+    position: relative;
+    list-style-type: none;
+    li + li {
+      margin: 0;
+    }
+    a[aria-current] {
+      font-weight: bold;
+    }
+  }
+}
