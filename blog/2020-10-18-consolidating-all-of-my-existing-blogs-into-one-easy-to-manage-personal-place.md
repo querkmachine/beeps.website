@@ -1,7 +1,7 @@
 ---
 title: Consolidating all of my existing blogs into one easy to manage personal place
 date: 2020-10-18
-tags: [random]
+tags: [meta]
 ---
 
 Hello stranger! Did you know how many blogs I have? The answer is _more than one_, which is approximately more than there should be.

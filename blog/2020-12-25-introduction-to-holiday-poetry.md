@@ -1,7 +1,7 @@
 ---
 title: Introduction to Holiday Poetry
 date: 2020-12-25
-tags: [random]
+tags: [poetry]
 ---
 
 My family has a lot of Christmas Day traditions. Like, a lot. We have traditions for when we wake up, what we wear, where and when we open presents, what types of presents we open at which times, when we eat meals, when we take photographs, what we take photographs of, and so on. It’s a whole thing.

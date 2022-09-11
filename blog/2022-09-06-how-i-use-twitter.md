@@ -1,7 +1,7 @@
 ---
 title: How I use Twitter
 date: 2022-09-06
-tags: [random, technology]
+tags: [technology]
 ---
 
 I originally joined Twitter in July 2007, slightly more than a year after the service first launched. These were the heady days when it was almost exclusively used by tech workers, when the site still went offline for maintenance (remember the Fail Whale?), and where you were expected to tweet mostly by text message (and yes, I actually did that a lot).
