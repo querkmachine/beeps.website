@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  border-block-end: 1px solid var(--color-accent);
+  border-block-end: 1px solid var(--color-subtle);
   &_heading {
     @include typography.kim-font-size(24);
   }
@@ -40,8 +40,11 @@
     li + li {
       margin: 0;
     }
-    a[aria-current] {
-      font-weight: bold;
+    a {
+      @include links.kim-link($underlineOnHoverOnly: true);
+      &[aria-current] {
+        font-weight: bold;
+      }
     }
   }
 }
