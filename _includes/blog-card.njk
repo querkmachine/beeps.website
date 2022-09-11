@@ -11,7 +11,7 @@
   </time>
   {%- if post.data.tags %}
     <ul class="kimBlogCard_tags">
-      {%- for tag in post.data.tags %}
+      {%- for tag in post.data.tags | filterTagList | sort %}
         {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
         <li>
           <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
