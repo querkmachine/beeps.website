@@ -1,13 +1,12 @@
 @use "../settings";
-@use "../helpers/colors";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
 code {
 	@include spacing.kim-responsive-padding(1, $direction: inline);
 	@include typography.kim-font-stack(code);
-	color: colors.kim-color("white");
-	background-color: colors.kim-color("grey");
+	color: settings.$kim-color-white;
+	background-color: settings.$kim-color-grey;
 	font-size: .9em;
 }
 

@@ -3,21 +3,20 @@
 @use "../helpers/colors";
 @use "../helpers/media-queries";
 
+@use "sass:map";
 @use "sass:math";
 
 :root {
-  --color-text: #{colors.kim-color("black")};
-  --color-background: #{colors.kim-color("white")};
-  --color-subtle: #{colors.kim-color("grey")};
-  --color-accent: #{colors.kim-color("kimberly")};
+  @each $name, $map in settings.$kim-color-palette-semantic {
+    --color-#{$name}: #{map.get($map, "light")};
+  }
 }
 
 @include media-queries.kim-dark {
   :root {
-    --color-text: #{colors.kim-color("white")};
-    --color-background: #{colors.kim-color("black")};
-    --color-subtle: #{colors.kim-color("grey")};
-    --color-accent: #{colors.kim-color("neon")};
+    @each $name, $map in settings.$kim-color-palette-semantic {
+      --color-#{$name}: #{map.get($map, "dark")};
+    }
   }
 }
 
