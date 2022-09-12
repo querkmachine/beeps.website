@@ -56,7 +56,7 @@
 .kimBody,
 .kimBody-l,
 .kimBody-s {
-  @include spacing.kim-responsive-margin(0, $direction: block-end);
+  @include spacing.kim-responsive-margin(0, $direction: block-start);
 }
 
 .kimBody {
