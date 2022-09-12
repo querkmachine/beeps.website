@@ -6,45 +6,43 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 {% extends '_layouts/layout.njk' %}
 
 {% block main %}
-  <div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+  <section class="kim-!-padding-block-start-9 kim-!-padding-block-end-9 kim-!-background-color-accent kim-!-text-color-background">
     <div class="kimWrapper">
       <div class="kimGrid">
-        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf kim-!-margin-bottom-8">
-          <h1 class="kimHeading-xl kim-!-margin-bottom-2">
-            Hello, I&rsquo;m<br>
-            <span style="color: var(--color-accent)">beeps</span>!
-          </h1>
-        </div>
-        <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf intrepid:kimGrid_column-oneQuarter">
-          <p class="kimBody">I&rsquo;m a Bristol-based front-end developer specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-        </div>
-        <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf intrepid:kimGrid_column-oneQuarter">
-          <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (it/its), aggressively <a href="{{ '/about/asexuality/' | url }}">asexual</a>, kinda weird <a href="{{ '/about/robot/' | url }}">robot-identifying person</a>. I'm also a <a href="{{ '/about/furry/' | url }}">furry</a>. It's a bit complicated.</p>
-          <p class="kimBody">This is my personal website which is perpetually unfinished.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="kim-!-margin-top-9 kim-!-margin-bottom-9">
-    <div class="kimWrapper">
-      <div class="kimGrid">
-        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf" aria-hidden="true">&nbsp;</div>
-        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf">
-          <header class="kim-!-margin-bottom-3">
-            <h2 class="kimHeading-l">Blog</h2>
-          </header>
-          <ol class="kimList">
-            {% for post in collections.blog | reverse | head(3) %}
-              {% include "_includes/blog-card.njk" %}
-            {% endfor %}
-          </ol>
-          <footer>
-            <a href="{{ '/blog/' | url }}" class="kimLink">More blog posts &rarr;</a>
-          </footer>
+        <h1 class="kimHeading-xl kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf kim-!-margin-block-end-0">
+          Hello world,<br>I&rsquo;m beeps!
+        </h1>
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf kim-!-margin-block-start-2">
+          <p class="kimBody-l kim-!-margin-block-end-0">I make websites and write about whatever random guff takes my interest.</p>
         </div>
       </div>
     </div>
   </section>
+  
+  <div class="kimWrapper kim-!-margin-block-start-6 kim-!-margin-block-end-6">
+    <div class="kimGrid">
+      
+      <section class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf">
+        <h2>About beeps</h2>
+
+        <p class="kimBody">I&rsquo;m a Bristol-based front-end developer specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
+        <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (it/its pronouns), aggressively <a href="{{ '/about/asexuality/' | url }}">asexual</a>, kinda weird <a href="{{ '/about/robot/' | url }}">alterhuman person</a>. I'm also <a href="{{ '/about/furry/' | url }}">a robot bat on the internet</a>. It's all a bit complicated.</p>
+        <p class="kimBody">This is my personal website which is a perpetual work in progress.</p>
+        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink">More about me &rarr;</a></p>
+      </section>
+      
+      <section class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneHalf">
+        <h2>Latest on the blog</h2>
+        <ol class="kimList">
+          {% for post in collections.blog | reverse | head(3) %}
+            {% include "_includes/blog-card.njk" %}
+          {% endfor %}
+        </ol>
+        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink">More blog posts &rarr;</a></p>
+      </section>
+      
+    </div>
+  </div>
 {% endblock %}
 
 {% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
