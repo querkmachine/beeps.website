@@ -99,7 +99,7 @@ module.exports = function (eleventyConfig) {
       }
 
       let metadata = await pluginImages(src, {
-        widths: [300, 600, 900, null],
+        widths: [600, 900, 1200, null],
         formats: ["webp"],
         urlPath: "/images/",
         outputDir: "./_site/images/",
