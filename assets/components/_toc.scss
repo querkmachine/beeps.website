@@ -1,0 +1,33 @@
+@use "../settings";
+@use "../helpers/a11y";
+@use "../helpers/media-queries";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+
+.kimToc {
+  @include media-queries.kim-mq($from: galaxy) {
+    position: sticky;
+    @include spacing.kim-responsive-spacing($property: top, $spacing-point: 3);
+  }
+  &_collapsibleSummary {
+    @include spacing.kim-responsive-margin(2, $direction: block-end);
+    &:focus {
+      @include a11y.kim-focus-ring($fill: true);
+    }
+  }
+  &_inner ol {
+    @include spacing.kim-responsive-margin(0);
+    @include spacing.kim-responsive-padding(0);
+    @include typography.kim-font-size(16);
+    list-style-type: none;
+  }
+  &_inner li {
+    @include spacing.kim-responsive-margin(1, $direction: block-start);
+    &:last-child {
+      @include typography.kim-vr-margin(19);
+    }
+  }
+  &_inner > ol > li > ol li {
+    @include spacing.kim-responsive-margin(3, $direction: inline-start);
+  }
+}

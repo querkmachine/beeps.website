@@ -49,6 +49,18 @@
               </nav>
             {%- endif %}
             <hr class="kimRule">
+            {%- if (content | toc) %}
+              <nav class="kimToc" aria-labelledby="toc-header">
+                <details class="kimToc_collapsible" data-js="toc">
+                  <summary class="kimToc_collapsibleSummary">
+                    <span class="kimHeading-s" id="toc-header">Contents</span>
+                  </summary>
+                  {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
+                </details>
+                <hr class="kimRule">
+              </nav>
+            {%- endif %}
+            <div class="kim-!-sr"><a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">Permalink to this blog post</a></div>
           </div>
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
             {% block content  %}
@@ -56,8 +68,11 @@
             {% endblock %}
           </div>
         </div>
-        <div class="kim-!-sr"><a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">Permalink to this blog post</a></div>
       </article>
     </div>
   </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ '/assets/javascript/toc.js' | url | cachebust }}"></script>
 {% endblock %}

@@ -12,6 +12,7 @@ const yargs = require("yargs").argv;
 // 11ty plugins
 const pluginImages = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginToc = require("eleventy-plugin-toc");
 
 module.exports = function (eleventyConfig) {
   // Set global constants
@@ -23,13 +24,14 @@ module.exports = function (eleventyConfig) {
 
   // Load plugins
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginToc);
 
   // Global settings
   eleventyConfig.setDataDeepMerge(true);
 
   // Copy JS and UI images
   eleventyConfig.addPassthroughCopy("assets/images");
-  eleventyConfig.addPassthroughCopy("assets/js");
+  eleventyConfig.addPassthroughCopy("assets/javascript");
 
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(".htaccess");
