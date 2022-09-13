@@ -89,10 +89,22 @@ module.exports = function (eleventyConfig) {
       });
   });
 
+  // Figures/asides
+  eleventyConfig.addPairedNunjucksShortcode("figure", function (content, args) {
+    let html = `<figure class="kimFigure${
+      args.float ? " kimFigure-" + args.float : ""
+    }">${content}`;
+    if (args.caption) {
+      html += `<figcaption class="kimFigure_caption">${args.caption}</figcaption>`;
+    }
+    html += `</figure>`;
+    return html;
+  });
+
   // Responsive images shortcode
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    async function (src, alt, aside = false) {
+    async function (src, alt) {
       if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
@@ -121,7 +133,6 @@ module.exports = function (eleventyConfig) {
         })
         .join("\n")}
         <img
-          class="${aside ? "kimProse_aside" : null}"
           src="${originalSize.url}"
           width="${originalSize.width}"
           height="${originalSize.height}"

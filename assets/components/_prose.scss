@@ -36,39 +36,16 @@
   ul {
     @extend .kimList-bulleted;
   }
-  img {
+  > img {
     @include typography.kim-vr-margin(19);
   }
   hr {
     @extend .kimRule;
-  }
-  figure {
-    margin: 0;
-    @include typography.kim-vr-margin(19);
-    img {
-      margin-block-end: 0;
-    }
-    figcaption {
-      @include typography.kim-font-size(14);
-      text-align: end;
-    }
   }
   blockquote {
     margin: 0;
     @include typography.kim-vr-margin(19);
     padding-inline-start: 1rem;
     border-inline-start: .5rem solid var(--color-subtle);
-  }
-  &_aside {
-    @include typography.kim-vr-margin(19);
-    inline-size: 100%;
-    text-align: center;
-    @include media-queries.kim-mq($from: galaxy) {
-      @include spacing.kim-responsive-margin(3, $direction: left);
-      inline-size: 30%;
-      max-inline-size: 17.5rem;
-      float: inline-end;
-      clear: inline-end;
-    }
   }
 }
