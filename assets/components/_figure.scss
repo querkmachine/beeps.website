@@ -19,7 +19,7 @@
     border-block-start-width: 1px;
     border-block-end-width: 1px;
     border-style: solid;
-    border-color: colors.kim-color(accent);
+    border-color: var(--color-accent);
     text-align: start;
   }
   @include media-queries.kim-mq($from: galaxy) {
