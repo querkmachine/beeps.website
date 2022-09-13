@@ -20,10 +20,12 @@
   &:hover,
   &:focus {
     color: var(--color-accent);
-    opacity: .65;
     @if $underlineOnHoverOnly {
       @include _kim-link-underline;
     }
+  }
+  &:hover {
+    opacity: .65;
   }
   &:focus {
     @include a11y.kim-focus-ring($fill: true);
