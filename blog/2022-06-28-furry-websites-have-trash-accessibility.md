@@ -18,7 +18,9 @@ As a consequence, pretty much every major website and app in the furry fandom is
 
 ## That is also the problem
 
-{% responsiveImage "./images/robat-wheels.png", "Robot bat, but with wheels instead of legs.", true %}
+{% figure float="right" %}
+{% responsiveImage "./images/robat-wheels.png", "Robot bat, but with wheels instead of legs." %}
+{% endfigure %}
 
 The frequent (though by no means universal) lack of professional experience, legal knowledge, or managerial mandates to do-it-right-or-you’re-fired means that a lot of these websites are... kind of a mess. They do what they were designed to do, sure, but they were _only_ built for what they were designed to do. A sighted user with a mouse might be able to upload an image and view it in their gallery—but that doesn’t mean that a screen reader user using a keyboard can.
 
@@ -30,7 +32,9 @@ The furry fandom is no stranger to disabled, neurodivergent and minority people.
 
 ## Let’s do something about it
 
-{% responsiveImage "./images/robat-circuits.png", "Robot bat with a door on their torso open, exposing a circuit board-like pattern.", true %}
+{% figure float="right", caption="Hello world." %}
+{% responsiveImage "./images/robat-circuits.png", "Robot bat with a door on their torso open, exposing a circuit board-like pattern." %}
+{% endfigure %}
 
 I hate complaining about stuff and not offering a fix. So here’s a fix:
 
