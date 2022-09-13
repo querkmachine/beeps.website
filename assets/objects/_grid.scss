@@ -4,15 +4,13 @@
 
 @use "sass:list";
 
-
-
 .kimGrid {
   $half-gutter: settings.$kim-page-gutter * .5;
-  @include layout.kim-clearfix;
+  display: flex;
+  flex-wrap: wrap;
   margin-inline: 0 - $half-gutter;
   &_column {
     padding-inline: $half-gutter;
-    float: inline-start;
   }
 }
 
