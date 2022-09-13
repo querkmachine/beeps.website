@@ -17,17 +17,17 @@
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
             {% block date %}
               {%- if date %}
-                <p class="kimBody-l">
+                <p class="kimBody">
                   <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
-                    <span class="kim-!-sr">Posted on</span>
+                    <span class="kimBody-s">Published on</span><br>
                     {{ date | formatDate('human') }}
                   </time>
                 </p>
               {%- endif %}
               {%- if updated %}
-                <p class="kimBody-l">
+                <p class="kimBody">
                   <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
-                    <span class="kimBody">Last updated:</span><br>
+                    <span class="kimBody-s">Last updated:</span><br>
                     {{ updated | formatDate('human') }}
                   </time>
                 </p>
@@ -35,8 +35,8 @@
             {% endblock %}
             {%- if tags %}
               <nav aria-label="Post tags">
-                <p class="kimBody kim-!-margin-bottom-1">Tagged as:</p>
-                <ul class="kimList">
+                <p class="kimBody-s kim-!-margin-block-end-0">Tagged as:</p>
+                <ul class="kimList kimList-inline">
                   {% for tag in tags | filterTagList | sort %}
                     {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
                     <li>

@@ -26,4 +26,13 @@
       @include spacing.kim-responsive-margin(3, $direction: block-start);
     }
   }
+  &-inline {
+    li {
+      display: inline-block;
+      margin-inline-end: .5em;
+    }
+    li + li {
+      @include spacing.kim-responsive-margin(0, $direction: block-start);
+    }
+  }
 }
