@@ -32,7 +32,7 @@ The furry fandom is no stranger to disabled, neurodivergent and minority people.
 
 ## Let’s do something about it
 
-{% figure float="right", caption="Hello world." %}
+{% figure float="right" %}
 {% responsiveImage "./images/robat-circuits.png", "Robot bat with a door on their torso open, exposing a circuit board-like pattern." %}
 {% endfigure %}
 
