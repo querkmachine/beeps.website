@@ -1,7 +1,7 @@
 ---
 title: Discovery - Q&A
 date: 2022-07-28
-updated: 2022-09-04
+updated: 2022-09-14
 tags: [transition, self-identity]
 ---
 
@@ -25,13 +25,13 @@ And, most of all, it's harmless and it makes me happy. Who cares what the cause 
 
 ## Are you still transgender?
 
-To be honest, I don't know. I do suspect that, in the past, I have misinterpreted species dysphoria as gender dysphoria. This makes sense to me, as my goals in persuing gender transition have—for the most part—been social and not physical, with one exception.
+Yes. I'm agender. My gender is different to the one assigned to me at birth, thus, I am transgender.
 
-In the past, my 'slam dunk' evidence of gender dysphoria was regarding sex organs. I don't like them. I want them gone. Previously, I interpreted this as wanting the same organs as the opposite sex. Now, I think that I don't want them replaced, I quite literally want them gone.
+In contexts where the gender binary is enforced, I prefer female pronouns over male ones and my current feminine-coded name over my previous name.
 
-I previously identified myself as being agender. I may still return to that identity. I don't know yet.
+I don't intend to stop taking HRT.
 
-It is still true, however, that I prefer female pronouns over male ones, and my current feminine-coded name over my previous name. I don't intend to stop taking HRT.
+Edit (2022-09-14): Rewrote answer because I've figured it out now.
 
 ---
 
@@ -49,9 +49,11 @@ Edit (2022-07-29): Reworded title for clarity.
 
 What's the difference?
 
-If I _want_ to be a robot, then I _want_ to be able to identify as a robot.
+I blatantly don't identify as being human. My idealised physical form is that of a machine.
 
-Given the actual process is impossible at this time, _wanting_ the identity is the closest thing possible to _having it_.
+Given the actual process of becoming one is impossible at this time, as far as I'm concerned, _wanting_ to be a robot is the closest thing possible to _identifying_ as one.
+
+Edit (2022-09-14): Reworded answer.
 
 ---
 
