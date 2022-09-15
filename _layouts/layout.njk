@@ -3,52 +3,59 @@
 <!doctype html>
 <html lang="en-GB" class="kimPage">
 <head>
-  {#- Tech metadata #}
+
+  {#- Technical metadata #}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Eleventy">
+  <link rel="alternate" type="application/atom+xml" title="Beeps' Blogs" href="{{ '/feed.xml' | url }}">
+  <link rel="me" href="https://awoo.space/@batbeeps">
+  
+  {#- Page title #}
+  <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ siteName }}</title>
+  
+  {#- Preconnect #}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  {#- Stylesheets #}
+  <link rel="stylesheet" href="{{ googleFontsUrl }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ googleFontsUrl }}"></noscript>
+  <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+  
+  {#- Preload #}
   <link rel="preload" as="style" href="{{ googleFontsUrl }}">
   
-  {#- Icons #}
+  {#- SEO metadata #}
+  <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
+  <meta property="og:title" content="{{ title or metadata.title }}">
+  <meta property="og:site_name" content="beeps">
+  <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
+  {%- if page.url | isBlogPost %}
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/' +  (date | formatDate('iso')) + '-' + (title | slugify) + '.png' | url }}">
+  {%- else %}
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/default.png' | url }}">
+  {%- endif %}
+  <meta property="og:locale" content="en_GB">
+  {%- if description or metadata.description %}
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+  {%- endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@batbeeps">
+  <meta name="twitter:creator" content="@batbeeps">
+  {%- if noRobots %}
+    <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  
+  {#- Theming/icons #}
   <meta name="theme-color" content="#ff0090" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#786999">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url | cachebust }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url | cachebust }}">
   <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#786999">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url | cachebust }}">
-  
-  {#- Content metadata #}
-  <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ siteName }}</title>
-  <meta property="og:title" content="{{ title or metadata.title }}">
-  <meta property="og:site_name" content="beeps">
-  <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
-  {%- if page.url | isBlogPost %}
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/' +  (date | formatDate('iso')) + '-' + (title | slugify) + '.png' | url }}">
-  {%- else %}
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/default.png' | url }}">
-  {%- endif %}
-  <meta property="og:locale" content="en_GB">
-  {%- if description or metadata.description %}
-  <meta name="description" content="{{ description or metadata.description }}">
-  <meta property="og:description" content="{{ description or metadata.description }}">
-  {%- endif %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@batbeeps">
-  <meta name="twitter:creator" content="@batbeeps">
-  {%- if noRobots %}
-  <meta name="robots" content="noindex, nofollow">
-  {%- endif %}
-  <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
-  <link rel="alternate" type="application/atom+xml" title="Beeps' Blogs" href="{{ '/feed.xml' | url }}">
-  <link rel="me" href="https://awoo.space/@batbeeps">
-  
-  {#- Stylesheets #}
-  <link rel="stylesheet" href="{{ googleFontsUrl }}" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="{{ googleFontsUrl }}"></noscript>
-  <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
   
   {#- Page-specific head content #}
   {% block head %}{% endblock %}
