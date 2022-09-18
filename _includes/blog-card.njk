@@ -6,17 +6,19 @@
       </span>
     </a>
   </strong>
-  <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
-    {{- post.date | formatDate('human') -}}
-  </time>
-  {%- if post.data.tags %}
-    <ul class="kimBlogCard_tags">
-      {%- for tag in post.data.tags | filterTagList | sort %}
-        {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
-        <li>
-          <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
-        </li>
-      {%- endfor %}
-    </ul>
-  {%- endif %}
+  <div class="kimBlogCard_meta">
+    <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
+      {{- post.date | formatDate('human') -}}
+    </time>
+    {%- if post.data.tags %}
+      <ul class="kimBlogCard_tags">
+        {%- for tag in post.data.tags | filterTagList | sort %}
+          {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+          <li>
+            <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+    {%- endif %}
+  </div>
 </li>
