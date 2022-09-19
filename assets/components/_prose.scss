@@ -36,15 +36,12 @@
   ul {
     @extend .kimList-bulleted;
   }
-  > img {
-    @include typography.kim-vr-margin(19);
-  }
   hr {
     @extend .kimRule;
   }
   blockquote {
-    margin: 0;
     @include typography.kim-vr-margin(19);
+    margin: 0;
     padding-inline-start: 1rem;
     border-inline-start: .5rem solid var(--color-subtle);
   }

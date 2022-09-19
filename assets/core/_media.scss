@@ -1,4 +1,7 @@
+@use "../helpers/typography";
+
 img {
+  @include typography.kim-vr-margin(19);
   max-inline-size: 100%;
   block-size: auto;
 }
