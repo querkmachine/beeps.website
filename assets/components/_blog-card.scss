@@ -8,10 +8,10 @@
   flex-direction: column;
   position: relative;
   &_heading {
-    @include typography.kim-font-stack(body, $weight: bold);
+    @include typography.kim-font-stack(body, $weight: normal);
   }
   &_link {
-    @include links.kim-link($underlineOnHoverOnly: true);
+    @include links.kim-link;
   }
   &_meta {
     display: flex;
