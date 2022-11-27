@@ -15,6 +15,8 @@ mastheadBreadcrumbs: null
 
 **[I'm a furry.]({{ '/about/furry/' | url }})** I've been in the furry fandom for over half my life and I owe it a lot for giving me the skills and experience I have today. I try to give back where I can.
 
+**[I'm probably not alone.]({{ '/about/olive/' | url }})** One day, my subconscious decided to say hello and told me their name is Olive. Since then we've been invetigating plurality and whether it applies to us.
+
 And, of course, **[I make websites]({{ '/work/' | url }})**. I've been doing web development as a hobby since 2003 and for money since 2012. I do a lot of bits and bobs, but have come to specialise in front-end development, accessibility, design systems and the semantic web.
 
 <hr class="kimRule">
