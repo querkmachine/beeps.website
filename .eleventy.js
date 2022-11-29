@@ -91,7 +91,7 @@ module.exports = function (eleventyConfig) {
       });
   });
 
-  // Figures/asides
+  // Figure shortcode
   eleventyConfig.addPairedNunjucksShortcode("figure", function (content, args) {
     let html = `<figure class="kimFigure${
       args.float ? " kimFigure-" + args.float : ""
@@ -102,6 +102,15 @@ module.exports = function (eleventyConfig) {
     html += `</figure>`;
     return html;
   });
+
+  // Callout text shortcode
+  eleventyConfig.addPairedNunjucksShortcode(
+    "callout",
+    function (content, args) {
+      // The markdown parser gets angry without the newlines
+      return `<div class="kimCallout">\n${content}</div>`;
+    }
+  );
 
   // Responsive images shortcode
   eleventyConfig.addNunjucksAsyncShortcode(

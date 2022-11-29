@@ -4,11 +4,13 @@ date: 2022-10-27
 tags: [self-identity, furry fandom]
 ---
 
-> This is a pretty long post about a topic that is not well known about in the general population, nor well understood, even by myself. I can only talk about my own experiences with plurality.
->
-> **Content warning:** I discuss some personally traumatic experiences in this blog post. It's pretty tame and I don't go into that much detail, but it's there, neatly sequestered under the "Trauma" heading. You've been warned.
->
-> For a newbie-friendly guide to what plurality is, see [MoreThanOne.info](https://morethanone.info/).
+{% callout %}
+This is a pretty long post about a topic that is not well known about in the general population, nor well understood, even by myself. I can only talk about my own experiences with plurality.
+
+**Content warning:** I discuss some personally traumatic experiences in this blog post. It's pretty tame and I don't go into that much detail, but it's there, neatly sequestered under the "Trauma" heading. You've been warned.
+
+For a newbie-friendly guide to what plurality is, see [MoreThanOne.info](https://morethanone.info/).
+{% endcallout %}
 
 For a long time, I've thought that plurality was not something that applied to me. Did I have clearly distinct individuals sharing my brain? No, I did not. And that was the scope of my investigation.
 

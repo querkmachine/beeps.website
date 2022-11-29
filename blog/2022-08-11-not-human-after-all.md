@@ -5,7 +5,9 @@ updated: 2022-08-17
 tags: [self-identity, transition]
 ---
 
-**This post was written after, but published before, ["Discovery"]({{ '/blog/2022-07-27-discovery/' | url }}) and ["Homework"]({{ '/blog/2022-07-30-homework/' | url }}). It serves as a culmination of the self-exploration discussed in those posts, as well as a newcomer-friendly introduction to those changes.**
+{% callout %}
+This post was written after, but published before, ["Discovery"]({{ '/blog/2022-07-27-discovery/' | url }}) and ["Homework"]({{ '/blog/2022-07-30-homework/' | url }}). It serves as a culmination of the self-exploration discussed in those posts, as well as a newcomer-friendly introduction to those changes.
+{% endcallout %}
 
 In July 2014, [the first post on this blog]({{ '/blog/2014-07-10-the-long-walk/' | url }}) was made. Technically it was a different blog back then, one named _Kim's Crossing_, neatly segregated from my professional online presence lest a colleague read the secret contained within—I was a transgender woman.
 
