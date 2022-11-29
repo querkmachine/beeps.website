@@ -35,4 +35,11 @@
       @include spacing.kim-responsive-margin(0, $direction: block-start);
     }
   }
+  &-columns {
+    column-width: 20ch;
+    column-gap: spacing.kim-spacing(3);
+    li {
+      break-inside: avoid;
+    }
+  }
 }
