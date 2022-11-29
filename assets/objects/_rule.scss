@@ -6,5 +6,5 @@
   @include spacing.kim-responsive-margin(4, $direction: block);
   block-size: .5rem;
   border: 0;
-  background-color: var(--color-accent);
+  background-color: colors.kim-color-css("furniture");
 }

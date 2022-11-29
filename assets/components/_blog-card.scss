@@ -1,41 +1,28 @@
+@use "../helpers/colors";
 @use "../helpers/links";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
 .kimBlogCard {
+  @include spacing.kim-responsive-padding(3);
   @include typography.kim-vr-margin(19);
   display: flex;
   flex-direction: column;
   position: relative;
+  color: colors.kim-color-css("text");
+  background-color: colors.kim-color-css("background");
+  &_date {
+    @include spacing.kim-responsive-margin(2, $direction: block-end);
+    margin-right: 1em;
+  }
   &_heading {
-    @include typography.kim-font-stack(body, $weight: normal);
+    @include typography.kim-font-stack(header, $weight: bold);
   }
   &_link {
     @include links.kim-link;
   }
-  &_meta {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &_date {
-    margin-right: 1em;
-  }
   &_tags {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding: 0;
-    position: relative;
-    list-style-type: none;
-    li + li {
-      margin: 0;
-    }
-    a {
-      @include links.kim-link($underlineOnHoverOnly: true);
-      &[aria-current] {
-        font-weight: bold;
-      }
-    }
+    @include typography.kim-font-size(16);
+    margin-block-start: auto;
   }
 }

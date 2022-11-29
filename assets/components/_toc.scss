@@ -1,5 +1,6 @@
 @use "../settings";
 @use "../helpers/a11y";
+@use "../helpers/links";
 @use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
@@ -11,7 +12,8 @@
   }
   &_collapsibleSummary {
     @include spacing.kim-responsive-margin(2, $direction: block-end);
-    &:focus {
+    cursor: pointer;
+    &:focus-visible {
       @include a11y.kim-focus-ring($fill: true);
     }
   }
@@ -29,5 +31,9 @@
   }
   &_inner > ol > li > ol li {
     @include spacing.kim-responsive-margin(3, $direction: inline-start);
+  }
+  a {
+    @include links.kim-link($underlineOnHoverOnly: true);
+    box-shadow: none;
   }
 }

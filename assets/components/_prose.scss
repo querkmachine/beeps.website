@@ -1,4 +1,6 @@
 @use "../settings";
+
+@use "../helpers/colors";
 @use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
@@ -43,6 +45,6 @@
     @include typography.kim-vr-margin(19);
     margin: 0;
     padding-inline-start: 1rem;
-    border-inline-start: .5rem solid var(--color-subtle);
+    border-inline-start: .5rem solid colors.kim-color-css("furniture");
   }
 }

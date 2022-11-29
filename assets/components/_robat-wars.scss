@@ -5,7 +5,7 @@
 .kimRobatWars {
   $offset: spacing.kim-spacing(8);
   block-size: clamp(12rem, 30vh, 15rem);
-  background-color: var(--color-accent);
+  background-color: colors.kim-color-css("furniture");
   pointer-events: none;
   &_inner {
     block-size: calc(100% + #{$offset});

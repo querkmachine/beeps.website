@@ -9,7 +9,7 @@
 .kimHeading-s {
   @include spacing.kim-responsive-margin(0, $direction: block-start);
   @include typography.kim-font-stack(header, $weight: bold);
-  font-feature-settings: "liga" 0;
+  letter-spacing: .03em;
 }
 
 .kimHeading-xl {

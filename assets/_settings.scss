@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:color";
 
 $kim-breakpoints: (
   constitution: 400px,
@@ -8,29 +9,23 @@ $kim-breakpoints: (
 );
 
 $kim-color-white: #fff;
-$kim-color-black: #1c1924;
-$kim-color-kimberly: #786999;
-$kim-color-grey: #4b5475;
-$kim-color-emy: #b9e587;
-$kim-color-neon: #ff0090;
+$kim-color-black: #334139;
+$kim-color-kimberly: #C1B1E4;
+$kim-color-emy: #B3FFB3;
+$kim-color-ketchup: #DD6031;
+$kim-color-mustard: #FFD447;
+
+// $kim-color-grey: #4b5475;
+// $kim-color-emy: #b9e587;
+// $kim-color-neon: #ff0090;
 
 $kim-color-palette-semantic: (
-  text: (
-    light: $kim-color-black,
-    dark: $kim-color-white
-  ),
-  background: (
-    light: $kim-color-white,
-    dark: $kim-color-black
-  ),
-  subtle: (
-    light: $kim-color-grey,
-    dark: $kim-color-grey
-  ),
-  accent: (
-    light: $kim-color-kimberly,
-    dark: $kim-color-neon
-  )
+  text: $kim-color-white,
+  background: $kim-color-black,
+  link: $kim-color-mustard,
+  link-hover: color.scale($kim-color-mustard, $alpha: -70%),
+  furniture: $kim-color-mustard,
+  accent: $kim-color-mustard
 );
 
 $kim-focus-color: #fc0;
@@ -39,7 +34,7 @@ $kim-focus-color-text: #000;
 $kim-font-stacks: (
   body: (
     stack: (
-      "Space Grotesk",
+      darkmode-on-cc,
       -apple-system,
       ".SFNSText-Regular",
       "San Francisco",
@@ -57,7 +52,7 @@ $kim-font-stacks: (
   ),
   header: (
     stack: (
-      "Space Mono",
+      darkmode-mono-on,
       "SF Mono",
       "Monaco",
       "Inconsolata",
@@ -70,29 +65,12 @@ $kim-font-stacks: (
       "Segoe UI Emoji",
       "Segoe UI Symbol"
     ),
-    regular: 400,
-    bold: 400,
-  ),
-  header-alt: (
-    stack: (
-      "Space Grotesk",
-      -apple-system,
-      ".SFNSText-Regular",
-      "San Francisco",
-      "Roboto",
-      "Segoe UI",
-      "Helvetica Neue",
-      "Lucida Grande",
-      sans-serif,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol"
-    ),
-    regular: 400,
-    bold: 400,
+    regular: 500,
+    bold: 900,
   ),
   code: (
     stack: (
+      darkmode-mono-on,
       "Space Mono",
       "SF Mono",
       "Monaco",

@@ -6,7 +6,7 @@ code {
 	@include spacing.kim-responsive-padding(1, $direction: inline);
 	@include typography.kim-font-stack(code);
 	color: settings.$kim-color-white;
-	background-color: settings.$kim-color-grey;
+	background-color: settings.$kim-color-black;
 	font-size: .9em;
 }
 

@@ -1,24 +1,22 @@
 <li class="kimBlogCard" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <strong class="kimBlogCard_heading">
+  <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
+    {{- post.date | formatDate('human') -}}
+  </time>
+  <strong class="kimHeading-m kimBlogCard_heading">
     <a class="kimBlogCard_link" href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
       <span itemprop="name">
         {{- post.data.title -}}
       </span>
     </a>
   </strong>
-  <div class="kimBlogCard_meta">
-    <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
-      {{- post.date | formatDate('human') -}}
-    </time>
-    {%- if post.data.tags %}
-      <ul class="kimBlogCard_tags">
-        {%- for tag in post.data.tags | filterTagList | sort %}
-          {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
-          <li>
-            <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
-          </li>
-        {%- endfor %}
-      </ul>
-    {%- endif %}
-  </div>
+  {%- if post.data.tags %}
+    <ul class="kimList kimList-inline kimBlogCard_tags kim-!-margin-block-end-0">
+      {%- for tag in post.data.tags | filterTagList | sort %}
+        {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+        <li>
+          <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  {%- endif %}
 </li>

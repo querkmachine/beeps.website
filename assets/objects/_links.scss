@@ -4,3 +4,7 @@
 .kimLink {
 	@include links.kim-link;
 }
+
+.kimLink-plain {
+	@include links.kim-link($underlineOnHoverOnly: true);
+}

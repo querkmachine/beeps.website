@@ -40,7 +40,7 @@
                   {% for tag in tags | filterTagList | sort %}
                     {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
                     <li>
-                      <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
+                      <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
                         {{- tag | tagify -}}
                       </a>
                     </li>

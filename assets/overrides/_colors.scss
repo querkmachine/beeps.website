@@ -1,27 +1,16 @@
 @use "../settings";
+@use "../helpers/colors";
 @use "../helpers/media-queries";
 
-@use "sass:map";
-
-@each $name, $map in settings.$kim-color-palette-semantic {
+@each $name, $value in settings.$kim-color-palette-semantic {
   .kim-\!-text-color-#{$name} {
-    color: map.get($map, "light") !important;
-    @if map.has-key($map, "dark") {
-      @include media-queries.kim-dark {
-        color: map.get($map, "dark") !important;
-      }
-    }
+    color: colors.kim-color-css($name) !important;
     @include media-queries.kim-print {
       color: black !important;
     }
   }
   .kim-\!-background-color-#{$name} {
-    background-color: map.get($map, "light") !important;
-    @if map.has-key($map, "dark") {
-      @include media-queries.kim-dark {
-        background-color: map.get($map, "dark") !important;
-      }
-    }
+    background-color: colors.kim-color-css($name) !important;
     @include media-queries.kim-print {
       background-color: white !important;
     }

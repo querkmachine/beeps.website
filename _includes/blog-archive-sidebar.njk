@@ -13,12 +13,12 @@
 <nav aria-label="Tags">
   <ul class="kimList">
     <li>
-      <a href="{{ '/blog/' | url }}" {%- if page.url === '/blog/' %} aria-current="true"{% endif %}>all posts</a>
+      <a class="kimLink" href="{{ '/blog/' | url }}" {%- if page.url === '/blog/' %} aria-current="true"{% endif %}>all posts</a>
     </li>
     {% for tag in collections.tagList %}
       {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
       <li>
-        <a href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
+        <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
       </li>
     {% endfor %}
   </ul>

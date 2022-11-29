@@ -36,8 +36,8 @@
     }
   }
   &-columns {
-    column-width: 20ch;
-    column-gap: spacing.kim-spacing(3);
+    column-width: 22ch;
+    column-gap: settings.$kim-page-gutter;
     li {
       break-inside: avoid;
     }

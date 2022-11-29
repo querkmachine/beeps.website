@@ -1,4 +1,5 @@
 @use "../settings";
+
 @use "../helpers/colors";
 @use "../helpers/links";
 @use "../helpers/media-queries";
@@ -8,18 +9,15 @@
 @use "sass:color";
 
 .kimMasthead {
-  color: var(--color-text);
-  background-color: var(--color-background);
+  @include typography.kim-font-stack(header, $weight: bold);
+  color: colors.kim-color-css("text");
+  background-color: colors.kim-color-css("background");
   @include media-queries.kim-print {
     display: none;
   }
   &_inner {
     @include spacing.kim-responsive-padding(4, $direction: block);
-    border-block-start: .5rem solid var(--color-accent);
-    border-block-end: 1px solid var(--color-subtle);
-  }
-  &_logo {
-    @include typography.kim-font-stack("header-alt", $weight: regular);
+    border-block-start: .5rem solid colors.kim-color-css("furniture");
   }
   a {
     @include typography.kim-font-size(24);

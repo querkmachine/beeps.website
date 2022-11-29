@@ -1,22 +1,14 @@
 @use "../settings";
+
 @use "../helpers/typography";
 @use "../helpers/colors";
 @use "../helpers/media-queries";
 
-@use "sass:map";
 @use "sass:math";
 
 :root {
-  @each $name, $map in settings.$kim-color-palette-semantic {
-    --color-#{$name}: #{map.get($map, "light")};
-  }
-}
-
-@include media-queries.kim-dark {
-  :root {
-    @each $name, $map in settings.$kim-color-palette-semantic {
-      --color-#{$name}: #{map.get($map, "dark")};
-    }
+  @each $name, $value in settings.$kim-color-palette-semantic {
+    --color-#{$name}: #{$value};
   }
 }
 
@@ -29,8 +21,8 @@
 }
 
 .kimPage {
-  background-color: var(--color-background);
-  font-size: clamp(16px, 1.22vw, 30px);
+  background-color: colors.kim-color-css("background");
+  font-size: clamp(16px, 1.22vw, 22px);
   text-size-adjust: 100%;
   @if settings.$kim-font-sizes-root != 16px {
     font-size: settings.$kim-font-sizes-root;
@@ -41,7 +33,7 @@
     @include typography.kim-font-size(19);
     min-block-size: 100vh;
     margin: 0;
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: colors.kim-color-css("text");
+    background-color: colors.kim-color-css("background");
   }
 }

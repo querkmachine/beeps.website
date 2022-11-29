@@ -1,16 +1,17 @@
 @use "../settings";
 
 @use "sass:map";
+@use "sass:string";
 
-// Get color from palette
-@function kim-color($name, $mode: "light") {
+// Get semantic color from palette
+@function kim-color($name) {
   $map: settings.$kim-color-palette-semantic;
   @if not map.has-key($map, $name) {
     @error "Map does not have key named `#{$name}`.";
   }
-  $color: map.get($map, $name);
-  @if not map.has-key($color, $mode) {
-    @error "Colour does not have a value for `#{$mode}` mode.";
-  }
-  @return map.get($color, $mode);
+  @return map.get($map, $name);
+}
+
+@function kim-color-css($name) {
+  @return string.unquote("var(--color-#{$name})")
 }

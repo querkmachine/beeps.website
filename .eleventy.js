@@ -16,7 +16,7 @@ const pluginToc = require("eleventy-plugin-toc");
 
 module.exports = function (eleventyConfig) {
   // Set global constants
-  eleventyConfig.addGlobalData("siteName", "beeps.website");
+  eleventyConfig.addGlobalData("siteName", "beeps");
   eleventyConfig.addGlobalData(
     "siteDomain",
     yargs.serve ? "" : "https://beeps.website"

@@ -1,4 +1,4 @@
-{%- set googleFontsUrl = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:ital@0;1&display=swap" -%}
+{%- set webfontUrl = "https://use.typekit.net/rmx1cxh.css" -%}
 
 <!doctype html>
 <html lang="en-GB" class="kimPage">
@@ -15,15 +15,15 @@
   <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ siteName }}</title>
   
   {#- Preconnect #}
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
   
   {#- Stylesheets #}
-  <link rel="stylesheet" href="{{ googleFontsUrl }}" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="{{ googleFontsUrl }}"></noscript>
+  <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ webfontUrl }}"></noscript>
   <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
   
   {#- Preload #}
-  <link rel="preload" as="style" href="{{ googleFontsUrl }}">
+  <link rel="preload" as="style" href="{{ webfontUrl }}">
   
   {#- SEO metadata #}
   <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
@@ -50,11 +50,10 @@
   {%- endif %}
   
   {#- Theming/icons #}
-  <meta name="theme-color" content="#ff0090" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#786999">
+  <meta name="theme-color" content="#C1B1E4">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url | cachebust }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url | cachebust }}">
-  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#786999">
+  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#C1B1E4">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url | cachebust }}">
   
   {#- Page-specific head content #}
@@ -69,12 +68,12 @@
   {% block masthead %}
     <header class="kimMasthead">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_logo" href="{{ '/' | url }}">
-          <span class="kim-!-sr">Back to home</span>
-          <span aria-hidden="true">{{ siteName }}</span>
-        </a>
+        <a class="kimMasthead_logo kimLink-plain" href="{{ '/' | url }}">{#
+          #}<span class="kim-!-sr">Back to home</span>
+          <span aria-hidden="true">{{ siteName }}</span>{#
+        #}</a>
         {% for item in mastheadBreadcrumbs %}
-        &rarr; <a href="{{ item.url | url }}">{{ item.label }}</a>
+        &rarr; <a class="kimLink-plain" href="{{ item.url | url }}">{{ item.label }}</a>
         {% endfor %}
       </div>
     </header>
@@ -97,7 +96,7 @@
       <div class="kimWrapper kimFooter_inner">
         <small class="kimFooter_boilerplate">
           {% block boilerplate %}
-            Made by <a href="{{ '/about/' | url }}">beeps</a> and <a href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
+            Made by <a class="kimLink-plain" href="{{ '/about/' | url }}">beeps</a> and <a class="kimLink-plain" href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
           {% endblock %}
         </small>
       </div>
