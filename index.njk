@@ -8,11 +8,16 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 {% block head %}
 <style>
 #top { 
+  color: white;
   background-image: url({{ '/assets/images/nebula.jpg' | url }});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+}
+#top h1 {
+  color: var(--color-accent);
+  text-shadow: 0 0 .5em hsla(0 100% 100% / 70%);
 }
 #blog {
   border-block-end: 1rem double var(--color-background);
@@ -53,7 +58,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
       <img alt="A robat, floating in space." src="{{ '/assets/images/robat.png' | url }}" id="robat">
     </div>
     <div class="kimGrid">
-      <h1 class="kimHeading-xl kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds kim-!-text-color-accent">
+      <h1 class="kimHeading-xl kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
         Hello universe,<br>I&rsquo;m beeps!
       </h1>
     </div>

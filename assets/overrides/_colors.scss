@@ -2,7 +2,9 @@
 @use "../helpers/colors";
 @use "../helpers/media-queries";
 
-@each $name, $value in settings.$kim-color-palette-semantic {
+@use "sass:map";
+
+@each $name in map.keys(settings.$kim-color-palette-semantic) {
   .kim-\!-text-color-#{$name} {
     color: colors.kim-color-css($name) !important;
     @include media-queries.kim-print {

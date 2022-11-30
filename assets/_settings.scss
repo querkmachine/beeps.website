@@ -10,18 +10,36 @@ $kim-breakpoints: (
 
 $kim-color-white: #fff;
 $kim-color-black: #334139;
-$kim-color-kimberly: #C1B1E4;
+$kim-color-kimberly: #786999;
 $kim-color-emy: #B3FFB3;
 $kim-color-ketchup: #DD6031;
 $kim-color-mustard: #FFD447;
 
 $kim-color-palette-semantic: (
-  text: $kim-color-white,
-  background: $kim-color-black,
-  link: $kim-color-mustard,
-  link-hover: color.scale($kim-color-mustard, $alpha: -70%),
-  furniture: $kim-color-mustard,
-  accent: $kim-color-mustard
+  text: (
+    dark: $kim-color-white,
+    light: $kim-color-black,
+  ),
+  background: (
+    dark: $kim-color-black,
+    light: $kim-color-white,
+  ),
+  link: (
+    dark: $kim-color-mustard,
+    light: $kim-color-kimberly,
+  ),
+  link-hover: (
+    dark: color.scale($kim-color-mustard, $alpha: -70%),
+    light: color.scale($kim-color-kimberly, $alpha: -70%),
+  ),
+  furniture: (
+    dark: $kim-color-mustard,
+    light: $kim-color-kimberly,
+  ),
+  accent: (
+    dark: $kim-color-mustard,
+    light: $kim-color-kimberly,
+  ),
 );
 
 $kim-focus-color: #fc0;
