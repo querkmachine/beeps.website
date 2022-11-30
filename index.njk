@@ -15,14 +15,17 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   background-attachment: fixed;
   background-position: center;
   overflow: hidden;
+  text-shadow: 0 0 .5em hsla(0 100% 0% / 70%);
 }
 
 #top h1 {
   color: var(--color-accent);
-  text-shadow: 0 0 .5em hsla(0 100% 0% / 70%);
 }
 
 @media (prefers-color-scheme: light) {
+  #top {
+    background-color: var(--color-text);
+  }
   #top h1 {
     color: inherit;
   }
@@ -42,6 +45,14 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   user-select: none;
   pointer-events: none;
 }
+
+@media (min-width: 768px) {
+  #robatJail {
+    margin-inline: 2.5rem;
+    float: right;
+  }
+}
+
 #robat {
   height: 12.5rem;
   animation-name: robatBounce;
@@ -61,20 +72,6 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   25% { transform: translate(1rem, 1rem); }
   50% { transform: translate(1rem, -1rem); }
   75% { transform: translate(-1rem, 1rem); }
-}
-
-@media (prefers-color-scheme: light) {
-  /* Special override for legibility */
-  #top h1 {
-    color: #AB9BCE; 
-  }
-}
-
-@media (min-width: 768px) {
-  #robatJail {
-    margin-inline: 2.5rem;
-    float: right;
-  }
 }
 </style>
 {% endblock %}
