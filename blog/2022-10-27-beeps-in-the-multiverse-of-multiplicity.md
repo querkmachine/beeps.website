@@ -1,7 +1,41 @@
 ---
 title: "beeps in the Multiverse of Multiplicity: my experiences and ponderings on potentially being plural"
+titleHtml: >
+  <style>
+    #page-heading {
+      text-align: center;
+    }
+    #page-heading .kimHeading-xl {
+      background: radial-gradient(circle, var(--color-accent), var(--color-accent-alt));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    #page-heading .kimSubeading-xl {
+      position: relative;
+    }
+    #page-heading del {
+      margin-inline-start: -2em;
+      text-decoration-style: wavy;
+      text-decoration-color: var(--color-accent);
+    }
+    #page-heading ins {
+      display: inline-block;
+      margin-inline: -.3333em;
+      color: var(--color-accent);
+      text-decoration-style: double;
+      text-decoration-color: var(--color-accent);
+      transform: rotate(-9deg);
+    }
+  </style>
+  <div id="page-heading">
+    <div class="kimHeading-xl kim-!-margin-block-end-6">beeps in the Multiverse of&nbsp;Multiplicity</div>
+    <div class="kimSubheading-xl"><del>My</del> <ins>Our</ins> experiences and ponderings on potentially being plural.</div>
+  </div>
 date: 2022-10-27
-tags: [self-identity, furry fandom]
+tags: [self-identity]
 ---
 
 {% callout %}
