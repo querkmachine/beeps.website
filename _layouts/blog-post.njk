@@ -6,11 +6,9 @@
       <article itemscope itemtype="https://schema.org/BlogPosting">
         <div class="kimGrid">
           <header class="kimGrid_column kimGrid_column-full">
-            {% block title %}
-              <h1 class="kimHeading-xl" itemprop="name">
-                {{ title }}
-              </h1>
-            {% endblock %}
+            <h1 class="kimHeading-xl" itemprop="name">
+              {{- (titleHtml | safe) if titleHtml else title -}}
+            </h1>
           </header>
         </div>
         <div class="kimGrid">
