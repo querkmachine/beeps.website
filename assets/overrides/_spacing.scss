@@ -2,7 +2,7 @@
 @use "../helpers/spacing";
 
 $directions: (
-  all: null,
+  all: all,
   block: block,
   block-start: block-start,
   block-end: block-end,
