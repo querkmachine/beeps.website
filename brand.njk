@@ -6,23 +6,24 @@ description: Style guide for my personal projects.
 {% extends '_layouts/layout.njk' %}
 
 {% macro _swatch(colorName, colorHex) %}
-  <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+  <li>
     <div class="page-swatch">
-      <div class="page-swatch__sample" aria-hidden="true" style="background-color:var(--demo-color-{{ colorName }})"></div>
+      <div class="page-swatch__sample" aria-hidden="true" style="background-color: var(--demo-color-{{ colorName }})"></div>
       <div>
-        <span>{{ colorName }}</span> <code>{{ colorHex }}</code>
+        <span>{{ colorName }}</span><br>
+        <code>{{ colorHex }}</code>
       </div>
     </div>
-  </div>
+  </li>
 {% endmacro %}
 
 {% macro _combo(textColor, backgroundColor, text) %}
-  <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-    <div class="page-combo" aria-hidden="true" style="color:var(--demo-color-{{ textColor }});background-color:var(--demo-color-{{ backgroundColor }})">
+  <li>
+    <div class="page-combo" aria-hidden="true" style="color: var(--demo-color-{{ textColor }});border-color: var(--demo-color-{{ textColor }});background-color:var(--demo-color-{{ backgroundColor }})">
       {{ text }}
     </div>
     <p class="kimBody">{{ textColor }} and {{ backgroundColor }}</p>
-  </div>
+  </li>
 {% endmacro %}
 
 {% block main %}
@@ -37,19 +38,35 @@ description: Style guide for my personal projects.
       <h2 class="kimHeading-l" id="typography">Typography</h2>
       <p class="kimBody">Generally the italic forms are not used (Grotesk doesn&rsquo;t even have one). The bold weight is also used fairly sparingly.</p>
       <div class="page-row">
-        <div class="page-typerun" aria-hidden="true" style="font-family: 'Space Mono'">
-          UNIT-01 will trigger instrumentality. 
+        <div class="page-typerun" aria-hidden="true" style="font-family: 'darkmode-mono-on'">
+          <div style="font-weight: 900">
+            And on the pedestal, these words appear:
+          </div>
+          <div style="font-weight: 700">
+            My name is Ozymandias, King of Kings;
+          </div>
+          <div style="font-weight: 500">
+            Look on my Works, ye Mighty, and despair!
+          </div>
+          <div style="font-weight: 400">
+            Nothing beside remains. Round the decay
+          </div>
         </div>
         <p class="kimBody">
-          <a href="https://fonts.google.com/specimen/Space+Mono">Space Mono</a> is used for headings and as a stylistic alternative for small amounts of text. It&rsquo;s best used with ligatures disabled: <code>font-feature-settings: "liga" 0;</code>
+          <a href="https://www.daltonmaag.com/library/darkmode-mono">Darkmode Mono</a> is used for headings, code snippets, and as a stylistic alternative for small amounts of text.
         </p>
       </div>
       <div class="page-row">
-        <div class="page-typerun" aria-hidden="true" style="font-family: 'Space Grotesk'">
-          Get in the damn robot, Shinji Ikari.
+        <div class="page-typerun" aria-hidden="true" style="font-family: 'darkmode-on-cc'">
+          <div style="font-weight: 700">
+            Of that colossal Wreck, boundless and bare
+          </div>
+          <div style="font-weight: 400">
+            The lone and level sands stretch far away.
+          </div>
         </div>
         <p class="kimBody">
-          <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a> is used for other text.
+          <a href="https://www.daltonmaag.com/library/darkmode">Darkmode</a> is used for prose and other text.
         </p>
       </div>
     </section>
@@ -58,14 +75,14 @@ description: Style guide for my personal projects.
       <h2 class="kimHeading-l" id="colours">Colours</h2>
       <div class="page-row">
         <p class="kimBody">Six colours. Shades and tints allowed but not provided.</p>
-        <div class="kimGrid">
+        <ul class="kimList kimList-columns">
           {{ _swatch("kimberly", "#786999") }}
-          {{ _swatch("grey", "#4b5475") }}
-          {{ _swatch("black", "#1c1924") }}
-          {{ _swatch("emy", "#b9e587") }}
-          {{ _swatch("neon", "#ff0090") }}
-          {{ _swatch("white", "#ffffff") }}
-        </div>
+          {{ _swatch("emy", "#B3FFB3") }}
+          {{ _swatch("ketchup", "#DD6031") }}
+          {{ _swatch("mustard", "#FFD447") }}
+          {{ _swatch("black", "#334139") }}
+          {{ _swatch("white", "#FFFFFF") }}
+        </ul>
       </div>
     </section>
     
@@ -73,14 +90,14 @@ description: Style guide for my personal projects.
       <h2 class="kimHeading-l" id="#colour-combinations">Colour combinations</h2>
       <div class="page-row">
         <p class="kimBody">There are no hard and fast rules around how colours are used together, but these combinations tend to work well together (and are accessible!).</p>
-        <div class="kimGrid">
-          {{ _combo("black", "white", "Con") }}
-          {{ _combo("kimberly", "white", "gra") }}
-          {{ _combo("grey", "white", "tul") }}
-          {{ _combo("white", "black", "ati") }}
-          {{ _combo("neon", "black", "ons") }}
-          {{ _combo("emy", "black", "!!!") }}
-        </div>
+        <ul class="kimList kimList-columns">
+          {{ _combo("black", "white", "bats!") }}
+          {{ _combo("kimberly", "white", "bats!") }}
+          {{ _combo("ketchup", "white", "bats!") }}
+          {{ _combo("emy", "black", "bats!") }}
+          {{ _combo("mustard", "black", "bats!") }}
+          {{ _combo("white", "black", "bats!") }}
+        </ul>
       </div>
     </section>
     
@@ -103,16 +120,17 @@ description: Style guide for my personal projects.
 <style>
   :root {
     --demo-color-kimberly: #786999;
-    --demo-color-grey: #4b5475;
-    --demo-color-emy: #b9e587;
-    --demo-color-neon: #ff0090;
-    --demo-color-black: #1c1924;
+    --demo-color-emy: #B3FFB3;
+    --demo-color-ketchup: #DD6031;
+    --demo-color-mustard: #FFD447;
+    --demo-color-black: #334139;
     --demo-color-white: #ffffff;
   }
   .page-row {
-    border-block-end: 1px solid var(--color-subtle);
+    border-block-end: .25rem solid var(--color-furniture);
   }
   .page-typerun {
+    margin-block-end: 1rem;
     white-space: nowrap;
     color: var(--color-accent);
     font-size: 1.375rem;
@@ -129,13 +147,13 @@ description: Style guide for my personal projects.
     inline-size: 2.5em;
     block-size: 2.5em;
     margin-inline-end: 1em;
-    border: 1px solid var(--color-subtle);
+    border: .25rem solid var(--color-text);
     border-radius: 50%;
   }
   .page-combo {
     margin-block-end: 1.5rem;
     padding: 1rem;
-    border: 1px solid var(--color-subtle);
+    border: .25rem solid var(--color-text);
     font-size: 1.375rem;
     font-size: max(22px, 5vw);
     font-weight: bold;
