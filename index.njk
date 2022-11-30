@@ -32,12 +32,6 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   user-select: none;
   pointer-events: none;
 }
-@media (min-width: 768px) {
-  #robatJail {
-    margin-inline: 2.5rem;
-    float: right;
-  }
-}
 #robat {
   height: 12.5rem;
   animation-name: robatBounce;
@@ -46,8 +40,32 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   animation-duration: 22s;
   animation-delay: -47s;
 }
-@keyframes robatSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(359deg); } }
-@keyframes robatBounce { 0%, 100% { transform: translate(-1rem, -1rem); } 25% { transform: translate(1rem, 1rem); } 50% { transform: translate(1rem, -1rem); } 75% { transform: translate(-1rem, 1rem); } }
+
+@keyframes robatSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes robatBounce { 
+  0%, 100% { transform: translate(-1rem, -1rem); }
+  25% { transform: translate(1rem, 1rem); }
+  50% { transform: translate(1rem, -1rem); }
+  75% { transform: translate(-1rem, 1rem); }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Special override for legibility */
+  #top h1 {
+    color: #AB9BCE; 
+  }
+}
+
+@media (min-width: 768px) {
+  #robatJail {
+    margin-inline: 2.5rem;
+    float: right;
+  }
+}
 </style>
 {% endblock %}
 
