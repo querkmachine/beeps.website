@@ -5,19 +5,26 @@ permalink: "/about/"
 mastheadBreadcrumbs: null
 ---
 
-**[My name is beeps]({{ '/about/name/' | url }})**, with or without an uppercase 'b'. I also go by Kim (or Kimberly) Grey in other contexts, but I prefer you call me beeps.
+<strong class="kimHeading-s">[My name is beeps.]({{ '/about/name/' | url }})</strong><br>
+With or without an uppercase 'b'. I also go by Kim (or Kimberly) Grey in other contexts, but I prefer you call me beeps.
 
-**[I have an alterhuman, machine identity.]({{ '/about/robot/' | url }})** I don't relate well to my physical humanity, which is a source of significant dysphoria. Relating myself to machines, and robots in particular, helps alleviate some of that.
+<strong class="kimHeading-s">[I have an alterhuman, machine identity.]({{ '/about/robot/' | url }})</strong><br>
+I don't relate well to my physical humanity, which is a source of significant dysphoria. Relating myself to machines, and robots in particular, helps alleviate some of that.
 
-**[I'm agender.]({{ '/about/gender/' | url }})** I don't consider myself to be female, male, or anything in-between. I use it/its pronouns.
+<strong class="kimHeading-s">[I'm agender.]({{ '/about/gender/' | url }})</strong><br>
+I don't consider myself to be female, male, or anything in-between. I use it/its pronouns.
 
-**[I'm asexual]({{ '/about/asexuality/' | url }})** and don't experience physical or sexual attraction. This doesn't affect day-to-day life that much, but it's still a reasonably important part of who I am!
+<strong class="kimHeading-s">[I'm asexual.]({{ '/about/asexuality/' | url }})</strong><br>
+I don't experience physical or sexual attraction. This doesn't affect day-to-day life that much, but it's still a reasonably important part of who I am!
 
-**[I'm a furry.]({{ '/about/furry/' | url }})** I've been in the furry fandom for over half my life and I owe it a lot for giving me the skills and experience I have today. I try to give back where I can.
+<strong class="kimHeading-s">[I'm a furry.]({{ '/about/furry/' | url }})</strong><br>
+I've been in the furry fandom for over half my life and I owe it a lot for giving me the skills and experience I have today. I try to give back where I can.
 
-**[I'm probably not alone.]({{ '/about/olive/' | url }})** One day, my subconscious decided to say hello and told me their name is Olive. Since then we've been invetigating plurality and whether it applies to us.
+<strong class="kimHeading-s">[I'm probably not alone.]({{ '/about/olive/' | url }})</strong><br>
+One day, my subconscious decided to say hello and told me their name is Olive. Since then we've been invetigating plurality and whether it applies to us.
 
-And, of course, **[I make websites]({{ '/work/' | url }})**. I've been doing web development as a hobby since 2003 and for money since 2012. I do a lot of bits and bobs, but have come to specialise in front-end development, accessibility, design systems and the semantic web.
+<strong class="kimHeading-s">And, of course, [I make websites.]({{ '/work/' | url }})</strong><br>
+I've been doing web development as a hobby since 2003 and for money since 2012. I do a lot of bits and bobs, but have come to specialise in front-end development, accessibility, design systems and the semantic web.
 
 <hr class="kimRule">
 
