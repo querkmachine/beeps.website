@@ -12,6 +12,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
 }
 #blog {
   border-block-end: 1rem double var(--color-background);
@@ -25,6 +26,12 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   animation-delay: -5s;
   user-select: none;
   pointer-events: none;
+}
+@media (min-width: 768px) {
+  #robatJail {
+    margin-inline: 2.5rem;
+    float: right;
+  }
 }
 #robat {
   height: 12.5rem;
@@ -40,7 +47,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 {% endblock %}
 
 {% block main %}
-<header class="kim-!-padding-block-start-6 kim-!-padding-block-end-9" id="top">
+<header class="kim-!-padding-block-start-9 kim-!-padding-block-end-9" id="top">
   <div class="kimWrapper">
     <div id="robatJail">
       <img alt="A robat, floating in space." src="{{ '/assets/images/robat.png' | url }}" id="robat">
@@ -74,7 +81,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
             {% include "_includes/blog-card.njk" %}
           {% endfor %}
         </ol>
-        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink kim-!-text-color-background">More blog posts &rarr;</a></p>
+        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain kim-!-text-color-background">More blog posts &rarr;</a></p>
       </div>
     </div>
   </div>
@@ -94,7 +101,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
         <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/work/' | url }}">front-end developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
         <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (it/its pronouns), aggressively <a href="{{ '/about/asexuality/' | url }}">asexual</a>, kinda weird <a href="{{ '/about/robot/' | url }}">alterhuman person</a>. I'm also <a href="{{ '/about/furry/' | url }}">a robot bat on the internet</a>. It's all a bit complicated.</p>
         <p class="kimBody">This is my personal website which is a perpetual work in progress.</p>
-        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink">More about me &rarr;</a></p>
+        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
       </div>
     </div>
   </div>
