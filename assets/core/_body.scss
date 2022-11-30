@@ -9,14 +9,14 @@
 
 :root {
   @each $name in map.keys(settings.$kim-color-palette-semantic) {
-    --color-#{$name}: #{colors.kim-color($name, "light")};
+    --color-#{$name}: #{colors.kim-color($name, "dark")};
   }
 }
 
-@include media-queries.kim-dark {
+@include media-queries.kim-light {
   :root {
     @each $name in map.keys(settings.$kim-color-palette-semantic) {
-      --color-#{$name}: #{colors.kim-color($name, "dark")};
+      --color-#{$name}: #{colors.kim-color($name, "light")};
     }
   }
 }
