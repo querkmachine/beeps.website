@@ -16,13 +16,22 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   background-position: center;
   overflow: hidden;
 }
+
 #top h1 {
   color: var(--color-accent);
-  text-shadow: 0 0 .5em hsla(0 100% 0 / 70%);
+  text-shadow: 0 0 .5em hsla(0 100% 0% / 70%);
 }
+
+@media (prefers-color-scheme: light) {
+  #top h1 {
+    color: inherit;
+  }
+}
+
 #blog {
   border-block-end: 1rem double var(--color-background);
 }
+
 #robatJail {
   display: inline-block;
   animation-name: robatSpin;

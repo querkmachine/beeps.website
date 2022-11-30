@@ -27,7 +27,7 @@ This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely
 
 Type is set in [Darkmode](https://www.daltonmaag.com/library/darkmode) and [Darkmode Mono](https://www.daltonmaag.com/library/darkmode-mono), both created by [Dalton Maag](https://www.daltonmaag.com), and served from [Adobe Fonts](https://fonts.adobe.com/).
 
-The nebula imagery is of [the Eagle Nebula (M16)](https://commons.wikimedia.org/wiki/File:M016.jpg), photographed by "Starhopper" and made available under a Creative Commons BY-SA 4.0 licence.
+The nebula imagery is of [the Carina Nebula (NGC 3372)](https://www.flickr.com/photos/gsfc/4398656115), photographed by the Hubble Space Telescope and made available under a Creative Commons BY 2.0 licence.
 
 ## Content
 
