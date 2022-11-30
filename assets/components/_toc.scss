@@ -1,18 +1,39 @@
 @use "../settings";
 @use "../helpers/a11y";
+@use "../helpers/colors";
 @use "../helpers/links";
 @use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
 .kimToc {
+  $self: &;
   @include media-queries.kim-mq($from: galaxy) {
     position: sticky;
     @include spacing.kim-responsive-spacing($property: top, $spacing-point: 3);
   }
+  &_collapsible[open] {
+    #{$self}_collapsibleSummary::before {
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+  }
   &_collapsibleSummary {
     @include spacing.kim-responsive-margin(2, $direction: block-end);
+    position: relative;
     cursor: pointer;
+    &::before {
+      @include spacing.kim-responsive-margin(2, $direction: inline-end);
+      $marker-size: .75rem;
+      content: "";
+      display: inline-block;
+      inline-size: $marker-size;
+      block-size: $marker-size;
+      background-color: colors.kim-color-css("link");
+      clip-path: polygon(100% 50%, 0 0, 0 100%);
+    }
+    &::marker {
+      content: none;
+    }
     &:focus-visible {
       @include a11y.kim-focus-ring($fill: true);
     }
