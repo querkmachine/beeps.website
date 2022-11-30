@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
   <polygon fill="#FFD447" points="1200,0 1200,628 800,628 1000,0" />
   
   <!-- Post name -->
-  <text text-anchor="start" font-family="'Darkmode Mono On', monospace" font-size="58" line-spacing="65" fill="#ffffff">
+  <text text-anchor="start" font-family="'Darkmode Mono On', monospace" font-size="58" font-weight="900" line-spacing="65" fill="#ffffff">
     {%- for line in titleLines %}
       <tspan x="60" y="{{ 140 + loop.index0 * 65 }}">{{ line }}</tspan>
     {%- endfor %}
