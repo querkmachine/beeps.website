@@ -1,5 +1,8 @@
 {% extends '_layouts/layout.njk' %}
 
+{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.blog | getNextCollectionItem(page) %}
+
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
@@ -67,6 +70,24 @@
           </div>
         </div>
       </article>
+      <nav class="kim-!-text-color-background kim-!-background-color-accent kim-!-padding-4" aria-label="Next and previous blog post">
+        <div class="kimGrid">
+          {% if previousPost %}
+            {% set post = previousPost %}
+            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
+              <div class="kimHeading-s">Previous post</div>
+              {% include "_includes/blog-card.njk" %}
+            </div>
+          {% endif %}
+          {% if nextPost %}
+            {% set post = nextPost %}
+            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
+              <div class="kimHeading-s">Next post</div>
+              {% include "_includes/blog-card.njk" %}
+            </div>
+          {% endif %}
+        </div>
+      </nav>
     </div>
   </div>
 {% endblock %}
