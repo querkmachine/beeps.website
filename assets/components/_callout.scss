@@ -3,7 +3,6 @@
 
 .kimCallout {
 	@include typography.kim-vr-margin(19);
-	margin: 0;
 	padding: 1rem;
 	border: .5rem solid colors.kim-color-css("furniture");
 	> :last-child {
