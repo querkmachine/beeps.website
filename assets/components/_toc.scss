@@ -57,4 +57,7 @@
     @include links.kim-link($underlineOnHoverOnly: true);
     box-shadow: none;
   }
+  @include media-queries.kim-print {
+    display: none;
+  }
 }
