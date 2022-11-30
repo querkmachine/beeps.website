@@ -25,7 +25,7 @@ This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely
 
 ## Design
 
-Headings are set in [Space Mono](https://fonts.google.com/specimen/Space+Mono), created by [Colophon Foundry](https://www.colophon-foundry.org) for Google. Body text is set in [Space Grotesk](https://floriankarsten.github.io/space-grotesk/), created by [Florian Karsten](https://fonts.floriankarsten.com) and based on Space Mono.
+Type is set in [Darkmode](https://www.daltonmaag.com/library/darkmode) and [Darkmode Mono](https://www.daltonmaag.com/library/darkmode-mono), both created by [Dalton Maag](https://www.daltonmaag.com), and served from [Adobe Fonts](https://fonts.adobe.com/).
 
 ## Content
 
