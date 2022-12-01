@@ -54,8 +54,7 @@
     @include spacing.kim-responsive-margin(3, $direction: inline-start);
   }
   a {
-    @include links.kim-link($underlineOnHoverOnly: true);
-    box-shadow: none;
+    @include links.kim-link-no-underline;
   }
   @include media-queries.kim-print {
     display: none;

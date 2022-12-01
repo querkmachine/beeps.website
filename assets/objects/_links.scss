@@ -6,5 +6,5 @@
 }
 
 .kimLink-plain {
-	@include links.kim-link($underlineOnHoverOnly: true);
+	@include links.kim-link-no-underline;
 }

@@ -21,6 +21,6 @@
   }
   a {
     @include typography.kim-font-size(24);
-    @include links.kim-link($underlineOnHoverOnly: true);
+    @include links.kim-link-no-underline;
   }
 }
