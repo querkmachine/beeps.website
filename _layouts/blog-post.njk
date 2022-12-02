@@ -1,5 +1,7 @@
 {% extends '_layouts/layout.njk' %}
 
+{% from "_includes/blog-card.njk" import kimBlogCard %}
+
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
 
@@ -73,17 +75,15 @@
       <nav class="kim-!-text-color-background kim-!-background-color-accent kim-!-padding-4" aria-label="Next and previous blog post">
         <div class="kimGrid">
           {% if previousPost %}
-            {% set post = previousPost %}
             <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
               <div class="kimHeading-s">Previous post</div>
-              {% include "_includes/blog-card.njk" %}
+              {{ kimBlogCard(previousPost, { card: true, element: 'div' }) }}
             </div>
           {% endif %}
           {% if nextPost %}
-            {% set post = nextPost %}
             <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
               <div class="kimHeading-s">Next post</div>
-              {% include "_includes/blog-card.njk" %}
+              {{ kimBlogCard(nextPost, { card: true, element: 'div' }) }}
             </div>
           {% endif %}
         </div>

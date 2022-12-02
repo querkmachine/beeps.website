@@ -1,12 +1,19 @@
-<li class="kimBlogCard" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
-    {{- post.date | formatDate('human') -}}
-  </time>
-  <strong class="kimHeading-m kimBlogCard_heading">
-    <a class="kimBlogCard_link" href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
-      <span itemprop="name">
-        {{- post.data.title -}}
-      </span>
-    </a>
-  </strong>
-</li>
+{% macro kimBlogCard(post, options) %}
+  {% set element = options.element if options.element else "li" %}
+  <{{ element }}
+    class="kimBlogCard{% if options.card %} kimBlogCard-padded{% endif %}"
+    itemprop="blogPost"
+    itemscope
+    itemtype="https://schema.org/BlogPosting">
+    <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
+      {{- post.date | formatDate('human') -}}
+    </time>
+    <strong class="kimHeading-m kimBlogCard_heading">
+      <a class="kimBlogCard_link" href="{{ siteDomain }}{{ post.url | url }}" itemprop="url">
+        <span itemprop="name">
+          {{- post.data.title -}}
+        </span>
+      </a>
+    </strong>
+  </{{ element }}>
+{% endmacro %}

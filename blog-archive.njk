@@ -5,6 +5,8 @@ permalink: "/blog/"
 ---
 {% extends '_layouts/layout.njk' %}
 
+{% from "_includes/blog-card.njk" import kimBlogCard %}
+
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
@@ -15,7 +17,7 @@ permalink: "/blog/"
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <ol class="kimList">
             {% for post in collections.blog | reverse %}
-              {% include "_includes/blog-card.njk" %}
+              {{ kimBlogCard(post) }}
             {% endfor %}
           </ol>
         </div>

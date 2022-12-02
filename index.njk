@@ -5,6 +5,8 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 
 {% extends '_layouts/layout.njk' %}
 
+{% from "_includes/blog-card.njk" import kimBlogCard %}
+
 {% block head %}
 <style>
 #top { 
@@ -108,7 +110,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
       <div class="kimGrid_column kimGrid_column-full">
         <ol class="kimList kimList-columns">
           {% for post in collections.blog | reverse | head(6) %}
-            {% include "_includes/blog-card.njk" %}
+            {{ kimBlogCard(post, { card: true }) }}
           {% endfor %}
         </ol>
         <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain kim-!-text-color-background">More blog posts &rarr;</a></p>

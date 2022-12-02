@@ -4,13 +4,10 @@
 @use "../helpers/typography";
 
 .kimBlogCard {
-  @include spacing.kim-responsive-padding(3);
   @include typography.kim-vr-margin(19);
   display: flex;
   flex-direction: column;
   position: relative;
-  color: colors.kim-color-css("text");
-  background-color: colors.kim-color-css("background");
   &_date {
     @include spacing.kim-responsive-margin(2, $direction: block-end);
     margin-right: 1em;
@@ -20,5 +17,10 @@
   }
   &_link {
     @include links.kim-link;
+  }
+  &-padded {
+    @include spacing.kim-responsive-padding(3);
+    color: colors.kim-color-css("text");
+    background-color: colors.kim-color-css("background");
   }
 }

@@ -13,6 +13,8 @@ permalink: "/blog/{{ tag | slugify }}/"
 {% extends '_layouts/layout.njk' %}
 {% set postsList = collections[tag] %}
 
+{% from "_includes/blog-card.njk" import kimBlogCard %}
+
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
@@ -23,7 +25,7 @@ permalink: "/blog/{{ tag | slugify }}/"
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <ol class="kimList">
             {% for post in postsList | reverse %}
-              {% include "_includes/blog-card.njk" %}
+              {{ kimBlogCard(post) }}
             {% endfor %}
           </ol>
         </div>
