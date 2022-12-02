@@ -21,8 +21,4 @@
   &_link {
     @include links.kim-link;
   }
-  &_tags {
-    @include typography.kim-font-size(16);
-    margin-block-start: auto;
-  }
 }
