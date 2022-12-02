@@ -50,11 +50,14 @@
   {%- endif %}
   
   {#- Theming/icons #}
-  <meta name="theme-color" content="#C1B1E4">
+  <meta name="theme-color" content="#786999" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#FFD447">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url | cachebust }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url | cachebust }}">
-  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#C1B1E4">
+  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#FFD447">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url | cachebust }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | url | cachebust }}">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | url | cachebust }}">
   
   {#- Page-specific head content #}
   {% block head %}{% endblock %}
