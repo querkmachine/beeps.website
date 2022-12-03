@@ -26,8 +26,7 @@
     }
   }
   &_themeSwitch {
-    @include reset.kim-reset-button;
-    @include typography.kim-font-size(12);
+    margin-right: auto;
   }
   &_boilerplate {
     @include typography.kim-font-size(12);

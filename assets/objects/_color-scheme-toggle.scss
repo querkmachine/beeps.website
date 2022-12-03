@@ -1,0 +1,44 @@
+@use "../helpers/colors";
+@use "../helpers/spacing";
+@use "../helpers/typography";
+@use "../helpers/reset";
+
+$switch-width: 1.5rem;
+$switch-height: 1rem;
+$switch-border: 0.125rem;
+$toggle-size: $switch-height - ($switch-border * 4);
+
+.kimColorSchemeToggle {
+	@include reset.kim-reset-button;
+	@include typography.kim-font-size(12);
+	display: inline-flex;
+	width: $switch-width;
+	height: $switch-height;
+	align-items: center;
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+	}
+	&::before {
+		width: $switch-width;
+		height: $switch-height;
+		left: 0;
+		border: $switch-border solid colors.kim-color-css("accent");
+	}
+	&::after {
+		width: $toggle-size;
+		height: $toggle-size;
+		top: $switch-border * 2;
+		left: $switch-border * 2;
+		background-color: colors.kim-color-css("accent");
+		transition: left .2s ease;
+	}
+	&[hidden] {
+		display: none;
+	}
+	&[aria-pressed="true"]::after {
+		left: ($switch-border * 2) + $toggle-size;
+	}
+}

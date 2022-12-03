@@ -7,20 +7,6 @@
 @use "sass:map";
 @use "sass:math";
 
-:root {
-  @each $name in map.keys(settings.$kim-color-palette-semantic) {
-    --color-#{$name}: #{colors.kim-color($name, "dark")};
-  }
-}
-
-@include media-queries.kim-light {
-  :root {
-    @each $name in map.keys(settings.$kim-color-palette-semantic) {
-      --color-#{$name}: #{colors.kim-color($name, "light")};
-    }
-  }
-}
-
 * {
   box-sizing: border-box;
   &::before,
@@ -30,6 +16,14 @@
 }
 
 .kimPage {
+  @each $name in map.keys(settings.$kim-color-palette-semantic) {
+    --color-#{$name}: #{colors.kim-color($name, "dark")};
+  }
+  &[data-color-scheme="light"] {
+    @each $name in map.keys(settings.$kim-color-palette-semantic) {
+      --color-#{$name}: #{colors.kim-color($name, "light")};
+    }
+  }
   background-color: colors.kim-color-css("background");
   font-size: clamp(16px, 1.22vw, 22px);
   text-size-adjust: 100%;

@@ -31,17 +31,3 @@
     @content;
   }
 }
-
-// Dark mode only
-@mixin kim-dark {
-  @media only screen and (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-// Light mode only
-@mixin kim-light {
-  @media only screen and (prefers-color-scheme: light) {
-    @content;
-  }
-}
