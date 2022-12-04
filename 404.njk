@@ -29,10 +29,11 @@ eleventyExcludeFromCollections: true
 
 {% block head %}
 <style>
-  :root {
+  html {
     --color-background: black;
     --color-text: white;
   }
+  
   body {
     background-image: url({{ '/assets/images/nebula.jpg' | url }});
     background-size: cover;

@@ -1,41 +1,57 @@
-// Globals
 const $d = document.documentElement;
-const $toggleButton = document.getElementById("toggle-color-scheme");
+const $container = document.querySelector(".kimColorSchemeSwitch");
+const $toggles = document.getElementsByName("color-scheme");
 const prefersLight = matchMedia("(prefers-color-scheme: light)");
 
-if ($toggleButton) {
+if ($toggles) {
   initColorScheme();
-}
-
-// Set current color scheme
-function setColorScheme(colorScheme) {
-  localStorage.setItem("prefers-color-scheme", colorScheme);
-  $d.dataset.colorScheme = colorScheme;
-  $toggleButton.setAttribute(
-    "aria-pressed",
-    colorScheme == "light" ? "true" : "false"
-  );
 }
 
 function initColorScheme() {
   // Check to see if we already have a preferred scheme stored, if so, use it
   // If not, base the decision on the user's current light/dark mode preference
   // with the fallback being dark
-  let currentColorScheme = "dark";
-  if (localStorage.getItem("prefers-color-scheme")) {
-    currentColorScheme = localStorage.getItem("prefers-color-scheme");
-  } else {
-    currentColorScheme = prefersLight.match ? "light" : "dark";
-  }
-  setColorScheme(currentColorScheme);
+  let configuredColorScheme = "auto";
+  let effectiveColorScheme = "dark";
 
-  // Set up the toggle button a11y
-  $toggleButton.setAttribute(
-    "aria-pressed",
-    $d.dataset.colorScheme == "light" ? "true" : "false"
-  );
-  $toggleButton.addEventListener("click", () => {
-    setColorScheme($d.dataset.colorScheme === "light" ? "dark" : "light");
+  if (localStorage.getItem("prefers-color-scheme")) {
+    effectiveColorScheme = configuredColorScheme = localStorage.getItem(
+      "prefers-color-scheme"
+    );
+  }
+
+  if (configuredColorScheme === "auto") {
+    effectiveColorScheme = prefersLight.matches ? "light" : "dark";
+  }
+
+  // Set default values
+  setColorScheme(configuredColorScheme, effectiveColorScheme);
+
+  // Loop through each toggle and do some stuff
+  $toggles.forEach(($toggle) => {
+    // Bind the change event... for when someone changes it
+    $toggle.addEventListener("change", () => {
+      setColorScheme(
+        $toggle.value,
+        $toggle.value === "auto"
+          ? prefersLight.matches
+            ? "light"
+            : "dark"
+          : $toggle.value
+      );
+    });
+
+    // While we're here, if this is our current color scheme, set it as checked by default
+    if ($toggle.value === configuredColorScheme) {
+      $toggle.checked = true;
+    }
   });
-  $toggleButton.removeAttribute("hidden");
+
+  // Ready to gooooooo
+  $container.removeAttribute("hidden");
+}
+
+function setColorScheme(configuredColorScheme, effectiveColorScheme) {
+  localStorage.setItem("prefers-color-scheme", configuredColorScheme);
+  $d.dataset.colorScheme = effectiveColorScheme;
 }
