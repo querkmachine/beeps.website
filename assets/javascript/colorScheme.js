@@ -11,7 +11,7 @@ function initColorScheme() {
   // Check to see if we already have a preferred scheme stored, if so, use it
   // If not, base the decision on the user's current light/dark mode preference
   // with the fallback being dark
-  let configuredColorScheme = "auto";
+  let configuredColorScheme = isColorSchemeSupported() ? "auto" : "dark";
   let effectiveColorScheme = "dark";
 
   if (localStorage.getItem("prefers-color-scheme")) {
@@ -22,6 +22,11 @@ function initColorScheme() {
 
   if (configuredColorScheme === "auto") {
     effectiveColorScheme = prefersLight.matches ? "light" : "dark";
+  }
+
+  // If (prefers-color-scheme) isn't supported, remove the 'auto' option
+  if (!isColorSchemeSupported()) {
+    document.getElementById("color-scheme-auto").parentElement.remove();
   }
 
   // Set default values
@@ -54,4 +59,8 @@ function initColorScheme() {
 function setColorScheme(configuredColorScheme, effectiveColorScheme) {
   localStorage.setItem("prefers-color-scheme", configuredColorScheme);
   $d.dataset.colorScheme = effectiveColorScheme;
+}
+
+function isColorSchemeSupported() {
+  return matchMedia("(prefers-color-scheme)").media !== "not all";
 }
