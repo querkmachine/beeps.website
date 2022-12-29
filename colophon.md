@@ -11,7 +11,7 @@ A colophon is a short section you can find at the back of some books, giving som
 
 This website was built by me, beeps. The code for this site is [open source and available on GitHub](https://github.com/querkmachine/beeps.website).
 
-I use the static site generator [Eleventy](http://11ty.dev) with the following plugins: [eleventy-img](https://github.com/11ty/eleventy-img) and [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss).
+I use the static site generator [Eleventy](http://11ty.dev) with the following plugins: [eleventy-img](https://github.com/11ty/eleventy-img), [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss) and [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc).
 
 Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
 
@@ -19,7 +19,7 @@ Certain aspects of the code, in particular the CSS architectural style, is cribb
 
 I use Panic's [Nova](http://nova.app) as my code editor, accompanied by [iTerm](https://iterm2.com/) and [Oh My Zsh](https://ohmyz.sh/).
 
-Hat tips to the following folks for contributing something that currently exists in the site's code: [Bernard Nijenhuis](https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/) and [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/).
+Hat tips to the following folks for contributing something that currently exists in the site's code: [Bernard Nijenhuis](https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Stefan Baumgartner](https://fettblog.eu/11ty-automatic-twitter-cards/).
 
 This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
 
