@@ -5,6 +5,12 @@ permalink: "/about/"
 mastheadBreadcrumbs: null
 ---
 
+I am me. Unashamedly so. This website might be my "professional" online presence, but it is also _my_ website, and I don't want to hide any aspects of who I am in any environment—online or off.
+
+If you think that's a problem... then that's your problem.
+
+---
+
 <strong class="kimHeading-s">[My name is beeps.]({{ '/about/name/' | url }})</strong><br>
 With or without an uppercase 'b'. I also go by Kim (or Kimberly) Grey in other contexts, but I prefer you call me beeps.
 
