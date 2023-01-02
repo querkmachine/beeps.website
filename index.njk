@@ -1,5 +1,5 @@
 ---
-title: beeps — Bristol-based web developer
+title: Front-end developer, furry, robot
 description: The personal website of beeps (aka, Kim Grey), the web developer, not the other ones.
 ---
 
@@ -9,134 +9,84 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 
 {% block head %}
 <style>
-#top { 
-  color: white;
-  background-image: url({{ '/assets/images/nebula.jpg' | url }});
+.page {
+  overflow-x: hidden;
+}
+.page-header {
+  position: relative;
+}
+.page-header::before {
+  content: "";
+  display: block;
+  inline-size: 100%;
+  block-size: 9rem;
+  position: absolute;
+  inset-block-start: 0;
+  z-index: -1;
+  background-color: var(--color-accent-alt);
+  background-image: url("{{ '/assets/images/nebula.jpg' | url }}");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  overflow: hidden;
-  text-shadow: 0 0 .5em hsla(0 100% 0% / 70%);
 }
-
-#top h1 {
-  color: var(--color-accent);
+.page-robat {
+  block-size: auto;
+  inline-size: 8rem;
 }
-
-html[data-color-scheme="light"] #top {
-  background-color: var(--color-text);
-}
-
-html[data-color-scheme="light"] #top h1 {
-  color: inherit;
-}
-
-#blog {
-  border-block-end: 1rem double var(--color-background);
-}
-
-#robatJail {
-  display: inline-block;
-  animation-name: robatSpin;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 47s;
-  animation-delay: -5s;
-  user-select: none;
-  pointer-events: none;
-}
-
-@media (min-width: 768px) {
-  #robatJail {
-    margin-inline: 2.5rem;
-    float: right;
+@media (min-width: 600px) {
+  .page-header .kimBody {
+    max-width: 60%;
   }
-}
-
-#robat {
-  height: 12.5rem;
-  animation-name: robatBounce;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 22s;
-  animation-delay: -47s;
-}
-
-@keyframes robatSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
-}
-
-@keyframes robatBounce { 
-  0%, 100% { transform: translate(-1rem, -1rem); }
-  25% { transform: translate(1rem, 1rem); }
-  50% { transform: translate(1rem, -1rem); }
-  75% { transform: translate(-1rem, 1rem); }
+  .page-header::before {
+    inline-size: 43vw;
+    block-size: 100%;
+    inset-inline-end: 0;
+    clip-path: polygon(12rem 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .page-robat {
+    inline-size: 42%;
+    block-size: auto;
+    float: right;
+    shape-outside: url("{{ '/assets/images/robat-large.png' | url }}");
+    shape-margin: 3rem;
+  }
 }
 </style>
 {% endblock %}
 
-{% block main %}
-<header class="kim-!-padding-block-start-9 kim-!-padding-block-end-9" id="top">
-  <div class="kimWrapper">
-    <div id="robatJail">
-      <img alt="A robat, floating in space." src="{{ '/assets/images/robat.png' | url }}" id="robat">
-    </div>
-    <div class="kimGrid">
-      <h1 class="kimHeading-xl kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
-        Hello universe,<br>I&rsquo;m beeps!
-      </h1>
-    </div>
-    <div class="kimGrid">
-      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
-        <p class="kimBody-l kim-!-margin-block-end-0">I make websites and write about whatever random guff takes my interest.</p>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section class="kim-!-padding-block-start-9 kim-!-padding-block-end-9 kim-!-background-color-accent kim-!-text-color-background" aria-labelledby="blog-heading" id="blog">
-  <div class="kimWrapper">
-    <div class="kimGrid">
-      <header class="kimGrid_column kimGrid_column-full">
-        <h2 class="kimHeading-l" id="blog-heading">
-          Recent blog posts
-        </h2>
-      </header>
-    </div>
-    <div class="kimGrid">
-      <div class="kimGrid_column kimGrid_column-full">
-        <ol class="kimList kimList-columns">
-          {% for post in collections.blog | reverse | head(6) %}
-            {{ kimBlogCard(post, { card: true }) }}
-          {% endfor %}
-        </ol>
-        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain kim-!-text-color-background">More blog posts &rarr;</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="kim-!-padding-block-start-9 kim-!-padding-block-end-9" aria-labelledby="about-heading" id="about">
-  <div class="kimWrapper">
-    <div class="kimGrid">
-      <header class="kimGrid_column kimGrid_column-full">
-        <h2 class="kimHeading-l" id="about-heading">
-          About beeps
-        </h2>
-      </header>
-    </div>
-    <div class="kimGrid">
-      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
-        <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/work/' | url }}">front-end developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-        <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (it/its pronouns), aggressively <a href="{{ '/about/asexuality/' | url }}">asexual</a>, kinda weird <a href="{{ '/about/robot/' | url }}">alterhuman person</a>. I'm also <a href="{{ '/about/furry/' | url }}">a robot bat on the internet</a>. It's all a bit complicated.</p>
-        <p class="kimBody">This is my personal website which is a perpetual work in progress.</p>
-        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-{% endblock %}
-
 {% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
+
+{% block main %}
+<div class="page">
+  <header class="page-header kim-!-padding-block-start-9 kim-!-padding-block-end-9">
+    <div class="kimWrapper">
+      <img class="page-robat" alt="" src="{{ '/assets/images/robat-large.png' | url }}">
+      <h1 class="kimHeading-xl kim-!-text-color-accent">Hello universe,<br>I&rsquo;m beeps.</h1>
+      <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/work/' | url }}">front-end developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
+      <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/robot/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a bat on the internet</a>. It's all a bit complicated.</p>
+      <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
+      <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
+    </div>
+  </header>
+    
+  <section class="kim-!-background-color-accent-alt kim-!-padding-block-start-9 kim-!-padding-block-end-9" id="blog" aria-labelledby="blog-heading">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <header class="kimGrid_column kimGrid_column-full">
+          <h2 class="kimHeading-l" id="blog-heading">
+            Recently written words
+          </h2>
+        </header>
+      </div>
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full">
+          <ol class="kimList kimList-columns">
+            {% for post in collections.blog | reverse | head(6) %}
+              {{ kimBlogCard(post, { card: true }) }}
+            {% endfor %}
+          </ol>
+          <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain kim-!-text-color-text">More blog posts &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
