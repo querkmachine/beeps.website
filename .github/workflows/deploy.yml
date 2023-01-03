@@ -1,0 +1,51 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: 
+      - main
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Build Eleventy
+        run: npx @11ty/eleventy
+      - name: Save artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: beeps-website
+          path: _site
+          retention-days: 1
+  deploy:
+    name: Deploy to server
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: beeps-website
+      - name: Upload files
+        uses: up9cloud/action-rsync@v1.1
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+          USER: ${{ secrets.SSH_USER }}
+          KEY: ${{ secrets.SSH_KEY }}
+          TARGET: ${{ secrets.SSH_PATH }}
+          ARGS: -avP --compress --delete-after --human-readable
