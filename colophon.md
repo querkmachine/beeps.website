@@ -25,7 +25,7 @@ This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely
 
 ## Design
 
-Type is set in [Darkmode](https://www.daltonmaag.com/library/darkmode) and [Darkmode Mono](https://www.daltonmaag.com/library/darkmode-mono), both created by [Dalton Maag](https://www.daltonmaag.com), and served from [Adobe Fonts](https://fonts.adobe.com/).
+Type is set in [Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) and [Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono), both part of the [Plex superfamily](https://www.ibm.com/plex/) created for IBM by [Mike Abbink](https://mikeabbink.com/) and [Blue Monday](https://boldmonday.com/), and served from [Google Fonts](https://fonts.google.com/).
 
 The nebula imagery is of [the Carina Nebula (NGC 3372)](https://www.flickr.com/photos/gsfc/4398656115), photographed by the Hubble Space Telescope and made available under a Creative Commons BY 2.0 licence.
 

@@ -60,14 +60,7 @@ $kim-focus-color-text: #000;
 $kim-font-stacks: (
   body: (
     stack: (
-      darkmode-on-cc,
-      -apple-system,
-      ".SFNSText-Regular",
-      "San Francisco",
-      "Roboto",
-      "Segoe UI",
-      "Helvetica Neue",
-      "Lucida Grande",
+      "IBM Plex Sans",
       sans-serif,
       "Apple Color Emoji",
       "Segoe UI Emoji",
@@ -78,37 +71,18 @@ $kim-font-stacks: (
   ),
   header: (
     stack: (
-      darkmode-mono-on,
-      "SF Mono",
-      "Monaco",
-      "Inconsolata",
-      "Fira Mono",
-      "Droid Sans Mono",
-      "Source Code Pro",
+      "IBM Plex Mono",
       monospace,
-      monospace,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol"
+      monospace
     ),
     regular: 500,
-    bold: 900,
+    bold: 700,
   ),
   code: (
     stack: (
-      darkmode-mono-on,
-      "Space Mono",
-      "SF Mono",
-      "Monaco",
-      "Inconsolata",
-      "Fira Mono",
-      "Droid Sans Mono",
-      "Source Code Pro",
+      "IBM Plex Mono",
       monospace,
-      monospace,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol"
+      monospace
     ),
     regular: 400,
     bold: 700,
