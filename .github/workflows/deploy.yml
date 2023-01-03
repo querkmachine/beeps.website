@@ -4,6 +4,15 @@ on:
   push:
     branches: 
       - main
+    paths-ignore:
+      - '.github/**'
+      - '.husky/**'
+      - '.gitignore'
+      - '.nvmrc'
+      - 'LICENCE'
+      - 'README.md'
+      - 'package.json'
+      - 'package-lock.json'
 
 concurrency:
   group: deploy
