@@ -1,6 +1,6 @@
-{% extends '_layouts/layout.njk' %}
+{% extends 'src/_layouts/layout.njk' %}
 
-{% from "_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/blog-card.njk" import kimBlogCard %}
 
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}

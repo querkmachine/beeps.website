@@ -3,16 +3,16 @@ title: Blog
 description: Archive of beeps' blog posts.
 permalink: "/blog/"
 ---
-{% extends '_layouts/layout.njk' %}
+{% extends 'src/_layouts/layout.njk' %}
 
-{% from "_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/blog-card.njk" import kimBlogCard %}
 
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
       <div class="kimGrid">
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-          {% include "_includes/blog-archive-sidebar.njk" %}
+          {% include "src/_includes/blog-archive-sidebar.njk" %}
         </div>
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <ol class="kimList">
