@@ -13,6 +13,7 @@ on:
       - 'README.md'
       - 'package.json'
       - 'package-lock.json'
+  workflow_dispatch:
 
 concurrency:
   group: deploy
@@ -31,8 +32,7 @@ jobs:
           node-version-file: .nvmrc
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
       - name: Install dependencies
-        run: npm ci
-        working-directory: ${{ env.BUILD_PATH }}
+        uses: ./.github/workflows/actions/install-dependencies
       - name: Build Eleventy
         run: npx @11ty/eleventy
       - name: Save artifact

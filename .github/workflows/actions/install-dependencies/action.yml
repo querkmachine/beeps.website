@@ -1,0 +1,16 @@
+name: Install npm dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      id: npm-cache
+      with:
+        key: npm-cache-${{ hashFiles('package.json', 'package-lock.json') }}
+        path: node_modules
+    - name: Install dependencies
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      run: npm ci
+      working-directory: ${{ env.BUILD_PATH }}
+      shell: bash
