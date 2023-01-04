@@ -39,13 +39,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/javascript");
 
   // Copy .htaccess
-  eleventyConfig.addPassthroughCopy(paths.src + ".htaccess");
+  eleventyConfig.addPassthroughCopy(paths.src + "/.htaccess");
 
   // Copy favicons/OpenGraph images
-  eleventyConfig.addPassthroughCopy(paths.src + "favicon*");
-  eleventyConfig.addPassthroughCopy(paths.src + "apple-touch-icon.png");
-  eleventyConfig.addPassthroughCopy(paths.src + "safari-pinned-tab.svg");
-  eleventyConfig.addPassthroughCopy(paths.src + "opengraph.png");
+  eleventyConfig.addPassthroughCopy(paths.src + "/android-chrome-*");
+  eleventyConfig.addPassthroughCopy(paths.src + "/apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy(paths.src + "/browserconfig.xml");
+  eleventyConfig.addPassthroughCopy(paths.src + "/favicon*");
+  eleventyConfig.addPassthroughCopy(paths.src + "/mstile-*");
+  eleventyConfig.addPassthroughCopy(paths.src + "/safari-pinned-tab.svg");
+  eleventyConfig.addPassthroughCopy(paths.src + "/site.webmanifest");
 
   // Markdown configuration
   const markdownLibary = markdownIt({
