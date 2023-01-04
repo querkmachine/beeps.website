@@ -1,0 +1,294 @@
+---
+title: Inkbunny accessibility report
+noRobots: true
+---
+
+{% extends 'src/_layouts/html-report.njk' %}
+
+{% block content %}
+<h1 id="inkbunny-accessibility-report">Inkbunny accessibility report</h1>
+
+<p>Written by Kimberly Grey — <a href="https://berly.kim">berly.kim</a><br>
+22 May 2022</p><div class="TOC">
+
+
+<ul>
+<li><a href="#inkbunny-accessibility-report">Inkbunny accessibility report</a>
+
+<ul>
+<li><a href="#preamble">Preamble</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#wcag-failures">WCAG failures</a>
+
+<ul>
+<li><a href="#pages-lack-semantic-markup">Pages lack semantic markup</a></li>
+<li><a href="#poor-colour-contrast-for-thumbnail-metadata">Poor colour contrast for thumbnail metadata</a></li>
+<li><a href="#no-language-defined">No language defined</a></li>
+<li><a href="#design-cannot-reflow-in-response-to-zooming">Design cannot reflow in response to zooming</a></li>
+<li><a href="#non-descriptive-link-text">Non-descriptive link text</a></li>
+<li><a href="#invalid-html-is-used">Invalid HTML is used</a></li>
+<li><a href="#images-lack-text-alternatives">Images lack text alternatives</a></li>
+<li><a href="#no-skip-links-are-present">No skip links are present</a></li>
+<li><a href="#headerlink-with-no-text-content">Header/link with no text content</a></li>
+<li><a href="#use-of-inline-css-styles">Use of inline CSS styles</a></li>
+<li><a href="#toggle-controls-arent-related-to-their-toggled-content">Toggle controls aren’t related to their toggled content</a></li>
+<li><a href="#logo-and-background-switching-controls-cannot-be-used-with-keyboard">Logo and background switching controls cannot be used with keyboard</a></li>
+<li><a href="#several-form-inputs-dont-have-labels">Several form inputs don’t have labels</a></li>
+<li><a href="#member-filters-activate-on-input-change">Member filters activate on input change</a></li>
+</ul></li>
+<li><a href="#other-recommendations">Other recommendations</a>
+
+<ul>
+<li><a href="#many-pages-lack-a-primary-heading">Many pages lack a primary heading</a></li>
+<li><a href="#no-custom-focus-style">No custom focus style</a></li>
+<li><a href="#font-size-is-very-small">Font size is very small</a></li>
+<li><a href="#control-targets-are-very-small">Control targets are very small</a></li>
+<li><a href="#use-of-titles-to-label-graphical-buttons">Use of <code>title</code>s to label graphical buttons</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h2 id="preamble">Preamble</h2>
+
+<p>This is a brief overview of accessibility issues that I identified on the Inkbunny website, when I reviewed a random sample of pages on the 22nd of May, 2022. These issues were identified using a combination of automated and manual tests using common web browsers and assistive technologies (AT). </p>
+
+<p>The pages reviewed included:</p>
+
+<ul>
+<li>The homepage.</li>
+<li>The member’s listing page.</li>
+<li>The login page.</li>
+<li>Various user profile pages.</li>
+<li>Various submission pages.</li>
+</ul>
+
+<p>The report is not intended to be thorough or authoritative, but as a starter guide of issues and improvements that could be made. </p>
+
+<p>These issues are mapped to version 2.1 of the <a href="https://www.w3.org/WAI/WCAG21/quickref/">Web Content Accessibility Guidelines</a> (WCAG), a set of accessibility criteria curated by the Web Accessibility Initiative (WAI) at the W3C. WCAG criteria are split into three ‘levels’ of compliance:</p>
+
+<ul>
+<li>Level A: Considered to be the bare minimum necessary for accessibility compliance.</li>
+<li>Level AA: An ‘acceptable’ level of compliance. This level is specifically referenced by various governments (including those of the US and UK) as their baseline for compliance with equality legislation.</li>
+<li>Level AAA: Maximum compliance. This is generally only considered necessary for services that explicitly cater to disabled and special needs individuals.</li>
+</ul>
+
+<p>Today, I only checked for compliance against levels A and AA. This doesn’t mean that Inkbunny wouldn’t benefit from also incorporating aspects of level AAA, just that I did not include those criteria in the audit.</p>
+
+<p>Also be aware that a new version of WCAG, version 2.2, is currently being finalised for release later this year. I haven’t included those criteria in the body of the report, but have included some in the ‘Other recommendations’ section.</p>
+
+<p>It’s also important to note that these are <em>guidelines</em>. There may be situations where technical limitations or the nature of a feature makes it impossible to make accessible. In these situations it’s recommended to list these as known issues in an accessibility statement.</p>
+
+<p>Finally, I ask that you please take this report in the constructive manner it’s intended in. I’m more than aware that Inkbunny is built and maintained by volunteers, and I’m not attempting to discredit the site or those who work on it. Many, many websites, large and small, get accessibility wrong, and Inkbunny is not exceptional for the failures it has. I just want the fandom’s websites to be better!</p>
+
+<p>If you have any further comments or questions about the content of this report, feel free to <a href="https://berly.kim/contact/">contact me</a> through whatever means you prefer. I can provide simple code examples too, if desired.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>My understanding is that Inkbunny, from a design and front-end code perspective, has remained largely unchanged for much of the last decade. Consequentially, the site lacks certain features that are now considered <em>de facto</em> standards, such as having a responsive design or utilising semantic HTML features. </p>
+
+<p>This unfortunately does impact the ability for Inkbunny to be accessibility compliant as it’s fundamentally limited in what devices are able to easily use the website and how assistive technologies are able to understand pages. It is unlikely that Inkbunny will realistically be able to meet the Level AA criteria without significant rework of both the design and front-end elements of the website.</p>
+
+<p>Despite this, there <em>are</em> places where improvements can be made with relatively little modification, and some improvement is better than no improvement at all.</p>
+
+<p>I have chosen to exclude certain issues specific to submissions themselves. I realise it’s potentially unreasonable to require users to provide text descriptions of images, transcripts of audio, and so on.</p>
+
+<h2 id="wcag-failures">WCAG failures</h2>
+
+<h3 id="pages-lack-semantic-markup">Pages lack semantic markup</h3>
+
+<p>Multiple pages lack semantically appropriate markup.</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>None of the homepage sections (‘Popular’, ‘Music’, ‘News’, etc.) are marked up as individual sections, nor are any of the headings marked up as heading elements.</li>
+<li>Section headings on profile pages are also not appropriately marked up.</li>
+<li>Lists (journals, images, watchers, comments) are not marked up as lists.</li>
+<li>Key-value content, such as profile stats and contact links, are not marked up as description lists.</li>
+<li>Various elements (pagination elements, login page, members page) are marked up as being data tables.</li>
+<li>The form labels on the login form aren’t marked up as form labels.</li>
+</ul>
+
+<p>Having semantic HTML present would help assistive technologies from interpreting the structure and content of the page, and allow users to jump directly to the sections they’re looking for.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">1.3.1 Info and Relationships (Level A)</a></p>
+
+<h3 id="poor-colour-contrast-for-thumbnail-metadata">Poor colour contrast for thumbnail metadata</h3>
+
+<p>The titles and user information that appears under thumbnails (such as on the homepage) has insufficient contrast with the background. The minimum contrast expected is 4.50:1.</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>On the top-most homepage section, text is displayed in #555555 against a background of #2e3436, resulting in a contrast ratio of 1.70:1.</li>
+<li>On profile page favourite section, text is displayed in #aaaaaa against a background of #d3d7cf, resulting in a contrast ratio of 1.59:1.</li>
+</ul>
+
+<p>This makes it difficult for users with vision impairment or colour blindness to be able to read the text.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">1.4.3 Contrast (Minimum) (Level AA)</a></p>
+
+<h3 id="no-language-defined">No language defined</h3>
+
+<p>The website’s <code>&lt;html&gt;</code> element does not have a <code>lang</code> attribute indicating what language the site is in. </p>
+
+<p>This prevents assistive technology, particularly screen readers, from understanding what language the content should be announced in. </p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html">3.1.1 Language of Page (Level A)</a></p>
+
+<h3 id="design-cannot-reflow-in-response-to-zooming">Design cannot reflow in response to zooming</h3>
+
+<p>The current design, being non-responsive, is unable to reflow if a user zooms into the page, introducing a horizontal scrollbar.</p>
+
+<p>This makes it more difficult for visually impaired users to read small text, which is a prominent issue due to the small default font size used on Inkbunny. It additionally limits what devices a user may access the website on.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">1.4.10 Reflow (Level AA)</a></p>
+
+<h3 id="non-descriptive-link-text">Non-descriptive link text</h3>
+
+<p>The same text is used to link off to various areas of the website.</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>There are multiple links on the homepage that use the text ‘See more’, ‘Read more’, or ‘See all’, however these links do not indicate what the user will see more/all of.</li>
+</ul>
+
+<p>This makes it more difficult for assistive technologies to determine what a link does and prevents voice control users from easily selecting the link they want. This will also frustrate screen reader users who are navigating in links mode, as several links will be listed identical text.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html">2.4.4 Link Purpose (In Context) (Level A)</a></p>
+
+<h3 id="invalid-html-is-used">Invalid HTML is used</h3>
+
+<p>The HTML structure in use on Inkbunny is not valid. Currently, all page content is contained within the <code>&lt;html&gt;</code> element, with no delineation between the head (where metadata for the page exists) and the body (the content).</p>
+
+<p>In this situation, the browser has to determine where the delineation exists, and appears to have placed it before the first <code>&lt;input&gt;</code> element instance (as this element existing in the head would be invalid, it assumes we must now be in the body). However, several more elements that can only be used in the head (such as <code>&lt;link&gt;</code> and <code>&lt;meta&gt;</code>) appear later on, creating a messy and invalid HTML structure. </p>
+
+<p>This makes it difficult for assistive technologies to parse and understand the page.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/parsing.html">4.1.1 Parsing (Level A)</a></p>
+
+<h3 id="images-lack-text-alternatives">Images lack text alternatives</h3>
+
+<p>Certain images do not have alternate text specified.</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>The ‘RTA’ graphic in the footer of each page does not have alternative text.</li>
+</ul>
+
+<p>This means the image is inaccessible to screen readers. </p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">1.1.1 Non-text Content (Level A)</a></p>
+
+<h3 id="no-skip-links-are-present">No skip links are present</h3>
+
+<p>Skip links are (usually) hidden links present at the top of a page which allow assistive technology users to skip past repetitive content, such as a header and navigation, to go directly to the content of a page. </p>
+
+<p>Inkbunny currently does not have any skip links, making it more frustrating for assistive technology users to navigate around the website.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html">2.4.1. Bypass Blocks (Level A)</a></p>
+
+<h3 id="headerlink-with-no-text-content">Header/link with no text content</h3>
+
+<p>I’m not sure if this is used for some other purpose, but every page appears to have a H2 heading element (.banner_panel) with the only content being a link with no text content. </p>
+
+<p>This is frustrating to keyboard navigation users and screen readers, and technically a WCAG failure.</p>
+
+<p>Relevant guidelines: <a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html">2.4.4 Link Purpose (In Context) (Level A)</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html">2.4.6 Headings and Labels (Level AA)</a></p>
+
+<h3 id="use-of-inline-css-styles">Use of inline CSS styles</h3>
+
+<p>Inline CSS styles are present throughout the site’s HTML. </p>
+
+<p>This makes it harder for users to specify their own styles, which they may need to do to make content easier to read or to specify high contrast colours.</p>
+
+<p>In situations where dimensions have been hardcoded into a component, such as in submission metadata, this could be considered a WCAG failure, as this prevents users from being able to resize text without it being truncated or made unreadable.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">1.4.4 Resize text (Level AA)</a></p>
+
+<h3 id="toggle-controls-arent-related-to-their-toggled-content">Toggle controls aren’t related to their toggled content</h3>
+
+<p>User interface elements which control the visibility of others, such as the ‘show’ links on submission metadata and on lists of tags, do not have a relationship with their related elements defined in HTML or with ARIA, nor do they indicate the current state of those elements.</p>
+
+<p>This is inaccessible for screen reader users, as they will not be aware that the control has done anything.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">1.3.1 Info and Relationships (Level A)</a></p>
+
+<h3 id="logo-and-background-switching-controls-cannot-be-used-with-keyboard">Logo and background switching controls cannot be used with keyboard</h3>
+
+<p>The logo and background switching controls are only usable with a mouse. They cannot be focused on or activated when navigating with a keyboard.</p>
+
+<p>The logo switcher only appears on hover, whereas the background switcher is not built using focusable elements.</p>
+
+<p>This makes them unusable for users using keyboard navigation. The logo switcher is additionally inaccessible on touchscreen devices.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">2.1.1 Keyboard (Level A)</a></p>
+
+<h3 id="several-form-inputs-dont-have-labels">Several form inputs don’t have labels</h3>
+
+<p>The username, password and email fields on the login page have visible labels, however these labels are not linked to the inputs. </p>
+
+<p>Additionally, the search input on the members page does not have a label.</p>
+
+<p>This means assistive technologies will not announce what the inputs are for, as it has no way of knowing. For example, VoiceOver on macOS only announces that the login page has four empty text inputs.</p>
+
+<h3 id="member-filters-activate-on-input-change">Member filters activate on input change</h3>
+
+<p>The select dropdown filters on the members list page submit immediately upon being changed, causing the page to refresh.</p>
+
+<p>This is disorienting for assistive technology and keyboard navigation users, as they have no initiated a page refresh and their position on the page has been reset.</p>
+
+<p>This is also a general accessibility issue in some browsers, as it isn’t possible to navigate through select dropdowns without activating a change event.</p>
+
+<p>Relevant guideline: <a href="https://www.w3.org/WAI/WCAG21/Understanding/on-input">3.2.2 On Input (Level A)</a></p>
+
+<h2 id="other-recommendations">Other recommendations</h2>
+
+<h3 id="many-pages-lack-a-primary-heading">Many pages lack a primary heading</h3>
+
+<p>It is generally recommended, for the purposes of both accessibility and SEO, that all pages use the H1 to describe the page’s content, for example ‘[user]’s profile’ or ‘[image name] by [user]’. </p>
+
+<p>This makes it easier for assistive technology users to understand the purpose and content of the page.</p>
+
+<p>Currently, all pages use the ‘Inkbunny’ name for the H1 heading. </p>
+
+<p>Relevant guidance: <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G130.html">Providing descriptive headings</a></p>
+
+<h3 id="no-custom-focus-style">No custom focus style</h3>
+
+<p>Inkbunny currently uses the browser’s default focus style when navigating by keyboard. </p>
+
+<p>Whilst this meets <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html">the current guideline</a>, a new guideline—<a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance-minimum">2.4.11 Focus Appearance (Minimum) (Level AA)</a>—is being introduced in WCAG 2.2, and you may wish to provide a custom focus style that meets the necessary contrast requirements. </p>
+
+<h3 id="font-size-is-very-small">Font size is very small</h3>
+
+<p>Large quantities of UI text on Inkbunny is very small, such as stats on user profiles, lists of watchers, thumbnail metadata, contact link headers, footer links, and more, which are displayed at 8 point (or 10.666 pixels).</p>
+
+<p>There isn’t a WCAG guideline for minimum font size, as the minimum size needed for legibility is different depending on the alphabet and typeface being used.</p>
+
+<p>For a simple sans-serif font in English, as used on Inkbunny, my recommendation would be to only drop as low as around 14 pixels except for minor text, such as legal copy, as it can be difficult for users to read large amounts of very small text.</p>
+
+<h3 id="control-targets-are-very-small">Control targets are very small</h3>
+
+<p>Relatedly, many controls have very small target areas, with some (such as footer links and the help links in submission metadata) as small as 13 pixels in both dimensions.</p>
+
+<p>These are very difficult for users with physical tremors or users of coarse input methods (such as touchscreens or switch controls) to be able to use reliably.</p>
+
+<p>There isn’t currently a WCAG guideline for minimum target size, however a minimum of 24 pixels in both dimensions is being introduced in WCAG 2.2: <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum) (Level AA)</a>. Note that this is 24 pixels <em>including</em> negative space around the target.</p>
+
+<p>The human interface guidelines for most systems go above this and recommend larger minimum sizes, <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/adaptivity-and-layout/#general-layout-considerations">such as Apple’s 44 pixels</a>.</p>
+
+<h3 id="use-of-titles-to-label-graphical-buttons">Use of <code>title</code>s to label graphical buttons</h3>
+
+<p>Various elements of Inkbunny’s UI, including profile statistics, the main navigation links, logo and background switchers use <code>title</code> attributes to explain their function or meaning.</p>
+
+<p>This is not advisable, as the tooltips that <code>title</code> attributes create cannot be read on touchscreen interfaces, do not respect zoom settings, and can be difficult for users with motor issues to make appear, especially if the button is fairly small. </p>
+
+<p>In the case of the switchers, these buttons are also unusable for people using voice control mechanisms, as they have no visible name to refer to the buttons by.</p>
+
+<p>In the case of the main navigation, I note that each button has the text of the button included within it, but hidden using a <code>display: none</code> style. This text is actually still inaccessible to screen readers, as they do not read content that has been hidden in this way. Use the <a href="https://piccalil.li/quick-tip/visually-hidden/">visually-hidden pattern</a> instead.</p>
+
+{% endblock %}

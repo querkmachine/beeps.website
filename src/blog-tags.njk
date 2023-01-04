@@ -1,0 +1,34 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter: [all]
+eleventyComputed:
+  title: Blog posts tagged '{{ tag }}'
+description: Archive of beeps' blog posts.
+permalink: "/blog/{{ tag | slugify }}/"
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+{% set postsList = collections[tag] %}
+
+{% from "src/_includes/blog-card.njk" import kimBlogCard %}
+
+{% block main %}
+  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          {% include "src/_includes/blog-archive-sidebar.njk" %}
+        </div>
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+          <ol class="kimList">
+            {% for post in postsList | reverse %}
+              {{ kimBlogCard(post) }}
+            {% endfor %}
+          </ol>
+        </div>
+    </div>
+  </div>
+{% endblock %}
