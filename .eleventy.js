@@ -12,6 +12,7 @@ const yargs = require("yargs").argv;
 // 11ty plugins
 const pluginImages = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginToc = require("eleventy-plugin-toc");
 
 module.exports = function (eleventyConfig) {
@@ -24,6 +25,7 @@ module.exports = function (eleventyConfig) {
 
   // Load plugins
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginToc);
 
   // Global settings
