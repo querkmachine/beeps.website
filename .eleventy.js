@@ -1,5 +1,8 @@
 const fs = require("fs-extra");
 
+// Config
+const paths = require("./paths.config.json");
+
 // Other packages
 const { DateTime } = require("luxon");
 const sass = require("sass");
@@ -32,17 +35,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // Copy JS and UI images
-  eleventyConfig.addPassthroughCopy("assets/images");
-  eleventyConfig.addPassthroughCopy("assets/javascript");
+  eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");
+  eleventyConfig.addPassthroughCopy(paths.srcAssets + "/javascript");
 
   // Copy .htaccess
-  eleventyConfig.addPassthroughCopy(".htaccess");
+  eleventyConfig.addPassthroughCopy(paths.src + ".htaccess");
 
   // Copy favicons/OpenGraph images
-  eleventyConfig.addPassthroughCopy("favicon*");
-  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
-  eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
-  eleventyConfig.addPassthroughCopy("opengraph.png");
+  eleventyConfig.addPassthroughCopy(paths.src + "favicon*");
+  eleventyConfig.addPassthroughCopy(paths.src + "apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy(paths.src + "safari-pinned-tab.svg");
+  eleventyConfig.addPassthroughCopy(paths.src + "opengraph.png");
 
   // Markdown configuration
   const markdownLibary = markdownIt({
@@ -76,7 +79,7 @@ module.exports = function (eleventyConfig) {
   // Sass/PostCSS pipeline
   eleventyConfig.on("beforeBuild", () => {
     const result = sass.renderSync({
-      file: "assets/stylesheet.scss",
+      file: paths.srcAssets + "/stylesheet.scss",
       sourceMap: false,
       outputStyle: "compressed",
     });
@@ -86,10 +89,14 @@ module.exports = function (eleventyConfig) {
     postcss([postcssPresetEnv()])
       .process(css, { from: "stylesheet.scss", to: "assets/stylesheet.css" })
       .then((result) => {
-        fs.outputFile("_site/assets/stylesheet.css", result.css, (err) => {
-          if (err) console.error(err);
-          console.log("PostCSS transformations complete.");
-        });
+        fs.outputFile(
+          paths.outputAssets + "/stylesheet.css",
+          result.css,
+          (err) => {
+            if (err) console.error(err);
+            console.log("PostCSS transformations complete.");
+          }
+        );
       });
   });
 
@@ -126,8 +133,8 @@ module.exports = function (eleventyConfig) {
       let metadata = await pluginImages(src, {
         widths: [600, 900, 1200, null],
         formats: ["webp"],
-        urlPath: "/images/",
-        outputDir: "./_site/images/",
+        urlPath: paths.src + "/images/",
+        outputDir: paths.output + "/images/",
         sharpOptions: {
           animated: true,
         },
@@ -216,7 +223,7 @@ module.exports = function (eleventyConfig) {
   // Generate Opengraph images
   // https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/
   eleventyConfig.on("afterBuild", () => {
-    const socialPreviewImagesDir = "./_site/images/opengraph/";
+    const socialPreviewImagesDir = paths.output + "/images/opengraph/";
     fs.readdir(socialPreviewImagesDir, (err, files) => {
       if (err) throw err;
       files.forEach((filename) => {
@@ -238,6 +245,7 @@ module.exports = function (eleventyConfig) {
   return {
     markdownTemplateEngine: "njk",
     dir: {
+      input: paths.src,
       includes: "_includes",
       layouts: "_layouts",
     },
