@@ -10,7 +10,7 @@ I don't wear _exactly_ the same clothes every day (though it's rare you'll find 
 
 To remedy this, I've made '[my brand](/brand)'.
 
-{% responsiveImage "./images/my-brand.gif", "An animated GIF of Commander Shepard from the Mass Effect video games, lifting his arms into the air and shouting 'My brand!'" %}
+{% responsiveImage "./src/images/my-brand.gif", "An animated GIF of Commander Shepard from the Mass Effect video games, lifting his arms into the air and shouting 'My brand!'" %}
 
 "My brand" is a loose collection of fonts and colours that are ready made for those odd-random-side-projects I occassionally bust out in a couple of hours or days.
 

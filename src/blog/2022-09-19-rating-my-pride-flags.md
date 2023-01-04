@@ -18,7 +18,7 @@ With that out of the way, let's rate them, shall we?
 
 ## Progress pride flag
 
-{% responsiveImage "./images/Progress_pride_flag.svg", "The progress pride flag. A field of six horizontal, coloured stripes (from top to bottom: red, orange, yellow, green, blue, and purple) is overlapped on the left-hand side by a right-pointing arrowhead, itself composed of five coloured stripes (from left to right: white, pastel pink, pastel blue, brown, and black)." %}
+{% responsiveImage "./src/images/Progress_pride_flag.svg", "The progress pride flag. A field of six horizontal, coloured stripes (from top to bottom: red, orange, yellow, green, blue, and purple) is overlapped on the left-hand side by a right-pointing arrowhead, itself composed of five coloured stripes (from left to right: white, pastel pink, pastel blue, brown, and black)." %}
 
 **Background:** Designed by Daniel Quasar in 2018, the progress pride flag is intended to highlight areas where LGBTQIA+ rights are still lacking—namely the areas of transgender rights and the rights of people of colour. These areas are in need of 'progress' and are represented in the form of a right-pointing arrowhead, overlaid on the historically more common six-stripe rainbow pride flag.
 
@@ -34,7 +34,7 @@ Yes, there are a lot of colours going on here—most of them heavily saturated�
 
 ## Transgender pride flag
 
-{% responsiveImage "./images/Transgender_pride_flag.svg", "The transgender pride flag. A field of five horizontal, coloured stripes (from top to bottom: pastel blue, pastel pink, white, pastel pink, and pastel blue)." %}
+{% responsiveImage "./src/images/Transgender_pride_flag.svg", "The transgender pride flag. A field of five horizontal, coloured stripes (from top to bottom: pastel blue, pastel pink, white, pastel pink, and pastel blue)." %}
 
 **Background:** The transgender pride flag was designed by Monica Helms in 1999. The two blue stripes represent masculinity, the two pink stripes represent femininity, and the central white stripe represents non-binary gender identities and the transition between binary genders.
 
@@ -48,7 +48,7 @@ The colours are... definitely heteronormative. Pink is for girls, and blue is fo
 
 ## Agender pride flag
 
-{% responsiveImage "./images/Agender_pride_flag.svg", "The agender pride flag. A field of seven horizontal, coloured stripes (from top to bottom: black, grey, white, light green, white, grey, and black)." %}
+{% responsiveImage "./src/images/Agender_pride_flag.svg", "The agender pride flag. A field of seven horizontal, coloured stripes (from top to bottom: black, grey, white, light green, white, grey, and black)." %}
 
 **Background:** The agender pride flag was designed by Salem X in 2014. The black and white stripes represent an absence of gender, the grey stripes represent people who are semi-genderless, and the green stripe represents non-binary gender identities. It's green because green is the inverse to purple (which is what you get if you combine blue and pink—male and female).
 
@@ -62,7 +62,7 @@ You could lop off the top or bottom three stripes and this would be a better fla
 
 ## Panromantic pride flag
 
-{% responsiveImage "./images/Panromantic_pride_flag.png", "The panromantic pride flag. A field of three horizontal, coloured stripes (from top to bottom: magenta, yellow, and cyan). The entire flag has translucent white overlaid on top of it, except for a large heart-shaped cutout in the centre of the flag." %}
+{% responsiveImage "./src/images/Panromantic_pride_flag.png", "The panromantic pride flag. A field of three horizontal, coloured stripes (from top to bottom: magenta, yellow, and cyan). The entire flag has translucent white overlaid on top of it, except for a large heart-shaped cutout in the centre of the flag." %}
 
 **Background:** The creator of the panromantic pride flag is unknown, but suffice to say it's largely derivative of the [pansexual pride flag](https://upload.wikimedia.org/wikipedia/commons/a/a2/Pansexuality_Pride_Flag.svg) created by Jasper "shrikeabyssals" in 2010 so that pansexuals had a flag distinct from the [bisexual pride flag](https://upload.wikimedia.org/wikipedia/commons/2/2a/Bisexual_Pride_Flag.svg).
 
@@ -80,7 +80,7 @@ To be fair, the panromantic pride flag is not the only flag to commit this crime
 
 ## Asexual pride flag
 
-{% responsiveImage "./images/Asexual_pride_flag.svg", "The asexual pride flag. A field of four horizontal, coloured stripes (from top to bottom: black, grey, white, and purple)." %}
+{% responsiveImage "./src/images/Asexual_pride_flag.svg", "The asexual pride flag. A field of four horizontal, coloured stripes (from top to bottom: black, grey, white, and purple)." %}
 
 **Background:** The asexual pride flag was the result of a flag design competition organised by the [Asexual Visibility & Education Network](https://www.asexuality.org/) (AVEN) in 2010, which was won by the user "Standup". The black, grey and white bars represent the asexual spectrum—black being entirely asexual people, grey representing graysexuals and demisexuals, and white representing non-asexual people, also called allosexuals. The purple stripe represents community.
 
@@ -96,7 +96,7 @@ The symbolism of the flag is fine. It loses points, once again, for being a bori
 
 ## Non-human unity flag
 
-{% responsiveImage "./images/Nonhuman_unity_flag.jpg", "The nonhuman unity flag. A field of three horizontal, coloured stripes (from top to bottom: green, white, and purple). A white circle covers the centre portion of the flag containing a symbol made of black lines. The symbol is formed of an overlapping circle, triangle, and seven-pointed star." %}
+{% responsiveImage "./src/images/Nonhuman_unity_flag.jpg", "The nonhuman unity flag. A field of three horizontal, coloured stripes (from top to bottom: green, white, and purple). A white circle covers the centre portion of the flag containing a symbol made of black lines. The symbol is formed of an overlapping circle, triangle, and seven-pointed star." %}
 
 **Background:** The non-human unity flag was designed by "cladotherian" in 2020. It incorporates existing symbolism from the [therian](https://en.wikipedia.org/wiki/Therianthropy#Modern_therianthropy) and [otherkin](https://en.wikipedia.org/wiki/Otherkin) communities.
 
@@ -112,7 +112,7 @@ The central symbol suffers from being too complex to either scale nicely or be e
 
 ## Robotkin flag
 
-{% responsiveImage "./images/Robotkin_flag.svg", "The robotkin flag. The field is split horizontally in half, with the top half in white and the bottom half in black. In the centre is a grey gear, the centre of which is vertically divided into red, green and blue segments." %}
+{% responsiveImage "./src/images/Robotkin_flag.svg", "The robotkin flag. The field is split horizontally in half, with the top half in white and the bottom half in black. In the centre is a grey gear, the centre of which is vertically divided into red, green and blue segments." %}
 
 **Background:** The robotkin flag was created by 0x9E01 in 2021. The black and white background represents binary, the basic building blocks of software—a robot's mind. The grey gear represents mechanical hardware—a robot's body. The red, green and blue segments represent RGB display technology—a robot's primary means of expression.
 
