@@ -11,7 +11,7 @@ const responsiveImagesShortcode = async function (src, alt) {
   let metadata = await pluginImages(src, {
     widths: [600, 900, 1200, null],
     formats: ["webp"],
-    urlPath: paths.src + "/images/",
+    urlPath: "/images/",
     outputDir: paths.output + "/images/",
     sharpOptions: {
       animated: true,
