@@ -5,6 +5,7 @@ const paths = require("./config/paths.json");
 const yargs = require("yargs").argv;
 
 // 11ty plugins
+const pluginLogging = require("@11ty/eleventy-plugin-directory-output");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginToc = require("eleventy-plugin-toc");
@@ -31,6 +32,9 @@ const shortcodeFigure = require("./config/shortcodes/figure.js");
 const shortcodeImage = require("./config/shortcodes/responsiveImages.js");
 
 module.exports = function (eleventyConfig) {
+  // Turn off default log output
+  eleventyConfig.setQuietMode(true);
+
   // Set global constants
   eleventyConfig.addGlobalData("siteName", "beeps");
   eleventyConfig.addGlobalData(
@@ -39,6 +43,7 @@ module.exports = function (eleventyConfig) {
   );
 
   // Load plugins
+  eleventyConfig.addPlugin(pluginLogging);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginToc);
