@@ -77,7 +77,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.on("afterBuild", processOpenGraphImages);
 
   // Collections
-  eleventyConfig.addCollection("tagList", getAllTags);
+  eleventyConfig.addCollection("tags", getAllTags);
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);

@@ -15,7 +15,7 @@
     <li>
       <a class="kimLink{%- if page.url !== '/blog/' %}-plain{% endif %}" href="{{ '/blog/' | url }}" {%- if page.url === '/blog/' %} aria-current="true"{% endif %}>all posts</a>
     </li>
-    {% for tag in collections.tagList %}
+    {% for tag in collections.tags %}
       {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
       <li>
         <a class="kimLink{%- if page.url !== tagUrl %}-plain{% endif %}" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>{{ tag | tagify }}</a>
