@@ -17,7 +17,7 @@ titleHtml: >
       position: relative;
     }
     #page-heading del {
-      margin-inline-start: -2em;
+      margin-left: -2em;
       text-decoration-style: wavy;
       text-decoration-color: var(--color-accent);
     }
@@ -31,7 +31,7 @@ titleHtml: >
     }
   </style>
   <div id="page-heading">
-    <div class="kimHeading-xl kim-!-margin-block-end-6">beeps in the Multiverse of&nbsp;Multiplicity</div>
+    <div class="kimHeading-xl kim-!-margin-bottom-6">beeps in the Multiverse of&nbsp;Multiplicity</div>
     <div class="kimSubheading-xl"><del>My</del> <ins>Our</ins> experiences and ponderings on potentially being plural.</div>
   </div>
 date: 2022-10-27

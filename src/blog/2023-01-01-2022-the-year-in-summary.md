@@ -15,7 +15,7 @@ titleHtml: >
     }
   </style>
   <div id="page-heading">
-    <div class="kimHeading-xl kim-!-margin-block-end-9">2022</div>
+    <div class="kimHeading-xl kim-!-margin-bottom-9">2022</div>
   </div>
 date: 2023-01-01
 tags: [furry fandom, medical, self-identity, transition, web development]

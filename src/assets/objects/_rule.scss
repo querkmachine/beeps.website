@@ -4,7 +4,7 @@
 
 .kimRule {
   @include spacing.kim-responsive-margin(4, $direction: block);
-  block-size: .25rem;
+  height: .25rem;
   border: 0;
   background-color: colors.kim-color-css("furniture");
 }

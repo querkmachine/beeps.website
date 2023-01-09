@@ -17,7 +17,7 @@
   }
   &_inner {
     @include spacing.kim-responsive-padding(4, $direction: block);
-    border-block-start: .5rem solid colors.kim-color-css("furniture");
+    border-top: .5rem solid colors.kim-color-css("furniture");
   }
   a {
     @include typography.kim-font-size(24);

@@ -18,18 +18,18 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 .page-header::before {
   content: "";
   display: block;
-  inline-size: 100%;
-  block-size: 9rem;
+  width: 100%;
+  height: 9rem;
   position: absolute;
-  inset-block-start: 0;
+  top: 0;
   z-index: -1;
   background-color: var(--color-accent-alt);
   background-image: url("{{ '/assets/images/nebula.jpg' | url }}");
   background-size: cover;
 }
 .page-header-robat {
-  block-size: auto;
-  inline-size: 8rem;
+  height: auto;
+  width: 8rem;
 }
 .page-blogs-robat {
   display: none;
@@ -39,14 +39,14 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
     max-width: 60%;
   }
   .page-header::before {
-    inline-size: 43vw;
-    block-size: 100%;
-    inset-inline-end: 0;
+    width: 43vw;
+    height: 100%;
+    right: 0;
     clip-path: polygon(12rem 0, 100% 0, 100% 100%, 0 100%);
   }
   .page-header-robat {
-    inline-size: 42%;
-    block-size: auto;
+    width: 42%;
+    height: auto;
     float: right;
     shape-outside: url("{{ '/assets/images/robat-home.png' | url }}");
     shape-margin: 2rem;
@@ -65,7 +65,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 
 {% block main %}
 <div class="page">
-  <header class="page-header kim-!-padding-block-start-9 kim-!-padding-block-end-9">
+  <header class="page-header kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
       <img class="page-header-robat" alt="" src="{{ '/assets/images/robat-home.png' | url }}">
       <h1 class="kimHeading-xl kim-!-text-color-accent">Hello universe,<br>I&rsquo;m beeps.</h1>
@@ -76,7 +76,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
     </div>
   </header>
   
-  <section class="page-blog kim-!-padding-block-start-9 kim-!-padding-block-end-9" id="blog" aria-labelledby="blog-heading">
+  <section class="page-blog kim-!-padding-top-9 kim-!-padding-bottom-9" id="blog" aria-labelledby="blog-heading">
     <div class="kimWrapper">
       <div class="kimGrid">
         <div class="page-blogs-robat kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">

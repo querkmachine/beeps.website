@@ -14,7 +14,7 @@
     #{math.div(settings.$kim-page-gutter, 2)} + env(safe-area-inset-left)
   );
   display: block;
-  max-inline-size: settings.$kim-page-width;
+  max-width: settings.$kim-page-width;
   margin-inline: math.div(settings.$kim-page-gutter, 2);
   @supports (margin: max(calc(0px))) {
     margin-inline: max(

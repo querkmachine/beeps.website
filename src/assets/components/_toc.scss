@@ -18,16 +18,16 @@
     }
   }
   &_collapsibleSummary {
-    @include spacing.kim-responsive-margin(2, $direction: block-end);
+    @include spacing.kim-responsive-margin(2, $direction: bottom);
     position: relative;
     cursor: pointer;
     &::before {
-      @include spacing.kim-responsive-margin(2, $direction: inline-end);
+      @include spacing.kim-responsive-margin(2, $direction: right);
       $marker-size: .75rem;
       content: "";
       display: inline-block;
-      inline-size: $marker-size;
-      block-size: $marker-size;
+      width: $marker-size;
+      height: $marker-size;
       background-color: colors.kim-color-css("link");
       clip-path: polygon(100% 50%, 0 0, 0 100%);
     }
@@ -48,13 +48,13 @@
     list-style-type: none;
   }
   &_inner li {
-    @include spacing.kim-responsive-margin(1, $direction: block-start);
+    @include spacing.kim-responsive-margin(1, $direction: top);
     &:last-child {
       @include typography.kim-vr-margin(19);
     }
   }
   &_inner > ol > li > ol li {
-    @include spacing.kim-responsive-margin(3, $direction: inline-start);
+    @include spacing.kim-responsive-margin(3, $direction: left);
   }
   a {
     @include links.kim-link-no-underline;

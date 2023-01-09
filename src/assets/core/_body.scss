@@ -34,7 +34,7 @@
     @include typography.kim-typography-common;
     @include typography.kim-font-stack(body);
     @include typography.kim-font-size(19);
-    min-block-size: 100vh;
+    min-height: 100vh;
     margin: 0;
     color: colors.kim-color-css("text");
     background-color: transparent;

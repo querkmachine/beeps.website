@@ -18,15 +18,15 @@
   }
   h2 {
     @extend .kimHeading-l;
-    @include spacing.kim-responsive-margin(9, $direction: block-start);
+    @include spacing.kim-responsive-margin(9, $direction: top);
   }
   h3 {
     @extend .kimHeading-m;
-    @include spacing.kim-responsive-margin(7, $direction: block-start);
+    @include spacing.kim-responsive-margin(7, $direction: top);
   }
   h4 {
     @extend .kimHeading-s;
-    @include spacing.kim-responsive-margin(5, $direction: block-start);
+    @include spacing.kim-responsive-margin(5, $direction: top);
   }
   ol,
   ul {
@@ -44,7 +44,7 @@
   blockquote {
     @include typography.kim-vr-margin(19);
     margin: 0;
-    padding-inline-start: 1rem;
-    border-inline-start: .5rem solid colors.kim-color-css("furniture");
+    padding-left: 1rem;
+    border-left: .5rem solid colors.kim-color-css("furniture");
   }
 }

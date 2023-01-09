@@ -9,11 +9,11 @@
   @include typography.kim-vr-margin(19);
   list-style-type: none;
   li + li {
-    @include spacing.kim-responsive-margin(1, $direction: block-start);
+    @include spacing.kim-responsive-margin(1, $direction: top);
   }
   &-bulleted,
   &-numbered {
-    padding-inline-start: 2em;
+    padding-left: 2em;
   }
   &-bulleted {
     list-style-type: square;
@@ -23,16 +23,16 @@
   }
   &-spaced {
     li + li {
-      @include spacing.kim-responsive-margin(3, $direction: block-start);
+      @include spacing.kim-responsive-margin(3, $direction: top);
     }
   }
   &-inline {
     li {
       display: inline-block;
-      margin-inline-end: .5em;
+      margin-right: .5em;
     }
     li + li {
-      @include spacing.kim-responsive-margin(0, $direction: block-start);
+      @include spacing.kim-responsive-margin(0, $direction: top);
     }
   }
   &-columns {

@@ -3,16 +3,10 @@
 
 $directions: (
   all: all,
-  block: block,
-  block-start: block-start,
-  block-end: block-end,
-  inline: inline,
-  inline-start: inline-start,
-  inline-end: inline-end,
-  top: block-start,
-  right: inline-end,
-  bottom: block-end,
-  left: inline-start
+  top: top,
+  right: right,
+  bottom: bottom,
+  left: left
 );
 
 @each $size, $map in settings.$kim-spacing {
