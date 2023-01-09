@@ -5,10 +5,15 @@
 
 .kimColorSchemeSwitch {
 	$self: &;
-	@include typography.kim-font-size(12);
-	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	border: none;
 	&[hidden] {
 		display: none;
+	}
+	&_inner {
+		@include typography.kim-font-size(12);
+		display: inline-flex;
 	}
 	&_item {
 		position: relative;
