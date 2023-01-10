@@ -29,7 +29,7 @@ Type is set in [Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) and 
 
 The nebula imagery is of [the Carina Nebula (NGC 3372)](https://www.flickr.com/photos/gsfc/4398656115), photographed by the Hubble Space Telescope and made available under a Creative Commons BY 2.0 licence.
 
-## Content
+## Contents
 
 Words are my own, unless otherwise specified.
 
