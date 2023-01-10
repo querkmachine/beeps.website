@@ -29,16 +29,16 @@ $kim-color-palette-semantic: (
     light: $kim-color-kimberly,
   ),
   link-accent: (
-    dark: color.scale($kim-color-mustard, $alpha: -70%),
-    light: color.scale($kim-color-kimberly, $alpha: -70%),
+    dark: color.scale($kim-color-mustard, $alpha: -80%),
+    light: color.scale($kim-color-kimberly, $alpha: -80%),
   ),
   link-hover: (
     dark: $kim-color-ketchup,
     light: $kim-color-emy,
   ),
   link-hover-accent: (
-    dark: color.scale($kim-color-ketchup, $alpha: -70%),
-    light: color.scale($kim-color-emy, $alpha: -70%),
+    dark: color.scale($kim-color-ketchup, $alpha: -80%),
+    light: color.scale($kim-color-emy, $alpha: -80%),
   ),
   furniture: (
     dark: $kim-color-mustard,
