@@ -4,7 +4,7 @@ date: 2023-01-09
 tags: [web development]
 ---
 
-[Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) is a CSS specification that aims to supplement 'physical' CSS properties and —ones that reference immutable physical directions, think like `margin-left` or `text-align: right`—with 'logical' versions that instead refer to more subjective points, like the 'start' or 'end' of something.
+[Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) is a CSS specification that aims to supplement 'physical' CSS properties and values—ones that reference immutable physical directions, think like `margin-left` or `text-align: right`—with 'logical' versions that instead refer to more subjective points, like the 'start' or 'end' of something.
 
 If this sounds familiar, that's because it's pretty much an evolution and extension of values introduced in Flexbox and Grid Layout: `justify-content: start`, `align-items: flex-end` and similar values have existed in CSS for some years now.
 
@@ -61,19 +61,21 @@ To communicate these, the Logical Properties and Values spec instead uses the ke
 
 Each of these axes has a `start` and an `end` which map to different physical properties, again depending on the directionality of the text.
 
-Thus, `margin-left` becomes `margin-inline-start`, `border-bottom-width` becomes `border-block-end-width`, and `text-align: right` becomes `text-align: end`.
+Thus, `margin-left` becomes `margin-inline-start`, `border-bottom-width` becomes `border-block-end-width`, and `text-align: right` becomes `text-align: end` (text only has one axis, so it omits the `inline`).
 
 In most cases, it's possible to simply find-and-replace instances of top, right, bottom or left with the logical equivalent and the job's a good 'un. And thus we start entering the murkier waters of the current Logical Properties spec... there are exceptions.
 
 ## The exceptions are less cool
 
-The `width` and `height` physical properties become `inline-size` and `block-size`, respectively. I assume just having them named `inline` and `block` would make them too easily confused with the `display` property values.
+The `width` and `height` physical properties become `inline-size` and `block-size`, respectively. I assume just having them named `inline` and `block` would make them too easily confused with the `display` property values. Fair enough.
 
 The physical positioning properties `top`, `right`, `bottom` and `left` are replaced _and_ prefixed with `inset-`, so `inset-block-start`, `inset-inline-end`, etc. Again, makes sense, if a little inconvenient.
 
 Conversely, the `float` property's `left` and `right` values have been replaced with `inline-start` and `inline-end`. This is totally incongruous with `text-align`'s equivalent `start` and `end`, and I'm not sure why this is the case. Apparently, there are `block` floats coming at some point? Who knows.
 
-Most egregious however are `border-radius` properties. Based on some of what I've described above, you'd expect, for example, `border-top-right-radius` to have become `border-block-start-inline-start-radius`. It's not. It's `border-start-start-radius`. I can see why they would want to keep the property names short, but the sudden need to remember the specific block-axis-then-inline-axis order when no other property explicitly requires this is a little frustrating.
+Most egregious however are `border-radius` properties. Based on some of what I've described above, you'd expect, for example, `border-top-right-radius` to have become `border-block-start-inline-start-radius`. It's not. It's `border-start-start-radius`.
+
+I can see why they would want to keep the property names short, but the sudden need to remember the specific block-axis-then-inline-axis order when no other property explicitly requires this is a little frustrating. This ordering is (in horizontally-oriented languages like English) the reverse of the x-axis-then-y-axis we're used to using when writing coordinates in CSS, so it's hardly intuitive either.
 
 ## The new shorthands are really cool, though
 
@@ -81,7 +83,7 @@ An exciting side-effect of logical properties is the new shorthands that they ma
 
 Previously, `margin-left` and `margin-right` didn't belong to any particular group. They were margins, sure, but despite both existing on the same axis, they had no real, intrinsic relation to one another.
 
-Well, now they do. They're `margin-inline-start` and `margin-inline-end`—so, wonderfully, you can now set both of them at once with just `margin-inline`. Schweet! And of course, there's `margin-block`, and equivalent properties exist for `padding-`, `border-` and the new `inset-` group too.
+Well, now they do! They're `margin-inline-start` and `margin-inline-end`—so, wonderfully, you can now set both of them at once with just `margin-inline`. Schweet! And of course, there's `margin-block`, and equivalent properties exist for `padding-`, `border-` and the new `inset-` group too.
 
 Speaking of `inset`, have you ever been making one of those full-screen modals and ended up writing something like this?
 
