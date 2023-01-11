@@ -1,8 +1,0 @@
-{
-  "layout": "blog-post",
-  "tags": ["blog"],
-  "mastheadBreadcrumbs": [{
-    "url": "/blog/",
-    "label": "blog"
-  }]
-}
