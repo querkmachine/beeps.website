@@ -1,9 +1,6 @@
 // Config
 const paths = require("./config/paths.json");
 
-// Other packages
-const yargs = require("yargs").argv;
-
 // 11ty plugins
 const pluginLogging = require("@11ty/eleventy-plugin-directory-output");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -39,7 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("siteName", "beeps");
   eleventyConfig.addGlobalData(
     "siteDomain",
-    yargs.serve ? "" : "https://beeps.website"
+    process.env.ENVIRONMENT === "prod" ? "https://beeps.website" : ""
   );
 
   // Load plugins

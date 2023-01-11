@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npm run serve",
     "clean": "rm -rf _site",
-    "serve": "npm run clean && npx @11ty/eleventy --serve",
-    "build": "npm run clean && npx @11ty/eleventy",
+    "serve": "npm run clean && ENVIRONMENT=dev npx @11ty/eleventy --serve",
+    "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy",
     "prepare": "husky install"
   },
   "repository": {
@@ -37,8 +37,7 @@
     "postcss": "^8.4.12",
     "postcss-preset-env": "^7.4.3",
     "prettier": "^2.6.2",
-    "sass": "^1.49.11",
-    "yargs": "^17.5.1"
+    "sass": "^1.49.11"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
