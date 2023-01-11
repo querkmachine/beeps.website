@@ -8,7 +8,6 @@
     "clean": "rm -rf _site",
     "serve": "npm run clean && npx @11ty/eleventy --serve",
     "build": "npm run clean && npx @11ty/eleventy",
-    "deploy": "npm run build && sh ./deploy.sh",
     "prepare": "husky install"
   },
   "repository": {
