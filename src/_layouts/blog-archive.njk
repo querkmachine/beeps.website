@@ -6,6 +6,21 @@
 	<div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
 		<div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
 			<div class="kimGrid">
+				<div class="kimGrid_column kimGrid_column-full">
+					<h1 class="kimHeading-l" itemprop="name">
+						<span class="kim-!-sr">beeps'</span>
+						Blog
+						{%- if tag %}
+							posts tagged as {{ tag | tagify }}
+						{%- endif %}
+					</h1>
+					
+					{%- if not tag %}
+						<p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here we are.</p>
+					{%- endif %}
+				</div>
+			</div>
+			<div class="kimGrid">
 				<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
 					{% include "src/_includes/blog-archive-sidebar.njk" %}
 				</div>

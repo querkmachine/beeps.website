@@ -38,8 +38,8 @@
             {% endblock %}
             {%- if tags %}
               <nav aria-label="Post tags">
-                <p class="kimBody-s kim-!-margin-bottom-0">Tagged as:</p>
-                <ul class="kimList kimList-inline">
+                <p class="kimBody-s kim-!-margin-bottom-1">Tagged as:</p>
+                <ul class="kimBody-s kimList">
                   {% for tag in tags | filterTagList | sort %}
                     {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
                     <li>

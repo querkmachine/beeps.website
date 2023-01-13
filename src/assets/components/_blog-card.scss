@@ -4,16 +4,12 @@
 @use "../helpers/typography";
 
 .kimBlogCard {
-  @include typography.kim-vr-margin(19);
+  $self: &;
   display: flex;
   flex-direction: column;
   position: relative;
   &_date {
     @include spacing.kim-responsive-margin(2, $direction: bottom);
-    margin-right: 1em;
-  }
-  &_heading {
-    @include typography.kim-font-stack(header, $weight: bold);
   }
   &_link {
     @include links.kim-link;
