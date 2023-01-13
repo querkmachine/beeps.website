@@ -1,22 +1,7 @@
 ---
 title: "2022: the year in summary"
-titleHtml: >
-  <style>
-    #page-heading {
-      background-image: repeating-linear-gradient(to bottom, var(--color-accent-alt), var(--color-accent-alt) 1rem, transparent 1rem, transparent 2rem);
-    }
-    #page-heading .kimHeading-xl {
-      display: inline-block;
-      font-size: clamp(5rem, 12vw, 20rem);
-      font-weight: 900;
-      background-color: var(--color-background);
-      color: var(--color-accent);
-      line-height: 1;
-    }
-  </style>
-  <div id="page-heading">
-    <div class="kimHeading-xl kim-!-margin-bottom-9">2022</div>
-  </div>
+titleAccessible: "2022: the year in summary"
+titleSvg: "2023-01-01-2022-the-year-in-summary.svg"
 date: 2023-01-01
 tags: [furry fandom, medical, self-identity, transition, web development]
 ---

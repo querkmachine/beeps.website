@@ -11,9 +11,16 @@
       <article itemscope itemtype="https://schema.org/BlogPosting">
         <div class="kimGrid">
           <header class="kimGrid_column kimGrid_column-full">
+            {% if titleSvg and titleAccessible %}
+              <div class="kimHeading-xl" aria-hidden="true">
+                {% include "src/images/headings/" + titleSvg %}
+              </div>
+              <h1 class="kim-!-sr" itemprop="name">{{- titleAccessible -}}</h1>
+            {% else %}
             <h1 class="kimHeading-xl" itemprop="name">
-              {{- (titleHtml | safe) if titleHtml else title -}}
+              {{- title -}}
             </h1>
+            {% endif %}
           </header>
         </div>
         <div class="kimGrid">
