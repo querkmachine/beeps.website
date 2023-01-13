@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         uses: ./.github/workflows/actions/install-dependencies
       - name: Build Eleventy
-        run: npx @11ty/eleventy
+        run: npm run build
       - name: Save artifact
         uses: actions/upload-artifact@v3
         with:
