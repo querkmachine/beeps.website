@@ -18,9 +18,4 @@
   &_link {
     @include links.kim-link;
   }
-  &-padded {
-    @include spacing.kim-responsive-padding(3);
-    color: colors.kim-color-css("text");
-    background-color: colors.kim-color-css("background");
-  }
 }

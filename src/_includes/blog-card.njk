@@ -1,7 +1,7 @@
 {% macro kimBlogCard(post, options) %}
   {% set element = options.element if options.element else "li" %}
   <{{ element }}
-    class="kimBlogCard{% if options.card %} kimBlogCard-padded{% endif %}"
+    class="kimBlogCard"
     itemprop="blogPost"
     itemscope
     itemtype="https://schema.org/BlogPosting">
