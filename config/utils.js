@@ -21,6 +21,7 @@ const formatDate = function (dateObj, format) {
 };
 
 const pageIsBlogPost = function (postUrl) {
+  if (!postUrl) return false;
   return postUrl.substring(0, 6) === "/blog/" ? true : false;
 };
 
