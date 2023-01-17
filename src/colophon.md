@@ -19,7 +19,7 @@ Certain aspects of the code, in particular the CSS architectural style, is cribb
 
 I use Panic's [Nova](http://nova.app) as my code editor, accompanied by [iTerm](https://iterm2.com/) and [Oh My Zsh](https://ohmyz.sh/).
 
-Hat tips to the following folks for contributing something that currently exists in the site's code: [Bernard Nijenhuis](https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Stefan Baumgartner](https://fettblog.eu/11ty-automatic-twitter-cards/).
+Hat tips to the following folks for contributing something that currently exists in the site's code: [Bernard Nijenhuis](https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/), [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Stefan Baumgartner](https://fettblog.eu/11ty-automatic-twitter-cards/).
 
 This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
 
