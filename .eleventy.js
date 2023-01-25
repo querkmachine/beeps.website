@@ -25,6 +25,7 @@ const {
 
 // Shortcodes
 const shortcodeCallout = require("./config/shortcodes/callout.js");
+const shortcodeCharacter = require("./config/shortcodes/character.js");
 const shortcodeFigure = require("./config/shortcodes/figure.js");
 const shortcodeImage = require("./config/shortcodes/responsiveImages.js");
 
@@ -78,6 +79,7 @@ module.exports = function (eleventyConfig) {
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
+  eleventyConfig.addPairedNunjucksShortcode("character", shortcodeCharacter);
   eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
   eleventyConfig.addNunjucksAsyncShortcode("responsiveImage", shortcodeImage);
 
