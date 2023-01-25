@@ -1,8 +1,15 @@
 ---
 title: How I use Twitter
 date: 2022-09-06
+updated: 2023-01-25
 tags: [technology]
 ---
+
+{% callout %}
+As it happens, less than two months after I published this, Elon Musk bought Twitter and subsequently made it awful to use in virtually every way. Awkward.
+
+I no longer post on Twitter, rendering quite a lot of this post redundant. [Find me on the Fediverse instead.](https://chitter.xyz/@batbeeps)
+{% endcallout %}
 
 I originally joined Twitter in July 2007, slightly more than a year after the service first launched. These were the heady days when it was almost exclusively used by tech workers, when the site still went offline for maintenance (remember the Fail Whale?), and where you were expected to tweet mostly by text message (and yes, I actually did that a lot).
 
