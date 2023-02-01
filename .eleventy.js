@@ -28,6 +28,7 @@ const shortcodeCallout = require("./config/shortcodes/callout.js");
 const shortcodeCharacter = require("./config/shortcodes/character.js");
 const shortcodeFigure = require("./config/shortcodes/figure.js");
 const shortcodeImage = require("./config/shortcodes/responsiveImages.js");
+const shortcodeYouTube = require("./config/shortcodes/youtube.js");
 
 module.exports = function (eleventyConfig) {
   // Turn off default log output
@@ -82,6 +83,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("character", shortcodeCharacter);
   eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
   eleventyConfig.addNunjucksAsyncShortcode("responsiveImage", shortcodeImage);
+  eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
   // Filters
   eleventyConfig.addFilter("cachebust", cachebustAssetUrl);
