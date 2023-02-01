@@ -2,7 +2,7 @@ const paths = require("../paths.json");
 
 const pluginImages = require("@11ty/eleventy-img");
 
-const responsiveImagesShortcode = async function (src, alt) {
+const responsiveImagesShortcode = async function (src, alt, args) {
   if (alt === undefined) {
     // You bet we throw an error on missing alt (alt="" works okay)
     throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
@@ -21,7 +21,7 @@ const responsiveImagesShortcode = async function (src, alt) {
   let originalSize = metadata.webp[metadata.webp.length - 1];
 
   return `<picture>
-	${Object.values(metadata)
+  ${Object.values(metadata)
     .map((imageFormat) => {
       return `  <source type="image/${
         imageFormat[0].format
@@ -30,12 +30,14 @@ const responsiveImagesShortcode = async function (src, alt) {
         .join(", ")}" sizes="100vw">`;
     })
     .join("\n")}
-		<img
-			src="${originalSize.url}"
-			width="${originalSize.width}"
-			height="${originalSize.height}"
-			alt="${alt}">
-	</picture>`;
+    <img
+      ${args?.classes ? `class="${args?.classes}"` : ""}
+      src="${originalSize.url}"
+      width="${originalSize.width}"
+      height="${originalSize.height}"
+      loading="lazy"
+      alt="${alt}">
+  </picture>`;
 };
 
 module.exports = responsiveImagesShortcode;

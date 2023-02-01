@@ -67,7 +67,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 <div class="page">
   <header class="page-header kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
-      <img class="page-header-robat" alt="" src="{{ '/assets/images/robat-home.png' | url }}" loading="lazy" width="722" height="1000">
+      {% responsiveImage "./src/assets/images/robat-home.png", "", classes="page-header-robat" %}
       <h1 class="kimHeading-xl kim-!-text-color-accent">Hello universe,<br>I&rsquo;m beeps.</h1>
       <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/work/' | url }}">front-end developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
       <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/robot/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a bat on the internet</a>. It's all a bit complicated.</p>
@@ -80,7 +80,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
     <div class="kimWrapper">
       <div class="kimGrid">
         <div class="page-blogs-robat kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-          <img alt="" src="{{ '/assets/images/robat-home-blogs.png' | url }}" loading="lazy" width="604" height="1000">
+          {% responsiveImage "./src/assets/images/robat-home-blogs.png", "" %}
         </div>
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <h2 class="kimHeading-l" id="blog-heading">Recently written words</h2>
