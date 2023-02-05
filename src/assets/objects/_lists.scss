@@ -28,8 +28,8 @@
   }
   &-inline {
     li {
+      @include spacing.kim-responsive-margin(3, $direction: right);
       display: inline-block;
-      margin-right: .5em;
     }
     li + li {
       @include spacing.kim-responsive-margin(0, $direction: top);

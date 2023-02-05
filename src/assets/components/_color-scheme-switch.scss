@@ -1,5 +1,6 @@
 @use "../helpers/a11y";
 @use "../helpers/colors";
+@use "../helpers/measurements";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
@@ -18,7 +19,7 @@
 	&_item {
 		position: relative;
 		&:first-child #{$self}_label {
-			border-left-width: 1px;
+			border-left-width: measurements.kim-border-width("hairline");
 			border-top-left-radius: 4px;
 			border-bottom-left-radius: 4px;
 		}
@@ -40,7 +41,7 @@
 		@include spacing.kim-responsive-padding(2, $direction: inline);
 		@include spacing.kim-responsive-padding(1, $direction: block);
 		display: inline-block;
-		border-width: 1px 1px 1px 0;
+		border-width: measurements.kim-border-width("hairline") measurements.kim-border-width("hairline") measurements.kim-border-width("hairline") 0;
 		border-style: solid;
 		border-color: currentcolor;
 		color: colors.kim-color-css("link");

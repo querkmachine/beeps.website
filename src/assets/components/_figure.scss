@@ -1,5 +1,6 @@
 @use "../settings";
 @use "../helpers/colors";
+@use "../helpers/measurements";
 @use "../helpers/media-queries";
 @use "../helpers/spacing";
 @use "../helpers/typography";
@@ -15,8 +16,8 @@
   &_caption {
     @include spacing.kim-responsive-padding(1, $direction: block);
     @include typography.kim-font-size(14);
-    border-top: .25rem solid colors.kim-color-css("furniture");
-    border-bottom: .25rem solid colors.kim-color-css("furniture");
+    border-top: measurements.kim-border-width("regular") solid colors.kim-color-css("furniture");
+    border-bottom: measurements.kim-border-width("regular") solid colors.kim-color-css("furniture");
     text-align: left;
   }
   @include media-queries.kim-mq($from: galaxy) {

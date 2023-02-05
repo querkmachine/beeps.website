@@ -1,5 +1,6 @@
 @use "../settings";
 
+@use "sass:map";
 @use "sass:math";
 
 // px to rem unit conversion
@@ -8,4 +9,11 @@
     $value: $value * 1px;
   }
   @return math.div($value, settings.$kim-font-sizes-root) * 1rem;
+}
+
+@function kim-border-width($key) {
+  @if not map.has-key(settings.$kim-border-widths, $key) {
+    @error "Unknown border width `#{$key}` - expected a key from the border-widths map.";
+  }
+  @return map.get(settings.$kim-border-widths, $key);
 }

@@ -1,11 +1,12 @@
 @use "../helpers/colors";
-@use "../helpers/typography";
+@use "../helpers/measurements";
 @use "../helpers/spacing";
+@use "../helpers/typography";
 
 .kimCallout {
 	@include typography.kim-vr-margin(19);
 	@include spacing.kim-responsive-padding(3);
-	border: .5rem solid colors.kim-color-css("furniture");
+	border: measurements.kim-border-width("thick") solid colors.kim-color-css("furniture");
 	> :last-child {
 		margin-bottom: 0;
 	}
