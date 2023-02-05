@@ -1,11 +1,11 @@
 ---
-title: Test blog
+title: Markdown and Nunjucks shortcode tests
 date: 9999-01-01
 tags: [random]
 draft: true
 ---
 
-A page for testing markdown styles and custom shortcodes.
+A page for testing markdown styles, plugins and custom shortcodes.
 
 ## Markdown
 
@@ -13,7 +13,23 @@ This is a paragraph. Nostrud incididunt mollit qui Lorem id ad deserunt duis sin
 
 This is a sentence broken
 over multiple lines.
-(There should be line breaks.)
+(There should be line breaks, hopefully.)
+
+### Typography replacements
+
+- Apostrope: Ex'ample
+- Double quotes: "Example"
+- Single quotes: 'Example'
+- Copyright symbol: (C) (c)
+- Trademark symbol: (TM) (tm)
+- Registered trademark symbol: (R) (r)
+- Ellipsis: ...
+- En dash: --
+- Em dash ---
+- Plus-minus: +-
+- Remove excessive punctuation: ??????? !!!!!!! ,,
+
+### Inline styles
 
 **Bold**
 _italic_
@@ -23,6 +39,8 @@ _italic_
 `inline code`
 <hi@berly.kim>
 
+### Lists
+
 1. list item 1
 2. list item 2
 3. list item 3
@@ -30,6 +48,8 @@ _italic_
 - list item 1
 - list item 2
 - list item 3
+
+### Blockquotes
 
 > blockquote
 
@@ -39,14 +59,18 @@ _italic_
 
 > > nested blockquote
 
+### Horizontal rule
+
 ---
 
+### Code blocks
+
 ```
-code block
+<p class="example">code block with no language set</p>
 ```
 
 ```html
-<p class="example">Syntax highlighted code block.</p>
+<p class="example">Syntax highlighted HTML code.</p>
 ```
 
 ## Shortcodes
@@ -99,8 +123,12 @@ Wheeeeeeeeee!
 I love how these work!
 {% endcharacter %}
 
-{% character variant="point-down" %}
+{% character variant="point" %}
 Look at that one working!
+{% endcharacter %}
+
+{% character variant="point-down" %}
+And look at that one working!
 {% endcharacter %}
 
 {% character variant="point-up" %}
