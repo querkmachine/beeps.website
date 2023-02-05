@@ -23,13 +23,6 @@ const {
   pageIsBlogPost,
 } = require("./config/utils.js");
 
-// Shortcodes
-const shortcodeCallout = require("./config/shortcodes/callout.js");
-const shortcodeCharacter = require("./config/shortcodes/character.js");
-const shortcodeFigure = require("./config/shortcodes/figure.js");
-const shortcodeImage = require("./config/shortcodes/responsiveImages.js");
-const shortcodeYouTube = require("./config/shortcodes/youtube.js");
-
 module.exports = function (eleventyConfig) {
   // Turn off default log output
   eleventyConfig.setQuietMode(true);
@@ -79,11 +72,26 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("tags", getAllTags);
 
   // Custom Nunjucks Shortcodes
-  eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
-  eleventyConfig.addPairedNunjucksShortcode("character", shortcodeCharacter);
-  eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
-  eleventyConfig.addNunjucksAsyncShortcode("responsiveImage", shortcodeImage);
-  eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
+  eleventyConfig.addPairedNunjucksShortcode(
+    "callout",
+    require("./config/shortcodes/callout.js")
+  );
+  eleventyConfig.addPairedNunjucksShortcode(
+    "character",
+    require("./config/shortcodes/character.js")
+  );
+  eleventyConfig.addPairedNunjucksShortcode(
+    "figure",
+    require("./config/shortcodes/figure.js")
+  );
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "responsiveImage",
+    require("./config/shortcodes/responsiveImages.js")
+  );
+  eleventyConfig.addNunjucksShortcode(
+    "youtube",
+    require("./config/shortcodes/youtube.js")
+  );
 
   // Filters
   eleventyConfig.addFilter("cachebust", cachebustAssetUrl);
