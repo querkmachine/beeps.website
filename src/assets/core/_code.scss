@@ -24,34 +24,32 @@ code {
 }
 
 // Unhighlighted inline code
-:not(pre) > code:not([class*="language-"]) {
+:not(pre) > code {
 	padding-block: .1em;
 	padding-inline: .2em;
 	white-space: normal;
 }
 
 // Code blocks
-pre[class*="language-"],
-code[class*="language-"] {
+pre > code {
+	@include spacing.kim-responsive-padding(3);
+	@include typography.kim-vr-margin(19);
+	display: block;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
 	hyphens: none;
 	tab-size: 4;
+	color: $code-color-text;
+	background-color: $code-color-background;
 }
 
 pre[class*="language-"] {
-	@include spacing.kim-responsive-padding(3);
-	@include typography.kim-vr-margin(19);
 	display: block;
-	color: $code-color-text;
-	background-color: $code-color-background;
-	overflow: auto;
-	white-space: pre;
+	white-space: break-spaces;
 }
 
-code[class*="language-"] {
-	display: block;
+pre > code[class*="language-"] {
 	.token {
 		&:is(.comment, .prolog, .doctype, .cdata) {
 			color: $code-color-comments;
