@@ -73,6 +73,19 @@ _italic_
 <p class="example">Syntax highlighted HTML code.</p>
 ```
 
+### Table
+
+| Planet  | Diameter (km) |      Population       |
+| :------ | ------------: | :-------------------: |
+| Mercury |         2,440 |           0           |
+| Venus   |         6,052 |           0           |
+| Earth   |         6,371 | Over 8 billion humans |
+| Mars    |         3,390 |           0           |
+| Jupiter |        69,911 |           0           |
+| Saturn  |        58,232 |           0           |
+| Uranus  |        25,362 |           0           |
+| Neptune |        24,622 |           0           |
+
 ## Shortcodes
 
 ### Callout

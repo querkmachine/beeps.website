@@ -44,6 +44,10 @@ $kim-color-palette-semantic: (
     dark: $kim-color-mustard,
     light: $kim-color-kimberly,
   ),
+  furniture-alt: (
+    dark: color.change($kim-color-mustard, $alpha: .5),
+    light: color.change($kim-color-kimberly, $alpha: .5),
+  ),
   accent: (
     dark: $kim-color-mustard,
     light: $kim-color-kimberly,

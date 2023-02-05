@@ -6,6 +6,7 @@
 @use "../helpers/typography";
 
 @forward "../objects/rule";
+@forward "../objects/table";
 @forward "../objects/typography";
 @forward "../objects/lists";
 
@@ -46,5 +47,8 @@
     margin: 0;
     padding-left: 1rem;
     border-left: .5rem solid colors.kim-color-css("furniture");
+  }
+  table {
+    @extend .kimTable;
   }
 }

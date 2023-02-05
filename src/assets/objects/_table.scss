@@ -1,0 +1,17 @@
+@use "../helpers/colors";
+@use "../helpers/spacing";
+
+.kimTable {
+	width: 100%;
+	border-collapse: collapse;
+	th, td {
+		padding: spacing.kim-spacing(1) spacing.kim-spacing(3) spacing.kim-spacing(1) 0;
+		border-bottom: 1px solid colors.kim-color-css("furniture-alt");
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	th {
+		border-color: colors.kim-color-css("furniture");
+	}
+}
