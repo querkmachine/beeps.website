@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     gap: settings.$kim-page-gutter * 0.5;
-    border-bottom: measurements.kim-border-width("hairline") solid colors.kim-color-css("furniture");
+    border-bottom: measurements.kim-border-width("thick") solid colors.kim-color-css("furniture");
     position: relative;
     @include media-queries.kim-mq($from: galaxy) {
       flex-direction: row;
