@@ -8,4 +8,10 @@
   height: measurements.kim-border-width("regular");
   border: 0;
   background-color: colors.kim-color-css("furniture");
+  &-thick {
+    height: measurements.kim-border-width("thick");
+  }
+  &-hairline {
+    height: measurements.kim-border-width("hairline");
+  }
 }
