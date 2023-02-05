@@ -30,13 +30,11 @@ const responsiveImagesShortcode = async function (src, alt, args) {
         .join(", ")}" sizes="100vw">`;
     })
     .join("\n")}
-    <img
-      ${args?.classes ? `class="${args?.classes}"` : ""}
-      src="${originalSize.url}"
-      width="${originalSize.width}"
-      height="${originalSize.height}"
-      loading="lazy"
-      alt="${alt}">
+    <img src="${originalSize.url}" width="${originalSize.width}" height="${
+    originalSize.height
+  }" loading="lazy" alt="${alt}" ${
+    args?.classes ? `class="${args?.classes}"` : ""
+  }>
   </picture>`;
 };
 
