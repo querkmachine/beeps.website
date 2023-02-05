@@ -14,10 +14,9 @@
     margin-bottom: 0;
   }
   &_caption {
-    @include spacing.kim-responsive-padding(1, $direction: block);
-    @include typography.kim-font-size(14);
-    border-top: measurements.kim-border-width("regular") solid colors.kim-color-css("furniture");
-    border-bottom: measurements.kim-border-width("regular") solid colors.kim-color-css("furniture");
+    @include spacing.kim-responsive-padding(1, $direction: bottom);
+    @include typography.kim-font-size(16);
+    border-bottom: measurements.kim-border-width("hairline") solid colors.kim-color-css("furniture-alt");
     text-align: left;
   }
   @include media-queries.kim-mq($from: galaxy) {
