@@ -80,18 +80,20 @@
         </div>
       </article>
       <nav aria-label="Next and previous blog post">
-        <hr class="kimRule">
+        <hr class="kimRule kimRule-thick">
         <div class="kimGrid">
           {% if previousPost %}
             <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
               <div class="kimHeading-s">Previous post</div>
               {{ kimBlogCard(previousPost, { element: 'div' }) }}
+              <hr class="kimRule kimRule-hairline">
             </div>
           {% endif %}
           {% if nextPost %}
             <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
               <div class="kimHeading-s">Next post</div>
               {{ kimBlogCard(nextPost, { element: 'div' }) }}
+              <hr class="kimRule kimRule-hairline">
             </div>
           {% endif %}
         </div>
