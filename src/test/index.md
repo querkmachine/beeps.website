@@ -1,8 +1,7 @@
 ---
-title: Markdown and Nunjucks shortcode tests
-date: 9999-01-01
-tags: [random]
-draft: true
+title: Markdown and Nunjucks shortcode examples
+layout: generic
+noRobots: true
 ---
 
 A page for testing markdown styles, plugins and custom shortcodes.
@@ -71,6 +70,17 @@ _italic_
 
 ```html
 <p class="example">Syntax highlighted HTML code.</p>
+```
+
+```html
+<header class="kimMasthead">
+  <div class="kimWrapper kimMasthead_inner">
+    <a class="kimMasthead_logo kimLink-plain" href="/">
+      <span class="kim-!-sr">Back to home</span>
+      <span aria-hidden="true">beeps</span>
+    </a>
+  </div>
+</header>
 ```
 
 ### Table
