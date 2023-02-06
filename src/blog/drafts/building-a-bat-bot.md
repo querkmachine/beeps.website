@@ -32,7 +32,11 @@ Unfortunately, [Twitter's looming API changes](https://twitter.com/TwitterDev/st
 
 Then I remembered that I know how to code things.
 
-## How to code things
+## Building the bat bot
+
+{% figure float="right" %}
+{% responsiveImage "./src/images/robat-circuits.png", "Robot bat with a door on their torso open, exposing a circuit board-like pattern." %}
+{% endfigure %}
 
 I have a bunch of prior experience using Mastodon's API. I'd used it before for random side projects like [Rainbow Dashboard](https://github.com/querkmachine/rainbow-dashboard), [Just One Toot](https://github.com/querkmachine/just-one-toot), and a Mastodon-based TweetDeck clone that I was working on until [someone beat me to it](https://mastodeck.com/).
 
@@ -70,30 +74,79 @@ If anything, it would be worse. For cartoons, every image would reliably be unde
 
 This would not be the case here. Each photo would need individual attribution, and I couldn't just scrape online media galleries like Wikimedia Commons or the Encyclopedia of Life because I'd decided to have standards:
 
-First, photos must depict living, healthy bats. This is a celebration of a lot of wonderful, often endangered, species. I don't want to include dead or sick bats.
+### Principle 1: Living
+
+First, photos must depict living, healthy bats. This is a celebration of a lot of wonderful, often endangered, species. I don't want to include dead or sick bats, taxidermy models, or those infected by [white-nose syndrome](https://en.wikipedia.org/wiki/White-nose_syndrome).
+
+### Principle 2: Loved
 
 Second, many photos of bats are of them being in unnatural situations, such as being inside cages, in human settlements or being held by people. Sometimes this is justified, such as when a bat is being transported, studied or is a rescue. Other times, however, this can be evidence of mistreatment or exploitation.
 
-Where possible, I want to ensure that the bat is being handled responsibly by people who know what they're doing. This is hard to judge and impossible to be sure of, but if the photo is of a known biologist cautiously holding a bat in a darkened cave, that's a better sign than it being a person dressed like they're on holiday danging a bat from their fingers in the middle of a marketplace.
+Where possible, I want to ensure that the bat is being handled responsibly by people who know what they're doing. This is hard to judge and impossible to be sure of, but if the photo is of a known biologist cautiously holding a bat in a darkened cave, that's a better sign than it being a tourist danging a bat from their fingers in the middle of a sunny marketplace.
 
-Third, I wanted to be sure I could actually use all of the images. In the wild world of animal-posting Twitter, there's usually very little regard given to proper attribution and licensing.
+{% character variant="wave" %}
+Some of the photos I've selected show people holding wild bats with their bare hands. This used to be common even in professional circles up until about 15 years ago.
 
-That's no good. I want my images to be public domain, licensed under Creative Commons, or otherwise useable under some copyleft license.
+Now, you should only even consider doing this if you've been recently vaccinated for rabies. Although the chance of acquiring rabies from a bat is very small, it's not zero, and bats don't exhibit visible rabies symptoms like many other animals do.
 
-I wish that I could say I wrote some awesome code to do all that for me, but I didn't. I spent hours collating bat photos from a variety of sources, manually documenting photographers and licenses along the way.
+Always wear gloves when handling bats, the thicker the better.
+{% endcharacter %}
+
+### Principle 3: Licensed
+
+Third, I wanted to be sure I could actually use all of the images. In the wild world of animal-posting Twitter, there's usually very little regard given to proper attribution and licensing. That's no good. I want my images to be public domain, licensed under Creative Commons, or otherwise useable under some permissive license.
+
+This, unfortunately, excluded me from using the amazing works of [Dr. Merlin Tuttle](https://www.merlintuttle.org/), probably the world's pre-eminent bat biologist and photographer. He has [a wonderful gallery](https://merlintuttle.smugmug.com/), but at $10 per image, that's an expense well outside the scope of this project.
+
+I wish that I could say I wrote some awesome code to do all of this image gathering and data collection for me, but I didn't. I spent hours collating bat photos from a variety of sources, manually documenting photographers and licenses along the way. That's just life sometimes.
 
 ## Teething problems
 
-Bat bot, now renamed Hourly Bats and hosted at the imaginatively named [@batstbatsbats](https://botsin.space/@batsbatsbats) went live early the next afternoon. And it went pretty well!
+Bat bot, now renamed Hourly Bats and hosted at the imaginatively named [@batstbatsbats](https://botsin.space/@batsbatsbats) went live early the next afternoon. And it went pretty well! Except...
 
-Until, one hour, it just didn't post. A quick check found that the API request had timed out. Manually re-running the script posted successfully. Probably just a fluke.
+### Problem 1: GitHub's cron queue
 
-There was quickly some repetition, which wasn't unexpected. The photo pool was still pretty small and mathematically there would be repeats, that's just how randomness is, but it wasn't a good initial look. I briefly pondered ways of reducing repetition, perhaps by keeping track of what had recently been posted and rerolling if a repeat was chosen, but as the bot worked via GitHub Actions and was pretty much memory-less, I quickly realised that would stray from my original desire to not have to keep an eye on the darn thing.
+I'd set up my posting GitHub Action so that the posted once an hour, at the top of the hour. Technically I was sneaky, knowing that lots of people would put it at exactly the top of the hour, so I actually put it at 59 minutes past the hour to try and jump the queue. That'd show them, I thought.
 
-I figured I could live with repetition. Not as if everyone was going to see every single post anyway.
+It didn't show them. It turns out that cron tasks on GitHub work more like a queue. You can request that a job happens at the top of the hour, but that isn't when your code will run—that's only when your code will get added to the queue, and that queue is frequently anywhere from 10 to 35 minutes long.
 
-- image dimensions issue
-- null???
+There isn't a whole lot you can do about this. Maybe queue the task super early and somehow keep it running until it hits the time you actually want to post? Seems wasteful. I figured this was a minor enough problem to just ignore. Bat pictures are not time sensitive, I just want one posted every hour or so.
+
+### Problem 2: Unstable server, unstable API
+
+One hour, a bat picture didn't get posted.
+
+A quick check found that the API request had timed out. botsin.space had been under some load at the time, so a request timing out wouldn't be out of the ordinary. I re-ran the posting action manually and it worked fine, so I just call this a fluke.
+
+If I wanted to be entirely hands-off about it, I could add something that detects if the API request failed and retries it until it succeeds, but that's one of those problems that sounds simple but is actually a rabbit hole of unexpected complexity. If I have anything misconfigured or botsin.space is having issues, I'm suddenly responsible for a Denial of Service attack on their servers, and that's generally frowned upon.
+
+Like the cron issue, I figured the rare missed post was probably not worth the complexity and resource-related risk of trying to fix in code.
+
+### Problem 3: Repetition, repetition, repetition
+
+There was quickly some repetition, which wasn't unexpected. The photo pool was still pretty small and mathematically there would be repeats, that's just how randomness is, but it wasn't a good initial look. I briefly pondered ways of reducing repetition, perhaps by keeping track of what had recently been posted and rerolling if a repeat was chosen, but as the bot worked via GitHub Actions and was pretty much memory-less, I quickly realised that would stray from my original desire to not have to keep the darn thing running constantly.
+
+[I did make some changes](https://github.com/querkmachine/bat-bot/commit/2c944182406ba5de38c70d1fce49a510060c40e4), replacing the time-based seed with the [random npm package](https://www.npmjs.com/package/random), which promises some form of uniform distribution.
+
+This is theoretically a 'more random' solution, but as it remains stateless, repetition is still statistically unavoidable. I figured I could live with repetition. It's not as if everyone was going to see every single post, anyway, [right?](https://pounced-on.me/@coelacanthus/109815205260778899)
+
+### Problem 4: The undocumented zone
+
+Another issue occurred the next day where an image was rejected by the API because it was too large. Unusually, this wasn't because of filesize, but because of the image's 'physical' dimensions. In this case, the image was 5184&times;3456 pixels in size.
+
+This was a bit weird, as Mastodon's API docs make no mention of any such limitation, and the more 'user friendly' user guide [only mentions the default configuration's 8 megabyte filesize limit](https://docs.joinmastodon.org/user/posting/#media).
+
+It turns out that Mastodon _does_ have a limitation on the dimensions of uploaded images, [the (hardcoded!) `MAX_MATRIX_LIMIT` setting](https://github.com/mastodon/mastodon/blob/main/app/models/concerns/attachmentable.rb#L8), which is simply the pixel area of the image: width multiplied by height.
+
+The limit is 16,777,216 pixels. My rejected bat photo was 17,915,904 pixels. Heck.
+
+Mastodon resizes all uploaded imagery to 1920&times;1080, so shrinking down the source images wouldn't have a tangible effect on the bot's output anyway. I did that.
+
+Still, this is an interesting omission in Mastodon's developer documentation. Someone should fix that.
+
+### Problem 5: null
+
+I wouldn't expect that passing the `null` keyword as a value to an API would actually post the word 'null', but apparently Mastodon's API does that. Now you know.
 
 ## Conclusion
 
