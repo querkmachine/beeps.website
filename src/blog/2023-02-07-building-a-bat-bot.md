@@ -1,8 +1,9 @@
 ---
-title: Building a bat bot
-date: 9999-01-01
+title: Building a Bat Bot
+titleAccessible: Building a Bat Bot
+titleSvg: "2023-02-07-building-a-bat-bot.svg"
+date: 2023-02-07
 tags: [web development]
-draft: true
 ---
 
 I recently left Twitter. The reasons why probably need little explanation for a contemporaneous reader in the know.
@@ -28,7 +29,7 @@ Having a steady stream of them little critters having a nice time throughout the
 
 Bats aren't the only animals to get this treatment. Do you want photos of [capybaras](https://twitter.com/CapybaraHourly)? How about [fennec foxes](https://twitter.com/FennecEveryHr)? [Possums](https://twitter.com/PossumEveryHour)?
 
-Unfortunately, [Twitter's looming API changes](https://twitter.com/TwitterDev/status/1621026986784337922) will likely see the end of these kinds of accounts, and many are yet to make the move over to the Fediverse. My stream of bats was drying up, and I was big sad.
+Unfortunately, [Twitter's looming API changes](https://twitter.com/TwitterDev/status/1621026986784337922) will likely see the end of these kinds of accounts, and many are yet to make the move over to the fediverse. My stream of bats was drying up, and I was big sad.
 
 Then I remembered that I know how to code things.
 
@@ -40,7 +41,7 @@ Then I remembered that I know how to code things.
 
 I have a bunch of prior experience using Mastodon's API. I'd used it before for random side projects like [Rainbow Dashboard](https://github.com/querkmachine/rainbow-dashboard), [Just One Toot](https://github.com/querkmachine/just-one-toot), and a Mastodon-based TweetDeck clone that I was working on until [someone beat me to it](https://mastodeck.com/).
 
-Using Mastodon's API is, for the most part, actually remarkably simple: Create an access key on your account, attach it as a header to any RESTful requests you write, go. You don't even need to do the first step if it's something like accessing the public timeline. It's all remarkably... simple.
+Using Mastodon's API is, remarkably... simple.
 
 And so was writing [bat-bot](https://github.com/querkmachine/bat-bot/). To be fair, I cheated a little and used a Node wrapper around the Mastodon API, but pretty much identical functionality can probably be achieved using [JavaScript's Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) without much more code.
 
@@ -87,7 +88,7 @@ Where possible, I want to ensure that the bat is being handled responsibly by pe
 {% character variant="wave" %}
 Some of the photos I've selected show people holding wild bats with their bare hands. This used to be common even in professional circles up until about 15 years ago.
 
-Now, you should only even consider doing this if you've been recently vaccinated for rabies. Although the chance of acquiring rabies from a bat is very small, it's not zero, and bats don't exhibit visible rabies symptoms like many other animals do.
+Now, you should only even consider doing this if you've been recently vaccinated for rabies. Although the chance of acquiring rabies from a bat is very small, it's not zero, and bats don't exhibit visible rabies symptoms as many other animals do.
 
 Always wear gloves when handling bats, the thicker the better.
 {% endcharacter %}
@@ -110,7 +111,7 @@ I'd set up my posting GitHub Action so that the posted once an hour, at the top 
 
 It didn't show them. It turns out that cron tasks on GitHub work more like a queue. You can request that a job happens at the top of the hour, but that isn't when your code will run—that's only when your code will get added to the queue, and that queue is frequently anywhere from 10 to 35 minutes long.
 
-There isn't a whole lot you can do about this. Maybe queue the task super early and somehow keep it running until it hits the time you actually want to post? Seems wasteful. I figured this was a minor enough problem to just ignore. Bat pictures are not time sensitive, I just want one posted every hour or so.
+There isn't a whole lot you can do about this. Maybe queue the task super early and somehow keep it running until it hits the time you actually want to post? Seems wasteful. I figured this was a minor enough problem to just ignore. Bat pictures are not time-sensitive, I just want one posted every hour or so.
 
 ### Problem 2: Unstable server, unstable API
 
@@ -120,7 +121,7 @@ A quick check found that the API request had timed out. botsin.space had been un
 
 If I wanted to be entirely hands-off about it, I could add something that detects if the API request failed and retries it until it succeeds, but that's one of those problems that sounds simple but is actually a rabbit hole of unexpected complexity. If I have anything misconfigured or botsin.space is having issues, I'm suddenly responsible for a Denial of Service attack on their servers, and that's generally frowned upon.
 
-Like the cron issue, I figured the rare missed post was probably not worth the complexity and resource-related risk of trying to fix in code.
+Like the cron issue, I figured a rare missed post was probably not worth the complexity and resource-related risk of trying to fix it in code.
 
 ### Problem 3: Repetition, repetition, repetition
 
@@ -134,7 +135,7 @@ This is theoretically a 'more random' solution, but as it remains stateless, rep
 
 Another issue occurred the next day where an image was rejected by the API because it was too large. Unusually, this wasn't because of filesize, but because of the image's 'physical' dimensions. In this case, the image was 5184&times;3456 pixels in size.
 
-This was a bit weird, as Mastodon's API docs make no mention of any such limitation, and the more 'user friendly' user guide [only mentions the default configuration's 8 megabyte filesize limit](https://docs.joinmastodon.org/user/posting/#media).
+This was a bit weird, as Mastodon's API docs make no mention of any such limitation, and the more 'user-friendly' user guide [only mentions the default configuration's 8 megabyte filesize limit](https://docs.joinmastodon.org/user/posting/#media).
 
 It turns out that Mastodon _does_ have a limitation on the dimensions of uploaded images, [the (hardcoded!) `MAX_MATRIX_LIMIT` setting](https://github.com/mastodon/mastodon/blob/main/app/models/concerns/attachmentable.rb#L8), which is simply the pixel area of the image: width multiplied by height.
 
@@ -146,8 +147,24 @@ Still, this is an interesting omission in Mastodon's developer documentation. So
 
 ### Problem 5: null
 
-I wouldn't expect that passing the `null` keyword as a value to an API would actually post the word 'null', but apparently Mastodon's API does that. Now you know.
+I wouldn't expect that passing the `null` keyword as a value to an API would actually post the word 'null', but apparently, Mastodon's API does that. Pass an empty string instead. Now you know.
 
-## Conclusion
+## Build more bots!
 
-mastodon bots are easy it's nice and you should do it c:
+I don't really have a conclusion to this, but if I were to scrounge one from the depths of literary consciousness, it would be a call to action to build more cool, useful and creative Mastodon bots.
+
+Mastodon's API is just... really easy to use. You don't need to do any jumping through authorisation hoops to get an access token, the usage limits tend to be quite liberal, there's no paywall, and there's no need to even register an account if you're dealing entirely with public data.
+
+(That said: There is an unwritten rule in the fediverse that content scrapers are not welcome. Many Mastodon users value their privacy and [don't take kindly to their posts being copied](https://fossacademic.tech/2022/10/18/notesOnNobreEtAl.html) without explicit permission.)
+
+{% character variant="angry" %}
+That doesn't mean Mastodon's developer experience is _all_ good, either. As noted, the documentation is sometimes lacking, and I've previously had a very hard time getting [the streaming aspects](https://docs.joinmastodon.org/methods/streaming/) of it to work at all.
+
+The docs say to use it with an `Authorization` header, but neither the WebSocket nor EventSource specifications—the two main ways of interacting with streaming APIs in client JavaScript—support adding headers to requests.
+
+It boggles my mind how anyone is supposed to work that one out by themselves.
+{% endcharacter %}
+
+Still, Mastodon is simple enough for all manner of fun little side-projects and it's certainly a nice place to do that kinda thing. Dare I say, often nicer than Twitter ever was.
+
+Anyway, go code cool shit.
