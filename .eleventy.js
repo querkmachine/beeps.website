@@ -40,9 +40,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginToc);
 
-  // Global settings
-  eleventyConfig.setDataDeepMerge(true);
-
   // Copy JS and UI images
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/javascript");
