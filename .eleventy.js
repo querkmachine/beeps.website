@@ -62,7 +62,8 @@ module.exports = function (eleventyConfig) {
   // Markdown configuration
   eleventyConfig.setLibrary("md", markdownConfig);
 
-  // Compile Sass
+  // Watch and compile Sass files
+  eleventyConfig.addWatchTarget(paths.srcAssets + "/**/*.scss");
   eleventyConfig.on("beforeBuild", compileSass);
 
   // Generate Opengraph images
