@@ -5,7 +5,7 @@ const excludeFromProductionBuild = (data) => {
 };
 
 module.exports = {
-  layout: "blog-post",
+  layout: "blog-post.njk",
   tags: ["blog"],
   mastheadBreadcrumbs: [
     {

@@ -1,6 +1,6 @@
 ---
 title: Markdown and Nunjucks shortcode examples
-layout: generic
+layout: generic.njk
 noRobots: true
 ---
 

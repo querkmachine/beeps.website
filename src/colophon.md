@@ -1,5 +1,5 @@
 ---
-layout: generic
+layout: generic.njk
 title: Colophon
 description: Giving credit to the people and tools that made this website possible.
 eleventyExcludeFromCollections: true
