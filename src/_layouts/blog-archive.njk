@@ -2,6 +2,8 @@
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
 
+{% set yearList = postsList | getArchiveYears | reverse %}
+
 {% block main %}
 	<div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
 		<div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
@@ -25,11 +27,15 @@
 					{% include "src/_includes/blog-archive-sidebar.njk" %}
 				</div>
 				<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-					<ol class="kimList kimList-spaced">
-						{% for post in postsList | reverse %}
-							{{ kimBlogCard(post) }}
-						{% endfor %}
-					</ol>
+					{% for year in yearList %}
+						<h2 class="kimHeading-l">{{ year }}</h2>
+						<ol class="kimList kimList-spaced">
+							{% for post in postsList | getArchivePostsByYear(year) | reverse %}
+								{{ kimBlogCard(post) }}
+							{% endfor %}
+						</ol>
+						<hr class="kimRule">
+					{% endfor %}
 				</div>
 		</div>
 	</div>

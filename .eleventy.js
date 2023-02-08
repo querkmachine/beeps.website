@@ -9,6 +9,10 @@ const pluginToc = require("eleventy-plugin-toc");
 
 // Helpful functions that do stuff
 const {
+  getArchiveYears,
+  getArchivePostsByYear,
+} = require("./config/blogArchive.js");
+const {
   getAllTags,
   filterCommonTags,
   formatAsTag,
@@ -99,6 +103,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isBlogPost", pageIsBlogPost);
   eleventyConfig.addFilter("splitlines", splitLines);
   eleventyConfig.addFilter("tagify", formatAsTag);
+  eleventyConfig.addFilter("getArchiveYears", getArchiveYears);
+  eleventyConfig.addFilter("getArchivePostsByYear", getArchivePostsByYear);
 
   return {
     markdownTemplateEngine: "njk",
