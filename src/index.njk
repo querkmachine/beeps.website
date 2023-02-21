@@ -87,7 +87,7 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
           <h2 class="kimHeading-l" id="blog-heading">Recently written words</h2>
           <ol class="kimList">
-            {% for post in collections.blog | reverse | head(3) %}
+            {% for post in collections.blog | reverse | head(5) %}
               {{ kimBlogCard(post) }}
             {% endfor %}
           </ol>
