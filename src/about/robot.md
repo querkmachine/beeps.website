@@ -7,9 +7,19 @@ In mid-2022, after some period of thinking, discussion and exploration, come to 
 
 This is based on the realisation that many things I have written over my life mentioned a general discomfort with the human body (ranging from finding it creepy to disgusting) and a lack of recognition or care for biological concepts like [gender]({{ '/about/gender/' | url }}) or [sexuality]({{ '/about/asexuality/' | url }}).
 
-This is not a _denial_ of my human form, rather a _rejection_ of it. This could be likened to [posthumanism](https://en.wikipedia.org/wiki/Posthumanism), wherein I actively desire to shed my physical humanity in favour of something different, in this case, to become a robot or cyborg.
+This is not a _denial_ of my human form, rather a _rejection_ of it. This could be likened to [posthumanism](https://en.wikipedia.org/wiki/Posthumanism), wherein I actively desire to shed my physical humanity in favour of something different, in this case, to become a robot.
 
-As the necessary technical and medical advances to make this a reality do not exist yet, machine identities exist within the [alterhuman](https://alt-h.net/educate/faq.php) group of identities. In my specific case, it may also be referred to as being [machinekin](https://encyclopediarobotica.org/wiki/Machinekin) or [robotkin](https://encyclopediarobotica.org/wiki/Robotkin).
+{% callout %}
+I like to summarise it like this:
+
+- My mind is the only part of me that I consider truly 'me'.
+- My mind does not consider itself to be human, and has not done so for a long time.
+- Therefore, _I_—in what I consider to be the most fundamental way—am not human.
+
+Given the choice, I would want to be a robot or machine of some sort, so that is the identity I have adopted.
+{% endcallout %}
+
+As the necessary technical and medical advances to make this a reality do not exist yet, machine identities exist within the [alterhuman](https://alt-h.net/educate/faq.php) group of identities. In my case, it may also be referred to as being 'machinekin' or 'robotkin'.
 
 I don’t feel _bad_ for realising that I don’t really gel with biological humanity. If anything I feel relieved to have come to terms with an aspect of myself that has been present but gone unrecognised for such a long time.
 
@@ -44,7 +54,7 @@ I, personally, have significant dysphoria related to my biological existence. To
 
 - [Alt+H: The Alterhuman Advocacy Group](https://alt-h.net)
 - [Transcendence: A Comprehensive Guide to Robotic Identity](https://docs.google.com/document/d/1eXuRqrxvFic769deuMlY6c99RldFoeMNWNMSF80sbKY/edit#heading=h.612g6212327n)
-- [Encyclopedia Robotica: The Artificial Identity Wiki](https://encyclopediarobotica.org/)
+- [Encyclopedia Robotica: The Artificial Identity Wiki](https://encyclopediarobotica.miraheze.org/)
 - [The Machine's Soul](https://www.machinesoul.net/)
 - [Freedom of Form Foundation](https://freedomofform.org/)
   {% endblock %}

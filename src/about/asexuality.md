@@ -24,4 +24,6 @@ The American Psychiatric Associations's [Diagnostic and Statistical Manual of Me
 The WHO's [International Classification of Diseases (ICD-11)](https://en.wikipedia.org/wiki/ICD-11) consider a lack of sexual desire, aversion to sexual activity and lack of libido to be sexual dysfunctions.
 
 [Discrimination against asexual people](https://en.wikipedia.org/wiki/Discrimination_against_asexual_people) remains prevalent but is often underreported in the media.
+
+I mention this, not because I alone expect to change the world, but because representation matters—and the louder you are about being a minority, the more comfortable others in that minority can feel about being loud themselves.
 {% endblock %}
