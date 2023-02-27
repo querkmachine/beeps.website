@@ -1,6 +1,6 @@
 ---
-title: Building a Bat Bot
-titleAccessible: Building a Bat Bot
+title: Building a bat bot
+titleAccessible: Building a bat bot
 titleSvg: "2023-02-07-building-a-bat-bot.svg"
 date: 2023-02-07
 tags: [web development]
