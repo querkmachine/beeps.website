@@ -9,7 +9,7 @@ I keep having the idea of writing listicle like blog posts. Not for easy clicks 
 
 However, rather than give myself a year's worth of easy and boring content, I figured I'd just get them over with and chuck everything your way in one big list of lists.
 
-## 10 macOS utility apps I find really useful
+## 10 macOS utility apps I find really quite useful
 
 Here are some teeny, tiny utility apps I've found very useful when it comes to being productive. Most of them do one thing and they do it well, [as it should well be](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well).
 
@@ -28,7 +28,7 @@ List items are in no particular order.
 9. **[Karabiner-Elements](https://karabiner-elements.pqrs.org/)** (free) — Rebind keysboard keys and mouse buttons to do whatever you want. I like to rebind Caps Lock to be a 'hyper key', which I use heavily in combination with the last item on this list.
 10. **[Raycast](https://www.raycast.com/)** (free) — Spotlight replacement and the exception to my 'do one thing' rule—Raycast does bloody everything. Searching, calculations, conversions, window management, clipboard history, snippets, and even more via the extensions library—and basically all of it can be done using keyboard shortcuts.
 
-## 10 music tracks that punch me in the feels
+## 10 music tracks that punch me right in the feels
 
 For me, music is so often about the lyrics and the story being told through them. All of these songs have lyrics that I relate to in some manner, some of them are loud and brash, often purposefully so, but they all make me feel something.
 
@@ -45,46 +45,23 @@ List items are in no particular order.
 9. **["Rebuild Me" by Jeff Burgess](https://www.youtube.com/watch?v=Y0Ygda4YqTM)** — A song about completely submitting every part of yourself to another person's control. No idea what this says about me. Moving on.
 10. **["This Is A Life" by Son Lux, Mitski & David Byrne](https://sonlux.bandcamp.com/track/this-is-a-life-extended)** — A song about life in all its unremarkable averageness, and how that's not necessarily a bad thing. A pick-me-up, in a weird way.
 
-## 10 subreddits I waste valuable time chuckling at
-
-Reddit gets a bit of a bad rap for being a hive of scum and villainy. Like every website, it's not perfect by any means, but some people seem to be totally unaware that you tend to only see the stuff that you explicitly sign up to see.
-
-Here's ten subreddits I think are pretty fun. (Warning: Lots of them are kind of juvenile. That's Reddit for you.)
-
-List items are in no particular order.
-
-1. **[r/antimeme](https://www.reddit.com/r/antimeme/)** — If you're a fan of jokes, look elsewhere. r/antimeme is strictly for memes that make complete logical sense.
-2. **[r/formuladank](https://www.reddit.com/r/formuladank/)** — Memes and japery in the world of Formula 1 racing. Totally incomprehensible unless you follow the sport, there are a shocking number of injokes.
-3. **[r/vexillologycirclejerk](https://www.reddit.com/r/vexillologycirclejerk/)** — Speaking of totally incomprehensible, unless you know a thing or two about flags, you might not get a whole lot out of this one either.
-4. **[r/risa](https://www.reddit.com/r/risa/)** — If Formula 1 and flag-based memes aren't your thing, maybe _Star Trek_ memes are?
-5. **[r/traaaaaaannnnnnnnnns](https://www.reddit.com/r/traaaaaaannnnnnnnnns/)** — Memes and funnies for transgender people... Fine, maybe that's not the most widely accessible subreddit either.
-6. **[r/crappydesign](https://www.reddit.com/r/CrappyDesign/)** — Finally, something most people might actually relate to and find funny.
-7. **[r/outside](https://www.reddit.com/r/outside/)** — What if the entire universe was actually an MMORPG? Well, this would be that game's community forum. Delightful.
-8. **[r/fifthworldproblems](https://www.reddit.com/r/fifthworldproblems/)** — If first-world problems are trivial inconveniences and third-world problems are actually serious issues, imagine how bad fifth-world problems must be.
-9. **[r/sbubby](https://www.reddit.com/r/sbubby/)** — Logos, but not quite.
-10. **[r/196](https://www.reddit.com/r/196/)** — The first rule of r/196 Club is you must post something when you visit. That's it. That's the rules.
-
-## 10 video games I've spent way too much time playing
+## 10 simulation/management games I've spent way too much time playing
 
 I tend to make it known that I don't play a lot of video games. I just don't gel with the whole concept of 'challenge as fun', really. I don't want stress, or missions, or even storyline, really—I want a sandbox, a tool I can use to make my own fun in my own way.
 
-Games like that, thankfully, do exist. Here they is.
+Games like that, thankfully, do exist. Here are my favourites.
 
-List items are in order of most played to least played, according to Steam. This does mean that every iteration of _The Sims_ is missing from this list, but they'd trounce every other contender and it just wouldn't be fair, really.
-
-1. **_[Cities: Skylines]()_** (1,635 hours) —
-2. **_[Team Fortress 2]()_** (940 hours) —
-3. **_[Prison Architect]()_** (364 hours) —
-4. **_[Airport CEO]()_** (190 hours) —
-5. **_[OpenTTD]()_** (160 hours) —
-6. **_[Super Animal Royale]()_** (120 hours) —
-7. **_[Sid Meier's Civilization V]()_** (106 hours) —
-8. **_[The Jackbox Party Pack 7]()_** (85 hours) —
-9. **_[Garry's Mod]()_** (76 hours) —
-10. **_[Two Point Hospital]()_** (65 hours) —
+1. **The Sims**
+2. **_[Cities: Skylines]()_**
+3. **_[Prison Architect]()_**
+4. **_[OpenTTD]()_**
+5. **RollerCoaster Tycoon 2**
+6. **_[Two Point Hospital]()_**
+7. **_[Garry's Mod]()_**
+8. **_[Airport CEO]()_**
+9. **Factorio**
+10. **Planet Zoo**
 
 ## 10 podcasts that have gotten me through a lot of commutes
 
-## 10 mobile apps that [x]
-
-## 10 _Star Trek_ episodes that are so bad they're good
+## 10 _Star Trek_ episodes that shook me good
