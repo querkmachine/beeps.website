@@ -6,6 +6,7 @@ on:
       - main
     paths:
     - 'src/**'
+    - '!src/blog/drafts/**'
     - '.eleventy.js'
   workflow_dispatch:
 
