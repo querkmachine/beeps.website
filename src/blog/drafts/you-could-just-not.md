@@ -1,6 +1,7 @@
 ---
 title: You could just not
 date: 9999-01-01
+draft: true
 tags: []
 ---
 
@@ -37,3 +38,12 @@ Months before _Hogwarts Legacy_ released, LGBTQ and Jewish groups were already o
 Rowling's response to this has been simple: She doesn't care. So long as people continue to consume the Wizarding World, she makes money. So long as she makes money, she is going to spend it supporting anti-LGBTQ organisations.
 
 So why are so many people, including people who are LGBTQ, seemingly intent to play it when they could just... not?
+
+Common arguments:
+
+- JK Rowling didn't make the game — no, but it's her problematic universe, and the lead designer for most of the development also turned out to be a huge bigot
+- I'm supporting the devs — the devs already got paid, the only folks who get royalties from purchases are people like rowling
+- It doesn't matter because the game is already successful — collective action only works because lots of individuals participate in it, one person boycotting is still more effective than them not
+- It doesn't matter because 'there's no ethical consumption under capitalism' — that argument is for shit like food and shelter, not video games
+- It's fine, it has a trans character — by word of god, the character in the game says nothing to that effect
+- I'm gonna pirate it — even if you're not financially supporting the game, you're giving it cultural capital and making it seem acceptable for others to purchase and play it
