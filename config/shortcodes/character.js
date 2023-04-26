@@ -76,15 +76,15 @@ const characterShortcode = function (content, args) {
   const imageMeta = pluginImages.statsSync(imagePath, imageConfig);
   const image = imageMeta.webp[imageMeta.webp.length - 1];
 
-  return `<aside class="kimCharacter">
+  return `<figure class="kimCharacter">
 		<img
 			class="kimCharacter_image"
 			src="${image.url}"
 			width="${image.width}"
 			height="${image.height}"
 			alt="${variant.alt}">
-		<div class="kimCharacter_speech">\n${content}</div>
-	</aside>`;
+		<blockquote class="kimCharacter_speech">\n${content}</blockquote>
+	</figure>`;
 };
 
 module.exports = characterShortcode;
