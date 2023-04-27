@@ -9,7 +9,7 @@
     "serve": "npm run clean && ENVIRONMENT=dev npx @11ty/eleventy --serve",
     "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy && npm run lint:build",
     "lint": "npx prettier --write --ignore-unknown . '!_site/**/*'",
-    "lint:build": "npx prettier --write --ignore-unknown --no-config '_site/**/*'",
+    "lint:build": "npx prettier --write --ignore-unknown --no-config --print-width=1000 --use-tabs=true '_site/**/*'",
     "prepare": "husky install"
   },
   "repository": {
