@@ -8,7 +8,7 @@
   color: colors.kim-color-css("link");
   text-decoration: none;
   &:hover {
-    box-shadow: inset 0 -.6em 0 0 colors.kim-color-css("link-hover-accent");
+    box-shadow: inset 0 -0.6em 0 0 colors.kim-color-css("link-hover-accent");
   }
   &:focus {
     @include a11y.kim-focus-ring($fill: true);
@@ -26,7 +26,7 @@
 
 @mixin kim-link {
   @include _kim-link-common;
-  box-shadow: inset 0 -.6em 0 0 colors.kim-color-css("link-accent");
+  box-shadow: inset 0 -0.6em 0 0 colors.kim-color-css("link-accent");
 }
 
 @mixin kim-link-no-underline {

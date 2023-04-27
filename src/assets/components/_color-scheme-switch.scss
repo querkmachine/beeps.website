@@ -5,46 +5,48 @@
 @use "../helpers/typography";
 
 .kimColorSchemeSwitch {
-	$self: &;
-	margin: 0;
-	padding: 0;
-	border: none;
-	&[hidden] {
-		display: none;
-	}
-	&_inner {
-		@include typography.kim-font-size(12);
-		display: inline-flex;
-	}
-	&_item {
-		position: relative;
-		&:first-child #{$self}_label {
-			border-left-width: measurements.kim-border-width("hairline");
-			border-top-left-radius: 4px;
-			border-bottom-left-radius: 4px;
-		}
-		&:last-child #{$self}_label {
-			border-top-right-radius: 4px;
-			border-bottom-right-radius: 4px;
-		}
-	}
-	&_input {
-		@include a11y.kim-visually-hidden;
-		&:checked + #{$self}_label {
-			background-color: colors.kim-color-css("link-accent");
-		}
-		&:focus + #{$self}_label {
-			@include a11y.kim-focus-ring;
-		}
-	}
-	&_label {
-		@include spacing.kim-responsive-padding(2, $direction: inline);
-		@include spacing.kim-responsive-padding(1, $direction: block);
-		display: inline-block;
-		border-width: measurements.kim-border-width("hairline") measurements.kim-border-width("hairline") measurements.kim-border-width("hairline") 0;
-		border-style: solid;
-		border-color: currentcolor;
-		color: colors.kim-color-css("link");
-		cursor: pointer;
-	}
+  $self: &;
+  margin: 0;
+  padding: 0;
+  border: none;
+  &[hidden] {
+    display: none;
+  }
+  &_inner {
+    @include typography.kim-font-size(12);
+    display: inline-flex;
+  }
+  &_item {
+    position: relative;
+    &:first-child #{$self}_label {
+      border-left-width: measurements.kim-border-width("hairline");
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child #{$self}_label {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  &_input {
+    @include a11y.kim-visually-hidden;
+    &:checked + #{$self}_label {
+      background-color: colors.kim-color-css("link-accent");
+    }
+    &:focus + #{$self}_label {
+      @include a11y.kim-focus-ring;
+    }
+  }
+  &_label {
+    @include spacing.kim-responsive-padding(2, $direction: inline);
+    @include spacing.kim-responsive-padding(1, $direction: block);
+    display: inline-block;
+    border-width: measurements.kim-border-width("hairline")
+      measurements.kim-border-width("hairline")
+      measurements.kim-border-width("hairline") 0;
+    border-style: solid;
+    border-color: currentcolor;
+    color: colors.kim-color-css("link");
+    cursor: pointer;
+  }
 }

@@ -17,5 +17,5 @@
 }
 
 @function kim-color-css($name) {
-  @return string.unquote("var(--color-#{$name})")
+  @return string.unquote("var(--color-#{$name})");
 }

@@ -5,7 +5,7 @@
 @use "sass:list";
 
 .kimGrid {
-  $half-gutter: settings.$kim-page-gutter * .5;
+  $half-gutter: settings.$kim-page-gutter * 0.5;
   display: flex;
   flex-wrap: wrap;
   margin-inline: 0 - $half-gutter;
@@ -15,13 +15,17 @@
 }
 
 @each $name, $width in settings.$kim-grid-widths {
-  .kimGrid_column-#{$name} { width: $width; }
+  .kimGrid_column-#{$name} {
+    width: $width;
+  }
 }
 
 @each $breakpoint, $value in settings.$kim-breakpoints {
   @include media-queries.kim-mq($from: $breakpoint) {
     @each $name, $width in settings.$kim-grid-widths {
-      .#{$breakpoint}\:kimGrid_column-#{$name} { width: $width; }
+      .#{$breakpoint}\:kimGrid_column-#{$name} {
+        width: $width;
+      }
     }
   }
 }

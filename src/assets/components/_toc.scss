@@ -23,7 +23,7 @@
     cursor: pointer;
     &::before {
       @include spacing.kim-responsive-margin(2, $direction: right);
-      $marker-size: .75rem;
+      $marker-size: 0.75rem;
       content: "";
       display: inline-block;
       width: $marker-size;

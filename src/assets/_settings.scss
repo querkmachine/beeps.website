@@ -5,15 +5,15 @@ $kim-breakpoints: (
   constitution: 400px,
   galaxy: 600px,
   defiant: 768px,
-  intrepid: 1000px
+  intrepid: 1000px,
 );
 
 $kim-color-white: #fff;
 $kim-color-black: #334139;
 $kim-color-kimberly: #786999;
-$kim-color-emy: #B3FFB3;
-$kim-color-ketchup: #DD6031;
-$kim-color-mustard: #FFD447;
+$kim-color-emy: #b3ffb3;
+$kim-color-ketchup: #dd6031;
+$kim-color-mustard: #ffd447;
 
 $kim-color-palette-semantic: (
   text: (
@@ -45,8 +45,8 @@ $kim-color-palette-semantic: (
     light: $kim-color-kimberly,
   ),
   furniture-alt: (
-    dark: color.change($kim-color-mustard, $alpha: .5),
-    light: color.change($kim-color-kimberly, $alpha: .5),
+    dark: color.change($kim-color-mustard, $alpha: 0.5),
+    light: color.change($kim-color-kimberly, $alpha: 0.5),
   ),
   accent: (
     dark: $kim-color-mustard,
@@ -59,7 +59,7 @@ $kim-color-palette-semantic: (
   speech-bubble: (
     dark: $kim-color-mustard,
     light: $kim-color-kimberly,
-  )
+  ),
 );
 
 $kim-focus-color: #fc0;
@@ -72,7 +72,7 @@ $kim-font-stacks: (
       sans-serif,
       "Apple Color Emoji",
       "Segoe UI Emoji",
-      "Segoe UI Symbol"
+      "Segoe UI Symbol",
     ),
     regular: 400,
     bold: 700,
@@ -81,7 +81,7 @@ $kim-font-stacks: (
     stack: (
       "IBM Plex Mono",
       monospace,
-      monospace
+      monospace,
     ),
     regular: 500,
     bold: 700,
@@ -90,7 +90,7 @@ $kim-font-stacks: (
     stack: (
       "IBM Plex Mono",
       monospace,
-      monospace
+      monospace,
     ),
     regular: 400,
     bold: 700,
@@ -103,7 +103,7 @@ $kim-font-sizes: (
     null: (
       font-size: 12px,
       line-height: 15px,
-    ) 
+    ),
   ),
   14: (
     null: (
@@ -228,11 +228,11 @@ $kim-grid-widths: (
   "threeQuarters": 75%,
   "oneThird": 33.33333%,
   "twoThirds": 66.66666%,
-  "full": 100%
+  "full": 100%,
 );
 
 $kim-border-widths: (
   hairline: 1px,
-  regular: .25rem,
-  thick: .5rem
-)
+  regular: 0.25rem,
+  thick: 0.5rem,
+);

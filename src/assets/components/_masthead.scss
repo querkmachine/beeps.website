@@ -18,7 +18,8 @@
   }
   &_inner {
     @include spacing.kim-responsive-padding(4, $direction: block);
-    border-top: measurements.kim-border-width("thick") solid colors.kim-color-css("furniture");
+    border-top: measurements.kim-border-width("thick") solid
+      colors.kim-color-css("furniture");
   }
   a {
     @include typography.kim-font-size(24);

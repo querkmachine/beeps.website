@@ -11,83 +11,83 @@ $code-color-comments: #708090;
 $code-color-1: settings.$kim-color-mustard;
 $code-color-2: settings.$kim-color-ketchup;
 $code-color-3: settings.$kim-color-emy;
-$code-color-4: #B09AE0; // variant on 'kimberly'
-$code-color-5: #54C5FF;
+$code-color-4: #b09ae0; // variant on 'kimberly'
+$code-color-5: #54c5ff;
 
-$code-border-radius: .3em;
+$code-border-radius: 0.3em;
 
 code {
-	@include typography.kim-font-stack(code, $weight: 400);
-	@include typography.kim-font-size(16);
-	color: $code-color-text;
-	background-color: $code-color-background;
+  @include typography.kim-font-stack(code, $weight: 400);
+  @include typography.kim-font-size(16);
+  color: $code-color-text;
+  background-color: $code-color-background;
 }
 
 // Unhighlighted inline code
 :not(pre) > code {
-	padding-block: .1em;
-	padding-inline: .2em;
-	white-space: normal;
+  padding-block: 0.1em;
+  padding-inline: 0.2em;
+  white-space: normal;
 }
 
 // Code blocks
 pre > code {
-	@include spacing.kim-responsive-padding(3);
-	@include typography.kim-vr-margin(19);
-	display: block;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	hyphens: none;
-	tab-size: 4;
-	color: $code-color-text;
-	background-color: $code-color-background;
+  @include spacing.kim-responsive-padding(3);
+  @include typography.kim-vr-margin(19);
+  display: block;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  hyphens: none;
+  tab-size: 4;
+  color: $code-color-text;
+  background-color: $code-color-background;
 }
 
 pre[class*="language-"] {
-	display: block;
-	white-space: break-spaces;
+  display: block;
+  white-space: break-spaces;
 }
 
 pre > code[class*="language-"] {
-	.token {
-		&:is(.comment, .prolog, .doctype, .cdata) {
-			color: $code-color-comments;
-			font-style: italic;
-		}
-		&:is(.punctuation, .operator) {
-			color: $code-color-comments;
-		}
-		&:is(.property, .tag, .constant, .symbol, .deleted) {
-			color: $code-color-5;
-		}
-		&:is(.boolean, .number) {
-			color: $code-color-4;
-		}
-		&:is(.selector, .attr-name, .string, .char, .builtin, .inserted) {
-			color: $code-color-1;
-		}
-		&:is(.entity, .url, .variable) {
-			color: $code-color-4;
-		}
-		&:is(.atrule, .attr-value, .function, .class-name) {
-			color: $code-color-3;
-		}
-		&:is(.keyword) {
-			color: $code-color-2;
-			font-weight: 700;
-		}
-		&:is(.regex, .important) {
-			color: $code-color-1;
-		}
-		&:is(.important, .bold) {
-			font-weight: 700;
-		}
-		&:is(.italic) {
-			font-style: italic;
-		}
-		&:is(.entity) {
-			cursor: help;
-		}
-	}
+  .token {
+    &:is(.comment, .prolog, .doctype, .cdata) {
+      color: $code-color-comments;
+      font-style: italic;
+    }
+    &:is(.punctuation, .operator) {
+      color: $code-color-comments;
+    }
+    &:is(.property, .tag, .constant, .symbol, .deleted) {
+      color: $code-color-5;
+    }
+    &:is(.boolean, .number) {
+      color: $code-color-4;
+    }
+    &:is(.selector, .attr-name, .string, .char, .builtin, .inserted) {
+      color: $code-color-1;
+    }
+    &:is(.entity, .url, .variable) {
+      color: $code-color-4;
+    }
+    &:is(.atrule, .attr-value, .function, .class-name) {
+      color: $code-color-3;
+    }
+    &:is(.keyword) {
+      color: $code-color-2;
+      font-weight: 700;
+    }
+    &:is(.regex, .important) {
+      color: $code-color-1;
+    }
+    &:is(.important, .bold) {
+      font-weight: 700;
+    }
+    &:is(.italic) {
+      font-style: italic;
+    }
+    &:is(.entity) {
+      cursor: help;
+    }
+  }
 }

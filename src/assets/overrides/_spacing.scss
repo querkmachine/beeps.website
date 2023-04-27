@@ -6,7 +6,7 @@ $directions: (
   top: top,
   right: right,
   bottom: bottom,
-  left: left
+  left: left,
 );
 
 @each $size, $map in settings.$kim-spacing {

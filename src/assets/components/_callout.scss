@@ -4,10 +4,11 @@
 @use "../helpers/typography";
 
 .kimCallout {
-	@include typography.kim-vr-margin(19);
-	@include spacing.kim-responsive-padding(3);
-	border: measurements.kim-border-width("thick") solid colors.kim-color-css("furniture");
-	> :last-child {
-		margin-bottom: 0;
-	}
+  @include typography.kim-vr-margin(19);
+  @include spacing.kim-responsive-padding(3);
+  border: measurements.kim-border-width("thick") solid
+    colors.kim-color-css("furniture");
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

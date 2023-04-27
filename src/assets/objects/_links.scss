@@ -2,9 +2,9 @@
 @use "../helpers/links";
 
 .kimLink {
-	@include links.kim-link;
+  @include links.kim-link;
 }
 
 .kimLink-plain {
-	@include links.kim-link-no-underline;
+  @include links.kim-link-no-underline;
 }

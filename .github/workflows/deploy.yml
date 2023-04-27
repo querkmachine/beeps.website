@@ -2,12 +2,12 @@ name: Build and deploy
 
 on:
   push:
-    branches: 
+    branches:
       - main
     paths:
-    - 'src/**'
-    - '!src/blog/drafts/**'
-    - '.eleventy.js'
+      - "src/**"
+      - "!src/blog/drafts/**"
+      - ".eleventy.js"
   workflow_dispatch:
 
 concurrency:

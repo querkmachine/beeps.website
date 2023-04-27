@@ -16,7 +16,8 @@
   &_caption {
     @include spacing.kim-responsive-padding(1, $direction: bottom);
     @include typography.kim-font-size(16);
-    border-bottom: measurements.kim-border-width("hairline") solid colors.kim-color-css("furniture-alt");
+    border-bottom: measurements.kim-border-width("hairline") solid
+      colors.kim-color-css("furniture-alt");
     text-align: left;
   }
   @include media-queries.kim-mq($from: galaxy) {

@@ -1,7 +1,9 @@
 {
   "layout": "generic",
-  "mastheadBreadcrumbs": [{
-    "url": "/about/",
-    "label": "about"
-  }]
+  "mastheadBreadcrumbs": [
+    {
+      "url": "/about/",
+      "label": "about"
+    }
+  ]
 }
