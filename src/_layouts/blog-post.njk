@@ -17,48 +17,49 @@
               </div>
               <h1 class="kim-!-sr" itemprop="name">{{- titleAccessible -}}</h1>
             {% else %}
-            <h1 class="kimHeading-xl" itemprop="name">
-              {{- title -}}
-            </h1>
+              <h1 class="kimHeading-xl" itemprop="name">
+                {{- title -}}
+              </h1>
             {% endif %}
           </header>
         </div>
         <div class="kimGrid">
+          <div class="kimGrid_column kimGrid_column-full">
+            <footer class="kimBody-s">
+              {%- if date -%}
+                <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
+                  <span class="kim-!-sr">Published on</span>
+                  {{ date | formatDate('human') }}
+                </time>
+              {%- endif -%}
+              {%- if date and updated %}&nbsp;&rarr;&nbsp;{% endif -%}
+              {%- if updated -%}
+                <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
+                  <span>Updated</span>
+                  {{ updated | formatDate('human') }}
+                </time>
+              {%- endif -%}
+              {%- if tags -%}
+                <nav aria-label="Post tags" class="kim-!-margin-top-1">
+                  <span class="kim-!-sr">Tagged:</span>
+                  <ul class="kimList kimList-inline kimBody-s">
+                    {% for tag in tags | filterTagList | sort %}
+                      {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+                      <li>
+                        <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
+                          {{- tag | tagify -}}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </nav>
+              {%- endif %}
+            </footer>
+            <hr class="kimRule kimRule-hairline">
+          </div>
+        </div>
+        <div class="kimGrid">
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
-            {% block date %}
-              {%- if date %}
-                <p class="kimBody">
-                  <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
-                    <span class="kimBody-s">Published on</span><br>
-                    {{ date | formatDate('human') }}
-                  </time>
-                </p>
-              {%- endif %}
-              {%- if updated %}
-                <p class="kimBody">
-                  <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
-                    <span class="kimBody-s">Last updated:</span><br>
-                    {{ updated | formatDate('human') }}
-                  </time>
-                </p>
-              {%- endif %}
-            {% endblock %}
-            {%- if tags %}
-              <nav aria-label="Post tags">
-                <p class="kimBody-s kim-!-margin-bottom-1">Tagged as:</p>
-                <ul class="kimBody-s kimList">
-                  {% for tag in tags | filterTagList | sort %}
-                    {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
-                    <li>
-                      <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
-                        {{- tag | tagify -}}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </nav>
-            {%- endif %}
-            <hr class="kimRule">
             {%- if (content | toc) %}
               <nav class="kimToc" aria-labelledby="toc-header">
                 <details class="kimToc_collapsible" data-js="toc">
@@ -67,7 +68,7 @@
                   </summary>
                   {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
                 </details>
-                <hr class="kimRule">
+                <hr class="kimRule kimRule-hairline">
               </nav>
             {%- endif %}
             <div class="kim-!-sr"><a href="{{ siteDomain }}{{ page.url | url }}" itemprop="url">Permalink to this blog post</a></div>
