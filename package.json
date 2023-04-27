@@ -8,6 +8,7 @@
     "clean": "rm -rf _site",
     "serve": "npm run clean && ENVIRONMENT=dev npx @11ty/eleventy --serve",
     "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy",
+    "lint": "npx prettier --write --ignore-unknown .",
     "prepare": "husky install"
   },
   "repository": {
@@ -40,6 +41,6 @@
     "sass": "^1.49.11"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
