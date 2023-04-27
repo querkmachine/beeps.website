@@ -15,9 +15,9 @@ Change is on the horizon, however. More furries than ever are being public about
 
 My [fursona](https://en.wikipedia.org/wiki/Fursona) is a Honduran white bat named Emy who, [appropriately enough, is a robot]({{ '/about/robot/' | url }}). I've [written about my fursona before]({{ '/blog/2022-04-10-a-robot-bat-on-the-internet/' | url }}) and why it's my face on the internet.
 
+{% figure caption='Artwork by <a href="https://twitter.com/integration_art">Integration</a>.' %}
 {% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst it uses the other to repair the parts of the disassembled wing." %}
-
-Art by [Integration](https://twitter.com/integration_art).
+{% endfigure %}
 
 ## I am not my fursona
 
