@@ -8,15 +8,15 @@
   <meta name="generator" content="Eleventy">
   
   {#- Page title #}
-  <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ siteName }}</title>
+  <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ site.name }}</title>
   
   {#- SEO metadata #}
-  <link rel="canonical" href="{{ siteDomain }}{{ page.url}}">
+  <link rel="canonical" href="{{ site.domain }}{{ page.url}}">
   <meta property="og:title" content="{{ title or metadata.title }}">
   <meta property="og:site_name" content="beeps">
-  <meta property="og:url" content="{{ siteDomain }}{{ page.url | url }}">
+  <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ siteDomain }}{{ '/images/opengraph/default.png' | url }}">
+  <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/default.png' | url }}">
   <meta property="og:locale" content="en_GB">
   {%- if description or metadata.description %}
     <meta name="description" content="{{ description or metadata.description }}">

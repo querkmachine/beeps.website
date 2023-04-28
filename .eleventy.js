@@ -31,13 +31,6 @@ module.exports = function (eleventyConfig) {
   // Turn off default log output
   eleventyConfig.setQuietMode(true);
 
-  // Set global constants
-  eleventyConfig.addGlobalData("siteName", "beeps");
-  eleventyConfig.addGlobalData(
-    "siteDomain",
-    process.env.ENVIRONMENT === "prod" ? "https://beeps.website" : ""
-  );
-
   // Load plugins
   eleventyConfig.addPlugin(pluginLogging);
   eleventyConfig.addPlugin(pluginRss);
