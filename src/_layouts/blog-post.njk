@@ -40,7 +40,7 @@
                 </time>
               {%- endif -%}
               {%- if tags -%}
-                <nav aria-label="Post tags" class="kim-!-margin-top-1">
+                <nav aria-label="Post tags" class="kim-!-margin-top-1 kim-!-doNotPrint">
                   <span class="kim-!-sr">Tagged:</span>
                   <ul class="kimList kimList-inline kimBody-s">
                     {% for tag in tags | filterTagList | sort %}
@@ -80,7 +80,7 @@
           </div>
         </div>
       </article>
-      <nav aria-label="Next and previous blog post">
+      <nav aria-label="Next and previous blog post" class="kim-!-doNotPrint">
         <hr class="kimRule kimRule-thick">
         <div class="kimGrid">
           {% if previousPost %}
