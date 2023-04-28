@@ -15,17 +15,13 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 .page-header {
   position: relative;
 }
-.page-header::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 9rem;
+.page-header-background {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  background-color: var(--color-accent-alt);
-  background-image: url("{{ '/assets/images/nebula.jpg' | url }}");
-  background-size: cover;
 }
 .page-header-robat {
   height: auto;
@@ -67,7 +63,9 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
 
 {% block main %}
 <div class="page">
+
   <header class="page-header kim-!-padding-top-9 kim-!-padding-bottom-9">
+    <canvas class="page-header-background" width="1000" height="500" hidden></canvas>
     <div class="kimWrapper">
       {% responsiveImage "./src/assets/images/robat-home.png", "", classes="page-header-robat" %}
       <h1 class="kimHeading-xl kim-!-text-color-accent">Hello universe,<br>I&rsquo;m beeps.</h1>
@@ -98,4 +96,9 @@ description: The personal website of beeps (aka, Kim Grey), the web developer, n
   </section>
 
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ '/assets/javascript/spots.js' | url | cachebust }}"></script>
+<script>new Spots(document.querySelector(".page-header-background"), { heightProportion: .75 })</script>
 {% endblock %}

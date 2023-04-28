@@ -5,6 +5,10 @@ eleventyExcludeFromCollections: true
 
 {% extends 'src/_layouts/layout.njk' %}
 
+{% block beforeMasthead %}
+<canvas class="page-background" id="background" width="1000" height="500" hidden></canvas>
+{% endblock %}
+
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
@@ -29,25 +33,19 @@ eleventyExcludeFromCollections: true
 
 {% block head %}
 <style>
-  html {
-    --color-background: black;
-    --color-text: white;
-  }
-  
-  body {
-    background-image: url({{ '/assets/images/nebula.jpg' | url }});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  .page-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   
   .page-content {
     max-width: 22em;
     margin-inline: auto;
-    font-weight: 700;
     text-align: center;
-    text-shadow: 0 0 .5em hsla(0 100% 0% / 70%);
   }
   
   #robatJail {
@@ -82,4 +80,9 @@ eleventyExcludeFromCollections: true
   }
   
 </style>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ '/assets/javascript/spots.js' | url | cachebust }}"></script>
+<script>new Spots(document.querySelector(".page-background"), { isAnimated: true })</script>
 {% endblock %}
