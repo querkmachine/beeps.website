@@ -65,6 +65,7 @@
   <link rel="shortcut icon" href="{{ '/favicon.ico' | url | cachebust }}">
   
   {#- Page-specific head content #}
+  {% include "src/_includes/development-tag.njk" %}
   {% block head %}{% endblock %}
   
 </head>

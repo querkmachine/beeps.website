@@ -1,0 +1,17 @@
+{%- if site.environment == "dev" %}
+  <style>
+    body::before {
+      content: "Development";
+      padding: .25em 1em .25em .5em;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+      color: white;
+      background-color: red;
+      font-size:smaller;
+      font-weight: bold;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, 100% 0, calc(100% - .5em) 100%, 0 100%);
+    }
+  </style>
+{%- endif %}
