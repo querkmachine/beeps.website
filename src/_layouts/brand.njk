@@ -1,0 +1,66 @@
+{% extends 'src/_layouts/layout.njk' %}
+
+
+{% block main %}
+  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+    <div class="kimWrapper">
+      <article>
+        <div class="kimGrid">
+          <header class="kimGrid_column kimGrid_column-full">
+            <h1 class="kimHeading-xl">
+              {{- title -}}
+            </h1>
+            <hr class="kimRule kimRule-hairline">
+          </header>
+        </div>
+        <div class="kimGrid">
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
+            {%- if (content | toc) %}
+              <nav class="kimToc" aria-labelledby="toc-header">
+                <details class="kimToc_collapsible" data-js="toc">
+                  <summary class="kimToc_collapsibleSummary">
+                    <span class="kimHeading-s" id="toc-header">Contents</span>
+                  </summary>
+                  {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
+                </details>
+                <hr class="kimRule kimRule-hairline">
+              </nav>
+            {%- endif %}
+          </div>
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse">
+            {% block content  %}
+              {{ content | safe }}
+            {% endblock %}
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+{% endblock %}
+
+{% block head %}
+<style>
+  :root {
+    --brand-color-kimberly: #786999;
+    --brand-color-emy: #B3FFB3;
+    --brand-color-ketchup: #DD6031;
+    --brand-color-mustard: #FFD447;
+    --brand-color-black: #334139;
+    --brand-color-white: #ffffff;
+  }
+  .page-swatch {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 10rem;
+    height: 10rem;
+    padding: 1rem;
+    border: 1px solid currentcolor;
+  }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ '/assets/javascript/toc.js' | url | cachebust }}"></script>
+{% endblock %}
