@@ -28,6 +28,7 @@ code {
   padding-block: 0.1em;
   padding-inline: 0.2em;
   white-space: normal;
+  word-break: break-word;
 }
 
 // Code blocks
@@ -42,6 +43,7 @@ pre > code {
   tab-size: 4;
   color: $code-color-text;
   background-color: $code-color-background;
+  overflow-x: auto;
 }
 
 pre[class*="language-"] {
