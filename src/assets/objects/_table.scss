@@ -1,8 +1,10 @@
 @use "../helpers/colors";
 @use "../helpers/measurements";
 @use "../helpers/spacing";
+@use "../helpers/typography";
 
 .kimTable {
+  @include typography.kim-tabular-figures;
   width: 100%;
   border-collapse: collapse;
   th,

@@ -7,6 +7,7 @@
 
 // Common typography rules
 @mixin kim-typography-common {
+  font-feature-settings: "onum";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -102,6 +103,5 @@
 
 // Activate tabular figures (only works if the font supports it)
 @mixin kim-tabular-figures {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
+  font-feature-settings: "tnum", "zero";
 }

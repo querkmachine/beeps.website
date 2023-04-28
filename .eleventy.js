@@ -37,7 +37,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginToc);
 
-  // Copy JS and UI images
+  // Copy JS and assets
+  eleventyConfig.addPassthroughCopy(paths.srcAssets + "/fonts");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/javascript");
 

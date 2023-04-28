@@ -68,7 +68,8 @@ $kim-focus-color-text: #000;
 $kim-font-stacks: (
   body: (
     stack: (
-      "IBM Plex Sans",
+      "Space Grotesk",
+      system-ui,
       sans-serif,
       "Apple Color Emoji",
       "Segoe UI Emoji",
@@ -79,16 +80,16 @@ $kim-font-stacks: (
   ),
   header: (
     stack: (
-      "IBM Plex Mono",
-      monospace,
-      monospace,
+      "Space Grotesk",
+      system-ui,
+      sans-serif,
     ),
-    regular: 500,
+    regular: 550,
     bold: 700,
   ),
   code: (
     stack: (
-      "IBM Plex Mono",
+      "Space Mono",
       monospace,
       monospace,
     ),

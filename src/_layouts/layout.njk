@@ -1,4 +1,4 @@
-{%- set webfontUrl = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" -%}
+{%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
 
 <!doctype html>
 <html lang="en-GB" class="kimPage">
@@ -17,10 +17,6 @@
   
   {#- Page title #}
   <title>{% if title or metadata.title %}{{ title or metadata.title }} &larr; {% endif %}{{ site.name }}</title>
-  
-  {#- Preconnect #}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   
   {#- Stylesheets #}
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
