@@ -21,6 +21,7 @@ code {
   @include typography.kim-font-size(16);
   color: $code-color-text;
   background-color: $code-color-background;
+  font-variant-ligatures: none;
 }
 
 // Unhighlighted inline code
