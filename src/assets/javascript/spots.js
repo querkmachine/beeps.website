@@ -60,7 +60,6 @@ class Spots {
       this.pause();
       this.setStrokeColor();
       this.play();
-      th;
     }).observe(document.documentElement, { attributes: true });
   }
 
