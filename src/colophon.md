@@ -27,8 +27,6 @@ This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely
 
 Type is set in [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) designed by [Florian Karsten](https://floriankarsten.com/) and [Space Mono](https://fonts.google.com/specimen/Space+Mono) designed by [Colophon Foundry](https://www.colophon-foundry.org/).
 
-The nebula imagery is of [the Carina Nebula (NGC 3372)](https://www.flickr.com/photos/gsfc/4398656115), photographed by the Hubble Space Telescope and made available under a Creative Commons BY 2.0 licence.
-
 ## Contents
 
 Words are my own, unless otherwise specified.
