@@ -1,66 +1,88 @@
-const $d = document.documentElement;
-const $container = document.querySelector(".kimColorSchemeSwitch");
-const $toggles = document.getElementsByName("color-scheme");
-const prefersLight = matchMedia("(prefers-color-scheme: light)");
-
-if ($toggles) {
-  initColorScheme();
-}
-
-function initColorScheme() {
-  // Check to see if we already have a preferred scheme stored, if so, use it
-  // If not, base the decision on the user's current light/dark mode preference
-  // with the fallback being dark
-  let configuredColorScheme = isColorSchemeSupported() ? "auto" : "dark";
-  let effectiveColorScheme = "dark";
-
-  if (localStorage.getItem("prefers-color-scheme")) {
-    effectiveColorScheme = configuredColorScheme = localStorage.getItem(
-      "prefers-color-scheme"
+class ColorScheme {
+  constructor() {
+    this.$d = document.documentElement;
+    this.$container = document.querySelector(".kimColorSchemeSwitch");
+    this.$toggles = this.$container.querySelectorAll(
+      ".kimColorSchemeSwitch_input"
     );
+
+    this.isPrefersColorSchemeSupported =
+      matchMedia("(prefers-color-scheme)").media !== "not all";
+    this.doesUserPreferLight = this.isPrefersColorSchemeSupported
+      ? matchMedia("(prefers-color-scheme: light)").matches
+      : false;
+
+    // Set some defaults
+    // configured = what the user setting is [auto, dark, light]
+    // effective = what is actually being used by the page [dark, light]
+    this.configuredColorScheme = this.isPrefersColorSchemeSupported
+      ? "auto"
+      : "dark";
+    this.effectiveColorScheme = "dark";
+
+    // Let's goooooo
+    this.init();
+
+    // Init controls if they're present on this page
+    if (this.$container && this.$toggles) {
+      this.initControls();
+    }
   }
 
-  if (configuredColorScheme === "auto") {
-    effectiveColorScheme = prefersLight.matches ? "light" : "dark";
+  init() {
+    // If the user already has defined a preference, use it.
+    // effectiveColorScheme may temporarily be set to "auto" here (which we
+    // don't want), but we correct for that in the next bit.
+    if (localStorage.getItem("prefers-color-scheme")) {
+      this.effectiveColorScheme = this.configuredColorScheme =
+        localStorage.getItem("prefers-color-scheme");
+    }
+
+    // If the user preference is "auto", determine whether to use light or dark
+    // depending on their OS preference
+    if (this.configuredColorScheme === "auto") {
+      this.effectiveColorScheme = this.doesUserPreferLight ? "light" : "dark";
+    }
+
+    // Set and save the scheme based on what we've worked out so far
+    this.setColorScheme();
   }
 
-  // If (prefers-color-scheme) isn't supported, remove the 'auto' option
-  if (!isColorSchemeSupported()) {
-    document.getElementById("color-scheme-auto").parentElement.remove();
-  }
+  initControls() {
+    console.log("controls init");
+    // If prefers-color-scheme isn't supported, remove the "auto" option from the controls
+    if (!this.isPrefersColorSchemeSupported) {
+      this.$container.querySelector("[value='auto']").parentElement.remove();
+    }
 
-  // Set default values
-  setColorScheme(configuredColorScheme, effectiveColorScheme);
+    // Loop through each toggle and do some stuff
+    this.$toggles.forEach(($toggle) => {
+      // Add change event binding to set the new colour scheme
+      $toggle.addEventListener("change", () => {
+        this.configuredColorScheme = $toggle.value;
+        this.effectiveColorScheme =
+          $toggle.value === "auto"
+            ? this.doesUserPreferLight
+              ? "light"
+              : "dark"
+            : $toggle.value;
+        this.setColorScheme();
+      });
 
-  // Loop through each toggle and do some stuff
-  $toggles.forEach(($toggle) => {
-    // Bind the change event... for when someone changes it
-    $toggle.addEventListener("change", () => {
-      setColorScheme(
-        $toggle.value,
-        $toggle.value === "auto"
-          ? prefersLight.matches
-            ? "light"
-            : "dark"
-          : $toggle.value
-      );
+      // Check the toggle by default if this is our current scheme
+      if ($toggle.value === this.configuredColorScheme) {
+        $toggle.checked = true;
+      }
     });
 
-    // While we're here, if this is our current color scheme, set it as checked by default
-    if ($toggle.value === configuredColorScheme) {
-      $toggle.checked = true;
-    }
-  });
+    // Show the controls
+    this.$container.removeAttribute("hidden");
+  }
 
-  // Ready to gooooooo
-  $container.removeAttribute("hidden");
+  setColorScheme() {
+    localStorage.setItem("prefers-color-scheme", this.configuredColorScheme);
+    this.$d.dataset.colorScheme = this.effectiveColorScheme;
+  }
 }
 
-function setColorScheme(configuredColorScheme, effectiveColorScheme) {
-  localStorage.setItem("prefers-color-scheme", configuredColorScheme);
-  $d.dataset.colorScheme = effectiveColorScheme;
-}
-
-function isColorSchemeSupported() {
-  return matchMedia("(prefers-color-scheme)").media !== "not all";
-}
+new ColorScheme();
