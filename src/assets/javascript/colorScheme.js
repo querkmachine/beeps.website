@@ -2,9 +2,6 @@ class ColorScheme {
   constructor() {
     this.$d = document.documentElement;
     this.$container = document.querySelector(".kimColorSchemeSwitch");
-    this.$toggles = this.$container.querySelectorAll(
-      ".kimColorSchemeSwitch_input"
-    );
 
     this.isPrefersColorSchemeSupported =
       matchMedia("(prefers-color-scheme)").media !== "not all";
@@ -24,7 +21,7 @@ class ColorScheme {
     this.init();
 
     // Init controls if they're present on this page
-    if (this.$container && this.$toggles) {
+    if (this.$container) {
       this.initControls();
     }
   }
@@ -49,14 +46,17 @@ class ColorScheme {
   }
 
   initControls() {
-    console.log("controls init");
+    const $toggles = this.$container.querySelectorAll(
+      ".kimColorSchemeSwitch_input"
+    );
+
     // If prefers-color-scheme isn't supported, remove the "auto" option from the controls
     if (!this.isPrefersColorSchemeSupported) {
       this.$container.querySelector("[value='auto']").parentElement.remove();
     }
 
     // Loop through each toggle and do some stuff
-    this.$toggles.forEach(($toggle) => {
+    $toggles.forEach(($toggle) => {
       // Add change event binding to set the new colour scheme
       $toggle.addEventListener("change", () => {
         this.configuredColorScheme = $toggle.value;
