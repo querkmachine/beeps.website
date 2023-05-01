@@ -11,7 +11,15 @@ A colophon is a short section you can find at the back of some books, giving som
 
 This website was built by me, beeps. The code for this site is [open source and available on GitHub](https://github.com/querkmachine/beeps.website).
 
-I use the static site generator [Eleventy](http://11ty.dev) with the following plugins: [eleventy-img](https://github.com/11ty/eleventy-img), [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss) and [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc).
+I use the static site generator [Eleventy](http://11ty.dev) with the following plugins:
+
+- [eleventy-img](https://github.com/11ty/eleventy-img)
+- [eleventy-plugin-directory-output](https://github.com/11ty/eleventy-plugin-directory-output)
+- [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss)
+- [eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight)
+- [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc)
+
+Markdown content is parsed by [markdown-it](https://github.com/markdown-it/markdown-it) with the [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) plugin.
 
 Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
 
