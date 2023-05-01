@@ -5,8 +5,7 @@
   "metadata": {
     "title": "beeps' blog",
     "subtitle": "The inane ramblings of beeps.",
-    "url": "https://beeps.website/",
-    "feedUrl": "https://beeps.website/feed.xml",
+    "feedUrl": "/feed.xml",
     "author": {
       "name": "beeps",
       "email": "hi@berly.kim"
@@ -18,16 +17,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
+  <link href="{{ metadata.feedUrl | url | absoluteUrl(site.domain) }}" rel="self"/>
+  <link href="{{ site.domain }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.url }}</id>
+  <id>{{ site.domain }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.blog | reverse %}
-  {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.domain) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
