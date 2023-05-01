@@ -9,6 +9,16 @@ const markdownConfig = markdownIt({
   tabIndex: false,
 });
 
+const markdownFilter = function (str) {
+  return markdownConfig.render(str);
+};
+
+const markdownFilterInline = function (str) {
+  return markdownConfig.renderInline(str);
+};
+
 module.exports = {
   markdownConfig,
+  markdownFilter,
+  markdownFilterInline,
 };

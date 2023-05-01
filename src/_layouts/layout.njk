@@ -18,8 +18,8 @@
   {#- Page title #}
   {% set fullTitle %}
     {{- site.name -}}
-    {%- for item in mastheadBreadcrumbs %} / {{ item.label }}{% endfor -%}
-    {%- if title %} / {{ title }}{% endif -%}
+    {%- for item in mastheadBreadcrumbs %} / {{ item.label | markdownInline | safe }}{% endfor -%}
+    {%- if title %} / {{ title | markdownInline | safe }}{% endif -%}
   {% endset %}
   <title>{{ fullTitle | safe }}</title>
   

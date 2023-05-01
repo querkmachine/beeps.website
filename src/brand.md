@@ -1,6 +1,6 @@
 ---
 layout: brand.njk
-title: beeps’ brand
+title: beeps' brand
 description: Style guide for my personal projects, including this website.
 ---
 

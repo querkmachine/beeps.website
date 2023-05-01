@@ -17,7 +17,11 @@ const {
   filterCommonTags,
   formatAsTag,
 } = require("./config/blogTags.js");
-const { markdownConfig } = require("./config/markdown.js");
+const {
+  markdownConfig,
+  markdownFilter,
+  markdownFilterInline,
+} = require("./config/markdown.js");
 const { processOpenGraphImages, splitLines } = require("./config/opengraph.js");
 const { compileSass } = require("./config/sass.js");
 const {
@@ -99,6 +103,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("tagify", formatAsTag);
   eleventyConfig.addFilter("getArchiveYears", getArchiveYears);
   eleventyConfig.addFilter("getArchivePostsByYear", getArchivePostsByYear);
+  eleventyConfig.addFilter("markdown", markdownFilter);
+  eleventyConfig.addFilter("markdownInline", markdownFilterInline);
 
   return {
     markdownTemplateEngine: "njk",
