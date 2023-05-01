@@ -4,7 +4,6 @@ const paths = require("./config/paths.json");
 // 11ty plugins
 const pluginLogging = require("@11ty/eleventy-plugin-directory-output");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginToc = require("eleventy-plugin-toc");
 
 // Helpful functions that do stuff
@@ -38,7 +37,6 @@ module.exports = function (eleventyConfig) {
   // Load plugins
   eleventyConfig.addPlugin(pluginLogging);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginToc);
 
   // Copy JS and assets

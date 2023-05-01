@@ -16,10 +16,11 @@ I use the static site generator [Eleventy](http://11ty.dev) with the following p
 - [eleventy-img](https://github.com/11ty/eleventy-img)
 - [eleventy-plugin-directory-output](https://github.com/11ty/eleventy-plugin-directory-output)
 - [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss)
-- [eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight)
 - [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc)
 
 Markdown content is parsed by [markdown-it](https://github.com/markdown-it/markdown-it) with the [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) plugin.
+
+Code is highlighted using [highlight.js](https://highlightjs.org/) using a custom theme based on [Nova](http://nova.app)'s 'Neon' theme.
 
 Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
 
