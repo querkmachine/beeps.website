@@ -10,6 +10,7 @@
 @use "sass:color";
 
 .kimMasthead {
+  @include typography.kim-font-size(24);
   @include typography.kim-font-stack(header, $weight: bold);
   color: colors.kim-color-css("text");
   background-color: colors.kim-color-css("background");
@@ -22,7 +23,6 @@
       colors.kim-color-css("furniture");
   }
   a {
-    @include typography.kim-font-size(24);
     @include links.kim-link-no-underline;
   }
 }

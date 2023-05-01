@@ -32,7 +32,7 @@
                   {{ date | formatDate('human') }}
                 </time>
               {%- endif -%}
-              {%- if date and updated %}&nbsp;&rarr;&nbsp;{% endif -%}
+              {%- if date and updated -%}<span aria-hidden="true">&thinsp;/&thinsp;</span>{%- endif -%}
               {%- if updated -%}
                 <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
                   <span>Updated</span>

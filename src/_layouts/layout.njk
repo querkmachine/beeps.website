@@ -16,7 +16,12 @@
   <link rel="pingback" href="https://webmention.io/beeps.website/xmlrpc">
   
   {#- Page title #}
-  <title>{% if title %}{{ title }} &larr; {% endif %}{{ site.name }}</title>
+  {% set fullTitle %}
+    {{- site.name -}}
+    {%- for item in mastheadBreadcrumbs %} / {{ item.label }}{% endfor -%}
+    {%- if title %} / {{ title }}{% endif -%}
+  {% endset %}
+  <title>{{ fullTitle | safe }}</title>
   
   {#- Stylesheets #}
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
@@ -78,7 +83,8 @@
           <span aria-hidden="true">{{ site.name }}</span>{#
         #}</a>
         {% for item in mastheadBreadcrumbs %}
-        &rarr; <a class="kimLink-plain" href="{{ item.url | url }}">{{ item.label }}</a>
+          <span aria-hidden="true">&thinsp;/&thinsp;</span>
+          <a class="kimLink-plain" href="{{ item.url | url }}">{{ item.label }}</a>
         {% endfor %}
       </div>
     </header>

@@ -8,6 +8,9 @@ eleventyComputed:
   title: Blog posts tagged '{{ tag }}'
 description: Archive of beeps' blog posts.
 permalink: "/blog/{{ tag | slugify }}/"
+mastheadBreadcrumbs:
+  - url: "/blog/"
+    label: "Blog"
 ---
 
 {% set postsList = collections[tag] %}

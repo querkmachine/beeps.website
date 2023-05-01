@@ -10,7 +10,7 @@ module.exports = {
   mastheadBreadcrumbs: [
     {
       url: "/blog/",
-      label: "blog",
+      label: "Blog",
     },
   ],
   eleventyComputed: {
