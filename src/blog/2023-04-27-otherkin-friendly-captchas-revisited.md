@@ -55,10 +55,6 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
 ```
 <!-- prettier-ignore-end -->
 
-{% character variant="broken" %}
-The syntax highlighting is a little messed up because of the comments in the selectors. Don't panic, the CSS is valid.
-{% endcharacter %}
-
 Apply the code according to [your browser's requirements]({{ '/blog/2023-04-26-using-userstyles-in-2023/' | url }}). You can see if it's worked by going to the [reCAPTCHA demo](https://google.com/recaptcha/api2/demo) or [hCaptcha demo](https://accounts.hcaptcha.com/demo) pages.
 
 If there are other CAPTCHA systems that aren't included yet, let me know! I'll try and update this style to account for them.
