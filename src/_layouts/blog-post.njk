@@ -15,10 +15,12 @@
               <div class="kimHeading-xl" aria-hidden="true">
                 {% include "src/images/headings/" + titleSvg %}
               </div>
-              <h1 class="kim-!-sr" itemprop="name">{{- titleAccessible | markdownInline -}}</h1>
+              <h1 class="kim-!-sr" itemprop="name">
+                {{- titleAccessible | markdownInline | safe -}}
+              </h1>
             {% else %}
               <h1 class="kimHeading-xl" itemprop="name">
-                {{- title | markdownInline -}}
+                {{- title | markdownInline | safe -}}
               </h1>
             {% endif %}
           </header>
