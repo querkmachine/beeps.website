@@ -14,8 +14,6 @@ class Spots {
     this.$canvas = $element;
     this.ctx = this.$canvas.getContext("2d");
 
-    this.$canvas.removeAttribute("hidden");
-
     this.animated = this.settings.isAnimated;
     this.playing = this.animated;
     this.lastSpotTimestamp = null;
@@ -24,11 +22,16 @@ class Spots {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    // Let's gooooooo
-    this.setCanvasDimensions();
-    this.setStrokeColor();
-    this.setupObservers();
-    this.play();
+    // Wait until the page has finished loading other stuff. Pretty much all of
+    // it is higher priority than our fun spot decor
+    window.addEventListener("load", () => {
+      // Let's gooooooo
+      this.$canvas.removeAttribute("hidden");
+      this.setCanvasDimensions();
+      this.setStrokeColor();
+      this.setupObservers();
+      this.play();
+    });
   }
 
   setCanvasDimensions() {
