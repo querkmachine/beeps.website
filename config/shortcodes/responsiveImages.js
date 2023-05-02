@@ -8,6 +8,12 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
   }
 
+  const defaultArgs = {
+    lazy: true,
+    classes: "",
+  };
+  const settings = { ...defaultArgs, ...args };
+
   let metadata = await pluginImages(src, {
     widths: [600, 900, 1200, null],
     formats: ["webp"],
@@ -32,8 +38,9 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     .join("\n")}
     <img src="${originalSize.url}" width="${originalSize.width}" height="${
     originalSize.height
-  }" loading="lazy" alt="${alt}" ${
-    args?.classes ? `class="${args?.classes}"` : ""
+  }" alt="${alt}"${
+    (settings.lazy ? ` loading="lazy"` : "",
+    settings.classes ? ` class="${settings.classes}"` : "")
   }>
   </picture>`;
 };
