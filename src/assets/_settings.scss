@@ -67,8 +67,8 @@ $kim-focus-color-text: #000;
 
 $kim-font-stacks: (
   body: (
-    stack: (
-      "Space Grotesk",
+    font: "Space Grotesk",
+    fallbacks: (
       system-ui,
       sans-serif,
       "Apple Color Emoji",
@@ -79,8 +79,8 @@ $kim-font-stacks: (
     bold: 700,
   ),
   header: (
-    stack: (
-      "Space Grotesk",
+    font: "Space Grotesk",
+    fallbacks: (
       system-ui,
       sans-serif,
     ),
@@ -88,8 +88,10 @@ $kim-font-stacks: (
     bold: 700,
   ),
   code: (
-    stack: (
-      "Space Mono",
+    font: "Space Mono",
+    fallbacks: (
+      Hack,
+      Consolas,
       monospace,
       monospace,
     ),

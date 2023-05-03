@@ -30,7 +30,10 @@
     @error "Unknown font stack `#{$stack}` - expected a family from the font families map.";
   }
   $stack-map: map.get(settings.$kim-font-stacks, $stack);
-  font-family: map.get($stack-map, "stack") if($important, !important, null);
+  font-family: map.get($stack-map, "fallbacks") if($important, !important, null);
+  html.webfont-loaded & {
+    font-family: map.get($stack-map, "font") if($important, !important, null);
+  }
   @if $weight {
     @if map.has-key($stack-map, $weight) {
       font-weight: map.get($stack-map, $weight)

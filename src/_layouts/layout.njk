@@ -24,7 +24,7 @@
   <title>{{ fullTitle | safe }}</title>
   
   {#- Stylesheets #}
-  <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all';document.documentElement.classList.add('webfont-loaded')">
   <noscript><link rel="stylesheet" href="{{ webfontUrl }}"></noscript>
   <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
   
