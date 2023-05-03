@@ -31,7 +31,10 @@
   &_input {
     @include a11y.kim-visually-hidden;
     &:checked + #{$self}_label {
-      background-color: colors.kim-color-css("link-accent");
+      background-color: colors.kim-color-css("link-hover-accent");
+    }
+    &:checked + #{$self}_label::before {
+      content: "";
     }
     &:focus + #{$self}_label {
       @include a11y.kim-focus-ring;
@@ -47,6 +50,17 @@
     border-style: solid;
     border-color: currentcolor;
     color: colors.kim-color-css("link");
+    font-weight: bold;
     cursor: pointer;
+    &::before {
+      display: inline-block;
+      width: 1em;
+      height: 0.5em;
+      margin-right: 0.5em;
+      border-width: 0 0 0.2em 0.2em;
+      border-style: solid;
+      border-color: transparent transparent currentcolor currentcolor;
+      transform: translateY(-0.2em) rotate(-45deg);
+    }
   }
 }
