@@ -59,7 +59,10 @@ class Spots {
     }).observe(this.$canvas);
 
     // Mutation observer to see if the colour scheme has been changed
-    new MutationObserver(() => {
+    new MutationObserver((mutations) => {
+      if (mutations[0].attributeName !== "data-color-scheme") {
+        return;
+      }
       this.pause();
       this.setStrokeColor();
       this.play();
