@@ -47,6 +47,10 @@ module.exports = function (eleventyConfig) {
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(paths.src + "/.htaccess");
 
+  // Copy Google Search Console verification file, don't compile it
+  eleventyConfig.ignores.add(paths.src + "/googlea3140dc71dc0155f.html");
+  eleventyConfig.addPassthroughCopy(paths.src + "/googlea3140dc71dc0155f.html");
+
   // Copy favicons/OpenGraph images
   eleventyConfig.addPassthroughCopy(paths.src + "/android-chrome-*");
   eleventyConfig.addPassthroughCopy(paths.src + "/apple-touch-icon.png");
