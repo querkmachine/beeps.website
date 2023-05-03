@@ -1,29 +1,18 @@
----json
-{
-  "permalink": "feed.xml",
-  "eleventyExcludeFromCollections": true,
-  "metadata": {
-    "title": "beeps' blog",
-    "subtitle": "The inane ramblings of beeps.",
-    "feedUrl": "/feed.xml",
-    "author": {
-      "name": "beeps",
-      "email": "hi@berly.kim"
-    }
-  }
-}
+---
+permalink: "/feed.xml"
+eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl | url | absoluteUrl(site.domain) }}" rel="self"/>
+  <title>{{ site.blogName }}</title>
+  <subtitle>The inane ramblings of beeps.</subtitle>
+  <link href="{{ permalink | url | absoluteUrl(site.domain) }}" rel="self"/>
   <link href="{{ site.domain }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.domain }}</id>
   <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
+    <name>{{ site.authorName }}</name>
+    <email>{{ site.authorEmail }}</email>
   </author>
   {%- for post in collections.blog | reverse %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.domain) }}{% endset %}
