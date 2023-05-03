@@ -7,7 +7,7 @@
   {#- Technical metadata #}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="generator" content="Eleventy">
+  <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="alternate" type="application/atom+xml" title="beeps' blog" href="{{ '/feed.xml' | url }}">
   <link rel="me" href="https://chitter.xyz/@batbeeps">
   <link rel="me" href="https://twitter.com/batbeeps">
@@ -32,7 +32,8 @@
   <link rel="preload" as="style" href="{{ webfontUrl }}">
   
   {#- SEO metadata #}
-  <link rel="canonical" href="{{ site.domain }}{{ page.url}}">
+  <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
+  <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:site_name" content="beeps">
   <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
@@ -43,7 +44,6 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/default.png' | url }}">
   {%- endif %}
-  <meta property="og:locale" content="en_GB">
   {%- if description %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">
@@ -56,8 +56,8 @@
   {%- endif %}
   
   {#- Theming/icons #}
-  <meta name="theme-color" content="#FFD447" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#786999">
+  <meta name="theme-color" content="#786999" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#FFD447">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url | cachebust }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url | cachebust }}">
   <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#FFD447">
