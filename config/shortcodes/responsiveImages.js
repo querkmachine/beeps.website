@@ -15,7 +15,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
   const settings = { ...defaultArgs, ...args };
 
   let metadata = await pluginImages(src, {
-    widths: [600, 900, 1200, null],
+    widths: [300, 600, 900, 1200],
     formats: ["webp"],
     urlPath: "/images/",
     outputDir: paths.output + "/images/",
@@ -33,7 +33,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
         imageFormat[0].format
       }" srcset="${imageFormat
         .map((entry) => entry.srcset)
-        .join(", ")}" sizes="100vw">`;
+        .join(", ")}" sizes="(min-width: 768px) 66vw, 100vw">`;
     })
     .join("\n")}
     <img src="${originalSize.url}" width="${originalSize.width}" height="${
