@@ -13,7 +13,7 @@ Change is on the horizon, however. More furries than ever are being public about
 
 ## My fursona
 
-My [fursona](https://en.wikipedia.org/wiki/Fursona) is a Honduran white bat named Emy who, [appropriately enough, is a robot]({{ '/about/robot/' | url }}). I've [written about my fursona before]({{ '/blog/2022-04-10-a-robot-bat-on-the-internet/' | url }}) and why it's my face on the internet.
+My [fursona](https://en.wikipedia.org/wiki/Fursona) is a Honduran white bat named Emy who, [appropriately enough, is a robot]({{ '/about/nonhuman/' | url }}). I've [written about my fursona before]({{ '/blog/2022-04-10-a-robot-bat-on-the-internet/' | url }}) and why it's my face on the internet.
 
 {% figure caption='Artwork by <a href="https://twitter.com/integration_art">Integration</a>.' %}
 {% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst it uses the other to repair the parts of the disassembled wing." %}
@@ -21,7 +21,7 @@ My [fursona](https://en.wikipedia.org/wiki/Fursona) is a Honduran white bat name
 
 ## I am not my fursona
 
-Some people assume that because [I identify as a robot]({{ '/about/robot/' | url }}), and my fursona is a robot, that I identify as my fursona specifically.
+Some people assume that because [I identify as a robot]({{ '/about/nonhuman/' | url }}), and my fursona is a robot, that I identify as my fursona specifically.
 
 This is not the case. I have a different perception of myself as a robot that is separate from and unrelated to my fursona, barring some shared aesthetics (because, unsurprisingly, those are aesthetics that I like). My fursona is a representation of me as an individual, but it is not specifically me.
 

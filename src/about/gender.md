@@ -11,7 +11,7 @@ This is because I find gender to be irrelevant to how I perceive myself, live my
 
 I use [it/its pronouns](https://en.pronouns.page/it/its).
 
-I'm conscious that many people feel uncomfortable using it/its pronouns as they consider them to be dehumanising, but given [I do not identify as human]({{ '/about/robot/' | url }}), I hope that people try them out.
+I'm conscious that many people feel uncomfortable using it/its pronouns as they consider them to be dehumanising, but given [I do not identify as human]({{ '/about/nonhuman/' | url }}), I hope that people try them out.
 
 If you're still uncomfortable with using it/its, then use [singular they/them](https://en.pronouns.page/they/them).
 

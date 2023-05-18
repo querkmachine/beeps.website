@@ -9,7 +9,7 @@ February, perhaps congruently with it being the shortest month, has not lent its
 I spent nearly half of the month bogged down with the flu, and even after recovering I mainly just wanted to catch up on the 'relaxation' part of the prescribed 'rest and relaxation'. It turns out that feeling like a waddling bag of mucus is not particularly relaxing.
 
 {% character variant="dab" %}
-New series of _Aggretsuko_, _Battlebots_ and _Drive to Survive_ also dropped on Netflix this month and, c'mon, [I'm only non-human]({{ '/about/robot/' | url }}).
+New series of _Aggretsuko_, _Battlebots_ and _Drive to Survive_ also dropped on Netflix this month and, c'mon, [I'm only non-human]({{ '/about/nonhuman/' | url }}).
 {% endcharacter %}
 
 ## Year of Writing

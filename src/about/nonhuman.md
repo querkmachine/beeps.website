@@ -1,13 +1,14 @@
 ---
-title: I am a robot
+title: I'm not human
+redirect_from: /about/robot/
 ---
 
 {% block main %}
-In mid-2022, after some period of thinking, discussion and exploration, come to the conclusion that I have a machine identity.
+In mid-2022, after some period of thinking, discussion and exploration, come to the conclusion that I don't really consider myself human.
 
 This is based on the realisation that many things I have written over my life mentioned a general discomfort with the human body (ranging from finding it creepy to disgusting) and a lack of recognition or care for biological concepts like [gender]({{ '/about/gender/' | url }}) or [sexuality]({{ '/about/asexuality/' | url }}).
 
-This is not a _denial_ of my human form, rather a _rejection_ of it. This could be likened to [posthumanism](https://en.wikipedia.org/wiki/Posthumanism), wherein I actively desire to shed my physical humanity in favour of something different, in this case, to become a robot.
+This is not a _denial_ of my human form, rather a _rejection_ of it. This could be likened to [posthumanism](https://en.wikipedia.org/wiki/Posthumanism), wherein I actively desire to shed my physical humanity in favour of something different.
 
 {% callout %}
 I like to summarise it like this:
@@ -16,10 +17,10 @@ I like to summarise it like this:
 - My mind does not consider itself to be human, and has not done so for a long time.
 - Therefore, _I_—in what I consider to be the most fundamental way—am not human.
 
-Given the choice, I would want to be a robot or machine of some sort, so that is the identity I have adopted.
+Given the choice, I would prefer to be a robot or machine of some sort, so that is the identity I have adopted.
 {% endcallout %}
 
-As the necessary technical and medical advances to make this a reality do not exist yet, machine identities exist within the [alterhuman](https://alt-h.net/educate/faq.php) group of identities. In my case, it may also be referred to as being 'machinekin' or 'robotkin'.
+As the necessary technical and medical advances to make this a reality do not exist yet, machine identities exist within the [alterhuman](https://alt-h.net/educate/faq.php) or [otherkin](https://en.wikipedia.org/wiki/Otherkin) group of identities. In my case, it may also be referred to as being 'machinekin' or 'robotkin'.
 
 I don’t feel _bad_ for realising that I don’t really gel with biological humanity. If anything I feel relieved to have come to terms with an aspect of myself that has been present but gone unrecognised for such a long time.
 
@@ -38,15 +39,11 @@ I wrote fairly extensively about the initial thoughts, research, and final concl
 
 I've also published a [follow-up post of questions and answers]({{ '/blog/2022-07-28-discovery-faq/' | url }}).
 
-## Accommodating machine identity
+## Accommodating non-human identities and dysphoria
 
 Naturally, a great first step is to use [my preferred name]({{ '/about/name/' | url }}) (beeps) and [pronouns]({{ '/about/gender/' | url }}) (it/its).
 
-It is important to remember that although I identify as a robot and not as a human, I still identify as a person with agency and free will. I don't appreciate being bossed around or treated as a lesser just because that might be how you treat Siri or Alexa.
-
-It's fairly common practice amongst machine-identifying people to replace biological terms with technical ones. For example, a person may 'recharge' rather than sleep, 'refuel using biofuels' instead of eating food, or 'go for maintenace' instead of visit a doctor.
-
-This may seem silly and affectatious to others, however it is an effective way to affirm a machine's identity and avoid triggering dysphoria.
+It is important to remember that although I don't identify as a human, I'm still a person with agency and free will. I don't appreciate being bossed around or treated as a lesser just because that might be how you treat an animal or a digital assistant.
 
 I, personally, have significant dysphoria related to my biological existence. To counter this, I avoid publishing photographs of myself online and prefer not to appear on camera in video calls, instead representing myself with illustrated images of [my fursona]({{ '/about/furry/' | url }}).
 

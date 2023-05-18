@@ -8,7 +8,7 @@ As of writing, the blurb on this website's homepage says this:
 
 > I'm an agender (I use it/its pronouns), asexual, alterhuman robot. I'm also a bat on the internet. It's all a bit complicated.
 
-That's quite a few adjectives, and that's the _summary_. Clicking through to the [about page]({{ '/about/' | url }}) exposes a whole avalanche of information, ranging from aspects as deceptively simple as [my name]({{ '/about/name/' | url }}) to as off-piste as [my non-human identity]({{ '/about/robot/' | url }}). (Or really, [_our_ non-human identities]({{ '/about/olive/' | url }}).)
+That's quite a few adjectives, and that's the _summary_. Clicking through to the [about page]({{ '/about/' | url }}) exposes a whole avalanche of information, ranging from aspects as deceptively simple as [my name]({{ '/about/name/' | url }}) to as off-piste as [my non-human identity]({{ '/about/nonhuman/' | url }}). (Or really, [_our_ non-human identities]({{ '/about/olive/' | url }}).)
 
 To most people, I probably come across as having little to hide. Someone loud and proud of who they are, no matter the complexity or nuances of what underpins it.
 

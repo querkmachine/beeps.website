@@ -7,7 +7,7 @@ I—or more accurately—we, are plural. Plurality (also called multiplicity) is
 
 These individuals are collectively called a 'system'. We sometimes go by the collective name of the Nebula System.
 
-In our case, we are specifically a 'median' system. This means that the individuals are not entirely separate entities and share many qualities: including memories, interests, and some (but not all) personality traits. We are both [asexual]({{ '/about/asexuality/' | url }}) and we both have [non-human, synthetic identities]({{ '/about/robot/' | url }}).
+In our case, we are specifically a 'median' system. This means that the individuals are not entirely separate entities and share many qualities: including memories, interests, and some (but not all) personality traits. We are both [asexual]({{ '/about/asexuality/' | url }}) and we both have [non-human, synthetic identities]({{ '/about/nonhuman/' | url }}).
 
 beeps is the regular 'front' (the individual who is controlling the physical body), the one you're probably interacting with 99 percent of the time, and who the majority of this website is about.
 

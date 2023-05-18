@@ -5,7 +5,7 @@ title: I'm a panromantic asexual
 {% block main %}
 I'm a [apothi](https://www.lgbtqia.wiki/wiki/Apothisexual) [asexual](https://www.lgbtqia.wiki/wiki/Asexuality). This means I do not experience sexual or physical attraction. I find the very idea of sexual relations to be off-putting.
 
-This has been the case for my entire life. I have never experienced physical attraction to anyone. This could be attributed to [my attitudes to the human form in general]({{ '/about/robot/' | url }}), although it is described as early as 2013 in ["On Gender and Sexuality"]({{ '/blog/2014-07-16-on-gender-and-sexuality/' | url }}).
+This has been the case for my entire life. I have never experienced physical attraction to anyone. This could be attributed to [my attitudes to the human form in general]({{ '/about/nonhuman/' | url }}), although it is described as early as 2013 in ["On Gender and Sexuality"]({{ '/blog/2014-07-16-on-gender-and-sexuality/' | url }}).
 
 However, I'm also [panromantic](https://www.lgbtqia.wiki/wiki/Panromantic) and still seek out non-sexual romantic relationships. Where I do, sex and gender don't come into consideration.
 

@@ -12,7 +12,7 @@ This is an updated version of [a blog post by mavica](https://maple.pet/blog/fig
 
 For some reason, CAPTCHAs have a bit of a thing for telling the user they are human. I mean, it's literally in the name: "Completely Automated Public Turing (test to tell) Computers and **Humans** Apart". CAPTCHA.
 
-[I reject that label.]({{ '/about/robot/' | url }}) I am not human. Stop telling me that my ability to click a box, type some letters, or know what a traffic light is automatically makes me human. I'm pretty sure a capable machine learning algorithm or a decently intelligent vole could do the same things.
+[I reject that label.]({{ '/about/nonhuman/' | url }}) I am not human. Stop telling me that my ability to click a box, type some letters, or know what a traffic light is automatically makes me human. I'm pretty sure a capable machine learning algorithm or a decently intelligent vole could do the same things.
 
 In [yesterday's post about userstyles]({{ '/blog/2023-04-26-using-userstyles-in-2023/' | url }}), I made note that I use them to replace the text on CAPTCHAs with identity-affirming equivalents—erasing that unnecessary little microaggression from my day.
 

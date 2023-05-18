@@ -14,7 +14,7 @@ If you think that's a problem... then that's your problem.
 <strong class="kimHeading-s">[My name is beeps.]({{ '/about/name/' | url }})</strong>
 With or without an uppercase 'b'. I also go by Kim sometimes, but I prefer that folks call me beeps.
 
-<strong class="kimHeading-s">[I'm not a human.]({{ '/about/robot/' | url }})</strong>
+<strong class="kimHeading-s">[I'm not a human.]({{ '/about/nonhuman/' | url }})</strong>
 I don't relate well to my physical humanity, which is a source of significant dysphoria. Relating myself to machines, and robots in particular, helps alleviate some of that.
 
 <strong class="kimHeading-s">[I'm agender.]({{ '/about/gender/' | url }})</strong>
