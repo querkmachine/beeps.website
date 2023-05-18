@@ -23,6 +23,9 @@ I don't consider myself to be female, male, or anything in-between. I use it/its
 <strong class="kimHeading-s">[I'm asexual.]({{ '/about/asexuality/' | url }})</strong>
 I don't experience physical or sexual attraction. This doesn't affect day-to-day life that much, but it's still a reasonably important part of who I am!
 
+<strong class="kimHeading-s">[I'm neurodivergent and have anxiety.]({{ '/about/neurodivergent/' | url }})</strong>
+My brain works a little differently to most, and I can struggle to operate in some situations.
+
 <strong class="kimHeading-s">[I'm a furry.]({{ '/about/furry/' | url }})</strong>
 I've been in the furry fandom for over half my life and I owe it a lot for giving me the skills and experience I have today. I try to give back where I can.
 
