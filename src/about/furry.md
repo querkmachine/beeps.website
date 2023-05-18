@@ -23,7 +23,7 @@ My primary [fursona](https://en.wikipedia.org/wiki/Fursona) is a Honduran white 
 
 ## My secondary fursona: Ash
 
-I also have a secondary fursona, Ash. Ash is a former human who was mutated into a fictional alien-hybrid species named [amphimorpho](https://amphimorpho.carrd.co/). Amphimorpho are capable of shapeshifting,
+I also have a secondary fursona, Ash. Ash is a former human who was mutated into a fictional alien-hybrid species named [amphimorpho](https://amphimorpho.carrd.co/).
 
 {% figure caption='Artwork by <a href="https://ko-fi.com/epsilonphi">EpsilonPhi</a>.' %}
 {% responsiveImage "./src/images/ash-by-epsilonphi.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair. It's coloured a mix of mix of black and white, except for neon green inner ears and a gooey green tail tip." %}

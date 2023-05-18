@@ -32,6 +32,6 @@ As above, it's often helpful for folks to be explicit about how they feel or wha
 
 I prefer communicating using asyncronous methods of communication such as messaging apps or email. They give me time to ponder questions, research information and refine any answers, rather than needing to respond immediately.
 
-I struggle to initiate conversations or involve myself in ongoing conversations, as I always feel like I'm interrupting people and my presence is unwanted.
+I struggle to initiate conversations or involve myself in ongoing conversations, as I always feel like I'm interrupting people and my presence might be unwanted.
 
-Relatedly, I really dislike phone calls and presentations. Presentations are basically a smoothie of my anxiety, [dysphoria]({{ '/about/nonhuman/' | url }}) and dislike of crowds all mixed together.
+Relatedly, I really dislike phone calls and presentations. Presentations are basically a smoothie of my anxiety, [dysphoria]({{ '/about/nonhuman/' | url }}) and discomfort with crowds all mixed together.
