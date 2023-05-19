@@ -12,9 +12,10 @@
 }
 
 .kimPage {
-  @include colors.kim-output-all-color-properties("dark");
-  &[data-color-scheme="light"] {
-    @include colors.kim-output-all-color-properties("light");
+  @each $theme in (ada, alex, ash, emy) {
+    &[data-color-scheme="#{$theme}"] {
+      @include colors.kim-output-all-color-properties($theme);
+    }
   }
   background-color: colors.kim-color-css("background");
   font-size: clamp(16px, 1.22vw, 22px);

@@ -5,25 +5,25 @@
 @use "sass:string";
 
 // Get semantic color from palette
-@function kim-color($name, $mode: "light") {
+@function kim-color($name, $theme: "light") {
   $map: settings.$kim-color-palette-semantic;
   @if not map.has-key($map, $name) {
     @error "Map does not have key named `#{$name}`.";
   }
   $color: map.get($map, $name);
-  @if not map.has-key($color, $mode) {
-    @error "Colour does not have a value for `#{$mode}` mode.";
+  @if not map.has-key($color, $theme) {
+    @error "Colour does not have a value for `#{$theme}` theme.";
   }
-  @return map.get($color, $mode);
+  @return map.get($color, $theme);
 }
 
 @function kim-color-css($name) {
   @return string.unquote("var(--color-#{$name})");
 }
 
-@mixin kim-output-all-color-properties($mode) {
+@mixin kim-output-all-color-properties($theme) {
   @each $name, $values in settings.$kim-color-palette-semantic {
-    $color: map.get($values, $mode);
+    $color: map.get($values, $theme);
     @if meta.type-of($color) == "color" {
       --color-#{$name}: #{$color};
     } @else if meta.type-of($color) == "map" and map.has-key($color, "fallback")

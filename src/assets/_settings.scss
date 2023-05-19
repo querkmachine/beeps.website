@@ -8,71 +8,74 @@ $kim-breakpoints: (
   intrepid: 1000px,
 );
 
-$kim-color-white: #fff;
-$kim-color-black: #334139;
-$kim-color-kimberly: #786999;
-$kim-color-emy: #b3ffb3;
-$kim-color-ketchup: #dd6031;
-$kim-color-mustard: #ffd447;
-$kim-color-mustard-p3: color(display-p3 1 0.816 0.19);
+$kim-color-palette-themes: (
+  emy: (
+    text: #334139,
+    background: #fff,
+    primary: #786999,
+    primary-alpha: color.scale(#786999, $alpha: -80%),
+    secondary: #b3ffb3,
+    secondary-alpha: color.scale(#b3ffb3, $alpha: -80%),
+  ),
+  ada: (
+    text: #fff,
+    background: #334139,
+    primary: #ffd447,
+    primary-alpha: color.scale(#ffd447, $alpha: -80%),
+    primary-p3: color(display-p3 1 0.816 0.19),
+    secondary: #dd6031,
+    secondary-alpha: color.scale(#dd6031, $alpha: -80%),
+  ),
+  ash: (
+    text: #f1fff2,
+    background: #1d2f23,
+    primary: #4ce74c,
+    primary-alpha: color.scale(#4ce74c, $alpha: -80%),
+    primary-p3: color(display-p3 0.335 1 0.175),
+    secondary: #dd6031,
+    secondary-alpha: color.scale(#dd6031, $alpha: -80%),
+  ),
+  alex: (
+    text: #334139,
+    background: #fee7db,
+    primary: #5a4169,
+    primary-alpha: color.scale(#5a4169, $alpha: -80%),
+    secondary: #cc9476,
+    secondary-alpha: color.scale(#cc9476, $alpha: -80%),
+  ),
+);
+
+@function _tc($type) {
+  $resultMap: ();
+  @each $theme, $colorMap in $kim-color-palette-themes {
+    @if map.has-key($colorMap, "#{$type}-p3") {
+      $resultMap: map.set(
+        $resultMap,
+        $theme,
+        (
+          color: map.get($colorMap, "#{$type}-p3"),
+          fallback: map.get($colorMap, $type),
+        )
+      );
+    } @else {
+      $resultMap: map.set($resultMap, $theme, map.get($colorMap, $type));
+    }
+  }
+  @return $resultMap;
+}
 
 $kim-color-palette-semantic: (
-  text: (
-    dark: $kim-color-white,
-    light: $kim-color-black,
-  ),
-  background: (
-    dark: $kim-color-black,
-    light: $kim-color-white,
-  ),
-  link: (
-    dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
-    ),
-    light: $kim-color-kimberly,
-  ),
-  link-accent: (
-    dark: color.scale($kim-color-mustard, $alpha: -80%),
-    light: color.scale($kim-color-kimberly, $alpha: -80%),
-  ),
-  link-hover: (
-    dark: $kim-color-ketchup,
-    light: $kim-color-emy,
-  ),
-  link-hover-accent: (
-    dark: color.scale($kim-color-ketchup, $alpha: -80%),
-    light: color.scale($kim-color-emy, $alpha: -80%),
-  ),
-  furniture: (
-    dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
-    ),
-    light: $kim-color-kimberly,
-  ),
-  furniture-alt: (
-    dark: color.change($kim-color-mustard, $alpha: 0.5),
-    light: color.change($kim-color-kimberly, $alpha: 0.5),
-  ),
-  accent: (
-    dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
-    ),
-    light: $kim-color-kimberly,
-  ),
-  accent-alt: (
-    dark: $kim-color-ketchup,
-    light: $kim-color-emy,
-  ),
-  speech-bubble: (
-    dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
-    ),
-    light: $kim-color-kimberly,
-  ),
+  text: _tc("text"),
+  background: _tc("background"),
+  link: _tc("primary"),
+  link-accent: _tc("primary-alpha"),
+  link-hover: _tc("secondary"),
+  link-hover-accent: _tc("secondary-alpha"),
+  furniture: _tc("primary"),
+  furniture-alt: _tc("primary-alpha"),
+  accent: _tc("primary"),
+  accent-alt: _tc("secondary"),
+  speech-bubble: _tc("primary"),
 );
 
 $kim-focus-color: #fc0;

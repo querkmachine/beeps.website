@@ -3,6 +3,9 @@ class ColorScheme {
     this.$d = document.documentElement;
     this.$container = document.querySelector(".kimColorSchemeSwitch");
 
+    this.defaultDarkTheme = "ada";
+    this.defaultLightTheme = "emy";
+
     this.isPrefersColorSchemeSupported =
       matchMedia("(prefers-color-scheme)").media !== "not all";
     this.doesUserPreferLight = this.isPrefersColorSchemeSupported
@@ -14,8 +17,8 @@ class ColorScheme {
     // effective = what is actually being used by the page [dark, light]
     this.configuredColorScheme = this.isPrefersColorSchemeSupported
       ? "auto"
-      : "dark";
-    this.effectiveColorScheme = "dark";
+      : this.defaultDarkTheme;
+    this.effectiveColorScheme = this.defaultDarkTheme;
 
     // Let's goooooo
     this.init();
@@ -38,7 +41,9 @@ class ColorScheme {
     // If the user preference is "auto", determine whether to use light or dark
     // depending on their OS preference
     if (this.configuredColorScheme === "auto") {
-      this.effectiveColorScheme = this.doesUserPreferLight ? "light" : "dark";
+      this.effectiveColorScheme = this.doesUserPreferLight
+        ? this.defaultLightTheme
+        : this.defaultDarkTheme;
     }
 
     // Set and save the scheme based on what we've worked out so far
@@ -63,8 +68,8 @@ class ColorScheme {
         this.effectiveColorScheme =
           $toggle.value === "auto"
             ? this.doesUserPreferLight
-              ? "light"
-              : "dark"
+              ? this.defaultLightTheme
+              : this.defaultDarkTheme
             : $toggle.value;
         this.setColorScheme();
       });
