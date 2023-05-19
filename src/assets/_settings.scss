@@ -14,6 +14,7 @@ $kim-color-kimberly: #786999;
 $kim-color-emy: #b3ffb3;
 $kim-color-ketchup: #dd6031;
 $kim-color-mustard: #ffd447;
+$kim-color-mustard-p3: color(display-p3 1 0.841 0.3);
 
 $kim-color-palette-semantic: (
   text: (
@@ -25,7 +26,10 @@ $kim-color-palette-semantic: (
     light: $kim-color-white,
   ),
   link: (
-    dark: $kim-color-mustard,
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
     light: $kim-color-kimberly,
   ),
   link-accent: (
@@ -41,7 +45,10 @@ $kim-color-palette-semantic: (
     light: color.scale($kim-color-emy, $alpha: -80%),
   ),
   furniture: (
-    dark: $kim-color-mustard,
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
     light: $kim-color-kimberly,
   ),
   furniture-alt: (
@@ -49,7 +56,10 @@ $kim-color-palette-semantic: (
     light: color.change($kim-color-kimberly, $alpha: 0.5),
   ),
   accent: (
-    dark: $kim-color-mustard,
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
     light: $kim-color-kimberly,
   ),
   accent-alt: (
@@ -57,7 +67,10 @@ $kim-color-palette-semantic: (
     light: $kim-color-emy,
   ),
   speech-bubble: (
-    dark: $kim-color-mustard,
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
     light: $kim-color-kimberly,
   ),
 );

@@ -1,6 +1,7 @@
 @use "../settings";
 
 @use "sass:map";
+@use "sass:meta";
 @use "sass:string";
 
 // Get semantic color from palette
@@ -18,4 +19,17 @@
 
 @function kim-color-css($name) {
   @return string.unquote("var(--color-#{$name})");
+}
+
+@mixin kim-output-all-color-properties($mode) {
+  @each $name, $values in settings.$kim-color-palette-semantic {
+    $color: map.get($values, $mode);
+    @if meta.type-of($color) == "color" {
+      --color-#{$name}: #{$color};
+    } @else if meta.type-of($color) == "map" and map.has-key($color, "fallback")
+    {
+      --color-#{$name}: #{map.get($color, "fallback")};
+      --color-#{$name}: #{map.get($color, "color")};
+    }
+  }
 }

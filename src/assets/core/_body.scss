@@ -1,11 +1,7 @@
 @use "../settings";
 
 @use "../helpers/colors";
-@use "../helpers/media-queries";
 @use "../helpers/typography";
-
-@use "sass:map";
-@use "sass:math";
 
 * {
   box-sizing: border-box;
@@ -16,13 +12,9 @@
 }
 
 .kimPage {
-  @each $name in map.keys(settings.$kim-color-palette-semantic) {
-    --color-#{$name}: #{colors.kim-color($name, "dark")};
-  }
+  @include colors.kim-output-all-color-properties("dark");
   &[data-color-scheme="light"] {
-    @each $name in map.keys(settings.$kim-color-palette-semantic) {
-      --color-#{$name}: #{colors.kim-color($name, "light")};
-    }
+    @include colors.kim-output-all-color-properties("light");
   }
   background-color: colors.kim-color-css("background");
   font-size: clamp(16px, 1.22vw, 22px);
