@@ -1,0 +1,147 @@
+---
+title: Customise beeps.website
+description: Change how the website looks to suit your needs or preferences.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% set themes = {
+  "Ada": { text: "#ffffff", background: "#334139", primary: "#ffd447", secondary: "#dd6031" },
+  "Ash": { text: "#f1fff2", background: "#1d2f23", primary: "#4ce74c", secondary: "#dd6031" },
+  "Emy": { text: "#334139", background: "#ffffff", primary: "#786999", secondary: "#b3ffb3" },
+  "Alex": { text: "#334139", background: "#fee7db", primary: "#5a4169", secondary: "#cc9476" }
+} %}
+
+{% block main %}
+<div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+	<div class="kimWrapper">
+		<div class="kimGrid">
+			<div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneThird">
+				<h1 class="kimHeading-xl">
+					Customise this website
+				</h1>
+				<p class="kimBody-l">Change how this website looks to suit your needs or preferences.</p>
+				<p class="kimBody">This functionality is a bit of a pet project at the moment. I make no guarantees that it's good, that things won't change or that I won't remove the ability to customise stuff at some point in future. You have been warned.</p>
+			</div>
+			<div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+				<noscript>
+					<div class="kimCallout">
+						<p class="kimBody">Unfortunately, customising your experience is only possible if JavaScript is enabled. Sorry!</p>
+					</div>
+				</noscript>
+				
+				{# TODO: Hide this and don't show it unless JS works. #}
+				<form>
+					
+					<fieldset class="page-fieldset kim-!-margin-bottom-9">
+						<legend>
+							<h2 class="kimHeading-l">Colour scheme</h2>
+						</legend>
+				
+						<div class="page-theme-grid">
+							{%- for name, colors in themes %}
+							<div>
+								<input class="kim-!-sr page-theme-option-input" type="radio" name="global-theme" value="{{ name }}" id="global-theme-{{ name }}">
+								<label class="page-theme-option-label" for="global-theme-{{ name }}">
+									<div class="page-theme-thumbnail" style="--text:{{ colors.text }};--background:{{ colors.background }};--primary:{{ colors.primary }};--secondary:{{ colors.secondary }};" aria-hidden="true">
+										<div class="page-theme-thumbnail__header"><span></span> <span></span></div>
+										<div class="page-theme-thumbnail__heading"><span></span></div>
+										<div class="page-theme-thumbnail__content"><span></span> <span></span> <mark><span></span> <span></span></mark> <span></span> <span></span> <span></span> <span></span>  <span></span> <span></span></div>
+									</div>
+									<span>{{ name }}</span>
+								</label> 
+							</div>
+							{%- endfor %}
+						</div>
+					</fieldset>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+</script>
+{% endblock %}
+
+{% block head %}
+<style>
+.page-fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.page-theme-option-label {
+	display: block;
+	border: 2px solid transparent;
+	cursor: pointer;
+}
+.page-theme-option-label span {
+	display: block;
+	padding: .25rem .5rem;
+}
+.page-theme-option-input:checked + .page-theme-option-label {
+	background-color: var(--color-link-hover-accent);
+	border-color: var(--color-link-hover);
+}
+.page-theme-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 2.5rem;
+}
+.page-theme-thumbnail {
+  display: block;
+  padding: 0 1em;
+  border: 2px solid var(--primary);
+  color: var(--text);
+  background-color: var(--background);
+  aspect-ratio: 16 / 9;
+  font-size: small;
+  user-select: none;
+  overflow: hidden;
+}
+.page-theme-thumbnail span {
+  display: inline-block;
+  height: 1em;
+  background-color: currentcolor;
+}
+.page-theme-thumbnail span:nth-child(1) { width: 4em; }
+.page-theme-thumbnail span:nth-child(2) { width: 6em; }
+.page-theme-thumbnail span:nth-child(3) { width: 3em; }
+.page-theme-thumbnail span:nth-child(4) { width: 6em; }
+.page-theme-thumbnail span:nth-child(5) { width: 9em; }
+.page-theme-thumbnail span:nth-child(6) { width: 7em; }
+.page-theme-thumbnail span:nth-child(7) { width: 5em; }
+.page-theme-thumbnail span:nth-child(8) { width: 1em; }
+.page-theme-thumbnail span:nth-child(9) { width: 4em; }
+.page-theme-thumbnail span:nth-child(10) { width: 3em; }
+.page-theme-thumbnail mark {
+  color: var(--primary);
+  background-color: transparent;
+}
+.page-theme-thumbnail__header {
+  padding-top: .5em;
+  padding-bottom: 1em;
+  border-top: .25em solid currentcolor;
+  color: var(--primary);
+}
+.page-theme-thumbnail__header span:nth-child(1) {
+  width: 1em;
+  color: var(--secondary);
+}
+.page-theme-thumbnail__header span:nth-child(2) {
+  width: 5em;
+}
+.page-theme-thumbnail__heading {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--primary);
+}
+.page-theme-thumbnail__heading span {
+  font-size: 2em;
+}
+</style>
+{% endblock %}
