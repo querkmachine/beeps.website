@@ -19,7 +19,7 @@
   {% set fullTitle %}
     {{- site.name -}}
     {%- for item in mastheadBreadcrumbs %} / {{ item.label | markdownInline | safe }}{% endfor -%}
-    {%- if title %} / {{ title | markdownInline | safe }}{% endif -%}
+    {%- if title %} / {{ title | markdownInline | safe | striptags }}{% endif -%}
   {% endset %}
   <title>{{ fullTitle | safe }}</title>
   
