@@ -73,10 +73,15 @@ $kim-color-palette-semantic: (
     ),
     light: $kim-color-kimberly,
   ),
+  focus-background: (
+    dark: #66cbff,
+    light: #ffcc00,
+  ),
+  focus-text: (
+    dark: #000,
+    light: #000,
+  ),
 );
-
-$kim-focus-color: #fc0;
-$kim-focus-color-text: #000;
 
 $kim-font-stacks: (
   body: (

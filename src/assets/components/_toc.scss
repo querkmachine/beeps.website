@@ -38,7 +38,7 @@
       display: none;
     }
     &:focus-visible {
-      @include a11y.kim-focus-ring($fill: true);
+      @include a11y.kim-focus-ring;
     }
   }
   &_inner ol {

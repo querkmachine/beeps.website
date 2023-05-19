@@ -14,8 +14,8 @@
 
 @mixin _kim-link-common {
   color: colors.kim-color-css("link");
-  &:focus {
-    @include a11y.kim-focus-ring($fill: true);
+  &:focus-visible {
+    @include a11y.kim-focus-ring;
   }
   @include media-queries.kim-print {
     text-decoration: underline;

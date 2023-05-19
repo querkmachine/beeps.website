@@ -4,7 +4,7 @@
 @use "../helpers/spacing";
 
 .kimSkiplink {
-  @include a11y.kim-focus-ring($fill: true);
+  @include a11y.kim-focus-ring;
   @include spacing.kim-responsive-padding(2);
   display: block;
   position: absolute;
