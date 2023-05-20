@@ -1,0 +1,34 @@
+// Named font stacks (body, header, code) and info on what to use for regular
+// and bold weights within each one.
+$kim-font-stacks: (
+  body: (
+    stack: (
+      "Space Grotesk",
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+    ),
+    regular: 400,
+    bold: 700,
+  ),
+  header: (
+    stack: (
+      "Space Grotesk",
+      system-ui,
+      sans-serif,
+    ),
+    regular: 550,
+    bold: 700,
+  ),
+  code: (
+    stack: (
+      "Space Mono",
+      monospace,
+      monospace,
+    ),
+    regular: 400,
+    bold: 700,
+  ),
+);

@@ -1,0 +1,84 @@
+// The 'root' font size that px-to-rem calculations are based on. 16px is the
+// default in most user agents but an end user could have customised it.
+$kim-font-sizes-root: 16px;
+
+// Map of font sizes and line heights, and how those values change across
+// different breakpoints.
+$kim-font-sizes: (
+  12: (
+    null: (
+      font-size: 12px,
+      line-height: 15px,
+    ),
+  ),
+  14: (
+    null: (
+      font-size: 12px,
+      line-height: 15px,
+    ),
+    galaxy: (
+      font-size: 14px,
+      line-height: 18px,
+    ),
+  ),
+  16: (
+    null: (
+      font-size: 14px,
+      line-height: 18px,
+    ),
+    galaxy: (
+      font-size: 16px,
+      line-height: 22px,
+    ),
+  ),
+  19: (
+    null: (
+      font-size: 16px,
+      line-height: 22px,
+    ),
+    galaxy: (
+      font-size: 19px,
+      line-height: 27px,
+    ),
+  ),
+  24: (
+    null: (
+      font-size: 18px,
+      line-height: 20px,
+    ),
+    galaxy: (
+      font-size: 24px,
+      line-height: 30px,
+    ),
+  ),
+  36: (
+    null: (
+      font-size: 24px,
+      line-height: 25px,
+    ),
+    galaxy: (
+      font-size: 36px,
+      line-height: 40px,
+    ),
+  ),
+  48: (
+    null: (
+      font-size: 32px,
+      line-height: 35px,
+    ),
+    galaxy: (
+      font-size: 48px,
+      line-height: 50px,
+    ),
+  ),
+  80: (
+    null: (
+      font-size: 53px,
+      line-height: 55px,
+    ),
+    galaxy: (
+      font-size: 80px,
+      line-height: 80px,
+    ),
+  ),
+);

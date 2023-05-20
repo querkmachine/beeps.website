@@ -1,0 +1,81 @@
+@use "sass:color";
+
+// Define base/brand colours.
+$kim-color-white: #fff;
+$kim-color-black: #334139;
+$kim-color-kimberly: #786999;
+$kim-color-emy: #b3ffb3;
+$kim-color-ketchup: #dd6031;
+$kim-color-mustard: #ffd447;
+$kim-color-mustard-p3: color(display-p3 1 0.841 0.3);
+
+// Assign each of those colours to a semantic purpose and whether it's used for
+// dark or light mode. These get exported as CSS custom properties based on the
+// name and mode — e.g. var(--color-text) will be white on dark mode and black
+// on light mode.
+$kim-color-palette-semantic: (
+  text: (
+    dark: $kim-color-white,
+    light: $kim-color-black,
+  ),
+  background: (
+    dark: $kim-color-black,
+    light: $kim-color-white,
+  ),
+  link: (
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
+    light: $kim-color-kimberly,
+  ),
+  link-accent: (
+    dark: color.scale($kim-color-mustard, $alpha: -80%),
+    light: color.scale($kim-color-kimberly, $alpha: -80%),
+  ),
+  link-hover: (
+    dark: $kim-color-ketchup,
+    light: $kim-color-emy,
+  ),
+  link-hover-accent: (
+    dark: color.scale($kim-color-ketchup, $alpha: -80%),
+    light: color.scale($kim-color-emy, $alpha: -80%),
+  ),
+  furniture: (
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
+    light: $kim-color-kimberly,
+  ),
+  furniture-alt: (
+    dark: color.change($kim-color-mustard, $alpha: 0.5),
+    light: color.change($kim-color-kimberly, $alpha: 0.5),
+  ),
+  accent: (
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
+    light: $kim-color-kimberly,
+  ),
+  accent-alt: (
+    dark: $kim-color-ketchup,
+    light: $kim-color-emy,
+  ),
+  speech-bubble: (
+    dark: (
+      color: $kim-color-mustard-p3,
+      fallback: $kim-color-mustard,
+    ),
+    light: $kim-color-kimberly,
+  ),
+  focus-background: (
+    dark: #66cbff,
+    light: #ffcc00,
+  ),
+  focus-text: (
+    dark: #000,
+    light: #000,
+  ),
+);

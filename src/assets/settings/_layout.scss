@@ -1,0 +1,17 @@
+// The maximum page width.
+$kim-page-width: 60rem;
+
+// The gutter between individual grid columns and between the grid and viewport
+// sides. Divided by 2, so avoid something that will be highly fractional.
+$kim-page-gutter: 2.5rem;
+
+// Grid column class names and the widths they use (all automatically become
+// 100% on mobile, however).
+$kim-grid-widths: (
+  "oneQuarter": 25%,
+  "oneHalf": 50%,
+  "threeQuarters": 75%,
+  "oneThird": 33.33333%,
+  "twoThirds": 66.66666%,
+  "full": 100%,
+);

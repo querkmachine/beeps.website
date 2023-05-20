@@ -1,0 +1,10 @@
+// Breakpoints defined by their minimum widths. Named for the hero ship classes
+// from Star Trek TOS/TNG/DS9/VOY in that order. Screens below 'constitution'
+// are not considered to be part of any breakpoint (essentially, they are the
+// 'default' breakpoint).
+$kim-breakpoints: (
+  constitution: 400px,
+  galaxy: 600px,
+  defiant: 768px,
+  intrepid: 1000px,
+);
