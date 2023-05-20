@@ -21,7 +21,7 @@
     border-bottom: measurements.kim-border-width("thick") solid
       colors.kim-color-css("furniture");
     position: relative;
-    @include media-queries.kim-mq($from: galaxy) {
+    @include media-queries.kim-mq($from: defiant) {
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
