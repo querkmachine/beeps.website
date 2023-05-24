@@ -16,12 +16,15 @@
   <link rel="pingback" href="https://webmention.io/beeps.website/xmlrpc">
   
   {#- Page title #}
-  {% set fullTitle %}
-    {{- site.name -}}
-    {%- for item in mastheadBreadcrumbs %} / {{ item.label | markdownInline | safe }}{% endfor -%}
-    {%- if title %} / {{ title | markdownInline | safe | striptags }}{% endif -%}
-  {% endset %}
-  <title>{{ fullTitle | safe }}</title>
+  {%- if isFullTitle %}
+    <title>{{ title }}</title>
+  {%- else %}
+    <title>
+      {%- if title %}{{ title | markdownInline | safe | striptags }} / {% endif -%}
+      {%- for item in mastheadBreadcrumbs %}{{ item.label | markdownInline | safe | striptags }} / {% endfor -%}
+      {{- site.name -}}
+    </title>
+  {%- endif %}
   
   {#- Stylesheets #}
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
