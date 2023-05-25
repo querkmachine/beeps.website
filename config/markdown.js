@@ -19,10 +19,24 @@ const markdownConfig = markdownIt({
   tabIndex: false,
 });
 
+/**
+ * Process a string as Markdown, treating it as a block of content (i.e. it will
+ * insert paragraph tags around the content.)
+ *
+ * @param {string} str - The string to parse as Markdown.
+ * @returns {string} - The resulting HTML.
+ */
 const markdownFilter = function (str) {
   return markdownConfig.render(str);
 };
 
+/**
+ * Process a string as Markdown, treating it as inline content (i.e. it will NOT
+ * insert paragraph tags around the content.)
+ *
+ * @param {string} str - The string to parse as Markdown.
+ * @returns {string} - The resulting HTML.
+ */
 const markdownFilterInline = function (str) {
   return markdownConfig.renderInline(str);
 };

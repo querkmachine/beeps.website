@@ -30,6 +30,10 @@ const {
   pageIsBlogPost,
 } = require("./config/utils.js");
 
+/**
+ *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
+ */
+
 module.exports = function (eleventyConfig) {
   // Turn off default log output
   eleventyConfig.setQuietMode(true);

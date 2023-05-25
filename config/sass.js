@@ -5,6 +5,13 @@ const sass = require("sass");
 const postcss = require("postcss");
 const postcssPresetEnv = require("postcss-preset-env");
 
+/**
+ * Syncronously compile sass by passing it first through the Sass compiler and
+ * then PostCSS.
+ *
+ * @returns {boolean} - Boolean indicating whether the transformation was
+ *   successful or not.
+ */
 const compileSass = function () {
   const result = sass.renderSync({
     file: paths.srcAssets + "/stylesheet.scss",

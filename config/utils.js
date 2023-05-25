@@ -1,7 +1,15 @@
 const { DateTime } = require("luxon");
 
-// Generate a string we can use for asset cachebusting
-// https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
+/**
+ * Generate a string we can use for asset cachebusting
+ *
+ * @param {string} url - The URL to cachebust.
+ * @returns {string} - The URL with a cachebusting query string parameter
+ *   appended to it.
+ *
+ * @author Rob Hudson
+ * @tutorial https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
+ */
 const cachebustAssetUrl = function (url) {
   const [urlPart, paramPart] = url.split("?");
   const params = new URLSearchParams(paramPart || "");
@@ -9,6 +17,17 @@ const cachebustAssetUrl = function (url) {
   return `${urlPart}?${params}`;
 };
 
+/**
+ * Format a JavaScript date object into one of our pre-defined formats
+ *
+ * @param {Date} dateObj - The JavaScript date object to format.
+ * @param {"iso"|"human"|string} format - Either one of the pre-defined format keys, or a
+ *   custom format constructed using Luxon's datetime tokens.
+ *   https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+ * @returns {string} - The formatted date time.
+ *
+ * @tutorial https://moment.github.io/luxon/
+ */
 const formatDate = function (dateObj, format) {
   const date = DateTime.fromJSDate(dateObj, { zone: "utc" });
   if (format === "iso") {
@@ -20,11 +39,27 @@ const formatDate = function (dateObj, format) {
   }
 };
 
+/**
+ * Determine if a URL leads to a blog post by looking for the "/blog" string
+ * within the URL. Nasty, but it works for now.
+ *
+ * @param {string} postUrl - The URL of the page.
+ * @returns {boolean} - Whether or not this page is a blog post entry.
+ */
 const pageIsBlogPost = function (postUrl) {
   if (!postUrl) return false;
   return postUrl.substring(0, 6) === "/blog/" ? true : false;
 };
 
+/**
+ * Take an array, remove the first n items from it, and return those items as a
+ * new array.
+ *
+ * @param {array} array - The original array of items.
+ * @param {number} n - The number of items to take from the old array and put in
+ *   the new array.
+ * @returns {array} - The new array with the chosen number of items.
+ */
 const getFirstNItems = function (array, n) {
   if (n < 0) {
     return array.slice(n);
