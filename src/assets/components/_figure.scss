@@ -6,9 +6,9 @@
 @use "../helpers/typography";
 
 .kimFigure {
-  @include typography.kim-vr-margin(19);
   width: 100%;
   margin: 0;
+  @include typography.kim-vr-margin(19);
   text-align: center;
   img {
     margin-bottom: 0;
