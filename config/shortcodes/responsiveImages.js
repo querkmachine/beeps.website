@@ -26,6 +26,8 @@ const responsiveImagesShortcode = async function (src, alt, args) {
 
   let originalSize = metadata.webp[metadata.webp.length - 1];
 
+  console.log(settings);
+
   return `<picture>
   ${Object.values(metadata)
     .map((imageFormat) => {
@@ -36,12 +38,11 @@ const responsiveImagesShortcode = async function (src, alt, args) {
         .join(", ")}" sizes="(min-width: 768px) 66vw, 100vw">`;
     })
     .join("\n")}
-    <img src="${originalSize.url}" width="${originalSize.width}" height="${
+    <img${settings.lazy ? ` loading="lazy"` : ""} src="${
+    originalSize.url
+  }" width="${originalSize.width}" height="${
     originalSize.height
-  }" alt="${alt}"${
-    (settings.lazy ? ` loading="lazy"` : "",
-    settings.classes ? ` class="${settings.classes}"` : "")
-  }>
+  }" alt="${alt}"${settings.classes ? ` class="${settings.classes}"` : ""}>
   </picture>`;
 };
 
