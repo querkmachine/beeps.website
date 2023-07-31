@@ -26,8 +26,6 @@ const responsiveImagesShortcode = async function (src, alt, args) {
 
   let originalSize = metadata.webp[metadata.webp.length - 1];
 
-  console.log(settings);
-
   return `<picture>
   ${Object.values(metadata)
     .map((imageFormat) => {
