@@ -42,3 +42,5 @@ Type is set in [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) 
 Words are my own, unless otherwise specified.
 
 The robot bats are [my own original character]({{ '/about/furry/' | url }}), designed with help from my friend [Samael](https://twitter.com/Samael101). The bats were illustrated by myself, based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
+
+This website also implements [fursona schema](https://github.com/theHedgehog0/fursona-schema), just in case it wasn't furry enough.

@@ -1,0 +1,22 @@
+{
+  "sonas": [
+    {
+      "name": "Emy",
+      "pronouns": "she/her it/its",
+      "gender": "genderless",
+      "species": "Robot Honduran white bat",
+      "description": "A regular anthropomorphic bat that fell into an abandoned cybernetic conversion chamber. It happens.",
+      "avatar": "https://beeps.website/assets/images/avatar-emy.png",
+      "colors": ["#252c24", "#475047", "#ecf1ec", "#4ce74c"]
+    },
+    {
+      "name": "Ash",
+      "pronouns": "she/her",
+      "gender": "female",
+      "species": "Amphimorpho",
+      "description": "Former human mutated into an alien shapeshifter via a bite. Lovin' it.",
+      "avatar": "https://beeps.website/assets/images/avatar-ash.png",
+      "colors": ["#1d2f23", "#f1fff2", "#4ce74c"]
+    }
+  ]
+}
