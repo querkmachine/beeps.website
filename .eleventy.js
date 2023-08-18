@@ -73,8 +73,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(paths.src + "/safari-pinned-tab.svg");
   eleventyConfig.addPassthroughCopy(paths.src + "/site.webmanifest");
 
-  // Copy fursona schema file
-  eleventyConfig.addPassthroughCopy(paths.src + "/.well-known/fursona");
+  // Copy manual .well-known directory entries
+  eleventyConfig.addPassthroughCopy(paths.src + "/.well-known/**/*");
 
   // Markdown configuration
   eleventyConfig.setLibrary("md", markdownConfig);

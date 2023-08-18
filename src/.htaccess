@@ -3,11 +3,3 @@ ErrorDocument 404 /404/
 <Files "blogged">
 ForceType application/activity+json
 </Files>
-
-<Files ".well-known/webfinger">
-ForceType application/jrd+json
-</Files>
-
-<Files ".well-known/fursona">
-ForceType application/json
-</Files>

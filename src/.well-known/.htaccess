@@ -1,0 +1,7 @@
+<Files "webfinger">
+ForceType application/jrd+json
+</Files>
+
+<Files "fursona">
+ForceType application/json
+</Files>
