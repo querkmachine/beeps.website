@@ -2,7 +2,6 @@
 title: The next generation
 date: 9999-01-01
 tags: [furry fandom, self-identity]
-draft: true
 ---
 
 In the furry fandom, [fursonas](https://en.wikipedia.org/wiki/Fursona) are many things to many people. They're a real "ask 10 people, get 11 answers" thing. For some their fursona is nothing more than an anthropomorphic animal avatar of themselves, no different from their real life identity outside of physical form. For others, a fursona might be an idealised version of their real world self. The fursona may simply be a character, a puppet to be played with, with a personality and background entirely independent of the person playing them.

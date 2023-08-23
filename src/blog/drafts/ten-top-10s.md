@@ -2,7 +2,6 @@
 title: Ten top 10s
 date: 9999-01-01
 tags: [technology, random]
-draft: true
 ---
 
 I keep having the idea of writing listicle like blog posts. Not for easy clicks or engagement, but just to share things—software, films, music—that I think are neat.

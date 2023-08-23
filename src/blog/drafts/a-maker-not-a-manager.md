@@ -2,7 +2,6 @@
 title: A maker, not a manager
 date: 9999-01-01
 tags: [random]
-draft: true
 ---
 
 I am not normal.

@@ -52,6 +52,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginToc);
 
+  // Ignore the blog drafts directory if this is a production build
+  if (process.env.ENVIRONMENT === "prod") {
+    eleventyConfig.ignores.add(paths.src + "/blog/drafts/**/*");
+  }
+
   // Copy JS and assets
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/fonts");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");

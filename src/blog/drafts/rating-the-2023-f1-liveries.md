@@ -2,7 +2,6 @@
 title: Rating the 2023 Formula One liveries
 date: 9999-01-01
 tags: [design]
-draft: true
 ---
 
 - Wait, what?

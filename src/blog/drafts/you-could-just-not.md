@@ -1,7 +1,6 @@
 ---
 title: You could just not
 date: 9999-01-01
-draft: true
 tags: []
 ---
 
