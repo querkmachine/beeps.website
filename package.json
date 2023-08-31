@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run serve",
-    "clean": "rm -rf _site",
+    "clean": "rm -rf _site && rm -rf src/outbox",
     "serve": "npm run clean && ENVIRONMENT=dev npx @11ty/eleventy --serve",
     "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy && npm run lint:build",
     "lint": "npx prettier --write --ignore-unknown . '!_site/**/*'",
