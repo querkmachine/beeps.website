@@ -1,5 +1,6 @@
 @use "../settings";
 
+@use "../helpers/a11y";
 @use "../helpers/colors";
 @use "../helpers/links";
 @use "../helpers/measurements";
@@ -10,6 +11,7 @@
 @use "sass:color";
 
 .kimMasthead {
+  $self: &;
   @include typography.kim-font-size(24);
   @include typography.kim-font-stack(header, $weight: bold);
   color: colors.kim-color-css("text");
@@ -18,11 +20,53 @@
     display: none;
   }
   &_inner {
-    @include spacing.kim-responsive-padding(4, $direction: block);
+    @include spacing.kim-responsive-padding(4, $direction: bottom);
+    display: flex;
     border-top: measurements.kim-border-width("thick") solid
       colors.kim-color-css("furniture");
   }
-  a {
-    @include links.kim-link-no-underline;
+  &_brand {
+    @include spacing.kim-responsive-margin(3, $direction: right);
+    @include spacing.kim-responsive-padding(2);
+    display: inline-flex;
+    align-items: center;
+    vertical-align: center;
+    color: colors.kim-color-css("background");
+    background-color: colors.kim-color-css("link");
+    text-decoration: none;
+    &:hover {
+      #{$self}_logo {
+        fill: colors.kim-color-css("link-hover");
+      }
+    }
+    &:focus {
+      outline: none;
+      #{$self}_name {
+        @include a11y.kim-focus-ring;
+      }
+    }
+  }
+  &_logo {
+    fill: currentcolor;
+    line-height: 0;
+  }
+  &_name {
+    @include spacing.kim-responsive-margin(3, $direction: left);
+    @include media-queries.kim-mq($to: galaxy) {
+      display: none;
+    }
+  }
+  &_breadcrumbs {
+    @include spacing.kim-responsive-margin(1, $direction: top);
+    @include spacing.kim-responsive-margin(1, $direction: bottom);
+    display: inline-block;
+    align-self: center;
+    a + a::before {
+      @include spacing.kim-responsive-margin(1, $direction: right);
+      @include spacing.kim-responsive-margin(1, $direction: left);
+      content: "/";
+      color: colors.kim-color-css("text");
+      text-decoration: none;
+    }
   }
 }

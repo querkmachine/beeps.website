@@ -81,14 +81,17 @@
   {% block masthead %}
     <header class="kimMasthead">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_logo kimLink-plain" href="{{ '/' | url }}">{#
-          #}<span class="kim-!-sr">Back to home</span>
-          <span aria-hidden="true">{{ site.name }}</span>{#
-        #}</a>
-        {% for item in mastheadBreadcrumbs %}
-          <span aria-hidden="true">&thinsp;/&thinsp;</span>
-          <a class="kimLink-plain" href="{{ item.url | url }}">{{ item.label }}</a>
-        {% endfor %}
+        <a class="kimMasthead_brand" href="{{ '/' | url }}">
+          <span class="kimMasthead_logo">{% include "logo.njk" %}</span>
+          <span class="kimMasthead_name">{{ site.name }}</span>
+        </a>
+        {%- if mastheadBreadcrumbs %}
+          <nav class="kimMasthead_breadcrumbs" aria-label="breadcrumbs">
+            {%- for item in mastheadBreadcrumbs %}
+              <a class="kimLink-plain" href="{{ item.url | url }}">{{ item.label }}</a>
+            {%- endfor %}
+          </nav>
+        {%- endif %}
       </div>
     </header>
   {% endblock %}
