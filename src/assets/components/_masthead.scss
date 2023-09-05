@@ -39,7 +39,7 @@
         fill: colors.kim-color-css("link-hover");
       }
     }
-    &:focus {
+    &:focus-visible {
       outline: none;
       #{$self}_name {
         @include a11y.kim-focus-ring;
