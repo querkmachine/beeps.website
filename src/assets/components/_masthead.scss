@@ -49,9 +49,11 @@
   &_logo {
     fill: currentcolor;
     line-height: 0;
+    @include media-queries.kim-mq($from: galaxy) {
+      @include spacing.kim-responsive-margin(3, $direction: right);
+    }
   }
   &_name {
-    @include spacing.kim-responsive-margin(3, $direction: left);
     @include media-queries.kim-mq($to: galaxy) {
       display: none;
     }
