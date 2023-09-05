@@ -1,8 +1,13 @@
 {%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
+{%- set colorSchemeJsUrl = '/assets/javascript/colorScheme.js' | url | cachebust -%}
 
 <!doctype html>
 <html lang="en-GB" class="kimPage">
 <head>
+
+  {#- Preload stuff #}
+  <link rel="preload" as="style" href="{{ webfontUrl }}">
+  <link rel="preload" as="script" href="{{ colorSchemeJsUrl }}">
 
   {#- Technical metadata #}
   <meta charset="UTF-8">
@@ -31,8 +36,8 @@
   <noscript><link rel="stylesheet" href="{{ webfontUrl }}"></noscript>
   <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
   
-  {#- Preload #}
-  <link rel="preload" as="style" href="{{ webfontUrl }}">
+  {# Color scheme switcher JS #}
+  <script src="{{ colorSchemeJsUrl }}"></script>
   
   {#- SEO metadata #}
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
@@ -123,9 +128,6 @@
     </footer>
   {% endblock %}
   {% block afterFooter %}{% endblock %}
-
-  {# Color scheme switcher JS #}
-  <script src="{{ '/assets/javascript/colorScheme.js' | url | cachebust }}"></script>
   
   {# Other scripts #}
   {% block scripts %}{% endblock %}

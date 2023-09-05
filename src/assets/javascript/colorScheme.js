@@ -1,8 +1,5 @@
 class ColorScheme {
   constructor() {
-    this.$d = document.documentElement;
-    this.$container = document.querySelector(".kimColorSchemeSwitch");
-
     this.isPrefersColorSchemeSupported =
       matchMedia("(prefers-color-scheme)").media !== "not all";
     this.doesUserPreferLight = this.isPrefersColorSchemeSupported
@@ -20,10 +17,15 @@ class ColorScheme {
     // Let's goooooo
     this.init();
 
-    // Init controls if they're present on this page
-    if (this.$container) {
-      this.initControls();
-    }
+    // Wait for the rest of the page before instantiating controls
+    addEventListener("DOMContentLoaded", () => {
+      this.$container = document.querySelector(".kimColorSchemeSwitch");
+
+      // Only init controls if they're present
+      if (this.$container) {
+        this.initControls();
+      }
+    });
   }
 
   init() {
@@ -81,7 +83,7 @@ class ColorScheme {
 
   setColorScheme() {
     localStorage.setItem("prefers-color-scheme", this.configuredColorScheme);
-    this.$d.dataset.colorScheme = this.effectiveColorScheme;
+    document.documentElement.dataset.colorScheme = this.effectiveColorScheme;
   }
 }
 
