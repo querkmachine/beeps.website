@@ -1,6 +1,6 @@
 ---
 title: "Writing & Reconnection: August"
-date: 9999-01-01
+date: 2023-09-05
 tags: [yearly theme]
 ---
 
@@ -22,4 +22,8 @@ That kinda makes sense. They are ongoing sagas that have no definitive end, but 
 
 ## Year of Reconnection
 
-The relative social burn-out [described in July's entry]({{ '/blog/2023-07-31-writing-and-reconnection-july/' | url }})
+The relative social burn-out [described in July's entry]({{ '/blog/2023-07-31-writing-and-reconnection-july/' | url }}) has pretty much persisted.
+
+I've certainly had some fun social hangs both in-person and online over the last month, I can't say I've been anything more than mildly energetic at any of them. Even if I'm otherwise occupying myself with some thing or another and not actively participating in most conversation, it's mostly it's just nice to lounge in the company of others.
+
+Some connections maintained, but not a whole lot to say for _reconnection_ this month.
