@@ -1,7 +1,11 @@
-<Files "webfinger">
-ForceType application/jrd+json
+<Files "discord">
+ForceType text/plain
 </Files>
 
 <Files "fursona">
 ForceType application/json
+</Files>
+
+<Files "webfinger">
+ForceType application/jrd+json
 </Files>
