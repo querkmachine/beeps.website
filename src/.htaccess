@@ -1,5 +1,1 @@
 ErrorDocument 404 /404/
-
-<Files "blogged">
-ForceType application/activity+json
-</Files>

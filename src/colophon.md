@@ -14,7 +14,6 @@ This website was built by me, beeps. The code for this site is [open source and 
 I use the static site generator [Eleventy](http://11ty.dev) with the following plugins:
 
 - [eleventy-img](https://github.com/11ty/eleventy-img)
-- [eleventy-plugin-activity-pub](https://github.com/LewisDaleUK/eleventy-plugin-activity-pub)
 - [eleventy-plugin-directory-output](https://github.com/11ty/eleventy-plugin-directory-output)
 - [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss)
 - [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc)

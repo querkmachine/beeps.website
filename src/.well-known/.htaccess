@@ -5,7 +5,3 @@ ForceType text/plain
 <Files "fursona">
 ForceType application/json
 </Files>
-
-<Files "webfinger">
-ForceType application/jrd+json
-</Files>

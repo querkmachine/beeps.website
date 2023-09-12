@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run serve",
-    "clean": "rm -rf _site && rm -rf src/outbox",
+    "clean": "rm -rf _site",
     "serve": "npm run clean && ENVIRONMENT=dev npx @11ty/eleventy --serve",
     "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy && npm run lint:build",
     "lint": "npx prettier --write --ignore-unknown . '!_site/**/*'",
@@ -28,7 +28,6 @@
     "@11ty/eleventy-img": "^2.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "eleventy-plugin-activity-pub": "^0.1.1",
     "eleventy-plugin-toc": "^1.1.5",
     "fs-extra": "^10.0.1",
     "highlight.js": "^11.8.0",

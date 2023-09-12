@@ -2,7 +2,6 @@
 const paths = require("./config/paths.json");
 
 // 11ty plugins
-const pluginActivityPub = require("eleventy-plugin-activity-pub");
 const pluginLogging = require("@11ty/eleventy-plugin-directory-output");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginToc = require("eleventy-plugin-toc");
@@ -40,14 +39,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Load plugins
-  eleventyConfig.addPlugin(pluginActivityPub, {
-    domain: "beeps.website",
-    username: "blogged",
-    displayName: "beeps' blog",
-    summary: "The occassionally coherent ramblings of @batbeeps@chitter.xyz.",
-    outbox: true,
-    outboxCollection: "blog",
-  });
   eleventyConfig.addPlugin(pluginLogging);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginToc);
