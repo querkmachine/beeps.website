@@ -1,0 +1,4 @@
+Contact: mailto:hi@berly.kim
+Expires: 2023-12-31T23:59:00.000Z
+Preferred-Languages: en
+Canonical: https://beeps.website/.well-known/security.txt
