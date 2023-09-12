@@ -3,7 +3,7 @@ pagination:
   data: collections.blog
   size: 1
   alias: preview
-permalink: "/images/opengraph/{{ preview.data.date | formatDate('iso') }}-{{ preview.data.title | slugify }}.svg"
+permalink: "/images/opengraph/{{ preview.data.page.date.toISOString().substr(0, 10) }}-{{ preview.data.page.fileSlug }}.svg"
 eleventyExcludeFromCollections: true
 ---
 {%- set titleLines = preview.data.title | splitlines(22) -%}

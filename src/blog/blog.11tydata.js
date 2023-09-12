@@ -7,4 +7,11 @@ module.exports = {
       label: "Blog",
     },
   ],
+  eleventyComputed: {
+    opengraphImage: (data) => {
+      return `${data.page.date.toISOString().substr(0, 10)}-${
+        data.page.fileSlug
+      }.png`;
+    },
+  },
 };

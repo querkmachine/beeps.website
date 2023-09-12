@@ -39,7 +39,7 @@
   {# Color scheme switcher JS #}
   <script src="{{ colorSchemeJsUrl }}"></script>
   
-  {#- SEO metadata #}
+  {#- Content metadata / OpenGraph #}
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="{{ title }}">
@@ -47,7 +47,7 @@
   <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
   {%- if page.url | isBlogPost %}
     <meta property="og:type" content="article">
-    <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/' +  (date | formatDate('iso')) + '-' + (title | slugify) + '.png' | url }}">
+    <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/' + opengraphImage | url }}">
   {%- else %}
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/default.png' | url }}">
