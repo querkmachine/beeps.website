@@ -40,7 +40,6 @@
   <script src="{{ colorSchemeJsUrl }}"></script>
   
   {#- Content metadata / OpenGraph #}
-  {{ page | dump }}
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="{{ title }}">
@@ -73,11 +72,12 @@
   <link rel="manifest" href="{{ '/assets/images/icons/site.webmanifest' | url | cachebust }}">
   
   {#- Page-specific head content #}
-  {% include "src/_includes/development-tag.njk" %}
   {% block head %}{% endblock %}
   
 </head>
 <body class="kimPage_body">
+
+  {% include "src/_includes/development-tag.njk" %}
 
   <a class="kimSkiplink" href="#content">Skip to main content</a>
   
