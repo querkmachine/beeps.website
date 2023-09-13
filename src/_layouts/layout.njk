@@ -14,9 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.blogName }}" href="{{ '/feed.xml' | url }}">
-  <link rel="me" href="https://chitter.xyz/@batbeeps">
-  <link rel="me" href="https://twitter.com/batbeeps">
-  <link rel="me" href="https://github.com/querkmachine">
+  {%- for item in site.relMe %}
+    <link rel="me" href="{{ item }}">
+  {%- endfor %}
   <link rel="webmention" href="https://webmention.io/beeps.website/webmention">
   <link rel="pingback" href="https://webmention.io/beeps.website/xmlrpc">
   
@@ -40,6 +40,7 @@
   <script src="{{ colorSchemeJsUrl }}"></script>
   
   {#- Content metadata / OpenGraph #}
+  {{ page | dump }}
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="{{ title }}">

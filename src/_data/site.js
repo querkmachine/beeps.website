@@ -9,5 +9,10 @@ module.exports = function () {
     twitterUsername: "@batbeeps",
     domain: environment === "prod" ? "https://beeps.website" : "",
     environment,
+    relMe: [
+      "https://chitter.xyz/@batbeeps",
+      "https://twitter.com/batbeeps",
+      "https://github.com/querkmachine",
+    ],
   };
 };
