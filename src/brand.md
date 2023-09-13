@@ -1,7 +1,8 @@
 ---
 layout: brand.njk
 title: beeps' brand
-description: Style guide for my personal projects, including this website.
+metadata:
+  description: Style guide for my personal projects, including this website.
 ---
 
 {% macro _swatch(mainColorName, mainColorHex, complementaryColorName) %}

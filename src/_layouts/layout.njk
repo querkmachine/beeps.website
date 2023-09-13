@@ -40,21 +40,21 @@
   <script src="{{ colorSchemeJsUrl }}"></script>
   
   {#- Content metadata / OpenGraph #}
-  <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.domain + page.url | url }}">
+  <meta property="og:url" content="{{ site.domain + page.url | url }}">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="{{ title }}">
+  <meta property="og:title" content="{{ metadata.title if metadata.title else title }}">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
   <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/' + (opengraphImage if opengraphImage else 'default.png')  | url }}">
   <meta property="og:type" content="{{ "article" if page | isBlogPost else "website" }}">
-  {%- if description %}
-    <meta name="description" content="{{ description }}">
-    <meta property="og:description" content="{{ description }}">
+  {%- if metadata.description %}
+    <meta name="description" content="{{ metadata.description }}">
+    <meta property="og:description" content="{{ metadata.description }}">
   {%- endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="{{ site.twitterUsername }}">
   <meta name="twitter:creator" content="{{ site.twitterUsername }}">
-  {%- if noRobots %}
+  {%- if metadata.noRobots %}
     <meta name="robots" content="noindex, nofollow">
   {%- endif %}
   

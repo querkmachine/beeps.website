@@ -6,7 +6,8 @@ pagination:
   filter: [all]
 eleventyComputed:
   title: Blog posts tagged '{{ tag }}'
-description: Archive of beeps' blog posts.
+metadata:
+  description: Archive of beeps' blog posts.
 permalink: "/blog/{{ tag | slugify }}/"
 mastheadBreadcrumbs:
   - url: "/blog/"

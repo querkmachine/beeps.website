@@ -1,7 +1,8 @@
 ---
 title: Markdown and Nunjucks shortcode examples
 layout: generic.njk
-noRobots: true
+metadata:
+  noRobots: true
 ---
 
 A page for testing markdown styles, plugins and custom shortcodes.

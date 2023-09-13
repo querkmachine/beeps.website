@@ -1,6 +1,7 @@
 ---
 title: About beeps
-description: I'm pretty weird, tbh.
+metadata:
+  description: I'm pretty weird, tbh.
 permalink: "/about/"
 mastheadBreadcrumbs: null
 ---
