@@ -46,11 +46,7 @@
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
   <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/' + (opengraphImage if opengraphImage else 'default.png')  | url }}">
-  {%- if page.url | isBlogPost %}
-    <meta property="og:type" content="article">
-  {%- else %}
-    <meta property="og:type" content="website">
-  {%- endif %}
+  <meta property="og:type" content="{{ "article" if page | isBlogPost else "website" }}">
   {%- if description %}
     <meta name="description" content="{{ description }}">
     <meta property="og:description" content="{{ description }}">

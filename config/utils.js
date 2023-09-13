@@ -46,9 +46,8 @@ const formatDate = function (dateObj, format) {
  * @param {string} postUrl - The URL of the page.
  * @returns {boolean} - Whether or not this page is a blog post entry.
  */
-const pageIsBlogPost = function (postUrl) {
-  if (!postUrl) return false;
-  return postUrl.substring(0, 6) === "/blog/" ? true : false;
+const pageIsBlogPost = function (page) {
+  return page.filePathStem.substring(0, 6) !== "/blog/" ? false : true;
 };
 
 /**
