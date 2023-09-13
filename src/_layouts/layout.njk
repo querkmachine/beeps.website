@@ -10,9 +10,7 @@
   <link rel="preload" as="script" href="{{ colorSchemeJsUrl }}">
 
   {#- Technical metadata #}
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.blogName }}" href="{{ '/feed.xml' | url }}">
   {%- for item in site.relMe %}
     <link rel="me" href="{{ item }}">
@@ -39,32 +37,7 @@
   {# Color scheme switcher JS #}
   <script src="{{ colorSchemeJsUrl }}"></script>
   
-  {#- Content metadata / OpenGraph #}
-  <link rel="canonical" href="{{ site.domain + page.url | url }}">
-  <meta property="og:url" content="{{ site.domain + page.url | url }}">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="{{ metadata.title if metadata.title else title }}">
-  <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/' + (opengraphImage if opengraphImage else 'default.png')  | url }}">
-  <meta property="og:type" content="{{ "article" if page | isBlogPost else "website" }}">
-  {%- if metadata.description %}
-    <meta name="description" content="{{ metadata.description }}">
-    <meta property="og:description" content="{{ metadata.description }}">
-  {%- endif %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="{{ site.twitterUsername }}">
-  <meta name="twitter:creator" content="{{ site.twitterUsername }}">
-  {%- if metadata.noRobots %}
-    <meta name="robots" content="noindex, nofollow">
-  {%- endif %}
-  
-  {#- Theming/icons #}
-  <meta name="theme-color" content="#FFD447">
-  <link rel="icon" href="{{ '/assets/images/icons/favicon.ico' | url | cachebust }}" sizes="32x32">
-  <link rel="icon" href="{{ '/assets/images/icons/favicon.svg' | url | cachebust }}" sizes="any" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/icons/icon-180.png' | url | cachebust }}">
-  <link rel="mask-icon" href="{{ '/assets/images/icons/icon-mask.svg' | url | cachebust }}" color="#FFD447">
-  <link rel="manifest" href="{{ '/assets/images/icons/site.webmanifest' | url | cachebust }}">
+  {% include "src/_includes/page-head.njk" %}
   
   {#- Page-specific head content #}
   {% block head %}{% endblock %}

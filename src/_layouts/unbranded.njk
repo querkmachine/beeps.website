@@ -3,40 +3,12 @@
 <head>
 
   {#- Technical metadata #}
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Eleventy">
   
   {#- Page title #}
   <title>{{ title }}</title>
   
-  {#- SEO metadata #}
-  <link rel="canonical" href="{{ site.domain }}{{ page.url}}">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:site_name" content="beeps">
-  <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ site.domain }}{{ '/images/opengraph/default.png' | url }}">
-  <meta property="og:locale" content="en_GB">
-  {%- if description %}
-    <meta name="description" content="{{ description }}">
-    <meta property="og:description" content="{{ description }}">
-  {%- endif %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@batbeeps">
-  <meta name="twitter:creator" content="@batbeeps">
-  {%- if noRobots %}
-    <meta name="robots" content="noindex, nofollow">
-  {%- endif %}
-  
-  {#- Theming/icons #}
-  <meta name="theme-color" content="#FFD447">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | url | cachebust }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | url | cachebust }}">
-  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | url | cachebust }}" color="#FFD447">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url | cachebust }}">
-  <link rel="manifest" href="{{ '/site.webmanifest' | url | cachebust }}">
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | url | cachebust }}">
+  {% include "src/_includes/page-head.njk" %}
   
   {#- Page-specific head content #}
   {% block head %}{% endblock %}
