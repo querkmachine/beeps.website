@@ -43,7 +43,7 @@
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:site_name" content="beeps">
+  <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:url" content="{{ site.domain }}{{ page.url | url }}">
   {%- if page.url | isBlogPost %}
     <meta property="og:type" content="article">
@@ -57,8 +57,8 @@
     <meta property="og:description" content="{{ description }}">
   {%- endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@batbeeps">
-  <meta name="twitter:creator" content="@batbeeps">
+  <meta name="twitter:site" content="{{ site.twitterUsername }}">
+  <meta name="twitter:creator" content="{{ site.twitterUsername }}">
   {%- if noRobots %}
     <meta name="robots" content="noindex, nofollow">
   {%- endif %}
