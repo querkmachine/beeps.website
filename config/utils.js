@@ -18,9 +18,9 @@ const cachebustAssetUrl = function (url) {
 };
 
 /**
- * Format a JavaScript date object into one of our pre-defined formats
+ * Convert a date from one format into a different format.
  *
- * @param {Date} dateObj - The JavaScript date object to format.
+ * @param {Date|string|number} date - Date as a JS object, ISO string or Unix timestamp.
  * @param {"iso"|"human"|string} format - Either one of the pre-defined format keys, or a
  *   custom format constructed using Luxon's datetime tokens.
  *   https://moment.github.io/luxon/#/formatting?id=table-of-tokens
@@ -28,14 +28,33 @@ const cachebustAssetUrl = function (url) {
  *
  * @tutorial https://moment.github.io/luxon/
  */
-const formatDate = function (dateObj, format) {
-  const date = DateTime.fromJSDate(dateObj, { zone: "utc" });
-  if (format === "iso") {
-    return date.toISODate();
-  } else if (format === "human") {
-    return date.toFormat("d LLLL yyyy");
-  } else {
-    return date.toFormat(format);
+const formatDate = function (date, format, sourceFormat) {
+  switch (sourceFormat) {
+    case "iso":
+      date = DateTime.fromISO(date);
+      break;
+    case "unix":
+      date = DateTime.fromSeconds(Number(date));
+      break;
+    case "js":
+    default:
+      date = DateTime.fromJSDate(date);
+      break;
+  }
+
+  switch (format) {
+    case "iso":
+      return date.toISODate();
+      break;
+    case "human":
+      return date.toFormat("d LLLL yyyy");
+      break;
+    case "unix":
+      return date.toSeconds();
+    default:
+      format = format || "";
+      return date.toFormat(format);
+      break;
   }
 };
 

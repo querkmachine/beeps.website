@@ -29,6 +29,11 @@ const {
   getFirstNItems,
   pageIsBlogPost,
 } = require("./config/utils.js");
+const {
+  lastFmFeed,
+  mastodonFeed,
+  traktTvFeed,
+} = require("./config/socialFeeds.js");
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
@@ -52,6 +57,11 @@ module.exports = function (eleventyConfig) {
   if (process.env.ENVIRONMENT === "prod") {
     eleventyConfig.ignores.add(paths.src + "/blog/drafts/**/*");
   }
+
+  // Fetch data from third-party sources
+  eleventyConfig.addGlobalData("lastFmFeed", lastFmFeed);
+  eleventyConfig.addGlobalData("mastodonFeed", mastodonFeed);
+  eleventyConfig.addGlobalData("traktTvFeed", traktTvFeed);
 
   // Copy JS and assets
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/fonts");

@@ -1,0 +1,83 @@
+---
+title: beeps NOW!
+updated: 2023-10-01
+metadata:
+	description: A brief overview of inherent recency.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% macro _feedItem(item) %}
+	<li class="kimProse">
+		{%- if item.image %}<img src="{{ item.image }}" alt="">{% endif %}
+		{{ item.primary | safe }}
+		{%- if item.secondary %}<div class="kimBody-s">{{ item.secondary }}</div>{% endif %}
+		{%- if item.url and item.date %}
+			<div class="kimBody-s">
+				<a href="{{ item.url }}">
+					<time datetime="{{ item.date | formatDate("iso") }}">{{ item.date | formatDate("human", "unix") }}</time>
+				</a>
+			</div>
+		{%- endif %}
+	</li>
+{% endmacro %}
+
+{% block main %}
+<div class="kimWrapper">
+	<div class="kimGrid kim-!-margin-top-9 kim-!-margin-bottom-9">
+		<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+			<h1 class="kimHeading-xl kim-!-margin-bottom-3">beeps NOW!</h1>
+			<p class="kimBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci cupiditate unde aliquam et laboriosam magnam provident officiis consectetur necessitatibus, quasi minima earum reprehenderit placeat similique sed! Vero, quis voluptate. Magnam.</p>
+			<p class="kimBody-s">Last updated: {{ updated | formatDate("human") }}</p>
+		</div>
+	</div>
+	<div class="kimGrid kim-!-margin-top-9 kim-!-margin-bottom-9">
+		<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+			<h2 class="kimHeading-l">
+				Recently thought
+				<div class="kimSubheading-l">from <a href="//chitter.xyz/@batbeeps">Mastodon</a></div>
+			</h2>
+			<ol class="kimList kimList-spaced">
+				{%- for item in mastodonFeed | head(5) %}
+					{{ _feedItem({
+						url: item.url,
+						date: item.created_at | formatDate("unix", "iso"),
+						primary: item.content
+					}) }}
+				{%- endfor %}
+			</ol>
+		</div>
+	</div>
+	<div class="kimGrid kim-!-margin-top-9 kim-!-margin-bottom-9">
+		<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
+			<h2 class="kimHeading-l">
+				Recently listened
+				<div class="kimSubheading-l">from <a href="//last.fm/user/robomilk">Last.fm</a></div>
+			</h2>
+			<ol class="kimList kimList-spaced">
+				{%- for item in lastFmFeed.recenttracks.track | head(10) %}
+					{{ _feedItem({
+						image: item.image[1]['#text'],
+						primary: "&ldquo;" + item.name + "&rdquo;",
+						secondary: item.artist['#text']
+					}) }}
+				{%- endfor %}
+			</ol>
+		</div>
+		<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
+			<h2 class="kimHeading-l">
+				Recently watched
+				<div class="kimSubheading-l">from <a href="//trakt.tv/users/batbeeps">Trakt</a></div>
+			</h2>
+			<ol class="kimList kimList-spaced">
+				{%- for item in traktTvFeed | head(10) %}
+					{{ _feedItem({
+						primary: item.episode.season + "x" + item.episode.number + ": &ldquo;" + item.episode.title + "&rdquo;",
+						secondary: item.show.title
+					}) }}
+				{%- endfor %}
+			</ol>
+		</div>
+	</div>
+</div>
+{% endblock %}
