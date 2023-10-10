@@ -1,22 +1,34 @@
 {
   "sonas": [
     {
-      "name": "Emy",
-      "pronouns": "she/her it/its",
-      "gender": "genderless",
-      "species": "Robot Honduran white bat",
-      "description": "A regular anthropomorphic bat that fell into an abandoned cybernetic conversion chamber. It happens.",
-      "avatar": "https://beeps.website/assets/images/avatar-emy.png",
-      "colors": ["#252c24", "#475047", "#ecf1ec", "#4ce74c"]
-    },
-    {
       "name": "Ash",
       "pronouns": "she/her",
       "gender": "female",
-      "species": "Amphimorpho",
-      "description": "Former human mutated into an alien shapeshifter via a bite. Lovin' it.",
+      "species": "amphimorpho",
+      "description": "Ex-human mutated into an alien shapeshifter and loving it.",
       "avatar": "https://beeps.website/assets/images/avatar-ash.png",
+      "ref": "http://kimgur.com/qWLmm",
       "colors": ["#1d2f23", "#f1fff2", "#4ce74c"]
+    },
+    {
+      "name": "Emy",
+      "pronouns": "she/her it/its",
+      "gender": "genderless",
+      "species": "robot Honduran white bat",
+      "description": "Bionic bat with a variety of bodies available.",
+      "avatar": "https://beeps.website/assets/images/avatar-emy.png",
+      "ref": "http://kimgur.com/0WN7A",
+      "colors": ["#252c24", "#475047", "#ecf1ec", "#4ce74c"]
+    },
+    {
+      "name": "Olive",
+      "pronouns": "they/them she/her",
+      "gender": "non-binary",
+      "species": "squirrel plush suit",
+      "description": "Former human mysteriously transformed into a living plush suit.",
+      "avatar": "https://beeps.website/assets/images/avatar-olive.png",
+      "ref": "http://kimgur.com/Mi7vd",
+      "colors": ["#aa3a2f", "#dfa17a", "#786999", "#d43425"]
     }
   ]
 }
