@@ -4,7 +4,7 @@ date: 2023-10-25
 tags: [mental health]
 ---
 
-I make no secret of the fact that I'm not particularly 'normal. I've [a convoluted self-identity]({{ '/about/' | url }}), I partake in unusual hobbies, [I'm almost certainly neurodivergent]({{ '/blog/2023-05-16-let-me-tell-you-a-secret/' | url }}) in a way I've never seen benefit in having diagnosed.
+I make no secret of the fact that I'm not particularly 'normal'. I've [a convoluted self-identity]({{ '/about/' | url }}), I partake in unusual hobbies, [I'm almost certainly neurodivergent]({{ '/blog/2023-05-16-let-me-tell-you-a-secret/' | url }}) in a way I've never seen benefit in having diagnosed.
 
 I'm weird, but I'm okay with that. It doesn't really affect most of the things I do. Pretty much everyone I know, on an individual level, is accommodating with my little weirdsies.
 
