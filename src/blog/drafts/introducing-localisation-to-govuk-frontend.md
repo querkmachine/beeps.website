@@ -42,7 +42,23 @@ With the frequently changing lockdown rules, some teams in GOV.UK were building 
 
 At the time we were also in a period of intentional upheaval, the [GOV.UK Service Manual had already removed support for many legacy browsers like Internet Explorer](https://technology.blog.gov.uk/2022/06/16/service-manual-testing-requirement-changes-for-internet-explorer-11/) and plans were in motion for Frontend to follow suit.
 
-For us this unlocked the ability to start refactoring and reworking Frontend on a pretty foundational level, and introducing localisation was part of this drive to redefine the core of the product
+For us this unlocked the ability to start refactoring and reworking Frontend on a foundational level, and introducing localisation was both timely and a great test case for how we could solve problems that cut across the entire system.
+
+##
+
+In the early stages of the work I did a lot of digging into existing localisation strategies. We wouldn't be the first to try and have components in multiple languages, after all.
+
+But GOV.UK is, perhaps, a little special. Despite presenting itself as a single website—it's not. It's actually hundreds, if not thousands of websites, all operating with a shared design language under a shared brand.
+
+This may sound a little crazy, but it's a necessity of how complex government is. No one team, no matter the size, could have the necessary resources and subject-matter knowledge to build and maintain every service for every government department.
+
+So we don't. HMRC's services are built and ran by HMRC's tech team, the Home Office's by the Home Office's tech team, and so on for every department and unit.
+
+_How_ they build these services is almost entirely their prerogative. They can use whatever processes or technology stack they want so long as they follow [the Service Standard](https://www.gov.uk/service-manual/service-standard).
+
+This means we couldn't make any assumptions about the developer environment—we have no control over the server or what programming languages it might understand, and no control over the build or compilation process.
+
+We would need to rely on client-side JavaScript for our entire implementation, whilst also [not relying on JavaScript at all](https://www.gov.uk/service-manual/technology/using-progressive-enhancement).
 
 ## Still much to do
 
