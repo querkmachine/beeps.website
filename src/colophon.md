@@ -37,10 +37,20 @@ This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely
 
 Type is set in [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) designed by [Florian Karsten](https://floriankarsten.com/) and [Space Mono](https://fonts.google.com/specimen/Space+Mono) designed by [Colophon Foundry](https://www.colophon-foundry.org/).
 
-## Contents
+## Content
 
-Words are my own, unless otherwise specified.
-
-The robot bats are [my own original character]({{ '/about/furry/' | url }}), designed with help from my friend [Samael](https://twitter.com/Samael101). The bats were illustrated by myself, based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
+Words and images are my own, unless otherwise specified.
 
 This website also implements [fursona schema](https://github.com/theHedgehog0/fursona-schema), just in case it wasn't furry enough.
+
+### Characters
+
+{% character character="ash", variant="happy" %}
+Ash the amphimorpho [is also my own original character]({{ '/about/furry/' | url }}). Ash's headshots were illustrated by [Dzuk](https://dzuk.zone/).
+{% endcharacter %}
+
+{% character character="emy", variant="wave" %}
+Emy the robot bat is [my own original character]({{ '/about/furry/' | url }}), designed with help from my friend [Samael](https://samaelbretondragon.carrd.co/).
+
+Illustrations are by me, based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
+{% endcharacter %}

@@ -107,7 +107,37 @@ This is some text in a callout.
 **Bold** _italics_ [link](#). Markdown!
 {% endcallout %}
 
-### Character
+### Character - Ash
+
+{% character character="ash", variant="alarmed" %}
+Eeek! An alien!
+{% endcharacter %}
+
+{% character character="ash", variant="happy" %}
+Oh wait, that's just me.
+{% endcharacter %}
+
+{% character character="ash", variant="love" %}
+And I love being an alien critter!
+{% endcharacter %}
+
+{% character character="ash", variant="pensive" %}
+Society may not be so much of a fan...
+{% endcharacter %}
+
+{% character character="ash", variant="sleepy" %}
+...but they're a bunch of boring losers.
+{% endcharacter %}
+
+{% character character="ash", variant="thinking" %}
+Maybe I should bite them all?
+{% endcharacter %}
+
+{% character character="ash", variant="tongue" %}
+Hmmm, nah, I like being fairly unique.
+{% endcharacter %}
+
+### Character - Emy
 
 {% character variant="alarmed" %}
 Waoh, character callouts! These better work.

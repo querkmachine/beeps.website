@@ -7,24 +7,24 @@
 
 .kimCharacter {
   $c: #{colors.kim-color-css("speech-bubble")};
-  $w: 5rem;
+  $w: 4.5rem;
+  $g: 1rem;
   @include spacing.kim-responsive-margin(0);
   @include typography.kim-vr-margin(19);
-  @include spacing.kim-responsive-padding(3, $direction: top);
-  @include spacing.kim-responsive-padding(3, $direction: right);
-  @include spacing.kim-responsive-padding(3, $direction: bottom);
   display: flex;
-  gap: spacing.kim-spacing(4);
-  background-image: linear-gradient($c, $c);
-  background-size: $w 100%;
-  background-repeat: no-repeat;
-  background-position: left;
   border: measurements.kim-border-width("regular") solid $c;
-  &_image {
+  border-left: none;
+  &_cite {
     flex: 0 0 $w;
-    width: $w;
-    height: $w;
-    margin-top: 0 - ($w * 0.333);
+    background-color: $c;
+  }
+  &_image {
+    width: $w + $g;
+    max-width: none;
+    height: $w + $g;
+    margin-top: -$g;
+    margin-left: $g * -0.5;
+    margin-right: $g * -0.5;
     margin-bottom: 0;
     object-fit: contain;
     object-position: top center;
@@ -33,6 +33,7 @@
   }
   &_speech {
     @include spacing.kim-responsive-margin(0);
+    @include spacing.kim-responsive-padding(3);
     > :last-child {
       margin-bottom: 0;
     }
