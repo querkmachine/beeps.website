@@ -27,15 +27,19 @@ Certain aspects of the code, in particular the CSS architectural style, is cribb
 
 [Prettier](https://prettier.io/) is used to keep the code beautiful.
 
-I use Panic's [Nova](http://nova.app) as my code editor, accompanied by [iTerm](https://iterm2.com/) and [Oh My Zsh](https://ohmyz.sh/).
-
 Hat tips to the following folks for contributing something that currently exists in the site's code: [Bernard Nijenhuis](https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/), [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Stefan Baumgartner](https://fettblog.eu/11ty-automatic-twitter-cards/).
-
-This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
 
 ## Design
 
 Type is set in [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) designed by [Florian Karsten](https://floriankarsten.com/) and [Space Mono](https://fonts.google.com/specimen/Space+Mono) designed by [Colophon Foundry](https://www.colophon-foundry.org/).
+
+## Tools and services
+
+I use Panic's [Nova](http://nova.app) as my code editor of choice, accompanied by [iTerm](https://iterm2.com/), [Oh My Zsh](https://ohmyz.sh/) and the [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k).
+
+This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
+
+Domain names (of which I have too many) are managed by [Namecheap](https://www.namecheap.com/) and [Glauca Digital](https://glauca.digital/).
 
 ## Content
 
