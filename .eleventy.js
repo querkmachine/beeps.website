@@ -98,6 +98,7 @@ module.exports = function (eleventyConfig) {
     "figure",
     require("./config/shortcodes/figure.js")
   );
+  eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
     require("./config/shortcodes/responsiveImages.js")
