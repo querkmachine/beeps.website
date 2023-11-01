@@ -1,0 +1,211 @@
+---
+title: WindowsLogic accessibility audit
+metadata:
+	noRobots: true
+---
+
+{% extends 'src/_layouts/html-report.njk' %}
+
+{% block content %}
+
+<p class="kimBody-l">1 November 2023</p>
+
+{% markdown %}
+
+## Preamble
+
+This is a brief overview of accessibility issues that I identified on the WindowsLogic Productions website, when I reviewed a random sample of pages on the 1st of November 2023. These issues were identified using a combination of automated and manual tests using common web browsers and assistive technologies (AT).
+
+The pages reviewed include:
+
+- The homepage (https://windowslogic.co.uk/)
+- Software landing page (https://windowslogic.co.uk/software.php)
+- Shop landing page (https://windowslogic.co.uk/shop.php)
+- About (https://windowslogic.co.uk/about.php)
+
+The audit was timeboxed to 90 minutes and is not intended to be thorough or authoritative. It is here as a starter guide to issues that exist and improvements that could be made.
+
+These issues are mapped to [version 2.2 of the Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG22/) (WCAG), a set of accessibility criteria curated by the Web Accessibility Initiative (WAI) at the W3C. WCAG criteria are split into three ‘levels’ of compliance:
+
+- Level A: Considered to be the bare minimum necessary for accessibility compliance.
+- Level AA: An ‘acceptable’ level of compliance. This level is specifically referenced by various governments (including those of the US and UK) as their baseline for compliance with equality legislation.
+- Level AAA: Maximum compliance. This is generally only considered necessary for services that explicitly cater to disabled and special needs individuals.
+
+Today, I primarily checked for compliance against levels A and AA. This doesn’t mean that WindowsLogic Productions wouldn’t benefit from also incorporating aspects of level AAA, just that I did not include the majority of level AAA criteria in the audit process.
+
+It’s important to note that WCAG are _guidelines_. There may be situations where technical limitations or the nature of a feature makes it impossible to make accessible. In these situations it’s recommended to list these as known issues in an accessibility statement.
+
+Finally, I ask that you please take this report in the constructive manner it’s intended in. I’m more than aware that WindowsLogic Productions is built and maintained by volunteers, and I’m not attempting to discredit the site or those who work on it. Many, many websites, large and small, get accessibility wrong, and WindowsLogic Productions is not exceptional for the failures it has.
+
+If you have any further comments or questions about the content of this report, feel free to [contact me](//beeps.website/contact/) through whatever means you prefer. I can provide simple code examples too, if desired.
+
+## Recommendations to rectify WCAG Level A and AA failures
+
+### Add alternative text to images
+
+Several images on the homepage lack alternative text. This text is needed so that users of screen readers can understand the content of the page.
+
+With regards to the logo in the header and footer of the website, these appear to use title text in place of alternative text, however the title text does not match the text displayed in the graphic, instead featuring the tagline "Software and services made with passion." This is not an appropriate replacement for alternative text.
+
+See:
+
+- [Success Criterion 1.1.1: Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)
+- [Technique H37: Using `alt` attributes on `img` elements ](https://www.w3.org/WAI/WCAG22/Techniques/html/H37)
+
+### Replace reundant alternative text
+
+The party popper (🎉) graphic on the homepage features the alternative text "Welcome", which is the same text as presented in the heading above it. This is redundant and should be replaced with more appropriate alternative text.
+
+See
+
+- [Success Criterion 1.1.1: Non-text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)
+- [Technique H37: Using `alt` attributes on `img` elements ](https://www.w3.org/WAI/WCAG22/Techniques/html/H37)
+
+### Give the homepage a first-level heading
+
+The homepage currently lacks a first-level heading (aka, a `h1` element or equivalent). A heading that is descriptive of the page should always be provided, as it may be used by assitive technology users to locate the primary content.
+
+Currently it seems that the first `h2` elements on each page should be an `h1`.
+
+See:
+
+- [SC 1.3.1: Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
+- [SC 2.4.6: Headings and Labels (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels)
+
+### Avoid using headings for prosaic content
+
+The text "Software and services made with passion." on the homepage is marked up as a heading. However, headings should be used to demarcate the start of a new section of content and not used for stylistic purposes.
+
+See [Success Criteron 1.3.1: Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
+
+### Change the design of call to action buttons to provide greater contrast
+
+Currently, call to action buttons utilise the same text and background colour as general content and do not provide any alternative styling except for the addition of a coloured border.
+
+As the border is the only indication that this is a link, it may be considered a failure of Success Criterion 1.4.1, as the border colour is only thing distinguishing it as a separate visual element and the border colour does not meet the 3:1 minimum contrast ratio.
+
+See:
+
+- [Success Criteron 1.4.1: Use of Color (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color)
+- [Technique G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on hover for links or controls where color alone is used to identify them](https://www.w3.org/WAI/WCAG22/Techniques/general/G183)
+
+### Implement a responsive design
+
+The current page is not responsive and does not reflow its content to fit into smaller viewports or in response to zooming, instead shrinking the page or introducing a horizontal scrollbar. This introduces significant barriers to all users being able to easily read or navigate the page.
+
+See [Success Criterion 1.4.10: Reflow (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/reflow)
+
+### Add a skip link to bypass the header and navigation
+
+Content that is the same across multiple pages, such as the header and navigation, will often have to be heard by screen reader users each time they navigate to a new page. As a courtesy to these users, you should add a link to the top of each page that allows the user to skip directly to the page's content.
+
+See:
+
+- [Success Criterion 2.4.1: Bypass Blocks (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks)
+- [Technique G1: Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/WAI/WCAG22/Techniques/general/G1)
+
+### Identify the user's present page in the navigation
+
+The page that the user is currently viewing should be identified in the navigation. Ideally this should be done programatically, such as by using the `aria-current` attribute, but can be a change to visual appearance instead.
+
+See:
+
+- [Success Criterion 2.4.8: Location (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/location)
+- [Technique G128: Indicating current location within navigation bars](https://www.w3.org/WAI/WCAG22/Techniques/general/G128)
+
+### Define a language for the page content
+
+The page does not have a language defined. This means that screen readers may have to assume the current page's language, which may lead to incorrectly worded announcements or pronunication.
+
+See [Success Criterion 3.1.1: Language of Page (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page)
+
+### Add an accessible name to YouTube embeds
+
+All iframes, such as those used by YouTube embeds, require an accessible name to identify the content of the iframe to assistive technologies.
+
+See:
+
+- [Success Criterion 4.1.2: Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+- [Technique H64: Using the `title` attribute of the `iframe` element ](https://www.w3.org/WAI/WCAG22/Techniques/html/H64)
+
+### Fix the HTML used for call to action links
+
+The buttons on the homepage appear to be implemented by having placed a `button` inside of an `a` element. This is invalid HTML and an incorrect usage of the `button` element's semantics.
+
+This is likely to be very confusing to all manner of assistive technologies, as two controls appear to be present in a single location, one of which (the button) does not actually perform any function.
+
+See [](https://www.w3.org/WAI/WCAG22/Understanding/identify-purpose)
+
+### Avoid using `id`s multiple times on a page
+
+Some pages have multiple elements use the same `id` attribute. `id`s, by their nature, are intended to be unique identifiers, so this is invalid HTML.
+
+## Optional recommendations to rectify WCAG Level AAA failures
+
+### Don't use centre-aligned text for body content
+
+Large areas of prose that are centre-aligned are generally discouraged, as they create a staggered left edge that dyslexic users, users with low vision, and users of magnification tools can find much more difficult to read. It also slows the reading pace of users with capable eyesight and reading ability when compared to left-aligned text.
+
+See:
+
+- [Success Criterion 1.4.8: Visual Presentation (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation)
+- ["Why Justified (or Centered) Text is Bad for Accessibility"](https://www.boia.org/blog/why-justified-or-centered-text-is-bad-for-accessibility) from Bureau of Internet Accessibility
+
+### Reduce the width of body content
+
+Long lines of text are more difficult for users to read, as it makes it harder for the eye to 'reset' to the start of the next line. This is exacerbated for users with reading or vision disabilities.
+
+Currently, body copy is approximately 95 characters in length. It would be beneficial to reduce this to between 50 to 80 characters.
+
+See:
+
+- [Success Criterion 1.4.8: Visual Presentation (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation)
+- ["Readability: The Optimal Line Length"](https://baymard.com/blog/line-length-readability) from the Baymard Institute
+
+### Rewording call to action links
+
+Many links on the homepage utilise identical wording, such as "Get started" and "More information". To an assistive technology user, such as a screen reader user navigating with tabbing or in links mode, these links will outwardly appear identical to one another.
+
+Consider giving each link unique text that clearly identifies what content they relate to.
+
+See:
+
+- [Success Criterion 2.4.9: Link Purpose (Link Only) (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only)
+- [Technique G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG22/Techniques/general/G91)
+
+### Avoid clipping the keyboard focus indicator
+
+The keyboard focus indicator is currently clipped when visible on numerous elements, most prominently the header and navigation.
+
+See [Success Criterion 2.4.12: Focus Not Obscured (Enhanced) (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced)
+
+### Increase the size of navigation links, footer links, and buttons
+
+Althoguh the links on the primary navigation meet the minimum size and spacing requirements of WCAG Level AA, they fall short of the 44 pixel minimum size recommended for touch screen devices in Level AAA, as well as in various third-party guidelines such as Google's Material Design guidelines and Apple's Human Interface Guidelines.
+
+See [Success Criterion 2.5.5: Target Size (Enhanced) (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced)
+
+## Other recommendations
+
+### Ensure YouTube videos have captioning, transcript or another text alternative
+
+I've separated these out as they are more within the purvue of YouTube than the website itself. There are multiple WCAG criteria that exist with relevance to prerecorded video. These include provisions for supplying closed captioning (or another text alternative, such as a transcript) and audio description.
+
+See:
+
+- [Success Criterion 1.2.1: Audio-only and Video-only (Prerecorded) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded)
+- [Success Criterion 1.2.2: Captions (Prerecorded) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)
+- [Success Criterion 1.2.3: Audio Description or Media Alternative (Prerecorded) (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded)
+- [Success Criterion 1.2.5: Audio Description (Prerecorded) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded)
+
+### Avoid the use of inline CSS
+
+Many areas of the page use inline `style` attributes to override content styles.
+
+This is detrimental to users who may have user stylesheets or use browser extensions to change the appearance of the page, such as to override colours, fonts or the sizes of elements—as inline styles often take priority over these user applied customisations.
+
+See ["Inline Styles, User Style Sheets and Accessibility"](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) on Viget
+
+{% endmarkdown %}
+
+{% endblock %}
