@@ -6,34 +6,43 @@
 @use "sass:color";
 
 .kimCharacter {
-  $c: #{colors.kim-color-css("speech-bubble")};
-  $w: 4.5rem;
-  $g: 1rem;
+  $image_width: 4.5rem;
+  $image_gutter: 1rem;
   @include spacing.kim-responsive-margin(0);
   @include typography.kim-vr-margin(19);
   display: flex;
-  border: measurements.kim-border-width("regular") solid $c;
-  border-left: none;
+  gap: 1.5rem;
   &_cite {
-    flex: 0 0 $w;
-    background-color: $c;
+    flex: 0 0 $image_width;
+    position: relative;
+    &::before {
+      content: "";
+      width: $image_width + $image_gutter;
+      height: $image_width - $image_gutter;
+      margin: 0 ($image_gutter * -0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: colors.kim-color-css("speech-bubble");
+      clip-path: polygon(
+        #{$image_gutter * 0.5} 0,
+        100% 0,
+        calc(100% - #{$image_gutter * 0.5}) 100%,
+        0 100%
+      );
+      transform: rotate(-5deg);
+    }
   }
   &_image {
-    width: $w + $g;
-    max-width: none;
-    height: $w + $g;
-    margin-top: -$g;
-    margin-left: $g * -0.5;
-    margin-right: $g * -0.5;
-    margin-bottom: 0;
+    margin: 0;
+    margin-top: -$image_gutter * 1.5;
+    aspect-ratio: 1;
+    position: relative;
     object-fit: contain;
-    object-position: top center;
-    user-select: none;
-    filter: drop-shadow(0 0 2px $c);
   }
   &_speech {
     @include spacing.kim-responsive-margin(0);
-    @include spacing.kim-responsive-padding(3);
+    @include spacing.kim-responsive-padding(0);
     > :last-child {
       margin-bottom: 0;
     }
