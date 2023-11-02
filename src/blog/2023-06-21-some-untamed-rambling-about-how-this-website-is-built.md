@@ -12,10 +12,10 @@ Frequent visitors to this website will probably have noticed that the fonts, col
 
 ## A little bit crap: on purpose
 
-The French philosopher Montesquieu once wrote that "the best is the mortal enemy of the good".
+The French philosopher Montesquieu once wrote that <q>the best is the mortal enemy of the good</q>.
 
 {% character variant="point-up" %}
-Technically he wrote <span lang="fr">"Le mieux est le mortel ennemi du bien"</span> because he was French and wrote it in French.
+Technically he wrote <q lang="fr">Le mieux est le mortel ennemi du bien</q> because he was French and wrote it in French.
 {% endcharacter %}
 
 In the modern tech industry, this aphorism is usually translated into "perfect is the enemy of done"—it's better for something to be finished than for it to be perfect.
