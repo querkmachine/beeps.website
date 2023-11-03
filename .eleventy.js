@@ -60,15 +60,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add(paths.src + "/googlea3140dc71dc0155f.html");
   eleventyConfig.addPassthroughCopy(paths.src + "/googlea3140dc71dc0155f.html");
 
-  // Copy favicons/OpenGraph images
-  eleventyConfig.addPassthroughCopy(paths.src + "/android-chrome-*");
-  eleventyConfig.addPassthroughCopy(paths.src + "/apple-touch-icon.png");
-  eleventyConfig.addPassthroughCopy(paths.src + "/browserconfig.xml");
-  eleventyConfig.addPassthroughCopy(paths.src + "/favicon*");
-  eleventyConfig.addPassthroughCopy(paths.src + "/mstile-*");
-  eleventyConfig.addPassthroughCopy(paths.src + "/safari-pinned-tab.svg");
-  eleventyConfig.addPassthroughCopy(paths.src + "/site.webmanifest");
-
   // Copy manual .well-known directory entries
   eleventyConfig.addPassthroughCopy(paths.src + "/.well-known/**/*");
 
