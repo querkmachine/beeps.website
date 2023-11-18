@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
   <link href="{{ permalink | url | absoluteUrl(site.domain) }}" rel="self"/>
   <link href="{{ site.domain }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ site.domain }}</id>
+  <id>{{ site.domain }}/</id>
   <author>
     <name>{{ site.authorName }}</name>
     <email>{{ site.authorEmail }}</email>
