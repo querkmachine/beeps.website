@@ -3,25 +3,34 @@ permalink: "/feed.xml"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.blogName }}</title>
-  <subtitle>The inane ramblings of beeps.</subtitle>
-  <link href="{{ permalink | url | absoluteUrl(site.domain) }}" rel="self"/>
-  <link href="{{ site.domain }}"/>
-  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ site.domain }}/</id>
-  <author>
-    <name>{{ site.authorName }}</name>
-    <email>{{ site.authorEmail }}</email>
-  </author>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.blogName }}</title>
+    <link>{{ site.domain }}/</link>
+    <description>The inane ramblings of beeps.</description>
+    <lastBuildDate>{{ collections.blog | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <generator>{{ eleventy.generator }}</generator>
+    <language>en</language>
+    <image>
+      <title>{{ site.blogName }}</title>
+      <url>{{ '/assets/images/icons/icon-512.png' | url | absoluteUrl(site.domain) }}</url>
+      <link>{{ site.domain }}/</link>
+    </image>
+    <copyright>Content belongs to beeps except where otherwise stated.</copyright>
+    <atom:link href="{{ '/feed/' | absoluteUrl(site.domain) }}" rel="self" type="application/rss+xml"/>
+  </channel>
   {%- for post in collections.blog | reverse %}
-  {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.domain) }}{% endset %}
-  <entry>
-    <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
-    <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-  </entry>
+  {%- set absolutePostUrl %}{{ post.url | absoluteUrl(site.domain) }}{% endset %}
+  <item>
+    <title><![CDATA[{{ post.data.title }}]]></title>
+    <link>{{ absolutePostUrl }}</link>
+    <guid>{{ absolutePostUrl }}</guid>
+    <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+    <author>{{ site.authorEmail }} ({{ site.authorName }})</author>
+    <enclosure url="{{ post.data.opengraphImage | absoluteUrl(site.domain) }}" length="0" type="image/png"/>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}]]></content:encoded>
+  </item>
   {%- endfor %}
-</feed>
+</rss>
