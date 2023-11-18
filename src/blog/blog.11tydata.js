@@ -9,9 +9,10 @@ module.exports = {
   ],
   eleventyComputed: {
     opengraphImage: (data) => {
-      return `${data.page.date.toISOString().substr(0, 10)}-${
-        data.page.fileSlug
-      }.png`;
+      console.log(data);
+      return `${data.site.domain}/images/opengraph/${data.page.date
+        .toISOString()
+        .substr(0, 10)}-${data.page.fileSlug}.png`;
     },
   },
 };
