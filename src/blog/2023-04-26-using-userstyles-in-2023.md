@@ -2,6 +2,8 @@
 title: Using user stylesheets in 2023
 date: 2023-04-26
 tags: [design, technology, web development]
+metadata:
+  description: Userstyles have been a mainstay of the web since the 90s, but they're a dying breed in modern web browsers. Here's how you can still use them today.
 ---
 
 User stylesheets are a feature of web browsers that, appropriate to the name, allow the user to add their own custom CSS styles to webpages. These changes could be for accessibility reasons, to hide certain features, or simply to enforce a certain stylistic preference.

@@ -2,6 +2,8 @@
 title: Some thoughts on "professionalism"
 date: 2023-11-17
 tags: [self-identity, furry fandom, politics, random]
+metadata:
+  description: I've had some people accuse me that, because of who I am, I cannot possibly fulfil my role as a civil servant professionally. I've some words for those people.
 ---
 
 I am a frontend developer. I'm also a civil servant.

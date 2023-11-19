@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: May (ConFuzzled edition)"
 date: 2023-05-31
 tags: [yearly theme, furry fandom]
+metadata:
+  description: May's update on my yearly themes.
 ---
 
 I really don't have much to preamble this month, so let's get right into it.

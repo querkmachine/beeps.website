@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: June"
 date: 2023-07-05
 tags: [yearly theme]
+metadata:
+  description: June's update on my yearly themes.
 ---
 
 Whoops. Missed the deadline on this one a bit.

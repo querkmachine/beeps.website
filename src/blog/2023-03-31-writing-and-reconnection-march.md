@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: March"
 date: 2023-03-31
 tags: [yearly theme]
+metadata:
+  description: March's update on my yearly themes.
 ---
 
 March has been a busy month. Really busy. So busy that this post is basically a glorified bunch of bullet points. Let's go.

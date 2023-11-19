@@ -4,6 +4,8 @@ titleAccessible: Building a bat bot
 titleSvg: "2023-02-07-building-a-bat-bot.svg"
 date: 2023-02-07
 tags: [web development]
+metadata:
+  description: I built a Mastodon bot that posts hourly pictures of bats. And you can too!
 ---
 
 I recently left Twitter. The reasons why probably need little explanation for a contemporaneous reader in the know.

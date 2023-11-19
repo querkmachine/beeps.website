@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: September"
 date: 2023-09-30
 tags: [yearly theme]
+metadata:
+  description: September's update on my yearly themes.
 ---
 
 This is the month that I burned out properly.

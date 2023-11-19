@@ -3,6 +3,8 @@ title: How I use Twitter
 date: 2022-09-06
 updated: 2023-01-25
 tags: [technology]
+metadata:
+  description: My rules of engagement for social media and how I avoid being overwhelmed by Twitter.
 ---
 
 {% callout %}

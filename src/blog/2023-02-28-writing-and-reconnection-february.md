@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: February"
 date: 2023-02-28
 tags: [yearly theme]
+metadata:
+  description: February's update on my yearly themes.
 ---
 
 February, perhaps congruently with it being the shortest month, has not lent itself to productivity.

@@ -2,6 +2,8 @@
 title: A maker, not a manager
 date: 2023-10-25
 tags: [mental health]
+metadata:
+  description: Thoughts on how the traditional markers of success in the workplace are generally unfriendly to neurodiverse folks like me.
 ---
 
 I make no secret of the fact that I'm not particularly 'normal'. I've [a convoluted self-identity]({{ '/about/' | url }}), I partake in unusual hobbies, [I'm almost certainly neurodivergent]({{ '/blog/2023-05-16-let-me-tell-you-a-secret/' | url }}) in a way I've never seen benefit in having diagnosed.

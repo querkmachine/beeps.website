@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: April"
 date: 2023-05-01
 tags: [yearly theme]
+metadata:
+  description: April's update on my yearly themes.
 ---
 
 Well, this month seemed to go by insanely fast.

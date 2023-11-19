@@ -4,6 +4,8 @@ titleAccessible: "beeps in the Multiverse of Multiplicity: Our experiences and p
 titleSvg: "2022-10-27-beeps-in-the-multiverse-of-multiplicity.svg"
 date: 2022-10-27
 tags: [self-identity]
+metadata:
+  description: Have you ever said hello to yourself, and had your subconscious say hello back? An exploration of multiplicity and whether that applies to me.
 ---
 
 {% callout %}

@@ -3,6 +3,8 @@ title: Discovery
 date: 2022-07-27
 updated: 2022-07-28
 tags: [transition, self-identity, furry fandom]
+metadata:
+  description: When ten years of writing finally makes you realise something about yourself.
 ---
 
 The journey of self-discovery is an endless one. It may not feel like it to some: those who are happy with their gender assigned at birth, their sexuality, their identity, or have just never taken the time to explore anything outside of life's 'defaults' may find themselves perfectly satisfied with their lot in life.

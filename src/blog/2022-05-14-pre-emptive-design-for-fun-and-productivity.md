@@ -2,6 +2,8 @@
 title: Pre-emptive design for fun and productivity
 date: 2022-05-14
 tags: [web development, design]
+metadata:
+  description: Why I maintain a personal brand.
 ---
 
 A lot of famous individuals are well known for [always wearing the same clothes](https://edition.cnn.com/2015/10/09/world/gallery/decision-fatigue-same-clothes/index.html). Usually they credit this to reducing 'decision fatigue'—by not having to choose how to dress every day, it leaves more time to mull over the bigger decisions they have to make.

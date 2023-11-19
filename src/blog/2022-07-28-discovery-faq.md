@@ -3,6 +3,8 @@ title: Discovery - Q&A
 date: 2022-07-28
 updated: 2022-09-14
 tags: [transition, self-identity]
+metadata:
+  description: Some questions and answers on realising I don't identify as human.
 ---
 
 A collection of questions, and maybe even some answers, relating to my previous blog post, ["Discovery"]({{ '/blog/2022-07-27-discovery/' | url }}).

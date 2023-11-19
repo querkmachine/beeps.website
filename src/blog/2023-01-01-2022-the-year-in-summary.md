@@ -4,6 +4,8 @@ titleAccessible: "2022: the year in summary"
 titleSvg: "2023-01-01-2022-the-year-in-summary.svg"
 date: 2023-01-01
 tags: [furry fandom, medical, self-identity, transition, web development]
+metadata:
+  description: What I got up to in 2022.
 ---
 
 2022 was a year! I can't really say more than that without potentially breaching [my oath of impartiality](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code#political-impartiality), but a lot of stuff sure happened in the UK and around the world. Some of it was good, some of it was bad, and I don't disclose publicly which is which.

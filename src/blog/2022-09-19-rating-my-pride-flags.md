@@ -2,6 +2,8 @@
 title: Rating my pride flags
 date: 2022-09-19
 tags: [self-identity, design]
+metadata:
+  description: I have a fairly complex self-identity, and with that comes lots of pride flags. I decided to rate them all.
 ---
 
 Over the years I've developed [a fairly complex self-identity]({{ '/about/' | url }}), one that I've written about extensively over the last couple of months.

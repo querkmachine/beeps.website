@@ -2,6 +2,8 @@
 title: Let me tell you a secret
 date: 2023-05-16
 tags: [mental health]
+metadata:
+  description: How I (finally) came to terms with being neurodivergent.
 ---
 
 As of writing, the blurb on this website's homepage says this:

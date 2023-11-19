@@ -2,6 +2,8 @@
 title: Otherkin-friendly CAPTCHAs, revisited
 date: 2023-04-27
 tags: [self-identity, web development]
+metadata:
+  description: Using userstyles to make CAPTCHAs more respectful of non-human identities.
 ---
 
 {% responsiveImage "./src/images/robot-captcha.png", "A fake screenshot of a checkbox-type CAPTCHA, with the text reading 'I am a robot' and the box checked." %}

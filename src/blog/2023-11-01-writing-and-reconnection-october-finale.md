@@ -2,6 +2,8 @@
 title: "Writing & Reconnection: October (the finale)"
 date: 2023-11-01
 tags: [yearly theme]
+metadata:
+  description: The last update on my yearly themes.
 ---
 
 Wait what? Ending a year-long theme in October? Are you mad?
