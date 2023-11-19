@@ -20,16 +20,16 @@ eleventyExcludeFromCollections: true
     <copyright>Content belongs to beeps except where otherwise stated.</copyright>
     <atom:link href="{{ '/feed.xml' | absoluteUrl(site.domain) }}" rel="self" type="application/rss+xml"/>
     {%- for post in collections.blog | reverse %}
-    {%- set absolutePostUrl %}{{ post.url | absoluteUrl(site.domain) }}{% endset %}
+    {%- set absolutePostUrl = post.url | absoluteUrl(site.domain) %}
     <item>
-      <title><![CDATA[{{ post.data.title }}]]></title>
+      <title><![CDATA[{{ post.data.title | safe }}]]></title>
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <author>{{ site.authorEmail }} ({{ site.authorName }})</author>
       <enclosure url="{{ post.data.opengraphImage | absoluteUrl(site.domain) }}" length="0" type="image/png"/>
-      {#<description><![CDATA[]]></description>#}
-      <content:encoded><![CDATA[{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}]]></content:encoded>
+      <description><![CDATA[{{ post.data.metadata.description }}]]></description>
+      <content:encoded><![CDATA[{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) | safe }}]]></content:encoded>
     </item>
     {%- endfor %}
   </channel>

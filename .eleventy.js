@@ -43,6 +43,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginToc);
 
+  // Configure frontmatter parsing
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+  });
+
   // Ignore the blog drafts directory if this is a production build
   if (process.env.ENVIRONMENT === "prod") {
     eleventyConfig.ignores.add(paths.src + "/blog/drafts/**/*");

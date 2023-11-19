@@ -1,5 +1,5 @@
 ErrorDocument 404 /404/
 
 <Files "feed.xml">
-ForceType application/atom+xml
+ForceType application/rss+xml
 </Files>
