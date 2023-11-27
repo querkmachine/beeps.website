@@ -26,7 +26,7 @@ eleventyExcludeFromCollections: true
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-      <author>{{ site.authorEmail }} ({{ site.authorName }})</author>
+      <author><![CDATA[{{ site.authorName | safe }}]]></author>
       <enclosure url="{{ post.data.opengraphImage | absoluteUrl(site.domain) }}" length="0" type="image/png"/>
       <description><![CDATA[{{ post.data.metadata.description }}]]></description>
       <content:encoded><![CDATA[{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) | safe }}]]></content:encoded>
