@@ -62,13 +62,13 @@ These combinations are known to be meet the minimum contrast ratio.
 
 ## Typography
 
-[Space Mono](https://fonts.google.com/specimen/Space+Mono) is used for headings, code snippets, and as a stylistic alternative for small amounts of text. It's used in bold (700) and regular (400) weights.
-
-> <div style="font-family:'Space Mono'"><span style="font-weight:700">Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, "Because it is there." </span><span style="font-weight:400">Well, space is there, and we're going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there.</span></div>
-
-[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) is used for prose and other text. As a variable font, it's available in all widths from bold (700) to thin (300).
+[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) is used for the majority of text. As a variable font, it's available in all widths from bold (700) to thin (300).
 
 > <div style="font-family:'Space Grotesk'"><span style="font-weight:700">We choose to go to the Moon. </span> <span style="font-weight:600">We choose to go to the Moon... </span><span style="font-weight:500">We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard; </span><span style="font-weight:400">because that goal will serve to organize and measure the best of our energies and skills,</span> <span style="font-weight:300">because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one we intend to win, and the others, too.</span></div>
+
+[Space Mono](https://fonts.google.com/specimen/Space+Mono) is used for code snippets and as a stylistic alternative for small amounts of text. It's used in bold (700) and regular (400) weights.
+
+> <div style="font-family:'Space Mono'"><span style="font-weight:700">Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, "Because it is there." </span><span style="font-weight:400">Well, space is there, and we're going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there.</span></div>
 
 ---
 
@@ -79,5 +79,5 @@ This isn't used a whole lot, but in places where a logo or icon is needed—and 
 This is a very recent addition, so will probably be tweaked and refined a bit before it settles down.
 
 <div style="max-width:320px;background-color:white" class="kim-!-margin-bottom-6 kim-!-padding-6">
-  <img src="{{ '/safari-pinned-tab.svg' | url }}" alt="Robot bat icon" class="kim-!-margin-0">
+  <img src="{{ '/assets/images/icons/icon-mask.svg' | url }}" alt="Robot bat icon" class="kim-!-margin-0">
 </div>
