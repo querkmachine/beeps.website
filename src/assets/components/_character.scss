@@ -4,14 +4,25 @@
 @use "../helpers/typography";
 
 @use "sass:color";
+@use "sass:math";
 
 .kimCharacter {
   $image_width: 4.5rem;
   $image_gutter: 1rem;
+  $line_width: measurements.kim-border-width("regular");
   @include spacing.kim-responsive-margin(0);
   @include typography.kim-vr-margin(19);
   display: flex;
   gap: 1.5rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(#{math.div($image-width, 2)} - #{math.div($line_width, 2)});
+    border-left: $line_width solid colors.kim-color-css("speech-bubble");
+  }
   &_cite {
     flex: 0 0 $image_width;
     position: relative;
