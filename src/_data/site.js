@@ -14,5 +14,13 @@ module.exports = function () {
       "https://twitter.com/batbeeps",
       "https://github.com/querkmachine",
     ],
+    footerLinks: [
+      { href: "/about/", text: "About beeps" },
+      { href: "/brand/", text: "Brand" },
+      { href: "/colophon/", text: "Colophon" },
+      { href: "/links/", text: "Cool links" },
+      { href: "/privacy/", text: "Privacy" },
+      { href: "/contact/", text: "Contact" },
+    ],
   };
 };

@@ -27,11 +27,15 @@
       align-items: center;
     }
   }
-  &_themeSwitch {
-    margin-right: auto;
-  }
-  &_boilerplate {
+  &_links {
     @include typography.kim-font-size(12);
     display: block;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    li {
+      @include spacing.kim-responsive-margin(2, $direction: right);
+      display: inline-block;
+    }
   }
 }

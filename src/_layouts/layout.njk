@@ -83,14 +83,14 @@
         </div>
       {% endblock %}
       <div class="kimWrapper kimFooter_inner">
+        <ul class="kimFooter_links" aria-label="Minor content">
+          {%- for link in site.footerLinks %}
+            <li><a class="kimLink" href="{{ link.href | url }}">{{ link.text }}</a></li>
+          {%- endfor%}
+        </ul>
         <div class="kimFooter_themeSwitch">
           {% include "src/_includes/color-scheme-switch.njk" %}
         </div>
-        <small class="kimFooter_boilerplate">
-          {% block boilerplate %}
-            Made by <a class="kimLink-plain" href="{{ '/about/' | url }}">beeps</a> and <a class="kimLink-plain" href="{{ '/colophon/' | url }}">uncountable others</a>. Keep circulating the HTML.
-          {% endblock %}
-        </small>
       </div>
     </footer>
   {% endblock %}
