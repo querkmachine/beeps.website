@@ -31,7 +31,7 @@ Last updated: {{ updated | formatDate('human') }}
 
 [Auto Schenanigans](https://www.youtube.com/@AutoShenanigans) has a bloke drive around the UK and sardonically tell you things about roads and petrol. He's kinda like one of those train YouTubers but for motorways.
 
-[Chain Bear](https://www.youtube.com/@chainbear) makes video essays about Formula 1 and motorsport, usually to explain some piece of technology or weird application of the rules. They're pretty calming, and proved quite useful
+[Chain Bear](https://www.youtube.com/@chainbear) makes video essays about Formula 1 and motorsport, usually to explain some piece of technology or weird application of the rules. They're pretty calming, and proved quite useful when I was first getting into F1.
 
 [FUNKe](https://www.youtube.com/@FUNKe) makes cool, animated video essays about video games (and somehow the band Weezer without ever actually making a video _about_ Weezer). I can't say I play games (or Weezer) enough to really get it, but the presentation style is da bomb y'all.
 
@@ -39,7 +39,7 @@ Last updated: {{ updated | formatDate('human') }}
 
 [Jago Hazzard](https://www.youtube.com/@JagoHazzard) has a bloke train around London and sardonically tell you things about railway lines and rolling stock. He's kinda like one of those car YouTubers but for the London Underground.
 
-[Junkball](https://www.youtube.com/@JunkBallMedia) makes video essays about stupid things in _Star Trek_ and if that doesn't sell you then I've got nothin'.
+[Junkball](https://www.youtube.com/@JunkBallMedia) makes video essays about stupid things in _Star Trek_ and if that doesn't sell you then there's probably nothing here for you.
 
 [Linus Boman](https://www.youtube.com/@LinusBoman) makes videos about design and typography, ranging from history lessons to conceptual redesigns. Videos don't come often, but they're always exceptionally well produced and presented.
 
