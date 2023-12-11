@@ -16,6 +16,27 @@
   &[data-color-scheme="light"] {
     @include colors.kim-output-all-color-properties("light");
   }
+  &[data-color-scheme="arc"] {
+    &,
+    * {
+      transition-property: color, background-color, border-color;
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+    }
+    --color-text: var(--arc-palette-title);
+    --color-background: var(--arc-palette-background);
+    --color-link: var(--arc-palette-maxContrastColor);
+    --color-link-accent: var(--arc-palette-hover);
+    --color-link-hover: var(--arc-palette-maxContrastColor);
+    --color-link-hover-accent: var(--arc-palette-foregroundSecondary);
+    --color-furniture: var(--arc-palette-maxContrastColor);
+    --color-furniture-alt: var(--arc-palette-foregroundPrimary);
+    --color-accent: var(--arc-palette-maxContrastColor);
+    --color-accent-alt: var(--arc-palette-foregroundPrimary);
+    --color-speech-bubble: var(--arc-palette-maxContrastColor);
+    --color-focus-background: var(--arc-palette-maxContrastColor);
+    --color-focus-text: var(--arc-palette-minContrastColor);
+  }
   background-color: colors.kim-color-css("background");
   font-size: clamp(16px, 1.22vw, 22px);
   text-size-adjust: 100%;
