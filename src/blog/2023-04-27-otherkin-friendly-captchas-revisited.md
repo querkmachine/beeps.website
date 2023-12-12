@@ -1,6 +1,7 @@
 ---
 title: Otherkin-friendly CAPTCHAs, revisited
 date: 2023-04-27
+updated: 2023-12-12
 tags: [self-identity, web development]
 metadata:
   description: Using userstyles to make CAPTCHAs more respectful of non-human identities.
@@ -32,27 +33,43 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
  * (2) hCaptcha
  * (3) Cloudflare Turnstile
  * (4) Microsoft CAPTCHA
+ * (5) Friendly Captcha
  */
-
+ 
 /* 1 */ #recaptcha-anchor-label,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label,
 /* 3 */ #cf-stage #challenge-stage .ctp-label,
-/* 4 */ #root > .box > .box > p[data-theme="home.instructions"] {
+/* 4 */ #root > .box > .box > p[data-theme="home.instructions"],
+/* 5 */ .frc-captcha .frc-text {
   font-size: 0 !important;
   line-height: 0 !important;
 }
 
 /* 1 */ #recaptcha-anchor-label::before,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label::before,
-/* 3 */ #cf-stage #challenge-stage .ctp-label::before {
-  content: "I'm a robot";
+/* 3 */ #cf-stage #challenge-stage .ctp-label::before,
+/* 4 */ #root > .box > .box > p[data-theme="home.instructions"]::before,
+/* 5 */ .frc-captcha .frc-text::before {
   font-size: 14px;
+  line-height: 1.2;
 }
 
-/* 4 */ #root > .box > .box > p[data-theme="home.instructions"]::before {
-  content: "Solve the puzzle to prove you are a robot.";
-  font-size: 1rem;
-  line-height: 1;
+/* 1 */ #recaptcha-anchor-label::before,
+/* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label::before,
+/* 3 */ #cf-stage #challenge-stage .ctp-label::before {
+  /* Message that usually appears next to a checkbox. */
+  content: "I'm a robot";
+}
+
+/* 4 */ #root > .box > .box > p[data-theme="home.instructions"]::before,
+/* 5 */ .frc-captcha .frc-text::before {
+  /* Message that usually appears before a challenge. */
+  content: "Prove you are a robot.";
+}
+
+/* 5 */ .frc-captcha .frc-success .frc-text::before {
+  /* Message that usually appears after completing a challenge. */
+  content: "You're a robot!";
 }
 ```
 <!-- prettier-ignore-end -->
@@ -62,3 +79,7 @@ Apply the code according to [your browser's requirements]({{ '/blog/2023-04-26-u
 If there are other CAPTCHA systems that aren't included yet, let me know! I'll try and update this style to account for them.
 
 Thanks again to [mavica](https://maple.pet). Why not check out bytes [Netizen link cache](https://links.netizen.club)? It makes me wanna make some 88&times;31 pixel buttons.
+
+## Updates
+
+- 2023-12-12: Updated to add [Friendly Captcha](https://friendlycaptcha.com/) support and restructure the code a little.
