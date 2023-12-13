@@ -4,6 +4,10 @@ date: 2023-12-10
 tags: [technology]
 metadata:
   description: My thoughts on using the shiny new browser on the block.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111557752407785137"
 ---
 
 [Arc](https://arc.net/) is one of the "new generation" of web browsers that have started popping up in recent years. Like many of them, it claims to protect the privacy of the user from the evils of privacy-invading online practices. Like many of them, it claims to reinvent and revolutionise how web browsers are used.

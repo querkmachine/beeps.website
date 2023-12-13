@@ -4,6 +4,10 @@ date: 2023-07-26
 tags: [technology, random]
 metadata:
   description: A rather tongue-in-cheek comparison of the places people are going now Twitter has gone to shit.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110776897916078738"
 ---
 
 With Musk giving Twitter one of [the most short-sighted, poorly thought-through rebrands](https://mastodon.online/@davidaugust/110771397721359205) in tech industry history, a good number of folks are—once again—exodusing from the service.

@@ -4,6 +4,10 @@ date: 2023-05-31
 tags: [yearly theme, furry fandom]
 metadata:
   description: May's update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110463780635686591"
 ---
 
 I really don't have much to preamble this month, so let's get right into it.

@@ -4,6 +4,10 @@ date: 2023-05-16
 tags: [mental health]
 metadata:
   description: How I (finally) came to terms with being neurodivergent.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110378744011914755"
 ---
 
 As of writing, the blurb on this website's homepage says this:

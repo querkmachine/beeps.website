@@ -1,0 +1,39 @@
+@use "../helpers/colors";
+@use "../helpers/measurements";
+@use "../helpers/spacing";
+
+.kimComment {
+  margin: 0;
+  &_meta {
+    @include spacing.kim-responsive-margin(3, $direction: bottom);
+    @include spacing.kim-responsive-padding(2, $direction: top);
+    @include spacing.kim-responsive-padding(2, $direction: bottom);
+    border-width: 0;
+    border-top-width: measurements.kim-border-width("hairline");
+    border-bottom-width: measurements.kim-border-width("hairline");
+    border-style: solid;
+    border-color: colors.kim-color-css("furniture-alt");
+    overflow: hidden;
+  }
+  &_avatar {
+    width: 3rem;
+    margin: 0;
+    margin-right: spacing.kim-spacing(2);
+    padding: measurements.kim-border-width("hairline");
+    border: measurements.kim-border-width("hairline") solid
+      colors.kim-color-css("link");
+    aspect-ratio: 1;
+    float: left;
+    object-fit: cover;
+  }
+  &_name {
+    word-break: break-word;
+  }
+  &_time {
+    display: block;
+    margin: 0;
+  }
+  &_content {
+    margin: 0;
+  }
+}

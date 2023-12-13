@@ -1,0 +1,24 @@
+{% macro kimBlogComment(comment) %}
+  <figure class="kimComment">
+    <figcaption class="kimComment_meta">
+      <a class="kimLink kimLink-plain kimComment_user" href="{{ comment.account.url }}" rel="nofollow noopener noreferrer">
+        <img class="kimComment_avatar" alt="" src="{{ comment.account.avatar }}" loading="lazy">
+        <span class="kimComment_name">{{ comment.account.acct }}</span>
+      </a>
+      <time class="kimBody-s kimComment_time" datetime="{{ comment.created_at }}">{{ comment.created_at | formatISODate('humanWithTime') }}</time>
+    </figcaption>
+    <blockquote class="kimProse kimComment_content">
+      {{ comment.content | safe }}
+    </blockquote>
+  </figure>
+{% endmacro %}
+
+{% macro kimBlogComments(comments) %}
+  {%- if comments | length > 0 %}
+    <ol class="kimList">
+      {%- for comment in comments %}
+        <li>{{ kimBlogComment(comment) }}</li>
+      {%- endfor %}
+    </ol>
+  {%- endif %}
+{% endmacro %}

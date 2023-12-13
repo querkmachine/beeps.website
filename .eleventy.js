@@ -26,6 +26,7 @@ const { compileSass } = require("./config/sass.js");
 const {
   cachebustAssetUrl,
   formatDate,
+  formatISODate,
   getFirstNItems,
   pageIsBlogPost,
 } = require("./config/utils.js");
@@ -108,6 +109,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("cachebust", cachebustAssetUrl);
   eleventyConfig.addFilter("filterTagList", filterCommonTags);
   eleventyConfig.addFilter("formatDate", formatDate);
+  eleventyConfig.addFilter("formatISODate", formatISODate);
   eleventyConfig.addFilter("head", getFirstNItems);
   eleventyConfig.addFilter("isBlogPost", pageIsBlogPost);
   eleventyConfig.addFilter("splitlines", splitLines);

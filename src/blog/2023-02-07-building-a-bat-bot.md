@@ -6,6 +6,10 @@ date: 2023-02-07
 tags: [web development]
 metadata:
   description: I built a Mastodon bot that posts hourly pictures of bats. And you can too!
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "109826013960339119"
 ---
 
 I recently left Twitter. The reasons why probably need little explanation for a contemporaneous reader in the know.

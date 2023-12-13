@@ -4,6 +4,10 @@ date: 2023-02-28
 tags: [yearly theme]
 metadata:
   description: February's update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "109944653729116139"
 ---
 
 February, perhaps congruently with it being the shortest month, has not lent itself to productivity.

@@ -9,6 +9,7 @@
 @forward "../objects/rule";
 @forward "../objects/table";
 @forward "../objects/typography";
+@forward "../objects/links";
 @forward "../objects/lists";
 
 .kimProse {
@@ -52,5 +53,9 @@
   }
   table {
     @extend .kimTable;
+  }
+  a {
+    @extend .kimLink;
+    word-break: break-word;
   }
 }

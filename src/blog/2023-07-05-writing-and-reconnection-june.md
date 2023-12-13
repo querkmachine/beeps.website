@@ -4,6 +4,10 @@ date: 2023-07-05
 tags: [yearly theme]
 metadata:
   description: June's update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110662166445811944"
 ---
 
 Whoops. Missed the deadline on this one a bit.

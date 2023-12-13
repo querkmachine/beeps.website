@@ -4,6 +4,10 @@ date: 2023-09-05
 tags: [yearly theme]
 metadata:
   description: August's update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111014070182367041"
 ---
 
 August was notable, in some twisted way, for its simultaneous abundance and complete lack of success in meeting my themes for 2023.

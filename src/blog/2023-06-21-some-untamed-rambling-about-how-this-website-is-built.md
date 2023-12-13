@@ -4,6 +4,10 @@ date: 2023-06-21
 tags: [design, web development]
 metadata:
   description: Thoughts and explainers on why this website is built the way it is, the good, the bad, and the ugly.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110584543730484954"
 ---
 
 Hi, I'm beeps. I make websites for a living.

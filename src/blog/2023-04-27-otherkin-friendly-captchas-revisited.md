@@ -5,6 +5,10 @@ updated: 2023-12-12
 tags: [self-identity, web development]
 metadata:
   description: Using userstyles to make CAPTCHAs more respectful of non-human identities.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110272578792454801"
 ---
 
 {% responsiveImage "./src/images/robot-captcha.png", "A fake screenshot of a checkbox-type CAPTCHA, with the text reading 'I am a robot' and the box checked." %}

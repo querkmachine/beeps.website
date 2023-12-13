@@ -4,6 +4,10 @@ date: 2023-07-31
 tags: [yearly theme]
 metadata:
   description: July's update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "110810732408271469"
 ---
 
 This month I decided to take advantage of one of the benefits of being a civil servant: I worked compressed hours.

@@ -34,9 +34,20 @@ const formatDate = function (dateObj, format) {
     return date.toISODate();
   } else if (format === "human") {
     return date.toFormat("d LLLL yyyy");
+  } else if (format === "humanWithTime") {
+    return date.toFormat("d LLLL yyyy; H:mm");
   } else {
     return date.toFormat(format);
   }
+};
+
+/**
+ * Same idea as the above but accepts an ISO timestamp instead of requiring a
+ * JS date object. Useful for data pulled from third-party services.
+ */
+const formatISODate = function (isoDate, format) {
+  const date = new Date(isoDate);
+  return formatDate(date, format);
 };
 
 /**
@@ -69,6 +80,7 @@ const getFirstNItems = function (array, n) {
 module.exports = {
   cachebustAssetUrl,
   formatDate,
+  formatISODate,
   getFirstNItems,
   pageIsBlogPost,
 };

@@ -4,6 +4,10 @@ date: 2023-11-17
 tags: [self-identity, furry fandom, politics, random]
 metadata:
   description: I've had some people accuse me that, because of who I am, I cannot possibly fulfil my role as a civil servant professionally. I've some words for those people.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111427818188547326"
 ---
 
 I am a frontend developer. I'm also a civil servant.

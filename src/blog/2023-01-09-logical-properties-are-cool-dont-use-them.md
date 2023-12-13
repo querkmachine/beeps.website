@@ -4,6 +4,10 @@ date: 2023-01-09
 tags: [web development]
 metadata:
   description: CSS Logical Properties are wonderful for localisation, but they have some teething problems.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "109661902603010834"
 ---
 
 [Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) is a CSS specification that aims to supplement 'physical' CSS properties and values—ones that reference immutable physical directions, think like `margin-left` or `text-align: right`—with 'logical' versions that instead refer to more subjective points, like the 'start' or 'end' of something.

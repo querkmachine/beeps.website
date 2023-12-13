@@ -4,6 +4,10 @@ date: 2023-08-27
 tags: [furry fandom, self-identity]
 metadata:
   description: What fursonas mean to me, and introducing my newest one.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111006035644776672"
 ---
 
 {% figure caption="Original Emy, as drawn by BatPunk.", float="right" %}

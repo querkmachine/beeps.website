@@ -86,6 +86,62 @@
         </div>
       </article>
       
+      {%- if interactions %}
+        <div class="kimGrid kim-!-doNotPrint">
+          
+          {%- if (favourites | length > 0) or (shares | length > 0) %}
+            <section id="interactions" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+              <hr class="kimRule kimRule-thick">
+    
+              {%- if favourites | length > 0 %}
+                <h2 class="kimHeading-m">Favourited by</h2>
+                <ul class="kimInteractionList">
+                  {%- for item in favourites %}
+                  <li>
+                    <a href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
+                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy">
+                    </a>
+                  </li>
+                  {%- endfor %}
+                </ul>
+              {%- endif %}
+    
+              {%- if shares | length > 0 %}
+                <h2 class="kimHeading-m">Shared by</h2>
+                <ul class="kimInteractionList">
+                  {%- for item in shares %}
+                  <li>
+                    <a href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
+                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy">
+                    </a>
+                  </li>
+                  {%- endfor %}
+                </ul>
+              {%- endif %}
+    
+            </section>
+          {%- else %}
+            {# Placeholder column if there's nothing to actually show here. Not ideal, but eeeeeeh. #}
+            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird" aria-hidden="true">
+              <hr class="kimRule kimRule-thick">
+            </div>
+          {%- endif %}
+          
+          <section id="comments" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+            <hr class="kimRule kimRule-thick">
+            
+            <h2 class="kimHeading-m">Comments</h2>
+            <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on Mastodon</a>.</p>
+            
+            {%- if comments %}
+            {% from "src/_includes/blog-comments.njk" import kimBlogComments %}
+            {{ kimBlogComments(comments) }}
+            {%- endif %}
+            
+          </section>
+        </div>
+      {%- endif %}
+      
       <nav aria-label="Next and previous blog post" class="kim-!-doNotPrint">
         <hr class="kimRule kimRule-thick">
         <div class="kimGrid">
@@ -107,65 +163,6 @@
       </nav>
     </div>
   </div>
-
-        {# <div class="kimGrid">
-          <div class="kimGrid_column kimGrid_column-full">
-            <footer class="kimBody-s">
-              {%- if date -%}
-                <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
-                  <span class="kim-!-sr">Published on</span>
-                  {{ date | formatDate('human') }}
-                </time>
-              {%- endif -%}
-              {%- if date and updated -%}<span aria-hidden="true">&thinsp;/&thinsp;</span>{%- endif -%}
-              {%- if updated -%}
-                <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
-                  <span>Updated</span>
-                  {{ updated | formatDate('human') }}
-                </time>
-              {%- endif -%}
-              {%- if tags -%}
-                <nav aria-label="Post tags" class="kim-!-margin-top-1 kim-!-doNotPrint">
-                  <span class="kim-!-sr">Tagged:</span>
-                  <ul class="kimList kimList-inline kimBody-s">
-                    {% for tag in tags | filterTagList | sort %}
-                      {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
-                      <li>
-                        <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
-                          {{- tag | tagify -}}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </nav>
-              {%- endif %}
-            </footer>
-          </div>
-        </div>
-        <div class="kimGrid">
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
-            {%- if (content | toc) %}
-              <nav class="kimToc" aria-labelledby="toc-header">
-                <details class="kimToc_collapsible" data-js="toc">
-                  <summary class="kimToc_collapsibleSummary">
-                    <span class="kimHeading-s" id="toc-header">Contents</span>
-                  </summary>
-                  {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
-                </details>
-                <hr class="kimRule kimRule-hairline">
-              </nav>
-            {%- endif %}
-          </div>
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
-            {% block content  %}
-              {{ content | safe }}
-            {% endblock %}
-          </div>
-        </div>
-      </article>
-      
-    </div>
-  </div> #}
 {% endblock %}
 
 {% block scripts %}

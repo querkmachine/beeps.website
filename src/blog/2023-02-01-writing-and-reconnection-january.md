@@ -4,6 +4,10 @@ date: 2023-02-01
 tags: [yearly theme]
 metadata:
   description: What is a 'theme'? How are they better than new year's resolutions? My themes for this year are...
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "109789610354384507"
 ---
 
 I'm a pretty big fan of the concept of Themes, as devised on [the Cortex podcast](https://www.relay.fm/cortex) by Myke Hurley and CGP Grey. To tl;dr it: Rather than setting a New Year's resolution—which is often overly specific and easy to fail at as a result—you instead define an overarching theme for the coming year.

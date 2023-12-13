@@ -4,6 +4,10 @@ date: 2023-11-01
 tags: [yearly theme]
 metadata:
   description: The last update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111336611419886420"
 ---
 
 Wait what? Ending a year-long theme in October? Are you mad?

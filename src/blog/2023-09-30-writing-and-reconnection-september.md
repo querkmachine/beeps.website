@@ -4,6 +4,10 @@ date: 2023-09-30
 tags: [yearly theme]
 metadata:
   description: September's update on my yearly themes.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111155007349809456"
 ---
 
 This is the month that I burned out properly.
