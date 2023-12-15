@@ -50,11 +50,13 @@ This website also implements [fursona schema](https://github.com/theHedgehog0/fu
 ### Characters
 
 {% character character="ash", variant="happy" %}
-Ash the amphimorpho [is also my own original character]({{ '/about/furry/' | url }}). Ash's headshots were illustrated by [Dzuk](https://dzuk.zone/).
+Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by [Tuxedo Dragon](https://tuxedodragon.carrd.co/).
+
+Ash's headshots were illustrated by [Caius Nocturne](https://nocturne.works/).
 {% endcharacter %}
 
 {% character character="emy", variant="wave" %}
-Emy the robot bat is [my own original character]({{ '/about/furry/' | url }}), designed with help from my friend [Samael](https://samaelbretondragon.carrd.co/).
+Emy the robot bat is an original character, designed by me with help from my friend [Samael](https://samaelbretondragon.carrd.co/).
 
-Illustrations are by me, based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
+Illustrations of Emy are by me, unless otherwise stated, and are based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
 {% endcharacter %}
