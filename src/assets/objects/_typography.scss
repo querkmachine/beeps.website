@@ -11,6 +11,7 @@
   @include typography.kim-font-stack(header, $weight: bold);
   letter-spacing: -0.02em;
   font-feature-settings: "ss01", "ss04", "case";
+  text-wrap: balance;
 }
 
 .kimHeading-xl {
@@ -38,6 +39,7 @@
 .kimSubheading-l,
 .kimSubheading-m {
   @include typography.kim-font-stack(header, $weight: regular);
+  text-wrap: pretty;
 }
 
 .kimSubheading-xl {
