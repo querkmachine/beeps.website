@@ -1,7 +1,7 @@
-<nav aria-label="Tags">
-  <ul class="kimList">
+<nav aria-label="Blog navigation">
+  <ul class="kimList" aria-label="Post tags">
     <li>
-      <a class="kimLink{%- if page.url !== '/blog/' %}-plain{% endif %}" href="{{ '/blog/' | url }}" {%- if page.url === '/blog/' %} aria-current="true"{% endif %}>all posts</a>
+      <a class="kimLink{%- if page.url !== '/blog/' %}-plain{% endif %}" href="{{ '/blog/' | url }}" {%- if page.url === '/blog/' %} aria-current="true"{% endif %}>All posts</a>
     </li>
     {% for tag in collections.tags %}
       {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
@@ -10,6 +10,9 @@
       </li>
     {% endfor %}
   </ul>
+  <a href="{{ '/feed.xml' | url }}" target="_blank">
+    RSS feed
+  </a>
 </nav>
 
 <hr class="kimRule kimRule-hairline">
