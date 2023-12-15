@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
     {%- for post in collections.blog | reverse %}
     {%- set absolutePostUrl = post.url | absoluteUrl(site.domain) %}
     <item>
-      <title><![CDATA[{{ post.data.title | safe }}]]></title>
+      <title><![CDATA[{{ post.data.title | markdownInline | safe | striptags }}]]></title>
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>

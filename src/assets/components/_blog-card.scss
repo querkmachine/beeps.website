@@ -9,7 +9,7 @@
   flex-direction: column;
   position: relative;
   &_date {
-    @include spacing.kim-responsive-margin(2, $direction: bottom);
+    @include spacing.kim-responsive-margin(1, $direction: top);
   }
   &_link {
     @include links.kim-link;

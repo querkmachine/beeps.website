@@ -9,23 +9,106 @@
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper">
       <article itemscope itemtype="https://schema.org/BlogPosting">
+      
+        <header>
+          <h1 class="kimHeading-xl" itemprop="name">
+            {{- title | markdownInline | safe -}}
+          </h1>
+          <div class="kim-!-sr"><a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url">Permalink to this blog post</a></div>
+        </header>
+        
         <div class="kimGrid">
-          <header class="kimGrid_column kimGrid_column-full">
-            {% if titleSvg and titleAccessible %}
-              <div class="kimHeading-xl" aria-hidden="true">
-                {% include "src/images/headings/" + titleSvg %}
-              </div>
-              <h1 class="kim-!-sr" itemprop="name">
-                {{- titleAccessible | markdownInline | safe -}}
-              </h1>
-            {% else %}
-              <h1 class="kimHeading-xl" itemprop="name">
-                {{- title | markdownInline | safe -}}
-              </h1>
-            {% endif %}
-          </header>
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          
+            <footer>
+              <dl class="kim-!-margin-0">
+                {%- if date %}
+                  <div class="kim-!-margin-bottom-3">
+                    <dt class="kim-!-font-weight-600">Published</dt>
+                    <dd class="kim-!-margin-0">
+                      <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
+                        {{- date | formatDate('human') -}}
+                      </time>
+                    </dd>
+                  </div>
+                {%- endif %}
+                {%- if updated %}
+                  <div class="kim-!-margin-bottom-3">
+                    <dt class="kim-!-font-weight-600">Last updated</dt>
+                    <dd class="kim-!-margin-0">
+                      <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
+                        {{- updated | formatDate('human') -}}
+                      </time>
+                    </dd>
+                  </div>
+                {%- endif %}
+                {%- if tags %}
+                  <div class="kim-!-margin-bottom-3 kim-!-doNotPrint">
+                    <dt class="kim-!-font-weight-600">Tagged</dt>
+                    <dd class="kim-!-margin-0">
+                      <ul class="kimList kimList-inline">
+                        {% for tag in tags | filterTagList | sort %}
+                          {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+                          <li>
+                            <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
+                              {{- tag | tagify -}}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </dd>
+                  </div>
+                {%- endif %}
+              </dl>
+            </footer>
+            
+            <hr class="kimRule">
+            
+            {%- if (content | toc) %}
+              <nav class="kimToc" aria-labelledby="toc-header">
+                <details class="kimToc_collapsible" data-js="toc">
+                  <summary class="kimToc_collapsibleSummary">
+                    <span class="kimHeading-s" id="toc-header">Contents</span>
+                  </summary>
+                  {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
+                </details>
+                <hr class="kimRule">
+              </nav>
+            {%- endif %}
+          
+          </div>
+          
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
+            {% block content  %}
+              {{ content | safe }}
+            {% endblock %}
+          </div>
         </div>
+      </article>
+      
+      <nav aria-label="Next and previous blog post" class="kim-!-doNotPrint">
+        <hr class="kimRule kimRule-thick">
         <div class="kimGrid">
+          {% if previousPost %}
+            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
+              <div class="kimHeading-s">Previous post</div>
+              {{ kimBlogCard(previousPost, { element: 'div', rel: 'prev' }) }}
+              <hr class="kimRule kimRule-hairline">
+            </div>
+          {% endif %}
+          {% if nextPost %}
+            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
+              <div class="kimHeading-s">Next post</div>
+              {{ kimBlogCard(nextPost, { element: 'div', rel: 'next' }) }}
+              <hr class="kimRule kimRule-hairline">
+            </div>
+          {% endif %}
+        </div>
+      </nav>
+    </div>
+  </div>
+
+        {# <div class="kimGrid">
           <div class="kimGrid_column kimGrid_column-full">
             <footer class="kimBody-s">
               {%- if date -%}
@@ -57,7 +140,6 @@
                 </nav>
               {%- endif %}
             </footer>
-            <hr class="kimRule kimRule-hairline">
           </div>
         </div>
         <div class="kimGrid">
@@ -73,7 +155,6 @@
                 <hr class="kimRule kimRule-hairline">
               </nav>
             {%- endif %}
-            <div class="kim-!-sr"><a href="{{ site.domain }}{{ page.url | url }}" itemprop="url">Permalink to this blog post</a></div>
           </div>
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
             {% block content  %}
@@ -82,27 +163,9 @@
           </div>
         </div>
       </article>
-      <nav aria-label="Next and previous blog post" class="kim-!-doNotPrint">
-        <hr class="kimRule kimRule-thick">
-        <div class="kimGrid">
-          {% if previousPost %}
-            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
-              <div class="kimHeading-s">Previous post</div>
-              {{ kimBlogCard(previousPost, { element: 'div' }) }}
-              <hr class="kimRule kimRule-hairline">
-            </div>
-          {% endif %}
-          {% if nextPost %}
-            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
-              <div class="kimHeading-s">Next post</div>
-              {{ kimBlogCard(nextPost, { element: 'div' }) }}
-              <hr class="kimRule kimRule-hairline">
-            </div>
-          {% endif %}
-        </div>
-      </nav>
+      
     </div>
-  </div>
+  </div> #}
 {% endblock %}
 
 {% block scripts %}

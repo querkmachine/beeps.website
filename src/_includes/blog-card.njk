@@ -6,9 +6,9 @@
     itemscope
     itemtype="https://schema.org/BlogPosting">
     <strong class="kimBlogCard_heading">
-      <a class="kimBlogCard_link" href="{{ site.domain }}{{ post.url | url }}" itemprop="url">
+      <a class="kimBlogCard_link" href="{{ site.domain }}{{ post.url | url }}" itemprop="url" {%- if options.rel %} rel="{{ options.rel }}"{% endif %}>
         <span itemprop="name">
-          {{- post.data.title -}}
+          {{- post.data.title | markdownInline | safe -}}
         </span>
       </a>
     </strong>

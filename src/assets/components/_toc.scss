@@ -13,12 +13,14 @@
     @include spacing.kim-responsive-spacing($property: top, $spacing-point: 3);
   }
   &_collapsible[open] {
-    #{$self}_collapsibleSummary::before {
-      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    #{$self}_collapsibleSummary {
+      @include spacing.kim-responsive-margin(2, $direction: bottom);
+      &::before {
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+      }
     }
   }
   &_collapsibleSummary {
-    @include spacing.kim-responsive-margin(2, $direction: bottom);
     position: relative;
     cursor: pointer;
     &::before {

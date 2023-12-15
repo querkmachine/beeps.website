@@ -2,8 +2,6 @@
 @use "../helpers/layout";
 @use "../helpers/media-queries";
 
-@use "sass:list";
-
 .kimGrid {
   $half-gutter: settings.$kim-page-gutter * 0.5;
   display: flex;

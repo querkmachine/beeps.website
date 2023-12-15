@@ -1,0 +1,15 @@
+@use "../settings";
+@use "../helpers/media-queries";
+
+.kimCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  column-gap: settings.$kim-page-gutter;
+  row-gap: settings.$kim-page-gutter * 0.5;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include media-queries.kim-mq($from: defiant) {
+    row-gap: settings.$kim-page-gutter;
+  }
+}

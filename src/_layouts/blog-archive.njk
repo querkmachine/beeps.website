@@ -5,39 +5,31 @@
 {% set yearList = postsList | getArchiveYears | reverse %}
 
 {% block main %}
-	<div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
-		<div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
-			<div class="kimGrid">
-				<div class="kimGrid_column kimGrid_column-full">
-					<h1 class="kimHeading-l" itemprop="name">
-						<span class="kim-!-sr">beeps'</span>
-						Blog
-						{%- if tag %}
-							posts tagged as {{ tag | tagify }}
-						{%- endif %}
-					</h1>
-					
-					{%- if not tag %}
-						<p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here we are.</p>
-					{%- endif %}
-				</div>
-			</div>
-			<div class="kimGrid">
-				<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-					{% include "src/_includes/blog-archive-sidebar.njk" %}
-				</div>
-				<div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-					{% for year in yearList %}
-						<h2 class="kimHeading-l">{{ year }}</h2>
-						<ol class="kimList kimList-spaced">
-							{% for post in postsList | getArchivePostsByYear(year) | reverse %}
-								{{ kimBlogCard(post) }}
-							{% endfor %}
-						</ol>
-						<hr class="kimRule">
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+    <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
+    
+      {%- if tag %}
+        <span class="kim-!-sr" itemprop="name">{{ site.blogName }}</span>
+        <h1 class="kimHeading-xl">
+          Blog posts tagged as {{ tag | tagify }}
+        </h1>
+      {%- else %}
+        <h1 class="kimHeading-xl" itemprop="name">
+          {{ site.blogName }}
+        </h1>
+        <p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here you are. Also there's an <a href="{{ '/feed.xml' | url }}" target="_blank" type="application/rss+xml" rel="alternate">RSS feed</a>.</p>
+      {%- endif %}
+            
+      {%- for year in yearList %}
+        <h2 class="kimHeading-l kim-!-margin-top-9">{{ year }}</h2>
+        <ol class="kimCardGrid">
+          {% for post in postsList | getArchivePostsByYear(year) | reverse %}
+            {{ kimBlogCard(post) }}
+          {% endfor %}
+        </ol>
+        <hr class="kimRule">
+      {%- endfor %}
+      
+    </div>
+  </div>
 {% endblock %}
