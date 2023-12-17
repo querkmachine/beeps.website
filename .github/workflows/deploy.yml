@@ -28,8 +28,19 @@ jobs:
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
       - name: Install dependencies
         uses: ./.github/workflows/actions/install-dependencies
+      - name: Restore Eleventy Fetch cache
+        uses: actions/cache/restore@v3
+        id: eleventy-fetch-cache
+        with:
+          path: .cache
+          key: eleventy-fetch-cache
       - name: Build Eleventy
         run: npm run build
+      - name: Save Eleventy Fetch cache
+        uses: actions/cache/save@v3
+        with:
+          path: .cache
+          key: ${{ steps.eleventy-fetch-cache.outputs.cache-primary-key }}
       - name: Save artifact
         uses: actions/upload-artifact@v3
         with:
