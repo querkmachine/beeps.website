@@ -24,15 +24,15 @@ I've long contemplated using responsibly generated images as set dressing for po
 
 I should start by acknowledging [my themes for the past year]({{ '/blog/yearly-theme/' | url }}): to write more and to reconnect more.
 
-Although the themes ultimately did not last the full calendar year, I firmly believe [the themes did their job successfully]({{ '/blog/2023-11-01-writing-and-reconnection-october-finale/' | url }}). I have written far more than in any previous year of having a blog.
+Although the themes ultimately did not last the full calendar year, I firmly believe [the themes did their job successfully]({{ '/blog/2023-11-01-writing-and-reconnection-october-finale/' | url }}). I've written far more than in any previous year of having a blog, and they're generally all decent quality written words!
 
 {% character character="ash", variant="thinking" %}
-Except maybe my very first blog back in 2005/2006, which mostly consisted of listicles of things I found interesting rather than actual serious writing.
+I technically published more posts on my very first blog back in 2005/2006, but that mostly consisted of listicles of things I found interesting rather than actual serious writing.
 {% endcharacter %}
 
-Whether it's blog posts, documentation, fiction, or poetry, it has generally been a productive year for all of them.
+Whether it's blog posts, documentation, fiction, or poetry, it has generally been a productive year for all of my prosaic pasttimes.
 
-The post about [using user styles to make CAPTCHAs reflect non-human identities]({{ '/blog/2023-04-27-otherkin-friendly-captchas-revisited/' | url }}) seems to have proven the most popular of the last year, which perhaps tells something about the social circles I tend to roam in.
+The post about [using user styles to make CAPTCHAs reflect non-human identities]({{ '/blog/2023-04-27-otherkin-friendly-captchas-revisited/' | url }}) seems to have proven the most popular of the last year, which is perhaps telling about the social circles I tend to roam in.
 
 ## I properly acknowledged that I'm neurodivergent
 
@@ -40,11 +40,13 @@ The post about [using user styles to make CAPTCHAs reflect non-human identities]
 
 May ended up being an unusually busy month, and that started with [rather belatedly working out that I'm neurodivergent]({{ '/blog/2023-05-16-let-me-tell-you-a-secret/' | url }}), or, at least, more neurodivergent than I originally considered myself.
 
-In 2023, work travel started. The government considered Covid to be 'over' and that in-person events should resume. This isn't something I had ever really done in previous jobs, where I was either working solo or as part of a small team.
+In 2023, I started travelling for work. This isn't something I had ever really done in previous jobs, where I was either working solo or as part of a small team. Now I was part of an organisation much larger than any before.
 
-Now the expectation of cross-country journeys to attend team events and departmental conferences was here. I spent a great deal of 2023 away from home, usually in London, but with stays in Manchester, Birmingham, and Edinburgh too.
+The government considered Covid to be 'over' and that in-person events should resume. The expectation of cross-country journeys to attend team events and departmental conferences was here.
 
-These trips ended up being a real wake-up call when it came to helping me recognize that loud, busy environments, 'mandatory' socialisation, and frequent travel are all things that I find unpleasant, exhausting, or some combination thereof.
+I spent a great deal of 2023 away from home, usually in London, but with stays in Manchester, Birmingham, and Edinburgh too.
+
+These trips ended up being a real wake-up call when it came to helping me recognize that loud environments, crowded spaces, 'mandatory' socialisation, and frequent travel are all things that I find unpleasant and exhausting.
 
 Previously, I would attribute these feelings to just being a lethargic, anxious introvert. However, with time, it has become rather more apparent to me that I'm probably somewhere on the autistic spectrum and am easily sensorially overwhelmed by these kinds of things.
 
@@ -52,7 +54,7 @@ I have come to terms with it and started to [try and establish what my limits ar
 
 ## I changed fursona
 
-Also in May, [I changed my fursona]({{ '/about/furry/' | url }}). After fifteen years of being some shape of bat, I wasn't anymore, and that spawned all kinds of weird feelings, given how ingrained chiropterans creatures were and still are to my online presentation.
+Also in May, [I changed my fursona]({{ '/about/furry/' | url }}). After fifteen years of being some shape of bat, I wasn't anymore, and that spawned all kinds of weird feelings given how ingrained chiropteran critters were and still are to my online presentation.
 
 I didn't end up [writing about the change until August]({{ '/blog/2023-08-27-the-next-generation/' | url }}), but the roots had alread started burrowing themselves deep just a few weeks before...
 
@@ -68,7 +70,7 @@ Let me tell you, it's awfully inconvenient to change fursona mere weeks before y
 This is a lie. There was no bat panel.
 {% endcharacter %}
 
-Still, despite the minor identity crisis of wearing four different name badges ([Olive was there too!]({{ '/about/olive/' | url }}))—none of which had the same name as the last time I saw most of these people—it was absolutely lovely to reconnect with so many people I hadn't seen for so long.
+Still, despite the minor identity crisis of wearing four different name badges ([Olive was there too!]({{ '/about/olive/' | url }}))—none of which had the same name or fursona as the last time I saw most of these people—it was absolutely lovely to reconnect with so many people I hadn't seen for so long.
 
 It was also incredibly anxiety-inducing, my recent neurodiverse realisations making me second-guess myself even when [I didn't particularly struggle to socialise]({{ '/blog/2023-05-31-writing-and-reconnection-may/' | url }}).
 
@@ -76,13 +78,13 @@ I'm already paid up to attend ConFuzzled in 2024.
 
 ## I started working four days a week
 
-In the latter part of this year, I took advantage of one of the civil service's more unique benefits and switched to having a four day work week. I still work full time, my working days being longer now, but in exchange I get an extra day off.
+In the latter part of this year, I took advantage of one of the civil service's more unique benefits and switched to having a four day work week. I still work full time hours, my working days being longer to compensate, but in exchange I get an extra day off.
 
 Having a whole extra day to myself has proven quite useful! I usually run errands, get some exercise, and try to spend time on my side projects like this here website.
 
 I've still not managed to do as much with my side projects as I'd like, but some progress is always better than none.
 
-Overall, working fewer days and spending those extended hours working from home has proven to be a massive benefit to my mental and physical health, and I intend to continue doing it for as long as— [Oh. Well that sucks.](https://www.civilserviceworld.com/professions/article/civil-servants-home-remove-working-60-in-office)
+Overall, working fewer days and spending those extended hours working from home has proven to be a massive benefit to my mental and physical health, and I intend to continue doing it for as long as I— [Oh. Well that sucks.](https://www.civilserviceworld.com/professions/article/civil-servants-home-remove-working-60-in-office)
 
 ## I embraced polyamory
 
@@ -90,11 +92,11 @@ Overall, working fewer days and spending those extended hours working from home 
 
 Polyamory is an aspect of my identity I've never really felt the need to go into much detail about, insomuch as it doesn't feel that outside of the realm of normalcy.
 
-Platonic love is often shared with multiple people. Expressing storgic love to multiple people is considered so normal that you probably didn't even know it had a name and had to look it up just now. Why should romantic love operate on such exclusive terms when other forms don't?
+Platonic love is often shared with multiple people. Expressing storgic love to multiple people is considered so normal that you probably didn't even know it had a name and had to look it up just now. Why have romantic love operate on such exclusive terms when other forms of love do not?
 
 If anything, polyamorous relationships seem perfectly natural. Monogamy, by comparison, is an unusual, arbitrary, self-imposed constraint.
 
-Anyway, this year, for the first(ish) time, I have had mutual romantic relationships with multiple people. 💚
+Anyway, this year, for the first(ish) time, I have had mutual romantic relationships with multiple people. Nice. 💚
 
 ## Moves finally got made at the GIC
 
@@ -112,7 +114,7 @@ If anyone, _anyone_, ever says that access to transgender healthcare in the UK i
 
 I've not got much to promise for the year ahead. I'm generally comfortable with my working and personal life, and I'm not seeking out any great waves to come and shake things up.
 
-This has made the process of coming up with [a new yearly theme]({{ '/blog/yearly-theme/' | url }}) a little bit difficult. For once, nothing comes to mind that I desperately want to change or improve upon. None within my direct sphere of control, anyway.
+This has made the process of coming up with [a new yearly theme]({{ '/blog/yearly-theme/' | url }}) a little bit difficult. For once, nothing comes to mind that I desperately want to change or improve upon. Nothing within my direct sphere of control, anyway.
 
 I'm pondering moving house out of a desire for somewhere larger, but the Bristol housing market is a bit of an onslaught and it's likely impossible that I'll find somewhere that's as good value and as well located as my current flat.
 
@@ -120,6 +122,6 @@ Hopefully, I'll finally seen by the gender identity service. Hopefully.
 
 ConFuzzled outta be fun too.
 
-For various reasons—many of them passport related—it's been a long time since I last journeyed outside of the UK. I'm weighing up going on a short trip to somewhere in Europe or going bigger and returning to the US and/or Canada With the spectre of moving and expense of ConFuzzled, however, there's no guarantees I'll get that done in 2024.
+For various reasons—many of them passport related—it's been about eight years since I last journeyed outside of the UK. I'm weighing up going on a short trip to somewhere in Europe or going bigger and returning to the US and/or Canada With the spectre of moving and expense of ConFuzzled, however, there's no guarantees I'll get that done in 2024.
 
 Ultimately, I guess I'll see what the world has to offer.
