@@ -4,10 +4,10 @@ date: 2024-01-01
 tags: [yearly theme, transition, mental health, furry fandom]
 metadata:
   description: 2023 is over. What did I do? How did it go? Let's find out.
-# interactions:
-#   host: chitter.xyz
-#   username: batbeeps
-#   id: "111557752407785137"
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111677926746194347"
 ---
 
 This year was, on the whole, pretty alright.
@@ -96,9 +96,9 @@ If anything, polyamorous relationships seem perfectly natural. Monogamy, by comp
 
 Anyway, this year, for the first(ish) time, I have had mutual romantic relationships with multiple people. 💚
 
-## Moves finally got made on gender transition
+## Moves finally got made at the GIC
 
-I did very little for this one, but after [a mere seven years and three months]({{ '/blog/2016-09-01-the-referral-that-never-was/' | url }}) I received notice in December that I am finally somewhat close to the front of the waiting list for the local gender identity clinic.
+I did very little for this one, but after [a mere seven years and three months]({{ '/blog/2016-09-01-the-referral-that-never-was/' | url }}) I received notice in December that I am finally somewhat close to the front of the waiting list for the local gender identity clinic (GIC).
 
 That's a wait of nearly ten years, if you count when I first tried to get a referral in April 2014.
 
@@ -112,6 +112,8 @@ If anyone, _anyone_, ever says that access to transgender healthcare in the UK i
 
 I've not got much to promise for the year ahead. I'm generally comfortable with my working and personal life, and I'm not seeking out any great waves to come and shake things up.
 
+This has made the process of coming up with [a new yearly theme]({{ '/blog/yearly-theme/' | url }}) a little bit difficult. For once, nothing comes to mind that I desperately want to change or improve upon. None within my direct sphere of control, anyway.
+
 I'm pondering moving house out of a desire for somewhere larger, but the Bristol housing market is a bit of an onslaught and it's likely impossible that I'll find somewhere that's as good value and as well located as my current flat.
 
 Hopefully, I'll finally seen by the gender identity service. Hopefully.
@@ -120,4 +122,4 @@ ConFuzzled outta be fun too.
 
 For various reasons—many of them passport related—it's been a long time since I last journeyed outside of the UK. I'm weighing up going on a short trip to somewhere in Europe or going bigger and returning to the US and/or Canada With the spectre of moving and expense of ConFuzzled, however, there's no guarantees I'll get that done in 2024.
 
-Let's see what the world has to offer.
+Ultimately, I guess I'll see what the world has to offer.
