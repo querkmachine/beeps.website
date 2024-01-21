@@ -224,3 +224,17 @@ OK that's about it for now. Bye!
 {% youtube "fYJdr7mp9SE" %}
 {% youtube "Z54wvKb5aig", { aspectRatio: 1 } %}
 {% youtube "2J5tjfqbWkA", { aspectRatio: "4/3" } %}
+
+### Twitter "embed"
+
+{% twitter username="batbeeps", number="1462180413548421121", date="2021-11-20T22:05:51.000Z" %}
+Why is these so little actual consistency here aaaugghhhh
+
+{% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
+{% endtwitter %}
+
+{% mastodon host="chitter.xyz", username="batbeeps", number="111773929720283664", date="2024-01-17T23:40:16.287Z" %}
+I don't actually touch type in the 'correct' way—by the time school bothered to teach it I'd already used computers enough to make up my own method.
+
+As a result, I'm very right paw dominant when I type, about two thirds of the keyboard is used with my right paw, so I doubt I could go much faster than that.
+{% endmastodon %}

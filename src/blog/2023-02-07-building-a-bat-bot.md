@@ -26,10 +26,13 @@ In short, [Mastodon is now my main short-form writing outlet](https://chitter.xy
 
 Twitter has a lot of accounts that post bat photos, be they for education, charity or just for bat enthusiasts like myself. Think your [Bat Conservation International](https://twitter.com/@BatConIntl), your [Bat World Sanctuary](https://twitter.com/batworld), your [Occassional Bat](https://twitter.com/OccasionalBat).
 
-{% figure caption="Very relatable." %}
+{% twitter username="BatsDaily", number="1603676469766807555", date="2022-12-16T09:00:39.000Z" %}
+AAAAAAAAAAAAAAAHHHHHH!!!! 🦇
 
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="und" dir="ltr">AAAAAAAAAAAAAAAHHHHHH!!!! 🦇 <a href="https://t.co/XsUNcrvAKO">pic.twitter.com/XsUNcrvAKO</a></p>&mdash; Bats Nightly 🦇 (@BatsDaily) <a href="https://twitter.com/BatsDaily/status/1603676469766807555?ref_src=twsrc%5Etfw">December 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-{% endfigure %}
+{% responsiveImage "./src/images/batsdaily-screm.jpeg", "A small brown bat lays belly-down on a rock, it's head pointing upwards and mouth wide open as though screaming." %}
+{% endtwitter %}
+
+Very relatable.
 
 Having a steady stream of them little critters having a nice time throughout the day, it was lovely.
 

@@ -10,7 +10,8 @@
   margin: 0;
   @include typography.kim-vr-margin(19);
   text-align: center;
-  img {
+  img,
+  blockquote {
     margin-bottom: 0;
   }
   &_caption {

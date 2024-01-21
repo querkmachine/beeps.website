@@ -93,9 +93,17 @@ module.exports = function (eleventyConfig) {
     require("./config/shortcodes/figure.js")
   );
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
+  eleventyConfig.addPairedNunjucksShortcode(
+    "mastodon",
+    require("./config/shortcodes/mastodon.js")
+  );
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
     require("./config/shortcodes/responsiveImages.js")
+  );
+  eleventyConfig.addPairedNunjucksShortcode(
+    "twitter",
+    require("./config/shortcodes/twitter.js")
   );
   eleventyConfig.addNunjucksShortcode(
     "youtube",
