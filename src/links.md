@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-01-15
+updated: 2024-01-21
 metadata:
   description: Cool sites on the information cyber highway that I like.
 eleventyExcludeFromCollections: true
@@ -68,9 +68,11 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [nano](https://nano.lgbt/)
 - [Ninji](https://wuffs.org/)
 - [Oliver Byford](https://obyford.com/)
+- [rabbithawk256](https://rabbithawk256.dev/)
 - [raccoon](https://www.raccoon.fun/)
 - [Romaric Pascal](https://romaricpascal.is/)
 - [SDF](https://www.sdf.me.uk/)
+- [Sigmucron](https://sigmucron.neocities.org/)
 - [Sirlan](https://dragon-vi.be/)
 - [Violet Procyon](https://violet.pm/)
 
