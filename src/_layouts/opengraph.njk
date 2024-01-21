@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB" class="kimPage">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url | cachebust }}" media="all">
+    <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+    <style>
+      .kimPage { overflow: hidden; }
+      .kimPage_body { position: relative; }
+      .page-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .page-robat {
+        width: 18vw;
+        position: absolute;
+        bottom: -2vw;
+        right: 3vw;
+        transform: rotate(30deg);
+      }
+      .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 6vw;
+        position: relative;
+      }
+      .kimHeading-xl {
+        font-size: 6.5vw;
+      }
+      .page-foot {
+        display: flex;
+        align-items: center;
+        padding: 1vw 6vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: var(--color-background);
+        background-color: var(--color-link);
+      }
+      .page-logo {
+        margin-right: 2vw;
+        line-height: 0;
+      }
+      .page-logo svg {
+        width: 5vw;
+        height: 5vw;
+        fill: currentcolor;
+      }
+      .page-name {
+        font-size: 3vw;
+        font-weight: 600;
+      }
+    </style>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="kimPage_body">
+    <canvas class="page-background" id="background" width="1200" height="630" hidden></canvas>
+    <div class="page-wrapper">
+      <div class="kimHeading-xl">{% block title %}{% endblock %}</div>
+    </div>
+    <div class="page-foot">
+      <span class="page-logo">{% include "logo.njk" %}</span>
+      <span class="page-name">{% block metadata %}beeps.website{% endblock %}</span>
+    </div>
+    <img alt="A robat, floating in space." src="{{ '/assets/images/robat-404.png' | url }}" class="page-robat">
+    <script src="{{ '/assets/javascript/spots.js' | url | cachebust }}"></script>
+    <script>new Spots(document.querySelector(".page-background"))</script>
+  </body>
+</html>

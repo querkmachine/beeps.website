@@ -13,9 +13,7 @@ module.exports = {
   ],
   eleventyComputed: {
     opengraphImage: (data) => {
-      return `${data.site.domain}/images/opengraph/${data.page.date
-        .toISOString()
-        .substr(0, 10)}-${data.page.fileSlug}.png`;
+      return `${data.page.url}opengraph/`;
     },
     favourites: async (data) => {
       // Skip if there's no usable metadata on this post

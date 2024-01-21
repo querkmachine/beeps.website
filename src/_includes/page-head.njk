@@ -8,7 +8,7 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:title" content="{{ metadata.title if metadata.title else title }}">
 <meta property="og:site_name" content="{{ site.name }}">
-<meta property="og:image" content="{{ opengraphImage if opengraphImage else '/images/opengraph/default.png' | url }}">
+<meta property="og:image" content="{{ (opengraphImage if opengraphImage else '/opengraph/') | absoluteUrl(site.domain) | urlizeOpenGraphImage }}">
 <meta property="og:type" content="{{ "article" if page | isBlogPost else "website" }}">
 {%- if metadata.description %}
   <meta name="description" content="{{ metadata.description }}">

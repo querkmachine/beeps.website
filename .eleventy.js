@@ -21,7 +21,7 @@ const {
   markdownFilter,
   markdownFilterInline,
 } = require("./config/markdown.js");
-const { processOpenGraphImages, splitLines } = require("./config/opengraph.js");
+const { urlizeOpenGraphImage } = require("./config/opengraph.js");
 const { compileSass } = require("./config/sass.js");
 const {
   cachebustAssetUrl,
@@ -76,9 +76,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget(paths.srcAssets + "/**/*.scss");
   eleventyConfig.on("beforeBuild", compileSass);
 
-  // Generate Opengraph images
-  eleventyConfig.on("afterBuild", processOpenGraphImages);
-
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
 
@@ -112,12 +109,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatISODate", formatISODate);
   eleventyConfig.addFilter("head", getFirstNItems);
   eleventyConfig.addFilter("isBlogPost", pageIsBlogPost);
-  eleventyConfig.addFilter("splitlines", splitLines);
   eleventyConfig.addFilter("tagify", formatAsTag);
   eleventyConfig.addFilter("getArchiveYears", getArchiveYears);
   eleventyConfig.addFilter("getArchivePostsByYear", getArchivePostsByYear);
   eleventyConfig.addFilter("markdown", markdownFilter);
   eleventyConfig.addFilter("markdownInline", markdownFilterInline);
+  eleventyConfig.addFilter("urlizeOpenGraphImage", urlizeOpenGraphImage);
 
   return {
     markdownTemplateEngine: "njk",
