@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
 {% extends 'src/_layouts/opengraph.njk' %}
 
 {% block title %}
-  {{ preview.data.title }}
+  {{ preview.data.title | markdownInline | safe }}
 {% endblock %}
 
 {% block metadata %}
