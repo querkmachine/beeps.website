@@ -16,7 +16,7 @@ It doesn't feel like more than a week since it was April Fool's Day and I was be
 
 Anyway, happy First of May. On with the themes.
 
-{% youtube "WzZaJDg6E0A" %}
+{% youtube "WzZaJDg6E0A", { aspectRatio: 1, title: "'First of May' by Jonathan Coulton"} %}
 
 ## Year of Writing
 

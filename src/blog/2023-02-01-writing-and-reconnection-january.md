@@ -16,7 +16,7 @@ I'm a pretty big fan of the concept of Themes, as devised on [the Cortex podcast
 
 Grey made a video explaining Themes a few years back:
 
-{% youtube "NVGuFdX5guE" %}
+{% youtube "NVGuFdX5guE", { title: "CGP Grey video explaining how the theme system works" } %}
 
 Themes are a bit vague and nebulous, purposefully unlike resolutions. This allows the meaning of it to adapt to changing needs and circumstances.
 

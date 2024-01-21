@@ -216,3 +216,11 @@ OK that's about it for now. Bye!
 {% endfigure %}
 
 <br clear="both">
+
+## Embeds
+
+### YouTube
+
+{% youtube "fYJdr7mp9SE" %}
+{% youtube "Z54wvKb5aig", { aspectRatio: 1 } %}
+{% youtube "2J5tjfqbWkA", { aspectRatio: "4/3" } %}
