@@ -23,11 +23,13 @@ Markdown content is parsed by [markdown-it](https://github.com/markdown-it/markd
 
 Code is highlighted using [highlight.js](https://highlightjs.org/) using a custom theme based on [Nova](http://nova.app)'s 'Neon' theme.
 
+The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images.
+
 Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
 
 [Prettier](https://prettier.io/) is used to keep the code beautiful.
 
-Hat tips to the following folks for contributing something that currently exists in the site's code: [Bernard Nijenhuis](https://bnijenhuis.nl/notes/2021-05-10-automatically-generate-open-graph-images-in-eleventy/), [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Stefan Baumgartner](https://fettblog.eu/11ty-automatic-twitter-cards/).
+Hat tips to the following folks for contributing something that currently exists in the site's code: [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Zach Leatherman](https://www.zachleat.com/web/automatic-opengraph/).
 
 ## Design
 
