@@ -1,5 +1,11 @@
 ErrorDocument 404 /404/
 
 <Files "feed.xml">
-ForceType application/rss+xml
+  ForceType application/rss+xml
 </Files>
+
+<IfModule mod_headers.c>
+  <FilesMatch ".(css|js|ico|svg|png|jpg|jpeg|gif|webp|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
