@@ -2,6 +2,12 @@
 title: "The Changelog: Interactions, OpenGraph, and the curse of third-party code"
 date: 2024-01-23
 tags: [meta, web development]
+metadata:
+  description: The first in a potential series where I talk about updating and maintaining this very website.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111804875011370844"
 ---
 
 This is my personal website. Hello! This version of the website has been online for about three years, which is practically a record by my standards. Suffice to say that it's pretty "finished" and set in its ways by now.
