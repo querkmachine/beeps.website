@@ -61,7 +61,7 @@ I've made quite a few attempts to work around this limitation for the sake of co
 
 Ultimately, I said hell to that and decided to stop trying to reinvent that particular wheel. I copied what Eleventy creator Zach Leatherman did and [just used an online service to do it](https://www.zachleat.com/web/automatic-opengraph/).
 
-{% set ogHtmlPage = page.url + 'opengraph/' | absoluteUrl(site.domain) %}
+{% set ogHtmlPage = (page.url + 'opengraph/') | absoluteUrl(site.domain) %}
 {% set ogImage = ogHtmlPage | urlizeOpenGraphImage %}
 
 OpenGraph images are now generated from normal HTML pages ([like this one]({{ ogHtmlPage }})), and passed through the [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/), which handles all of the converting, caching and webfont wrangling for me, spitting out [a lovely image]({{ ogImage }}).
