@@ -24,7 +24,7 @@
               <dl class="kim-!-margin-0">
                 {%- if date %}
                   <div class="kim-!-margin-bottom-3">
-                    <dt class="kim-!-font-weight-600">Published</dt>
+                    <dt class="kim-!-font-weight-600 kim-!-margin-bottom-1">Published</dt>
                     <dd class="kim-!-margin-0">
                       <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
                         {{- date | formatDate('human') -}}
@@ -34,7 +34,7 @@
                 {%- endif %}
                 {%- if updated %}
                   <div class="kim-!-margin-bottom-3">
-                    <dt class="kim-!-font-weight-600">Last updated</dt>
+                    <dt class="kim-!-font-weight-600 kim-!-margin-bottom-1">Last updated</dt>
                     <dd class="kim-!-margin-0">
                       <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
                         {{- updated | formatDate('human') -}}
@@ -44,9 +44,9 @@
                 {%- endif %}
                 {%- if tags %}
                   <div class="kim-!-margin-bottom-3 kim-!-doNotPrint">
-                    <dt class="kim-!-font-weight-600">Tagged</dt>
+                    <dt class="kim-!-font-weight-600 kim-!-margin-bottom-1">Tagged</dt>
                     <dd class="kim-!-margin-0">
-                      <ul class="kimList kimList-inline">
+                      <ul class="kimList">
                         {% for tag in tags | filterTagList | sort %}
                           {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
                           <li>
