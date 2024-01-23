@@ -1,6 +1,5 @@
-const paths = require("../paths.json");
-
-const pluginImages = require("@11ty/eleventy-img");
+import paths from "../paths.json" assert { type: "json" };
+import pluginImages from "@11ty/eleventy-img";
 
 // List of available variants, images and alt text
 const variants = {
@@ -76,7 +75,7 @@ const variants = {
   ],
 };
 
-const characterShortcode = function (content, args) {
+export default function (content, args) {
   if (!args.variant) {
     throw new Error(`Missing \`variant\` argument on character shortcode.`);
   }
@@ -110,6 +109,4 @@ const characterShortcode = function (content, args) {
     </figcaption>
     <blockquote class="kimCharacter_speech">\n${content}</blockquote>
   </figure>`;
-};
-
-module.exports = characterShortcode;
+}

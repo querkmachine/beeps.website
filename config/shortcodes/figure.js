@@ -1,4 +1,4 @@
-const figureShortcode = function (content, args) {
+export default function (content, args) {
   let html = `<figure class="kimFigure${
     args?.float ? " kimFigure-" + args.float : ""
   }">${content}`;
@@ -7,6 +7,4 @@ const figureShortcode = function (content, args) {
   }
   html += `</figure>`;
   return html;
-};
-
-module.exports = figureShortcode;
+}

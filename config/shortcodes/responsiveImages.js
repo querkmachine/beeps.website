@@ -1,8 +1,7 @@
-const paths = require("../paths.json");
+import paths from "../paths.json" assert { type: "json" };
+import pluginImages from "@11ty/eleventy-img";
 
-const pluginImages = require("@11ty/eleventy-img");
-
-const responsiveImagesShortcode = async function (src, alt, args) {
+export default async function (src, alt, args) {
   if (alt === undefined) {
     // You bet we throw an error on missing alt (alt="" works okay)
     throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
@@ -42,6 +41,4 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     originalSize.height
   }" alt="${alt}"${settings.classes ? ` class="${settings.classes}"` : ""}>
   </picture>`;
-};
-
-module.exports = responsiveImagesShortcode;
+}

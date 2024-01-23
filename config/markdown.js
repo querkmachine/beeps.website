@@ -1,6 +1,6 @@
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const hljs = require("highlight.js");
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import hljs from "highlight.js";
 
 const markdownConfig = markdownIt({
   html: true,
@@ -41,8 +41,4 @@ const markdownFilterInline = function (str) {
   return markdownConfig.renderInline(str);
 };
 
-module.exports = {
-  markdownConfig,
-  markdownFilter,
-  markdownFilterInline,
-};
+export { markdownConfig, markdownFilter, markdownFilterInline };

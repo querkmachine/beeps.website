@@ -1,4 +1,4 @@
-const youtubeShortcode = function (videoId, settings = {}) {
+export default function (videoId, settings = {}) {
   // Combine settings
   const defaultSettings = {
     aspectRatio: "16/9",
@@ -25,6 +25,4 @@ const youtubeShortcode = function (videoId, settings = {}) {
   )}" src="https://www.youtube-nocookie.com/embed/${videoId}" title="${
     settings.title
   }" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
-};
-
-module.exports = youtubeShortcode;
+}
