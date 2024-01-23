@@ -37,8 +37,4 @@ const formatAsTag = function (tag) {
   return `#${tag.replace(" ", "-")}`;
 };
 
-module.exports = {
-  getAllTags,
-  filterCommonTags,
-  formatAsTag,
-};
+export { getAllTags, filterCommonTags, formatAsTag };

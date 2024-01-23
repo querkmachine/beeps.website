@@ -1,6 +1,6 @@
-const { formatISODate } = require("../utils.js");
+import { formatISODate } from "../utils.js";
 
-const twitterQuoteShortcode = function (content, args) {
+export default function (content, args) {
   // Error if any of these args are missing
   if (!args.username) {
     throw new Error("Tweet embed is missing username.");
@@ -22,6 +22,4 @@ const twitterQuoteShortcode = function (content, args) {
   )}.</time>  (<a href="https://twitter.com/${args.username}/status/${
     args.number
   }" rel="noreferrer noopener">original tweet</a>)</figcaption></figure>`;
-};
-
-module.exports = twitterQuoteShortcode;
+}

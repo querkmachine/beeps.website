@@ -1,6 +1,6 @@
-const { formatISODate } = require("../utils.js");
+import { formatISODate } from "../utils.js";
 
-const mastodonQuoteShortcode = function (content, args) {
+export default function (content, args) {
   // Error if any of these args are missing
   if (!args.host) {
     throw new Error("Mastodon embed is missing instance URL.");
@@ -26,6 +26,4 @@ const mastodonQuoteShortcode = function (content, args) {
   }/@${args.username}/${
     args.number
   }" rel="noreferrer noopener">original post</a>)</figcaption></figure>`;
-};
-
-module.exports = mastodonQuoteShortcode;
+}

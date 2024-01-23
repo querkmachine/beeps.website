@@ -1,41 +1,41 @@
 // Config
-const paths = require("./config/paths.json");
+import paths from "./config/paths.json" assert { type: "json" };
 
 // 11ty plugins
-const pluginLogging = require("@11ty/eleventy-plugin-directory-output");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginToc = require("eleventy-plugin-toc");
+import pluginLogging from "@11ty/eleventy-plugin-directory-output";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginToc from "eleventy-plugin-toc";
 
 // Helpful functions that do stuff
-const {
+import {
   getArchiveYears,
   getArchivePostsByYear,
-} = require("./config/blogArchive.js");
-const {
+} from "./config/blogArchive.js";
+import {
   getAllTags,
   filterCommonTags,
   formatAsTag,
-} = require("./config/blogTags.js");
-const {
+} from "./config/blogTags.js";
+import {
   markdownConfig,
   markdownFilter,
   markdownFilterInline,
-} = require("./config/markdown.js");
-const { urlizeOpenGraphImage } = require("./config/opengraph.js");
-const { compileSass } = require("./config/sass.js");
-const {
+} from "./config/markdown.js";
+import { urlizeOpenGraphImage } from "./config/opengraph.js";
+import { compileSass } from "./config/sass.js";
+import {
   cachebustAssetUrl,
   formatDate,
   formatISODate,
   getFirstNItems,
   pageIsBlogPost,
-} = require("./config/utils.js");
+} from "./config/utils.js";
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  */
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   // Turn off default log output
   eleventyConfig.setQuietMode(true);
 
@@ -82,36 +82,36 @@ module.exports = function (eleventyConfig) {
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode(
     "callout",
-    require("./config/shortcodes/callout.js")
+    import("./config/shortcodes/callout.js")
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "character",
-    require("./config/shortcodes/character.js")
+    import("./config/shortcodes/character.js")
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "figure",
-    require("./config/shortcodes/figure.js")
+    import("./config/shortcodes/figure.js")
   );
   eleventyConfig.addNunjucksAsyncShortcode(
     "imageDiffer",
-    require("./config/shortcodes/imageDiffer.js")
+    import("./config/shortcodes/imageDiffer.js")
   );
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addPairedNunjucksShortcode(
     "mastodon",
-    require("./config/shortcodes/mastodon.js")
+    import("./config/shortcodes/mastodon.js")
   );
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    require("./config/shortcodes/responsiveImages.js")
+    import("./config/shortcodes/responsiveImages.js")
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "twitter",
-    require("./config/shortcodes/twitter.js")
+    import("./config/shortcodes/twitter.js")
   );
   eleventyConfig.addNunjucksShortcode(
     "youtube",
-    require("./config/shortcodes/youtube.js")
+    import("./config/shortcodes/youtube.js")
   );
 
   // Filters
@@ -136,4 +136,4 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
     },
   };
-};
+}

@@ -2,7 +2,7 @@
   "name": "beeps.website",
   "version": "3.0.0",
   "description": "beep's funky website.",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "npm run serve",
     "clean": "rm -rf _site",
