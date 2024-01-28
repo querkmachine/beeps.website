@@ -4,6 +4,10 @@ date: 2024-01-27
 tags: [yearly theme]
 metadata:
   description: A new yearly theme is born; and some thoughts on todo list software.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "111828757924432762"
 ---
 
 At the start of 2023, I committed myself to a theme. Two themes, in fact: to write more and to strengthen my relationships with others. Thus, the Year of Writing & Reconnection was born.
