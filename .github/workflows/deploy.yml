@@ -29,18 +29,14 @@ jobs:
       - name: Install dependencies
         uses: ./.github/workflows/actions/install-dependencies
       - name: Restore Eleventy Fetch cache
-        uses: actions/cache/restore@v4
-        id: eleventy-fetch-cache
+        uses: actions/cache@v4
         with:
           path: .cache
-          key: eleventy-fetch-cache
+          key: eleventy-fetch-cache-${{ github.run_id }}
+          restore-keys: |
+            eleventy-fetch-cache-
       - name: Build Eleventy
         run: npm run build
-      - name: Save Eleventy Fetch cache
-        uses: actions/cache/save@v4
-        with:
-          path: .cache
-          key: ${{ steps.eleventy-fetch-cache.outputs.cache-primary-key }}
       - name: Save artifact
         uses: actions/upload-artifact@v4
         with:
