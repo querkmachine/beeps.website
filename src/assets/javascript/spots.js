@@ -47,7 +47,7 @@ class Spots {
     this.strokeColor =
       document.documentElement.dataset.colorScheme === "light"
         ? [179, 255, 179]
-        : [221, 96, 49];
+        : [120, 105, 153];
   }
 
   setupObservers() {
