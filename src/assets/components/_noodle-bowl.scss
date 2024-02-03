@@ -1,0 +1,28 @@
+@use "../settings";
+
+.kimNoodleBowl {
+  --offset-top: var(--space-9);
+  --offset-bottom: 24px;
+
+  position: relative;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(100% - var(--offset-top) - var(--offset-bottom));
+    position: absolute;
+    top: var(--offset-top);
+    background-color: var(--color-furniture-alt);
+    z-index: -1;
+  }
+
+  &_inner {
+    height: 420px;
+    background-image: url("/assets/images/noodle-footer.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: auto 100%;
+  }
+}

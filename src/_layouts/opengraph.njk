@@ -24,17 +24,17 @@
         bottom: 0;
         left: 0;
       }
-      .page-robat {
-        width: 18vw;
+      .page-noodle {
+        width: 30vw;
         position: absolute;
         bottom: -2vw;
         right: 3vw;
-        transform: rotate(30deg);
       }
       .page-wrapper {
         display: flex;
         flex-direction: column;
         height: 100vh;
+        margin-inline-end: 30vw;
         padding: 6vw;
         position: relative;
       }
@@ -81,7 +81,7 @@
       <span class="page-logo">{% include "logo.njk" %}</span>
       <span class="page-name">{% block metadata %}beeps.website{% endblock %}</span>
     </div>
-    <img alt="A robat, floating in space." src="{{ '/assets/images/robat-404.png' | url }}" class="page-robat">
+    <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.png' | url }}" class="page-noodle">
     <script type="module">
       import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
       new Spots(document.querySelector(".page-background"));
