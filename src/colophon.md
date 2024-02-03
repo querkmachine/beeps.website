@@ -49,10 +49,12 @@ Words and images are my own, unless otherwise specified.
 
 This website also implements [fursona schema](https://github.com/theHedgehog0/fursona-schema), just in case it wasn't furry enough.
 
-### Characters
+## Artwork
 
 {% character character="ash", variant="happy" %}
 Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by [Tuxedo Dragon](https://tuxedodragon.carrd.co/).
+
+The illustrations of Ash in the website's footer are also by Tuxedo Dragon.
 
 Ash's headshots were illustrated by [Caius Nocturne](https://nocturne.works/).
 {% endcharacter %}
@@ -60,5 +62,5 @@ Ash's headshots were illustrated by [Caius Nocturne](https://nocturne.works/).
 {% character character="emy", variant="wave" %}
 Emy the robot bat is an original character, designed by me with help from my friend [Samael](https://samaelbretondragon.carrd.co/).
 
-Illustrations of Emy are by me, unless otherwise stated, and are based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
+Illustrations of Emy are, unless otherwise stated, illustrated by **me** and are based on the art style of the game _[Super Animal Royale](https://animalroyale.com)_ by [Pixile Studios](https://pixilestudios.com), which is really fun.
 {% endcharacter %}
