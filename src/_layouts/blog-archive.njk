@@ -4,6 +4,15 @@
 
 {% set yearList = postsList | getArchiveYears | reverse %}
 
+{% block head %}
+  <style>
+  .page-sticky-heading {
+    position: sticky;
+    top: 1rem;
+  }
+  </style>
+{% endblock %}
+
 {% block main %}
   <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
     <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
@@ -21,13 +30,19 @@
       {%- endif %}
             
       {%- for year in yearList %}
-        <h2 class="kimHeading-l kim-!-margin-top-9">{{ year }}</h2>
-        <ol class="kimCardGrid">
-          {% for post in postsList | getArchivePostsByYear(year) | reverse %}
-            {{ kimBlogCard(post) }}
-          {% endfor %}
-        </ol>
         <hr class="kimRule">
+        <div class="kimGrid">
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+            <h2 class="kimHeading-l kim-!-margin-top-0 page-sticky-heading">{{ year }}</h2>
+          </div>
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+            <ol class="kimList kimList-spaced">
+              {% for post in postsList | getArchivePostsByYear(year) | reverse %}
+                {{ kimBlogCard(post) }}
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
       {%- endfor %}
       
     </div>
