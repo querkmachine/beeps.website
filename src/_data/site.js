@@ -16,11 +16,13 @@ module.exports = function () {
     ],
     footerLinks: [
       { href: "/about/", text: "About beeps" },
-      { href: "/brand/", text: "Brand" },
-      { href: "/colophon/", text: "Colophon" },
+      { href: "/brand/", text: "beeps' brand" },
+      { href: "/contact/", text: "Contact beeps" },
+    ],
+    legalLinks: [
       { href: "/links/", text: "Cool links" },
-      { href: "/privacy/", text: "Privacy" },
-      { href: "/contact/", text: "Contact" },
+      { href: "/colophon/", text: "Colophon" },
+      { href: "/privacy/", text: "Cookies and privacy" },
     ],
   };
 };

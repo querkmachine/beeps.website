@@ -13,7 +13,7 @@
     display: none;
   }
   &_inner {
-    @include typography.kim-font-size(12);
+    @include typography.kim-font-size(16);
     display: inline-flex;
   }
   &_item {
@@ -41,7 +41,7 @@
     }
   }
   &_label {
-    @include spacing.kim-responsive-padding(2, $direction: inline);
+    @include spacing.kim-responsive-padding(3, $direction: inline);
     @include spacing.kim-responsive-padding(1, $direction: block);
     display: inline-block;
     border-width: measurements.kim-border-width("hairline")
