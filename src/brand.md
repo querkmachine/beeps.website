@@ -5,19 +5,36 @@ metadata:
   description: Style guide for my personal projects, including this website.
 ---
 
-{% macro _swatch(mainColorName, mainColorHex, complementaryColorName) %}
+{% set palette = {
+  white: "#ffffff",
+  "off-black": "#334139",
+  "light-purple": "#786999",
+  "light-green": "#b3ffb3",
+  "deep-purple": "#2a2536",
+  "brilliant-green": "#00fa17"
+} %}
 
-  <div class="page-swatch kim-!-margin-bottom-1" style="color: var(--brand-color-{{ complementaryColorName }}); background-color: var(--brand-color-{{ mainColorName }})">
-    <span>{{ mainColorName }}</span>
-    <code>{{ mainColorHex }}</code>
-  </div>
-{% endmacro %}
+{% set colourAssignments = [
+  { name: "Text", dark: "white", light: "off-black" },
+  { name: "Background", dark: "deep-purple", light: "white" },
+  { name: "Primary", dark: "brilliant-green", light: "light-purple" },
+  { name: "Accents requiring contrast", dark: "brilliant-green", light: "light-purple" },
+  { name: "Accents not requiring contrast", dark: "light-purple", light: "light-green" }
+] %}
 
-{% macro _comboSwatch(textColorName, backgroundColorName) %}
+<style>
+:root {
+  {%- for n, c in palette %}
+  --brand-color-{{ n }}: {{ c }};
+  {%- endfor %}
+}
+</style>
 
-  <div class="page-swatch kim-!-margin-bottom-1" style="color: var(--brand-color-{{ textColorName }}); background-color: var(--brand-color-{{ backgroundColorName }})">
-    <span>{{ textColorName }} text <br>on {{ backgroundColorName }}</span>
-  </div>
+{% macro _swatch(mainColorName, mainColorHex) %}
+<span class="page-swatch">
+<span class="page-swatch__preview" style="background-color: var(--brand-color-{{ mainColorName }});"></span>
+<code>{{ mainColorHex }}</code>
+</span>
 {% endmacro %}
 
 A lot of famous individuals are well known for [always wearing the same clothes](https://edition.cnn.com/2015/10/09/world/gallery/decision-fatigue-same-clothes/index.html). Usually they credit this to reducing "decision fatigue"—not having to choose how to dress every day leaves time to mull over the more important decisions.
@@ -30,35 +47,26 @@ I don't wear exactly the same clothes every day, but when it comes to building r
 
 I maintain a pretty limited palette of base colours. Shades and tints of each are allowed.
 
-### Neutrals
-
-{{ _swatch("black", "#334139", "white") }}
-{{ _swatch("white", "#FFFFFF", "black") }}
-
-### Dark mode
-
-{{ _swatch("mustard", "#FFD447", "black") }}
-{{ _swatch("ketchup", "#DD6031", "white") }}
-
-### Light mode
-
-{{ _swatch("kimberly", "#786999", "white") }}
-{{ _swatch("emy", "#B3FFB3", "black") }}
-
-### Combining colours
-
 Always aim to achieve at least a 4.5:1 contrast ratio between text and background colours, in accordance with [the WCAG Level AA criterion](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
-These combinations are known to be meet the minimum contrast ratio.
-
-{{ _comboSwatch("white", "black") }}
-{{ _comboSwatch("mustard", "black") }}
-{{ _comboSwatch("emy", "black") }}
-{{ _comboSwatch("black", "white") }}
-{{ _comboSwatch("kimberly", "white") }}
-{{ _comboSwatch("ketchup", "white") }}
-
----
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Usage</th>
+      <th scope="col">Dark</th>
+      <th scope="col">Light</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for r in colourAssignments %}
+    <tr>
+      <td scope="row">{{ r.name }}</td>
+      <td>{{ _swatch(r.dark, palette[r.dark]) }}</td>
+      <td>{{ _swatch(r.light, palette[r.light]) }}</td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
 
 ## Typography
 
@@ -70,14 +78,10 @@ These combinations are known to be meet the minimum contrast ratio.
 
 > <div style="font-family:'Space Mono'"><span style="font-weight:700">Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, "Because it is there." </span><span style="font-weight:400">Well, space is there, and we're going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there.</span></div>
 
----
-
 ## Robat icon
 
 This isn't used a whole lot, but in places where a logo or icon is needed—and the space is either too small or a dabbing robot bat would be inappropriate—there's an icon.
 
-This is a very recent addition, so will probably be tweaked and refined a bit before it settles down.
-
-<div style="max-width:320px;background-color:white" class="kim-!-margin-bottom-6 kim-!-padding-6">
-  <img src="{{ '/assets/images/icons/icon-mask.svg' | url }}" alt="Robot bat icon" class="kim-!-margin-0">
+<div style="max-width:14rem">
+  <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Robot bat icon">
 </div>

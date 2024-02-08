@@ -1,13 +1,17 @@
 @use "sass:color";
 
-// Define base/brand colours.
+// All modes
 $kim-color-white: #fff;
-$kim-color-black: #334139;
-$kim-color-kimberly: #786999;
-$kim-color-emy: #b3ffb3;
-$kim-color-ketchup: #dd6031;
-$kim-color-mustard: #ffd447;
-$kim-color-mustard-p3: color(display-p3 1 0.841 0.3);
+$kim-color-light-purple: #786999;
+
+// Light mode
+$kim-color-off-black: #334139;
+$kim-color-light-green: #b3ffb3;
+
+// Dark mode
+$kim-color-deep-purple: #2a2536;
+$kim-color-brilliant-green: oklch(85.29% 0.323 142.82);
+$kim-color-brilliant-green-fallback: #00fa17;
 
 // Assign each of those colours to a semantic purpose and whether it's used for
 // dark or light mode. These get exported as CSS custom properties based on the
@@ -16,59 +20,59 @@ $kim-color-mustard-p3: color(display-p3 1 0.841 0.3);
 $kim-color-palette-semantic: (
   text: (
     dark: $kim-color-white,
-    light: $kim-color-black,
+    light: $kim-color-off-black,
   ),
   background: (
-    dark: $kim-color-black,
+    dark: $kim-color-deep-purple,
     light: $kim-color-white,
   ),
   link: (
     dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
+      color: $kim-color-brilliant-green,
+      fallback: $kim-color-brilliant-green-fallback,
     ),
-    light: $kim-color-kimberly,
+    light: $kim-color-light-purple,
   ),
   link-accent: (
-    dark: color.scale($kim-color-mustard, $alpha: -80%),
-    light: color.scale($kim-color-kimberly, $alpha: -80%),
+    dark: color.scale($kim-color-brilliant-green-fallback, $alpha: -80%),
+    light: color.scale($kim-color-light-purple, $alpha: -80%),
   ),
   link-hover: (
-    dark: $kim-color-ketchup,
-    light: $kim-color-emy,
+    dark: $kim-color-light-purple,
+    light: $kim-color-light-green,
   ),
   link-hover-accent: (
-    dark: color.scale($kim-color-ketchup, $alpha: -80%),
-    light: color.scale($kim-color-emy, $alpha: -80%),
+    dark: color.scale($kim-color-light-purple, $alpha: -80%),
+    light: color.scale($kim-color-light-green, $alpha: -80%),
   ),
   furniture: (
     dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
+      color: $kim-color-brilliant-green,
+      fallback: $kim-color-brilliant-green-fallback,
     ),
-    light: $kim-color-kimberly,
+    light: $kim-color-light-purple,
   ),
   furniture-alt: (
-    dark: color.change($kim-color-mustard, $alpha: 0.5),
-    light: color.change($kim-color-kimberly, $alpha: 0.5),
+    dark: color.change($kim-color-light-purple, $alpha: 0.5),
+    light: color.change($kim-color-light-green, $alpha: 0.5),
   ),
   accent: (
     dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
+      color: $kim-color-brilliant-green,
+      fallback: $kim-color-brilliant-green-fallback,
     ),
-    light: $kim-color-kimberly,
+    light: $kim-color-light-purple,
   ),
   accent-alt: (
-    dark: $kim-color-ketchup,
-    light: $kim-color-emy,
+    dark: $kim-color-light-purple,
+    light: $kim-color-light-green,
   ),
   speech-bubble: (
     dark: (
-      color: $kim-color-mustard-p3,
-      fallback: $kim-color-mustard,
+      color: $kim-color-brilliant-green,
+      fallback: $kim-color-brilliant-green-fallback,
     ),
-    light: $kim-color-kimberly,
+    light: $kim-color-light-purple,
   ),
   focus-background: (
     dark: #66cbff,
