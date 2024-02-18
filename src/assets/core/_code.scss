@@ -29,6 +29,7 @@ code {
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-variant-ligatures: none;
+  font-feature-settings: "lnum", "tnum";
 }
 
 // Unhighlighted inline code
