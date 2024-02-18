@@ -21,7 +21,7 @@ I use the static site generator [Eleventy](http://11ty.dev) with the following p
 
 Markdown content is parsed by [markdown-it](https://github.com/markdown-it/markdown-it) with the [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) plugin.
 
-Code is highlighted using [highlight.js](https://highlightjs.org/) using a custom theme based on [Nova](http://nova.app)'s 'Neon' theme.
+Code is highlighted using [highlight.js](https://highlightjs.org/) using a custom theme.
 
 The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images.
 
