@@ -1,20 +1,33 @@
 @use "../settings";
+@use "../helpers/colors";
+@use "../helpers/measurements";
 @use "../helpers/spacing";
 @use "../helpers/typography";
 
 // I use the same colours for code snippets regardless of dark/light mode
 // settings. There are also lots of colours here not used elsewhere on the site,
-// as more colours are needed than are in the site palette.
+// as more colours are needed than are in the beeps brand palette.
 
-$code-color-background: black;
-$code-color-text: settings.$kim-color-white;
-$code-glow: 0 0 0.25em currentcolor;
+.kimPage {
+  --color-code-background: #{settings.$kim-color-deep-purple};
+  --color-code-text: #{settings.$kim-color-white};
+  --color-code-h-red: 5;
+  --color-code-h-orange: 30;
+  --color-code-h-yellow: 45;
+  --color-code-h-green: 120;
+  --color-code-h-cyan: 175;
+  --color-code-h-blue: 210;
+  --color-code-h-purple: 260;
+  --color-code-h-pink: 300;
+  --color-code-s: 50%;
+  --color-code-l: 75%;
+}
 
 code {
   @include typography.kim-font-stack(code, $weight: 400);
   @include typography.kim-font-size(16);
-  color: $code-color-text;
-  background-color: $code-color-background;
+  color: var(--color-code-text);
+  background-color: var(--color-code-background);
   font-variant-ligatures: none;
 }
 
@@ -31,13 +44,15 @@ pre > code {
   @include spacing.kim-responsive-padding(3);
   @include typography.kim-vr-margin(19);
   display: block;
+  border: measurements.kim-border-width("regular") solid
+    colors.kim-color-css("furniture");
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   hyphens: none;
   tab-size: 4;
-  color: $code-color-text;
-  background-color: $code-color-background;
+  color: var(--color-code-text);
+  background-color: var(--color-code-background);
   overflow-x: auto;
 }
 
@@ -48,7 +63,9 @@ pre[class*="language-"] {
 
 pre > code[class*="language-"] {
   .hljs-comment {
-    color: #6b77b3;
+    color: hsl(
+      var(--color-code-h-purple) var(--color-code-s) var(--color-code-l)
+    );
     font-style: italic;
   }
   .hljs-tag,
@@ -57,40 +74,46 @@ pre > code[class*="language-"] {
   .hljs-meta,
   .hljs-variable,
   .hljs-literal {
-    color: #faf4e0;
-    text-shadow: $code-glow;
+    color: hsl(
+      var(--color-code-h-yellow) var(--color-code-s) var(--color-code-l)
+    );
   }
   .hljs-selector-id {
-    color: #f0a8a8;
-    text-shadow: $code-glow;
+    color: hsl(var(--color-code-h-red) var(--color-code-s) var(--color-code-l));
   }
   .hljs-selector-class,
   .hljs-title.function_ {
-    color: #b2feff;
-    text-shadow: $code-glow;
+    color: hsl(
+      var(--color-code-h-cyan) var(--color-code-s) var(--color-code-l)
+    );
   }
   .hljs-property,
   .hljs-params {
-    color: #b2d8ff;
-    text-shadow: $code-glow;
+    color: hsl(
+      var(--color-code-h-blue) var(--color-code-s) var(--color-code-l)
+    );
   }
   .hljs-attr,
   .hljs-selector-attr,
   .hljs-title.class_ {
-    color: #f594d1;
-    text-shadow: $code-glow;
+    color: hsl(
+      var(--color-code-h-pink) var(--color-code-s) var(--color-code-l)
+    );
   }
   .hljs-selector-pseudo,
   .hljs-attribute {
-    color: #f547b2;
-    text-shadow: $code-glow;
+    color: hsl(
+      var(--color-code-h-green) var(--color-code-s) var(--color-code-l)
+    );
   }
   .hljs-string,
   .hljs-subst {
-    color: $code-color-text;
+    color: var(--color-code-text);
   }
   .hljs-number {
-    color: #ff4265;
+    color: hsl(
+      var(--color-code-h-orange) var(--color-code-s) var(--color-code-l)
+    );
   }
   .hljs-meta,
   .hljs-title.class_ {
