@@ -23,11 +23,11 @@
   --color-code-l: 75%;
 }
 
-code {
+.kimCode,
+.kimCodeBlock {
   @include typography.kim-font-stack(code, $weight: 400);
-  @include typography.kim-font-size(16);
   border: measurements.kim-border-width("regular") solid
-    colors.kim-color-css("furniture");
+    colors.kim-color-css("furniture-alt");
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-variant-ligatures: none;
@@ -35,8 +35,7 @@ code {
 }
 
 // Unhighlighted inline code
-:not(pre) > code {
-  padding-block: 0.1em;
+.kimCode {
   padding-inline: 0.2em;
   border-width: measurements.kim-border-width("hairline");
   white-space: normal;
@@ -44,9 +43,9 @@ code {
 }
 
 // Code blocks
-pre > code {
-  @include spacing.kim-responsive-padding(3);
+.kimCodeBlock {
   @include typography.kim-vr-margin(19);
+  @include spacing.kim-responsive-padding(3);
   display: block;
   border-width: measurements.kim-border-width("regular");
   word-spacing: normal;
@@ -56,15 +55,10 @@ pre > code {
   tab-size: 4;
   color: var(--color-code-text);
   background-color: var(--color-code-background);
-  overflow-x: auto;
-}
-
-pre[class*="language-"] {
-  display: block;
   white-space: break-spaces;
-}
+  overflow-x: auto;
 
-pre > code[class*="language-"] {
+  // Highlight.js styles
   .hljs-comment {
     color: hsl(
       var(--color-code-h-purple) var(--color-code-s) var(--color-code-l)

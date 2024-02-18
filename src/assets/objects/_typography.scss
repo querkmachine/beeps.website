@@ -20,16 +20,19 @@
 }
 
 .kimHeading-l {
+  @include spacing.kim-responsive-margin(9, $direction: top);
   @include spacing.kim-responsive-margin(6, $direction: bottom);
   @include typography.kim-font-size(36);
 }
 
 .kimHeading-m {
+  @include spacing.kim-responsive-margin(7, $direction: top);
   @include spacing.kim-responsive-margin(4, $direction: bottom);
   @include typography.kim-font-size(24);
 }
 
 .kimHeading-s {
+  @include spacing.kim-responsive-margin(5, $direction: top);
   @include spacing.kim-responsive-margin(4, $direction: bottom);
   @include typography.kim-font-size(19);
 }
