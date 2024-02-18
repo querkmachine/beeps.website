@@ -26,6 +26,8 @@
 code {
   @include typography.kim-font-stack(code, $weight: 400);
   @include typography.kim-font-size(16);
+  border: measurements.kim-border-width("regular") solid
+    colors.kim-color-css("furniture");
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-variant-ligatures: none;
@@ -36,6 +38,7 @@ code {
 :not(pre) > code {
   padding-block: 0.1em;
   padding-inline: 0.2em;
+  border-width: measurements.kim-border-width("hairline");
   white-space: normal;
   word-break: break-word;
 }
@@ -45,8 +48,7 @@ pre > code {
   @include spacing.kim-responsive-padding(3);
   @include typography.kim-vr-margin(19);
   display: block;
-  border: measurements.kim-border-width("regular") solid
-    colors.kim-color-css("furniture");
+  border-width: measurements.kim-border-width("regular");
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
