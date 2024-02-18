@@ -17,12 +17,13 @@ const mastodonQuoteShortcode = function (content, args) {
 
   return `<figure class="kimFigure"><blockquote class="kimBlockquote">
   ${content}
-  </blockquote><figcaption class="kimFigure_caption">Originally posted by ${
+  </blockquote><figcaption class="kimFigure_caption">&mdash; @${
     args.username
-  } on ${args.host}. <time datetime="${args.date}">${formatISODate(
-    args.date,
-    "humanWithTime"
-  )}.</time>  (<a href="https://${args.host}/@${args.username}/${
+  }@${args.host} on the fediverse. <time datetime="${
+    args.date
+  }">${formatISODate(args.date, "humanWithTime")}.</time>  (<a href="https://${
+    args.host
+  }/@${args.username}/${
     args.number
   }" rel="noreferrer noopener">original post</a>)</figcaption></figure>`;
 };

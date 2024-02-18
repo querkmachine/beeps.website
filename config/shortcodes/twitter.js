@@ -14,7 +14,7 @@ const twitterQuoteShortcode = function (content, args) {
 
   return `<figure class="kimFigure"><blockquote class="kimBlockquote">
   ${content}
-  </blockquote><figcaption class="kimFigure_caption">Originally posted by ${
+  </blockquote><figcaption class="kimFigure_caption">&mdash; @${
     args.username
   } on Twitter. <time datetime="${args.date}">${formatISODate(
     args.date,
