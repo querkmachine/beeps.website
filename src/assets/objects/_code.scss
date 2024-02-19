@@ -30,8 +30,7 @@
     colors.kim-color-css("furniture-alt");
   color: var(--color-code-text);
   background-color: var(--color-code-background);
-  font-variant-ligatures: none;
-  font-feature-settings: "lnum", "tnum";
+  font-feature-settings: "lnum", "liga" 0;
 }
 
 // Unhighlighted inline code
