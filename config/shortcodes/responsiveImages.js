@@ -11,11 +11,12 @@ const responsiveImagesShortcode = async function (src, alt, args) {
   const defaultArgs = {
     lazy: true,
     classes: "",
+    link: false,
   };
   const settings = { ...defaultArgs, ...args };
 
   let metadata = await pluginImages(src, {
-    widths: [300, 600, 900, 1200],
+    widths: [300, 600, 900, 1200, null],
     formats: ["webp"],
     urlPath: "/images/",
     outputDir: paths.output + "/images/",
@@ -26,10 +27,10 @@ const responsiveImagesShortcode = async function (src, alt, args) {
 
   let originalSize = metadata.webp[metadata.webp.length - 1];
 
-  return `<picture>
+  const imageCode = `<picture>
   ${Object.values(metadata)
     .map((imageFormat) => {
-      return `  <source type="image/${
+      return `<source type="image/${
         imageFormat[0].format
       }" srcset="${imageFormat
         .map((entry) => entry.srcset)
@@ -40,8 +41,14 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     originalSize.url
   }" width="${originalSize.width}" height="${
     originalSize.height
-  }" alt="${alt}"${settings.classes ? ` class="${settings.classes}"` : ""}>
-  </picture>`;
+  }" alt="${alt}"${
+    settings.classes ? ` class="${settings.classes}"` : ""
+  }></picture>`;
+
+  if (settings.link) {
+    return `<a href="${originalSize.url}">${imageCode}</a>`;
+  }
+  return imageCode;
 };
 
 module.exports = responsiveImagesShortcode;
