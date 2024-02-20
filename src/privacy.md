@@ -3,7 +3,6 @@ layout: generic.njk
 title: Privacy
 metadata:
   description: Privacy policy, data collection, etc.
-eleventyExcludeFromCollections: true
 ---
 
 This website doesn't collect any information about the people who visit it outside of basic server logs created by my hosting provider.

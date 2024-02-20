@@ -4,7 +4,6 @@ title: Cool links
 updated: 2024-01-26
 metadata:
   description: Cool sites on the information cyber highway that I like.
-eleventyExcludeFromCollections: true
 ---
 
 I am remiss that [websites these days don't just link to cool things anymore]({{ '/blog/2023-11-27-buttons/' | url }}). Of course, when I wrote that article, this website didn't do that either, so let's right that wrong.
