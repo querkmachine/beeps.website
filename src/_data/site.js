@@ -23,6 +23,14 @@ module.exports = function () {
       { href: "/links/", text: "Cool links" },
       { href: "/colophon/", text: "Colophon" },
       { href: "/privacy/", text: "Cookies and privacy" },
+      {
+        href: "/feed.xml",
+        text: "RSS feed",
+        attributes: {
+          rel: "alternate",
+          type: "application/rss+xml",
+        },
+      },
     ],
   };
 };

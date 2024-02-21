@@ -88,7 +88,11 @@
             <h2 class="kimHeading-s" id="footer-links-beeps">More beeping</h2>
             <ul class="kimList kimFooter_links" aria-labelledby="footer-links-beeps">
               {%- for link in site.footerLinks %}
-                <li><a class="kimLink" href="{{ link.href | url }}">{{ link.text }}</a></li>
+                <li>
+                  <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                    {{- link.text -}}
+                  </a>
+                </li>
               {%- endfor%}
             </ul>
           </div>
@@ -96,7 +100,11 @@
             <h2 class="kimHeading-s" id="footer-links-other">Things and stuff</h2>
             <ul class="kimList kimFooter_links" aria-labelledby="footer-links-other">
               {%- for link in site.legalLinks %}
-                <li><a class="kimLink" href="{{ link.href | url }}">{{ link.text }}</a></li>
+                <li>
+                  <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                    {{- link.text -}}
+                  </a>
+                </li>
               {%- endfor%}
             </ul>
           </div>
