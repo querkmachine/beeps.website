@@ -9,7 +9,7 @@ metadata:
   white: "#ffffff",
   "off-black": "#334139",
   "light-purple": "#786999",
-  "light-green": "#b3ffb3",
+  "light-green": "#97e697",
   "deep-purple": "#2a2536",
   "brilliant-green": "#00fa17"
 } %}
