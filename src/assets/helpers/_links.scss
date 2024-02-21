@@ -16,6 +16,9 @@
   color: colors.kim-color-css("link");
   &:focus-visible {
     @include a11y.kim-focus-ring;
+    img {
+      @include a11y.kim-focus-ring--block;
+    }
   }
   @include media-queries.kim-print {
     text-decoration: underline;
