@@ -33,7 +33,7 @@ metadata:
 {% macro _swatch(mainColorName, mainColorHex) %}
 <span class="page-swatch">
 <span class="page-swatch__preview" style="background-color: var(--brand-color-{{ mainColorName }});"></span>
-<code>{{ mainColorHex }}</code>
+<code class="kimCode">{{ mainColorHex }}</code>
 </span>
 {% endmacro %}
 
@@ -49,20 +49,20 @@ I maintain a pretty limited palette of base colours. Shades and tints of each ar
 
 Always aim to achieve at least a 4.5:1 contrast ratio between text and background colours, in accordance with [the WCAG Level AA criterion](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Usage</th>
-      <th scope="col">Dark</th>
-      <th scope="col">Light</th>
+<table class="kimTable">
+  <thead class="kimTable_head">
+    <tr class="kimTable_row">
+      <th class="kimTable_header" scope="col">Usage</th>
+      <th class="kimTable_header" scope="col">Dark</th>
+      <th class="kimTable_header" scope="col">Light</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="kimTable_body">
     {%- for r in colourAssignments %}
-    <tr>
-      <td scope="row">{{ r.name }}</td>
-      <td>{{ _swatch(r.dark, palette[r.dark]) }}</td>
-      <td>{{ _swatch(r.light, palette[r.light]) }}</td>
+    <tr class="kimTable_row">
+      <th class="kimTable_header" scope="row">{{ r.name }}</th>
+      <td class="kimTable_cell">{{ _swatch(r.dark, palette[r.dark]) }}</td>
+      <td class="kimTable_cell">{{ _swatch(r.light, palette[r.light]) }}</td>
     </tr>
     {%- endfor %}
   </tbody>
