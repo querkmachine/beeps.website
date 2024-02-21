@@ -4,10 +4,16 @@
 @use "../helpers/typography";
 
 .kimBlockquote {
-  @include spacing.kim-responsive-padding(3, $direction: left);
   @include typography.kim-vr-margin(19);
+  @include spacing.kim-responsive-padding(3, $direction: left);
   margin: 0;
   border-left: measurements.kim-border-width("regular") solid
-    colors.kim-color-css("furniture");
+    colors.kim-color-css("furniture-alt");
   text-align: left;
+  // <picture> can make things awkward here so we also have to target it and the
+  // nested <img> separately.
+  > :last-child,
+  > picture:last-child img {
+    margin-bottom: 0;
+  }
 }

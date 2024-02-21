@@ -15,6 +15,10 @@ This is a sentence broken
 over multiple lines.
 (There should be line breaks, hopefully.)
 
+### Inline styles
+
+Plain text **Bold** _italic_ **_bold and italic_** ~~deleted~~ [link](#) `inline code` <hi@berly.kim>
+
 ### Typography replacements
 
 - Apostrope: Ex'ample
@@ -27,17 +31,11 @@ over multiple lines.
 - En dash: --
 - Em dash ---
 - Plus-minus: +-
+- Fractions: 1/4 1/3 1/2 2/3 3/4
+- Multiplication sign: 800x600
+- More/less than: a >= b <= c
+- Approximately: ~=
 - Remove excessive punctuation: ??????? !!!!!!! ,,
-
-### Inline styles
-
-**Bold**
-_italic_
-**_bold and italic_**
-~~deleted~~
-[link](#)
-`inline code`
-<hi@berly.kim>
 
 ### Lists
 
@@ -205,19 +203,33 @@ OK that's about it for now. Bye!
 
 ### Figure
 
-{% figure %}
+{% figure caption="A blockquote with citation." %}
+
+> This is a quotation from someone probably well known.
+
+{% endfigure%}
+
+{% figure caption="A left floated blockquote with citation.", float="left" %}
+
+> This is a quotation from someone probably well known.
+
+{% endfigure%}
+
+{% figure caption="A right floated blockquote with citation.", float="right" %}
+
+> This is a quotation from someone probably well known.
+
+{% endfigure%}
+
+{% figure caption="A caption for this image figure, waoh." %}
 {% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
 {% endfigure %}
 
-{% figure caption="A caption for this figure, waoh." %}
+{% figure caption="Image figure floated left.", float="left" %}
 {% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
 {% endfigure %}
 
-{% figure caption="Figure floated left.", float="left" %}
-{% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
-{% endfigure %}
-
-{% figure caption="Figure floated right.", float="right" %}
+{% figure caption="Image figure floated right.", float="right" %}
 {% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
 {% endfigure %}
 
@@ -236,7 +248,7 @@ OK that's about it for now. Bye!
 {% twitter username="batbeeps", number="1462180413548421121", date="2021-11-20T22:05:51.000Z" %}
 Why is these so little actual consistency here aaaugghhhh
 
-{% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
+{% responsiveImage "./src/images/star-trek-inconsistency.jpeg", "Screenshot of some Star Trek films thumbnails as they appear in iTunes Movies. 2 to 4 have a painted rainbow motif. 5, 6, 9 and 10 have a large Starfleet delta on the right containing the logo with some actor headshots to the left and the hero ship at the bottom. 8 has a similar layout except the logo is with the actor headshots on the left. 7 has a different layout entirely consisting of the film logo and various shots from the film assembled in a row against a metallic delta background." %}
 {% endtwitter %}
 
 {% mastodon host="chitter.xyz", username="batbeeps", number="111773929720283664", date="2024-01-17T23:40:16.287Z" %}

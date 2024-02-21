@@ -1,7 +1,3 @@
-@use "../settings";
-
-@use "../helpers/spacing";
-
 @forward "../objects/blockquote";
 @forward "../objects/rule";
 @forward "../objects/table";
@@ -18,15 +14,12 @@
   }
   h2:not([class]) {
     @extend .kimHeading-l;
-    @include spacing.kim-responsive-margin(9, $direction: top);
   }
   h3:not([class]) {
     @extend .kimHeading-m;
-    @include spacing.kim-responsive-margin(7, $direction: top);
   }
   h4:not([class]) {
     @extend .kimHeading-s;
-    @include spacing.kim-responsive-margin(5, $direction: top);
   }
   ol:not([class]),
   ul:not([class]) {
@@ -49,6 +42,5 @@
   }
   a:not([class]) {
     @extend .kimLink;
-    word-break: break-word;
   }
 }

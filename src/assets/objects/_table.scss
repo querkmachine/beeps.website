@@ -4,22 +4,22 @@
 @use "../helpers/typography";
 
 .kimTable {
+  @include typography.kim-vr-margin(19);
   @include typography.kim-tabular-figures;
   width: 100%;
   border-collapse: collapse;
-  th,
-  td {
+  .kimTable_cell,
+  .kimTable_header {
     padding: spacing.kim-spacing(1) spacing.kim-spacing(3)
       spacing.kim-spacing(1) 0;
     border-bottom: measurements.kim-border-width("hairline") solid
       colors.kim-color-css("furniture-alt");
+    text-align: left;
     &:last-child {
       padding-right: 0;
     }
   }
-  th {
+  .kimTable_head .kimTable_header {
     border-bottom-width: measurements.kim-border-width("regular");
-    border-bottom-color: colors.kim-color-css("furniture");
-    text-align: left;
   }
 }

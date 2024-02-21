@@ -20,6 +20,9 @@
   }
   &-numbered {
     list-style-type: decimal;
+    li::marker {
+      @include typography.kim-tabular-figures;
+    }
   }
   &-spaced {
     li + li {

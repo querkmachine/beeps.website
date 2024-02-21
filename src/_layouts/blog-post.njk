@@ -78,10 +78,14 @@
           
           </div>
           
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds kimProse" itemprop="articleBody">
-            {% block content  %}
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds" itemprop="articleBody">
+            {%- if page.templateSyntax === "njk,md" %}
               {{ content | safe }}
-            {% endblock %}
+            {%- else %}
+              <div class="kimProse">
+                {{ content | safe }}
+              </div>
+            {%- endif %}
           </div>
         </div>
       </article>
