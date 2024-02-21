@@ -45,8 +45,10 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     settings.classes ? ` class="${settings.classes}"` : ""
   }></picture>`;
 
-  if (settings.link) {
+  if (typeof settings.link === "boolean" && settings.link === true) {
     return `<a href="${originalSize.url}">${imageCode}</a>`;
+  } else if (typeof settings.link === "string") {
+    return `<a href="${settings.link}">${imageCode}</a>`;
   }
   return imageCode;
 };
