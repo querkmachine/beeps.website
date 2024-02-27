@@ -64,17 +64,7 @@
             
             <hr class="kimRule">
             
-            {%- if (content | toc) %}
-              <nav class="kimToc" aria-labelledby="toc-header">
-                <details class="kimToc_collapsible" data-js="toc">
-                  <summary class="kimToc_collapsibleSummary">
-                    <span class="kimHeading-s" id="toc-header">Contents</span>
-                  </summary>
-                  {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
-                </details>
-                <hr class="kimRule">
-              </nav>
-            {%- endif %}
+            {% include "table-of-contents.njk" %}
           
           </div>
           
@@ -170,5 +160,6 @@
 {% endblock %}
 
 {% block scripts %}
+{{ super() }}
 <script src="{{ '/assets/javascript/toc.js' | url | cachebust }}"></script>
 {% endblock %}

@@ -4,14 +4,25 @@
   <div class="kim-!-margin-top-9 kim-!-margin-bottom-9">
     <div class="kimWrapper">
       <div class="kimGrid">
-        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        <div class="kimGrid_column kimGrid_column-full">
           <h1 class="kimHeading-xl">
             {{- title | markdownInline | safe -}}
           </h1>
-          
+        </div>
+      </div>
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneThird">
+          {% include "table-of-contents.njk" %}
+        </div>
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
           {{ content | safe }}
         </div>
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ '/assets/javascript/toc.js' | url | cachebust }}"></script>
 {% endblock %}
