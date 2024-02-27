@@ -1,37 +1,10 @@
-{% extends 'src/_layouts/layout.njk' %}
-
-
-{% block main %}
-  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
-    <div class="kimWrapper">
-      <article>
-        <div class="kimGrid">
-          <header class="kimGrid_column kimGrid_column-full">
-            <h1 class="kimHeading-xl">
-              {{- title | markdownInline | safe -}}
-            </h1>
-          </header>
-        </div>
-        <div class="kimGrid">
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-bottom-5">
-            {% include "table-of-contents.njk" %}
-          </div>
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-            {% block content  %}
-              {{ content | safe }}
-            {% endblock %}
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-{% endblock %}
+{% extends 'src/_layouts/generic.njk' %}
 
 {% block head %}
 <style>
   .page-swatch {
     display: inline-flex;
-    flex-direction: center;
+    align-items: center;
     gap: .5rem;
   }
   .page-swatch__preview {
@@ -40,9 +13,4 @@
     border: 1px solid currentcolor;
   }
 </style>
-{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-<script src="{{ '/assets/javascript/toc.js' | url | cachebust }}"></script>
 {% endblock %}
