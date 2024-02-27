@@ -82,6 +82,6 @@ Always aim to achieve at least a 4.5:1 contrast ratio between text and backgroun
 
 This isn't used a whole lot, but in places where a logo or icon is needed—and the space is either too small or a dabbing robot bat would be inappropriate—there's an icon.
 
-<div style="max-width:14rem">
+<div class="page-icon">
   <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Robot bat icon">
 </div>
