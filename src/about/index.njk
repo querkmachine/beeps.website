@@ -1,0 +1,90 @@
+---
+layout: null
+title: About beeps
+metadata:
+  description: I'm pretty weird, tbh.
+mastheadBreadcrumbs: null
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block head %}
+<style>
+.page-emoji {
+  display: block;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 3em;
+}
+</style>
+{% endblock %}
+
+{% macro _item(emoji) %}
+<div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+  <span class="page-emoji">{{ emoji }}</span>
+  {% markdown %}{{- caller() -}}{% endmarkdown %}
+</div>
+{% endmacro %}
+
+{% block main %}
+  <article class="kim-!-margin-top-9 kim-!-margin-bottom-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <header class="kimGrid_column kimGrid_column-full">
+          <h1 class="kimHeading-xl">
+            {{ title }}
+          </h1>
+        </header>
+      </div>
+      <div class="kimGrid">
+        {% call _item("🪪") %}
+        [My name is beeps.]({{ '/about/name/' | url }}) I also go by Kim, but in more casual settings I prefer that folks call me beeps.
+        {% endcall %}
+        {% call _item("🤖") %}
+        [I don't consider myself human.]({{ '/about/nonhuman/' | url }}) Rather a transhumanist or posthumanist. I don't relate well to my physical humanity.
+        {% endcall %}
+        {% call _item("🏳️‍⚧️") %}
+        [I'm trans and agender.]({{ '/about/gender/' | url }}) I don't consider myself to be female, male, or anything in-between. I use it/its pronouns.
+        {% endcall %}
+        {% call _item("♠️") %}
+        [I'm asexual.]({{ '/about/asexuality/' | url }}) This doesn't affect day-to-day life that much, but it's still a reasonably important part of who I am!
+        {% endcall %}
+        {% call _item("🧠") %}
+        [I'm neurodivergent.]({{ '/about/neurodivergent/' | url }}) I deal with a lot of anxiety and my brain works a little differently to most. I can struggle to operate in some situations.
+        {% endcall %}
+        {% call _item("🐾") %}
+        [I'm a furry.]({{ '/about/furry/' | url }}) I've been in the furry fandom for over half my life and I owe it a lot for giving me the skills and experience I have today.
+        {% endcall %}
+        {% call _item("💜") %}
+        [I host a plural system.]({{ '/about/olive/' | url }}) My subconscious decided to say hello and told me their name is Olive. We get on rather well!
+        {% endcall %}
+        {% call _item("🕸️") %}
+        [I make websites.]({{ '/about/work/' | url }}) I've been doing web things since 2003, coming to specialise in front-end development, accessibility, and design systems.
+        {% endcall %}
+        {% call _item("📣") %}
+        [I'm in a bunch of other places.]({{ '/contact/' | url }}) Chat or stalk me on a bunch of other websites, if you want.
+        {% endcall %}
+      </div>
+    </div>
+  </article>
+{% endblock %}
+
+{#
+I am me. Unashamedly so. This website might be my "professional" online presence, but it is also _my_ website, and I don't want to hide any aspects of who I am in any environment—online or off.
+
+If you think that's a problem... then that's your problem.
+
+---
+
+
+<strong class="kimHeading-s">[I'm a furry.]({{ '/about/furry/' | url }})</strong>
+
+
+<strong class="kimHeading-s">[I'm not alone.]({{ '/about/olive/' | url }})</strong>
+One day, my subconscious decided to say hello and told me their name is Olive. Since then we've been investigating plurality and how it applies to us.
+
+<strong class="kimHeading-s">And, of course, [I make websites.]({{ '/work/' | url }})</strong>
+
+<hr class="kimRule">
+
+[You can contact me]({{ '/contact/' | url }}) 
+#}
