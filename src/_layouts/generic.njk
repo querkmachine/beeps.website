@@ -5,6 +5,9 @@
     <div class="kimWrapper">
       <div class="kimGrid">
         <header class="kimGrid_column kimGrid_column-full">
+          {%- if preTitle %}
+          <div class="kimSubheading-l">{{ preTitle | markdownInline | safe }}</div>
+          {%- endif %}
           <h1 class="kimHeading-xl">
             {{- title | markdownInline | safe -}}
           </h1>

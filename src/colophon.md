@@ -48,7 +48,7 @@ Words and images are my own, unless otherwise specified.
 
 This website also implements [fursona schema](https://github.com/theHedgehog0/fursona-schema), just in case it wasn't furry enough.
 
-### Characters
+## Characters
 
 {% character character="ash", variant="happy" %}
 Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by [Tuxedo Dragon](https://tuxedodragon.carrd.co/).

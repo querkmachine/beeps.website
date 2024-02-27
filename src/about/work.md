@@ -35,17 +35,17 @@ For my benefit as much as yours, here's some of the projects and clients I've wo
 
 ### At the Government Digital Service (2022–present)
 
-- Exit this Page component development – GOV.UK Frontend & Design System
-- Adding full localisation support – GOV.UK Frontend
-- Organiser and moderator – Design System Day 2022 online conference
-- Staff and moderator – Design System Day 2023 hybrid conference
+- [Introducing the Tudor Crown logo](https://insidegovuk.blog.gov.uk/2024/02/19/updating-gov-uks-crown/) — GOV.UK Frontend
+- [Exit this Page component](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/) – GOV.UK Frontend & Design System
+- Led on developing [full localisation support](https://frontend.design-system.service.gov.uk/localise-govuk-frontend/#localise-gov-uk-frontend) – GOV.UK Frontend
+- Organiser and moderator – [Design System Day 2022](https://design-system.service.gov.uk/community/design-system-day-2022/)
+- Staff and moderator – [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day-2023/)
 
 ### At Felinesoft (2014–2022)
 
 - Grants portal – Art Fund
 - Website – Association for Project Management
 - Website – British Association for Counselling and Psychotherapy
-- Learning and development portal – College of Policing
 - Website and embedded software design – Consol
 - Student tracking portal – I CAN
 - Exhibitor registration and management portal – International Broadcasting Convention
@@ -60,24 +60,19 @@ For my benefit as much as yours, here's some of the projects and clients I've wo
 - Website – Royal Society of Medicine
 - Website – Ski Miquel
 - Campaign microsites and email marketing – Southern Comfort
-- Talent portal – Spotlight
 - Campaign microsite – Virgin Atlantic
-- Website – West of England Growth Hub
 
 ### At Goram and Vincent (2012–2013)
 
-- Website – Beeston Media
 - Informatica product website – BMJ
 - Campaign microsites – Continental AG
 - MyDrinkaware tracker – Drinkaware
 - Corporate website – Glorious Brands
-- Website – Ontology Systems
 - Ecommerce website – Shiner
 - Store locator – Stila
 
 ### Community and volunteer projects
 
-- Encyclopedia Robotica wiki
 - The Furtean Times
 - Library Music Archive wiki
 - MyFursona
