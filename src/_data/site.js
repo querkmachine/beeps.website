@@ -16,7 +16,7 @@ module.exports = function () {
     ],
     footerLinks: [
       { href: "/about/", text: "About beeps" },
-      { href: "/ash/", text: "Refsheet" },
+      { href: "/ash/", text: "Reference sheet" },
       { href: "/brand/", text: "beeps' brand" },
       { href: "/contact/", text: "Contact beeps" },
     ],
