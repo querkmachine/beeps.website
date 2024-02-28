@@ -1,0 +1,132 @@
+---
+title: Ash the Amphimorpho reference sheet
+metadata:
+  description: The cyber information superhighway reference sheet for my fursona.
+---
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block head %}
+<style>
+.page-top-image {
+  border: 1px solid var(--color-furniture-alt);
+  text-align: center;
+}
+.page-top-image img {
+  width: auto;
+  max-width: 100%;
+  max-height: 60vh;
+}
+.page-swatch {
+  border-top: 1em solid var(--color);
+}
+</style>
+{% endblock %}
+
+{% macro _swatch(color, description) %}
+<div class="kimGrid_column kimGrid_column-oneHalf galaxy:kimGrid_column-oneQuarter">
+  <p class="kimBody page-swatch kim-!-padding-top-2" style="--color: {{ color }};">
+    <code class="kimCode">{{ color }}</code><br>
+    {{ description }}
+  </p>
+</div>
+{% endmacro %}
+
+{% block main %}
+<div class="kimWrapper kim-!-margin-bottom-9">
+  <h1 class="kimHeading-xl">
+    Ash the Amphimorpho
+    <div class="kimSubheading-xl">reference sheet</div>
+  </h1>
+  
+  <div class="page-top-image kim-!-margin-bottom-6 kim-!-padding-3">
+    {% responsiveImage "./src/images/ash-by-tuxedodragon-transparent.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly.", { link: true } %}
+    <p class="kimBody-s kim-!-margin-bottom-0">(Actual reference sheet coming early 2024.)</p>
+    <p class="kimBody-s kim-!-margin-bottom-0">Artwork by <a href="https://tuxedodragon.carrd.co/" class="kimLink">Tuxedo Dragon</a>. More art examples available upon request.</p>
+  </div>
+  
+  <section class="kimGrid" aria-label="Colour reference">
+    {{ _swatch("#1d2f23", "Hair, legs, shoulders, rear, top of tail.") }}
+    {{ _swatch("#f1fff2", "Mid torso, chest, paws, bottom of tail, face, outer ears.") }}
+    {{ _swatch("#4ce74c", "Hair tips, eyes, exposed skin (paw pads, inner ears, tongue), tail tip.") }}
+  </section>
+  
+  <div class="kimGrid">
+    <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf" id="stats">
+      <h2 class="kimHeading-l">Basic info</h2>
+      <table class="kimTable">
+        <tbody class="kimTable_body">
+          <tr class="kimTable_row">
+            <th class="kimTable_header">Name</th>
+            <td class="kimTable_cell">Ashley &ldquo;Ash&rdquo; Altmann</td>
+          </tr>
+          <tr class="kimTable_row">
+            <th class="kimTable_header">Species</th>
+            <td class="kimTable_cell"><a class="kimLink" href="https://amphimorpho.carrd.co/">amphimorpho</a></td>
+          </tr>
+          <tr class="kimTable_row">
+            <th class="kimTable_header">Age</th>
+            <td class="kimTable_cell">somewhere in the 20s</td>
+          </tr>
+          <tr class="kimTable_row">
+            <th class="kimTable_header">Gender</th>
+            <td class="kimTable_cell">female presenting (biologically genderless)</td>
+          </tr>
+          <tr class="kimTable_row">
+            <th class="kimTable_header">Pronouns</th>
+            <td class="kimTable_cell">she/her</td>
+          </tr>
+          <tr class="kimTable_row">
+            <th class="kimTable_header">Orientation</th>
+            <td class="kimTable_cell">asexual</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf" id="overview">
+      <h2 class="kimHeading-l">Overview</h2>
+      <p class="kimBody">Ash is a former human who was infected by and transformed into an amphimorpho—a genetically engineered chimeric species created through combining the DNA of various terran species with alien generic matter.</p>
+      <p class="kimBody">Amphimorpho are very large, relatively light creatures. In this form, Ash is around 3 metres long from snout to tail tip (1.75 metres of which is just the tail) and weighs around 115 kilograms.</p>
+    </section>
+    <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf" id="abilities">
+      <h2 class="kimHeading-l">Abilities</h2>
+      <p class="kimBody">As an amphimorpho, Ash has enhanced senses and is capable of shapeshifting and accelerated healing.</p>
+      <p class="kimBody">Although she can manipulate her density when shapeshifting, Ash cannot become dramatically larger or smaller than normal. Both shifting and maintaining a shifted form requires energy and concentration. Unless she has imprinted DNA from a biological being, she can only reproduce the outside appearance of something. </p>
+      <p class="kimBody">As a <a class="kimLink" href="https://amphimorpho.carrd.co/#secretpage">mutant amphimorpho</a>, Ash is a carrier of the amphimorpho virus and can transmit it to others.</p>
+    </section>
+    <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf" id="forms">
+      <h2 class="kimHeading-l">Alternate forms</h2>
+      <p class="kimBody">Ash's basal form can change in size, proportions, have four or six limbs (two or four &ldquo;arms&rdquo;) and have a stomach pouch. She can freely adapt to walking on two, four or six legs.</p>
+      <p class="kimBody">Ash can change the physical composition of her form, for example, to become a pooltoy or plush toy. She is able to alter her fur pattern and colours at-will.</p>
+      <p class="kimBody">Outside of her basal form, Ash will normally shapeshift to appear as a human, bat or domestic cat.</p>
+    </section>
+  </div>
+    
+  <secti`on id="common-errors">
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-l">Common mistakes</h2>
+        
+        <h3 class="kimHeading-m">Facial features</h3>
+        <p class="kimBody"><strong>Amphimorpho have snouts but no nostrils.</strong> Their sense of smell is more similar to that of a snake, with olfactory sensors in the roof of the mouth and their tongues assist in smelling.</p>
+        <p class="kimBody">Also quite similar to snakes, <strong>amphimorpho tongues are forked at the end</strong>. They have <strong>prominent upper and lower canine teeth</strong>, though these are usually only visible when the mouth is open.</p>
+      
+        <h3 class="kimHeading-m">Skin and blush colour</h3>
+        <p class="kimBody">The visibly green parts of Ash's body are bioluminescent and <strong>glow softly</strong> in darkness.</p>
+        <p class="kimBody">Similarly, <strong>Ash blushes green</strong>. Don't ask exactly how, as she doesn't have a circulatory system in the first place.</p>
+      
+        <h3 class="kimHeading-m">Paws</h3>
+        <p class="kimBody"><strong>Ash's paws have four toes.</strong> Typically these will operate as a single unit (e.g. when walking), however, one of these toes can operate as an opposable thumb for gripping objects.</p>
+      
+        <h3 class="kimHeading-m">Downstairs parts</h3>
+        <p class="kimBody">Amphimorpho are <strong>biologically genderless</strong> and do not have sexual organs.</p>
+        <p class="kimBody">Ash doesn't have a digestive system in any traditional sense. As such, she doesn't have a use for a butt or buttocks, and shouldn't be depicted with them.</p>
+      
+        <h3 class="kimHeading-m">Ash is not magical</h3>
+        <p class="kimBody"><strong>Ash is not magical.</strong> She cannot do spells or hover or fly. I have no idea where people got this idea, but it's come up more than once.</p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block footerRobats %}{# Hide this to avoid unnecessary visual distraction. #}{% endblock %}
