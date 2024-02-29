@@ -36,9 +36,12 @@
 
 @mixin kim-link {
   @include _kim-link-common;
-  @include _kim-link-underline($color: colors.kim-color-css("link-accent"));
+  @include _kim-link-underline($color: colors.kim-color-css("link-underline"));
+  &:visited {
+    text-decoration-color: colors.kim-color-css("link-underline-visited");
+  }
   &:hover {
-    text-decoration-color: colors.kim-color-css("link-hover-accent");
+    text-decoration-color: colors.kim-color-css("link-underline-hover");
   }
 }
 
@@ -47,7 +50,7 @@
   text-decoration: none;
   &:hover {
     @include _kim-link-underline(
-      $color: colors.kim-color-css("link-hover-accent")
+      $color: colors.kim-color-css("link-underline-hover")
     );
   }
 }

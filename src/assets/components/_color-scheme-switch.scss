@@ -31,7 +31,7 @@
   &_input {
     @include a11y.kim-visually-hidden;
     &:checked + #{$self}_label {
-      background-color: colors.kim-color-css("link-hover-accent");
+      background-color: colors.kim-color-css("furniture-alt");
     }
     &:checked + #{$self}_label::before {
       content: "";

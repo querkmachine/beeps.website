@@ -36,7 +36,7 @@
     text-decoration: none;
     &:hover {
       #{$self}_logo {
-        fill: colors.kim-color-css("link-hover");
+        fill: colors.kim-color-css("link-underline-hover");
       }
     }
     &:focus-visible {

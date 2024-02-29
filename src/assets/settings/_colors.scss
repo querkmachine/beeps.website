@@ -33,17 +33,28 @@ $kim-color-palette-semantic: (
     ),
     light: $kim-color-light-purple,
   ),
-  link-accent: (
-    dark: color.scale($kim-color-brilliant-green-fallback, $alpha: -80%),
-    light: color.scale($kim-color-light-purple, $alpha: -80%),
+  link-underline: (
+    dark:
+      color.mix(
+        $kim-color-brilliant-green-fallback,
+        $kim-color-deep-purple,
+        $weight: 20%
+      ),
+    light: color.mix($kim-color-light-purple, $kim-color-white, $weight: 20%),
   ),
-  link-hover: (
-    dark: $kim-color-light-purple,
-    light: $kim-color-light-green,
+  link-underline-hover: (
+    dark:
+      color.mix(
+        $kim-color-brilliant-green-fallback,
+        $kim-color-deep-purple,
+        $weight: 40%
+      ),
+    light: color.mix($kim-color-light-purple, $kim-color-white, $weight: 40%),
   ),
-  link-hover-accent: (
-    dark: color.scale($kim-color-light-purple, $alpha: -80%),
-    light: color.scale($kim-color-light-green, $alpha: -80%),
+  link-underline-visited: (
+    dark:
+      color.mix($kim-color-light-purple, $kim-color-deep-purple, $weight: 25%),
+    light: color.mix($kim-color-light-green, $kim-color-white, $weight: 25%),
   ),
   furniture: (
     dark: (
