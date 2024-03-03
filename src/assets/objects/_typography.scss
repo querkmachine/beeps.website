@@ -1,81 +1,90 @@
-@use "../settings";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
 // Headings
 .kimHeading-xl,
 .kimHeading-l,
 .kimHeading-m,
-.kimHeading-s {
-  @include spacing.kim-responsive-margin(0, $direction: top);
-  @include typography.kim-font-stack(header, $weight: bold);
-  letter-spacing: -0.02em;
+.kimHeading-s,
+.kimHeading-xs {
+  font-family: var(--font-header);
   font-feature-settings: "ss01", "ss04", "case";
+  font-weight: 700;
   text-wrap: balance;
+  letter-spacing: -0.02em;
 }
 
 .kimHeading-xl {
-  @include spacing.kim-responsive-margin(8, $direction: bottom);
-  @include typography.kim-font-size(48);
+  margin-block-start: 0;
+  margin-block-end: var(--space-8);
+  font-size: var(--size-5);
+  line-height: 1;
 }
 
 .kimHeading-l {
-  @include spacing.kim-responsive-margin(9, $direction: top);
-  @include spacing.kim-responsive-margin(6, $direction: bottom);
-  @include typography.kim-font-size(36);
+  margin-block-start: var(--space-9);
+  margin-block-end: var(--space-6);
+  font-size: var(--size-4);
+  line-height: 1.1;
 }
 
 .kimHeading-m {
-  @include spacing.kim-responsive-margin(7, $direction: top);
-  @include spacing.kim-responsive-margin(4, $direction: bottom);
-  @include typography.kim-font-size(24);
+  margin-block-start: var(--space-7);
+  margin-block-end: var(--space-4);
+  font-size: var(--size-3);
+  line-height: 1.25;
 }
 
 .kimHeading-s {
-  @include spacing.kim-responsive-margin(5, $direction: top);
-  @include spacing.kim-responsive-margin(4, $direction: bottom);
-  @include typography.kim-font-size(19);
+  margin-block-start: var(--space-5);
+  margin-block-end: var(--space-5);
+  font-size: var(--size-2);
+  line-height: 1.5;
+}
+
+.kimHeading-xs {
+  margin-block-start: var(--space-5);
+  margin-block-end: var(--space-4);
+  font-size: var(--size-1);
+  line-height: 1.5;
 }
 
 // Subheadings
 .kimSubheading-xl,
 .kimSubheading-l,
 .kimSubheading-m {
-  @include typography.kim-font-stack(header, $weight: regular);
-  text-wrap: pretty;
+  font-family: var(--font-header);
+  text-wrap: balance;
+  line-height: 1.25;
 }
 
 .kimSubheading-xl {
-  @include spacing.kim-responsive-margin(1, $direction: bottom);
-  @include typography.kim-font-size(36);
+  margin-block-end: var(--space-1);
+  font-size: var(--size-3);
 }
 
 .kimSubheading-l {
-  @include typography.kim-font-size(24);
+  font-size: var(--size-2);
 }
 
 .kimSubheading-m {
-  @include typography.kim-font-size(19);
+  font-size: var(--size-1);
 }
 
 // Body copy
 .kimBody,
 .kimBody-l,
 .kimBody-s {
-  @include spacing.kim-responsive-margin(0, $direction: top);
+  margin-block-start: 0;
+  margin-block-end: var(--space-5);
+  line-height: 1.5;
 }
 
 .kimBody {
-  @include typography.kim-font-size(19);
-  @include typography.kim-vr-margin(19);
+  font-size: var(--size-0);
 }
 
 .kimBody-l {
-  @include typography.kim-font-size(24);
-  @include typography.kim-vr-margin(24);
+  font-size: var(--size-1);
 }
 
 .kimBody-s {
-  @include typography.kim-font-size(16);
-  @include typography.kim-vr-margin(16);
+  font-size: var(--size--1);
 }

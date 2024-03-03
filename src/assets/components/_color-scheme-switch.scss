@@ -1,66 +1,64 @@
 @use "../helpers/a11y";
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-@use "../helpers/typography";
 
 .kimColorSchemeSwitch {
-  $self: &;
   margin: 0;
   padding: 0;
   border: none;
   &[hidden] {
     display: none;
   }
-  &_inner {
-    @include typography.kim-font-size(16);
-    display: inline-flex;
+}
+
+.kimColorSchemeSwitch_inner {
+  display: inline-flex;
+  font-size: var(--size--1);
+}
+
+.kimColorSchemeSwitch_item {
+  position: relative;
+  &:first-child .kimColorSchemeSwitch_label {
+    border-inline-start-width: var(--border-hairline);
+    border-start-start-radius: 4px;
+    border-end-start-radius: 4px;
   }
-  &_item {
-    position: relative;
-    &:first-child #{$self}_label {
-      border-left-width: measurements.kim-border-width("hairline");
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-    }
-    &:last-child #{$self}_label {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
+  &:last-child .kimColorSchemeSwitch_label {
+    border-start-end-radius: 4px;
+    border-end-end-radius: 4px;
   }
-  &_input {
-    @include a11y.kim-visually-hidden;
-    &:checked + #{$self}_label {
-      background-color: colors.kim-color-css("furniture-alt");
-    }
-    &:checked + #{$self}_label::before {
-      content: "";
-    }
-    &:focus + #{$self}_label {
-      @include a11y.kim-focus-ring;
-    }
+}
+
+.kimColorSchemeSwitch_input {
+  &:checked + .kimColorSchemeSwitch_label {
+    background-color: var(--color-furniture-alt);
   }
-  &_label {
-    @include spacing.kim-responsive-padding(3, $direction: inline);
-    @include spacing.kim-responsive-padding(1, $direction: block);
+  &:checked + .kimColorSchemeSwitch_label::before {
+    content: "";
+  }
+  &:focus-visible + .kimColorSchemeSwitch_label {
+    @include a11y.kim-focus-ring;
+  }
+}
+
+.kimColorSchemeSwitch_label {
+  display: inline-block;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-3);
+  border-block-width: var(--border-hairline);
+  border-inline-start-width: 0;
+  border-inline-end-width: var(--border-hairline);
+  border-style: solid;
+  border-color: currentcolor;
+  color: var(--color-link);
+  font-weight: bold;
+  cursor: pointer;
+  &::before {
     display: inline-block;
-    border-width: measurements.kim-border-width("hairline")
-      measurements.kim-border-width("hairline")
-      measurements.kim-border-width("hairline") 0;
+    width: 1em;
+    height: 0.5em;
+    margin-right: var(--space-2);
+    border-width: 0 0 0.2em 0.2em;
     border-style: solid;
-    border-color: currentcolor;
-    color: colors.kim-color-css("link");
-    font-weight: bold;
-    cursor: pointer;
-    &::before {
-      display: inline-block;
-      width: 1em;
-      height: 0.5em;
-      margin-right: 0.5em;
-      border-width: 0 0 0.2em 0.2em;
-      border-style: solid;
-      border-color: transparent transparent currentcolor currentcolor;
-      transform: translateY(-0.2em) rotate(-45deg);
-    }
+    border-color: transparent transparent currentcolor currentcolor;
+    transform: translateY(-0.2em) rotate(-45deg);
   }
 }

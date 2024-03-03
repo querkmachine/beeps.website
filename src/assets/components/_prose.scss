@@ -2,8 +2,8 @@
 @forward "../objects/rule";
 @forward "../objects/table";
 @forward "../objects/typography";
-@forward "../objects/links";
-@forward "../objects/lists";
+@forward "../objects/link";
+@forward "../objects/list";
 
 .kimProse {
   p:not([class]) {

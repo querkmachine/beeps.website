@@ -1,9 +1,5 @@
-// The maximum page width.
-$kim-page-width: 60rem;
-
-// The gutter between individual grid columns and between the grid and viewport
-// sides. Divided by 2, so avoid something that will be highly fractional.
-$kim-page-gutter: 2.5rem;
+// Max grid width
+$kim-grid-max-width: 66rem;
 
 // Grid column class names and the widths they use (all automatically become
 // 100% on mobile, however).
@@ -15,3 +11,37 @@ $kim-grid-widths: (
   "twoThirds": 66.66666%,
   "full": 100%,
 );
+
+:root {
+  // Fixed spacing keys
+  // https://utopia.fyi/space/calculator?c=320,16,1.2,960,19,1.25,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,3xl,4
+  --space-1: clamp(0.25rem, 0.2188rem + 0.1563vi, 0.3125rem);
+  --space-2: clamp(0.5rem, 0.4375rem + 0.3125vi, 0.625rem);
+  --space-3: clamp(0.75rem, 0.6875rem + 0.3125vi, 0.875rem);
+  --space-4: clamp(1rem, 0.9063rem + 0.4688vi, 1.1875rem);
+  --space-5: clamp(1.5rem, 1.3438rem + 0.7813vi, 1.8125rem);
+  --space-6: clamp(2rem, 1.8125rem + 0.9375vi, 2.375rem);
+  --space-7: clamp(3rem, 2.7188rem + 1.4063vi, 3.5625rem);
+  --space-8: clamp(4rem, 3.625rem + 1.875vi, 4.75rem);
+  --space-9: clamp(6rem, 5.4375rem + 2.8125vi, 7.125rem);
+
+  // One-up spacing keys
+  --space-1-2: clamp(0.25rem, 0.0625rem + 0.9375vi, 0.625rem);
+  --space-2-3: clamp(0.5rem, 0.3125rem + 0.9375vi, 0.875rem);
+  --space-3-4: clamp(0.75rem, 0.5313rem + 1.0938vi, 1.1875rem);
+  --space-4-5: clamp(1rem, 0.5938rem + 2.0313vi, 1.8125rem);
+  --space-5-6: clamp(1.5rem, 1.0625rem + 2.1875vi, 2.375rem);
+  --space-6-7: clamp(2rem, 1.2188rem + 3.9063vi, 3.5625rem);
+  --space-7-8: clamp(3rem, 2.125rem + 4.375vi, 4.75rem);
+  --space-8-9: clamp(4rem, 2.4375rem + 7.8125vi, 7.125rem);
+
+  // Grid system
+  --grid-max-width: #{$kim-grid-max-width};
+  --grid-gutter: clamp(1rem, 0.4959rem + 2.5522vw, 2.375rem);
+  --grid-gutter-half: calc(var(--grid-gutter) / 2);
+
+  // Border widths
+  --border-hairline: 1px;
+  --border-regular: 0.25rem;
+  --border-thick: 0.5rem;
+}

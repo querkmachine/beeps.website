@@ -1,31 +1,24 @@
-@use "../settings";
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
 .kimInteractionList {
-  @include spacing.kim-responsive-margin(0);
-  @include spacing.kim-responsive-padding(0);
-  @include typography.kim-vr-margin(19);
   display: grid;
   grid-template-columns: repeat(auto-fit, 3rem);
-  gap: spacing.kim-spacing(1);
+  gap: var(--space-2);
+  margin: 0;
+  margin-block-end: var(--space-5);
+  padding: 0;
   list-style-type: none;
   a {
     display: block;
-    padding: measurements.kim-border-width("hairline");
-    border: measurements.kim-border-width("hairline") solid
-      colors.kim-color-css("link");
+    padding: var(--border-hairline);
+    border: var(--border-hairline) solid var(--color-link);
     line-height: 0;
     &:hover {
-      border-color: colors.kim-color-css("link-underline-hover");
+      border-color: var(--color-link-underline-hover);
     }
   }
   img {
-    width: 100%;
-    margin: 0;
+    inline-size: 100%;
     aspect-ratio: 1;
+    margin: 0;
     object-fit: cover;
   }
 }

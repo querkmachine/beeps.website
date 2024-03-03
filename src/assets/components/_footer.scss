@@ -1,21 +1,13 @@
-@use "../settings";
-
-@use "../helpers/colors";
-@use "../helpers/measurements";
 @use "../helpers/media-queries";
-@use "../helpers/typography";
-@use "../helpers/reset";
-@use "../helpers/spacing";
 
 .kimFooter {
   position: sticky;
-  top: 100%;
+  inset-block-start: 100%;
   @include media-queries.kim-print {
     display: none;
   }
   &_inner {
-    @include spacing.kim-responsive-padding(6, $direction: block);
-    border-bottom: measurements.kim-border-width("thick") solid
-      colors.kim-color-css("furniture");
+    padding-block: var(--space-6);
+    border-block-end: var(--border-thick) solid var(--color-furniture);
   }
 }

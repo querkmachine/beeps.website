@@ -1,7 +1,0 @@
-@use "../helpers/typography";
-
-img {
-  @include typography.kim-vr-margin(19);
-  max-width: 100%;
-  height: auto;
-}

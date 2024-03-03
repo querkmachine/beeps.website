@@ -1,17 +1,8 @@
-@use "../helpers/colors";
-@use "../helpers/links";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
 .kimBlogCard {
-  $self: &;
   display: flex;
   flex-direction: column;
   position: relative;
   &_date {
-    @include spacing.kim-responsive-margin(1, $direction: top);
-  }
-  &_link {
-    @include links.kim-link;
+    margin-block-start: var(--space-1);
   }
 }

@@ -1,6 +1,0 @@
-@use "../settings";
-@use "../helpers/links";
-
-a:not([class]) {
-  @include links.kim-link;
-}

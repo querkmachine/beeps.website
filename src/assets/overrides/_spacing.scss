@@ -1,29 +1,32 @@
-@use "../settings";
-@use "../helpers/spacing";
-
-$directions: (
+$_directions: (
   all: all,
-  top: top,
-  right: right,
-  bottom: bottom,
-  left: left,
+  top: block-start,
+  bottom: block-end,
+  left: inline-start,
+  right: inline-end,
+  block-start: block-start,
+  block-end: block-end,
+  inline-start: inline-start,
+  inline-end: inline-end,
+  block: block,
+  inline: inline,
 );
 
-@each $size, $map in settings.$kim-spacing {
-  @each $key, $dir in $directions {
-    .kim-\!-margin#{if($key != "all", "-" + $key, null)}-#{$size} {
-      @include spacing.kim-responsive-margin(
-        $spacing-point: $size,
-        $direction: $dir,
-        $important: true
-      );
+@for $i from 0 through 9 {
+  @each $key, $dir in $_directions {
+    .kim-\!-margin#{if($key != "all", "-" + $key, null)}-#{$i} {
+      margin#{if($key != "all", "-" + $key, null)}: if(
+        $i == 0,
+        0,
+        var(--space-#{$i})
+      ) !important;
     }
-    .kim-\!-padding#{if($key != "all", "-" + $key, null)}-#{$size} {
-      @include spacing.kim-responsive-padding(
-        $spacing-point: $size,
-        $direction: $dir,
-        $important: true
-      );
+    .kim-\!-padding#{if($key != "all", "-" + $key, null)}-#{$i} {
+      padding#{if($key != "all", "-" + $key, null)}: if(
+        $i == 0,
+        0,
+        var(--space-#{$i})
+      ) !important;
     }
   }
 }

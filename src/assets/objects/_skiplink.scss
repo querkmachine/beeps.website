@@ -1,15 +1,12 @@
-@use "../settings";
 @use "../helpers/a11y";
-@use "../helpers/media-queries";
-@use "../helpers/spacing";
 
 .kimSkiplink {
   @include a11y.kim-focus-ring;
-  @include spacing.kim-responsive-padding(2);
   display: block;
+  padding: var(--space-2);
   position: absolute;
-  top: -9999em;
-  left: -9999em;
+  inset-block-start: -9999em;
+  inset-inline-start: -9999em;
   text-align: center;
   &:focus {
     position: static;

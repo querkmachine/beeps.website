@@ -1,29 +1,22 @@
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-
 .kimComment {
   margin: 0;
   &_meta {
-    @include spacing.kim-responsive-margin(3, $direction: bottom);
-    @include spacing.kim-responsive-padding(2, $direction: top);
-    @include spacing.kim-responsive-padding(2, $direction: bottom);
+    margin-block-end: var(--space-3);
+    padding-block: var(--space-2);
     border-width: 0;
-    border-top-width: measurements.kim-border-width("hairline");
-    border-bottom-width: measurements.kim-border-width("hairline");
+    border-block-width: var(--border-hairline);
     border-style: solid;
-    border-color: colors.kim-color-css("furniture-alt");
+    border-color: var(--color-furniture-alt);
     overflow: hidden;
   }
   &_avatar {
-    width: 3rem;
-    margin: 0;
-    margin-right: spacing.kim-spacing(2);
-    padding: measurements.kim-border-width("hairline");
-    border: measurements.kim-border-width("hairline") solid
-      colors.kim-color-css("link");
+    inline-size: 3rem;
     aspect-ratio: 1;
-    float: left;
+    margin: 0;
+    margin-inline-end: var(--space-2);
+    padding: var(--border-hairline);
+    border: var(--border-hairline) solid var(--color-link);
+    float: inline-start;
     object-fit: cover;
   }
   &_name {

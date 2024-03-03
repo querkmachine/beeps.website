@@ -1,16 +1,12 @@
-@use "../settings";
-@use "../helpers/colors";
-@use "../helpers/spacing";
-
 .kimRobatWars {
-  $offset: spacing.kim-spacing(8);
-  height: clamp(12rem, 30vh, 15rem);
-  background-color: colors.kim-color-css("furniture-alt");
+  --offset: var(--space-8);
+  block-size: clamp(12rem, 30vh, 15rem);
+  background-color: var(--color-furniture-alt);
   pointer-events: none;
   &_inner {
-    height: calc(100% + #{$offset});
+    block-size: calc(100% + var(--offset));
     position: relative;
-    top: 0 - $offset;
+    inset-block-start: calc(0px - var(--offset));
     background-image: url("/assets/images/robat-footer.webp");
     background-repeat: repeat-x;
     background-position: top 0 left 50%;

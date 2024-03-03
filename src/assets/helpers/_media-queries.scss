@@ -1,26 +1,38 @@
-@use "../settings";
+@use "../settings/breakpoints";
 
 @use "sass:map";
 
-// Media query helper
-@mixin kim-mq($from: null, $to: null, $and: null) {
-  $map: settings.$kim-breakpoints;
+// Query constructor
+@function _kim-query-builder($from: null, $to: null, $and: null) {
+  $map: breakpoints.$kim-breakpoints;
   $query: "";
-  @if map.has-key($map, $from) {
-    $query: "#{$query} (min-width: #{map.get($map, $from)})";
+  @if $from {
+    $fromValue: if(map.has-key($map, $from), map.get($map, $from), $from);
+    $query: "#{$query} (min-width: #{$fromValue})";
+  }
+  @if $from and $to {
+    $query: "#{$query} and";
   }
   @if $to {
-    @if map.has-key($map, $from) and map.has-key($map, $to) {
-      $query: "#{$query} and";
-    }
-    @if map.has-key($map, $to) {
-      $query: "#{$query} (max-width: #{map.get($map, $to) - 1px})";
-    }
+    $toValue: if(map.has-key($map, $to), map.get($map, $to), $to) - 1px;
+    $query: "#{$query} (max-width: #{$toValue})";
   }
   @if $and {
     $query: "#{$query} #{$and}";
   }
-  @media screen and #{$query} {
+  @return $query;
+}
+
+// Media query helper
+@mixin kim-mq($from: null, $to: null, $and: null) {
+  @media screen and #{_kim-query-builder($from, $to, $and)} {
+    @content;
+  }
+}
+
+// Container query helper
+@mixin kim-cq($from: null, $to: null, $and: null, $container-name: null) {
+  @container #{if($container-name, $container-name, "")} #{_kim-query-builder($from, $to, $and)} {
     @content;
   }
 }
