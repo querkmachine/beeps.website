@@ -37,7 +37,7 @@ $kim-grid-widths: (
 
   // Grid system
   --grid-max-width: #{$kim-grid-max-width};
-  --grid-gutter: clamp(1rem, 0.2653rem + 3.6735vw, 3.25rem);
+  --grid-gutter: clamp(1rem, 0.2653rem + 3.6735vi, 3.25rem);
   --grid-gutter-half: calc(var(--grid-gutter) / 2);
 
   // Border widths

@@ -1,6 +1,6 @@
 .kimRobatWars {
   --offset: var(--space-8);
-  block-size: clamp(12rem, 30vh, 15rem);
+  block-size: clamp(12rem, 30vb, 15rem);
   background-color: var(--color-furniture-alt);
   pointer-events: none;
   &_inner {
