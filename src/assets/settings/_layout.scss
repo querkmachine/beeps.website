@@ -1,5 +1,5 @@
 // Max grid width
-$kim-grid-max-width: 81.25rem;
+$kim-grid-max-width: 69rem;
 
 // Grid column class names and the widths they use (all automatically become
 // 100% on mobile, however).
@@ -14,26 +14,26 @@ $kim-grid-widths: (
 
 :root {
   // Fixed spacing keys
-  // https://utopia.fyi/space/calculator?c=320,16,1.2,1320,26,1.25,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,l,12
-  --space-1: clamp(0.25rem, 0.19rem + 0.3vi, 0.4375rem);
-  --space-2: clamp(0.5rem, 0.4rem + 0.5vi, 0.8125rem);
-  --space-3: clamp(0.75rem, 0.59rem + 0.8vi, 1.25rem);
-  --space-4: clamp(1rem, 0.8rem + 1vi, 1.625rem);
-  --space-5: clamp(1.5rem, 1.2rem + 1.5vi, 2.4375rem);
-  --space-6: clamp(2rem, 1.6rem + 2vi, 3.25rem);
-  --space-7: clamp(3rem, 2.4rem + 3vi, 4.875rem);
-  --space-8: clamp(4rem, 3.2rem + 4vi, 6.5rem);
-  --space-9: clamp(6rem, 4.8rem + 6vi, 9.75rem);
+  // https://utopia.fyi/space/calculator?c=320,16,1.2,1320,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,l,12
+  --space-1: clamp(0.25rem, 0.21rem + 0.2vi, 0.375rem);
+  --space-2: clamp(0.5rem, 0.44rem + 0.3vi, 0.6875rem);
+  --space-3: clamp(0.75rem, 0.65rem + 0.5vi, 1.0625rem);
+  --space-4: clamp(1rem, 0.88rem + 0.6vi, 1.375rem);
+  --space-5: clamp(1.5rem, 1.32rem + 0.9vi, 2.0625rem);
+  --space-6: clamp(2rem, 1.76rem + 1.2vi, 2.75rem);
+  --space-7: clamp(3rem, 2.64rem + 1.8vi, 4.125rem);
+  --space-8: clamp(4rem, 3.52rem + 2.4vi, 5.5rem);
+  --space-9: clamp(6rem, 5.28rem + 3.6vi, 8.25rem);
 
   // One-up pairs
-  --space-1-2: clamp(0.25rem, 0.07rem + 0.9vi, 0.8125rem);
-  --space-2-3: clamp(0.5rem, 0.26rem + 1.2vi, 1.25rem);
-  --space-3-4: clamp(0.75rem, 0.47rem + 1.4vi, 1.625rem);
-  --space-4-5: clamp(1rem, 0.54rem + 2.3vi, 2.4375rem);
-  --space-5-6: clamp(1.5rem, 0.94rem + 2.8vi, 3.25rem);
-  --space-6-7: clamp(2rem, 1.08rem + 4.6vi, 4.875rem);
-  --space-7-8: clamp(3rem, 1.88rem + 5.6vi, 6.5rem);
-  --space-8-9: clamp(4rem, 2.16rem + 9.2vi, 9.75rem);
+  --space-1-2: clamp(0.25rem, 0.11rem + 0.7vi, 0.6875rem);
+  --space-2-3: clamp(0.5rem, 0.32rem + 0.9vi, 1.0625rem);
+  --space-3-4: clamp(0.75rem, 0.55rem + 1vi, 1.375rem);
+  --space-4-5: clamp(1rem, 0.66rem + 1.7vi, 2.0625rem);
+  --space-5-6: clamp(1.5rem, 1.1rem + 2vi, 2.75rem);
+  --space-6-7: clamp(2rem, 1.32rem + 3.4vi, 4.125rem);
+  --space-7-8: clamp(3rem, 2.2rem + 4vi, 5.5rem);
+  --space-8-9: clamp(4rem, 2.64rem + 6.8vi, 8.25rem);
 
   // Grid system
   --grid-max-width: #{$kim-grid-max-width};
