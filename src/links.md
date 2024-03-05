@@ -1,7 +1,7 @@
 ---
-layout: generic.njk
+layout: links.njk
 title: Cool links
-updated: 2024-01-26
+updated: 2024-03-09
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -83,4 +83,9 @@ Miscellany, &c.
 - [The Cutting Room Floor](https://tcrf.net/) documents all the parts of video games that made it into the files but didn't make it into the final game. It's a fascinating insight into how popular games were developed and refined.
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - _[Meet Me In The Woods](https://mmitwcomic.tumblr.com/post/699016339886637056/cover-and-a-little-dedicatory-pagebecause-im-a)_ is a sci-fi mystery webcomic. It's also indirectly the source material for [my fursona]({{ '/about/furry/' | url }}). I'm totally not biased.
-- [The 88x31 GIF Collection](https://cyber.dabamos.de/88x31/) hoards all of those cool linky buttons the websites of yesteryear used to have.
+
+## Buttons
+
+These are largely sourced from [the 88x31 GIF Collection](https://cyber.dabamos.de/88x31/), [the 88x31 Archive](https://hellnet.work/8831/) and [Yesterweb's buttons page](https://yesterweb.org/graphics/buttons).
+
+{# Button grid is inserted here by the layout. #}
