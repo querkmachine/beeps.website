@@ -18,7 +18,9 @@
           {% include "table-of-contents.njk" %}
         </div>
         <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
-          {{ content | safe }}
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
         </div>
       </div>
     </div>
