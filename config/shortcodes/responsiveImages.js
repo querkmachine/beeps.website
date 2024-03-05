@@ -34,7 +34,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
         imageFormat[0].format
       }" srcset="${imageFormat
         .map((entry) => entry.srcset)
-        .join(", ")}" sizes="(min-width: 768px) 66vw, 100vw">`;
+        .join(", ")}" sizes="(min-width: 768px) 66vi, 100vi">`;
     })
     .join("\n")}
     <img${settings.lazy ? ` loading="lazy"` : ""} src="${

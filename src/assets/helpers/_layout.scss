@@ -1,52 +1,20 @@
-@use "../settings";
-@use "media-queries";
+@use "../settings/layout";
 
-@use "sass:map";
-@use "sass:math";
-@use "sass:string";
+@use "../helpers/media-queries";
 
-// Main wrapper definition
+// Container element
 @mixin kim-width-container {
-  $gutter-safe-area-right: calc(
-    #{math.div(settings.$kim-page-gutter, 2)} + env(safe-area-inset-right)
-  );
-  $gutter-safe-area-left: calc(
-    #{math.div(settings.$kim-page-gutter, 2)} + env(safe-area-inset-left)
-  );
+  --gutter-left: calc(var(--grid-gutter) + env(safe-area-inset-left));
+  --gutter-right: calc(var(--grid-gutter) + env(safe-area-inset-right));
   display: block;
-  max-width: settings.$kim-page-width;
-  margin-inline: math.div(settings.$kim-page-gutter, 2);
-  @supports (margin: max(calc(0px))) {
-    margin-inline: max(
-      #{math.div(settings.$kim-page-gutter, 2)},
-      #{$gutter-safe-area-right}
-    );
-  }
-  @include media-queries.kim-mq($from: galaxy) {
-    $gutter-safe-area-right: calc(
-      #{settings.$kim-page-gutter} + env(safe-area-inset-right)
-    );
-    $gutter-safe-area-left: calc(
-      #{settings.$kim-page-gutter} + env(safe-area-inset-left)
-    );
-    margin-right: settings.$kim-page-gutter;
-    margin-left: settings.$kim-page-gutter;
-    @supports (margin: max(calc(0px))) {
-      margin-right: max(
-        #{settings.$kim-page-gutter},
-        #{$gutter-safe-area-right}
-      );
-      margin-left: max(#{settings.$kim-page-gutter}, #{$gutter-safe-area-left});
-    }
-  }
-  @include media-queries.kim-mq(
-    $and:
-      "(min-width: #{(settings.$kim-page-width + settings.$kim-page-gutter * 2)})"
-  ) {
-    margin-inline: auto;
-    @supports (margin: max(calc(0px))) {
-      margin-inline: auto;
-    }
+  container-name: wrapper;
+  container-type: inline-size;
+  max-inline-size: var(--grid-max-width);
+  margin-left: var(--gutter-left);
+  margin-right: var(--gutter-right);
+  @include media-queries.kim-mq($from: layout.$kim-grid-max-width + 4rem) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

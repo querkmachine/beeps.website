@@ -1,16 +1,11 @@
-@use "../settings";
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
 // I use the same colours for code snippets regardless of dark/light mode
 // settings. There are also lots of colours here not used elsewhere on the site,
 // as more colours are needed than are in the beeps brand palette.
 
-.kimPage {
-  --color-code-background: #{settings.$kim-color-deep-purple};
-  --color-code-text: #{settings.$kim-color-white};
+.kimCode,
+.kimCodeBlock {
+  --color-code-background: #2a2536;
+  --color-code-text: #fff;
   --color-code-h-red: 5;
   --color-code-h-orange: 30;
   --color-code-h-yellow: 45;
@@ -21,40 +16,36 @@
   --color-code-h-pink: 300;
   --color-code-s: 50%;
   --color-code-l: 75%;
-}
 
-.kimCode,
-.kimCodeBlock {
-  @include typography.kim-font-stack(code, $weight: 400);
-  border: measurements.kim-border-width("regular") solid
-    colors.kim-color-css("furniture-alt");
+  border: var(--border-regular) solid var(--color-furniture-alt);
   color: var(--color-code-text);
   background-color: var(--color-code-background);
+  font-family: var(--font-code);
   font-feature-settings: "lnum", "liga" 0;
 }
 
 // Unhighlighted inline code
 .kimCode {
   padding-inline: 0.2em;
-  border-width: measurements.kim-border-width("hairline");
+  border-width: var(--border-hairline);
   white-space: normal;
   word-break: break-word;
 }
 
 // Code blocks
 .kimCodeBlock {
-  @include typography.kim-vr-margin(19);
-  @include spacing.kim-responsive-padding(3);
   display: block;
-  border-width: measurements.kim-border-width("regular");
+  margin-block-end: var(--space-5);
+  padding: var(--space-3);
+  border-width: var(--border-regular);
+  color: var(--color-code-text);
+  background-color: var(--color-code-background);
+  white-space: break-spaces;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   hyphens: none;
   tab-size: 4;
-  color: var(--color-code-text);
-  background-color: var(--color-code-background);
-  white-space: break-spaces;
   overflow-x: auto;
 
   // Highlight.js styles

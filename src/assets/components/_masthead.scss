@@ -1,42 +1,33 @@
-@use "../settings";
-
 @use "../helpers/a11y";
-@use "../helpers/colors";
-@use "../helpers/links";
-@use "../helpers/measurements";
 @use "../helpers/media-queries";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
-@use "sass:color";
 
 .kimMasthead {
   $self: &;
-  @include typography.kim-font-size(24);
-  @include typography.kim-font-stack(header, $weight: bold);
-  color: colors.kim-color-css("text");
-  background-color: colors.kim-color-css("background");
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: var(--font-header);
+  font-size: var(--size-2);
   @include media-queries.kim-print {
     display: none;
   }
   &_inner {
-    @include spacing.kim-responsive-padding(4, $direction: bottom);
     display: flex;
-    border-top: measurements.kim-border-width("thick") solid
-      colors.kim-color-css("furniture");
+    padding-block-end: var(--space-4);
+    border-block-start: var(--border-thick) solid var(--color-furniture);
   }
   &_brand {
-    @include spacing.kim-responsive-margin(3, $direction: right);
-    @include spacing.kim-responsive-padding(2);
     display: inline-flex;
     align-items: center;
     vertical-align: center;
-    color: colors.kim-color-css("background");
-    background-color: colors.kim-color-css("link");
+    margin-inline-end: var(--space-3);
+    padding: var(--space-2);
+    color: var(--color-background);
+    background-color: var(--color-furniture);
+    font-weight: 700;
     text-decoration: none;
     &:hover {
       #{$self}_logo {
-        fill: colors.kim-color-css("link-underline-hover");
+        fill: var(--color-link-underline-hover);
       }
     }
     &:focus-visible {
@@ -49,25 +40,21 @@
   &_logo {
     fill: currentcolor;
     line-height: 0;
-    @include media-queries.kim-mq($from: galaxy) {
-      @include spacing.kim-responsive-margin(3, $direction: right);
-    }
   }
   &_name {
-    @include media-queries.kim-mq($to: galaxy) {
+    margin-inline-start: var(--space-3);
+    @include media-queries.kim-cq($to: constitution) {
       display: none;
     }
   }
   &_breadcrumbs {
-    @include spacing.kim-responsive-margin(1, $direction: top);
-    @include spacing.kim-responsive-margin(1, $direction: bottom);
     display: inline-block;
     align-self: center;
+    margin-block: var(--space-1);
     a + a::before {
-      @include spacing.kim-responsive-margin(1, $direction: right);
-      @include spacing.kim-responsive-margin(1, $direction: left);
+      margin-inline: var(--space-1);
       content: "/";
-      color: colors.kim-color-css("text");
+      color: var(--color-text);
       text-decoration: none;
     }
   }

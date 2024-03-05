@@ -1,0 +1,14 @@
+.kimMeta {
+  margin: 0;
+  margin-block-end: var(--space-5);
+  &_item {
+    margin-block-end: var(--space-4);
+  }
+  &_key {
+    margin-block-end: var(--space-1);
+    font-weight: 600;
+  }
+  &_value {
+    margin: 0;
+  }
+}

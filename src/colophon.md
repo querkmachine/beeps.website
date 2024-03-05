@@ -24,7 +24,7 @@ Code is highlighted using [highlight.js](https://highlightjs.org/) using a custo
 
 The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images.
 
-Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
+Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). Spacing and type scales were generated using [Utopia](https://utopia.fyi). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
 
 [Prettier](https://prettier.io/) is used to keep the code beautiful.
 

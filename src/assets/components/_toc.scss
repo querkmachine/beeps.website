@@ -1,20 +1,15 @@
-@use "../settings";
 @use "../helpers/a11y";
-@use "../helpers/colors";
 @use "../helpers/links";
 @use "../helpers/media-queries";
-@use "../helpers/spacing";
-@use "../helpers/typography";
 
 .kimToc {
-  $self: &;
   @include media-queries.kim-mq($from: galaxy) {
     position: sticky;
-    @include spacing.kim-responsive-spacing($property: top, $spacing-point: 3);
+    inset-block-start: var(--space-3);
   }
   &_collapsible[open] {
-    #{$self}_collapsibleSummary {
-      @include spacing.kim-responsive-margin(2, $direction: bottom);
+    .kimToc_collapsibleSummary {
+      margin-block-end: var(--space-2);
       &::before {
         clip-path: polygon(50% 100%, 0 0, 100% 0);
       }
@@ -24,13 +19,13 @@
     position: relative;
     cursor: pointer;
     &::before {
-      @include spacing.kim-responsive-margin(2, $direction: right);
-      $marker-size: 0.75rem;
+      --marker-size: 0.75rem;
+      margin-inline-end: var(--space-2);
       content: "";
       display: inline-block;
-      width: $marker-size;
-      height: $marker-size;
-      background-color: colors.kim-color-css("link");
+      width: var(--marker-size);
+      height: var(--marker-size);
+      background-color: var(--color-link);
       clip-path: polygon(100% 50%, 0 0, 0 100%);
     }
     &::marker {
@@ -44,19 +39,15 @@
     }
   }
   &_inner ol {
-    @include spacing.kim-responsive-margin(0);
-    @include spacing.kim-responsive-padding(0);
-    @include typography.kim-font-size(16);
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
   &_inner li {
-    @include spacing.kim-responsive-margin(1, $direction: top);
-    &:last-child {
-      @include typography.kim-vr-margin(19);
-    }
+    margin-block-start: var(--space-1);
   }
   &_inner > ol > li > ol li {
-    @include spacing.kim-responsive-margin(3, $direction: left);
+    margin-inline-start: var(--space-3);
   }
   a {
     @include links.kim-link-no-underline;

@@ -1,25 +1,23 @@
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
 .kimTable {
-  @include typography.kim-vr-margin(19);
-  @include typography.kim-tabular-figures;
-  width: 100%;
+  inline-size: 100%;
+  margin-block-end: var(--space-5);
   border-collapse: collapse;
-  .kimTable_cell,
-  .kimTable_header {
-    padding: spacing.kim-spacing(1) spacing.kim-spacing(3)
-      spacing.kim-spacing(1) 0;
-    border-bottom: measurements.kim-border-width("hairline") solid
-      colors.kim-color-css("furniture-alt");
-    text-align: left;
-    &:last-child {
-      padding-right: 0;
-    }
+  font-feature-settings: "tnum", "lnum";
+}
+
+.kimTable_cell,
+.kimTable_header {
+  padding-block: var(--space-1);
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-3);
+  border-bottom: var(--border-hairline) solid var(--color-furniture-alt);
+  text-align: start;
+  vertical-align: top;
+  &:last-child {
+    padding-inline-end: 0;
   }
-  .kimTable_head .kimTable_header {
-    border-bottom-width: measurements.kim-border-width("regular");
-  }
+}
+
+.kimTable_head .kimTable_header {
+  border-block-end-width: var(--border-regular);
 }

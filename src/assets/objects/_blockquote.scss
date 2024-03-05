@@ -1,19 +1,13 @@
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-@use "../helpers/typography";
-
 .kimBlockquote {
-  @include typography.kim-vr-margin(19);
-  @include spacing.kim-responsive-padding(3, $direction: left);
   margin: 0;
-  border-left: measurements.kim-border-width("regular") solid
-    colors.kim-color-css("furniture-alt");
-  text-align: left;
+  margin-block-end: var(--space-5);
+  padding-inline-start: var(--space-3);
+  border-inline-start: var(--border-regular) solid var(--color-furniture-alt);
+  text-align: start;
   // <picture> can make things awkward here so we also have to target it and the
   // nested <img> separately.
   > :last-child,
   > picture:last-child img {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }

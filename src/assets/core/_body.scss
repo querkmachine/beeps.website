@@ -1,34 +1,24 @@
-@use "../settings";
-
-@use "../helpers/colors";
-@use "../helpers/typography";
-
-* {
-  box-sizing: border-box;
-  &::before,
-  &::after {
-    box-sizing: inherit;
-  }
-}
+@use "../helpers/media-queries";
 
 .kimPage {
-  @include colors.kim-output-all-color-properties("dark");
-  &[data-color-scheme="light"] {
-    @include colors.kim-output-all-color-properties("light");
-  }
-  background-color: colors.kim-color-css("background");
-  font-size: clamp(16px, 1.22vw, 22px);
+  background-color: var(--color-background);
   text-size-adjust: 100%;
-  @if settings.$kim-font-sizes-root != 16px {
-    font-size: settings.$kim-font-sizes-root;
-  }
-  &_body {
-    @include typography.kim-typography-common;
-    @include typography.kim-font-stack(body);
-    @include typography.kim-font-size(19);
-    min-height: 100vh;
-    margin: 0;
-    color: colors.kim-color-css("text");
-    background-color: transparent;
+}
+
+.kimPage_body {
+  min-block-size: 100vb;
+  margin: 0;
+  color: var(--color-text);
+  background-color: transparent;
+  font-family: var(--font-body);
+  font-size: var(--size-0);
+  font-feature-settings: "onum";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-wrap: pretty;
+  line-height: 1.5;
+  @include media-queries.kim-print {
+    color: black !important;
+    background-color: white !important;
   }
 }

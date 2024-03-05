@@ -6,7 +6,7 @@
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
 
 {% block main %}
-  <div class="kim-!-padding-top-9 kim-!-padding-bottom-9">
+  <div class="kim-!-margin-block-8-9">
     <div class="kimWrapper">
       <article itemscope itemtype="https://schema.org/BlogPosting">
       
@@ -21,11 +21,11 @@
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
           
             <footer>
-              <dl class="kim-!-margin-0">
+              <dl class="kimMeta">
                 {%- if date %}
-                  <div class="kim-!-margin-bottom-3">
-                    <dt class="kim-!-font-weight-600 kim-!-margin-bottom-1">Published</dt>
-                    <dd class="kim-!-margin-0">
+                  <div class="kimMeta_item">
+                    <dt class="kimMeta_key">Published</dt>
+                    <dd class="kimMeta_value">
                       <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
                         {{- date | formatDate('human') -}}
                       </time>
@@ -33,9 +33,9 @@
                   </div>
                 {%- endif %}
                 {%- if updated %}
-                  <div class="kim-!-margin-bottom-3">
-                    <dt class="kim-!-font-weight-600 kim-!-margin-bottom-1">Last updated</dt>
-                    <dd class="kim-!-margin-0">
+                  <div class="kimMeta_item">
+                    <dt class="kimMeta_key">Last updated</dt>
+                    <dd class="kimMeta_value">
                       <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
                         {{- updated | formatDate('human') -}}
                       </time>
@@ -43,9 +43,9 @@
                   </div>
                 {%- endif %}
                 {%- if tags %}
-                  <div class="kim-!-margin-bottom-3 kim-!-doNotPrint">
-                    <dt class="kim-!-font-weight-600 kim-!-margin-bottom-1">Tagged</dt>
-                    <dd class="kim-!-margin-0">
+                  <div class="kimMeta_item">
+                    <dt class="kimMeta_key">Tagged</dt>
+                    <dd class="kimMeta_value">
                       <ul class="kimList">
                         {% for tag in tags | filterTagList | sort %}
                           {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
@@ -88,12 +88,12 @@
               <hr class="kimRule kimRule-thick">
     
               {%- if favourites | length > 0 %}
-                <h2 class="kimHeading-m">Favourited by</h2>
+                <h2 class="kimHeading-s">Favourited by</h2>
                 <ul class="kimInteractionList">
                   {%- for item in favourites %}
                   <li>
                     <a href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
-                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy">
+                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy" width="50" height="50">
                     </a>
                   </li>
                   {%- endfor %}
@@ -101,12 +101,12 @@
               {%- endif %}
     
               {%- if shares | length > 0 %}
-                <h2 class="kimHeading-m">Shared by</h2>
+                <h2 class="kimHeading-s">Shared by</h2>
                 <ul class="kimInteractionList">
                   {%- for item in shares %}
                   <li>
                     <a href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
-                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy">
+                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy" width="50" height="50">
                     </a>
                   </li>
                   {%- endfor %}
@@ -124,7 +124,7 @@
           <section id="comments" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
             <hr class="kimRule kimRule-thick">
             
-            <h2 class="kimHeading-m">Comments</h2>
+            <h2 class="kimHeading-s">Comments</h2>
             <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on Mastodon</a>.</p>
             
             {%- if comments %}

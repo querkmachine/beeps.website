@@ -1,0 +1,19 @@
+:root {
+  // Font stacks
+  --font-body: "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-header: var(--font-body);
+  --font-code: "Space Mono", monospace, monospace;
+
+  // Type sizes
+  // https://utopia.fyi/type/calculator?c=320,16,1.2,1320,26,1.25,5,3,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,l,12
+  --size--3: clamp(0.5787rem, 0.4976rem + 0.4053vi, 0.832rem);
+  --size--2: clamp(0.6944rem, 0.5839rem + 0.5529vi, 1.04rem);
+  --size--1: clamp(0.8333rem, 0.684rem + 0.7467vi, 1.3rem);
+  --size-0: clamp(1rem, 0.8rem + 1vi, 1.625rem);
+  --size-1: clamp(1.2rem, 0.934rem + 1.33vi, 2.0313rem);
+  --size-2: clamp(1.44rem, 1.0883rem + 1.7585vi, 2.5391rem);
+  --size-3: clamp(1.728rem, 1.2653rem + 2.3133vi, 3.1738rem);
+  --size-4: clamp(2.0736rem, 1.4676rem + 3.0299vi, 3.9673rem);
+  --size-5: clamp(2.4883rem, 1.6977rem + 3.9533vi, 4.9591rem);
+}

@@ -1,7 +1,4 @@
-@use "../settings";
-
 @use "a11y";
-@use "colors";
 @use "media-queries";
 
 @mixin _kim-link-underline($color) {
@@ -13,7 +10,7 @@
 }
 
 @mixin _kim-link-common {
-  color: colors.kim-color-css("link");
+  color: var(--color-link);
   word-break: break-word;
   &:focus-visible {
     @include a11y.kim-focus-ring;
@@ -36,12 +33,12 @@
 
 @mixin kim-link {
   @include _kim-link-common;
-  @include _kim-link-underline($color: colors.kim-color-css("link-underline"));
+  @include _kim-link-underline($color: var(--color-link-underline));
   &:visited {
-    text-decoration-color: colors.kim-color-css("link-underline-visited");
+    text-decoration-color: var(--color-link-underline-visited);
   }
   &:hover {
-    text-decoration-color: colors.kim-color-css("link-underline-hover");
+    text-decoration-color: var(--color-link-underline-hover);
   }
 }
 
@@ -49,8 +46,6 @@
   @include _kim-link-common;
   text-decoration: none;
   &:hover {
-    @include _kim-link-underline(
-      $color: colors.kim-color-css("link-underline-hover")
-    );
+    @include _kim-link-underline($color: var(--color-link-underline-hover));
   }
 }

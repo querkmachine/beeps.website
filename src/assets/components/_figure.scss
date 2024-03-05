@@ -1,37 +1,31 @@
-@use "../settings";
-@use "../helpers/colors";
-@use "../helpers/measurements";
 @use "../helpers/media-queries";
-@use "../helpers/spacing";
-@use "../helpers/typography";
 
 .kimFigure {
-  @include typography.kim-vr-margin(19);
-  width: 100%;
+  inline-size: 100%;
   margin: 0;
+  margin-block-end: var(--space-5);
   text-align: center;
   &_caption {
-    @include spacing.kim-responsive-padding(2, $direction: bottom);
-    @include typography.kim-font-size(16);
-    border-bottom: measurements.kim-border-width("regular") solid
-      colors.kim-color-css("furniture-alt");
-    text-align: left;
+    padding-block-end: var(--space-2);
+    font-size: var(--size--1);
+    border-bottom: var(--border-regular) solid var(--color-furniture-alt);
+    text-align: start;
   }
-  @include media-queries.kim-mq($from: galaxy) {
+  @include media-queries.kim-cq($from: constitution) {
     &-left,
     &-right {
       width: 30%;
       max-width: 17.5rem;
     }
     &-left {
-      @include spacing.kim-responsive-margin(3, $direction: right);
-      float: left;
-      clear: left;
+      margin-inline-end: var(--space-3);
+      float: inline-start;
+      clear: inline-start;
     }
     &-right {
-      @include spacing.kim-responsive-margin(3, $direction: left);
-      float: right;
-      clear: right;
+      margin-inline-start: var(--space-3);
+      float: inline-end;
+      clear: inline-end;
     }
   }
 }

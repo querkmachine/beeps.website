@@ -1,94 +1,35 @@
-@use "sass:color";
+.kimPage {
+  --color-text: #fff;
+  --color-background: #2a2536;
+  --color-accent: oklch(85.29% 0.323 142.82);
+  --color-accent-alt: #786999;
 
-// All modes
-$kim-color-white: #fff;
-$kim-color-light-purple: #786999;
+  --color-furniture: var(--color-accent);
+  --color-furniture-alt: var(--color-accent-alt);
+  --color-link: var(--color-accent);
+  --color-link-underline: color-mix(
+    in lch,
+    var(--color-accent) 20%,
+    var(--color-background)
+  );
+  --color-link-underline-hover: color-mix(
+    in lch,
+    var(--color-accent) 40%,
+    var(--color-background)
+  );
+  --color-link-underline-visited: color-mix(
+    in lch,
+    var(--color-accent-alt) 25%,
+    var(--color-background)
+  );
+  --color-speech-bubble: var(--color-accent);
+  --color-focus-background: #fc0;
+  --color-focus-text: #000;
 
-// Light mode
-$kim-color-off-black: #334139;
-$kim-color-light-green: #97e697;
-
-// Dark mode
-$kim-color-deep-purple: #2a2536;
-$kim-color-brilliant-green: oklch(85.29% 0.323 142.82);
-$kim-color-brilliant-green-fallback: #00fa17;
-
-// Assign each of those colours to a semantic purpose and whether it's used for
-// dark or light mode. These get exported as CSS custom properties based on the
-// name and mode — e.g. var(--color-text) will be white on dark mode and black
-// on light mode.
-$kim-color-palette-semantic: (
-  text: (
-    dark: $kim-color-white,
-    light: $kim-color-off-black,
-  ),
-  background: (
-    dark: $kim-color-deep-purple,
-    light: $kim-color-white,
-  ),
-  link: (
-    dark: (
-      color: $kim-color-brilliant-green,
-      fallback: $kim-color-brilliant-green-fallback,
-    ),
-    light: $kim-color-light-purple,
-  ),
-  link-underline: (
-    dark:
-      color.mix(
-        $kim-color-brilliant-green-fallback,
-        $kim-color-deep-purple,
-        $weight: 20%
-      ),
-    light: color.mix($kim-color-light-purple, $kim-color-white, $weight: 20%),
-  ),
-  link-underline-hover: (
-    dark:
-      color.mix(
-        $kim-color-brilliant-green-fallback,
-        $kim-color-deep-purple,
-        $weight: 40%
-      ),
-    light: color.mix($kim-color-light-purple, $kim-color-white, $weight: 40%),
-  ),
-  link-underline-visited: (
-    dark:
-      color.mix($kim-color-light-purple, $kim-color-deep-purple, $weight: 25%),
-    light: color.mix($kim-color-light-green, $kim-color-white, $weight: 25%),
-  ),
-  furniture: (
-    dark: (
-      color: $kim-color-brilliant-green,
-      fallback: $kim-color-brilliant-green-fallback,
-    ),
-    light: $kim-color-light-purple,
-  ),
-  furniture-alt: (
-    dark: color.change($kim-color-light-purple, $alpha: 0.5),
-    light: color.change($kim-color-light-green, $alpha: 0.5),
-  ),
-  accent: (
-    dark: (
-      color: $kim-color-brilliant-green,
-      fallback: $kim-color-brilliant-green-fallback,
-    ),
-    light: $kim-color-light-purple,
-  ),
-  accent-alt: (
-    dark: $kim-color-light-purple,
-    light: $kim-color-light-green,
-  ),
-  speech-bubble: (
-    dark: (
-      color: $kim-color-brilliant-green,
-      fallback: $kim-color-brilliant-green-fallback,
-    ),
-    light: $kim-color-light-purple,
-  ),
-  focus-background: (
-    dark: #ffcc00,
-  ),
-  focus-text: (
-    dark: #000,
-  ),
-);
+  &[data-color-scheme="light"] {
+    --color-text: #334139;
+    --color-background: #fff;
+    --color-accent: #786999;
+    --color-accent-alt: #97e697;
+  }
+}

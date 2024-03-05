@@ -14,7 +14,7 @@ metadata:
 .page-top-image img {
   width: auto;
   max-width: 100%;
-  max-height: 60vh;
+  max-height: 60vb;
 }
 .page-swatch {
   border-top: 1em solid var(--color);
@@ -24,7 +24,7 @@ metadata:
 
 {% macro _swatch(color, description) %}
 <div class="kimGrid_column kimGrid_column-oneHalf galaxy:kimGrid_column-oneQuarter">
-  <p class="kimBody page-swatch kim-!-padding-top-2" style="--color: {{ color }};">
+  <p class="kimBody page-swatch kim-!-padding-block-start-2" style="--color: {{ color }};">
     <code class="kimCode">{{ color }}</code><br>
     {{ description }}
   </p>
@@ -32,16 +32,16 @@ metadata:
 {% endmacro %}
 
 {% block main %}
-<div class="kimWrapper kim-!-margin-top-9 kim-!-margin-bottom-9">
+<div class="kimWrapper kim-!-margin-block-8-9">
   <h1 class="kimHeading-xl">
     Ash the Amphimorpho
     <div class="kimSubheading-xl">reference sheet</div>
   </h1>
   
-  <div class="page-top-image kim-!-margin-bottom-6 kim-!-padding-3">
+  <div class="page-top-image kim-!-margin-block-end-6 kim-!-padding-3">
     {% responsiveImage "./src/images/ash-by-tuxedodragon-transparent.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly.", { link: true } %}
-    <p class="kimBody-s kim-!-margin-bottom-0">(Actual reference sheet coming early 2024.)</p>
-    <p class="kimBody-s kim-!-margin-bottom-0">Artwork by <a href="https://tuxedodragon.carrd.co/" class="kimLink">Tuxedo Dragon</a>. More art examples available upon request.</p>
+    <p class="kimBody-s kim-!-margin-block-end-0">(Actual reference sheet coming early 2024.)</p>
+    <p class="kimBody-s kim-!-margin-block-end-0">Artwork by <a href="https://tuxedodragon.carrd.co/" class="kimLink">Tuxedo Dragon</a>. More art examples available upon request.</p>
   </div>
   
   <section class="kimGrid" aria-label="Colour reference">

@@ -1,17 +1,12 @@
-@use "../settings";
-@use "../helpers/colors";
-@use "../helpers/measurements";
-@use "../helpers/spacing";
-
 .kimRule {
-  @include spacing.kim-responsive-margin(4, $direction: block);
-  height: measurements.kim-border-width("regular");
-  border: 0;
-  background-color: colors.kim-color-css("furniture");
+  block-size: 0;
+  margin-block: var(--space-5);
+  border: none;
+  border-block-start: var(--border-regular) solid var(--color-furniture);
   &-thick {
-    height: measurements.kim-border-width("thick");
+    border-block-start-width: var(--border-thick);
   }
   &-hairline {
-    height: measurements.kim-border-width("hairline");
+    border-block-start-width: var(--border-hairline);
   }
 }
