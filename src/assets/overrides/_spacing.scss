@@ -1,15 +1,11 @@
 $_directions: (
   all: all,
-  top: block-start,
-  bottom: block-end,
-  left: inline-start,
-  right: inline-end,
+  block: block,
   block-start: block-start,
   block-end: block-end,
+  inline: inline,
   inline-start: inline-start,
   inline-end: inline-end,
-  block: block,
-  inline: inline,
 );
 
 @for $i from 0 through 9 {
