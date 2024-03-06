@@ -4,6 +4,10 @@ date: 2024-03-06
 tags: [meta, web development]
 metadata:
   description: Recent updates to the website and why they happened from a developer lens.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "112048544232255093"
 ---
 
 It's only been about six weeks since [the last Changelog]({{ '/blog/2024-01-23-the-changelog-mastodon-opengraph-third-party-code/' | url }}), but there's been no shortage of changes going on behind the scenes. If anything it's probably been the periods of greatest upheaval this site has had for a long time, and it's probably not even been that obvious.
@@ -48,7 +52,7 @@ I switched back to a linear layout but made the yearly separations more prominen
 
 The redesign also let me [dump some deadweight CSS](https://github.com/querkmachine/beeps.website/pull/44/files). Score.
 
-I had similar qualms with [the about page]({{ '/blog/' | url }}), the landing page for which was a simple list of links and paragraphs. This was also changed to use a grid layout, and unlike the archive, I think it does work better as a grid.
+I had similar complaints with [the about page]({{ '/blog/' | url }}), the landing page for which was a simple list of links and paragraphs. This was also changed to use a grid layout, and unlike the archive, I think it does work better as a grid.
 
 Interestingly, doing this didn't require _any_ CSS changes, such is the power of my existing CSS objects and utilities.
 
@@ -62,7 +66,7 @@ Huh, wait... what's with the different colours in those screenshots?
 
 For some strange reason, it had never struck me as weird that the site's light mode was purple & green and the dark mode was yellow & orange. I can't even remember why I made it like that. After all, earlier versions of the dark mode were purple and pink.
 
-For the sake of some semblance of brand consistency, I opted to change the dark mode to also use some variety of purple and green. This also involved updating a bunch of icons (which were also based on the yellow dark mode). This is just one part of some rather sweeping redesign work I plan on doing, but the rest won't happen until later this year.
+For the sake of some semblance of brand consistency, I opted to change the dark mode to also use some variety of purple and green. This is just one part of some rather sweeping redesign work I plan on doing, but the rest won't happen until later this year.
 
 {% figure caption="Before and after comparison of the homepage." %}
 {% imageDiffer "./src/images/color-before.png", "Before: The homepage of this website with a dark grey background, orange spots and yellow heading and links.", "./src/images/color-after.png", "After: The homepage of this website with a dark blue/purple background, lighter purple spots, and bright green heading and links." %}
@@ -78,9 +82,9 @@ Soon after this, I updated the code block styles to adopt the new dark mode pale
 
 It wasn't a dramatic change, but what's potentially interesting is how the new colours were created: all of them have a consistent saturation and lightness, but the hue is rotated through the use of `hsl()` and CSS custom properties.
 
-It's a technique I've known about for some time, but this is the first time I've actually used it for anything. It's neat! [Give it a glimpse if you're interested.](https://github.com/querkmachine/beeps.website/pull/51)
+It's a technique I've known about for some time, but this is the first time I've actually used it for anything. It's neat! [Give the code a glimpse if you're interested.](https://github.com/querkmachine/beeps.website/pull/51)
 
-The use of CSS custom properties ended up being a little prophetic...
+The use of CSS custom properties potentially ended up being a little prophetic... more on that later.
 
 ## Markdown processing took on more responsibility
 
@@ -92,9 +96,9 @@ This is not a new trick, in fact, it's a very old one, but it's also frustrating
 - CSS specificity gets messy because styles in a prose block have a higher specificity than anything else.
 - You end up needing to write more complex selectors to overrule the ones inside of prose blocks.
 - There are times when you _do_ want to use a class directly, rather than the assumptions made by the prose class, so you need to compensate for those.
-- And don't get me started on having components embedded within prose and the mess that can cause.
+- Components embedded within prose can get royally messed up.
 
-I got frustrated enough at this state of affairs that I decided to try and sack off the prose class entirely by [modifying my Markdown processor](https://github.com/querkmachine/beeps.website/pull/55) to add classes directly to the appropriate elements—no prose wrapper required.
+I got frustrated enough at this state of affairs that I decided to try and sack off the prose class entirely by [modifying my Markdown processor](https://github.com/querkmachine/beeps.website/pull/55) to add classes directly to the appropriate elements, no prose wrapper required.
 
 I didn't succeed at removing it entirely. Lots of older blog posts here are written in HTML rather than Markdown. Likewise, some other generated content, like the comments imported from the Fediverse, are provided as HTML in the API, not Markdown.
 
@@ -115,15 +119,15 @@ I went in with a few goals:
 - Replace as many variables as possible with CSS custom properties.
 - Replace as many Sass colour functions as possible with `color-mix` and other new CSS colour functions.
 
-My goal wasn't to redesign the website, just to be able to sift through the code with a fine comb and find out what could be tweaked or improved. This ended up being a huge chunk of work, so I'm gonna try and break it down a bit. But first, the visual diff.
+My goal wasn't to redesign the website, just to sift through the code with a fine comb and find out what could be tweaked or improved. This ended up being a huge chunk of work, so I'm gonna try and break it down a bit. But first, the visual diff:
 
 {% figure caption="Before and after comparison of the home page." %}
 {% imageDiffer "./src/images/utopia-before.png", "The homepage, complete with heading, paragraph of text, and a waving robot bat.", "./src/images/utopia-after.png", "The homepage again... but everything is a bit bigger." %}
 {% endfigure %}
 
-Uh, yeah, I'll get to that.
+The size difference? Uh, yeah, I'll get to that.
 
-[The refactoring CSS pull request is hella chunky](https://github.com/querkmachine/beeps.website/pull/65), but might make good toilet reading.
+[The refactoring CSS pull request is hella chunky](https://github.com/querkmachine/beeps.website/pull/65), but might make for good toilet reading.
 
 ### Responsiveness and container queries
 
@@ -135,7 +139,7 @@ I did some stuff for desktop-plus screens, where the page would begin fluidly sc
 
 As frontend developers, we constantly remind ourselves that a mobile layout isn't necessarily only for mobiles and a desktop layout isn't necessarily only for desktops. A 'mobile' layout could be a person on a laptop with poor vision who has to zoom in a lot. A 'desktop' layout could actually be on a tablet with a touchscreen.
 
-Having this dichotomy baked into code is kind of naff. Given I was leaning heavily into using very new CSS features anyway,I figured it'd be a good time to switch to a fluid responsive layout.
+Having this dichotomy baked into code is kind of naff. Given I'm leaning heavily into using very new CSS features anyway, I figured it'd be a good time to switch to a fluid responsive layout.
 
 Fluid responsive layouts use CSS features like custom properties, viewport units and `clamp()` to have things scale... fluidly. There is no 'snap'. Stuff just gets proportionally larger or smaller according to the available space and the minimum and maximum constraints.
 
@@ -149,15 +153,15 @@ This same desire to avoid 'snaps' at obvious breakpoints also pushed me to use [
 
 One of the big things that kept me using Sass's variables over [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) was the availability of colour functions.
 
-This site runs on a very spartan colour palette, with only a few explicitly defined colours in the code. All the other colours used are generated by remixing those few.
+This site runs on a very spartan colour palette, with only a few colours explicitly defined in code. All the other colours are generated by remixing those few.
 
-Up until quite recently, doing that was something exclusive to pre-processors like Sass, but _no more_. As of mid-2023, every modern browser supports the [`color-mix` function](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix), which allows for the wonton combination of CSS colours in various colour spaces.
+Up until quite recently, doing that was something exclusive to pre-processors like Sass, but _no more_. As of mid-2023, every modern browser supports the [`color-mix` function](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix), which allows for the wanton combination of CSS colours in various colour spaces.
 
-This wasn't the only thing I was using Sass's colour tools for, but it was the main thing, and I could live without the others.
+This wasn't the only thing I was using Sass's colour tools for, but it was the main thing, and I can live without the others.
 
-But `color-mix` being native also gave it a serious leg-up on Sass. [Sass doesn't (yet) support newer CSS colour spaces](https://github.com/sass/sass/issues/2831), but `color-mix` does, and I've been using them a lot more lately to make more vibrant yellows and more neon greens.
+`color-mix` being native also gave it a serious leg-up on Sass. [Sass doesn't (yet) support newer CSS colour spaces](https://github.com/sass/sass/issues/2831), but `color-mix` does, and I've been using them a lot more lately to make more vibrant yellows and more neon greens.
 
-With my main barrier to using custom properties seemingly defeated, and the comparative simplicity of Utopia's fluid responsive code, I switched most things over. There's still some Sass hanging around—mostly for media queries and generating utility classes—but the total amount of Sass-specific code has fallen dramatically.
+With my main barrier to using custom properties seemingly defeated, and the comparative simplicity of Utopia's fluid responsive code, I quickly switched most things over. There's still some Sass hanging around—mostly for media queries and generating utility classes—but the total amount of Sass-specific code has fallen dramatically.
 
 ### Logical properties (wait what?)
 
@@ -173,7 +177,7 @@ The main difference is that in the last year, native browser support for logical
 
 I still have the PostCSS plugin in my build just in case, but I can't recall the last time I actually saw something that needed to be transformed.
 
-The discussion over [how shorthand properties should be handled](https://github.com/w3c/csswg-drafts/issues/1282) is still unresolved, and I still find myself tripping over the whole `border-end-start-radius` order thing, but other than that, I think the tipping point has been reached. The pros outweigh the cons and logical properties are worth using again (at least on my little corner of the web where browser compatibility isn't a barrier to revenue).
+The discussion over [how shorthand properties should be handled](https://github.com/w3c/csswg-drafts/issues/1282) is still unresolved, and I still find myself tripping over the whole `border-end-start-radius` order thing, but other than that, I think the tipping point has been reached. The pros outweigh the cons and logical properties are worth using again—at least on my little corner of the web where browser compatibility isn't a barrier to revenue.
 
 ## Wrap up
 
