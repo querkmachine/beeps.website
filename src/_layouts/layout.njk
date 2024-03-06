@@ -123,7 +123,9 @@
   {% block afterFooter %}{% endblock %}
   
   {# Other scripts #}
-  {% block scripts %}{% endblock %}
+  {% block scripts %}
+  <script src="{{ '/assets/javascript/imageDiffer.js' | url | cachebust }}"></script>
+  {% endblock %}
   
 </body>
 </html>

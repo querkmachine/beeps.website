@@ -232,8 +232,11 @@ OK that's about it for now. Bye!
 {% figure caption="Image figure floated right.", float="right" %}
 {% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst she uses the other to repair the parts of the disassembled wing." %}
 {% endfigure %}
-
 <br clear="both">
+
+### Image differ
+
+{% imageDiffer "./src/images/color-before.png", "Before: The homepage of this website with a dark grey background, orange spots and yellow heading and links.", "./src/images/color-after.png", "After: The homepage of this website with a dark blue/purple background, lighter purple spots, and bright green heading and links." %}
 
 ## Embeds
 

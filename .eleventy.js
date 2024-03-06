@@ -92,6 +92,10 @@ module.exports = function (eleventyConfig) {
     "figure",
     require("./config/shortcodes/figure.js")
   );
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "imageDiffer",
+    require("./config/shortcodes/imageDiffer.js")
+  );
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addPairedNunjucksShortcode(
     "mastodon",

@@ -1,0 +1,75 @@
+@use "../helpers/a11y";
+
+$_thumb-block-size: 2rem;
+$_thumb-inline-size: 1.5rem;
+
+@mixin _kim-thumb {
+  block-size: $_thumb-block-size;
+  inline-size: $_thumb-inline-size;
+  border: none;
+  border-radius: 0;
+  color: transparent;
+  background-color: var(--color-furniture);
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-background),
+    var(--color-background) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.75rem 1.5rem;
+  cursor: ew-resize;
+}
+
+.kimImageDiffer {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: var(--space-5);
+  &.kimImageDiffer-active {
+    --exposure: 50%;
+    position: relative;
+    .kimImageDiffer_image:nth-child(2) {
+      position: absolute;
+      inset-block-start: 0;
+      clip-path: polygon(
+        100% 0,
+        100% 100%,
+        var(--exposure) 100%,
+        var(--exposure) 0
+      );
+    }
+  }
+  &_image {
+    margin-block-end: 0;
+  }
+  &_range {
+    block-size: 100%;
+    inline-size: calc(100% + #{$_thumb-inline-size});
+    margin-block: 0;
+    margin-inline: calc(#{$_thumb-inline-size} * -0.5);
+    padding: 0;
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    &:focus-visible {
+      outline: none;
+      &::-webkit-slider-thumb {
+        @include a11y.kim-focus-ring--block($background-color: false);
+      }
+      &::-moz-range-thumb {
+        @include a11y.kim-focus-ring--block($background-color: false);
+      }
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      margin-block-start: calc(#{$_thumb-block-size} * -0.5);
+      @include _kim-thumb;
+    }
+    &::-moz-range-thumb {
+      @include _kim-thumb;
+    }
+  }
+}
