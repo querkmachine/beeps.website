@@ -10,6 +10,10 @@ class ImageDiffer {
     // Construct input
     const $input = document.createElement("input");
     $input.className = "kimImageDiffer_range";
+    $input.setAttribute(
+      "aria-label",
+      "Change how much the 'after' image overlaps the 'before' image."
+    );
     $input.type = "range";
     $input.value = 50;
     $input.min = 0;
