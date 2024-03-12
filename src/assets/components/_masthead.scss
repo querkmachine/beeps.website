@@ -44,7 +44,7 @@
   &_name {
     margin-inline-start: var(--space-3);
     @include media-queries.kim-cq($to: constitution) {
-      display: none;
+      @include a11y.kim-visually-hidden;
     }
   }
   &_breadcrumbs {
