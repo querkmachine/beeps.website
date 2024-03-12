@@ -29,7 +29,7 @@
 
 .kimColorSchemeSwitch_input {
   &:checked + .kimColorSchemeSwitch_label {
-    background-color: var(--color-furniture-alt);
+    box-shadow: inset 0 0 0 2px currentcolor;
   }
   &:checked + .kimColorSchemeSwitch_label::before {
     content: "";
