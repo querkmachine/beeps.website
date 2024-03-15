@@ -32,11 +32,11 @@
       {%- for year in yearList %}
         <hr class="kimRule">
         <div class="kimGrid">
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
             <h2 class="kimHeading-l kim-!-margin-block-start-0 page-sticky-heading">{{ year }}</h2>
           </div>
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-            <ol class="kimList kimList-spaced">
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-threeQuarters">
+            <ol class="kimList">
               {% for post in postsList | getArchivePostsByYear(year) | reverse %}
                 {{ kimBlogCard(post) }}
               {% endfor %}

@@ -1,10 +1,13 @@
 {% macro kimBlogCard(post, options) %}
   {% set element = options.element if options.element else "li" %}
   <{{ element }}
-    class="kimBlogCard {%- if options.inline %} kimBlogCard-inline{% endif %}"
+    class="kimBlogCard"
     itemprop="blogPost"
     itemscope
     itemtype="https://schema.org/BlogPosting">
+    <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
+      {{- post.date | formatDate('yyyy MM dd') -}}
+    </time>
     <strong class="kimBlogCard_heading">
       <a class="kimLink kimBlogCard_link" href="{{ site.domain }}{{ post.url | url }}" itemprop="url" {%- if options.rel %} rel="{{ options.rel }}"{% endif %}>
         <span itemprop="name">
@@ -12,8 +15,5 @@
         </span>
       </a>
     </strong>
-    <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
-      {{- post.date | formatDate('human') -}}
-    </time>
   </{{ element }}>
 {% endmacro %}

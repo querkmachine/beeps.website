@@ -10,6 +10,7 @@
 }
 
 .kimGrid_column {
+  container-type: inline-size;
   padding-inline: var(--grid-gutter-half);
 }
 

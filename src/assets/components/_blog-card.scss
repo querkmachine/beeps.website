@@ -1,8 +1,17 @@
+@use "../helpers/media-queries";
+
 .kimBlogCard {
   display: flex;
   flex-direction: column;
-  position: relative;
-  &_date {
-    margin-block-start: var(--space-1);
+  gap: var(--space-1);
+  @include media-queries.kim-cq($from: 400px) {
+    flex-direction: row;
+    gap: var(--space-3);
   }
+}
+
+.kimBlogCard_date {
+  flex-shrink: 0;
+  font-feature-settings: "tnum";
+  white-space: nowrap;
 }

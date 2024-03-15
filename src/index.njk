@@ -81,20 +81,18 @@ metadata:
   
   <section class="page-blog kim-!-margin-block-end-8-9" id="blog" aria-labelledby="blog-heading">
     <div class="kimWrapper">
+      <h2 class="kimHeading-l page-blogs-title" id="blog-heading">Recently written words</h2>
       <div class="kimGrid">
-        <div class="page-blogs-robat kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+        <div class="page-blogs-robat kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneQuarter">
           {% responsiveImage "./src/assets/images/robat-home-blogs.png", "" %}
         </div>
-        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-          <h2 class="kimHeading-l page-blogs-title" id="blog-heading">Recently written words</h2>
-          <ol class="kimList kimList-spaced">
-            {% for post in collections.blog | reverse | head(5) %}
-              {{ kimBlogCard(post) }}
-            {% endfor %}
-          </ol>
-          <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain">More blog posts &rarr;</a></p>
+        {%- for post in collections.blog | reverse | head(3) %}
+        <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneQuarter">
+          {{ kimBlogCard(post, { element: "div" }) }}
         </div>
+        {%- endfor %}
       </div>
+      <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain">More blog posts &rarr;</a></p>
     </div>
   </section>
 
