@@ -78,7 +78,9 @@
       <span class="page-name">{% block metadata %}beeps.website{% endblock %}</span>
     </div>
     <img alt="A robat, floating in space." src="{{ '/assets/images/robat-404.png' | url }}" class="page-robat">
-    <script src="{{ '/assets/javascript/spots.js' | url | cachebust }}"></script>
-    <script>new Spots(document.querySelector(".page-background"))</script>
+    <script type="module">
+      import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
+      new Spots(document.querySelector(".page-background"));
+    </script>
   </body>
 </html>

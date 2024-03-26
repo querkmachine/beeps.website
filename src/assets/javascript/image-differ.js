@@ -1,4 +1,4 @@
-class ImageDiffer {
+export default class ImageDiffer {
   constructor($module) {
     // Check it actually has two images in
     if ($module.querySelectorAll("img").length !== 2) {
@@ -30,7 +30,3 @@ class ImageDiffer {
     this.$module.style.setProperty("--exposure", `${this.$input.value}%`);
   }
 }
-
-document.querySelectorAll("[data-js='image-differ']").forEach(($module) => {
-  new ImageDiffer($module);
-});

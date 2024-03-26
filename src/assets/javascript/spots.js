@@ -1,4 +1,4 @@
-class Spots {
+export default class Spots {
   constructor($element, options = {}) {
     if (!$element) {
       return;

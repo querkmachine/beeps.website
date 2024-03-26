@@ -1,5 +1,5 @@
 {%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
-{%- set colorSchemeJsUrl = '/assets/javascript/colorScheme.js' | url | cachebust -%}
+{%- set colorSchemeJsUrl = '/assets/javascript/color-scheme.js' | url | cachebust -%}
 
 <!doctype html>
 <html lang="en-GB" class="kimPage">
@@ -124,7 +124,7 @@
   
   {# Other scripts #}
   {% block scripts %}
-  <script src="{{ '/assets/javascript/imageDiffer.js' | url | cachebust }}"></script>
+  <script type="module" src="{{ '/assets/javascript/entry.js' | url | cachebust }}"></script>
   {% endblock %}
   
 </body>

@@ -1,4 +1,4 @@
-class TOC {
+export default class TOC {
   constructor($module) {
     this.$module = $module;
     this.mediaQuery = window.matchMedia("(min-width: 768px)"); // 'defiant' size
@@ -24,7 +24,3 @@ class TOC {
     this.$module.open = false;
   }
 }
-
-document.querySelectorAll("[data-js='toc']").forEach(($module) => {
-  new TOC($module);
-});

@@ -103,6 +103,8 @@ metadata:
 
 {% block scripts %}
 {{ super() }}
-<script src="{{ '/assets/javascript/spots.js' | url | cachebust }}"></script>
-<script>new Spots(document.querySelector(".page-header-background"), { heightProportion: .75 })</script>
+<script type="module">
+  import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
+  new Spots(document.querySelector(".page-header-background"), { heightProportion: .75 });
+</script>
 {% endblock %}
