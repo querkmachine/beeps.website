@@ -2,6 +2,10 @@
 title: The products and programs I've procured to promote productivity
 date: 2024-03-20
 tags: [technology, web development]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "112129183724123641"
 ---
 
 I've used computers for a long time. Shocking, I know. Moreover, I've used computers **to be productive** for a long time, and I like to think I've curated a pretty refined set of tools to optimise how I do stuff, do it well, and do it fast.
