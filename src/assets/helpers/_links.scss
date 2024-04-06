@@ -19,6 +19,7 @@
     }
   }
   @include media-queries.kim-print {
+    color: black;
     text-decoration: underline;
     text-decoration-thickness: unset;
     text-decoration-color: currentcolor;
