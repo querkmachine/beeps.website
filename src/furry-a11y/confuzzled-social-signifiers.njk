@@ -1,0 +1,221 @@
+---
+title: ConFuzzled social signifiers tool accessibility audit
+metadata:
+  noRobots: true
+---
+
+{% extends 'src/_layouts/html-report.njk' %}
+
+{% block content %}
+
+{% markdown %}
+
+# ConFuzzled social signifier badge accessibility audit
+
+This is a brief overview of accessibility issues that I identified with the ConFuzzled social signifiers tool on 8th April 2024. 
+
+These issues were identified using a combination of automated and manual tests using common web browsers and assistive technologies (AT).
+
+The audit was timeboxed to two hours and is not intended to be completely thorough or authoritative. It is here as a starter guide to issues that exist and improvements that could be made.
+
+These issues are mapped to [version 2.2 of the Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG22/) (WCAG), a set of accessibility criteria curated by the Web Accessibility Initiative (WAI) at the W3C. WCAG criteria are split into three ‘levels’ of compliance:
+
+* Level A: Considered to be the bare minimum necessary for accessibility compliance.
+* Level AA: An ‘acceptable’ level of compliance. This level is specifically referenced by various governments (including those of the US and UK) as their baseline for compliance with equality legislation.
+* Level AAA: Maximum compliance. This is generally only considered necessary for services that explicitly cater to disabled and special needs individuals.
+
+Today, I primarily checked for compliance against levels A and AA. This doesn’t mean that the social signifiers tool wouldn’t benefit from also incorporating aspects of level AAA, just that I did not include the majority of level AAA criteria in the audit process.
+
+I only audited the social signifiers tool itself, and not the surrounding page or other pages on the ConFuzzled website.
+
+It’s important to note that WCAG is a set of guidelines. There may be situations where technical limitations or the nature of something makes it impossible to make accessible. In these situations it’s recommended to list these as known issues in an accessibility statement.
+
+Finally, I ask that you please take this report in the constructive manner it’s intended in. I’m more than aware that the social signifiers tool and the ConFuzzled website as a whole is built and maintained by volunteers, and I’m not attempting to discredit the website, organisation or those who work on it. Many websites, large and small, get accessibility wrong.
+
+If you have any further comments or questions about the content of this report, feel free to [contact me](https://beeps.website/contact/) through whatever means you prefer. I’m happy to try and help rectify any of the issues identified here.
+
+## Overview
+
+The new iteration of the social signifiers tool represents a significant improvement over the previous versions in terms of web accessibility. It gets pretty much all of the fundamentals correct (which just makes my job harder!)
+
+Consequentially, many of the recommendations below serve to improve or enhance the user experience for assistive technology users. Debatably, most of them aren’t necessary to successfully use the tool.
+
+## Recommendations
+
+### Replace instances of `title` with `aria-label`
+
+Many screen readers do not automatically announce `title` attributes, only announcing them after other content or if a user specifically prompts for it to be announced using a keyboard command. 
+
+Additionally, `title` attributes do not prevent the announcement of child text strings, which in many cases can lead to overly verbose announcements. 
+
+For example, when announcing the first item in the dropdown list, VoiceOver and JAWS will first announce the image’s `alt` text, then the visible text, then the `title` attribute, resulting in something similar to this:
+
+```
+He slash him, he slash him, button. Set slot to he slash him icon. 
+```
+
+NVDA is a little more verbose, specifically announcing the presence of an image:
+
+```
+He slash him, graphic, he slash him, button, set slot to he slash him icon. 
+```
+
+By changing the `title` attribute to `aria-label`, the inner image and text is ignored and VoiceOver announces the `aria-label` immediately:
+
+```
+Set slot to he slash him icon, button.
+```
+
+### Add more context to ‘clear’ buttons
+
+Each of the removal buttons currently carry the same `title` text of ‘Clear icon slot’. 
+
+This leads to multiple identical entries appearing in assistive tools that allow users to view page landmarks or move between them.
+
+Consider changing the `title` text (or `aria-label` text, if that recommendation is followed) to indicate which slot the button clears.
+
+### Increase the size of ‘clear’ buttons
+
+The buttons used to clear the contents of a slot are quite small and could be difficult to click for users with motor issues.
+
+The buttons are currently 20 by 20 pixels in size, slightly smaller than the 24 by 24 pixel minimum desired by [success criterion 2.5.8 “Target Size (Minimum)”](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html).
+
+This is exacerbated by the buttons partially overlapping the larger button to select the slot’s contents, increasing the likeliness of misclicks.
+
+Ideally, increase the size of these buttons to at least meet the criterion. A larger size would be even better, with a minimum of 40 pixels in each dimension being preferable, particularly for touch screen applications.
+
+An alternative solution could be to remove these buttons entirely, and add clearing the slot as an option to the slot’s modal menu instead. 
+
+### Allow navigating the icon selection list using keyboard arrows
+
+The slot selection modal could be enhanced by allowing users to navigate between the options using the keyboard arrow keys. 
+
+I expected to be able to navigate the slot selection modal using the keyboard arrow keys, as the user interface appears similarly to a customised `select` element.
+
+Instead, it is only possible to navigate between options using the <kbd>Tab</kbd> key, or the element navigation keys in assistive technologies that have them.
+
+This can present a further problem as the modal lacks any keyboard trapping functionality, and the modal is located in a different part of the page’s DOM than the rest of the social signifiers tool. 
+
+It is thus possible to navigate ‘too far’ and accidentally exit the modal, with keyboard focus being shifted to unexpected parts of the page, like the footer, or for keyboard focus to leave the page entirely.
+
+I recommend allowing for navigation of this list using the arrow keys instead. You may also want to implement a keyboard trap for navigating with the <kbd>Tab<kbd> key, however I don’t think a trap is necessary if alternative keyboard control mechanisms are made available.
+
+### Provide a means of closing a selection modal using a keyboard
+
+Presently, the only way of closing the slot selection modal when using a keyboard is to select one of the options. This makes it difficult for keyboard navigation users to cancel making a selection, especially as any exiting selection is not visually indicated or pre-selected in the modal.
+
+I recommend implementing the ability to close the modal using the <kbd>Esc</kbd> key. This should return keyboard focus to the user's previously focused slot. 
+
+### Change where the keyboard focus is positioned when the selection modal is opened
+
+Currently the first option in the modal window assumes keyboard focus when the modal is opened. This means the first group heading is skipped and not announced to users of screen readers.
+
+Consider programatically focusing the modal container itself. This can be done by first setting `tabindex="-1"` on the modal dialog, then using JavaScript to move keyboard focus to it.
+
+### Provide keyboard navigation guidance in the slot selection modal
+
+As an addendum to the last three recommendations, if alternative keyboard controls are implemented, it may be useful to include some guidance (visible or [inclusively hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html)) at the top of the modal, explaining that the arrow keys can be used to navigate the options and the <kbd>Esc</kbd> key used to close the modal.
+
+### Provide programmatic titles for each of the lists in the selection modal
+
+A function of many assistive technologies is to navigate by a specific element type, for example, to navigate directly between the page's headings, links, or form controls. 
+
+One such option is to jump directly between different lists. In the selection modal, however, this means the user bypasses the headings that separate each of these lists, and subsequently miss the context they provide.
+
+You could programatically link the lists to their headings using `id` and `aria-labelledby`.
+
+```html
+<h3 id="accessibility-heading">Accessibility</h3>
+<ul aria-labelledby="accessibility-heading">
+  <!-- etc. -->
+</ul>
+```
+
+### Consider increasing the contrast of empty slots
+
+Empty slots currently appear as white boxes on a light grey background, which doesn’t meet [minimum contrast requirements for interactive, non-text content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html). 
+
+These buttons currently have a contrast ratio of 1.14:1 against the light grey background. The criterion expects a minimum of 3:1. Although a drop shadow is applied upon being hovered, this is not considered sufficient to meet the criterion as it requires user interaction to appear.
+
+I appreciate that the tool’s visual display is intended to reflect the final printed product in appearance, but as there is no other visual indicator that this is an interactive control, the addition of a visual affordance is warranted.
+
+This could take the form of adding a higher contrast border to each slot, or implementing placeholder text or iconography if the slot is currently empty.
+
+Relatedly, the three ‘ask’ icons also lack a minimum of 3:1 contrast when used against white, and could also be argued to fail the criterion if one has been selected. As such, a border or outline style that is visible on the tool, but removed for the printed version, may be the ideal route.
+
+### Make programmatic links between slots and the elements that modify them
+
+You may wish to consider creating a programmatic link between the clear button and selection buttons with the slot button using the `aria-controls` and `aria-controlledby` attributes. 
+
+Whilst I don’t think this is practically necessary for the modal buttons—it seems like most users will understand what is being changed and why, given they explicitly selected which slot to modify—the clear buttons may benefit from having this relationship better defined. 
+
+This would help meet [success criterion 1.3.1 “Info and Relationships”](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html). 
+
+### Fix presence of duplicate `id` attribute values
+
+Each of the ‘slots’ currently appears to use the same `id` attribute value: `opt-1`.
+
+`id`s should be unique to the page. Although these seem to only exist for JavaScript bindings, the previous recommendation would make use of these `id`s and expect them to be unique.
+
+(Judging by some of the JavaScript that references these `id`s, this appears like it might be just be a coding oversight.)
+
+### Don’t close the slot selection modal on scrolling the page
+
+I happened to notice that scrolling the page behind the slot selection modal causes the modal to automatically close.
+
+A user of screen magnification software or who has zoomed the page in may need to scroll the page in oder to view the entirety of the modal. Ideally, the modal should only close based on an affirmative user action, such as clicking a close button, clicking outside of the modal, or pressing the Escape key.
+
+### Provide an on-page landmark for the social signifiers tool
+
+A little bit of a cheat, as this is about the wider page, but the tool itself currently lacks a header or page landmark identifying it, making it difficult for an assistive technology user to navigate directly to the tool.
+
+Consider wrapping the tool in a `section` element and adding a header, or alternatively use an `aria-label` if you don’t want a visible header.
+
+This will allow assistive technology users to jump directly to the tool using the header (if one is used) or the tool’s page landmark.
+
+```html
+<section aria-labelledby="tool-heading">
+  <h2 id="tool-heading">Social signifiers tool</h2>
+  <!-- etc. -->
+</section>
+
+<!-- or -->
+
+<section aria-label="Social signifiers tool">
+  <!-- etc. -->
+</section>
+``` 
+
+Doing this would help meet [success criterion 2.4.6 “Headings and Labels”](https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html).
+
+### Add punctuation between the ‘custom pronouns’ label and description
+
+Screen readers currently read the ‘custom pronouns’ label and description as though it is a single run-on sentence:
+
+```
+Custom pronouns custom pronouns write them on the printout, button. Set slot to custom pronouns icon. 
+```
+
+(It’s actually kind of fun to listen to.)
+
+This could be improved by using the [inclusively hidden content technique](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) to add invisible punctuation, such as a comma, between the label and description, so that screen readers will pause between them.
+
+This isn’t necessary if the suggestion to replace `title` attributes with `aria-label` is followed, as the punctuation can appear within the `aria-label` instead.
+
+### High contrast and forced colours mode, lightning round
+
+A few quick things because I'm running out of time aaaaa:
+
+- The 'clear' icon doesn't adapt to forced colours, always appearing in dark grey even on darkened backgrounds. If it can be adapted to match the `currentcolor` that would help. 
+- The visual divisions between groups in the slot selector are not visible in forced colours mode, as all background colours are normalised to a single colour. You can work around this by setting a transparent `border` or `outline` property, which conversely will become visible in forced colours mode. 
+- Although the slot buttons and selection modal adapt to forced colours, the background of the badge and icons do not. I think this is probably okay, as it's atypical for graphics to adapt in forced colour modes, but it does sometimes result in low contrast background and foreground colour combinations.
+
+### One more thing
+
+At least on my computer, the ‘fi’ in ‘Signifiers’ is being displayed as a ligature, however the Lato typeface doesn’t appear to have the ligature at that code point, and it's falling back to displaying these letters in Times New Roman instead.
+
+The ligature character appears to be hardcoded as a single glyph within the SVG, so it should just be a case of changing it to the individual characters.
+
+{% endmarkdown %}
+
+{% endblock %}
