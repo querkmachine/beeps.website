@@ -7,6 +7,7 @@
       display: grid;
       gap: 10px;
       grid-template-columns: repeat(auto-fill, 88px);
+      margin-block-end: var(--space-5);
       line-height: 0;
     }
     .page-button-grid a {
@@ -16,26 +17,4 @@
       margin-block-end: 0;
     }
   </style>
-{% endblock %}
-
-{% macro _button(data) %}
-  {% set img %}
-    <img src="{{ data.src | url }}" alt="{{ data.alt }}" width="88" height="31" loading="lazy">
-  {% endset %}
-  
-  {%- if data.url %}
-    <a href="{{ data.url | url }}">{{ img | safe }}</a>
-  {%- else %}
-    {{ img | safe }}
-  {%- endif %}
-{% endmacro %}
-
-{% block content %}
-  {{ super() }}
-  
-  <div class="page-button-grid">
-  {%- for i in buttons %}
-    {{ _button(i) }}
-  {%- endfor %}
-  </div>
 {% endblock %}
