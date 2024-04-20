@@ -105,6 +105,11 @@ module.exports = function () {
         url: "/about/olive/",
       },
       {
+        src: "/assets/images/buttons/reject-humanity.png",
+        alt: "Reject humanity",
+        url: "/about/nonhuman/",
+      },
+      {
         src: "/assets/images/buttons/robot_cats_now.gif",
         alt: "Robot cats NOW!",
         url: "/about/nonhuman/",
