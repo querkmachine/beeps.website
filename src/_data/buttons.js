@@ -7,6 +7,11 @@ module.exports = function () {
         url: "/blog/2023-11-27-buttons/",
       },
       {
+        src: "/assets/images/buttons/dex-dragon.png",
+        alt: "Dex the Dragon",
+        url: "//dexthedragon.co.uk/",
+      },
+      {
         src: "/assets/images/buttons/freeplay.gif",
         alt: "Freeplay",
         url: "//freeplay.floof.company/",

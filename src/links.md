@@ -1,7 +1,7 @@
 ---
 layout: links.njk
 title: Cool links
-updated: 2024-04-14
+updated: 2024-04-22
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -27,6 +27,29 @@ Of course, I'm not responsible for the content of any of these sites, which migh
 {% endcharacter %}
 
 Last updated: {{ updated | formatDate('human') }}
+
+## Playlists
+
+I've had a lot of [furry] characters and fursonas over the years, many of them with fairly distinct personalities and interests, and with that comes distinct music taste!
+
+For some years I've curated music into playlists based on which of my critters would most like them. They're public on Apple Music for other's curiosity and enjoyment.
+
+- [Alexander's playlist](https://music.apple.com/gb/playlist/character-playlist-alexander/pl.u-V9D77e9t10Ro5k) — electronic, dance
+- [Ash's playlist](https://music.apple.com/gb/playlist/character-playlist-ash/pl.u-JPAZzKNuWvm7gA) — alternative pop and rock
+- [Emy's playlist](https://music.apple.com/gb/playlist/character-playlist-emy/pl.u-38oWWgetg1vRp8) — electronic, classic rock
+- [Grey's playlist](https://music.apple.com/gb/playlist/character-playlist-grey/pl.u-mJy81mPsBKb87M) — alternative and classic rock, hip-hop
+- [Kim's playlist](https://music.apple.com/gb/playlist/character-playlist-kim/pl.u-9N9LXAdT7DjRq0) — pop, R&B
+- [Meredith's playlist](https://music.apple.com/gb/playlist/character-playlist-meredith/pl.u-9N9LLpyT7DjRq0) — 4'33" by John Cage
+- [Tori's playlist](https://music.apple.com/gb/playlist/character-playlist-tori/pl.u-DdANNBoTlAjpZx) — indie and alternative rock
+
+## Spreadsheets
+
+I like to spreadsheet some very random things. Don't even ask why, I don't know.
+
+- [My Pokémon card collection](https://docs.google.com/spreadsheets/d/1ksxzmEJv55HA5d_OF7WboRJAq6RvJn8TmNY8t9rDSxs)
+- [Rating various energy drinks out of 10](https://docs.google.com/spreadsheets/d/1pwVmU1uGuxEN8s0UAMVPwaGSYMn2DXYG8fjk5oIurIM)
+- [Every piece of Apple hardware I've ever owned](https://docs.google.com/spreadsheets/d/1aXLbc45k2r6z4pXtMruZZfrdYmOhrCvPk7NFYaSRpf4)
+- [Recurring _Star Trek_ character appearances and the in-universe series chronology](https://docs.google.com/spreadsheets/d/1imQVy6udrv9muzmet7poyVhM2tTdosbbOFwpPfZqLmI)
 
 ## Blogroll
 
@@ -56,7 +79,6 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [Cendyne](https://cendyne.dev/)
 - [DarkOverord](https://darkoverord.info/)
 - [David Cox](https://dav-idc.com/)
-- [Dex the Dragon](https://dexthedragon.co.uk/)
 - [Eevee](https://eev.ee/)
 - [Electric Keet](https://electrickeet.com/)
 - [Halley](https://halley.systems/)
