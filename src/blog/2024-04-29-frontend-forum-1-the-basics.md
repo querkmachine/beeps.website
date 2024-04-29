@@ -2,6 +2,10 @@
 title: "Frontend Forum #1: The Basics"
 date: 2024-04-29
 tags: [web development, frontend forum]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "112356621485493294"
 ---
 
 Frontend website development has been my full-time job for about a decade now, and I've been doing it as a hobby for [over two decades]({{ '/blog/2023-07-25-20-years/' | url }}).
@@ -62,7 +66,7 @@ All but two of HTML's 100+ tags have a specific meaning, but these meanings are 
 This is only really true of versions of HTML developed since 2008. Earlier versions of HTML did include tags that only existed for altering visual appearance, but these have all been removed from the language since.
 {% endcharacter %}
 
-`<em>Italic</em>` and `<i>Italic</i>` both appear identically italic by default, the second one may even make you think it stands for italic, but it doesn't.
+For example, `<em>Italic</em>` and `<i>Italic</i>` both appear identically italic by default, the second tag's name may even make you think it stands for italic, but it doesn't. Not really.
 
 `<em>` represents stress emphasis. If you were to read the text out loud, for example, what words would you say in a different tone of voice to emphasise them to a listener?
 
@@ -135,13 +139,13 @@ h2 {
 }
 ```
 
-All three headings will appear in Comic Sans and all of them will be red, as you can't have a heading that's blue and red at the same time.
+In this example, all three headings will appear in Comic Sans and all of them will be red. You can't have a heading that's blue and red at the same time, so only one rule can apply, and CSS favours the one that comes last.
 
 Easy, right?
 
 ### Specificity
 
-Specificity is a bit more complex. Specificity essentially allows us to override parts of the cascade by providing it with more specific directions.
+Specificity is a bit more complex. Specificity essentially allows us to override parts of the cascade by providing CSS with more specific selector.
 
 ```css
 h2 {
@@ -154,9 +158,13 @@ aside h2 {
 }
 ```
 
-All of the headings will still be in Comic Sans, but now the first and third ones will be blue, whilst the second one will be red, as we've given it a more specific direction, or 'selector'.
+All of our headings will still be in Comic Sans, but now the first and third headings will be blue, whilst the second heading will be red. By specifying `aside h2` (an `h2` inside of an `aside`), we've given it a more specific selector, so that wins over the plain `h2`.
 
-This would happen even if `aside h2` came first, as it's a more specific rule.
+This would happen even if `aside h2` came first in our code order. The more specific selector always wins.
+
+{% character character="ash", variant="sleepy" %}
+This is no longer necessarily true thanks to the recent introduction of a feature called Cascade Layers, but you really don't need to know about those right now.
+{% endcharacter %}
 
 Different types of selectors have different levels of specificity. I personally visualise this as being a four-digit counter that increments each digit as different types of selectors are used, with the highest number winning.
 
@@ -214,7 +222,7 @@ HTML exists to describe the content of a webpage. CSS exists to describe the app
 JavaScript is a whole different kettle of fish. Compared to HTML and CSS, JavaScript is magnitudes more complex, and I don't particularly want to start going into it here.
 
 {% character character="ash", variant="thinking" %}
-Despite the name, JavaScript is pretty much unrelated to the programming language Java. Blame tech executives from the mid-90s for that confusion.
+Fun fact: Despite the name, JavaScript is pretty much unrelated to the programming language Java. Blame tech executives from the mid-90s for that confusion.
 {% endcharacter %}
 
 The good news is that you probably don't need JavaScript at all! It's entirely possible to build perfectly cromulent websites using no JavaScript whatsoever.
