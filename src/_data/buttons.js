@@ -22,6 +22,11 @@ module.exports = function () {
         url: "//nano.lgbt/",
       },
       {
+        src: "/assets/images/buttons/null_patch.png",
+        alt: "Null Patch",
+        url: "//nullpat.ch/",
+      },
+      {
         src: "/assets/images/buttons/zatzhing.gif",
         alt: "Zatzhing.me",
         url: "//zatzhing.me/",
@@ -54,6 +59,11 @@ module.exports = function () {
         url: "/about/gender/",
       },
       {
+        src: "/assets/images/buttons/trans_window.gif",
+        alt: "Trans pride flag",
+        url: "/about/gender/",
+      },
+      {
         src: "/assets/images/buttons/diy_hrt.png",
         alt: "DIY HRT",
         url: "/about/gender/",
@@ -78,6 +88,11 @@ module.exports = function () {
         alt: "Team Fortress 2",
       },
       { src: "/assets/images/buttons/love_blahaj.gif", alt: "Love BLÅHAJ" },
+      {
+        src: "/assets/images/buttons/gecs_now.gif",
+        alt: "Gecs NOW!",
+        url: "https://www.youtube.com/watch?v=WZvfTyS1qb8",
+      },
       {
         src: "/assets/images/buttons/join_fediverse.gif",
         alt: "Join the Fediverse",
