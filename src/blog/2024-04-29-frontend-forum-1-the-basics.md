@@ -1,5 +1,5 @@
 ---
-title: "Frontend Forum #1: The Basics"
+title: "Frontend Forum #1: The basics and getting started"
 date: 2024-04-29
 tags: [web development, frontend forum]
 interactions:
