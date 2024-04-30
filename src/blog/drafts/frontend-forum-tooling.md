@@ -1,5 +1,5 @@
 ---
-title: "Frontend Forum #: Tooling"
+title: "Frontend Forum #: Frontend tooling"
 date: 9999-01-01
 tags: [web development, frontend forum]
 ---
