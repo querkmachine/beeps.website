@@ -28,9 +28,6 @@
 }
 
 .kimColorSchemeSwitch_input {
-  &:checked + .kimColorSchemeSwitch_label {
-    box-shadow: inset 0 0 0 2px currentcolor;
-  }
   &:checked + .kimColorSchemeSwitch_label::before {
     content: "";
   }
@@ -55,7 +52,7 @@
     display: inline-block;
     width: 1em;
     height: 0.5em;
-    margin-right: var(--space-2);
+    margin-inline-end: var(--space-2);
     border-width: 0 0 0.2em 0.2em;
     border-style: solid;
     border-color: transparent transparent currentcolor currentcolor;
