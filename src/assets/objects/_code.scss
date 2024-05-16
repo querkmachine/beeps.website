@@ -4,8 +4,9 @@
 
 .kimCode,
 .kimCodeBlock {
-  --color-code-background: #2a2536;
-  --color-code-text: #fff;
+  --color-code-background: var(--color-background);
+  --color-code-text: var(--color-text);
+  --color-code-border: var(--color-furniture-alt);
   --color-code-h-red: 5;
   --color-code-h-orange: 30;
   --color-code-h-yellow: 45;
@@ -17,7 +18,18 @@
   --color-code-s: 50%;
   --color-code-l: 75%;
 
-  border: var(--border-regular) solid var(--color-furniture-alt);
+  [data-color-scheme="light"] & {
+    --color-code-background: color-mix(
+      in lch,
+      #000 3%,
+      var(--color-background)
+    );
+    --color-code-border: color-mix(in lch, #000 7%, var(--color-background));
+    --color-code-s: 80%;
+    --color-code-l: 40%;
+  }
+
+  border: var(--border-regular) solid var(--color-code-border);
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-family: var(--font-code);
