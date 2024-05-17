@@ -88,7 +88,9 @@
               <hr class="kimRule kimRule-thick">
     
               {%- if favourites | length > 0 %}
-                <h2 class="kimHeading-s">Favourited by</h2>
+                <h2 class="kimHeading-s">
+                  {{ favourites.length }} {{ 'favourite' if favourites.length == 1 else 'favourites' }}
+                </h2>
                 <ul class="kimInteractionList">
                   {%- for item in favourites %}
                   <li>
@@ -101,7 +103,9 @@
               {%- endif %}
     
               {%- if shares | length > 0 %}
-                <h2 class="kimHeading-s">Shared by</h2>
+                <h2 class="kimHeading-s">
+                  {{ shares.length }} {{ 'share' if shares.length == 1 else 'shares' }}
+                </h2>
                 <ul class="kimInteractionList">
                   {%- for item in shares %}
                   <li>
@@ -124,7 +128,13 @@
           <section id="comments" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
             <hr class="kimRule kimRule-thick">
             
-            <h2 class="kimHeading-s">Comments</h2>
+            <h2 class="kimHeading-s">
+              {%- if comments.length > 0 %}
+                {{ comments.length }} {{ 'comment' if comments.length == 1 else 'comments' }}
+              {%- else %}
+                Comments
+              {% endif %}
+            </h2>
             <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on Mastodon</a>.</p>
             
             {%- if comments %}
