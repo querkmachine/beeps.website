@@ -1,7 +1,7 @@
 ---
 layout: links.njk
 title: Cool links
-updated: 2024-04-29
+updated: 2024-05-17
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -76,6 +76,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [a_bat](https://a-bat.com/)
 - [Alteran Labs](https://alteranlabs.co.uk/)
 - [Caius Nocturne](https://nocturne.works/)
+- [Caylee Morris](https://caylee.dev/)
 - [Cendyne](https://cendyne.dev/)
 - [DarkOverord](https://darkoverord.info/)
 - [David Cox](https://dav-idc.com/)
@@ -97,6 +98,8 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [SDF](https://www.sdf.me.uk/)
 - [Sigmucron](https://sigmucron.neocities.org/)
 - [Sirlan](https://dragon-vi.be/)
+- [TuxedoDragon (Theo Wilde)](https://tuxedodragon.neocities.org/)
+- [Ulhar](https://ulhar.neocities.org/)
 - [Vanita Barrett](https://vanitabarrett.co.uk/)
 - [Violet Procyon](https://violet.pm/)
 
