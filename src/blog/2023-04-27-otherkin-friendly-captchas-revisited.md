@@ -1,7 +1,7 @@
 ---
 title: Otherkin-friendly CAPTCHAs, revisited
 date: 2023-04-27
-updated: 2023-12-12
+updated: 2024-05-17
 tags: [self-identity, web development]
 metadata:
   description: Using userstyles to make CAPTCHAs more respectful of non-human identities.
@@ -42,7 +42,7 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
  
 /* 1 */ #recaptcha-anchor-label,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label,
-/* 3 */ #cf-stage #challenge-stage .ctp-label,
+/* 3 */ div#content div#challenge-stage div.cb-c label.cb-lb span.cb-lb-t,
 /* 4 */ #root > .box > .box > p[data-theme="home.instructions"],
 /* 5 */ .frc-captcha .frc-text {
   font-size: 0 !important;
@@ -51,7 +51,7 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
 
 /* 1 */ #recaptcha-anchor-label::before,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label::before,
-/* 3 */ #cf-stage #challenge-stage .ctp-label::before,
+/* 3 */ div#content div#challenge-stage div.cb-c label.cb-lb span.cb-lb-t::before,
 /* 4 */ #root > .box > .box > p[data-theme="home.instructions"]::before,
 /* 5 */ .frc-captcha .frc-text::before {
   font-size: 14px;
@@ -60,7 +60,7 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
 
 /* 1 */ #recaptcha-anchor-label::before,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label::before,
-/* 3 */ #cf-stage #challenge-stage .ctp-label::before {
+/* 3 */ div#content div#challenge-stage div.cb-c label.cb-lb span.cb-lb-t::before {
   /* Message that usually appears next to a checkbox. */
   content: "I'm a robot";
 }
@@ -87,3 +87,4 @@ Thanks again to [mavica](https://maple.pet). Why not check out bytes [Netizen li
 ## Updates
 
 - 2023-12-12: Updated to add [Friendly Captcha](https://friendlycaptcha.com/) support and restructure the code a little.
+- 2024-05-17: Code updated to account for updates to Cloudflare Turnstile. Thanks to rk for helping identify the changes.
