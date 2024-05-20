@@ -6,6 +6,7 @@ export default class Spots {
 
     const defaultOptions = {
       isAnimated: false,
+      useCalendarThemes: false,
       intervalBetweenSpots: 200,
       heightProportion: 1,
     };
@@ -44,10 +45,79 @@ export default class Spots {
   }
 
   setStrokeColor() {
-    this.strokeColor =
+    // Default colours
+    this.strokeColors =
       document.documentElement.dataset.colorScheme === "light"
-        ? [179, 255, 179]
-        : [120, 105, 153];
+        ? [[179, 255, 179]]
+        : [[120, 105, 153]];
+
+    if (this.settings.useCalendarThemes) {
+      // Some days have unique colours, so get the date.
+      // This is in format MM-DD (no year)
+      const today = new Date().toISOString().substring(5, 10);
+
+      switch (today) {
+        case "03-31":
+        case "11-20":
+          // Transgender Day of Visibility
+          // Transgender Day of Remembrance
+          this.strokeColors = [
+            [255, 255, 255],
+            [91, 206, 250],
+            [245, 169, 184],
+          ];
+          break;
+        case "04-05":
+          // First Contact Day
+          this.strokeColors = [
+            [234, 80, 80],
+            [251, 198, 54],
+            [56, 150, 230],
+          ];
+          break;
+        case "04-06":
+          // International Asexuality Day
+          this.strokeColors = [
+            [0, 0, 0],
+            [255, 255, 255],
+            [163, 163, 163],
+            [140, 34, 119],
+          ];
+          break;
+        case "05-19":
+          // Agender Pride Day
+          this.strokeColors = [
+            [0, 0, 0],
+            [255, 255, 255],
+            [185, 185, 185],
+            [190, 244, 144],
+          ];
+          break;
+        case "09-22":
+          // Birthday
+          this.strokeColors = [
+            [210, 67, 95],
+            [255, 125, 69],
+            [245, 223, 133],
+            [118, 193, 150],
+            [98, 150, 202],
+            [97, 59, 143],
+          ];
+          break;
+        case "12-24":
+        case "12-25":
+        case "12-26":
+          // Christmas period
+          this.strokeColors = [
+            [40, 165, 131],
+            [40, 86, 12],
+            [201, 3, 11],
+            [253, 59, 74],
+            [255, 255, 255],
+          ];
+          break;
+      }
+    }
   }
 
   setupObservers() {
@@ -149,7 +219,8 @@ export default class Spots {
 
   paintSpots() {
     this.spots.forEach((s) => {
-      this.ctx.fillStyle = `rgba(${this.strokeColor.join()}, ${s.opacity})`;
+      this.ctx.globalAlpha = s.opacity;
+      this.ctx.fillStyle = `rgb(${this.randomColor().join()})`;
       this.ctx.beginPath();
       this.ctx.fillRect(s.x, s.y, s.size, s.size);
       this.ctx.stroke();
@@ -158,6 +229,19 @@ export default class Spots {
 
   randomNumber(min, max) {
     return Math.random() * (max - min) + min;
+  }
+
+  randomColor() {
+    if (this.strokeColors.length === 1) {
+      return this.strokeColors[0];
+    }
+
+    const randomIndex = Math.round(
+      this.randomNumber(0, this.strokeColors.length - 1)
+    );
+    const color = this.strokeColors[randomIndex];
+
+    return color;
   }
 
   pause() {

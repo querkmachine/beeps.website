@@ -105,6 +105,9 @@ metadata:
 {{ super() }}
 <script type="module">
   import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-  new Spots(document.querySelector(".page-header-background"), { heightProportion: .75 });
+  new Spots(document.querySelector(".page-header-background"), {
+    heightProportion: .5,
+    useCalendarThemes: true
+  });
 </script>
 {% endblock %}
