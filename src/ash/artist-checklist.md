@@ -25,11 +25,13 @@ They have **prominent upper and lower canine teeth**, though these are usually o
 
 **Ash's eyes have green irises** post-mutation, in both amphimorpho and human forms. Prior to mutation they are brown.
 
-### Hair
+### Fur colours and markings
 
-**Ash's hair is 'dyed' green at the tips.** This is true regardless of what form she appears in. If depicting Ash pre-mutation, the tips are still coloured green, but the shade is much more muted.
+The fur on **Ash's face is white around the snout and cheeks, black around the eyes and forehead**. The black area is often obscured by her hair, however, so I'm not persnickety about it.
 
-Typically, **Ash's hair covers one eye**. This is normally the one furthest from the 'viewer'. This is really just a stylistic choice that I like, but it's not a requirement.
+**The black parts of Ash's markings are separated into two areas**—one covering the forelegs, neck and head area, another covering the rear legs and tail. The middle of her torso is completely white.
+
+**Ash's paws are white**, like socks on a kitty. The socks are 'longer' on the rear legs.
 
 ### Skin and blush colour
 
@@ -39,9 +41,15 @@ Similarly, **Ash blushes green**. Don't ask exactly how, given she doesn't have 
 
 **Amphimorpho 'flesh' is very soft and malleable**, having texture and characteristics similar to memory foam.
 
+### Hair
+
+**Ash's hair is 'dyed' green at the tips** in both amphimorpho and human forms. If depicting Ash pre-mutation, the tips are still coloured green, but the shade is much more muted.
+
+Typically, **Ash's hair covers one eye**. This is normally the one furthest from the 'viewer'. This is really just a stylistic choice, it's not a requirement.
+
 ### Legs and paws
 
-**Ash's paws have four toes.** Typically, these work as a single unit (e.g., when walking); however, the outer two of these toes can operate as an opposable thumb for gripping objects.
+**Ash's paws have four toes.** Typically, these work as a single unit (e.g., when walking); however, the outer two of these toes can operate as an opposable thumb for gripping objects. All paws are functionally ambidextrous.
 
 When depicted with six legs, the **middle pair of legs should be positioned closer to the forelegs**.
 
@@ -68,3 +76,5 @@ Ash can really look like anything when shapeshifted, but I like the idea that **
 ## Abilities
 
 **Ash is not magical.** She cannot do spells, float, or fly (at least, not without shapeshifting wings). I have no idea where people got this idea, but it's come up more than once.
+
+However, **Ash is infectious.** Extended exposure to her will often not work out well for you... unless you feel like permanently changing species, anyway.
