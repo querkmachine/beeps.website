@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
 const urlizeOpenGraphImage = function (url) {
   return `https://v1.screenshot.11ty.dev/${encodeURIComponent(
@@ -6,6 +6,4 @@ const urlizeOpenGraphImage = function (url) {
   )}/opengraph/_${DateTime.local().toFormat("X")}/`;
 };
 
-module.exports = {
-  urlizeOpenGraphImage,
-};
+export { urlizeOpenGraphImage };

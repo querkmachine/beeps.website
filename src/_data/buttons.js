@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
   return {
     websites: [
       {
@@ -210,4 +210,4 @@ module.exports = function () {
       },
     ],
   };
-};
+}

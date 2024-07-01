@@ -21,7 +21,4 @@ const getArchivePostsByYear = function (collection, year) {
   return [...new Set(posts)];
 };
 
-module.exports = {
-  getArchiveYears,
-  getArchivePostsByYear,
-};
+export { getArchiveYears, getArchivePostsByYear };

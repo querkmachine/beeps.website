@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
 /**
  * Generate a string we can use for asset cachebusting
@@ -77,7 +77,7 @@ const getFirstNItems = function (array, n) {
   return array.slice(0, n);
 };
 
-module.exports = {
+export {
   cachebustAssetUrl,
   formatDate,
   formatISODate,
