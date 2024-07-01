@@ -1,4 +1,4 @@
-import paths from "./paths.json" assert { type: "json" };
+import paths from "./paths.js";
 
 import fs from "fs-extra";
 import sass from "sass";

@@ -1,4 +1,4 @@
-import paths from "../paths.json" assert { type: "json" };
+import paths from "../paths.js";
 import pluginImages from "@11ty/eleventy-img";
 
 // List of available variants, images and alt text

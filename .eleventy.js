@@ -1,5 +1,5 @@
 // Config
-import paths from "./config/paths.json" assert { type: "json" };
+import paths from "./config/paths.js";
 
 // 11ty plugins
 import pluginLogging from "@11ty/eleventy-plugin-directory-output";
@@ -30,6 +30,16 @@ import {
   getFirstNItems,
   pageIsBlogPost,
 } from "./config/utils.js";
+
+// Shortcodes
+import calloutShortcode from "./config/shortcodes/callout.js";
+import characterShortcode from "./config/shortcodes/character.js";
+import figureShortcode from "./config/shortcodes/figure.js";
+import imageDifferShortcode from "./config/shortcodes/imageDiffer.js";
+import mastodonShortcode from "./config/shortcodes/mastodon.js";
+import responsiveImageShortcode from "./config/shortcodes/responsiveImages.js";
+import twitterShortcode from "./config/shortcodes/twitter.js";
+import youTubeShortcode from "./config/shortcodes/youtube.js";
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
@@ -80,39 +90,18 @@ export default async function (eleventyConfig) {
   eleventyConfig.addCollection("tags", getAllTags);
 
   // Custom Nunjucks Shortcodes
-  eleventyConfig.addPairedNunjucksShortcode(
-    "callout",
-    import("./config/shortcodes/callout.js")
-  );
-  eleventyConfig.addPairedNunjucksShortcode(
-    "character",
-    import("./config/shortcodes/character.js")
-  );
-  eleventyConfig.addPairedNunjucksShortcode(
-    "figure",
-    import("./config/shortcodes/figure.js")
-  );
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "imageDiffer",
-    import("./config/shortcodes/imageDiffer.js")
-  );
+  eleventyConfig.addPairedNunjucksShortcode("callout", calloutShortcode);
+  eleventyConfig.addPairedNunjucksShortcode("character", characterShortcode);
+  eleventyConfig.addPairedNunjucksShortcode("figure", figureShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode("imageDiffer", imageDifferShortcode);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
-  eleventyConfig.addPairedNunjucksShortcode(
-    "mastodon",
-    import("./config/shortcodes/mastodon.js")
-  );
+  eleventyConfig.addPairedNunjucksShortcode("mastodon", mastodonShortcode);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    import("./config/shortcodes/responsiveImages.js")
+    responsiveImageShortcode
   );
-  eleventyConfig.addPairedNunjucksShortcode(
-    "twitter",
-    import("./config/shortcodes/twitter.js")
-  );
-  eleventyConfig.addNunjucksShortcode(
-    "youtube",
-    import("./config/shortcodes/youtube.js")
-  );
+  eleventyConfig.addPairedNunjucksShortcode("twitter", twitterShortcode);
+  eleventyConfig.addNunjucksShortcode("youtube", youTubeShortcode);
 
   // Filters
   eleventyConfig.addFilter("cachebust", cachebustAssetUrl);
