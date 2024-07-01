@@ -1,7 +1,7 @@
 ---
 layout: links.njk
 title: Cool links
-updated: 2024-06-28
+updated: 2024-07-01
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -75,6 +75,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 
 - [a_bat](https://a-bat.com/)
 - [Alteran Labs](https://alteranlabs.co.uk/)
+- [byte](https://bytebat.zone/)
 - [Caius Nocturne](https://nocturne.works/)
 - [Caylee Morris](https://caylee.dev/)
 - [Cendyne](https://cendyne.dev/)
