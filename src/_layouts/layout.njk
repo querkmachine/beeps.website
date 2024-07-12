@@ -73,10 +73,9 @@
     {% block main %}{% endblock %}
   </main>
   
-  {% block beforeFooter%}{% endblock %}
   {% block footer %}
     <footer class="kimFooter">
-      {% block footerRobats %}
+      {% block beforeFooter %}
         <div class="kimRobatWars" role="presentation">
           <div class="kimRobatWars_inner">
           </div>
@@ -118,9 +117,10 @@
           </div>
         </div>
       </div>
+      
+      {% block afterFooter %}{% endblock %}
     </footer>
   {% endblock %}
-  {% block afterFooter %}{% endblock %}
   
   {# Other scripts #}
   {% block scripts %}
