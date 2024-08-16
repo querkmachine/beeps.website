@@ -1,0 +1,15 @@
+{
+  "$schema": "https://codeberg.org/LunarEclipse/well-known-button/raw/branch/main/drafts/button-2024-06.schema.json",
+  "default": "beeps.website",
+  "buttons": [
+    {
+      "id": "beeps.website",
+      "uri": "https://beeps.website/assets/images/88x31.gif",
+      "alt": "beeps.website - a site by a plural, furry, otherkin weirdo",
+      "link": "https://beeps.website",
+      "sha256": "a1d4f160c4871f1a4e022131f01025095a503552c5afe3c203679fd86fe4ec60",
+      "colorScheme": "dark",
+      "animations": "minimal"
+    }
+  ]
+}
