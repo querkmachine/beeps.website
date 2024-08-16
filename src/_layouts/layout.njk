@@ -77,13 +77,14 @@
   {% block footer %}
     <hr class="kim-!-sr">
     <footer class="kimFooter">
-      {% block beforeFooter %}
+      {% block footerDecor %}
         <div class="kimRobatWars" role="presentation">
           <div class="kimRobatWars_inner">
           </div>
         </div>
       {% endblock %}
       <div class="kimWrapper kimFooter_inner">
+        {% block beforeFooter %}{% endblock%}
         <div class="kimGrid">
           <div class="kimGrid_column kimGrid_column-oneHalf defiant:kimGrid_column-oneQuarter">
             <h2 class="kimHeading-xs" id="footer-links-beeps">More beeping</h2>
@@ -118,9 +119,8 @@
             {% include "src/_includes/color-scheme-switch.njk" %}
           </div>
         </div>
+        {% block afterFooter %}{% endblock %}
       </div>
-      
-      {% block afterFooter %}{% endblock %}
     </footer>
   {% endblock %}
   

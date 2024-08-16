@@ -38,6 +38,10 @@ metadata:
 .page-blogs-robat {
   display: none;
 }
+.page-rings { margin-block: 0; }
+.page-rings div {}
+.page-rings dt { font-weight: bold; }
+.page-rings dd { margin-inline: 0; }
 @media (min-width: 600px) {
   .page-header .kimBody {
     max-inline-size: 64%;
@@ -99,6 +103,32 @@ metadata:
   </section>
 
 </div>
+{% endblock %}
+
+{% block afterFooter %}
+{%- if webrings %}
+  <hr class="kimRule kimRule-hairline">
+  <h2 class="kimHeading-xs">Webrings</h2>
+  <dl class="kimGrid page-rings">
+    {%- for ring in webrings %}
+    <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird intrepid:kimGrid_column-oneQuarter">
+      <dt>
+        <a class="kimLink-plain" href="{{ ring.url }}">{{ ring.name }}</a>
+      </dt>
+      <dd>
+        <a class="kimLink-plain" href="{{ ring.previousUrl }}" aria-label="Previous site in {{ ring.name }} webring">
+          ← Previous
+        </a>
+      </dd>
+      <dd>
+        <a class="kimLink-plain" href="{{ ring.nextUrl }}" aria-label="Next site in {{ ring.name }} webring">
+          → Next
+        </a>
+      </dd>
+    </div>
+    {%- endfor %}
+  </dl>
+{%- endif %}
 {% endblock %}
 
 {% block scripts %}
