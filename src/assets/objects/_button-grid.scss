@@ -1,0 +1,15 @@
+.kimButtonGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 88px);
+  margin-block-end: var(--space-5);
+  line-height: 0;
+}
+
+.kimButtonGrid a {
+  display: block;
+}
+
+.kimButtonGrid img {
+  margin-block-end: 0;
+}

@@ -1,22 +1,12 @@
 ---
-layout: links.njk
+layout: generic.njk
 title: Cool links
-updated: 2024-07-01
+updated: 2024-08-17
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
 
-{% macro _button(data) %}
-{% set img %}
-<img src="{{ data.src | url }}" alt="{{ data.alt }}" width="88" height="31" loading="lazy">
-{% endset %}
-
-{%- if data.url %}
-<a href="{{ data.url | url }}">{{ img | safe }}</a>
-{%- else %}
-{{ img | safe }}
-{%- endif %}
-{% endmacro %}
+{% from "src/_includes/88x31-button.njk" import kim88x31Button %}
 
 I am remiss that [websites these days don't just link to cool things anymore]({{ '/blog/2023-11-27-buttons/' | url }}). Of course, when I wrote that article, this website didn't do that either, so let's right that wrong.
 
@@ -67,10 +57,8 @@ Personal websites are _the bomb_. In an era where so much self-expression has mo
 
 Here's some websites belonging to people I am at least vaguely familiar with, because they deserve some link love. (And yes, quite a lot of them are furries.)
 
-<div class="page-button-grid">
-{%- for i in buttons.websites %}
-  {{ _button(i) }}
-{%- endfor %}
+<div class="kimButtonGrid">
+{%- for i in buttons.websites %}{{- kim88x31Button(i) -}}{%- endfor %}
 </div>
 
 - [a_bat](https://a-bat.com/)
@@ -132,6 +120,6 @@ Miscellany, &c.
 
 These are largely sourced from [the 88x31 GIF Collection](https://cyber.dabamos.de/88x31/), [the 88x31 Archive](https://hellnet.work/8831/) and [Yesterweb's buttons page](https://yesterweb.org/graphics/buttons).
 
-<div class="page-button-grid">
-{%- for i in buttons.random %}{{ _button(i) }}{%- endfor %}
+<div class="kimButtonGrid">
+{%- for i in buttons.random %}{{- kim88x31Button(i) -}}{%- endfor %}
 </div>

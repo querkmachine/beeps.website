@@ -46,7 +46,7 @@ Domain names (of which I have too many) are managed by [Namecheap](https://www.n
 
 Words and images are my own, unless otherwise specified.
 
-This website also implements [fursona schema](https://github.com/theHedgehog0/fursona-schema), just in case it wasn't furry enough.
+This website implements [button schema](https://codeberg.org/LunarEclipse/well-known-button) and [fursona schema](https://github.com/theHedgehog0/fursona-schema), just in case it wasn't furry enough.
 
 ## Characters
 

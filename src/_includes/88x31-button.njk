@@ -1,0 +1,10 @@
+{% macro kim88x31Button(data) %}
+  {%- set img -%}
+    <img src="{{ data.src | url }}" alt="{{ data.alt }}" width="88" height="31" loading="lazy">
+  {%- endset -%}
+  {%- if data.url -%}
+    <a href="{{ data.url | url }}">{{ img | safe }}</a>
+  {%- else -%}
+    {{ img | safe }}
+  {%- endif -%}
+{% endmacro %}
