@@ -1,10 +1,5 @@
 const buttonsWebsites = [
   {
-    src: "/assets/images/88x31.gif",
-    alt: "beeps.website",
-    url: "/blog/2023-11-27-buttons/",
-  },
-  {
     src: "/assets/images/buttons/dex-dragon.png",
     alt: "Dex the Dragon",
     url: "//dexthedragon.co.uk/",
@@ -178,6 +173,10 @@ const buttonsRandom = [
     src: "/assets/images/buttons/learn_html.gif",
     alt: "Learn HTML",
     url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    src: "/assets/images/buttons/responsive.png",
+    alt: "Responsive design",
   },
   {
     src: "/assets/images/buttons/made_with_macintosh.gif",
