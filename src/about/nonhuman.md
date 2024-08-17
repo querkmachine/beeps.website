@@ -3,7 +3,6 @@ title: I'm not human
 redirect_from: /about/robot/
 ---
 
-{% block main %}
 In mid-2022, after some period of thinking, discussion and exploration, come to the conclusion that I don't really consider myself human.
 
 This is based on the realisation that many things I have written over my life mentioned a general discomfort with the human body (ranging from finding it creepy to disgusting) and a lack of recognition or care for biological concepts like [gender]({{ '/about/gender/' | url }}) or [sexuality]({{ '/about/asexuality/' | url }}).
@@ -54,4 +53,3 @@ I, personally, have significant dysphoria related to my biological existence. To
 - [Encyclopedia Robotica: The Artificial Identity Wiki](https://encyclopediarobotica.miraheze.org/)
 - [The Machine's Soul](https://www.machinesoul.net/)
 - [Freedom of Form Foundation](https://freedomofform.org/)
-  {% endblock %}

@@ -2,7 +2,6 @@
 title: I don't have a gender
 ---
 
-{% block main %}
 I am [agender](https://www.lgbtqia.wiki/wiki/Agender). This means that I do not consider myself to be female, male, or anywhere on the gender identity spectrum. It's considered to be a form of non-binary gender identity.
 
 This is because I find gender to be irrelevant to how I perceive myself, live my life or interact with others.
@@ -30,5 +29,3 @@ I first publicly described being agender in 2013, in ["On Gender and Sexuality"]
 More than a year later, I started [identifying as a transgender woman]({{ '/blog/2014-07-10-the-long-walk/' | url }}), on the basis of my physical dysphoria and because I found feminine gender presentation to be more satisfying than masculine presentation. I [adopted a new name]({{ '/blog/2014-07-12-whats-in-a-name/' | url }}) and she/her pronouns at this time.
 
 However, over the following years, my comfort with feminine gender presentation started to wane. Following [my exploration into machine identity]({{ '/blog/2022-08-11-not-human-after-all/' | url }}), I returned to identifying as agender and explicitly using it/its pronouns.
-
-{% endblock %}

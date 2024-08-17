@@ -2,7 +2,6 @@
 title: I'm a panromantic asexual
 ---
 
-{% block main %}
 I'm a [apothi](https://www.lgbtqia.wiki/wiki/Apothisexual) [asexual](https://www.lgbtqia.wiki/wiki/Asexuality). This means I do not experience sexual or physical attraction. I find the very idea of sexual relations to be off-putting.
 
 This has been the case for my entire life. I have never experienced physical attraction to anyone. This could be attributed to [my attitudes to the human form in general]({{ '/about/nonhuman/' | url }}), although it is described as early as 2013 in ["On Gender and Sexuality"]({{ '/blog/2014-07-16-on-gender-and-sexuality/' | url }}).
@@ -26,4 +25,3 @@ The WHO's [International Classification of Diseases (ICD-11)](https://en.wikiped
 [Discrimination against asexual people](https://en.wikipedia.org/wiki/Discrimination_against_asexual_people) remains prevalent but is often underreported in the media.
 
 I mention this, not because I alone expect to change the world, but because representation matters—and the louder you are about being a minority, the more comfortable others in that minority can feel about being loud themselves.
-{% endblock %}

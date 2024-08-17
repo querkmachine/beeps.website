@@ -2,7 +2,6 @@
 title: I'm a furry
 ---
 
-{% block main %}
 I've been involved in the [furry fandom](https://en.wikipedia.org/wiki/Furry_fandom) for over half of my life.
 
 During that time I've had the privilege to be involved with several community projects, many of which gave me invaluable experience in programming, community management, event management, and more. It was these projects that padded my CV when first looking for work and, I believe, were instrumental in getting me to where I am today.
@@ -15,7 +14,7 @@ Just like other aspects of who I am, I see no reason to hide this stuff away and
 
 ## My main fursona: Ash
 
-My main [fursona](https://en.wikipedia.org/wiki/Fursona) is named Ash. Ash is a former human who was mutated into a fictional alien-hybrid species named [amphimorpho](https://amphimorpho.carrd.co/), after being bitten by one. She can shapeshift, though most of the time she is in her four-legged basal form.
+My main [fursona](https://en.wikipedia.org/wiki/Fursona) is named Ash. Ash is a former human who was mutated into a fictional alien-hybrid species named amphimorpho, after being bitten by one. [More information about Ash is available on her reference sheet.]({{ '/ash/' | url }})
 
 In August 2023 [I wrote about how Ash came to exist]({{ '/blog/2023-08-27-the-next-generation/' | url }}) and become my fursona.
 
@@ -40,4 +39,3 @@ Some people assume that because [I identify as a robot]({{ '/about/nonhuman/' | 
 This is not the case. I have a different perception of myself as a robot that is separate from and unrelated to Emy, barring some shared aesthetics (because, unsurprisingly, those are aesthetics that I like).
 
 My fursonas are representations of me as an individual, but they are not specifically me.
-{% endblock %}

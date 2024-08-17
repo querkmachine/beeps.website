@@ -2,7 +2,6 @@
 title: I have a headmate named Olive
 ---
 
-{% block main %}
 I—or more accurately—we, are plural. Plurality (also called multiplicity) is when more than one individual consciousness inhabits the same physical body.
 
 These individuals are collectively called a 'system'. We sometimes go by the collective name of the Nebula System.
@@ -38,4 +37,3 @@ We are no experts on plurality, and the concept itself—although not new to us�
 - [The Plurality Playbook](https://www.pluralpride.com/playbook) - Originally written by Google employees to help inform coworkers.
 - [Understanding Multiplicity](https://www.mmu.ac.uk/mmud8/media/10605/download) by Manchester Metropolitan University.
 - [Rules of Engagement: Plural Etiquette](https://www.exunoplures.org/main/articles/rules/)
-  {% endblock %}
