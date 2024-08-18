@@ -1,3 +1,34 @@
+const buttonsBeeps = [
+  {
+    src: "/assets/images/88x31-n.gif",
+    alt: "Dark blue and green animated button with Emy the robat",
+  },
+  {
+    src: "/assets/images/88x31.gif",
+    alt: "Dark grey and orange animated button with Emy the robat",
+  },
+  {
+    src: "/assets/images/88x31-n-static.png",
+    alt: "Dark blue and green static button with Emy the robat",
+  },
+  {
+    src: "/assets/images/88x31-static.png",
+    alt: "Dark grey and orange static button with Emy the robat",
+  },
+  {
+    src: "/assets/images/88x31-a-static.png",
+    alt: "Dark blue and green static button with Ash the amphimorpho and 'beeps was here' text",
+  },
+  {
+    src: "/assets/images/88x31-r-static.png",
+    alt: "90s Microsoft Windows style grey button with Emy the robat and 'robot bat NOW!' text",
+  },
+  {
+    src: "/assets/images/88x31-w-static.png",
+    alt: "W3C validator style button with robat symbol, 'beeps 2.0' text and a checkmark",
+  },
+];
+
 const buttonsWebsites = [
   {
     src: "/assets/images/buttons/dex-dragon.png",
@@ -256,6 +287,7 @@ const buttonsRandom = [
 
 module.exports = function () {
   return {
+    beeps: buttonsBeeps,
     websites: buttonsWebsites,
     random: buttonsRandom,
     homepage: buttonsRandom.filter((i) => i.showOnHomepage),

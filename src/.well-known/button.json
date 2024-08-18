@@ -1,15 +1,69 @@
 {
   "$schema": "https://codeberg.org/LunarEclipse/well-known-button/raw/branch/main/drafts/button-2024-06.schema.json",
-  "default": "beeps.website",
+  "default": "c8zcqprksun2ux1i3uof7erxjai0tqz7",
   "buttons": [
     {
-      "id": "beeps.website",
+      "id": "wxwkxihxmjitf8kxlrfevh5h1msyqu9x",
       "uri": "https://beeps.website/assets/images/88x31.gif",
-      "alt": "beeps.website - a site by a plural, furry, otherkin weirdo",
+      "alt": "beeps.website - a site by a plural, furry, otherkin weirdo about web dev, identity and stuff",
       "link": "https://beeps.website",
       "sha256": "a1d4f160c4871f1a4e022131f01025095a503552c5afe3c203679fd86fe4ec60",
       "colorScheme": "dark",
       "animations": "minimal"
+    },
+    {
+      "id": "u2d6g66xojc9mf3w41e92jhconxkz364",
+      "uri": "https://beeps.website/assets/images/88x31-static.png",
+      "alt": "beeps.website",
+      "link": "https://beeps.website",
+      "sha256": "e1d2d34adb53107435ce0517cc50e5658290f1f3667cdea112254383f9a2be28",
+      "colorScheme": "dark",
+      "animations": "none"
+    },
+    {
+      "id": "c8zcqprksun2ux1i3uof7erxjai0tqz7",
+      "uri": "https://beeps.website/assets/images/88x31-n.gif",
+      "alt": "beeps.website - a site by a plural, furry, otherkin weirdo about web dev, identity and stuff",
+      "link": "https://beeps.website",
+      "sha256": "d842d2ecad6eb515e1f12abeea4b395ab35f34373fbe45215f0f6e14993e363a",
+      "colorScheme": "dark",
+      "animations": "minimal"
+    },
+    {
+      "id": "g7fwaol4w7lpw1x6keevtz8ajaeevu14",
+      "uri": "https://beeps.website/assets/images/88x31-n-static.png",
+      "alt": "beeps.website",
+      "link": "https://beeps.website",
+      "sha256": "7d34b2587868f83acf06a77b448f67f31525818ab7e93b47c4068cd458e97c90",
+      "colorScheme": "dark",
+      "animations": "none"
+    },
+    {
+      "id": "ck0bbcak2cfo976nqw6tcbahev6s9mct",
+      "uri": "https://beeps.website/assets/images/88x31-a-static.png",
+      "alt": "beeps was here",
+      "link": "https://beeps.website",
+      "sha256": "4132b0d2ee3a8d7b4a966de92b25ad0c198a423a80e8e304f668d747747b6961",
+      "colorScheme": "other",
+      "animations": "none"
+    },
+    {
+      "id": "w0e1igljuo90eau44wgkrz6n2d6m8dmr",
+      "uri": "https://beeps.website/assets/images/88x31-r-static.png",
+      "alt": "robot bat NOW!",
+      "link": "https://beeps.website",
+      "sha256": "58cf471ca6ad2c95aecb432b58473aafdee196b44e5e8ce78cb63ab16f8542d5",
+      "colorScheme": "light",
+      "animations": "none"
+    },
+    {
+      "id": "z91my63xbito9qa7p0ufr0u7utughbzx",
+      "uri": "https://beeps.website/assets/images/88x31-w-static.png",
+      "alt": "beeps 2.0 validated",
+      "link": "https://beeps.website",
+      "sha256": "a209ff04c374da3d1a228ca14a7fd8d929f4a36f4bd2a9edb7961ffd17eaf783",
+      "colorScheme": "light",
+      "animations": "none"
     }
   ]
 }
