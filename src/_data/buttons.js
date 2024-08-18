@@ -15,9 +15,19 @@ const buttonsWebsites = [
     url: "//nano.lgbt/",
   },
   {
+    src: "/assets/images/buttons/niss.png",
+    alt: "Niss",
+    url: "//yummy.cricket/",
+  },
+  {
     src: "/assets/images/buttons/null_patch.png",
     alt: "Null Patch",
     url: "//nullpat.ch/",
+  },
+  {
+    src: "/assets/images/buttons/pont.gif",
+    alt: "Pont",
+    url: "//pont.cool/",
   },
   {
     src: "/assets/images/buttons/zatzhing.gif",
@@ -159,6 +169,11 @@ const buttonsRandom = [
     url: "http://creativecommons.org/",
   },
   {
+    src: "/assets/images/buttons/internet-archive.gif",
+    alt: "Donate to the Internet Archive",
+    url: "https://archive.org/donate",
+  },
+  {
     src: "/assets/images/buttons/github.png",
     alt: "Check out my GitHub",
     url: "https://github.com/querkmachine",
@@ -228,7 +243,10 @@ const buttonsRandom = [
   {
     src: "/assets/images/buttons/pikachu.gif",
     alt: "Pika!",
-    showOnHomepage: true,
+  },
+  {
+    src: "/assets/images/buttons/deltarune.png",
+    alt: "Deltarune",
   },
   {
     src: "/assets/images/buttons/team_fortress_2.png",

@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-08-17
+updated: 2024-08-18
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -18,39 +18,6 @@ Of course, I'm not responsible for the content of any of these sites, which migh
 
 Last updated: {{ updated | formatDate('human') }}
 
-## Playlists
-
-I've had a lot of [furry] characters and fursonas over the years, many of them with fairly distinct personalities and interests, and with that comes distinct music taste!
-
-For some years I've curated music into playlists based on which of my critters would most like them. They're public on Apple Music for other's curiosity and enjoyment.
-
-- [Alexander's playlist](https://music.apple.com/gb/playlist/character-playlist-alexander/pl.u-V9D77e9t10Ro5k) — electronic, dance
-- [Ash's playlist](https://music.apple.com/gb/playlist/character-playlist-ash/pl.u-JPAZzKNuWvm7gA) — alternative pop and rock
-- [Emy's playlist](https://music.apple.com/gb/playlist/character-playlist-emy/pl.u-38oWWgetg1vRp8) — electronic, classic rock
-- [Grey's playlist](https://music.apple.com/gb/playlist/character-playlist-grey/pl.u-mJy81mPsBKb87M) — alternative and classic rock, hip-hop
-- [Kim's playlist](https://music.apple.com/gb/playlist/character-playlist-kim/pl.u-9N9LXAdT7DjRq0) — pop, R&B
-- [Meredith's playlist](https://music.apple.com/gb/playlist/character-playlist-meredith/pl.u-9N9LLpyT7DjRq0) — 4'33" by John Cage
-- [Tori's playlist](https://music.apple.com/gb/playlist/character-playlist-tori/pl.u-DdANNBoTlAjpZx) — indie and alternative rock
-
-## Spreadsheets
-
-I like to spreadsheet some very random things. Don't even ask why, I don't know.
-
-- [My Pokémon card collection](https://docs.google.com/spreadsheets/d/1ksxzmEJv55HA5d_OF7WboRJAq6RvJn8TmNY8t9rDSxs)
-- [Rating various energy drinks out of 10](https://docs.google.com/spreadsheets/d/1pwVmU1uGuxEN8s0UAMVPwaGSYMn2DXYG8fjk5oIurIM)
-- [Every piece of Apple hardware I've ever owned](https://docs.google.com/spreadsheets/d/1aXLbc45k2r6z4pXtMruZZfrdYmOhrCvPk7NFYaSRpf4)
-- [Recurring _Star Trek_ character appearances and the in-universe series chronology](https://docs.google.com/spreadsheets/d/1imQVy6udrv9muzmet7poyVhM2tTdosbbOFwpPfZqLmI)
-
-## Blogroll
-
-Blogs that I actively keep tabs on and read at least some quantity of the posts.
-
-- [Adam Silver](https://adamsilver.io/) quite literally wrote [the book on form design](https://formdesignpatterns.com/) and his blog is one of the first places I tend to look when wondering how best to word a question or structure a form.
-- [Adrian Roselli](https://adrianroselli.com/) is a specialist in web accessibility, unafraid of doing deep dives into the nitty-gritty and loudly calling out the failures of major corporations alike. Truly an inspiration.
-- [Dhole Moments](https://soatok.blog/) mostly writes about cryptography, technology, the furry fandom, and all the ways those things frequently intersect.
-- [Food is Stupid](https://foodisstupid.substack.com/). This blog is cursed. This food is cursed. None of you are without sin. (Half the posts are behind a paywall, such is the business of blogging, but the rest of them are still excellent.)
-- [Xe Iaso](https://xeiaso.net/) writes about all sorts of software things that I barely understand but find interesting anyway. Also where I stole the idea of having character callouts in blog posts, though my reasons are far less Socratic.
-
 ## Friends, acquaintances, and personal sites I just find quite neat
 
 Personal websites are _the bomb_. In an era where so much self-expression has moved to social media, having a website that is entirely your own is almost like an act of individual defiance. There are no linktrees or Squarespaces here.
@@ -65,6 +32,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [Alteran Labs](https://alteranlabs.co.uk/)
 - [byte](https://bytebat.zone/)
 - [Caius Nocturne](https://nocturne.works/)
+- [Catbot](https://catbot-beeps.neocities.org/)
 - [Caylee Morris](https://caylee.dev/)
 - [Cendyne](https://cendyne.dev/)
 - [DarkOverord](https://darkoverord.info/)
@@ -81,6 +49,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [maple mavica syrup](https://maple.pet/)
 - [Ninji](https://wuffs.org/)
 - [Oliver Byford](https://obyford.com/)
+- [QuARC](https://quarc.neocities.org/)
 - [rabbithawk256](https://rabbithawk256.dev/)
 - [raccoon](https://www.raccoon.fun/)
 - [Romaric Pascal](https://romaricpascal.is/)
@@ -107,6 +76,16 @@ These channels are neat, and most of them don't even have a million subscribers,
 - [Noodle](https://www.youtube.com/@noodlefunny), like FUNKe, makes hella enjoyable animated video essays about video games (and sometimes other things).
 - [Planet Clue](https://www.youtube.com/@planetclue) makes deep dive essays into technology and game franchises from the 90s and 2000s.
 
+## Blogroll
+
+Blogs that I actively keep tabs on and read at least some quantity of the posts.
+
+- [Adam Silver](https://adamsilver.io/) quite literally wrote [the book on form design](https://formdesignpatterns.com/) and his blog is one of the first places I tend to look when wondering how best to word a question or structure a form.
+- [Adrian Roselli](https://adrianroselli.com/) is a specialist in web accessibility, unafraid of doing deep dives into the nitty-gritty and loudly calling out the failures of major corporations alike. Truly an inspiration.
+- [Dhole Moments](https://soatok.blog/) mostly writes about cryptography, technology, the furry fandom, and all the ways those things frequently intersect.
+- [Food is Stupid](https://foodisstupid.substack.com/). This blog is cursed. This food is cursed. None of you are without sin. (Half the posts are behind a paywall, such is the business of blogging, but the rest of them are still excellent.)
+- [Xe Iaso](https://xeiaso.net/) writes about all sorts of software things that I barely understand but find interesting anyway. Also where I stole the idea of having character callouts in blog posts, though my reasons are far less Socratic.
+
 ## Other neat spots
 
 Miscellany, &c.
@@ -115,6 +94,31 @@ Miscellany, &c.
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - _[Meet Me In The Woods](https://mmitwcomic.tumblr.com/post/699016339886637056/cover-and-a-little-dedicatory-pagebecause-im-a)_ is a sci-fi mystery webcomic. It's also indirectly the source material for [my fursona]({{ '/about/furry/' | url }}). I'm totally not biased.
 - _[Out-of-Placers](valsalia.com/comic/out-of-placers/)_ is a fantasy webcomic about coming to terms with change. It features lots of fun and thought-out speculative biology. (Be aware that it can get sorta not safe for work at times.)
+
+## My dumb links
+
+### Character playlists
+
+I've had a lot of [furry] characters and fursonas over the years, many of them with fairly distinct personalities and interests, and with that comes distinct music taste!
+
+For some years I've curated music into playlists based on which of my critters would most like them. They're public on Apple Music for other's curiosity and enjoyment.
+
+- [Alexander's playlist](https://music.apple.com/gb/playlist/character-playlist-alexander/pl.u-V9D77e9t10Ro5k) — electronic, dance
+- [Ash's playlist](https://music.apple.com/gb/playlist/character-playlist-ash/pl.u-JPAZzKNuWvm7gA) — alternative pop and rock
+- [Emy's playlist](https://music.apple.com/gb/playlist/character-playlist-emy/pl.u-38oWWgetg1vRp8) — electronic, classic rock
+- [Grey's playlist](https://music.apple.com/gb/playlist/character-playlist-grey/pl.u-mJy81mPsBKb87M) — alternative and classic rock, hip-hop
+- [Kim's playlist](https://music.apple.com/gb/playlist/character-playlist-kim/pl.u-9N9LXAdT7DjRq0) — pop, R&B
+- [Meredith's playlist](https://music.apple.com/gb/playlist/character-playlist-meredith/pl.u-9N9LLpyT7DjRq0) — 4'33" by John Cage
+- [Tori's playlist](https://music.apple.com/gb/playlist/character-playlist-tori/pl.u-DdANNBoTlAjpZx) — indie and alternative rock
+
+### Spreadsheets of random things
+
+I like to spreadsheet some very random things. Don't even ask why, I don't know.
+
+- [My Pokémon card collection](https://docs.google.com/spreadsheets/d/1ksxzmEJv55HA5d_OF7WboRJAq6RvJn8TmNY8t9rDSxs)
+- [Rating various energy drinks out of 10](https://docs.google.com/spreadsheets/d/1pwVmU1uGuxEN8s0UAMVPwaGSYMn2DXYG8fjk5oIurIM)
+- [Every piece of Apple hardware I've ever owned](https://docs.google.com/spreadsheets/d/1aXLbc45k2r6z4pXtMruZZfrdYmOhrCvPk7NFYaSRpf4)
+- [Recurring _Star Trek_ character appearances and the in-universe series chronology](https://docs.google.com/spreadsheets/d/1imQVy6udrv9muzmet7poyVhM2tTdosbbOFwpPfZqLmI)
 
 ## Buttons
 
