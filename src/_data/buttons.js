@@ -99,6 +99,12 @@ const buttonsRandom = [
     showOnHomepage: true,
   },
   {
+    src: "/assets/images/buttons/tf-hazard.png",
+    alt: "Transformation hazard",
+    url: "/ash/",
+    showOnHomepage: true,
+  },
+  {
     src: "/assets/images/buttons/queer_pride.png",
     alt: "queer pride!",
     url: "/about/",
