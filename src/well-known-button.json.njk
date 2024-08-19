@@ -1,0 +1,21 @@
+---
+permalink: "/.well-known/button.json"
+eleventyExcludeFromCollections: true
+---
+{
+  "$schema": "https://codeberg.org/LunarEclipse/well-known-button/raw/branch/main/drafts/button-2024-06.schema.json",
+  "default": "0",
+  "buttons": [
+    {%- for b in buttons.beeps %}
+    {
+      "id": "{{ loop.index0 }}",
+      "uri": "{{ b.src | absoluteUrl(site.domain) }}",
+      "alt": "{{ b.schemaAlt }}",
+      "link": "{{ '/' | absoluteUrl(site.domain) }}",
+      "colorScheme": "{{ b.colorScheme | default('other') }}",
+      "animations": "{{ b.motion | default('none') }}"
+    }{%- if not loop.last %},{% endif %}
+    {%- endfor %}
+    
+  ]
+}
