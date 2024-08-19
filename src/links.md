@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-08-18
+updated: 2024-08-19
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -60,6 +60,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [Ulhar](https://ulhar.neocities.org/)
 - [Vanita Barrett](https://vanitabarrett.co.uk/)
 - [Violet Procyon](https://violet.pm/)
+- [zephi](https://zephi.cc/)
 
 ## Neat, niche YouTube channels
 
