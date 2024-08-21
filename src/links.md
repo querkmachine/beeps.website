@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-08-19
+updated: 2024-08-21
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -35,6 +35,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [Catbot](https://catbot-beeps.neocities.org/)
 - [Caylee Morris](https://caylee.dev/)
 - [Cendyne](https://cendyne.dev/)
+- [codl](https://www.codl.fr/)
 - [DarkOverord](https://darkoverord.info/)
 - [David Cox](https://dav-idc.com/)
 - [Eevee](https://eev.ee/)
@@ -49,6 +50,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [maple mavica syrup](https://maple.pet/)
 - [Ninji](https://wuffs.org/)
 - [Oliver Byford](https://obyford.com/)
+- [Pebble](https://pebble.pet/)
 - [QuARC](https://quarc.neocities.org/)
 - [rabbithawk256](https://rabbithawk256.dev/)
 - [raccoon](https://www.raccoon.fun/)
@@ -74,8 +76,10 @@ These channels are neat, and most of them don't even have a million subscribers,
 - [Junkball](https://www.youtube.com/@JunkBallMedia) makes video essays about stupid things in _Star Trek_ and if that doesn't sell you then there's probably nothing here for you.
 - [Linus Boman](https://www.youtube.com/@LinusBoman) makes videos about design and typography, ranging from history lessons to conceptual redesigns. Videos don't come often, but they're always exceptionally well produced and presented.
 - [Marcel Vos](https://www.youtube.com/@MarcelVos) explains and breaks the RollerCoaster Tycoon games of my youth.
+- [Mr V's Garage](https://www.youtube.com/@MrVsGarage) makes a heady mix of extremely-over-the-top-elaborate videos (as well as general news and info) about formula racing.
 - [Noodle](https://www.youtube.com/@noodlefunny), like FUNKe, makes hella enjoyable animated video essays about video games (and sometimes other things).
 - [Planet Clue](https://www.youtube.com/@planetclue) makes deep dive essays into technology and game franchises from the 90s and 2000s.
+- [Squirrels at the Window](https://www.youtube.com/@Squirrels_at_the_window). It's just squirrels. We like squirrels.
 
 ## Blogroll
 

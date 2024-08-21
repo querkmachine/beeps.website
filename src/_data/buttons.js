@@ -60,6 +60,11 @@ const buttonsWebsites = [
     url: "//dexthedragon.co.uk/",
   },
   {
+    src: "/assets/images/buttons/dusty.gif",
+    alt: "Dusty's Corner",
+    url: "https://chcl.se/",
+  },
+  {
     src: "/assets/images/buttons/freeplay.gif",
     alt: "Freeplay",
     url: "//freeplay.floof.company/",
