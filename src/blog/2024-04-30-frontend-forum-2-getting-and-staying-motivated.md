@@ -2,6 +2,10 @@
 title: "Frontend Forum #2: Getting (and staying) motivated"
 date: 2024-04-30
 tags: [web development, frontend forum]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "112362335554169869"
 ---
 
 I'm not gonna be publishing one of these every day, I swear.

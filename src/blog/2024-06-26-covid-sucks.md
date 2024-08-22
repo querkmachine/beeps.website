@@ -2,6 +2,10 @@
 title: Covid sucks, but you should already know that
 date: 2024-06-26
 tags: [meta, medical]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "112685021689420636"
 ---
 
 At the end of May, for the first time since 2022, and for only the second time since the SARS-CoV-2 pandemic occurred, I caught Covid-19.
