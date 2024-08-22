@@ -1,6 +1,6 @@
 ---
 title: "Frontend Forum #3: Frontend tooling"
-date: 2024-05-23
+date: 2024-08-22
 tags: [web development, frontend forum]
 ---
 
@@ -10,7 +10,7 @@ tags: [web development, frontend forum]
 >
 > Webpack? Importing CSS/JS from random CDNs? Other packers? When are these appropriate (or not appropriate)? Should I be using the same tooling for a single-file proof-of-concept as I do for a big behemoth project?
 
-I won't lie, there are a lot of choices, and which ones are currently in vogue seems to change every few months; such is the fast-paced, exciting world of frontend web development.
+I won't lie, there are a lot of choices, and which ones are currently in vogue seems to change every few months; such is the _fast-paced, exciting world_ of frontend web development.
 
 The nice news is that I think the use cases for tooling like this are largely confined to those big, behemoth projects.
 
@@ -32,7 +32,7 @@ To answer the question then: I don't think you need the same tooling for small s
 
 Task runners, such as [Gulp](https://gulpjs.com) and [Grunt](https://gruntjs.com/), I treat a little differently. Alone they don't really do much of anything, but they provide an interface by which you can chain together a bunch of other build scripts in a logical and easier to understand way than something like Bash scripts or npm scripts.
 
-I think using task runners is sensible regardless of the size of the site in question. It's a tool that you can make do what you want, rather than a tool that directly does anything for you.
+I think using task runners is often sensible regardless of the size of the site in question. They are tools that you can make do what you want, rather than tools that directly do anything for you.
 
 ## Well, actually... polyfilling
 
