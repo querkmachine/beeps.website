@@ -85,6 +85,11 @@ const buttonsWebsites = [
     url: "//nullpat.ch/",
   },
   {
+    src: "/assets/images/buttons/pebble.gif",
+    alt: "Pebble",
+    url: "//pebble.pet/",
+  },
+  {
     src: "/assets/images/buttons/pont.gif",
     alt: "Pont",
     url: "//pont.cool/",

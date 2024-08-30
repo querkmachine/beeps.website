@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-08-21
+updated: 2024-08-30
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -50,7 +50,6 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [maple mavica syrup](https://maple.pet/)
 - [Ninji](https://wuffs.org/)
 - [Oliver Byford](https://obyford.com/)
-- [Pebble](https://pebble.pet/)
 - [QuARC](https://quarc.neocities.org/)
 - [rabbithawk256](https://rabbithawk256.dev/)
 - [raccoon](https://www.raccoon.fun/)
@@ -58,7 +57,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [SDF](https://www.sdf.me.uk/)
 - [Sigmucron](https://sigmucron.neocities.org/)
 - [Sirlan](https://dragon-vi.be/)
-- [Tuxedo Dragon (Theo Wilde)](https://tuxedodragon.neocities.org/)
+- [Tuxedo Dragon](https://tuxedodragon.art/)
 - [Ulhar](https://ulhar.neocities.org/)
 - [Vanita Barrett](https://vanitabarrett.co.uk/)
 - [Violet Procyon](https://violet.pm/)
