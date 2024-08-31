@@ -95,6 +95,11 @@ const buttonsWebsites = [
     url: "//pont.cool/",
   },
   {
+    src: "/assets/images/buttons/tuxedodragon.gif",
+    alt: "Tuxedo Dragon",
+    url: "//tuxedodragon.art/",
+  },
+  {
     src: "/assets/images/buttons/zatzhing.gif",
     alt: "Zatzhing.me",
     url: "//zatzhing.me/",

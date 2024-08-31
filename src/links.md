@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-08-30
+updated: 2024-08-31
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -57,7 +57,6 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 - [SDF](https://www.sdf.me.uk/)
 - [Sigmucron](https://sigmucron.neocities.org/)
 - [Sirlan](https://dragon-vi.be/)
-- [Tuxedo Dragon](https://tuxedodragon.art/)
 - [Ulhar](https://ulhar.neocities.org/)
 - [Vanita Barrett](https://vanitabarrett.co.uk/)
 - [Violet Procyon](https://violet.pm/)
