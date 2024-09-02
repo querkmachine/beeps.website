@@ -37,23 +37,14 @@ metadata:
 {% block main %}
 <div class="kimWrapper kim-!-margin-block-8-9">
   <h1 class="kimHeading-xl">{{ title }}</h1>
-  <p class="kimBody-l">Curated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a href="#caveats">there are a lot of caveats to consider</a>.</p>
+  <p class="kimBody-l">Collated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a href="#caveats">there are a lot of caveats to consider</a>.</p>
   
   <h2 class="kimHeading-l" id="browsers">Most used browsers</h2>
-  <p class="kimBody">Top 10 browsers as of the most recent month's data.</p>
-  <div class="kimTabs" data-js="tabs">
-    <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
-    </div>
-    <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percentChange | safe }}</div>
-    </div>
-    <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.raw | safe }}</div>
-    </div>
-  </div>
+  <p class="kimBody">Top 10 browsers as of the most recent month's data. Percentage data is to be added.</p>
+  <div class="page-data-table">{{ browsers.overall.raw | safe }}</div>
   
   <h2 class="kimHeading-l" id="browsers-by-device">Browsers by device type</h2>
+  <p class="kimBody">Percentage data is as a proportion of all sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percent | safe }}</div>
@@ -67,6 +58,7 @@ metadata:
   </div>
   
   <h3 class="kimHeading-m" id="browsers-mobile">Mobile browsers</h3>
+  <p class="kimBody">Percentage data is as a proportion of all mobile device sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percent | safe }}</div>
@@ -80,6 +72,7 @@ metadata:
   </div>
   
   <h3 class="kimHeading-m" id="browsers-tablet">Tablet browsers</h3>
+  <p class="kimBody">Percentage data is as a proportion of all tablet device sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percent | safe }}</div>
@@ -93,6 +86,7 @@ metadata:
   </div>
   
   <h3 class="kimHeading-m" id="browsers-desktop">Desktop browsers</h3>
+  <p class="kimBody">Percentage data is as a proportion of all desktop and laptop device sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percent | safe }}</div>
@@ -106,6 +100,7 @@ metadata:
   </div>
   
   <h3 class="kimHeading-m" id="browsers-tv">Smart TV and games console browsers</h3>
+  <p class="kimBody">Percentage data is as a proportion of all smart TV and game console sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percent | safe }}</div>
@@ -119,6 +114,7 @@ metadata:
   </div>
   
   <h2 class="kimHeading-l" id="operating-systems">Operating systems</h2>
+  <p class="kimBody">Percentage data is as a proportion of all sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percent | safe }}</div>
@@ -132,18 +128,8 @@ metadata:
   </div>
   
   <h3 class="kimHeading-m" id="combos">Most used browser &amp; OS combinations</h3>
-  <p class="kimBody">Top 10 combinations as of the most recent month's data.</p>
-  <div class="kimTabs" data-js="tabs">
-    <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percent | safe }}</div>
-    </div>
-    <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percentChange | safe }}</div>
-    </div>
-    <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.raw | safe }}</div>
-    </div>
-  </div>
+  <p class="kimBody">Top 10 browsers as of the most recent month's data. Percentage data is to be added.</p>
+  <div class="page-data-table">{{ combos.raw | safe }}</div>
   
   <h2 class="kimHeading-l" id="caveats">Caveats to this data</h2>
   <ol class="kimList kimList-numbered kimList-spaced">
