@@ -10,7 +10,7 @@
   padding-block: var(--space-1);
   padding-inline-start: 0;
   padding-inline-end: var(--space-3);
-  border-bottom: var(--border-hairline) solid var(--color-furniture);
+  border-block-end: var(--border-hairline) solid var(--color-furniture);
   text-align: start;
   vertical-align: top;
   &:last-child {

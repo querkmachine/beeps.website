@@ -1,0 +1,77 @@
+---
+title: GOV.UK browser statistics (2024 onwards)
+metadata:
+  description: Collated browser and operating system data from the GOV.UK website.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block head %}
+<style>
+  .page-data-table {
+    overflow-x: auto;
+  }
+  .page-data-table .kimTable {
+    table-layout: fixed;
+    font-size: var(--size--1);
+  }
+  .page-data-table .kimTable :is(th, td) {
+    box-sizing: content-box;
+  }
+  .page-data-table .kimTable :is(th, td):first-child {
+    inline-size: 12ch;
+    position: sticky;
+    inset-inline-start: 0;
+    background-color: var(--color-background);
+  }
+  .page-data-table .kimTable :is(th, td):not(:first-child) {
+    inline-size: 10ch;
+    text-align: end;
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="kimWrapper kim-!-margin-block-8-9">
+  <h1 class="kimHeading-xl">{{ title }}</h1>
+  <p class="kimBody-l">Curated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a href="#caveats">there are a lot of caveats to consider</a>.</p>
+  
+  <h2 class="kimHeading-l" id="browsers">Most used browsers</h2>
+  <p class="kimBody">Top 10 browsers as of the most recent month's data.</p>
+  <div class="page-data-table">{{ table.browsers.overall | safe }}</div>
+  
+  <h2 class="kimHeading-l" id="browsers-by-device">Browsers by device type</h2>
+  <div class="page-data-table">{{ table.devices | safe }}</div>
+  
+  <h3 class="kimheading-m" id="browsers-mobile">Mobile browsers</h3>
+  <div class="page-data-table">{{ table.browsers.mobile | safe }}</div>
+  
+  <h3 class="kimheading-m" id="browsers-tablet">Tablet browsers</h3>
+  <div class="page-data-table">{{ table.browsers.tablet | safe }}</div>
+  
+  <h3 class="kimheading-m" id="browsers-desktop">Desktop browsers</h3>
+  <div class="page-data-table">{{ table.browsers.desktop | safe }}</div>
+  
+  <h3 class="kimheading-m" id="browsers-tv">Smart TV and games console browsers</h3>
+  <div class="page-data-table">{{ table.browsers.tv | safe }}</div>
+  
+  
+  <h2 class="kimHeading-l" id="operating-systems">Operating systems</h2>
+  <div class="page-data-table">{{ table.systems | safe }}</div>
+  
+  <h3 class="kimHeading-m" id="combos">Most used browser &amp; OS combinations</h3>
+  <p class="kimBody">Top 10 combinations as of the most recent month's data.</p>
+  <div class="page-data-table">{{ table.combos | safe }}</div>
+  
+  <h2 class="kimHeading-l" id="caveats">Caveats to this data</h2>
+  <ol class="kimList kimList-numbered kimList-spaced">
+    <li>Data is sourced from the main GOV.UK website, hosted at www.gov.uk. Parts of the site under different domains, such as blogs and services, collect analytics seperately and are not included in this data.</li>
+    <li>This data only includes users with JavaScript available and who explicitly opted into analytics tracking.</li>
+    <li>Mobile device usage is likely to appear inflated compared to other device types, as the analytics consent banner on GOV.UK is more visually intrusive on smaller screens.</li>
+    <li>Browsers that automatically restrict or block analytics tracking will, by their nature, be underrepresented in data or not appear at all.</li>
+    <li>Although GOV.UK draws many international visitors, it’s a UK-centric website and the vast majority of sessions originate from within the UK. The data should not be considered representative of browser usage in other countries.</li>
+    <li>Month-by-month differences can be affected by public holidays and seasonal trends, and may not represent wider trends. For example, there are notably fewer sessions from Windows devices in December and the summer months, when more people are off work.</li>
+    <li>This data is provided 'as is' without support or guarantees of accuracy.</li>
+  </ol>
+</div>
+{% endblock %}
