@@ -50,18 +50,37 @@ const getAllTableRows = (data) => {
 };
 
 const getAllTableColumns = (data) => {
-  const rows = new Set();
+  // We need to do some funky stuff here as we want to:
+  // 1. Get all column headers that exist in the entire data set, including
+  //    ones that might only exist in a single month.
+  // 2. Have those headings put in descending order according to the data
+  //    available for the most recent month.
+  // 3. In case of a tie, sort all tied headers alphabetically instead.
+  //
+  // This takes advantage of Maps only allowing unique keys to avoid adding
+  // duplicates (like objects) whilst being convertible to arrays for sorting.
+  let cols = new Map();
 
-  // Loop through the months
+  // Get the data for the last month
+  const months = Object.keys(data);
+  const lastMonthData = data[months[months.length - 1]];
+
+  // Loop through the months and then the keys within that month
   for (const month in data) {
-    // As sets can only have unique values, this effectively creates a list only
-    // containing unique values.
     for (const key in data[month]) {
-      rows.add(key);
+      // Add the key to the map with the most recent data, if there is any
+      cols.set(key, lastMonthData[key] ?? 0);
     }
   }
 
-  return Array.from(rows);
+  // Sort alphabetically by the key name
+  cols = new Map([...cols.entries()].sort((a, b) => b[0] - a[0]));
+
+  // Sort numerically by the most recent data
+  cols = new Map([...cols.entries()].sort((a, b) => b[1] - a[1]));
+
+  // Take our sorted map and return just the keys from it as an array
+  return [...cols.entries()].map((col) => col[0]);
 };
 
 const getData = (data, row, column) => {
