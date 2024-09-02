@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 
 const dictBrowsers = require("./data/browsers.dict.js");
 const dictSystems = require("./data/operating-systems.dict.js");
+const dictLocale = "en-GB";
 
 const browserName = (key) => {
   return dictBrowsers[key] ?? key;
@@ -29,15 +30,19 @@ const deviceName = (key) => {
   }
 };
 
-const formatNumber = (num) => {
-  return new Intl.NumberFormat("en").format(num);
-};
-
 const formatDate = (isoDate) => {
   return DateTime.fromISO(isoDate).toLocaleString({
     year: "numeric",
     month: "long",
   });
+};
+
+const getTotalOfRow = (data, row) => {
+  let total = 0;
+  for (const column in data[row]) {
+    total += data[row][column] ?? 0;
+  }
+  return total;
 };
 
 const getAllTableRows = (data) => {
@@ -57,6 +62,54 @@ const getAllTableColumns = (data) => {
   }
 
   return Array.from(rows);
+};
+
+const getData = (data, row, column) => {
+  const cell = data[row][column] ?? 0;
+  return new Intl.NumberFormat(dictLocale).format(cell);
+};
+
+const getDataAsPercentage = (data, row, column) => {
+  const cell = data[row][column] ?? 0;
+  const totalForRow = getTotalOfRow(data, row);
+  return new Intl.NumberFormat(dictLocale, {
+    style: "percent",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(cell / totalForRow);
+};
+
+const getDataAsPercentChange = (data, row, column) => {
+  // This function just receives the key of the row, so we need to work out
+  // what the previous row actually was a little more manually...
+  let previousRow = null;
+  for (const month in data) {
+    if (month === row) {
+      break;
+    }
+    previousRow = month;
+  }
+
+  // If there is no previous row we're on the first row of data,
+  // so there's nothing to calculate a change against
+  if (!previousRow) {
+    return "&ndash;";
+  }
+
+  // Traverse the previous row's data and calculate the percentage it got there
+  const previousCellPercentage =
+    (data[previousRow][column] ?? 0) / getTotalOfRow(data, previousRow);
+
+  // Traverse this row's data and calculate the percentage here
+  const thisCellPercentage =
+    (data[row][column] ?? 0) / getTotalOfRow(data, row);
+
+  return new Intl.NumberFormat(dictLocale, {
+    style: "percent",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    signDisplay: "exceptZero",
+  }).format(thisCellPercentage - previousCellPercentage);
 };
 
 const htmlTableHeaders = (data, config) => {
@@ -81,8 +134,11 @@ const htmlTableData = (data, config) => {
 
   const htmlTableColumns = (cols, currentRow) => {
     let output = cols.map((col) => {
-      const num = data[currentRow][col] ?? 0;
-      return `<td class="kimTable_cell">${formatNumber(num)}</td>`;
+      return `<td class="kimTable_cell">${config.cellFormatFunction(
+        data,
+        currentRow,
+        col
+      )}</td>`;
     });
 
     if (config.truncateColumns) {
@@ -92,24 +148,31 @@ const htmlTableData = (data, config) => {
     return output.join("\n");
   };
 
-  const output = rows.map(
-    (row) => `<tr>
-      <th class="kimTable_header" scope="row">${formatDate(row)}</th>
-      ${htmlTableColumns(cols, row)}
-    </tr>`
-  );
+  const output = rows.map((row) => {
+    return `<tr>
+        <th class="kimTable_header" scope="row">${formatDate(row)}</th>
+        ${htmlTableColumns(cols, row)}
+      </tr>`;
+  });
   return output.join("\n");
 };
 
 const htmlConvertDataToTable = (data, userConfig = {}) => {
   const defaultConfig = {
-    firstColumnHeader: "",
+    caption: null,
+    firstColumnHeader: "Month",
     columnFormatFunction: (str) => str,
+    cellFormatFunction: getData,
     truncateColumns: null,
   };
   const config = { ...defaultConfig, ...userConfig };
 
   return `<table class="kimTable">
+    ${
+      config.caption
+        ? `<caption class="kimHeading-s kimTable_caption">${config.caption}</caption>`
+        : ""
+    }
     <thead class="kimTable_head">
       <tr>
         <th class="kimTable_header" scope="col">${
@@ -125,42 +188,123 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
 };
 
 module.exports = function () {
+  const dataDeviceTypes = require("./data/device-types.js");
+  const dataOperatingSystems = require("./data/operating-systems.js");
+  const dataCombos = require("./data/browser-os-combos.js");
+  const dataBrowsers = require("./data/browsers-overall.js");
+  const dataBrowsersMobile = require("./data/browsers-mobile.js");
+  const dataBrowsersTablet = require("./data/browsers-tablet.js");
+  const dataBrowsersDesktop = require("./data/browsers-desktop.js");
+  const dataBrowsersTv = require("./data/browsers-tv.js");
+
   return {
-    table: {
-      devices: htmlConvertDataToTable(require("./data/device-types.js"), {
+    devices: {
+      raw: htmlConvertDataToTable(dataDeviceTypes, {
         columnFormatFunction: deviceName,
-        firstColumnHeader: "Month",
       }),
-      systems: htmlConvertDataToTable(require("./data/operating-systems.js"), {
+      percent: htmlConvertDataToTable(dataDeviceTypes, {
+        columnFormatFunction: deviceName,
+        cellFormatFunction: getDataAsPercentage,
+      }),
+      percentChange: htmlConvertDataToTable(dataDeviceTypes, {
+        columnFormatFunction: deviceName,
+        cellFormatFunction: getDataAsPercentChange,
+      }),
+    },
+    systems: {
+      raw: htmlConvertDataToTable(dataOperatingSystems, {
         columnFormatFunction: systemName,
-        firstColumnHeader: "Month",
       }),
-      combos: htmlConvertDataToTable(require("./data/browser-os-combos.js"), {
+      percent: htmlConvertDataToTable(dataOperatingSystems, {
+        columnFormatFunction: systemName,
+        cellFormatFunction: getDataAsPercentage,
+      }),
+      percentChange: htmlConvertDataToTable(dataOperatingSystems, {
+        columnFormatFunction: systemName,
+        cellFormatFunction: getDataAsPercentChange,
+      }),
+    },
+    combos: {
+      raw: htmlConvertDataToTable(dataCombos, {
         columnFormatFunction: browserSystemName,
-        firstColumnHeader: "Month",
         truncateColumns: 10,
       }),
-      browsers: {
-        overall: htmlConvertDataToTable(require("./data/browsers-overall.js"), {
+      percent: htmlConvertDataToTable(dataCombos, {
+        columnFormatFunction: browserSystemName,
+        cellFormatFunction: getDataAsPercentage,
+      }),
+      percentChange: htmlConvertDataToTable(dataCombos, {
+        columnFormatFunction: browserSystemName,
+        cellFormatFunction: getDataAsPercentChange,
+      }),
+    },
+    browsers: {
+      overall: {
+        raw: htmlConvertDataToTable(dataBrowsers, {
           columnFormatFunction: browserName,
-          firstColumnHeader: "Month",
           truncateColumns: 10,
         }),
-        mobile: htmlConvertDataToTable(require("./data/browsers-mobile.js"), {
+        percent: htmlConvertDataToTable(dataBrowsers, {
           columnFormatFunction: browserName,
-          firstColumnHeader: "Month",
+          cellFormatFunction: getDataAsPercentage,
+          truncateColumns: 10,
         }),
-        tablet: htmlConvertDataToTable(require("./data/browsers-tablet.js"), {
+        percentChange: htmlConvertDataToTable(dataBrowsers, {
           columnFormatFunction: browserName,
-          firstColumnHeader: "Month",
+          cellFormatFunction: getDataAsPercentChange,
+          truncateColumns: 10,
         }),
-        desktop: htmlConvertDataToTable(require("./data/browsers-desktop.js"), {
+      },
+      mobile: {
+        raw: htmlConvertDataToTable(dataBrowsersMobile, {
           columnFormatFunction: browserName,
-          firstColumnHeader: "Month",
         }),
-        tv: htmlConvertDataToTable(require("./data/browsers-tv.js"), {
+        percent: htmlConvertDataToTable(dataBrowsersMobile, {
           columnFormatFunction: browserName,
-          firstColumnHeader: "Month",
+          cellFormatFunction: getDataAsPercentage,
+        }),
+        percentChange: htmlConvertDataToTable(dataBrowsersMobile, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentChange,
+        }),
+      },
+      tablet: {
+        raw: htmlConvertDataToTable(dataBrowsersTablet, {
+          columnFormatFunction: browserName,
+        }),
+        percent: htmlConvertDataToTable(dataBrowsersTablet, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentage,
+        }),
+        percentChange: htmlConvertDataToTable(dataBrowsersTablet, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentChange,
+        }),
+      },
+      desktop: {
+        raw: htmlConvertDataToTable(dataBrowsersDesktop, {
+          columnFormatFunction: browserName,
+        }),
+        percent: htmlConvertDataToTable(dataBrowsersDesktop, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentage,
+        }),
+        percentChange: htmlConvertDataToTable(dataBrowsersDesktop, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentChange,
+        }),
+      },
+      tv: {
+        raw: htmlConvertDataToTable(dataBrowsersTv, {
+          columnFormatFunction: browserName,
+        }),
+        percent: htmlConvertDataToTable(dataBrowsersTv, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentage,
+        }),
+        percentChange: htmlConvertDataToTable(dataBrowsersTv, {
+          columnFormatFunction: browserName,
+          cellFormatFunction: getDataAsPercentChange,
         }),
       },
     },

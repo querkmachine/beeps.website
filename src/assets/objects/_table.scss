@@ -5,6 +5,10 @@
   font-feature-settings: "tnum", "lnum";
 }
 
+.kimTable_caption {
+  text-align: start;
+}
+
 .kimTable_cell,
 .kimTable_header {
   padding-block: var(--space-1);

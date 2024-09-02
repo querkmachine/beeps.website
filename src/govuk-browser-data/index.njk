@@ -38,30 +38,45 @@ metadata:
   
   <h2 class="kimHeading-l" id="browsers">Most used browsers</h2>
   <p class="kimBody">Top 10 browsers as of the most recent month's data.</p>
-  <div class="page-data-table">{{ table.browsers.overall | safe }}</div>
+  <div class="page-data-table">{{ browsers.overall.percent | safe }}</div>
+  <div class="page-data-table">{{ browsers.overall.percentChange | safe }}</div>
+  <div class="page-data-table">{{ browsers.overall.raw | safe }}</div>
   
   <h2 class="kimHeading-l" id="browsers-by-device">Browsers by device type</h2>
-  <div class="page-data-table">{{ table.devices | safe }}</div>
+  <div class="page-data-table">{{ devices.percent | safe }}</div>
+  <div class="page-data-table">{{ devices.percentChange | safe }}</div>
+  <div class="page-data-table">{{ devices.raw | safe }}</div>
   
-  <h3 class="kimheading-m" id="browsers-mobile">Mobile browsers</h3>
-  <div class="page-data-table">{{ table.browsers.mobile | safe }}</div>
+  <h3 class="kimHeading-m" id="browsers-mobile">Mobile browsers</h3>
+  <div class="page-data-table">{{ browsers.mobile.percent | safe }}</div>
+  <div class="page-data-table">{{ browsers.mobile.percentChange | safe }}</div>
+  <div class="page-data-table">{{ browsers.mobile.raw | safe }}</div>
   
-  <h3 class="kimheading-m" id="browsers-tablet">Tablet browsers</h3>
-  <div class="page-data-table">{{ table.browsers.tablet | safe }}</div>
+  <h3 class="kimHeading-m" id="browsers-tablet">Tablet browsers</h3>
+  <div class="page-data-table">{{ browsers.tablet.percent | safe }}</div>
+  <div class="page-data-table">{{ browsers.tablet.percentChange | safe }}</div>
+  <div class="page-data-table">{{ browsers.tablet.raw | safe }}</div>
   
-  <h3 class="kimheading-m" id="browsers-desktop">Desktop browsers</h3>
-  <div class="page-data-table">{{ table.browsers.desktop | safe }}</div>
+  <h3 class="kimHeading-m" id="browsers-desktop">Desktop browsers</h3>
+  <div class="page-data-table">{{ browsers.desktop.percent | safe }}</div>
+  <div class="page-data-table">{{ browsers.desktop.percentChange | safe }}</div>
+  <div class="page-data-table">{{ browsers.desktop.raw | safe }}</div>
   
-  <h3 class="kimheading-m" id="browsers-tv">Smart TV and games console browsers</h3>
-  <div class="page-data-table">{{ table.browsers.tv | safe }}</div>
-  
+  <h3 class="kimHeading-m" id="browsers-tv">Smart TV and games console browsers</h3>
+  <div class="page-data-table">{{ browsers.tv.percent | safe }}</div>
+  <div class="page-data-table">{{ browsers.tv.percentChange | safe }}</div>
+  <div class="page-data-table">{{ browsers.tv.raw | safe }}</div>
   
   <h2 class="kimHeading-l" id="operating-systems">Operating systems</h2>
-  <div class="page-data-table">{{ table.systems | safe }}</div>
+  <div class="page-data-table">{{ systems.percent | safe }}</div>
+  <div class="page-data-table">{{ systems.percentChange | safe }}</div>
+  <div class="page-data-table">{{ systems.raw | safe }}</div>
   
   <h3 class="kimHeading-m" id="combos">Most used browser &amp; OS combinations</h3>
   <p class="kimBody">Top 10 combinations as of the most recent month's data.</p>
-  <div class="page-data-table">{{ table.combos | safe }}</div>
+  <div class="page-data-table">{{ combos.percent | safe }}</div>
+  <div class="page-data-table">{{ combos.percentChange | safe }}</div>
+  <div class="page-data-table">{{ combos.raw | safe }}</div>
   
   <h2 class="kimHeading-l" id="caveats">Caveats to this data</h2>
   <ol class="kimList kimList-numbered kimList-spaced">
@@ -71,7 +86,7 @@ metadata:
     <li>Browsers that automatically restrict or block analytics tracking will, by their nature, be underrepresented in data or not appear at all.</li>
     <li>Although GOV.UK draws many international visitors, it’s a UK-centric website and the vast majority of sessions originate from within the UK. The data should not be considered representative of browser usage in other countries.</li>
     <li>Month-by-month differences can be affected by public holidays and seasonal trends, and may not represent wider trends. For example, there are notably fewer sessions from Windows devices in December and the summer months, when more people are off work.</li>
-    <li>This data is provided 'as is' without support or guarantees of accuracy.</li>
+    <li>This data is provided 'as is' without support or guarantees of accuracy. Percentages and monthly change values may not add up as expected due to rounding.</li>
   </ol>
 </div>
 {% endblock %}
