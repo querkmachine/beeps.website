@@ -9,4 +9,6 @@ async function importModule(name) {
 }
 
 importModule("image-differ");
+importModule("scroll-sync");
+importModule("tabs");
 importModule("toc");

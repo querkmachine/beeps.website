@@ -28,6 +28,9 @@ metadata:
     inline-size: 10ch;
     text-align: end;
   }
+  .page-data-table .kimTable_head :is(th, td) {
+    vertical-align: bottom;
+  }
 </style>
 {% endblock %}
 
@@ -38,45 +41,109 @@ metadata:
   
   <h2 class="kimHeading-l" id="browsers">Most used browsers</h2>
   <p class="kimBody">Top 10 browsers as of the most recent month's data.</p>
-  <div class="page-data-table">{{ browsers.overall.percent | safe }}</div>
-  <div class="page-data-table">{{ browsers.overall.percentChange | safe }}</div>
-  <div class="page-data-table">{{ browsers.overall.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.raw | safe }}</div>
+    </div>
+  </div>
   
   <h2 class="kimHeading-l" id="browsers-by-device">Browsers by device type</h2>
-  <div class="page-data-table">{{ devices.percent | safe }}</div>
-  <div class="page-data-table">{{ devices.percentChange | safe }}</div>
-  <div class="page-data-table">{{ devices.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.raw | safe }}</div>
+    </div>
+  </div>
   
   <h3 class="kimHeading-m" id="browsers-mobile">Mobile browsers</h3>
-  <div class="page-data-table">{{ browsers.mobile.percent | safe }}</div>
-  <div class="page-data-table">{{ browsers.mobile.percentChange | safe }}</div>
-  <div class="page-data-table">{{ browsers.mobile.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.raw | safe }}</div>
+    </div>
+  </div>
   
   <h3 class="kimHeading-m" id="browsers-tablet">Tablet browsers</h3>
-  <div class="page-data-table">{{ browsers.tablet.percent | safe }}</div>
-  <div class="page-data-table">{{ browsers.tablet.percentChange | safe }}</div>
-  <div class="page-data-table">{{ browsers.tablet.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.raw | safe }}</div>
+    </div>
+  </div>
   
   <h3 class="kimHeading-m" id="browsers-desktop">Desktop browsers</h3>
-  <div class="page-data-table">{{ browsers.desktop.percent | safe }}</div>
-  <div class="page-data-table">{{ browsers.desktop.percentChange | safe }}</div>
-  <div class="page-data-table">{{ browsers.desktop.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.raw | safe }}</div>
+    </div>
+  </div>
   
   <h3 class="kimHeading-m" id="browsers-tv">Smart TV and games console browsers</h3>
-  <div class="page-data-table">{{ browsers.tv.percent | safe }}</div>
-  <div class="page-data-table">{{ browsers.tv.percentChange | safe }}</div>
-  <div class="page-data-table">{{ browsers.tv.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.raw | safe }}</div>
+    </div>
+  </div>
   
   <h2 class="kimHeading-l" id="operating-systems">Operating systems</h2>
-  <div class="page-data-table">{{ systems.percent | safe }}</div>
-  <div class="page-data-table">{{ systems.percentChange | safe }}</div>
-  <div class="page-data-table">{{ systems.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.raw | safe }}</div>
+    </div>
+  </div>
   
   <h3 class="kimHeading-m" id="combos">Most used browser &amp; OS combinations</h3>
   <p class="kimBody">Top 10 combinations as of the most recent month's data.</p>
-  <div class="page-data-table">{{ combos.percent | safe }}</div>
-  <div class="page-data-table">{{ combos.percentChange | safe }}</div>
-  <div class="page-data-table">{{ combos.raw | safe }}</div>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.raw | safe }}</div>
+    </div>
+  </div>
   
   <h2 class="kimHeading-l" id="caveats">Caveats to this data</h2>
   <ol class="kimList kimList-numbered kimList-spaced">

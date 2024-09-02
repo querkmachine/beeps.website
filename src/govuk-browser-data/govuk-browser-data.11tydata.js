@@ -189,7 +189,7 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
   return `<table class="kimTable">
     ${
       config.caption
-        ? `<caption class="kimHeading-s kimTable_caption">${config.caption}</caption>`
+        ? `<caption class="kim-!-sr kimTable_caption">${config.caption}</caption>`
         : ""
     }
     <thead class="kimTable_head">
@@ -219,56 +219,70 @@ module.exports = function () {
   return {
     devices: {
       raw: htmlConvertDataToTable(dataDeviceTypes, {
+        caption: "Device types - raw data",
         columnFormatFunction: deviceName,
       }),
       percent: htmlConvertDataToTable(dataDeviceTypes, {
+        caption: "Device types - percentages",
         columnFormatFunction: deviceName,
         cellFormatFunction: getDataAsPercentage,
       }),
       percentChange: htmlConvertDataToTable(dataDeviceTypes, {
+        caption: "Device types - changes by month",
         columnFormatFunction: deviceName,
         cellFormatFunction: getDataAsPercentChange,
       }),
     },
     systems: {
       raw: htmlConvertDataToTable(dataOperatingSystems, {
+        caption: "Operating systems - raw data",
         columnFormatFunction: systemName,
       }),
       percent: htmlConvertDataToTable(dataOperatingSystems, {
+        caption: "Operating systems - percentages",
         columnFormatFunction: systemName,
         cellFormatFunction: getDataAsPercentage,
       }),
       percentChange: htmlConvertDataToTable(dataOperatingSystems, {
+        caption: "Operating systems - changes by month",
         columnFormatFunction: systemName,
         cellFormatFunction: getDataAsPercentChange,
       }),
     },
     combos: {
       raw: htmlConvertDataToTable(dataCombos, {
+        caption: "Most popular browser and OS combinations - raw data",
         columnFormatFunction: browserSystemName,
         truncateColumns: 10,
       }),
       percent: htmlConvertDataToTable(dataCombos, {
+        caption: "Most popular browser and OS combinations - percentages",
         columnFormatFunction: browserSystemName,
         cellFormatFunction: getDataAsPercentage,
+        truncateColumns: 10,
       }),
       percentChange: htmlConvertDataToTable(dataCombos, {
+        caption: "Most popular browser and OS combinations - changes by month",
         columnFormatFunction: browserSystemName,
         cellFormatFunction: getDataAsPercentChange,
+        truncateColumns: 10,
       }),
     },
     browsers: {
       overall: {
         raw: htmlConvertDataToTable(dataBrowsers, {
+          caption: "Most popular browsers - raw data",
           columnFormatFunction: browserName,
           truncateColumns: 10,
         }),
         percent: htmlConvertDataToTable(dataBrowsers, {
+          caption: "Most popular browsers - percentages",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentage,
           truncateColumns: 10,
         }),
         percentChange: htmlConvertDataToTable(dataBrowsers, {
+          caption: "Most popular browsers - changes by month",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentChange,
           truncateColumns: 10,
@@ -276,52 +290,64 @@ module.exports = function () {
       },
       mobile: {
         raw: htmlConvertDataToTable(dataBrowsersMobile, {
+          caption: "Mobile browsers - raw data",
           columnFormatFunction: browserName,
         }),
         percent: htmlConvertDataToTable(dataBrowsersMobile, {
+          caption: "Mobile browsers - percentages",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentage,
         }),
         percentChange: htmlConvertDataToTable(dataBrowsersMobile, {
+          caption: "Mobile browsers - changes by month",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentChange,
         }),
       },
       tablet: {
         raw: htmlConvertDataToTable(dataBrowsersTablet, {
+          captions: "Tablet browsers - raw data",
           columnFormatFunction: browserName,
         }),
         percent: htmlConvertDataToTable(dataBrowsersTablet, {
+          captions: "Tablet browsers - percentages",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentage,
         }),
         percentChange: htmlConvertDataToTable(dataBrowsersTablet, {
+          captions: "Tablet browsers - changes by month",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentChange,
         }),
       },
       desktop: {
         raw: htmlConvertDataToTable(dataBrowsersDesktop, {
+          captions: "Desktop browsers - raw data",
           columnFormatFunction: browserName,
         }),
         percent: htmlConvertDataToTable(dataBrowsersDesktop, {
+          captions: "Desktop browsers - percentages",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentage,
         }),
         percentChange: htmlConvertDataToTable(dataBrowsersDesktop, {
+          captions: "Desktop browsers - changes by month",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentChange,
         }),
       },
       tv: {
         raw: htmlConvertDataToTable(dataBrowsersTv, {
+          captions: "Smart TV and game console browsers - raw data",
           columnFormatFunction: browserName,
         }),
         percent: htmlConvertDataToTable(dataBrowsersTv, {
+          captions: "Smart TV and game console browsers - percentages",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentage,
         }),
         percentChange: htmlConvertDataToTable(dataBrowsersTv, {
+          captions: "Smart TV and game console browsers - changes by month",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentChange,
         }),
