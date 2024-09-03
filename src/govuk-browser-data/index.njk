@@ -40,8 +40,18 @@ metadata:
   <p class="kimBody-l">Collated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a href="#caveats">there are a lot of caveats to consider</a>.</p>
   
   <h2 class="kimHeading-l" id="browsers">Most used browsers</h2>
-  <p class="kimBody">Top 10 browsers as of the most recent month's data. Percentage data is to be added.</p>
-  <div class="page-data-table">{{ browsers.overall.raw | safe }}</div>
+  <p class="kimBody">Top 10 browsers as of the most recent month's data. Percentage data is as a proportion of all sessions for that month.</p>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.raw | safe }}</div>
+    </div>
+  </div>
   
   <h2 class="kimHeading-l" id="browsers-by-device">Browsers by device type</h2>
   <p class="kimBody">Percentage data is as a proportion of all sessions for that month.</p>
