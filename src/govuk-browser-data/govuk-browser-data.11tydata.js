@@ -26,7 +26,7 @@ const deviceName = (key) => {
     case "desktop":
       return "Desktop";
     case "tv":
-      return "Smart TV and games console";
+      return "Smart TV and games consoles";
   }
 };
 
