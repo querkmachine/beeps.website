@@ -39,8 +39,8 @@ metadata:
   <h1 class="kimHeading-xl">{{ title }}</h1>
   <p class="kimBody-l">Collated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a href="#caveats">there are a lot of caveats to consider</a>.</p>
   
-  <h2 class="kimHeading-l" id="browsers">Most used browsers</h2>
-  <p class="kimBody">Top 10 browsers as of the most recent month's data. Percentage data is as a proportion of all sessions for that month.</p>
+  <h2 class="kimHeading-l" id="browsers">Browsers</h2>
+  <p class="kimBody">Browsers sorted by the recent month's data. Percentage data is as a proportion of all sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
@@ -138,8 +138,18 @@ metadata:
   </div>
   
   <h3 class="kimHeading-m" id="combos">Most used browser &amp; OS combinations</h3>
-  <p class="kimBody">Top 10 browsers as of the most recent month's data. Percentage data is to be added.</p>
-  <div class="page-data-table">{{ combos.raw | safe }}</div>
+  <p class="kimBody">Top 15 browser/OS combinations as of the most recent month's data. Percentage data is derived from the total sessions of the top 30 combinations for the given month, which accounts for approximately 99.98% of all sessions.</p>
+  <div class="kimTabs" data-js="tabs">
+    <div class="kimTabs_panel" data-label="Percentage">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percent | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Change">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percentChange | safe }}</div>
+    </div>
+    <div class="kimTabs_panel" data-label="Raw">
+      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.raw | safe }}</div>
+    </div>
+  </div>
   
   <h2 class="kimHeading-l" id="caveats">Caveats to this data</h2>
   <ol class="kimList kimList-numbered kimList-spaced">
@@ -151,5 +161,35 @@ metadata:
     <li>Month-by-month differences can be affected by public holidays and seasonal trends, and may not represent wider trends. For example, there are notably fewer sessions from Windows devices in December and the summer months, when more people are off work.</li>
     <li>This data is provided 'as is' without support or guarantees of accuracy. Percentages and monthly change values may not add up as expected due to rounding.</li>
   </ol>
+  
+  <h2 class="kimHeading-l" id="questions">Questions and answers</h2>
+  
+  <h3 class="kimHeading-s">How has this data been manipulated?</h3>
+  <p class="kimBody">For the most part, it hasn't. The majority of it is identical to what is exported from Google Analytics, including all of the bits that don't quite add up for one reason or another.</p>
+  <p class="kimBody">Things I have changed include:</p>
+  <ul class="kimList kimList-bulleted">
+    <li>merging browsers that appear under multiple names (e.g. if a browser rebranded)</li>
+    <li>removing one-off sessions with nonsense/spammy user agent names</li>
+    <li>correcting one-off errors with device categorisation</li>
+  </ul>
+  
+  <h3 class="kimHeading-s">What's the difference between Safari and Safari WebView?</h3>
+  <p class="kimBody">Safari sessions took place within the Safari web browser. Safari WebView took place within a 'webview'—a web browser window embedded inside of an iOS or iPadOS app.</p>
+  <p class="kimBody">WebViews tend to provide a more limited user experience compared to the full browser, such as only having buttons to navigate backwards and forwards and to refresh the page and not allowing new tabs. They typically lack a URL bar and most other features present in the full browser.</p>
+  
+  <h3 class="kimHeading-s">What's the difference between the Android operating system, Android Browser, Android WebView, and Android runtime browser?</h3>
+  <p class="kimBody">Android the operating system is... a mobile operating system, made by Google but used by various device manufacturers. It's common for manufacturers to modify the user interface and features of their version of Android to make them unique.</p>
+  <p class="kimBody">Android Browser is the default browser that ships with unmodified ("stock") versions of Android. It's a very basic browser, and most manufacturers replace it with their own, as Google do with Chrome and Samsung do with Samsung Internet.</p>
+  <p class="kimBody">Android WebView is Android's version of the Safari WebView. It uses Chromium as the underlying rendering engine but is updated separately from both Android Browser and the bundled browser.</p>
+  <p class="kimBody">Android runtime is a "managed runtime" (whatever that is) that some Android apps use. I have no idea why it shows up in browser analytics data. Perhaps these are browsers on embedded systems or particularly weirdly implemented webviews? I don't know.</p>
+  <p class="kimBody">Thanks Google.</p>
+  
+  <h3 class="kimHeading-s">What the heck is [browser]?</h3>
+  <ul class="kimList kimList-spaced kimList-columns">
+    <li>Chrome is a multiplatform browser created by the American search engine company Google. It runs on Google's Blink engine, a fork of Apple's WebKit engine.</li>
+    <li>Firefox is an open source multiplatform browser created by Mozilla. It runs on the Gecko engine, which is also creatd by Mozilla.</li>
+    <li>Safari is a multiplatform browser created by the American consumer technology company Apple. It is only available on operating systems (and thus, hardware) created by Apple. It runs on Apple's open source WebKit engine.</li>
+    <li></li>
+  </ul>
 </div>
 {% endblock %}

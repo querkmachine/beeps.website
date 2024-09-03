@@ -37,6 +37,27 @@ const formatDate = (isoDate) => {
   });
 };
 
+const formatNumber = (num) => {
+  return new Intl.NumberFormat(dictLocale).format(num);
+};
+
+const formatPercentage = (num) => {
+  return new Intl.NumberFormat(dictLocale, {
+    style: "percent",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(num);
+};
+
+const formatPercentChange = (num) => {
+  return new Intl.NumberFormat(dictLocale, {
+    style: "percent",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+    signDisplay: "exceptZero",
+  }).format(num);
+};
+
 const getTotalOfRow = (data, row) => {
   let total = 0;
   for (const column in data[row]) {
@@ -85,17 +106,14 @@ const getAllTableColumns = (data) => {
 
 const getData = (data, row, column) => {
   const cell = data[row][column] ?? 0;
-  return new Intl.NumberFormat(dictLocale).format(cell);
+  return formatNumber(cell);
 };
 
 const getDataAsPercentage = (data, row, column) => {
   const cell = data[row][column] ?? 0;
   const totalForRow = getTotalOfRow(data, row);
-  return new Intl.NumberFormat(dictLocale, {
-    style: "percent",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(cell / totalForRow);
+
+  return formatPercentage(cell / totalForRow);
 };
 
 const getDataAsPercentChange = (data, row, column) => {
@@ -123,12 +141,7 @@ const getDataAsPercentChange = (data, row, column) => {
   const thisCellPercentage =
     (data[row][column] ?? 0) / getTotalOfRow(data, row);
 
-  return new Intl.NumberFormat(dictLocale, {
-    style: "percent",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-    signDisplay: "exceptZero",
-  }).format(thisCellPercentage - previousCellPercentage);
+  return formatPercentChange(thisCellPercentage - previousCellPercentage);
 };
 
 const htmlTableHeaders = (data, config) => {
@@ -152,7 +165,10 @@ const htmlTableData = (data, config) => {
   const rows = getAllTableRows(data) ?? [];
 
   const htmlTableColumns = (cols, currentRow) => {
+    let columnTotal = 0;
+
     let output = cols.map((col) => {
+      columnTotal += data ?? 0;
       return `<td class="kimTable_cell">${config.cellFormatFunction(
         data,
         currentRow,
@@ -162,6 +178,10 @@ const htmlTableData = (data, config) => {
 
     if (config.truncateColumns) {
       output = output.slice(0, config.truncateColumns);
+    }
+
+    if (config.totalColumn) {
+      output.push(`<td class="kimTable_cell">AAAAA</td>`);
     }
 
     return output.join("\n");
@@ -183,6 +203,7 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
     columnFormatFunction: (str) => str,
     cellFormatFunction: getData,
     truncateColumns: null,
+    totalColumn: false,
   };
   const config = { ...defaultConfig, ...userConfig };
 
@@ -198,6 +219,11 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
           config.firstColumnHeader ?? ""
         }</th>
         ${htmlTableHeaders(data, config)}
+        ${
+          config.totalColumn
+            ? `<th class="kimTable_header" scope="col">Total</th>`
+            : ""
+        }
       </tr>
     </thead>
     <tbody class="kimTable_body">
@@ -221,6 +247,7 @@ module.exports = function () {
       raw: htmlConvertDataToTable(dataDeviceTypes, {
         caption: "Device types - raw data",
         columnFormatFunction: deviceName,
+        totalColumn: true,
       }),
       percent: htmlConvertDataToTable(dataDeviceTypes, {
         caption: "Device types - percentages",
@@ -253,39 +280,36 @@ module.exports = function () {
       raw: htmlConvertDataToTable(dataCombos, {
         caption: "Most popular browser and OS combinations - raw data",
         columnFormatFunction: browserSystemName,
-        truncateColumns: 10,
+        truncateColumns: 20,
       }),
       percent: htmlConvertDataToTable(dataCombos, {
         caption: "Most popular browser and OS combinations - percentages",
         columnFormatFunction: browserSystemName,
         cellFormatFunction: getDataAsPercentage,
-        truncateColumns: 10,
+        truncateColumns: 20,
       }),
       percentChange: htmlConvertDataToTable(dataCombos, {
         caption: "Most popular browser and OS combinations - changes by month",
         columnFormatFunction: browserSystemName,
         cellFormatFunction: getDataAsPercentChange,
-        truncateColumns: 10,
+        truncateColumns: 20,
       }),
     },
     browsers: {
       overall: {
         raw: htmlConvertDataToTable(dataBrowsers, {
-          caption: "Most popular browsers - raw data",
+          caption: "All browsers - raw data",
           columnFormatFunction: browserName,
-          truncateColumns: 10,
         }),
         percent: htmlConvertDataToTable(dataBrowsers, {
-          caption: "Most popular browsers - percentages",
+          caption: "All browsers - percentages",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentage,
-          truncateColumns: 10,
         }),
         percentChange: htmlConvertDataToTable(dataBrowsers, {
-          caption: "Most popular browsers - changes by month",
+          caption: "All browsers - changes by month",
           columnFormatFunction: browserName,
           cellFormatFunction: getDataAsPercentChange,
-          truncateColumns: 10,
         }),
       },
       mobile: {

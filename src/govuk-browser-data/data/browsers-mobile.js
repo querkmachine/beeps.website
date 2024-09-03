@@ -28,7 +28,6 @@ module.exports = {
     "playstation-vita": 10,
     nintendo: 4,
     maxthon: 1,
-    "meta-quest": 1,
   },
   "2024-02": {
     safari: 23391565,

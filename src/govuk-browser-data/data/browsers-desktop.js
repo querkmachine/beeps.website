@@ -12,7 +12,7 @@ module.exports = {
     "mozilla-compatible": 6441,
     "coc-coc": 1564,
     whale: 738,
-    "meta-quest": 96,
+    "meta-quest": 97,
     waterfox: 147,
     palemoon: 172,
     seamonkey: 78,
