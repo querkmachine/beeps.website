@@ -28,7 +28,6 @@ const {
   formatDate,
   formatISODate,
   getFirstNItems,
-  pageIsBlogPost,
 } = require("./config/utils.js");
 
 /**
@@ -120,7 +119,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("formatDate", formatDate);
   eleventyConfig.addFilter("formatISODate", formatISODate);
   eleventyConfig.addFilter("head", getFirstNItems);
-  eleventyConfig.addFilter("isBlogPost", pageIsBlogPost);
   eleventyConfig.addFilter("tagify", formatAsTag);
   eleventyConfig.addFilter("getArchiveYears", getArchiveYears);
   eleventyConfig.addFilter("getArchivePostsByYear", getArchivePostsByYear);

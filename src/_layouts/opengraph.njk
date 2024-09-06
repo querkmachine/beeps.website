@@ -65,13 +65,17 @@
         font-size: 3vw;
         font-weight: 600;
       }
+      .page-beeps {
+        margin-block-end: var(--space-8);
+        color: var(--color-accent);
+      }
     </style>
     {% block head %}{% endblock %}
   </head>
-  <body class="kimPage_body">
+  <body class="kimPage_body">    
     <canvas class="page-background" id="background" width="1200" height="630" hidden></canvas>
     <div class="page-wrapper">
-      <div class="kimHeading-xl">{% block title %}{% endblock %}</div>
+      {% block title %}{% endblock %}
     </div>
     <div class="page-foot">
       <span class="page-logo">{% include "logo.njk" %}</span>

@@ -5,6 +5,7 @@ const sanitizeHtml = require("sanitize-html");
 module.exports = {
   layout: "blog-post.njk",
   tags: ["blog"],
+  isBlogPost: true,
   mastheadBreadcrumbs: [
     {
       url: "/blog/",
@@ -12,9 +13,6 @@ module.exports = {
     },
   ],
   eleventyComputed: {
-    opengraphImage: (data) => {
-      return `${data.page.url}opengraph/`;
-    },
     favourites: async (data) => {
       // Skip if there's no usable metadata on this post
       if (!data.interactions) return null;

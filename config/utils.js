@@ -51,17 +51,6 @@ const formatISODate = function (isoDate, format) {
 };
 
 /**
- * Determine if a URL leads to a blog post by looking for the "/blog" string
- * within the URL. Nasty, but it works for now.
- *
- * @param {string} postUrl - The URL of the page.
- * @returns {boolean} - Whether or not this page is a blog post entry.
- */
-const pageIsBlogPost = function (page) {
-  return page.filePathStem.substring(0, 6) !== "/blog/" ? false : true;
-};
-
-/**
  * Take an array, remove the first n items from it, and return those items as a
  * new array.
  *
@@ -82,5 +71,4 @@ module.exports = {
   formatDate,
   formatISODate,
   getFirstNItems,
-  pageIsBlogPost,
 };

@@ -1,12 +1,40 @@
 ---
-permalink: "/opengraph/"
+pagination:
+  data: collections.all
+  size: 1
+  alias: preview
+permalink: "{{ preview.data.page.url }}opengraph/"
 eleventyExcludeFromCollections: true
 ---
+
 {% extends 'src/_layouts/opengraph.njk' %}
 
+{% block head %}
+{% endblock %}
+
 {% block title %}
-  <a class="kimLink-plain" href="/">beeps</a><br><br>
-  A robot bat that<br>
-  builds websites<br>
-  &amp; writes stuff.
+  <div class="kimHeading-xl page-beeps">beeps</div>
+  {%- if preview.data.isBlogPost %}
+    <div class="kimHeading-l kim-!-margin-block-start-0">
+      {{ preview.data.title | markdownInline | safe }}
+    </div>
+  {%- elif preview.url == '/' %}
+    <div class="kimHeading-xl">
+      A robot bat that<br>
+      builds websites<br>
+      &amp; writes stuff.
+    </div>
+  {%- else %}
+    <div class="kimHeading-xl">
+      {{ preview.data.title | markdownInline | safe }}
+    </div>
+  {%- endif %}
+{% endblock %}
+
+{% block metadata %}
+  {%- if preview.data.isBlogPost and preview.date %}
+    {{ preview.date | formatDate('human') }}
+  {%- else %}
+    {{ super() }}
+  {%- endif %}
 {% endblock %}

@@ -2,14 +2,20 @@
 <meta charset="UTF-8">
 <meta name="generator" content="{{ eleventy.generator }}">
 
+{# Determine which OpenGraph image to use for things #}
+{% set openGraphUrl = (page.url + 'opengraph/') %}
+{%- if isBlogTagPage %}
+  {% set openGraphUrl = '/blog/opengraph/' %}
+{%- endif %}
+
 {#- Content metadata / OpenGraph #}
 <link rel="canonical" href="{{ site.domain + page.url | url }}">
 <meta property="og:url" content="{{ site.domain + page.url | url }}">
 <meta property="og:locale" content="en_GB">
 <meta property="og:title" content="{{ metadata.title if metadata.title else title }}">
 <meta property="og:site_name" content="{{ site.name }}">
-<meta property="og:image" content="{{ (opengraphImage if opengraphImage else '/opengraph/') | absoluteUrl(site.domain) | urlizeOpenGraphImage }}">
-<meta property="og:type" content="{{ "article" if page | isBlogPost else "website" }}">
+<meta property="og:image" content="{{ openGraphUrl | absoluteUrl(site.domain) | urlizeOpenGraphImage }}">
+<meta property="og:type" content="{{ "article" if isBlogPost else "website" }}">
 {%- if metadata.description %}
   <meta name="description" content="{{ metadata.description }}">
   <meta property="og:description" content="{{ metadata.description }}">
