@@ -2,6 +2,10 @@
 title: "Frontend Forum #3: Frontend tooling"
 date: 2024-08-22
 tags: [web development, frontend forum]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "113024659877893417"
 ---
 
 [Ninji on Mastodon](https://wuffs.org/@Ninji) asked:
