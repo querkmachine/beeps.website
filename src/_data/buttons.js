@@ -174,8 +174,8 @@ const buttonsRandom = [
   },
   {
     src: "/assets/images/buttons/cohost_now.png",
-    alt: "Cohost NOW!",
-    url: "https://cohost.org/batbeeps",
+    alt: "I was on Cohost",
+    url: "/blog/2024-09-12-in-memory-of-cohost/",
   },
   { src: "/assets/images/buttons/no-paywalls.gif", alt: "No paywalls" },
   {
