@@ -13,55 +13,26 @@ I am remiss that [websites these days don't just link to cool things anymore]({{
 Here's some lesser known neat webbed sites I like.
 
 {% character character="ash", variant="alarmed" %}
-Of course, I'm not responsible for the content of any of these sites, which might change at any time without me noticing. I feel like I shouldn't need to clarify that.
+I'm not responsible for the content of any of these sites, which might change at any time without me noticing. I feel like I shouldn't need to clarify that.
 {% endcharacter %}
 
 Last updated: {{ updated | formatDate('human') }}
 
 ## Friends, acquaintances, and personal sites I just find quite neat
 
-Personal websites are _the bomb_. In an era where so much self-expression has moved to social media, having a website that is entirely your own is almost like an act of individual defiance. There are no linktrees or Squarespaces here.
+Personal websites are _the bomb_. In an era where so much self-expression has moved to social media, having a website that is entirely your own is almost like an act of individual defiance. There are no Linktrees or Squarespaces here.
 
 Here's some websites belonging to people I am at least vaguely familiar with, because they deserve some link love. (And yes, quite a lot of them are furries.)
 
 <div class="kimButtonGrid">
-{%- for i in buttons.websites %}{{- kim88x31Button(i) -}}{%- endfor %}
+{%- for i in buttons.friendsitesButtons %}{{- kim88x31Button(i) -}}{%- endfor %}
 </div>
 
-- [a_bat](https://a-bat.com/)
-- [Alteran Labs](https://alteranlabs.co.uk/)
-- [byte](https://bytebat.zone/)
-- [Caius Nocturne](https://nocturne.works/)
-- [Catbot](https://catbot-beeps.neocities.org/)
-- [Caylee Morris](https://caylee.dev/)
-- [Cendyne](https://cendyne.dev/)
-- [codl](https://www.codl.fr/)
-- [DarkOverord](https://darkoverord.info/)
-- [David Cox](https://dav-idc.com/)
-- [Eevee](https://eev.ee/)
-- [Electric Keet](https://electrickeet.com/)
-- [Halley](https://halley.systems/)
-- [Harley Watson](https://lobi.to/)
-- [Harsh Browns](https://visitmy.website/)
-- [Ji'hyn](https://jihyn.com/)
-- [Kay Ohtie](https://coyotesin.space/)
-- [Lewis Dorigo](https://dorigo.co/)
-- [Lupinia Studios](https://www.lupinia.net/)
-- [maple mavica syrup](https://maple.pet/)
-- [Ninji](https://wuffs.org/)
-- [Oliver Byford](https://obyford.com/)
-- [Owen Jones](https://owenis.online/)
-- [QuARC](https://quarc.neocities.org/)
-- [rabbithawk256](https://rabbithawk256.dev/)
-- [raccoon](https://www.raccoon.fun/)
-- [Romaric Pascal](https://romaricpascal.is/)
-- [SDF](https://www.sdf.me.uk/)
-- [Sigmucron](https://sigmucron.neocities.org/)
-- [Sirlan](https://dragon-vi.be/)
-- [Ulhar](https://ulhar.neocities.org/)
-- [Vanita Barrett](https://vanitabarrett.co.uk/)
-- [Violet Procyon](https://violet.pm/)
-- [zephi](https://zephi.cc/)
+<ul class="kimList kimList-bulleted kimList-columns">
+  {%- for i in buttons.friendsites %}
+  <li><a class="kimLink" href="{{ i.url }}">{{ i.alt }}</a></li>
+  {%- endfor %}
+</ul>
 
 ## Neat, niche YouTube channels
 
