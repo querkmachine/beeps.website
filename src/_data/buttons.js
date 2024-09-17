@@ -65,6 +65,11 @@ const buttonsWebsites = [
     url: "https://chcl.se/",
   },
   {
+    src: "/assets/images/buttons/finch.gif",
+    alt: "Finch's Tales",
+    url: "//finchtale.neocities.org/",
+  },
+  {
     src: "/assets/images/buttons/freeplay.gif",
     alt: "Freeplay",
     url: "//freeplay.floof.company/",

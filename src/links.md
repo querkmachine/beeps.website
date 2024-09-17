@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-09-12
+updated: 2024-09-17
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -100,6 +100,13 @@ Miscellany, &c.
 - _[Out-of-Placers](https://valsalia.com/comic/out-of-placers/)_ is a fantasy webcomic about coming to terms with change. It features lots of fun and thought-out speculative biology. (Be aware that it can get sorta not safe for work at times.)
 
 ## My dumb links
+
+Some other webbed sites of mine that might be of interest.
+
+- [GOV.UK Browser Data]({{ '/govuk-browser-data/' | url }}) — collected browser and operating system analytics from the GOV.UK website
+- [Twitter archive](//tweets.beeps.website) — archive of my Twitter posts
+- [placeholder.rocks](//placeholder.rocks/) — _Steven Universe_ placeholder image generator
+- [placeponi.es](//placeponi.es/) — _My Little Pony_ placeholder image generator
 
 ### Character playlists
 
