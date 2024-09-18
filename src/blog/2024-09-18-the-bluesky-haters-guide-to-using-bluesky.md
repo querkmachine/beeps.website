@@ -8,7 +8,7 @@ If it wasn't obvious from some of my past posts, I don't particularly care for B
 
 It bugs me that the most-favoured alternative to Twitter was to recreate what Twitter was like after Twitter had already started going rotten.
 
-It bugs me that rather than using an existing, widely standardised protocol, they opted to create their own that—for most purposes—isn't as open, and currently isn't even as good as ActivityPub.
+It bugs me that rather than using an existing, widely standardised protocol, they opted to create their own that—for most purposes—isn't as open, and currently isn't even as good, as ActivityPub.
 
 It bugs me that, to this day, it still lacks basic features that Mastodon has had for multiple years.
 
@@ -36,9 +36,11 @@ Head over to the [app passwords](https://bsky.app/settings/app-passwords) sectio
 ...with the following caveats.
 
 - Skymoth is limited to only sharing 'public' posts.
+- It cannot update edited Mastodon posts, as Bluesky doesn't support post editing.
 - Bluesky's character limit is lower than on most Mastodon instances, meaning longer posts will get split up.
 - Bluesky doesn't support any text formatting, so crossposting from Mastodon instances with Markdown or HTML support probably won't work very well.
 - It can only crosspost images. Bluesky didn't support video until literally last week, and it still doesn't support audio posts or polls like Mastodon does.
+- Except images with transparency and animated GIFs, which Bluesky doesn't support.
 - Threaded Mastodon posts won't be threaded on Bluesky.
 - Content warnings from Mastodon won't appear on Bluesky.
 - Custom emoji from Mastodon won't appear on Bluesky.
