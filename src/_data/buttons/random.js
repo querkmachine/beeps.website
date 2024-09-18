@@ -65,7 +65,7 @@ module.exports = [
     url: "//chitter.xyz/@batbeeps",
   },
   {
-    src: "/assets/images/buttons/cohost_now.png",
+    src: "/assets/images/buttons/i_was_on_cohost.gif",
     alt: "I was on Cohost",
     url: "/blog/2024-09-12-in-memory-of-cohost/",
   },
