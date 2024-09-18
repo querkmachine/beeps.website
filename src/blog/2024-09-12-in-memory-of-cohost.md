@@ -2,6 +2,10 @@
 title: In memory of Cohost
 date: 2024-09-12
 tags: [technology]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "113126320196798637"
 ---
 
 Three days ago, the social networking website Cohost [announced that it would be shutting down](https://cohost.org/staff/post/7611443-cohost-to-shut-down), first by going read-only on 1st October, giving users three months to export their data, and then deleting everything in January.
