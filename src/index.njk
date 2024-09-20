@@ -22,15 +22,15 @@ metadata:
 }
 .page-intro-background {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   inline-size: 100%;
   block-size: 100%;
   z-index: -1;
 }
 .page-intro-noodle {
-  height: auto;
-  width: 8rem;
+  inline-size: auto;
+  block-size: 8rem;
 }
 .page-blogs-noodle {
   display: none;
@@ -44,12 +44,14 @@ metadata:
     max-inline-size: 64%;
   }
   .page-intro-noodle {
-    width: 50%;
-    height: auto;
-    margin-top: -5%;
-    float: right;
+    inline-size: 50%;
+    block-size: auto;
+    float: inline-end;
     shape-outside: url("{{ '/assets/images/noodle-home--mask.gif' | url }}");
     shape-margin: var(--space-7);
+  }
+  .page-intro-heading {
+    margin-block-start: 5%;
   }
   .page-blogs-heading {
     margin-block-start: 0;
@@ -69,10 +71,10 @@ metadata:
 {% block main %}
 <div class="page">
 
-  <header class="page-intro kim-!-padding-block-8-9">
+  <header class="page-intro kim-!-padding-block-start-7-8 kim-!-padding-block-end-8-9">
     <canvas class="page-intro-background" width="1000" height="500" hidden></canvas>
     <div class="kimWrapper">
-      <img class="page-intro-noodle" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="">
+      <img class="page-intro-noodle" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
       <h1 class="kimHeading-xl page-intro-heading">Hello universe,<br>I&rsquo;m beeps.</h1>
       <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
       <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
