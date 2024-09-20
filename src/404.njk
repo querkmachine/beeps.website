@@ -5,39 +5,13 @@ eleventyExcludeFromCollections: true
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block beforeMasthead %}
-<canvas class="page-background" id="background" width="1000" height="500" hidden></canvas>
-{% endblock %}
-
-{% block main %}
-  <div class="kim-!-padding-block-9">
-    <div class="kimWrapper">
-      <div class="page-content">
-        <div id="robatJail">
-          <img alt="A robat, floating in space." src="{{ '/assets/images/robat-404.png' | url }}" id="robat">
-        </div>
-        <h1 class="kimHeading-xl kim-!-margin-block-end-6">
-          It&rsquo;s been a long&nbsp;road&hellip;
-        </h1>
-        <p class="kimBody">The page you were looking for has been lost in space.</p>
-        <p class="kimBody">It might have been deleted. It might never have existed at all. It is a mystery. 👻</p>
-        <p><a href="{{ '/' | url }}" class="kimLink-plain">Return home</a></p>
-      </div>
-    </div>
-  </div>
-{% endblock %}
-
-{% block masthead %}{# Keep it simple, stupid. #}{% endblock %}
-{% block footer %}{# Keep it really simple, stupid. #}{% endblock %}
-
 {% block head %}
 <style>
   .page-background {
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     z-index: -1;
   }
   
@@ -46,40 +20,74 @@ eleventyExcludeFromCollections: true
     margin-inline: auto;
     text-align: center;
   }
-  
-  #robatJail {
-    display: inline-block;
-    animation-name: robatSpin;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 47s;
-    animation-delay: -5s;
-    user-select: none;
-    pointer-events: none;
-  }
-  #robat {
-    height: 12.5rem;
-    animation-name: robatBounce;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 22s;
-    animation-delay: -47s;
+    
+  .page-noodle {
+    margin-block-end: 0;
   }
   
-  @keyframes robatSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(359deg); }
+  .page-heading {
+    margin-block-start: calc(var(--space-4) * -1);
+    margin-block-end: var(--space-4);
+    transform: rotate(2deg);
   }
   
-  @keyframes robatBounce { 
-    0%, 100% { transform: translate(-1rem, -1rem); }
-    25% { transform: translate(1rem, 1rem); }
-    50% { transform: translate(1rem, -1rem); }
-    75% { transform: translate(-1rem, 1rem); }
+  .page-advice {
+    transform: rotate(-3deg);
   }
   
+  .page-it,
+  .page-you {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+  
+  .page-it {
+    position: relative;
+  }
+  
+  .page-it::after {
+    content: "";
+    display: block;
+    width: 100%;
+    aspect-ratio: 9/16;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-image: url("{{ '/assets/images/noodle-404-drips.png' | url }}");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 </style>
 {% endblock %}
+
+{% block beforeMasthead %}
+<canvas class="page-background" id="background" width="1000" height="500" hidden></canvas>
+{% endblock %}
+
+{% block main %}
+  <div class="kim-!-padding-block-start-3-4 kim-!-padding-block-end-3-4">
+    <div class="kimWrapper">
+      <div class="page-content">
+        <img 
+          alt="An amphimorpho stuck to the wall, looking at the viewer aggressively." 
+          srcset="{{ '/assets/images/noodle-404@2x.png' | url }} 2x, {{ '/assets/images/noodle-404.png' | url }} 1x"
+          src="{{ '/assets/images/noodle-404.png' | url }}" 
+          class="page-noodle">
+        <h1 class="kimHeading-s page-heading">
+          The page you were looking for couldn&rsquo;t be found&hellip;<br>
+          but <span class="page-it">it</span> has found <span class="page-you">you</span>!
+        </h1>
+        <div class="page-advice">
+          <p class="kimBody">You might want to get out of here fast.<br>
+          <a href="{{ '/' | url }}" class="kimLink">Return home, quickly!</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block masthead %}{# Keep it simple, stupid. #}{% endblock %}
+{% block footer %}{# Keep it really simple, stupid. #}{% endblock %}
 
 {% block scripts %}
 {{ super() }}
