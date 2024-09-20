@@ -3,7 +3,7 @@ const buttonsFriendsites = require("./buttons/friends.js");
 const buttonsRandom = require("./buttons/random.js");
 
 const sortEntries = (buttons) => {
-  return buttons.sort((a, b) => a.alt < b.alt);
+  return buttons.sort((a, b) => a.alt.localeCompare(b.alt));
 };
 
 const buttonsOnly = (buttons) => {
