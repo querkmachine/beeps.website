@@ -1,28 +1,54 @@
 @use "../settings";
 
 .kimNoodleBowl {
-  --offset-top: var(--space-9);
-  --offset-bottom: 24px;
+  --height: 30vh;
+  --min-height: 22rem;
+  --max-height: 30rem;
+  --pawb-height-multiplier: 0.22;
+  --offset-top: var(--space-7-8);
+  --offset-bottom: var(--space-4-5);
+  --canvas-height: calc(100% - var(--offset-top) - var(--offset-bottom));
 
   position: relative;
+  height: clamp(var(--min-height), var(--height), var(--max-height));
   pointer-events: none;
 
-  &::before {
-    content: "";
-    display: block;
+  &_canvas {
     width: 100%;
-    height: calc(100% - var(--offset-top) - var(--offset-bottom));
+    height: var(--canvas-height);
     position: absolute;
     top: var(--offset-top);
     background-color: var(--color-furniture-alt);
-    z-index: -1;
   }
 
   &_inner {
-    height: 420px;
+    height: calc(var(--canvas-height) + var(--offset-top));
+    margin-top: calc(0px - var(--offset-top));
+    position: relative;
     background-image: url("/assets/images/noodle-footer.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: auto 100%;
+
+    @media (min-resolution: 2x) {
+      background-image: url("/assets/images/noodle-footer@2x.png");
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: clamp(
+        calc(var(--min-height) * var(--pawb-height-multiplier)),
+        calc(var(--height) * var(--pawb-height-multiplier)),
+        calc(var(--max-height) * var(--pawb-height-multiplier))
+      );
+      position: absolute;
+      bottom: calc(0px - var(--offset-bottom));
+      background-image: url("/assets/images/noodle-footer--pawbs.png");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: auto 100%;
+    }
   }
 }

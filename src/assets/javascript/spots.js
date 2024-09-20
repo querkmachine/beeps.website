@@ -9,6 +9,8 @@ export default class Spots {
       useCalendarThemes: false,
       intervalBetweenSpots: 200,
       heightProportion: 1,
+      spotMultiplier: 1,
+      colors: [],
     };
     this.settings = { ...defaultOptions, ...options };
 
@@ -40,11 +42,18 @@ export default class Spots {
     this.$canvas.width = this.canvasBox.width;
     this.$canvas.height = this.canvasBox.height;
     this.spotTarget = Math.floor(
-      (this.$canvas.width * this.$canvas.height) / 50000
+      ((this.$canvas.width * this.$canvas.height) / 50000) *
+        this.settings.spotMultiplier
     );
   }
 
   setStrokeColor() {
+    // Overridden colours
+    if (this.settings.colors.length) {
+      this.strokeColors = this.settings.colors;
+      return;
+    }
+
     // Default colours
     this.strokeColors =
       document.documentElement.dataset.colorScheme === "light"

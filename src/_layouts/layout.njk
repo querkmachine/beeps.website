@@ -79,8 +79,8 @@
     <footer class="kimFooter">
       {% block footerDecor %}
         <div class="kimNoodleBowl" role="presentation">
-          <div class="kimNoodleBowl_inner">
-          </div>
+          <canvas class="kimNoodleBowl_canvas"></canvas>
+          <div class="kimNoodleBowl_inner"></div>
         </div>
       {% endblock %}
       <div class="kimWrapper kimFooter_inner">
@@ -127,6 +127,13 @@
   {# Other scripts #}
   {% block scripts %}
   <script type="module" src="{{ '/assets/javascript/entry.js' | url | cachebust }}"></script>
+  <script type="module">
+    import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
+    new Spots(document.querySelector(".kimNoodleBowl_canvas"), {
+      isAnimated: true,
+      colors: [[255,255,255]]
+    });
+  </script>
   {% endblock %}
   
 </body>
