@@ -89,4 +89,9 @@ module.exports = [
     url: "//zatzhing.me/",
   },
   { alt: "zephi", url: "//zephi.cc/" },
+  {
+    src: "/assets/images/buttons/david_garden.webp",
+    alt: "David Wolfpaw",
+    url: "//david.garden/",
+  },
 ];

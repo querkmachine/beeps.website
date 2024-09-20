@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-09-17
+updated: 2024-09-20
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
