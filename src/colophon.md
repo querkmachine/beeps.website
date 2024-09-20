@@ -51,9 +51,9 @@ This website implements [button schema](https://codeberg.org/LunarEclipse/well-k
 ## Artwork
 
 {% character character="ash", variant="happy" %}
-Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by [Tuxedo Dragon](https://tuxedodragon.neocities.org/).
+Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by [Tuxedo Dragon](https://tuxedodragon.art/).
 
-The illustrations of Ash in the website's footer are also by Tuxedo Dragon.
+Illustrations on the homepage and 404 page, in the footer, and on OpenGraph images are also illustrated by [Tuxedo Dragon](https://tuxedodragon.art/).
 
 Ash's headshots were illustrated by [Caius Nocturne](https://nocturne.works/).
 {% endcharacter %}
