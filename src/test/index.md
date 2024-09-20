@@ -135,6 +135,30 @@ Maybe I should bite them all?
 Hmmm, nah, I like being fairly unique.
 {% endcharacter %}
 
+{% character character="ash", variant="angry" %}
+And I'll bite anyone who disagrees!
+{% endcharacter %}
+
+{% character character="ash", variant="blushing" %}
+I really like the idea of biting people, huh...
+{% endcharacter %}
+
+{% character character="ash", variant="laughing" %}
+Maybe that's just part of having this biology?
+{% endcharacter %}
+
+{% character character="ash", variant="sad" %}
+They'll be all like "no, please don't turn me into one of you!" and I'll be like...
+{% endcharacter %}
+
+{% character character="ash", variant="paw" %}
+Bap!
+{% endcharacter %}
+
+{% character character="ash", variant="tail" %}
+Thwap!
+{% endcharacter %}
+
 ### Character - Emy
 
 {% character variant="alarmed" %}

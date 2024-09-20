@@ -6,14 +6,29 @@ const pluginImages = require("@11ty/eleventy-img");
 const variants = {
   ash: [
     {
+      name: "angry",
+      image: "angry.svg",
+      alt: "An amphimorpho looking at you angrily.",
+    },
+    {
       name: "alarmed",
       image: "grimace.svg",
       alt: "An amphimorpho looking alarmed and grimacing.",
     },
     {
+      name: "blushing",
+      image: "blushing.svg",
+      alt: "An amphimorpho blushing happily with eyes closed.",
+    },
+    {
       name: "happy",
       image: "happy.svg",
       alt: "An amphimorpho smiling happily.",
+    },
+    {
+      name: "laughing",
+      image: "laughing.svg",
+      alt: "An amphimorpho laughing joyfully with tears in its eyes.",
     },
     {
       name: "love",
@@ -24,6 +39,11 @@ const variants = {
       name: "pensive",
       image: "pensive.svg",
       alt: "An amphimorpho with ears drooped and eyes closed in contemplation.",
+    },
+    {
+      name: "sad",
+      image: "sad.svg",
+      alt: "A sad amphimorpho gently weeping.",
     },
     {
       name: "sleepy",
@@ -39,6 +59,16 @@ const variants = {
       name: "tongue",
       image: "tongue.svg",
       alt: "An amphimorpho cheekily sticking its tongue out at you.",
+    },
+    {
+      name: "paw",
+      image: "paw.svg",
+      alt: "A white-furred cat-like paw with green pawpad and toe beans.",
+    },
+    {
+      name: "tail",
+      image: "tail.svg",
+      alt: "A curved black and white furred tail with a slimy, bright green tip.",
     },
   ],
   emy: [
