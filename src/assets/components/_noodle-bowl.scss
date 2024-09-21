@@ -1,4 +1,5 @@
 @use "../settings";
+@use "../helpers/media-queries";
 
 .kimNoodleBowl {
   --height: 30vh;
@@ -34,21 +35,65 @@
       background-image: url("/assets/images/noodle-footer@2x.png");
     }
 
+    &::before,
     &::after {
+      --pawb-min-height: calc(
+        var(--min-height) * var(--pawb-height-multiplier)
+      );
+      --pawb-ideal-height: calc(var(--height) * var(--pawb-height-multiplier));
+      --pawb-max-height: calc(
+        var(--max-height) * var(--pawb-height-multiplier)
+      );
+      --pawb-height: clamp(
+        var(--pawb-min-height),
+        var(--pawb-ideal-height),
+        var(--pawb-max-height)
+      );
+      --pawb-width: calc(var(--pawb-height) * 1.57);
+      --pawb-offset: var(--pawb-width);
       content: "";
       display: block;
-      width: 100%;
-      height: clamp(
-        calc(var(--min-height) * var(--pawb-height-multiplier)),
-        calc(var(--height) * var(--pawb-height-multiplier)),
-        calc(var(--max-height) * var(--pawb-height-multiplier))
-      );
+      width: var(--pawb-width);
+      height: var(--pawb-height);
       position: absolute;
       bottom: calc(0px - var(--offset-bottom));
       background-image: url("/assets/images/noodle-footer--pawbs.png");
       background-repeat: no-repeat;
       background-position: bottom center;
       background-size: auto 100%;
+      animation-name: kimPawbBounce;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-direction: alternate-reverse;
+
+      @include media-queries.kim-mq($from: constitution) {
+        --pawb-offset: calc(var(--pawb-width) * 1.45);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        animation-name: none;
+      }
     }
+
+    &::before {
+      left: calc(50% - var(--pawb-offset));
+    }
+
+    &::after {
+      left: calc(50% + var(--pawb-offset));
+      animation-delay: -1s;
+      rotate: y 180deg;
+    }
+  }
+}
+
+@keyframes kimPawbBounce {
+  0% {
+    translate: -50% 0;
+  }
+
+  100% {
+    translate: -50% -1rem;
   }
 }
