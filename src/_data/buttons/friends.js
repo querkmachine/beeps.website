@@ -35,7 +35,11 @@ module.exports = [
   { alt: "Harley Watson", url: "//lobi.to/" },
   { alt: "Harsh Browns", url: "//visitmy.website/" },
   { alt: "Ji'hyn", url: "//jihyn.com/" },
-  { alt: "Kay Ohtie", url: "//coyotesin.space" },
+  {
+    src: "/assets/images/buttons/kay_ohtie.webp",
+    alt: "Kay Ohtie",
+    url: "//coyotesin.space",
+  },
   { alt: "Lewis Dorigo", url: "//dorigo.co/" },
   { alt: "Lupinia Studios", url: "//www.lupinia.net/" },
   { alt: "maple mavica syrup", url: "//maple.pet/" },
@@ -52,14 +56,14 @@ module.exports = [
   },
   {
     src: "/assets/images/buttons/null_patch.png",
-    alt: "Null Patch",
+    alt: "Null Patch - a projects blog by a system",
     url: "//nullpat.ch/",
   },
   { alt: "Oliver Byford", url: "//obyford.com/" },
   { alt: "Owen Jones", url: "//owenis.online/" },
   {
     src: "/assets/images/buttons/pebble.gif",
-    alt: "Pebble",
+    alt: "Pebble.pet",
     url: "//pebble.pet/",
   },
   {
@@ -91,7 +95,18 @@ module.exports = [
   { alt: "zephi", url: "//zephi.cc/" },
   {
     src: "/assets/images/buttons/david_garden.webp",
-    alt: "David Wolfpaw",
+    alt: "david.garden",
     url: "//david.garden/",
   },
+  {
+    src: "/assets/images/buttons/cybird.gif",
+    alt: "Cybird's Nest",
+    url: "//cybird.nekoweb.org/",
+  },
+  {
+    src: "/assets/images/buttons/alloyed.gif",
+    alt: "Kit!",
+    url: "//alloyed.me/",
+  },
+  { src: "/assets/images/buttons/jkap.gif", alt: "jkap", url: "//jkap.io/" },
 ];
