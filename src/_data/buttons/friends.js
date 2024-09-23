@@ -76,7 +76,11 @@ module.exports = [
   { alt: "raccoon", url: "//www.raccoon.fun/" },
   { alt: "Romaric Pascal", url: "//romaricpascal.is/" },
   { alt: "SDF", url: "//sdf.me.uk" },
-  { alt: "Sigmucron", url: "//sigmucron.neocities.org/" },
+  {
+    src: "/assets/images/buttons/sigmucron.png",
+    alt: "Sigmucron",
+    url: "//sigmucron.neocities.org/",
+  },
   { alt: "Sirlan", url: "//dragon-vi.be/" },
   { alt: "Tenna", url: "//tenna.zip/" },
   {
@@ -84,7 +88,11 @@ module.exports = [
     alt: "Tuxedo Dragon",
     url: "//tuxedodragon.art/",
   },
-  { alt: "Ulhar", url: "//ulhar.neocities.org/" },
+  {
+    src: "/assets/images/buttons/ulhar.png",
+    alt: "Ulhar",
+    url: "//ulhar.neocities.org/",
+  },
   { alt: "Vanita Barrett", url: "//vanitabarrett.co.uk/" },
   { alt: "Violet Procyon", url: "//violet.pm/" },
   {
@@ -109,4 +117,12 @@ module.exports = [
     url: "//alloyed.me/",
   },
   { src: "/assets/images/buttons/jkap.gif", alt: "jkap", url: "//jkap.io/" },
+  {
+    src: "/assets/images/buttons/pivot.gif",
+    alt: "Pivot",
+    url: "//pivot.gay/",
+  },
+  { alt: "keeri", url: "//keeri.place/" },
+  { alt: "ninee (0x9E01)", url: "//www.ninee.xyz/" },
+  { src: "/assets/images/buttons/cabl.gif", alt: "Cabl", url: "//cabl.rodeo/" },
 ];

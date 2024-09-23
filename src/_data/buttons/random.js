@@ -99,6 +99,11 @@ module.exports = [
     showOnHomepage: true,
   },
   {
+    src: "/assets/images/buttons/this_machine_kills_fascists.png",
+    alt: "This machine kills fascists",
+    url: "/about/nonhuman/",
+  },
+  {
     src: "/assets/images/buttons/robot_cats_now.gif",
     alt: "Robot cats NOW!",
     url: "/about/nonhuman/",
