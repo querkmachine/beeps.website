@@ -2,6 +2,10 @@
 title: The Bluesky hater's guide to using Bluesky
 date: 2024-09-18
 tags: [technology]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "113158136167913317"
 ---
 
 If it wasn't obvious from some of my past posts, I don't particularly care for Bluesky.

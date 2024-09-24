@@ -11,6 +11,10 @@ tags:
     web development,
     technology,
   ]
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "113187429981906883"
 ---
 
 It's been a little while since I wrote about some stuff. Let's do that!
