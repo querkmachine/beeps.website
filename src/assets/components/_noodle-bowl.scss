@@ -64,11 +64,11 @@
       animation-name: kimPawbBounce;
       animation-iteration-count: infinite;
       animation-duration: 1s;
-      animation-timing-function: linear;
+      animation-timing-function: ease-in-out;
       animation-direction: alternate-reverse;
 
       @include media-queries.kim-mq($from: constitution) {
-        --pawb-offset: calc(var(--pawb-width) * 1.45);
+        --pawb-offset: calc(var(--pawb-width) * 1.25);
       }
 
       @media (prefers-reduced-motion: reduce) {
