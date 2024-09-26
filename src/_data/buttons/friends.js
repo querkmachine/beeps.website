@@ -81,7 +81,11 @@ module.exports = [
     alt: "Sigmucron",
     url: "//sigmucron.neocities.org/",
   },
-  { alt: "Sirlan", url: "//dragon-vi.be/" },
+  {
+    src: "/assets/images/buttons/sirlan.png",
+    alt: "Sirlan",
+    url: "//dragon-vi.be/",
+  },
   { alt: "Tenna", url: "//tenna.zip/" },
   {
     src: "/assets/images/buttons/tuxedodragon.gif",
