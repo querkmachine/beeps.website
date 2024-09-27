@@ -36,6 +36,7 @@ metadata:
   display: none;
 }
 .page-rings { margin-block: 0; }
+.page-rings svg { inline-size: 1.5em; block-size: 1.5em; }
 .page-rings div { margin-block-end: var(--space-3); }
 .page-rings dt { font-weight: bold; }
 .page-rings dd { margin-inline: 0; }
@@ -117,7 +118,10 @@ metadata:
         {%- for ring in webrings %}
         <div class="kimGrid_column kimGrid_column-oneThird">
           <dt>
-            <a class="kimLink-plain" href="{{ ring.url }}">{{ ring.name }}</a>
+            <a class="kimLink-plain" href="{{ ring.url }}">
+              {% include "./assets/images/" + ring.icon %}<br>
+              {{ ring.name }}
+            </a>
           </dt>
           <dd>
             <a class="kimLink-plain" href="{{ ring.previousUrl }}" aria-label="Previous site in {{ ring.name }} webring">
