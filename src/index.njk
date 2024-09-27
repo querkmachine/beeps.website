@@ -112,11 +112,11 @@ metadata:
 {%- if webrings or buttons.homepage %}
   <div class="kimGrid">
     {%- if webrings %}
-    <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-twoThirds">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
       <h2 class="kimHeading-xs">Webrings</h2>
       <dl class="kimGrid page-rings">
         {%- for ring in webrings %}
-        <div class="kimGrid_column kimGrid_column-oneThird">
+        <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
           <dt>
             <a class="kimLink-plain" href="{{ ring.url }}">
               {% include "./assets/images/" + ring.icon %}<br>
@@ -140,7 +140,7 @@ metadata:
     {%- endif %}
     {%- if buttons.homepage %}
       {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
-      <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneThird">
+      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
         <h2 class="kimHeading-xs">Buttons</h2>
         <div class="kimButtonGrid">
           {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}

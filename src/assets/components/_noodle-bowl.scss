@@ -67,8 +67,15 @@
       animation-timing-function: ease-in-out;
       animation-direction: alternate-reverse;
 
-      @include media-queries.kim-mq($from: constitution) {
-        --pawb-offset: calc(var(--pawb-width) * 1.25);
+      // Move pawbs further apart if we have space
+      @include media-queries.kim-mq($from: 430px) {
+        --pawb-offset: calc(var(--pawb-width) * 1.2);
+      }
+
+      // Hide pawbs entirely on really narrow screens to prevent introducing
+      // a horizontal scrollbar
+      @include media-queries.kim-mq($to: 370px) {
+        content: none;
       }
 
       @media (prefers-reduced-motion: reduce) {
