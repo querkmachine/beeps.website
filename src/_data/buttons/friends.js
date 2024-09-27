@@ -129,4 +129,9 @@ module.exports = [
   { alt: "keeri", url: "//keeri.place/" },
   { alt: "ninee (0x9E01)", url: "//www.ninee.xyz/" },
   { src: "/assets/images/buttons/cabl.gif", alt: "Cabl", url: "//cabl.rodeo/" },
+  {
+    src: "/assets/images/buttons/two.png",
+    alt: "two",
+    url: "//twotwos.nekoweb.org/",
+  },
 ];
