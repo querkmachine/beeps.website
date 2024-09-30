@@ -134,4 +134,9 @@ module.exports = [
     alt: "two",
     url: "//twotwos.nekoweb.org/",
   },
+  {
+    src: "/assets/images/buttons/maff.png",
+    alt: "maff.scot",
+    url: "//maff.scot/",
+  },
 ];
