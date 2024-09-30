@@ -12,7 +12,7 @@ export default class ImageDiffer {
     $input.className = "kimImageDiffer_range";
     $input.setAttribute(
       "aria-label",
-      "Change how much the 'after' image overlaps the 'before' image."
+      "Change how much the 'after' image overlaps the 'before' image.",
     );
     $input.type = "range";
     $input.value = 50;

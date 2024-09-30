@@ -21,7 +21,7 @@ const youtubeShortcode = function (videoId, settings = {}) {
   return `<div class="kimEmbed" style="aspect-ratio:${
     settings.aspectRatio
   }"><iframe width="${width}" height="${Math.round(
-    height
+    height,
   )}" src="https://www.youtube-nocookie.com/embed/${videoId}" title="${
     settings.title
   }" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;

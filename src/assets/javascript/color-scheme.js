@@ -49,7 +49,7 @@ class ColorScheme {
 
   initControls() {
     const $toggles = this.$container.querySelectorAll(
-      ".kimColorSchemeSwitch_input"
+      ".kimColorSchemeSwitch_input",
     );
 
     // If prefers-color-scheme isn't supported, remove the "auto" option from the controls

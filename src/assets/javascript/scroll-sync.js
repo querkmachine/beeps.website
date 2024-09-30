@@ -8,13 +8,13 @@ export default class ScrollSync {
 
     // Get linked scrollable elements
     this.$linkedElements = document.querySelectorAll(
-      `[data-scroll-sync-group="${this.groupId}"]`
+      `[data-scroll-sync-group="${this.groupId}"]`,
     );
 
     // Do stuff when scrolled
     this.$module.addEventListener(
       "scroll",
-      this.syncroniseScrollPosition.bind(this)
+      this.syncroniseScrollPosition.bind(this),
     );
   }
   syncroniseScrollPosition() {

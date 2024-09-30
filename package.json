@@ -10,7 +10,7 @@
     "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy && npm run lint:build",
     "lint": "npx prettier --write --ignore-unknown . '!_site/**/*'",
     "lint:build": "npx prettier --write --ignore-unknown --no-config --print-width=1000 --use-tabs=true '_site/**/*'",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -31,14 +31,14 @@
     "eleventy-plugin-toc": "^1.1.5",
     "fs-extra": "^11.2.0",
     "highlight.js": "^11.10.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "postcss": "^8.4.47",
     "postcss-preset-env": "^10.0.5",
-    "prettier": "^2.6.2",
+    "prettier": "^3.3.3",
     "sanitize-html": "^2.13.0",
     "sass": "^1.79.4"
   },

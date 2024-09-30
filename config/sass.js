@@ -31,7 +31,7 @@ const compileSass = function () {
           if (err) console.error(err);
           console.log("PostCSS transformations complete.");
           return false;
-        }
+        },
       );
     });
 

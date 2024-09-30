@@ -61,7 +61,7 @@ export default class Tabs {
   }
   hideAllPanels($exceptThisTab) {
     const $activeTabs = this.$tabList.querySelectorAll(
-      ".kimTabs_link[aria-selected='true']"
+      ".kimTabs_link[aria-selected='true']",
     );
     $activeTabs.forEach(($tab) => {
       if ($tab.getAttribute("href") !== $exceptThisTab.getAttribute("href")) {
