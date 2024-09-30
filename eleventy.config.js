@@ -1,40 +1,50 @@
 // Config
-const paths = require("./config/paths.json");
+import paths from "./config/paths.js";
 
 // 11ty plugins
-const pluginLogging = require("@11ty/eleventy-plugin-directory-output");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginToc = require("eleventy-plugin-toc");
+import pluginLogging from "@11ty/eleventy-plugin-directory-output";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginToc from "eleventy-plugin-toc";
 
 // Helpful functions that do stuff
-const {
+import {
   getArchiveYears,
   getArchivePostsByYear,
-} = require("./config/blogArchive.js");
-const {
+} from "./config/blogArchive.js";
+import {
   getAllTags,
   filterCommonTags,
   formatAsTag,
-} = require("./config/blogTags.js");
-const {
+} from "./config/blogTags.js";
+import {
   markdownConfig,
   markdownFilter,
   markdownFilterInline,
-} = require("./config/markdown.js");
-const { urlizeOpenGraphImage } = require("./config/opengraph.js");
-const { compileSass } = require("./config/sass.js");
-const {
+} from "./config/markdown.js";
+import { urlizeOpenGraphImage } from "./config/opengraph.js";
+import { compileSass } from "./config/sass.js";
+import {
   cachebustAssetUrl,
   formatDate,
   formatISODate,
   getFirstNItems,
-} = require("./config/utils.js");
+} from "./config/utils.js";
+
+// Nunjucks shortcodes
+import shortcodeCallout from "./config/shortcodes/callout.js";
+import shortcodeCharacter from "./config/shortcodes/character.js";
+import shortcodeFigure from "./config/shortcodes/figure.js";
+import shortcodeImageDiffer from "./config/shortcodes/imageDiffer.js";
+import shortcodeMastodon from "./config/shortcodes/mastodon.js";
+import shortcodeResponsiveImage from "./config/shortcodes/responsiveImages.js";
+import shortcodeTwitter from "./config/shortcodes/twitter.js";
+import shortcodeYouTube from "./config/shortcodes/youtube.js";
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  */
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Turn off default log output
   eleventyConfig.setQuietMode(true);
 
@@ -74,39 +84,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("tags", getAllTags);
 
   // Custom Nunjucks Shortcodes
-  eleventyConfig.addPairedNunjucksShortcode(
-    "callout",
-    require("./config/shortcodes/callout.js"),
-  );
-  eleventyConfig.addPairedNunjucksShortcode(
-    "character",
-    require("./config/shortcodes/character.js"),
-  );
-  eleventyConfig.addPairedNunjucksShortcode(
-    "figure",
-    require("./config/shortcodes/figure.js"),
-  );
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "imageDiffer",
-    require("./config/shortcodes/imageDiffer.js"),
-  );
+  eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
+  eleventyConfig.addPairedNunjucksShortcode("character", shortcodeCharacter);
+  eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
+  eleventyConfig.addNunjucksAsyncShortcode("imageDiffer", shortcodeImageDiffer);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
-  eleventyConfig.addPairedNunjucksShortcode(
-    "mastodon",
-    require("./config/shortcodes/mastodon.js"),
-  );
+  eleventyConfig.addPairedNunjucksShortcode("mastodon", shortcodeMastodon);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    require("./config/shortcodes/responsiveImages.js"),
+    shortcodeResponsiveImage,
   );
-  eleventyConfig.addPairedNunjucksShortcode(
-    "twitter",
-    require("./config/shortcodes/twitter.js"),
-  );
-  eleventyConfig.addNunjucksShortcode(
-    "youtube",
-    require("./config/shortcodes/youtube.js"),
-  );
+  eleventyConfig.addPairedNunjucksShortcode("twitter", shortcodeTwitter);
+  eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
   // Filters
   eleventyConfig.addFilter("cachebust", cachebustAssetUrl);
@@ -129,4 +118,4 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
     },
   };
-};
+}
