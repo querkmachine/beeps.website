@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "2024-01": {
     chrome: 47521330,
     safari: 31826638,

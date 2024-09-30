@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   android: "Android",
   blackberry: "BlackBerry",
   "chrome-os": "Chrome OS",

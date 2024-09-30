@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "2024-01": {
     "safari:ios": 27430306,
     "chrome:android": 22028085,

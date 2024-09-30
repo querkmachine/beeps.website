@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "2024-01": {
     mobile: 57553345,
     desktop: 43560230,
