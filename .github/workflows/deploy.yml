@@ -43,6 +43,7 @@ jobs:
           name: beeps-website
           path: _site
           retention-days: 1
+          include-hidden-files: true
   deploy:
     name: Deploy to server
     needs: build
@@ -59,4 +60,4 @@ jobs:
           USER: ${{ secrets.SSH_USER }}
           KEY: ${{ secrets.SSH_KEY }}
           TARGET: ${{ secrets.SSH_PATH }}
-          ARGS: -avP --compress --delete-after --human-readable
+          ARGS: -avzP --delete-after --human-readable
