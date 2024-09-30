@@ -1,6 +1,6 @@
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const hljs = require("highlight.js");
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import hljs from "highlight.js";
 
 /**
  * Process a string as Markdown, treating it as a block of content (i.e. it will
@@ -171,8 +171,4 @@ const markdownConfig = markdownIt({
   })
   .use(markdownItClasses);
 
-module.exports = {
-  markdownConfig,
-  markdownFilter,
-  markdownFilterInline,
-};
+export { markdownConfig, markdownFilter, markdownFilterInline };
