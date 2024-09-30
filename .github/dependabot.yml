@@ -1,0 +1,47 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    reviewers: [querkmachine]
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: direct
+      - dependency-name: caniuse-lite
+    groups:
+      eleventy:
+        patterns:
+          - "@11ty/*"
+          - "eleventy-*"
+      css:
+        patterns:
+          - "sass"
+          - "postcss"
+          - "postcss-*"
+      markdown:
+        patterns:
+          - "markdown-*"
+      linters:
+        patterns:
+          - "husky"
+          - "prettier"
+          - "lint-staged"
+      utils:
+        patterns:
+          - "fs-extra"
+          - "highlight.js"
+          - "luxon"
+          - "sanitize-html"
+
+  - package-ecosystem: github-actions
+    directory: /
+    reviewers: [querkmachine]
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: github-actions
+    directory: /.github/workflows/actions/install-dependencies
+    reviewers: [querkmachine]
+    schedule:
+      interval: "weekly"
