@@ -1,8 +1,8 @@
-const EleventyFetch = require("@11ty/eleventy-fetch");
-const { DateTime } = require("luxon");
-const sanitizeHtml = require("sanitize-html");
+import EleventyFetch from "@11ty/eleventy-fetch";
+import { DateTime } from "luxon";
+import sanitizeHtml from "sanitize-html";
 
-module.exports = {
+export default {
   layout: "blog-post.njk",
   tags: ["blog"],
   isBlogPost: true,

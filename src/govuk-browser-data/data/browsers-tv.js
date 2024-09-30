@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "2024-01": {
     silk: 2322,
     chrome: 1075,

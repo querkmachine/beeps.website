@@ -1,6 +1,5 @@
-const paths = require("../paths.json");
-
-const pluginImages = require("@11ty/eleventy-img");
+import paths from "../paths.js";
+import pluginImages from "@11ty/eleventy-img";
 
 // List of available variants, images and alt text
 const variants = {
@@ -164,4 +163,4 @@ const characterShortcode = function (content, args) {
   </figure>`;
 };
 
-module.exports = characterShortcode;
+export default characterShortcode;

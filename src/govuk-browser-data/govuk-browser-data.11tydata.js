@@ -1,7 +1,17 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
-const dictBrowsers = require("./data/browsers.dict.js");
-const dictSystems = require("./data/operating-systems.dict.js");
+import dictBrowsers from "./data/browsers.dict.js";
+import dictSystems from "./data/operating-systems.dict.js";
+
+import dataDeviceTypes from "./data/device-types.js";
+import dataOperatingSystems from "./data/operating-systems.js";
+import dataCombos from "./data/browser-os-combos.js";
+import dataBrowsers from "./data/browsers-overall.js";
+import dataBrowsersMobile from "./data/browsers-mobile.js";
+import dataBrowsersTablet from "./data/browsers-tablet.js";
+import dataBrowsersDesktop from "./data/browsers-desktop.js";
+import dataBrowsersTv from "./data/browsers-tv.js";
+
 const dictLocale = "en-GB";
 
 const browserName = (key) => {
@@ -232,16 +242,7 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
   </table>`;
 };
 
-module.exports = function () {
-  const dataDeviceTypes = require("./data/device-types.js");
-  const dataOperatingSystems = require("./data/operating-systems.js");
-  const dataCombos = require("./data/browser-os-combos.js");
-  const dataBrowsers = require("./data/browsers-overall.js");
-  const dataBrowsersMobile = require("./data/browsers-mobile.js");
-  const dataBrowsersTablet = require("./data/browsers-tablet.js");
-  const dataBrowsersDesktop = require("./data/browsers-desktop.js");
-  const dataBrowsersTv = require("./data/browsers-tv.js");
-
+export default function () {
   return {
     devices: {
       raw: htmlConvertDataToTable(dataDeviceTypes, {
@@ -378,4 +379,4 @@ module.exports = function () {
       },
     },
   };
-};
+}

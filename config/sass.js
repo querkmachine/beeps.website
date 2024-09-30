@@ -1,9 +1,9 @@
-const paths = require("./paths.json");
+import paths from "./paths.js";
 
-const fs = require("fs-extra");
-const sass = require("sass");
-const postcss = require("postcss");
-const postcssPresetEnv = require("postcss-preset-env");
+import fs from "fs-extra";
+import sass from "sass";
+import postcss from "postcss";
+import postcssPresetEnv from "postcss-preset-env";
 
 /**
  * Syncronously compile sass by passing it first through the Sass compiler and
@@ -38,6 +38,4 @@ const compileSass = function () {
   return true;
 };
 
-module.exports = {
-  compileSass,
-};
+export { compileSass };

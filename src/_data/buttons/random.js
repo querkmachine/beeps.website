@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     src: "/assets/images/buttons/made_with_paws.png",
     alt: "Made with my own two paws",

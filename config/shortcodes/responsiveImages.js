@@ -1,6 +1,5 @@
-const paths = require("../paths.json");
-
-const pluginImages = require("@11ty/eleventy-img");
+import paths from "../paths.js";
+import pluginImages from "@11ty/eleventy-img";
 
 const responsiveImagesShortcode = async function (src, alt, args) {
   if (alt === undefined) {
@@ -59,4 +58,4 @@ const responsiveImagesShortcode = async function (src, alt, args) {
   return imageCode;
 };
 
-module.exports = responsiveImagesShortcode;
+export default responsiveImagesShortcode;

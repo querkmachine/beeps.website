@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
   return [
     {
       icon: "webring-noodlering.svg",
@@ -22,4 +22,4 @@ module.exports = function () {
       previousUrl: "https://fediring.net/previous?host=beeps.website",
     },
   ];
-};
+}

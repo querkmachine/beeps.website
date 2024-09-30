@@ -27,4 +27,4 @@ const youtubeShortcode = function (videoId, settings = {}) {
   }" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
 };
 
-module.exports = youtubeShortcode;
+export default youtubeShortcode;

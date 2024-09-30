@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   aloha: "Aloha",
   android: "Android Browser",
   "android-runtime": "Android runtime",

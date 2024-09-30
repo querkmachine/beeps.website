@@ -3,4 +3,4 @@ const calloutShortcode = function (content) {
   return `<div class="kimCallout">\n${content}</div>`;
 };
 
-module.exports = calloutShortcode;
+export default calloutShortcode;

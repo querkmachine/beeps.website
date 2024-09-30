@@ -1,6 +1,6 @@
 const isProduction = process.env.ENVIRONMENT === "prod";
 
-module.exports = {
+export default {
   eleventyExcludeFromCollections: true,
   eleventyComputed: {
     permalink: (data) => {
