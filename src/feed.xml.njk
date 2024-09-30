@@ -27,7 +27,7 @@ eleventyExcludeFromCollections: true
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <author><![CDATA[{{ site.authorName | safe }}]]></author>
-      <enclosure url="{{ post.data.opengraphImage | absoluteUrl(site.domain) }}" length="0" type="image/png"/>
+      <enclosure url="{{ (page.url + 'opengraph/') | absoluteUrl(site.domain) | urlizeOpenGraphImage }}" length="0" type="image/jpeg"/>
       <description><![CDATA[{{ post.data.metadata.description }}]]></description>
       <content:encoded><![CDATA[{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) | safe }}]]></content:encoded>
     </item>
