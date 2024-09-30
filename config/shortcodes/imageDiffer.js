@@ -1,4 +1,4 @@
-const responsiveImagesShortcode = require("./responsiveImages.js");
+import responsiveImagesShortcode from "./responsiveImages.js";
 
 const imageDifferShortCode = async function (
   image1Src,
@@ -20,4 +20,4 @@ const imageDifferShortCode = async function (
   return `<div class="kimImageDiffer" data-js="image-differ">${image1}${image2}</div>`;
 };
 
-module.exports = imageDifferShortCode;
+export default imageDifferShortCode;

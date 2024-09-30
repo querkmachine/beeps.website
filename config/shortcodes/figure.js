@@ -9,4 +9,4 @@ const figureShortcode = function (content, args) {
   return html;
 };
 
-module.exports = figureShortcode;
+export default figureShortcode;

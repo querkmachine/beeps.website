@@ -1,4 +1,4 @@
-const { formatISODate } = require("../utils.js");
+import { formatISODate } from "../utils.js";
 
 const mastodonQuoteShortcode = function (content, args) {
   // Error if any of these args are missing
@@ -28,4 +28,4 @@ const mastodonQuoteShortcode = function (content, args) {
   }" rel="noreferrer noopener">original post</a>)</figcaption></figure>`;
 };
 
-module.exports = mastodonQuoteShortcode;
+export default mastodonQuoteShortcode;

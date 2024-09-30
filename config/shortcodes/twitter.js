@@ -1,4 +1,4 @@
-const { formatISODate } = require("../utils.js");
+import { formatISODate } from "../utils.js";
 
 const twitterQuoteShortcode = function (content, args) {
   // Error if any of these args are missing
@@ -24,4 +24,4 @@ const twitterQuoteShortcode = function (content, args) {
   }" rel="noreferrer noopener">original tweet</a>)</figcaption></figure>`;
 };
 
-module.exports = twitterQuoteShortcode;
+export default twitterQuoteShortcode;
