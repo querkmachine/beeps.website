@@ -139,4 +139,5 @@ module.exports = [
     alt: "maff.scot",
     url: "//maff.scot/",
   },
+  { alt: "Yao", url: "//yaodema.com/" },
 ];
