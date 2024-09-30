@@ -16,6 +16,7 @@ module.exports = function () {
     ],
     footerLinks: [
       { href: "/about/", text: "About beeps" },
+      { href: "/now/", text: "beeps NOW!" },
       { href: "/ash/", text: "Ash the amphimorpho" },
       { href: "/brand/", text: "beeps' brand" },
       { href: "/contact/", text: "Contact beeps" },
