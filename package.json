@@ -24,7 +24,7 @@
   "homepage": "https://github.com/querkmachine/beeps.website#readme",
   "browserslist": "last 2 versions and last 2 years and not dead",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.20",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
