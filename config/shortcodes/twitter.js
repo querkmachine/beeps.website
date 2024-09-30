@@ -18,7 +18,7 @@ const twitterQuoteShortcode = function (content, args) {
     args.username
   } on Twitter. <time datetime="${args.date}">${formatISODate(
     args.date,
-    "humanWithTime"
+    "humanWithTime",
   )}.</time>  (<a href="https://twitter.com/${args.username}/status/${
     args.number
   }" rel="noreferrer noopener">original tweet</a>)</figcaption></figure>`;

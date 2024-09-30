@@ -10,7 +10,8 @@
 // Focus style for text
 @mixin kim-focus-ring {
   @include _kim-focus-ring-common;
-  box-shadow: 0 -2px var(--color-focus-background),
+  box-shadow:
+    0 -2px var(--color-focus-background),
     0 4px var(--color-focus-text);
   box-decoration-break: clone;
 }
@@ -18,7 +19,8 @@
 // Focus style for images, buttons, etc.
 @mixin kim-focus-ring--block($background-color: true) {
   @include _kim-focus-ring-common($background-color: $background-color);
-  box-shadow: 0 0 0 4px var(--color-focus-background),
+  box-shadow:
+    0 0 0 4px var(--color-focus-background),
     0 0 0 8px var(--color-focus-text);
 }
 

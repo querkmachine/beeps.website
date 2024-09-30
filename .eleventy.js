@@ -76,36 +76,36 @@ module.exports = function (eleventyConfig) {
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode(
     "callout",
-    require("./config/shortcodes/callout.js")
+    require("./config/shortcodes/callout.js"),
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "character",
-    require("./config/shortcodes/character.js")
+    require("./config/shortcodes/character.js"),
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "figure",
-    require("./config/shortcodes/figure.js")
+    require("./config/shortcodes/figure.js"),
   );
   eleventyConfig.addNunjucksAsyncShortcode(
     "imageDiffer",
-    require("./config/shortcodes/imageDiffer.js")
+    require("./config/shortcodes/imageDiffer.js"),
   );
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addPairedNunjucksShortcode(
     "mastodon",
-    require("./config/shortcodes/mastodon.js")
+    require("./config/shortcodes/mastodon.js"),
   );
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    require("./config/shortcodes/responsiveImages.js")
+    require("./config/shortcodes/responsiveImages.js"),
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "twitter",
-    require("./config/shortcodes/twitter.js")
+    require("./config/shortcodes/twitter.js"),
   );
   eleventyConfig.addNunjucksShortcode(
     "youtube",
-    require("./config/shortcodes/youtube.js")
+    require("./config/shortcodes/youtube.js"),
   );
 
   // Filters

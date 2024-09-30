@@ -33,7 +33,10 @@
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-family: var(--font-code);
-  font-feature-settings: "lnum", "liga" 0, "calt" 0;
+  font-feature-settings:
+    "lnum",
+    "liga" 0,
+    "calt" 0;
 }
 
 // Unhighlighted inline code

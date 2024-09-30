@@ -25,7 +25,7 @@ module.exports = {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
     },
     shares: async (data) => {
@@ -40,7 +40,7 @@ module.exports = {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
     },
     comments: async (data) => {
@@ -55,7 +55,7 @@ module.exports = {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       comments = comments.descendants.map((item) => {
