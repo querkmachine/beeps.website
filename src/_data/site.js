@@ -1,6 +1,6 @@
 const environment = process.env.ENVIRONMENT;
 
-module.exports = function () {
+export default function () {
   return {
     name: "beeps",
     blogName: "beeps' blog",
@@ -35,4 +35,4 @@ module.exports = function () {
       },
     ],
   };
-};
+}

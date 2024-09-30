@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     src: "/assets/images/88x31-d.gif",
     alt: "Dark blue and green animated button with Ash the amphimorpho",

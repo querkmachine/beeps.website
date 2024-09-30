@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   { alt: "a_bat", url: "//a-bat.com/" },
   { alt: "Alteran Labs", url: "//alteranlabs.co.uk/" },
   { alt: "byte", url: "//bytebat.zone/" },
