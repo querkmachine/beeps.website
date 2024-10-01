@@ -29,7 +29,6 @@ updates:
           - "lint-staged"
       utils:
         patterns:
-          - "fs-extra"
           - "highlight.js"
           - "luxon"
           - "sanitize-html"

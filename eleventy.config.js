@@ -22,7 +22,7 @@ import {
   markdownFilterInline,
 } from "./config/markdown.js";
 import { urlizeOpenGraphImage } from "./config/opengraph.js";
-import { compileSass } from "./config/sass.js";
+import { outputStylesheet } from "./config/sass.js";
 import {
   cachebustAssetUrl,
   formatDate,
@@ -78,7 +78,7 @@ export default function (eleventyConfig) {
 
   // Watch and compile Sass files
   eleventyConfig.addWatchTarget(paths.srcAssets + "/**/*.scss");
-  eleventyConfig.on("beforeBuild", compileSass);
+  eleventyConfig.on("beforeBuild", outputStylesheet);
 
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
