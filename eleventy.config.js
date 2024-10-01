@@ -1,10 +1,11 @@
 // Config
 import paths from "./config/paths.js";
+import site from "./src/_data/site.js";
 
 // 11ty plugins
-import pluginLogging from "@11ty/eleventy-plugin-directory-output";
-import pluginRss from "@11ty/eleventy-plugin-rss";
-import pluginToc from "eleventy-plugin-toc";
+import loggingPlugin from "@11ty/eleventy-plugin-directory-output";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import tocPlugin from "eleventy-plugin-toc";
 
 // Helpful functions that do stuff
 import {
@@ -45,13 +46,32 @@ import shortcodeYouTube from "./config/shortcodes/youtube.js";
  */
 
 export default function (eleventyConfig) {
+  const siteData = site();
+
   // Turn off default log output
   eleventyConfig.setQuietMode(true);
 
   // Load plugins
-  eleventyConfig.addPlugin(pluginLogging);
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginToc);
+  eleventyConfig.addPlugin(loggingPlugin);
+  eleventyConfig.addPlugin(tocPlugin);
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: {
+      name: "blog",
+      limit: 10,
+    },
+    metadata: {
+      language: "en",
+      title: siteData.blogName,
+      subtitle: siteData.blogDescription,
+      base: siteData.domain,
+      author: {
+        name: siteData.authorName,
+        email: siteData.authorEmail,
+      },
+    },
+  });
 
   // Ignore the blog drafts directory if this is a production build
   if (process.env.ENVIRONMENT === "prod") {
@@ -92,7 +112,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("mastodon", shortcodeMastodon);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    shortcodeResponsiveImage,
+    shortcodeResponsiveImage
   );
   eleventyConfig.addPairedNunjucksShortcode("twitter", shortcodeTwitter);
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
