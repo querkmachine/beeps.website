@@ -2,22 +2,34 @@
 @use "media-queries";
 
 @mixin _kim-link-underline($color) {
-  text-decoration: underline;
-  text-decoration-thickness: 0.6em;
-  text-decoration-color: $color;
-  text-decoration-skip-ink: none;
-  text-underline-offset: -0.25em;
+  & {
+    text-decoration: underline;
+    text-decoration-thickness: 0.6em;
+    text-decoration-color: $color;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -0.25em;
+  }
+
+  @media (forced-colors: active) {
+    text-decoration-thickness: unset;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: unset;
+  }
 }
 
 @mixin _kim-link-common {
-  color: var(--color-link);
-  word-break: break-word;
+  & {
+    color: var(--color-link);
+    word-break: break-word;
+  }
+
   &:focus-visible {
     @include a11y.kim-focus-ring;
     img {
       @include a11y.kim-focus-ring--block;
     }
   }
+
   @include media-queries.kim-print {
     color: black;
     text-decoration: underline;
@@ -33,11 +45,13 @@
 }
 
 @mixin kim-link {
-  @include _kim-link-underline($color: var(--color-link-underline));
   @include _kim-link-common;
+  @include _kim-link-underline($color: var(--color-link-underline));
+
   &:visited {
     text-decoration-color: var(--color-link-underline-visited);
   }
+
   &:hover {
     text-decoration-color: var(--color-link-underline-hover);
   }
@@ -46,6 +60,7 @@
 @mixin kim-link-no-underline {
   text-decoration: none;
   @include _kim-link-common;
+
   &:hover {
     @include _kim-link-underline($color: var(--color-link-underline-hover));
   }
