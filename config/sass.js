@@ -1,7 +1,7 @@
 import paths from "./paths.js";
 
 import fs from "fs-extra";
-import sass from "sass";
+import * as sass from "sass";
 import postcss from "postcss";
 import postcssPresetEnv from "postcss-preset-env";
 
@@ -13,8 +13,7 @@ import postcssPresetEnv from "postcss-preset-env";
  *   successful or not.
  */
 const compileSass = function () {
-  const result = sass.renderSync({
-    file: paths.srcAssets + "/stylesheet.scss",
+  const result = sass.compile(paths.srcAssets + "/stylesheet.scss", {
     sourceMap: false,
     outputStyle: "compressed",
   });
@@ -31,7 +30,7 @@ const compileSass = function () {
           if (err) console.error(err);
           console.log("PostCSS transformations complete.");
           return false;
-        },
+        }
       );
     });
 
