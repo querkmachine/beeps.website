@@ -24,7 +24,13 @@ metadata:
 }
 .page-swatch {
   padding-block-start: var(--space-2);
-  border-block-start: 2rem solid var(--color);
+  
+}
+.page-swatch__preview {
+  block-size: 2rem;
+  margin-block-end: var(--space-1);
+  background-color: var(--color);
+  forced-color-adjust: none;
 }
 .page-rule {
   max-inline-size: var(--grid-max-width);
@@ -55,7 +61,8 @@ metadata:
 
 {% macro _swatch(color, description) %}
 <div class="kimGrid_column kimGrid_column-oneHalf galaxy:kimGrid_column-oneThird">
-  <p class="kimBody page-swatch" style="--color: {{ color }};">
+  <p class="kimBody page-swatch">
+    <div class="page-swatch__preview" style="--color: {{ color }};" role="presentation"></div>
     <code class="kimCode">{{ color }}</code><br>
     {{ description }}
   </p>
