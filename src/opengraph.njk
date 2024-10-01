@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
   <div class="kimHeading-xl page-beeps">beeps</div>
   {%- if preview.data.isBlogPost %}
     <div class="kimHeading-l kim-!-margin-block-start-0">
-      {{ preview.data.title | markdownInline | safe }}
+      {{ (preview.data.title or "") | markdownInline | safe }}
     </div>
   {%- elif preview.url == '/' %}
     <div class="kimHeading-xl">
@@ -26,7 +26,7 @@ eleventyExcludeFromCollections: true
     </div>
   {%- else %}
     <div class="kimHeading-xl">
-      {{ preview.data.title | markdownInline | safe }}
+      {{ (preview.data.title or "") | markdownInline | safe }}
     </div>
   {%- endif %}
 {% endblock %}

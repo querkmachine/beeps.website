@@ -4,10 +4,11 @@ export default function () {
   return {
     name: "beeps",
     blogName: "beeps' blog",
+    blogDescription: "The inane ramblings of beeps.",
     authorName: "beeps",
     authorEmail: "hi@berly.kim",
     twitterUsername: "@batbeeps",
-    domain: environment === "prod" ? "https://beeps.website" : "",
+    domain: "https://beeps.website",
     environment,
     relMe: [
       "https://chitter.xyz/@batbeeps",
