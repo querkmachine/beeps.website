@@ -33,8 +33,8 @@
 }
 
 @mixin kim-link {
-  @include _kim-link-common;
   @include _kim-link-underline($color: var(--color-link-underline));
+  @include _kim-link-common;
   &:visited {
     text-decoration-color: var(--color-link-underline-visited);
   }
@@ -44,8 +44,8 @@
 }
 
 @mixin kim-link-no-underline {
-  @include _kim-link-common;
   text-decoration: none;
+  @include _kim-link-common;
   &:hover {
     @include _kim-link-underline($color: var(--color-link-underline-hover));
   }

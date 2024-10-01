@@ -25,11 +25,11 @@
   }
 
   .kimTabs_link {
-    @include links.kim-link-no-underline;
     display: inline-block;
     padding: var(--space-1) var(--space-2-3);
     border: var(--tabs-border-inactive);
     background-color: var(--border-inactive-color);
+    @include links.kim-link-no-underline;
   }
 
   .kimTabs_link[aria-selected="true"] {
