@@ -7,7 +7,11 @@ export default [
   { alt: "Caylee Morris", url: "//caylee.dev/" },
   { alt: "Cendyne", url: "//cendyne.dev/" },
   { alt: "codl", url: "//www.codl.fr/" },
-  { alt: "DarkOverord", url: "//darkoverord.info/" },
+  {
+    src: "/assets/images/buttons/darkoverord.gif",
+    alt: "DarkOverord",
+    url: "//darkoverord.info/",
+  },
   { alt: "David Cox", url: "//dav-idc.com/" },
   {
     src: "/assets/images/buttons/dex_dragon.png",
