@@ -8,25 +8,36 @@ $_thumb-inline-size: 1.5rem;
   inline-size: $_thumb-inline-size;
   border: none;
   border-radius: 0;
+  forced-color-adjust: none;
   color: transparent;
-  background-color: var(--color-furniture);
+  background-color: var(--thumb-background);
   background-image: repeating-linear-gradient(
     to right,
-    var(--color-background),
-    var(--color-background) 1px,
+    var(--thumb-markers),
+    var(--thumb-markers) 1px,
     transparent 1px,
     transparent 2px
   );
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0.75rem 1.5rem;
+  outline: var(--border-hairline) solid transparent;
   cursor: ew-resize;
 }
 
 .kimImageDiffer {
+  --thumb-background: var(--color-furniture);
+  --thumb-markers: var(--color-background);
+
   display: flex;
   flex-direction: column;
   margin-block-end: var(--space-5);
+
+  @media (forced-colors: active) {
+    --thumb-background: ButtonFace;
+    --thumb-markers: ButtonText;
+  }
+
   &.kimImageDiffer-active {
     --exposure: 50%;
     position: relative;
