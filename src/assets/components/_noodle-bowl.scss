@@ -20,6 +20,7 @@
     position: absolute;
     top: var(--offset-top);
     background-color: var(--color-furniture-alt);
+    outline: var(--border-regular) solid transparent;
   }
 
   &_inner {
