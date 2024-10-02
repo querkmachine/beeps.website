@@ -1,6 +1,8 @@
 export default class Spots {
   constructor($element, options = {}) {
-    if (!$element) {
+    // Don't run if the target element is missing or if a forced colours mode
+    // is active
+    if (!$element || matchMedia("(forced-colors: active)").matches) {
       return;
     }
 
@@ -22,7 +24,7 @@ export default class Spots {
     this.lastSpotTimestamp = null;
     this.spots = [];
     this.prefersReducedMotion = matchMedia(
-      "(prefers-reduced-motion: reduce)",
+      "(prefers-reduced-motion: reduce)"
     ).matches;
 
     // Wait until the page has finished loading other stuff. Pretty much all of
@@ -43,12 +45,12 @@ export default class Spots {
     this.$canvas.height = this.canvasBox.height;
     this.spotTarget = Math.floor(
       ((this.$canvas.width * this.$canvas.height) / 50000) *
-        this.settings.spotMultiplier,
+        this.settings.spotMultiplier
     );
   }
 
   setStrokeColor() {
-    // Overridden colours
+    // If colours overidden
     if (this.settings.colors.length) {
       this.strokeColors = this.settings.colors;
       return;
@@ -197,7 +199,7 @@ export default class Spots {
       x: this.randomNumber(0, this.$canvas.width),
       y: this.randomNumber(
         0,
-        this.$canvas.height * this.settings.heightProportion,
+        this.$canvas.height * this.settings.heightProportion
       ),
       opacity: this.randomNumber(0.125, 0.6),
     });
@@ -246,7 +248,7 @@ export default class Spots {
     }
 
     const randomIndex = Math.round(
-      this.randomNumber(0, this.strokeColors.length - 1),
+      this.randomNumber(0, this.strokeColors.length - 1)
     );
     const color = this.strokeColors[randomIndex];
 
