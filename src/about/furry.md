@@ -18,7 +18,7 @@ My main [fursona](https://en.wikipedia.org/wiki/Fursona) is named Ash. Ash is a 
 
 In August 2023 [I wrote about how Ash came to exist]({{ '/blog/2023-08-27-the-next-generation/' | url }}) and become my fursona.
 
-{% figure caption='Artwork by <a href="https://tuxedodragon.carrd.co/">Tuxedo Dragon</a>.' %}
+{% figure caption='Artwork by <a href="https://tuxedodragon.carrd.co/">TuxedoDragon</a>.' %}
 {% responsiveImage "./src/images/ash-by-tuxedodragon.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly." %}
 {% endfigure %}
 

@@ -93,7 +93,7 @@ export default [
   { alt: "Tenna", url: "//tenna.zip/" },
   {
     src: "/assets/images/buttons/tuxedodragon.gif",
-    alt: "Tuxedo Dragon",
+    alt: "TuxedoDragon",
     url: "//tuxedodragon.art/",
   },
   {

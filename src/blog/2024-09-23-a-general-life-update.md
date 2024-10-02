@@ -109,7 +109,7 @@ I'm going to London again next weekend for some quality time with Kai. Might hit
 
 After probably far too long in development, the (still rather basic) website I built for the [BristolFurs](https://bristolfurs.co.uk) has gone live. Woop woop.
 
-This website also got a little bit of a makeover, with new artwork from [Tuxedo Dragon](https://tuxedodragon.art) everywhere! I've been updating the [links page]({{ '/links/' | url }}) aggressively too, in response to a lot of friends and acquaintances setting up personal sites in response to [the closure of Cohost]({{ '/blog/2024-09-12-in-memory-of-cohost/' | url }}) and ongoing enshittification of Twitter.
+This website also got a little bit of a makeover, with new artwork from [TuxedoDragon](https://tuxedodragon.art) everywhere! I've been updating the [links page]({{ '/links/' | url }}) aggressively too, in response to a lot of friends and acquaintances setting up personal sites in response to [the closure of Cohost]({{ '/blog/2024-09-12-in-memory-of-cohost/' | url }}) and ongoing enshittification of Twitter.
 
 I bought a new fridge–freezer. It ended up being slightly too tall for the kitchen door and we had to remove bit of ceiling to get it in, it was a whole thing. Still, it's a _very_ good fridge–freezer.
 

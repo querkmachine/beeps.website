@@ -80,6 +80,6 @@ I don't know. I just don't know. Maybe a change will happen to my online present
 
 Welcome to the legacy, Ash.
 
-{% figure caption='Artwork by <a href="https://tuxedodragon.carrd.co/">Tuxedo Dragon</a>.' %}
+{% figure caption='Artwork by <a href="https://tuxedodragon.carrd.co/">TuxedoDragon</a>.' %}
 {% responsiveImage "./src/images/ash-by-tuxedodragon.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly." %}
 {% endfigure %}
