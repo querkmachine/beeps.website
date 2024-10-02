@@ -7,6 +7,7 @@
     position: sticky;
     inset-block-start: var(--space-3);
   }
+
   &_collapsible[open] {
     .kimToc_collapsibleSummary {
       margin-block-end: var(--space-2);
@@ -27,6 +28,10 @@
       height: var(--marker-size);
       background-color: var(--color-link);
       clip-path: polygon(100% 50%, 0 0, 0 100%);
+
+      @media (forced-colors: active) {
+        background-color: LinkText;
+      }
     }
     &::marker {
       content: none;
