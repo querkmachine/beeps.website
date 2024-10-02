@@ -2,6 +2,8 @@
 title: Covid sucks, but you should already know that
 date: 2024-06-26
 tags: [meta, medical]
+metadata:
+  description: I caught covid. It sucks.
 interactions:
   host: chitter.xyz
   username: batbeeps

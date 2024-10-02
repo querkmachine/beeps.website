@@ -2,6 +2,8 @@
 title: The products and programs I've procured to promote productivity
 date: 2024-03-20
 tags: [technology, web development]
+metadata:
+  description: The hardware and software I use for getting shit done.
 interactions:
   host: chitter.xyz
   username: batbeeps

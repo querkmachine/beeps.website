@@ -2,6 +2,8 @@
 title: In memory of Cohost
 date: 2024-09-12
 tags: [technology]
+metadata:
+  description: Cohost.org is shutting down, and the internet is worse off for it.
 interactions:
   host: chitter.xyz
   username: batbeeps

@@ -2,6 +2,8 @@
 title: "Frontend Forum #2: Getting (and staying) motivated"
 date: 2024-04-30
 tags: [web development, frontend forum]
+metadata:
+  description: My thoughts on getting the motivation to build and maintain a website.
 interactions:
   host: chitter.xyz
   username: batbeeps

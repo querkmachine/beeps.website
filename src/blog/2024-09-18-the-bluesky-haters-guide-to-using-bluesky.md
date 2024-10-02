@@ -2,6 +2,8 @@
 title: The Bluesky hater's guide to using Bluesky
 date: 2024-09-18
 tags: [technology]
+metadata:
+  description: How to use Bluesky by actually using Mastodon and the fediverse.
 interactions:
   host: chitter.xyz
   username: batbeeps

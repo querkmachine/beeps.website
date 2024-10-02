@@ -2,6 +2,8 @@
 title: "Frontend Forum #1: The basics and getting started"
 date: 2024-04-29
 tags: [web development, frontend forum]
+metadata:
+  description: My thoughts on how to get started learning web development.
 interactions:
   host: chitter.xyz
   username: batbeeps

@@ -11,6 +11,8 @@ tags:
     web development,
     technology,
   ]
+metadata:
+  description: Been a while since I mentioned the yearly theme, work and gender healthcare. Let's talk about that.
 interactions:
   host: chitter.xyz
   username: batbeeps

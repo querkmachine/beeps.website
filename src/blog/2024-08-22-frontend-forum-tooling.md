@@ -2,6 +2,8 @@
 title: "Frontend Forum #3: Frontend tooling"
 date: 2024-08-22
 tags: [web development, frontend forum]
+metadata:
+  description: My thoughts on the kind of tooling needed to build websites in 2024.
 interactions:
   host: chitter.xyz
   username: batbeeps
