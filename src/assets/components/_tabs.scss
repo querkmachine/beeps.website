@@ -34,6 +34,8 @@
 
   .kimTabs_link[aria-selected="true"] {
     border-color: var(--tabs-border-color);
+    outline: var(--border-regular) solid transparent;
+    outline-offset: calc(0px - var(--border-regular));
   }
 
   .kimTabs_panel {
