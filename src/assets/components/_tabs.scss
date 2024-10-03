@@ -21,24 +21,18 @@
     list-style: none;
   }
 
-  .kimTabs_item {
-  }
-
   .kimTabs_link {
     display: inline-block;
     padding: var(--space-1) var(--space-2-3);
     border: var(--tabs-border-inactive);
     background-color: var(--border-inactive-color);
     @include links.kim-link-no-underline;
-  }
 
-  .kimTabs_link[aria-selected="true"] {
-    border-color: var(--tabs-border-color);
-    outline: var(--border-regular) solid transparent;
-    outline-offset: calc(0px - var(--border-regular));
-  }
-
-  .kimTabs_panel {
+    &[aria-selected="true"] {
+      border-color: var(--tabs-border-color);
+      outline: var(--border-regular) solid transparent;
+      outline-offset: calc(0px - var(--border-regular));
+    }
   }
 
   // We can't display: none the panels as we use funky scroll syncronisation stuff on the browser stats pages, which doesn't work with non-rendered elements.

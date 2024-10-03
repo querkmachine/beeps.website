@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  &_date {
-    margin-block-start: var(--space-1);
-    font-size: var(--size--1);
-  }
+}
+
+.kimBlogCard_date {
+  margin-block-start: var(--space-1);
+  font-size: var(--size--1);
 }

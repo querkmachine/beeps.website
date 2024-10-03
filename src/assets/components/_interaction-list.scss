@@ -6,15 +6,18 @@
   margin-block-end: var(--space-5);
   padding: 0;
   list-style-type: none;
+
   a {
     display: block;
     padding: var(--border-hairline);
     border: var(--border-hairline) solid var(--color-link);
     line-height: 0;
+
     &:hover {
       border-color: var(--color-link-underline-hover);
     }
   }
+
   img {
     inline-size: 100%;
     aspect-ratio: 1;

@@ -17,6 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-wrap: pretty;
   line-height: 1.5;
+
   @include media-queries.kim-print {
     color: black !important;
     background-color: white !important;

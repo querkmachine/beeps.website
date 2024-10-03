@@ -1,15 +1,16 @@
-@mixin _kim-focus-ring-common($background-color: true) {
+@mixin -kim-focus-ring-common($background-color: true) {
   outline: 2px solid transparent;
   color: var(--color-focus-text);
+  text-decoration: none;
+
   @if $background-color {
     background-color: var(--color-focus-background);
   }
-  text-decoration: none;
 }
 
 // Focus style for text
 @mixin kim-focus-ring {
-  @include _kim-focus-ring-common;
+  @include -kim-focus-ring-common;
   box-shadow:
     0 -2px var(--color-focus-background),
     0 4px var(--color-focus-text);
@@ -18,7 +19,7 @@
 
 // Focus style for images, buttons, etc.
 @mixin kim-focus-ring--block($background-color: true) {
-  @include _kim-focus-ring-common($background-color: $background-color);
+  @include -kim-focus-ring-common($background-color: $background-color);
   box-shadow:
     0 0 0 4px var(--color-focus-background),
     0 0 0 8px var(--color-focus-text);

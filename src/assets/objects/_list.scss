@@ -3,39 +3,49 @@
   margin-block-end: var(--space-5);
   padding: 0;
   list-style-type: none;
+
   li + li {
     margin-block-start: var(--space-1);
   }
+
   &-bulleted,
   &-numbered {
     padding-left: 2em;
   }
+
   &-bulleted {
     list-style-type: square;
   }
+
   &-numbered {
     list-style-type: decimal;
+
     li::marker {
       font-feature-settings: "tnum", "lnum";
     }
   }
+
   &-spaced {
     li + li {
       margin-block-start: var(--space-3);
     }
   }
+
   &-inline {
     li {
       display: inline-block;
       margin-inline-end: var(--space-3);
     }
+
     li + li {
       margin-block-start: 0;
     }
   }
+
   &-columns {
     column-width: 22ch;
     column-gap: var(--grid-gutter);
+
     li {
       break-inside: avoid;
     }

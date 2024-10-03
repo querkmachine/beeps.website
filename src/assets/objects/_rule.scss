@@ -3,9 +3,11 @@
   margin-block: var(--space-5);
   border: none;
   border-block-start: var(--border-regular) solid var(--color-furniture-alt);
+
   &-thick {
     border-block-start-width: var(--border-thick);
   }
+
   &-hairline {
     border-block-start-width: var(--border-hairline);
   }

@@ -1,5 +1,4 @@
-// I use the same colours for code snippets regardless of dark/light mode
-// settings. There are also lots of colours here not used elsewhere on the site,
+// There are also lots of colours here not used elsewhere on the site,
 // as more colours are needed than are in the beeps brand palette.
 
 .kimCode,
@@ -70,6 +69,7 @@
     );
     font-style: italic;
   }
+
   .hljs-tag,
   .hljs-selector-tag,
   .hljs-keyword,
@@ -80,21 +80,25 @@
       var(--color-code-h-yellow) var(--color-code-s) var(--color-code-l)
     );
   }
+
   .hljs-selector-id {
     color: hsl(var(--color-code-h-red) var(--color-code-s) var(--color-code-l));
   }
+
   .hljs-selector-class,
   .hljs-title.function_ {
     color: hsl(
       var(--color-code-h-cyan) var(--color-code-s) var(--color-code-l)
     );
   }
+
   .hljs-property,
   .hljs-params {
     color: hsl(
       var(--color-code-h-blue) var(--color-code-s) var(--color-code-l)
     );
   }
+
   .hljs-attr,
   .hljs-selector-attr,
   .hljs-title.class_ {
@@ -102,21 +106,25 @@
       var(--color-code-h-pink) var(--color-code-s) var(--color-code-l)
     );
   }
+
   .hljs-selector-pseudo,
   .hljs-attribute {
     color: hsl(
       var(--color-code-h-green) var(--color-code-s) var(--color-code-l)
     );
   }
+
   .hljs-string,
   .hljs-subst {
     color: var(--color-code-text);
   }
+
   .hljs-number {
     color: hsl(
       var(--color-code-h-orange) var(--color-code-s) var(--color-code-l)
     );
   }
+
   .hljs-meta,
   .hljs-title.class_ {
     font-weight: bold;

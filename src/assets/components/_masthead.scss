@@ -2,60 +2,68 @@
 @use "../helpers/media-queries";
 
 .kimMasthead {
-  $self: &;
   color: var(--color-text);
   background-color: var(--color-background);
   font-family: var(--font-header);
   font-size: var(--size-2);
+
   @include media-queries.kim-print {
     display: none;
   }
-  &_inner {
-    display: flex;
-    padding-block-end: var(--space-4);
-    border-block-start: var(--border-thick) solid var(--color-furniture);
+}
+
+.kimMasthead_inner {
+  display: flex;
+  padding-block-end: var(--space-4);
+  border-block-start: var(--border-thick) solid var(--color-furniture);
+}
+
+.kimMasthead_brand {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: center;
+  margin-inline-end: var(--space-3);
+  padding: var(--space-2);
+  color: var(--color-background);
+  background-color: var(--color-furniture);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover .kimMasthead_logo {
+    fill: var(--color-link-underline-hover);
   }
-  &_brand {
-    display: inline-flex;
-    align-items: center;
-    vertical-align: center;
-    margin-inline-end: var(--space-3);
-    padding: var(--space-2);
-    color: var(--color-background);
-    background-color: var(--color-furniture);
-    font-weight: 700;
+
+  &:focus-visible {
+    outline: none;
+
+    .kimMasthead_name {
+      @include a11y.kim-focus-ring;
+    }
+  }
+}
+
+.kimMasthead_logo {
+  fill: currentcolor;
+  line-height: 0;
+}
+
+.kimMasthead_name {
+  margin-inline-start: var(--space-3);
+
+  @include media-queries.kim-cq($to: constitution) {
+    @include a11y.kim-visually-hidden;
+  }
+}
+
+.kimMasthead_breadcrumbs {
+  display: inline-block;
+  align-self: center;
+  margin-block: var(--space-1);
+
+  a + a::before {
+    content: "/";
+    margin-inline: var(--space-1);
+    color: var(--color-text);
     text-decoration: none;
-    &:hover {
-      #{$self}_logo {
-        fill: var(--color-link-underline-hover);
-      }
-    }
-    &:focus-visible {
-      outline: none;
-      #{$self}_name {
-        @include a11y.kim-focus-ring;
-      }
-    }
-  }
-  &_logo {
-    fill: currentcolor;
-    line-height: 0;
-  }
-  &_name {
-    margin-inline-start: var(--space-3);
-    @include media-queries.kim-cq($to: constitution) {
-      @include a11y.kim-visually-hidden;
-    }
-  }
-  &_breadcrumbs {
-    display: inline-block;
-    align-self: center;
-    margin-block: var(--space-1);
-    a + a::before {
-      margin-inline: var(--space-1);
-      content: "/";
-      color: var(--color-text);
-      text-decoration: none;
-    }
   }
 }

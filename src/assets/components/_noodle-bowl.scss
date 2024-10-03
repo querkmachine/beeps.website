@@ -13,86 +13,83 @@
   position: relative;
   height: clamp(var(--min-height), var(--height), var(--max-height));
   pointer-events: none;
+}
 
-  &_canvas {
-    width: 100%;
-    height: var(--canvas-height);
-    position: absolute;
-    top: var(--offset-top);
-    background-color: var(--color-furniture-alt);
-    outline: var(--border-regular) solid transparent;
+.kimNoodleBowl_canvas {
+  width: 100%;
+  height: var(--canvas-height);
+  position: absolute;
+  top: var(--offset-top);
+  background-color: var(--color-furniture-alt);
+  outline: var(--border-regular) solid transparent;
+}
+
+.kimNoodleBowl_inner {
+  height: calc(var(--canvas-height) + var(--offset-top));
+  margin-top: calc(0px - var(--offset-top));
+  position: relative;
+  background-image: url("/assets/images/noodle-footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto 100%;
+
+  @media (min-resolution: 2x) {
+    background-image: url("/assets/images/noodle-footer@2x.png");
   }
 
-  &_inner {
-    height: calc(var(--canvas-height) + var(--offset-top));
-    margin-top: calc(0px - var(--offset-top));
-    position: relative;
-    background-image: url("/assets/images/noodle-footer.png");
+  &::before,
+  &::after {
+    --pawb-min-height: calc(var(--min-height) * var(--pawb-height-multiplier));
+    --pawb-ideal-height: calc(var(--height) * var(--pawb-height-multiplier));
+    --pawb-max-height: calc(var(--max-height) * var(--pawb-height-multiplier));
+    --pawb-height: clamp(
+      var(--pawb-min-height),
+      var(--pawb-ideal-height),
+      var(--pawb-max-height)
+    );
+    --pawb-width: calc(var(--pawb-height) * 1.57);
+    --pawb-offset: var(--pawb-width);
+
+    content: "";
+    display: block;
+    width: var(--pawb-width);
+    height: var(--pawb-height);
+    position: absolute;
+    bottom: calc(0px - var(--offset-bottom));
+    background-image: url("/assets/images/noodle-footer--pawbs.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: auto 100%;
+    animation-name: kimPawbBounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
 
-    @media (min-resolution: 2x) {
-      background-image: url("/assets/images/noodle-footer@2x.png");
+    // Move pawbs further apart if we have space
+    @include media-queries.kim-mq($from: 430px) {
+      --pawb-offset: calc(var(--pawb-width) * 1.2);
     }
 
-    &::before,
-    &::after {
-      --pawb-min-height: calc(
-        var(--min-height) * var(--pawb-height-multiplier)
-      );
-      --pawb-ideal-height: calc(var(--height) * var(--pawb-height-multiplier));
-      --pawb-max-height: calc(
-        var(--max-height) * var(--pawb-height-multiplier)
-      );
-      --pawb-height: clamp(
-        var(--pawb-min-height),
-        var(--pawb-ideal-height),
-        var(--pawb-max-height)
-      );
-      --pawb-width: calc(var(--pawb-height) * 1.57);
-      --pawb-offset: var(--pawb-width);
-      content: "";
-      display: block;
-      width: var(--pawb-width);
-      height: var(--pawb-height);
-      position: absolute;
-      bottom: calc(0px - var(--offset-bottom));
-      background-image: url("/assets/images/noodle-footer--pawbs.png");
-      background-repeat: no-repeat;
-      background-position: bottom center;
-      background-size: auto 100%;
-      animation-name: kimPawbBounce;
-      animation-iteration-count: infinite;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-direction: alternate-reverse;
-
-      // Move pawbs further apart if we have space
-      @include media-queries.kim-mq($from: 430px) {
-        --pawb-offset: calc(var(--pawb-width) * 1.2);
-      }
-
-      // Hide pawbs entirely on really narrow screens to prevent introducing
-      // a horizontal scrollbar
-      @include media-queries.kim-mq($to: 370px) {
-        content: none;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        animation-name: none;
-      }
+    // Hide pawbs entirely on really narrow screens to prevent introducing
+    // a horizontal scrollbar
+    @include media-queries.kim-mq($to: 370px) {
+      content: none;
     }
 
-    &::before {
-      left: calc(50% - var(--pawb-offset));
+    @media (prefers-reduced-motion: reduce) {
+      animation-name: none;
     }
+  }
 
-    &::after {
-      left: calc(50% + var(--pawb-offset));
-      animation-delay: -1s;
-      rotate: y 180deg;
-    }
+  &::before {
+    left: calc(50% - var(--pawb-offset));
+  }
+
+  &::after {
+    left: calc(50% + var(--pawb-offset));
+    animation-delay: -1s;
+    rotate: y 180deg;
   }
 }
 

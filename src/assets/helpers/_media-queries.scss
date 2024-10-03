@@ -3,7 +3,7 @@
 @use "sass:map";
 
 // Query constructor
-@function _kim-query-builder($from: null, $to: null, $and: null) {
+@function -kim-query-builder($from: null, $to: null, $and: null) {
   $map: breakpoints.$kim-breakpoints;
   $query: "";
   @if $from {
@@ -25,14 +25,14 @@
 
 // Media query helper
 @mixin kim-mq($from: null, $to: null, $and: null) {
-  @media screen and #{_kim-query-builder($from, $to, $and)} {
+  @media screen and #{-kim-query-builder($from, $to, $and)} {
     @content;
   }
 }
 
 // Container query helper
 @mixin kim-cq($from: null, $to: null, $and: null, $container-name: null) {
-  @container #{if($container-name, $container-name, "")} #{_kim-query-builder($from, $to, $and)} {
+  @container #{if($container-name, $container-name, "")} #{-kim-query-builder($from, $to, $and)} {
     @content;
   }
 }

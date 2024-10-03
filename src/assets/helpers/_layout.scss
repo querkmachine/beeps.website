@@ -1,17 +1,18 @@
 @use "../settings/layout";
-
 @use "../helpers/media-queries";
 
 // Container element
 @mixin kim-width-container {
   --gutter-left: calc(var(--grid-gutter) + env(safe-area-inset-left));
   --gutter-right: calc(var(--grid-gutter) + env(safe-area-inset-right));
+
   display: block;
   container-name: wrapper;
   container-type: inline-size;
   max-inline-size: var(--grid-max-width);
   margin-left: var(--gutter-left);
   margin-right: var(--gutter-right);
+
   @include media-queries.kim-mq($from: layout.$kim-grid-max-width + 4rem) {
     margin-left: auto;
     margin-right: auto;

@@ -3,11 +3,13 @@
 .kimFooter {
   position: sticky;
   inset-block-start: 100%;
+
   @include media-queries.kim-print {
     display: none;
   }
-  &_inner {
-    padding-block: var(--space-6);
-    border-block-end: var(--border-thick) solid var(--color-furniture);
-  }
+}
+
+.kimFooter_inner {
+  padding-block: var(--space-6);
+  border-block-end: var(--border-thick) solid var(--color-furniture);
 }
