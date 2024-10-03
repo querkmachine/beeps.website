@@ -4,6 +4,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import * as sass from "sass";
 import postcss from "postcss";
 import postcssPresetEnv from "postcss-preset-env";
+import postcssCssNano from "cssnano";
 
 /**
  * Syncronously compile sass by passing it first through the Sass compiler and
@@ -20,7 +21,7 @@ const outputStylesheet = function () {
   const result = compileSass();
   let css = result.css.toString();
 
-  postcss([postcssPresetEnv()])
+  postcss([postcssPresetEnv(), postcssCssNano()])
     .process(css, { from: "stylesheet.scss", to: "assets/stylesheet.css" })
     .then(async (result) => {
       try {
