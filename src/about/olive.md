@@ -4,7 +4,7 @@ title: I have a headmate named Olive
 
 I—or more accurately—we, are plural. Plurality (also called multiplicity) is when more than one individual consciousness inhabits the same physical body.
 
-These individuals are collectively called a 'system'. We sometimes go by the collective name of the Nebula System.
+These individuals are collectively called a 'system'. We sometimes go by the collective name of The Software Bundle.
 
 In our case, we are specifically a 'median' system. This means that the individuals are not entirely separate entities and share many qualities: including memories, interests, and some (but not all) personality traits. We are both [asexual]({{ '/about/asexuality/' | url }}) and we both have [non-human, synthetic identities]({{ '/about/nonhuman/' | url }}).
 
