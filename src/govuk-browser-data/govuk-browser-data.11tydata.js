@@ -159,8 +159,8 @@ const htmlTableHeaders = (data, config) => {
   let output = columns.map(
     (col) =>
       `<th class="kimTable_header" scope="col">${config.columnFormatFunction(
-        col,
-      )}</th>`,
+        col
+      )}</th>`
   );
 
   if (config.truncateColumns) {
@@ -182,7 +182,7 @@ const htmlTableData = (data, config) => {
       return `<td class="kimTable_cell">${config.cellFormatFunction(
         data,
         currentRow,
-        col,
+        col
       )}</td>`;
     });
 
@@ -213,7 +213,7 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
     columnFormatFunction: (str) => str,
     cellFormatFunction: getData,
     truncateColumns: null,
-    totalColumn: false,
+    totalColumn: false, // does not work yet
   };
   const config = { ...defaultConfig, ...userConfig };
 
@@ -248,7 +248,6 @@ export default function () {
       raw: htmlConvertDataToTable(dataDeviceTypes, {
         caption: "Device types - raw data",
         columnFormatFunction: deviceName,
-        totalColumn: true,
       }),
       percent: htmlConvertDataToTable(dataDeviceTypes, {
         caption: "Device types - percentages",

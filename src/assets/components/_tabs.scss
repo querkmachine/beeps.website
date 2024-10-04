@@ -4,12 +4,8 @@
 // so everything needs to be wrapped up in this
 .kimTabs-active {
   --tabs-border-width: var(--border-hairline);
-  --tabs-border-color: var(--color-furniture);
+  --tabs-border-active-color: var(--color-furniture);
   --tabs-border-inactive-color: var(--color-furniture-alt);
-
-  --tabs-border: var(--tabs-border-width) solid var(--tabs-border-color);
-  --tabs-border-inactive: var(--tabs-border-width) solid
-    var(--tabs-border-inactive-color);
 
   .kimTabs_tablist {
     display: flex;
@@ -23,13 +19,18 @@
 
   .kimTabs_link {
     display: inline-block;
-    padding: var(--space-1) var(--space-2-3);
-    border: var(--tabs-border-inactive);
+    padding: var(--space-2) var(--space-3-4);
+    border: var(--tabs-border-width) solid var(--tabs-border-inactive-color);
     background-color: var(--border-inactive-color);
     @include links.kim-link-no-underline;
 
     &[aria-selected="true"] {
-      border-color: var(--tabs-border-color);
+      padding-block-end: var(--space-1);
+      border-block-end-width: calc(var(--tabs-border-width) + var(--space-1));
+      border-color: var(--tabs-border-active-color);
+
+      // Set an outline for forced colour mode users. The outline colour gets
+      // forcibly set in in this case.
       outline: var(--border-regular) solid transparent;
       outline-offset: calc(0px - var(--border-regular));
     }
