@@ -92,4 +92,15 @@ export default {
     nintendo: 11,
     "playstation-4": 1,
   },
+  "2024-09": {
+    silk: 1709,
+    chrome: 937,
+    safari: 774,
+    "android-webview": 406,
+    opera: 179,
+    firefox: 63,
+    nintendo: 19,
+    edge: 10,
+    "playstation-3": 1,
+  },
 };
