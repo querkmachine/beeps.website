@@ -10,10 +10,13 @@
     <div class="kimWrapper">
       <article itemscope itemtype="https://schema.org/BlogPosting">
       
-        <header>
-          <h1 class="kimHeading-xl" itemprop="name">
+        <header class="kim-!-margin-block-end-8-9">
+          <h1 class="kimHeading-xl kim-!-margin-block-end-3" itemprop="name">
             {{- title | markdownInline | safe -}}
           </h1>
+          {%- if metadata.description %}
+            <div class="kimBody-l">{{ metadata.description }}</div>
+          {%- endif %}
         </header>
         
         <div class="kimGrid">
