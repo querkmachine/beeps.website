@@ -6,12 +6,10 @@ export default {
   layout: "blog-post.njk",
   tags: ["blog"],
   isBlogPost: true,
-  mastheadBreadcrumbs: [
-    {
-      url: "/blog/",
-      label: "Blog",
-    },
-  ],
+  mastheadSection: {
+    href: "/blog/",
+    text: "Blog",
+  },
   eleventyComputed: {
     favourites: async (data) => {
       // Skip if there's no usable metadata on this post
@@ -25,7 +23,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
     },
     shares: async (data) => {
@@ -40,7 +38,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
     },
     comments: async (data) => {
@@ -55,7 +53,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
 
       comments = comments.descendants.map((item) => {

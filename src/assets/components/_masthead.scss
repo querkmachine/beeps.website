@@ -55,15 +55,9 @@
   }
 }
 
-.kimMasthead_breadcrumbs {
+.kimMasthead_section {
   display: inline-block;
   align-self: center;
   margin-block: var(--space-1);
-
-  a + a::before {
-    content: "/";
-    margin-inline: var(--space-1);
-    color: var(--color-text);
-    text-decoration: none;
-  }
+  line-height: 1;
 }

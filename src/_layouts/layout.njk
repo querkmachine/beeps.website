@@ -19,16 +19,14 @@
   <link rel="pingback" href="https://webmention.io/beeps.website/xmlrpc">
   
   {#- Page title #}
-  {%- if isFullTitle %}
-    <title>{{ title }}</title>
-  {%- else %}
-    <title>
-      {%- if title %}{{ title | markdownInline | safe | striptags }} / {% endif -%}
-      {%- for item in mastheadBreadcrumbs %}{{ item.label | markdownInline | safe | striptags }} / {% endfor -%}
-      {{- site.name -}}
-    </title>
-  {%- endif %}
-  
+  {%- set pageTitle %}
+    {{- (metadata.title or title) | markdownInline | safe | striptags -}}
+    {%- if not isFullTitle -%}
+      {%- if mastheadSection %} / {{ mastheadSection.text | markdownInline | safe | striptags }}{% endif %} / {{ site.name }}
+    {%- endif -%}
+  {%- endset %}
+  <title>{{ pageTitle }}</title>
+
   {#- Stylesheets #}
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ webfontUrl }}"></noscript>
@@ -57,12 +55,10 @@
           <span class="kimMasthead_logo">{% include "logo.njk" %}</span>
           <span class="kimMasthead_name">{{ site.name }}</span>
         </a>
-        {%- if mastheadBreadcrumbs %}
-          <nav class="kimMasthead_breadcrumbs" aria-label="breadcrumbs">
-            {%- for item in mastheadBreadcrumbs %}
-              <a class="kimLink-plain" href="{{ item.url | url }}">{{ item.label }}</a>
-            {%- endfor %}
-          </nav>
+        {%- if mastheadSection %}
+          <a class="kimLink-plain kimMasthead_section" href="{{ mastheadSection.href | url }}">
+            {{- mastheadSection.text -}}
+          </a>
         {%- endif %}
       </div>
     </header>

@@ -10,9 +10,9 @@ metadata:
   description: Archive of beeps' blog posts.
 permalink: "/blog/{{ tag | slugify }}/"
 isBlogTagPage: true
-mastheadBreadcrumbs:
-  - url: "/blog/"
-    label: "Blog"
+mastheadSection:
+  href: "/blog/"
+  text: "Blog"
 ---
 
 {% set postsList = collections[tag] %}
