@@ -14,7 +14,6 @@
           <h1 class="kimHeading-xl" itemprop="name">
             {{- title | markdownInline | safe -}}
           </h1>
-          <div class="kim-!-sr"><a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url">Permalink to this blog post</a></div>
         </header>
         
         <div class="kimGrid">
@@ -76,8 +75,13 @@
                 {{ content | safe }}
               </div>
             {%- endif %}
+            <p class="kimBody-s">
+              Thought this was neat? Why not
+              <a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?
+            </p>
           </div>
         </div>
+        
       </article>
       
       {%- if interactions %}
