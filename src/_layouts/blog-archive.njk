@@ -26,7 +26,7 @@
         <h1 class="kimHeading-xl" itemprop="name">
           {{ site.blogName }}
         </h1>
-        <p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here you are. Also there's an <a href="{{ '/feed.xml' | url }}" target="_blank" type="application/rss+xml" rel="alternate">RSS feed</a>.</p>
+        <p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here you are. Also there's an <a href="{{ '/feed.xml' | url }}" target="_blank" type="application/atom+xml" rel="alternate">RSS feed</a>.</p>
       {%- endif %}
             
       {%- for year in yearList %}

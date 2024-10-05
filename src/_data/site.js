@@ -31,7 +31,7 @@ export default function () {
         text: "RSS feed",
         attributes: {
           rel: "alternate",
-          type: "application/rss+xml",
+          type: "application/atom+xml",
         },
       },
     ],
