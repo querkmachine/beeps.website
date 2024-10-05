@@ -8,6 +8,8 @@ metadata:
 
 Last year (oh how time flies), we launched the [GOV.UK Design System's Exit this Page component](https://design-system.service.gov.uk/components/exit-this-page/), or EtP for short.
 
+{% responsiveImage "./src/images/exit-this-page.png", "A large red button with 'Exit this page' written on it in plain white text." %}
+
 On the surface, it's a simple component. It's a big red button. It sticks to the top of the screen. If you click it, you get taken away to BBC Weather.
 
 But it does so much more. If you, for example, press the <kbd>⇧ Shift</kbd> key on your keyboard three times, you get a visual indicator that you are activating the button. Upon the third press, the page you're on is blanked out and you're redirected away to... well, BBC Weather again.
@@ -16,7 +18,7 @@ It's intended to be a safety tool. A way for people in unstable, potentially vio
 
 But one question that comes up a lot is...
 
-## Why Shift?
+## Why don't you use Escape?
 
 It's a decent question. Many other implementations of buttons like this exist, and of the ones that provide a keyboard shortcut, they almost universally use <kbd>Esc</kbd>.
 
@@ -70,7 +72,13 @@ This meant that if a user tried to use the EtP shortcut immediately after a page
 
 With adequate evidence that <kbd>Esc</kbd> wouldn't work for us, we started looking at other non-typing keys we could use.
 
-Testing with <kbd>⌃ Ctrl</kbd> worked much better, avoiding virtually all of the pitfalls of <kbd>Esc</kbd>. It's one major downfall—it conflicted with VoiceOver's default configuration: pressing <kbd>⌃ Ctrl</kbd> mutes VoiceOver.
+Testing with <kbd>⌃ Ctrl</kbd> worked much better, avoiding virtually all of the pitfalls of <kbd>Esc</kbd>, but there were a few cons to it.
+
+<kbd>⌃ Ctrl</kbd> conflicted with VoiceOver's default configuration—where pressing <kbd>⌃ Ctrl</kbd> mutes VoiceOver.
+
+<kbd>⌃ Ctrl</kbd> was also the only key of those we were considering that wasn't in a physically consistent location on different UK keyboards. Whilst on standalone keyboards the key tends to appear in the far bottom-left, on laptops it is commonly offset inwards to make room for an additional function key.
+
+This innocuous differnce had the potential to slow down a user's ability to quickly activate the shortcut, especially if they were using unfamiliar hardware.
 
 The <kbd>⎇ Alt</kbd>/<kbd>⌥ Option</kbd> key, by comparison, was more problematic. As if being named differently on different systems wasn't bad enough.
 
@@ -86,9 +94,11 @@ So we landed on <kbd>⇧ Shift</kbd>. Shift works more consistently than Escape 
 
 - It being used when typing meant needing to be careful about which presses actually counted towards activation.
 - Pressing <kbd>⇧ Shift</kbd> three times requires many more presses if the Sticky Keys accessibility features is active. I found that it took between 6 and 9 presses with Windows Sticky Keys, depending on speed, and 9 presses with macOS Sticky Keys.
-- macOS's Slow Keys feature still takes three presses, but they have to be spread across a period of a few seconds.
-- [The JAWS screen reader in Chromium would register Shift key presses twice](https://github.com/FreedomScientific/standards-support/issues/699), though this has potentially been fixed since.
+- macOS's Slow Keys feature still takes three presses, but they have to be spread across a period of a few seconds to avoid activating 'latching' functionality.
+- [The JAWS screen reader in Chromium would register the first Shift keypress twice](https://github.com/FreedomScientific/standards-support/issues/699), though this has potentially been fixed since.
 - Using <kbd>⇧ Shift</kbd> means that the shortcut is available on touch device's virtual keyboards. However, these keyboards tend to behave unpredictably compared to their hardware equivalents. I wrote up [a massive bug report just about how the Shift key behaves on iOS](https://github.com/alphagov/govuk-frontend/issues/4095), part of which subsequently became [a bug report](https://bugs.webkit.org/show_bug.cgi?id=273681).
+
+Despite these shortfalls, Shift was ultimately the least flawed of the choices presented to us, with most of its issues being fairly minor and none of them showstopping.
 
 ## Conclusion
 
@@ -98,11 +108,13 @@ Hopefully this is a comprehensive enough write-up to explain why it is what it i
 
 As for the other major question we get...
 
-## Why does it redirect the user to BBC Weather?
+## Bonus: Why does it redirect the user to BBC Weather?
 
 As civil servants, we didn't want to link to a news service as that could lead to claims of political bias.
 
-I also argued (a lot) against linking to the Google homepage—despite this being ridiculously common—because... who uses the Google homepage? Google search is right there in your URL bar. Even if you do go to Google's homepage, the first action you normally take once there is to leave Google's homepage.
+I also argued (a lot) against linking to the Google homepage—despite this being ridiculously common—because... who actually uses the Google homepage? Google search is right there in your URL bar.
+
+Even if you do go to Google's homepage, the first action you normally take once there is to leave Google's homepage.
 
 If you walked in on someone and they were nervously staring at Google's homepage, you'd be suspicious as hell.
 
