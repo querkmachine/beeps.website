@@ -32,10 +32,7 @@
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   font-family: var(--font-code);
-  font-feature-settings:
-    "lnum",
-    "liga" 0,
-    "calt" 0;
+  font-feature-settings: "lnum", "liga" 0, "calt" 0;
 }
 
 // Unhighlighted inline code
@@ -129,4 +126,15 @@
   .hljs-title.class_ {
     font-weight: bold;
   }
+}
+
+// Keyboard keys <kbd>
+.kimKeyboard {
+  display: inline-block;
+  padding-inline: 0.3em;
+  font-family: inherit;
+  font-size: var(--size--1);
+  border: var(--border-hairline) solid currentcolor;
+  border-radius: 0.3em;
+  box-shadow: inset 0 -1px 0 currentcolor;
 }

@@ -95,6 +95,16 @@ const markdownItClasses = function (md) {
   // Code (inline)
   addClassesToRule(md, "code_inline", "kimCode");
 
+  // Code (kbd)
+  const kbdRenderer = getDefaultRenderer(md, "html_inline");
+  md.renderer.rules["html_inline"] = (tokens, idx, options, env, self) => {
+    if (tokens[idx].content === "<kbd>") {
+      console.log(tokens[idx]);
+      tokens[idx].content = `<kbd class="kimKeyboard">`;
+    }
+    return kbdRenderer(tokens, idx, options, env, self);
+  };
+
   // Headings
   const headingRenderer = getDefaultRenderer(md, "heading_open");
   md.renderer.rules.heading_open = (tokens, idx, options, env, self) => {
