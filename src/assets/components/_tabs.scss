@@ -4,8 +4,7 @@
 // so everything needs to be wrapped up in this
 .kimTabs-active {
   --tabs-border-width: var(--border-hairline);
-  --tabs-border-active-color: var(--color-furniture);
-  --tabs-border-inactive-color: var(--color-furniture-alt);
+  --tabs-border-color: var(--color-furniture-alt);
 
   .kimTabs_tablist {
     display: flex;
@@ -14,21 +13,35 @@
     margin: 0;
     margin-block-end: var(--space-1);
     padding: 0;
+    border-block-end: var(--tabs-border-width) solid var(--tabs-border-color);
     list-style: none;
   }
 
-  .kimTabs_link {
-    display: inline-block;
+  .kimTabs_tab {
+    margin-block-end: calc(0px - var(--tabs-border-width));
     padding: var(--space-2) var(--space-3-4);
-    border: var(--tabs-border-width) solid var(--tabs-border-inactive-color);
-    background-color: var(--border-inactive-color);
+    border: var(--tabs-border-width) solid var(--tabs-border-color);
+    position: relative;
+    background-color: var(--color-background);
+
+    &:has(.kimTabs_link[aria-selected="true"]) {
+      padding-block-start: var(--space-1);
+      border-block-start-width: calc(var(--tabs-border-width) + var(--space-1));
+      border-block-end-color: var(--color-background);
+    }
+  }
+
+  .kimTabs_link {
     @include links.kim-link-no-underline;
 
-    &[aria-selected="true"] {
-      padding-block-end: var(--space-1);
-      border-block-end-width: calc(var(--tabs-border-width) + var(--space-1));
-      border-color: var(--tabs-border-active-color);
+    // Extend link to cover entire tab area
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
 
+    &[aria-selected="true"] {
       // Set an outline for forced colour mode users. The outline colour gets
       // forcibly set in in this case.
       outline: var(--border-regular) solid transparent;
