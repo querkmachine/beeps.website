@@ -97,9 +97,8 @@ const markdownItClasses = function (md) {
 
   // Code (kbd)
   const kbdRenderer = getDefaultRenderer(md, "html_inline");
-  md.renderer.rules["html_inline"] = (tokens, idx, options, env, self) => {
+  md.renderer.rules.html_inline = (tokens, idx, options, env, self) => {
     if (tokens[idx].content === "<kbd>") {
-      console.log(tokens[idx]);
       tokens[idx].content = `<kbd class="kimKeyboard">`;
     }
     return kbdRenderer(tokens, idx, options, env, self);
