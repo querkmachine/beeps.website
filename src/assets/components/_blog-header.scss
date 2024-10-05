@@ -1,0 +1,44 @@
+.kimBlogHeader {
+  position: relative;
+  padding-block: var(--space-7-8);
+  margin-block-end: var(--space-5-6);
+
+  &.kimBlogHeader-withImage {
+    background-color: var(--color-accent-alt);
+
+    .kimBlogHeader_inner {
+      max-inline-size: max(90%, 37rem);
+    }
+
+    .kimBlogHeader_heading {
+      --offset: var(--space-2-3);
+      --backing: var(--color-background);
+
+      display: inline;
+      margin-inline: var(--offset);
+
+      position: relative;
+      z-index: 1;
+
+      background-color: var(--backing);
+      box-shadow: calc(0px - var(--offset)) 0 0 var(--backing),
+        var(--offset) 0 0 var(--backing);
+      box-decoration-break: clone;
+    }
+  }
+}
+
+.kimBlogHeader_heading {
+  margin-block-end: 0;
+  line-height: 1.25;
+}
+
+.kimBlogHeader_image {
+  block-size: 100%;
+  inline-size: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+}

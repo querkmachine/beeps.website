@@ -4,6 +4,9 @@ date: 9999-01-01
 tags: [web development]
 metadata:
   description: A very specific question, answered very longwindedly.
+headerImage:
+  filename: "./src/images/escape.jpg"
+  alt: A black and white illustration of a young girl being led by a gryphon, both of them running urgently down a beach.
 ---
 
 Last year (oh how time flies), we launched the [GOV.UK Design System's Exit this Page component](https://design-system.service.gov.uk/components/exit-this-page/), or EtP for short.

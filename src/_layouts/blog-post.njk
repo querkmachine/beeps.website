@@ -6,15 +6,19 @@
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
 
 {% block main %}
-  <div class="kim-!-margin-block-8-9">
+  <div class="kim-!-margin-block-end-8-9">
     <div class="kimWrapper">
       <article itemscope itemtype="https://schema.org/BlogPosting">
       
-        <header>
-          <h1 class="kimHeading-xl" itemprop="name">
-            {{- title | markdownInline | safe -}}
-          </h1>
-          <div class="kim-!-sr"><a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url">Permalink to this blog post</a></div>
+        <header class="kimBlogHeader {%- if headerImage %} kimBlogHeader-withImage{% endif %}">
+          <div class="kimBlogHeader_inner">
+            <h1 class="kimHeading-xl kimBlogHeader_heading" itemprop="name">
+              {{- title | markdownInline | safe -}}
+            </h1>
+          </div>
+          {%- if headerImage %}
+            {% responsiveImage headerImage.filename, headerImage.alt, { classes: "kimBlogHeader_image", lazy: false } %}
+          {%- endif %}
         </header>
         
         <div class="kimGrid">
@@ -78,6 +82,7 @@
             {%- endif %}
           </div>
         </div>
+        <div class="kim-!-sr"><a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url">Permalink to this blog post</a></div>
       </article>
       
       {%- if interactions %}

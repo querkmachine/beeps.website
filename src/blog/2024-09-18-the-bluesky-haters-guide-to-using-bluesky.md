@@ -4,6 +4,9 @@ date: 2024-09-18
 tags: [technology]
 metadata:
   description: How to use Bluesky by actually using Mastodon and the fediverse.
+headerImage:
+  filename: "./src/images/bluesky.jpg"
+  alt: A pair of young children, a boy and a girl, running through a field and trying to capture a butterfly in a net.
 interactions:
   host: chitter.xyz
   username: batbeeps
