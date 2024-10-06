@@ -30,14 +30,23 @@ const cachebustAssetUrl = function (url) {
  */
 const formatDate = function (dateObj, format) {
   const date = DateTime.fromJSDate(dateObj, { zone: "utc" });
-  if (format === "iso") {
-    return date.toISODate();
-  } else if (format === "human") {
-    return date.toFormat("d LLLL yyyy");
-  } else if (format === "humanWithTime") {
-    return date.toFormat("d LLLL yyyy; H:mm");
-  } else {
-    return date.toFormat(format);
+
+  switch (format) {
+    case "iso":
+      return date.toISODate();
+      break;
+    case "isoWithTime":
+      return date.toISO();
+      break;
+    case "human":
+      return date.toFormat("d LLLL yyyy");
+      break;
+    case "humanWithTime":
+      return date.toFormat("d LLLL yyyy; H:mm");
+      break;
+    default:
+      return date.toFormat(format);
+      break;
   }
 };
 

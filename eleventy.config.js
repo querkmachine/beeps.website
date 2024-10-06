@@ -1,6 +1,7 @@
 // Config
 import paths from "./config/paths.js";
 import site from "./src/_data/site.js";
+import "dotenv/config";
 
 // 11ty plugins
 import loggingPlugin from "@11ty/eleventy-plugin-directory-output";

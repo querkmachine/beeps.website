@@ -37,6 +37,9 @@ jobs:
             eleventy-fetch-cache-
       - name: Build Eleventy
         run: npm run build
+        env:
+          LAST_FM_API_KEY: ${{ secrets.LAST_FM_API_KEY }}
+          TRAKT_TV_API_KEY: ${{ secrets.TRAKT_TV_API_KEY }}
       - name: Save artifact
         uses: actions/upload-artifact@v4
         with:

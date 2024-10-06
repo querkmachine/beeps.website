@@ -6,6 +6,12 @@ metadata:
   description: What I'm up to at the moment
 ---
 
+{% block head %}
+
+<style>.page-api-feed { list-style-type: none; padding-inline: 0; } .page-api-feed li { border-block-end: 1px solid var(--color-furniture); padding-block: var(--space-2); } .page-api-feed img { float: inline-start; margin-block-end: 0; margin-inline-end: var(--space-1); }</style>
+
+{% endblock %}
+
 A "now" page is [a conceptual accompaniment to an about page](https://nownownow.com/about). While an about page can tell you about my background and my identity, it doesn't tell you about what I'm currently doing or what I currently care about. Thus, this.
 
 Last updated: {{ updated | formatDate('human') }}
@@ -21,6 +27,14 @@ We're most of the way through [The Year of Order]({{ '/blog/yearly-theme/' | url
 I'm taking a bit of a break from traveling, having recently made multiple business and leisure trips to London, Exeter and Liverpool in the last couple of months.
 
 Lately, I've been jamming out to [_SMILE! :D_](https://album.link/gb/i/1740856393) by Porter Robinson, rewatching _Star Trek: Enterprise_ alongside [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/), and playing far too much [Factorio](https://www.factorio.com/).
+
+### Listening
+
+{{ lastfmFeed | safe }}
+
+### Watching
+
+{{ traktFeed | safe }}
 
 ## Recently
 
