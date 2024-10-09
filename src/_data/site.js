@@ -8,6 +8,7 @@ export default function () {
     authorName: "beeps",
     authorEmail: "hi@berly.kim",
     twitterUsername: "@batbeeps",
+    mastodonUsername: "@batbeeps@chitter.xyz",
     domain: "https://beeps.website",
     environment,
     relMe: [
