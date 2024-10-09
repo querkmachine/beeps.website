@@ -4,6 +4,10 @@ date: 2024-10-02
 tags: [web development, meta]
 metadata:
   description: Updating to Eleventy 3, fixing some accessibility issues, and new art!
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "113240035659850028"
 ---
 
 This website's been a flurry of activity lately, but unlike [the last Changelog]({{ '/blog/2024-03-06-the-changelog-dark-mode-redesign-building-utopia/' | url }}) the changes have been largely invisible to the average user.
