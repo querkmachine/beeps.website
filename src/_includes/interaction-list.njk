@@ -1,0 +1,18 @@
+{% macro kimInteractionList(collection, count) %}
+  {% set maxListItems = 40 %}
+  {% set avatarDisplayLimit = (maxListItems - 1) if count > maxListItems else maxListItems %}
+  <ul class="kimInteractionList">
+    {%- for item in collection | head(avatarDisplayLimit) %}
+    <li class="kimInteractionList_item">
+      <a class="kimInteractionList_link" href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
+        <img class="kimInteractionList_avatar" alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy" width="50" height="50">
+      </a>
+    </li>
+    {%- endfor %}
+    {%- if count > maxListItems %}
+    <li class="kimInteractionList_item kimInteractionList_item-more">
+      +{{count - avatarDisplayLimit}}
+    </li>
+    {%- endif %}
+  </ul>
+{% endmacro %}

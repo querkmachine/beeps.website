@@ -11,6 +11,27 @@ export default {
     text: "Blog",
   },
   eleventyComputed: {
+    stats: async (data) => {
+      // Skip if there's no usable metadata on this post
+      if (!data.interactions) return null;
+
+      const metadata = await EleventyFetch(
+        `https://${data.interactions.host}/api/v1/statuses/${data.interactions.id}`,
+        {
+          duration:
+            DateTime.fromISO(data.page.date) < DateTime.now().minus({ days: 7 })
+              ? "1d"
+              : "7d",
+          type: "json",
+        }
+      );
+
+      return {
+        comments: metadata.replies_count,
+        shares: metadata.reblogs_count,
+        favourites: metadata.favourites_count,
+      };
+    },
     favourites: async (data) => {
       // Skip if there's no usable metadata on this post
       if (!data.interactions) return null;

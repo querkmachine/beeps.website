@@ -1,6 +1,7 @@
 {% extends 'src/_layouts/layout.njk' %}
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/interaction-list.njk" import kimInteractionList %}
 
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
@@ -90,38 +91,22 @@
       {%- if interactions %}
         <div class="kimGrid kim-!-doNotPrint">
           
-          {%- if (favourites | length > 0) or (shares | length > 0) %}
+          {%- if (stats.favourites > 0) or (stats.shares > 0) %}
             <section id="interactions" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
               <hr class="kimRule kimRule-thick">
     
-              {%- if favourites | length > 0 %}
+              {%- if stats.favourites > 0 %}
                 <h2 class="kimHeading-s">
-                  {{ favourites.length }}{{ "+" if favourites.length === 40 else "" }} {{ 'favourite' if favourites.length == 1 else 'favourites' }}
+                  {{ stats.favourites }} {{ 'favourite' if stats.favourites == 1 else 'favourites' }}
                 </h2>
-                <ul class="kimInteractionList">
-                  {%- for item in favourites %}
-                  <li>
-                    <a href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
-                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy" width="50" height="50">
-                    </a>
-                  </li>
-                  {%- endfor %}
-                </ul>
+                {{ kimInteractionList(favourites, stats.favourites) }}
               {%- endif %}
     
-              {%- if shares | length > 0 %}
+              {%- if stats.shares > 0 %}
                 <h2 class="kimHeading-s">
-                  {{ shares.length }}{{ "+" if shares.length === 40 else "" }} {{ 'share' if shares.length == 1 else 'shares' }}
+                  {{ stats.shares }} {{ 'share' if stats.shares == 1 else 'shares' }}
                 </h2>
-                <ul class="kimInteractionList">
-                  {%- for item in shares %}
-                  <li>
-                    <a href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
-                      <img alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy" width="50" height="50">
-                    </a>
-                  </li>
-                  {%- endfor %}
-                </ul>
+                {{ kimInteractionList(shares, stats.shares) }}
               {%- endif %}
     
             </section>
@@ -136,11 +121,7 @@
             <hr class="kimRule kimRule-thick">
             
             <h2 class="kimHeading-s">
-              {%- if comments.length > 0 %}
-                {{ comments.length }} {{ 'comment' if comments.length == 1 else 'comments' }}
-              {%- else %}
-                Comments
-              {% endif %}
+              Comments
             </h2>
             <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on Mastodon</a>.</p>
             
