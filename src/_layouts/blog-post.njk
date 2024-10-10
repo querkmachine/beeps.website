@@ -96,7 +96,7 @@
     
               {%- if favourites | length > 0 %}
                 <h2 class="kimHeading-s">
-                  {{ favourites.length }} {{ 'favourite' if favourites.length == 1 else 'favourites' }}
+                  {{ favourites.length }}{{ "+" if favourites.length === 40 else "" }} {{ 'favourite' if favourites.length == 1 else 'favourites' }}
                 </h2>
                 <ul class="kimInteractionList">
                   {%- for item in favourites %}
@@ -111,7 +111,7 @@
     
               {%- if shares | length > 0 %}
                 <h2 class="kimHeading-s">
-                  {{ shares.length }} {{ 'share' if shares.length == 1 else 'shares' }}
+                  {{ shares.length }}{{ "+" if shares.length === 40 else "" }} {{ 'share' if shares.length == 1 else 'shares' }}
                 </h2>
                 <ul class="kimInteractionList">
                   {%- for item in shares %}
