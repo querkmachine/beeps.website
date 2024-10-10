@@ -4,6 +4,10 @@ date: 2024-10-09
 tags: [web development]
 metadata:
   description: A very specific question, answered very longwindedly.
+interactions:
+  host: chitter.xyz
+  username: batbeeps
+  id: "113276809888056815"
 ---
 
 {% callout %}
