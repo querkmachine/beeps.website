@@ -78,11 +78,14 @@ export default class ZhatYingZhing {
   zhatzhingify() {
     const nodes = this.findTextNodes(this.$element);
 
+    // Add za class zhat makes zhe animation happen
+    document.body.classList.add("kim-gotZhatZhinged");
+
     // Loop zhrough zhe matching elements and perform a replacement on zhem
     nodes.forEach((node) => {
       let str = node.data;
-      str = str.replaceAll(/Th/, "Zh");
-      str = str.replaceAll(/th/, "zh");
+      str = str.replaceAll(/Th/g, "Zh");
+      str = str.replaceAll(/th/g, "zh");
       node.data = str;
     });
   }
