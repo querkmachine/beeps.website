@@ -57,12 +57,12 @@ export default [
   {
     src: "/assets/images/buttons/join_fediverse.gif",
     alt: "Join the Fediverse",
-    url: "//chitter.xyz/@batbeeps",
+    url: "//social.beeps.gay/@beeps",
   },
   {
     src: "/assets/images/buttons/mastodon.gif",
     alt: "Join Mastodon",
-    url: "//chitter.xyz/@batbeeps",
+    url: "//social.beeps.gay/@beeps",
   },
   {
     src: "/assets/images/buttons/i_was_on_cohost.gif",
