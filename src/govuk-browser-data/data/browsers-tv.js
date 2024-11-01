@@ -103,4 +103,14 @@ export default {
     edge: 10,
     "playstation-3": 1,
   },
+  "2024-10": {
+    silk: 1805,
+    chrome: 1031,
+    safari: 774,
+    "android-webview": 421,
+    opera: 213,
+    firefox: 13,
+    nintendo: 8,
+    edge: 5,
+  },
 };
