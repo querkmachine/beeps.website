@@ -36,7 +36,7 @@
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "postcss-preset-env": "^10.0.9",
     "prettier": "^3.3.3",
     "sanitize-html": "^2.13.1",
