@@ -1,15 +1,10 @@
-@use "../helpers/media-queries";
-
 .kimFooter {
-  position: sticky;
-  inset-block-start: 100%;
-
-  @include media-queries.kim-print {
-    display: none;
-  }
+  padding-block-end: var(--space-3-4);
+  // color: var(--color-canvas-text);
+  // background-color: var(--color-canvas-background);
 }
 
-.kimFooter_inner {
-  padding-block: var(--space-6);
-  border-block-end: var(--border-thick) solid var(--color-furniture);
+.kimFooter_smallprint {
+  display: block;
+  text-wrap: balance;
 }

@@ -1,11 +1,10 @@
 @use "../settings/breakpoints";
 @use "../settings/layout" as layoutSettings;
-@use "../helpers/media-queries";
 
 .kimGrid {
   display: flex;
   flex-wrap: wrap;
-  margin-inline: calc(0px - var(--grid-gutter-half));
+  margin-inline: calc(var(--grid-gutter-half) * -1);
 }
 
 .kimGrid_column {
@@ -19,7 +18,7 @@
 }
 
 @each $breakpoint, $value in breakpoints.$kim-breakpoints {
-  @include media-queries.kim-mq($from: $breakpoint) {
+  @media (min-width: #{$value}) {
     @each $name, $width in layoutSettings.$kim-grid-widths {
       .#{$breakpoint}\:kimGrid_column-#{$name} {
         width: $width;

@@ -18,7 +18,7 @@
     <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
     
       {%- if tag %}
-        <span class="kim-!-sr" itemprop="name">{{ site.blogName }}</span>
+        <span class="kim-!-visually-hidden" itemprop="name">{{ site.blogName }}</span>
         <h1 class="kimHeading-xl">
           Blog posts tagged as {{ tag | tagify }}
         </h1>

@@ -1,63 +1,104 @@
 @use "../helpers/a11y";
-@use "../helpers/media-queries";
+@use "../helpers/links";
+@use "../helpers/reset";
 
 .kimMasthead {
-  color: var(--color-text);
-  background-color: var(--color-background);
-  font-family: var(--font-header);
-  font-size: var(--size-2);
-
-  @include media-queries.kim-print {
-    display: none;
-  }
+  color: var(--color-canvas-text);
+  background-color: var(--color-canvas-background);
 }
 
 .kimMasthead_inner {
   display: flex;
-  padding-block-end: var(--space-4);
-  border-block-start: var(--border-thick) solid var(--color-furniture);
+  align-items: center;
+  padding-block: var(--space-2);
 }
 
 .kimMasthead_brand {
   display: inline-flex;
   align-items: center;
-  vertical-align: center;
-  margin-inline-end: var(--space-3);
-  padding: var(--space-2);
-  color: var(--color-background);
-  background-color: var(--color-furniture);
-  font-weight: 700;
+  color: currentcolor;
   text-decoration: none;
 
-  &:hover .kimMasthead_logo {
-    fill: var(--color-link-underline-hover);
+  &:hover .kimMasthead_name {
+    @include links.link-underline-helper;
   }
 
   &:focus-visible {
     outline: none;
 
     .kimMasthead_name {
-      @include a11y.kim-focus-ring;
+      @include a11y.focus-ring;
     }
   }
 }
 
 .kimMasthead_logo {
   fill: currentcolor;
-  line-height: 0;
 }
 
 .kimMasthead_name {
-  margin-inline-start: var(--space-3);
-
-  @include media-queries.kim-cq($to: constitution) {
-    @include a11y.kim-visually-hidden;
-  }
+  margin-inline-start: var(--space-2);
+  font-size: var(--size-2);
+  font-weight: bold;
 }
 
 .kimMasthead_section {
-  display: inline-block;
-  align-self: center;
-  margin-block: var(--space-1);
-  line-height: 1;
+  @include links.link-helper($initial-underline: false, $visited-styles: false);
+  margin-inline-start: var(--space-2);
+  font-size: var(--size-2);
+}
+
+.kimMasthead_nav-toggle {
+  --icon-width: 1em;
+
+  @include reset.button;
+  position: relative;
+  padding-inline-start: calc(var(--icon-width) + var(--space-2));
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    inline-size: var(--icon-width);
+    block-size: calc(var(--border-regular) * 5);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.333em;
+    background-image: linear-gradient(
+      to bottom,
+      currentcolor,
+      currentcolor var(--border-regular),
+      transparent var(--border-regular),
+      transparent
+    );
+    background-size: 100% calc(var(--border-regular) * 2);
+  }
+
+  // Use a pseudo-element to increase the clickable area
+  &::after {
+    content: "";
+    position: absolute;
+    inset: calc(var(--space-3) * -1);
+  }
+
+  &[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+  }
+}
+
+.kimMasthead_nav-link,
+.kimMasthead_nav-toggle {
+  margin-inline-start: auto;
+  @include links.link-helper(
+    $color: currentcolor,
+    $hover-color: currentcolor,
+    $initial-underline: false,
+    $hover-styles: false,
+    $visited-styles: false
+  );
+
+  &:hover,
+  &[aria-expanded="true"] {
+    @include links.link-underline-helper;
+  }
 }

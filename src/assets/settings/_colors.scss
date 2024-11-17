@@ -1,35 +1,64 @@
-.kimPage {
-  --color-text: #fff;
-  --color-background: #2a2536;
-  --color-accent: oklch(85.29% 0.323 142.82);
-  --color-accent-alt: #786999;
+:root {
+  // Raw colours
+  --color-raw-white: #fff;
+  --color-raw-black: #0d1317;
+  --color-raw-green: oklch(85.29% 0.323 142.82);
+  --color-raw-lavender: #f9f7ff;
+  --color-raw-pale-green: #97e697;
+  --color-raw-purple: #786999;
+  --color-raw-dark-purple: #2a2536;
+  --color-raw-gold: #e5b25d;
+  --color-raw-blue: #89d2dc;
 
-  --color-furniture: var(--color-accent);
-  --color-furniture-alt: var(--color-accent-alt);
-  --color-link: var(--color-accent);
-  --color-link-underline: color-mix(
+  // Text colours
+  // These go from 'most prominent' to 'least prominent'
+  --color-accent: var(--color-raw-green);
+  --color-text: var(--color-raw-white);
+  --color-subtext: color-mix(in lch, var(--color-text) 80%, transparent);
+
+  // Link colours
+  --color-link: var(--color-raw-green);
+  --color-link-visited: var(--color-raw-pale-green);
+  --color-link-hover: color-mix(
     in lch,
-    var(--color-accent) 20%,
-    var(--color-background)
+    var(--color-link) 80%,
+    var(--color-base)
   );
-  --color-link-underline-hover: color-mix(
-    in lch,
-    var(--color-accent) 40%,
-    var(--color-background)
-  );
-  --color-link-underline-visited: color-mix(
-    in lch,
-    var(--color-accent-alt) 25%,
-    var(--color-background)
-  );
-  --color-speech-bubble: var(--color-accent);
+
+  // Surface colours
+  // These go from 'most foreground' to 'most background'
+  --color-canvas-text: var(--color-raw-white);
+  --color-canvas-background: var(--color-raw-black);
+  --color-base: var(--color-raw-dark-purple);
+  --color-mantle: color-mix(in lch, var(--color-base) 90%, var(--color-text));
+  --color-crust: color-mix(in lch, var(--color-base) 80%, var(--color-text));
+
+  // Furnishings (e.g. borders)
+  --color-furniture: var(--color-raw-purple);
+  --color-furniture-alt: var(--color-raw-pale-green);
+
+  // Focus ring colours
   --color-focus-background: #fc0;
   --color-focus-text: #000;
+}
 
-  &[data-color-scheme="light"] {
-    --color-text: #334139;
-    --color-background: #fff;
-    --color-accent: #786999;
-    --color-accent-alt: #97e697;
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-raw-blue: #0077a9;
+
+    --color-text: var(--color-raw-black);
+    --color-accent: var(--color-raw-purple);
+    --color-base: var(--color-raw-white);
+    --color-mantle: color-mix(in lch, var(--color-base) 95%, var(--color-text));
+    --color-crust: color-mix(in lch, var(--color-base) 90%, var(--color-text));
+
+    --color-furniture: var(--color-raw-pale-green);
+    --color-furniture-alt: var(--color-raw-purple);
+
+    --color-link: var(--color-raw-purple);
+    --color-link-visited: var(--color-subtext);
+
+    --color-canvas-text: var(--color-raw-white);
+    --color-canvas-background: var(--color-raw-purple);
   }
 }

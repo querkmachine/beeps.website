@@ -1,0 +1,17 @@
+@use "../helpers/a11y";
+
+.kimSkiplink {
+  @include a11y.focus-ring-block;
+  display: inline-block;
+  border-radius: 1em;
+  position: absolute;
+  inset-block-start: -9999em;
+  inset-inline-start: -9999em;
+  font-size: var(--size--1);
+
+  &:focus {
+    position: absolute;
+    inset-block-start: var(--space-3);
+    inset-inline-start: var(--space-3);
+  }
+}

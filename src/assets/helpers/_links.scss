@@ -1,69 +1,48 @@
 @use "a11y";
-@use "media-queries";
 
-@mixin -kim-link-underline($color) {
-  & {
-    text-decoration: underline;
-    text-decoration-thickness: 0.6em;
-    text-decoration-color: $color;
-    text-decoration-skip-ink: none;
-    text-underline-offset: -0.25em;
-  }
-
-  @media (forced-colors: active) {
-    text-decoration-thickness: unset;
-    text-decoration-skip-ink: auto;
-    text-underline-offset: unset;
-  }
+@mixin link-underline-helper($color: currentcolor) {
+  text-decoration-line: underline;
+  text-decoration-thickness: var(--border-regular);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in lch, #{$color} 30%, transparent);
 }
 
-@mixin -kim-link-common {
-  & {
-    color: var(--color-link);
-    word-break: break-word;
+@mixin link-helper(
+  $color: var(--color-link),
+  $hover-color: var(--color-link-hover),
+  $visited-color: var(--color-link-visited),
+  $initial-underline: true,
+  $hover-styles: true,
+  $visited-styles: true,
+  $focus-styles: true
+) {
+  @include link-underline-helper($color: $color);
+  color: $color;
+
+  @if not $initial-underline {
+    text-decoration-line: none;
   }
 
-  &:focus-visible {
-    @include a11y.kim-focus-ring;
-
-    img {
-      @include a11y.kim-focus-ring--block;
+  @if $visited-styles {
+    &:visited {
+      color: $visited-color;
     }
   }
 
-  @include media-queries.kim-print {
-    color: black;
-    text-decoration: underline;
-    text-decoration-thickness: unset;
-    text-decoration-color: currentcolor;
-    text-underline-offset: unset;
+  @if $hover-styles {
+    &:hover {
+      color: $hover-color;
 
-    &::after {
-      content: " (" attr(href) ")";
-      display: inline;
-      font-size: smaller;
+      @if not $initial-underline {
+        text-decoration-line: underline;
+      }
     }
   }
-}
 
-@mixin kim-link {
-  @include -kim-link-common;
-  @include -kim-link-underline($color: var(--color-link-underline));
-
-  &:visited {
-    text-decoration-color: var(--color-link-underline-visited);
-  }
-
-  &:hover {
-    text-decoration-color: var(--color-link-underline-hover);
-  }
-}
-
-@mixin kim-link-no-underline {
-  text-decoration: none;
-  @include -kim-link-common;
-
-  &:hover {
-    @include -kim-link-underline($color: var(--color-link-underline-hover));
+  @if $focus-styles {
+    &:focus-visible {
+      @include a11y.focus-ring;
+    }
   }
 }

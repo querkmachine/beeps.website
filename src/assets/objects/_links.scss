@@ -1,0 +1,73 @@
+@use "../helpers/links";
+
+// Standard links
+// Have initial underline, hover and visited states
+a:not([class]),
+.kimLink {
+  @include links.link-helper($initial-underline: true, $visited-styles: true);
+}
+
+// No underline
+// Doesn't have an underline initially, but gains one on hover
+.kimLink-noUnderline {
+  @include links.link-helper($initial-underline: false);
+}
+
+// Stealth links
+// Appears in the same colour as surrounding text but with an underline,
+// does not change colour on hover/visited
+.kimLink-stealth {
+  @include links.link-helper(
+    $color: currentcolor,
+    $hover-color: currentcolor,
+    $visited-color: currentcolor,
+    $initial-underline: true,
+    $hover-styles: false,
+    $visited-styles: false
+  );
+}
+
+// Action links
+// More prominent calls to action, they work pretty much the same as regular
+// links but have an arrow icon prefixing them.
+.kimLink-action {
+  --circle-diameter: 1.8rem;
+
+  position: relative;
+  padding-inline-start: calc(var(--circle-diameter) + var(--space-2));
+
+  @include links.link-helper($initial-underline: true, $visited-styles: true);
+
+  &::before,
+  &::after {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: var(--circle-diameter);
+    block-size: var(--circle-diameter);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+  }
+
+  &::before {
+    content: "";
+    border-radius: 50%;
+    background-color: var(--color-crust);
+  }
+
+  &::after {
+    content: "→";
+    inset-block-start: -0.05em;
+  }
+
+  &:focus-visible {
+    &::before {
+      background-color: var(--color-focus-text);
+    }
+
+    &::after {
+      color: var(--color-focus-background);
+    }
+  }
+}

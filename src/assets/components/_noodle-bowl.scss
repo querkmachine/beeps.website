@@ -1,5 +1,4 @@
 @use "../settings";
-@use "../helpers/media-queries";
 
 .kimNoodleBowl {
   --height: 30vh;
@@ -11,22 +10,24 @@
   --canvas-height: calc(100% - var(--offset-top) - var(--offset-bottom));
 
   position: relative;
-  height: clamp(var(--min-height), var(--height), var(--max-height));
+  margin-block-start: calc(var(--offset-top) * -1);
+  margin-block-end: calc(var(--offset-bottom) * -1);
+  block-size: clamp(var(--min-height), var(--height), var(--max-height));
   pointer-events: none;
 }
 
 .kimNoodleBowl_canvas {
-  width: 100%;
-  height: var(--canvas-height);
+  inline-size: 100%;
+  block-size: var(--canvas-height);
   position: absolute;
-  top: var(--offset-top);
-  background-color: var(--color-furniture-alt);
+  inset-block-start: var(--offset-top);
+  background-color: var(--color-mantle);
   outline: var(--border-regular) solid transparent;
 }
 
 .kimNoodleBowl_inner {
-  height: calc(var(--canvas-height) + var(--offset-top));
-  margin-top: calc(0px - var(--offset-top));
+  block-size: calc(var(--canvas-height) + var(--offset-top));
+  margin-block-start: calc(0px - var(--offset-top));
   position: relative;
   background-image: url("/assets/images/noodle-footer.png");
   background-repeat: no-repeat;
@@ -52,10 +53,10 @@
 
     content: "";
     display: block;
-    width: var(--pawb-width);
-    height: var(--pawb-height);
+    inline-size: var(--pawb-width);
+    block-size: var(--pawb-height);
     position: absolute;
-    bottom: calc(0px - var(--offset-bottom));
+    inset-block-end: calc(0px - var(--offset-bottom));
     background-image: url("/assets/images/noodle-footer--pawbs.png");
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -67,13 +68,13 @@
     animation-direction: alternate-reverse;
 
     // Move pawbs further apart if we have space
-    @include media-queries.kim-mq($from: 430px) {
+    @media (min-width: 430px) {
       --pawb-offset: calc(var(--pawb-width) * 1.2);
     }
 
     // Hide pawbs entirely on really narrow screens to prevent introducing
     // a horizontal scrollbar
-    @include media-queries.kim-mq($to: 370px) {
+    @media (max-width: 369px) {
       content: none;
     }
 
@@ -83,11 +84,11 @@
   }
 
   &::before {
-    left: calc(50% - var(--pawb-offset));
+    inset-inline-start: calc(50% - var(--pawb-offset));
   }
 
   &::after {
-    left: calc(50% + var(--pawb-offset));
+    inset-inline-start: calc(50% + var(--pawb-offset));
     animation-delay: -1s;
     rotate: y 180deg;
   }

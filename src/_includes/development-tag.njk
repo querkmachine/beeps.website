@@ -15,28 +15,22 @@
 
   <style>
     #dev-tag {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 9999;
+      width: 100%;
     }
     #dev-tag[open] {
-      position: static;
-      width: 100%;
       background-color: red;
     }
-    #dev-tag summary { list-style: none; }
-    #dev-tag summary::-webkit-details-marker { display: none; }
-    #dev-tag summary span  {
+    #dev-tag summary {
       padding: .25em 1em .25em .5em;
       color: white;
       background-color: red;
       font-size: smaller;
       font-weight: bold;
       text-transform: uppercase;
-      clip-path: polygon(0 0, 100% 0, calc(100% - .5em) 100%, 0 100%);
+      list-style: none;
       cursor: pointer;
     }
+    #dev-tag summary::-webkit-details-marker { display: none; }
     #dev-tag div {
       display: grid;
       grid-template-columns: 8em 1fr;

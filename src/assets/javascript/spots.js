@@ -23,9 +23,8 @@ export default class Spots {
     this.playing = this.animated;
     this.lastSpotTimestamp = null;
     this.spots = [];
-    this.prefersReducedMotion = matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    this.prefersLightTheme = matchMedia("(prefers-color-scheme: light)");
+    this.prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 
     // Wait until the page has finished loading other stuff. Pretty much all of
     // it is higher priority than our fun spot decor
@@ -45,7 +44,7 @@ export default class Spots {
     this.$canvas.height = this.canvasBox.height;
     this.spotTarget = Math.floor(
       ((this.$canvas.width * this.$canvas.height) / 50000) *
-        this.settings.spotMultiplier
+        this.settings.spotMultiplier,
     );
   }
 
@@ -57,10 +56,9 @@ export default class Spots {
     }
 
     // Default colours
-    this.strokeColors =
-      document.documentElement.dataset.colorScheme === "light"
-        ? [[179, 255, 179]]
-        : [[120, 105, 153]];
+    this.strokeColors = this.prefersLightTheme.matches
+      ? [[179, 255, 179]]
+      : [[120, 105, 153]];
 
     if (this.settings.useCalendarThemes) {
       // Some days have unique colours, so get the date.
@@ -140,14 +138,21 @@ export default class Spots {
     }).observe(this.$canvas);
 
     // Mutation observer to see if the colour scheme has been changed
-    new MutationObserver((mutations) => {
-      if (mutations[0].attributeName !== "data-color-scheme") {
-        return;
-      }
+    this.prefersLightTheme.addEventListener("change", () => {
       this.pause();
       this.setStrokeColor();
       this.play();
-    }).observe(document.documentElement, { attributes: true });
+    });
+
+    // Mutation observer to see if prefers reduced motion setting has changed
+    this.prefersReducedMotion.addEventListener("change", () => {
+      if (this.prefersReducedMotion.matches) {
+        this.setCanvasDimensions();
+        this.paintReducedMotionSpots();
+      } else {
+        this.play();
+      }
+    });
   }
 
   tick(timestamp) {
@@ -199,7 +204,7 @@ export default class Spots {
       x: this.randomNumber(0, this.$canvas.width),
       y: this.randomNumber(
         0,
-        this.$canvas.height * this.settings.heightProportion
+        this.$canvas.height * this.settings.heightProportion,
       ),
       opacity: this.randomNumber(0.125, 0.6),
     });
@@ -248,7 +253,7 @@ export default class Spots {
     }
 
     const randomIndex = Math.round(
-      this.randomNumber(0, this.strokeColors.length - 1)
+      this.randomNumber(0, this.strokeColors.length - 1),
     );
     const color = this.strokeColors[randomIndex];
 
@@ -260,7 +265,7 @@ export default class Spots {
   }
 
   play() {
-    if (this.prefersReducedMotion || !this.animated) {
+    if (this.prefersReducedMotion.matches || !this.animated) {
       this.paintReducedMotionSpots();
     } else {
       this.playing = true;

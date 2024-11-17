@@ -1,7 +1,5 @@
-@use "../helpers/media-queries";
-
 .kimPage {
-  background-color: var(--color-background);
+  background-color: var(--color-canvas-background);
   text-size-adjust: 100%;
 }
 
@@ -9,7 +7,7 @@
   min-block-size: 100vb;
   margin: 0;
   color: var(--color-text);
-  background-color: transparent;
+  background-color: var(--color-base);
   font-family: var(--font-body);
   font-size: var(--size-0);
   font-feature-settings: "onum";
@@ -18,39 +16,8 @@
   text-wrap: pretty;
   line-height: 1.5;
 
-  @include media-queries.kim-print {
+  @media print {
     color: black !important;
     background-color: white !important;
-  }
-
-  &.kim-gotZhatZhinged::after {
-    content: "WEHEHE";
-    position: fixed;
-    inset-inline-start: 50vw;
-    inset-block-start: -100vh;
-    color: var(--color-accent);
-    font-weight: bold;
-    font-size: var(--size-5);
-    animation-name: zhatzhing;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-  }
-}
-
-@keyframes zhatzhing {
-  0% {
-    inset-block-start: 55vh;
-    opacity: 0;
-  }
-  50% {
-    inset-block-start: 50vh;
-    opacity: 1;
-  }
-  100% {
-    inset-block-start: 45vh;
-    opacity: 0;
   }
 }

@@ -52,7 +52,7 @@ export default function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Load plugins
-  eleventyConfig.addPlugin(loggingPlugin);
+  // eleventyConfig.addPlugin(loggingPlugin);
   eleventyConfig.addPlugin(tocPlugin);
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
@@ -112,7 +112,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("mastodon", shortcodeMastodon);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    shortcodeResponsiveImage
+    shortcodeResponsiveImage,
   );
   eleventyConfig.addPairedNunjucksShortcode("twitter", shortcodeTwitter);
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);

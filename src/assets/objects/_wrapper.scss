@@ -1,5 +1,6 @@
-@use "../helpers/layout";
-
 .kimWrapper {
-  @include layout.kim-width-container;
+  inline-size: 100%;
+  max-inline-size: calc(var(--grid-max-width) + var(--grid-gutter));
+  margin-inline: auto;
+  padding-inline: var(--grid-gutter);
 }

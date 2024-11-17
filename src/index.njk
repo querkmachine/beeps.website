@@ -7,91 +7,43 @@ metadata:
 
 {% extends 'src/_layouts/layout.njk' %}
 
+{% set bodyClasses = "page-homepage" %}
+
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
 
-{% block head %}
-<style>
-.page {
-  overflow-x: hidden;
-}
-.page-intro {
-  position: relative;
-}
-.page-intro-heading {
-  color: var(--color-accent);
-}
-.page-intro-background {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  z-index: -1;
-}
-.page-intro-noodle {
-  inline-size: auto;
-  block-size: 8rem;
-}
-.page-blogs-noodle {
-  display: none;
-}
-.page-rings { margin-block: 0; }
-.page-rings svg { inline-size: 1.5em; block-size: 1.5em; forced-color-adjust: auto; }
-.page-rings div { margin-block-end: var(--space-3); }
-.page-rings dt { font-weight: bold; }
-.page-rings dd { margin-inline: 0; }
-@media (min-width: 42em) {
-  .page-intro .kimBody {
-    max-inline-size: 64%;
-  }
-  .page-intro-noodle {
-    inline-size: 50%;
-    block-size: auto;
-    float: inline-end;
-    shape-outside: url("{{ '/assets/images/noodle-home--mask.gif' | url }}");
-    shape-margin: var(--space-7);
-  }
-  .page-intro-heading {
-    margin-block-start: 5%;
-  }
-  .page-blogs-heading {
-    margin-block-start: 0;
-  }
-}
-@media (min-width: 768px) {
-  .page-blogs-noodle {
-    margin-top: -5%;
-    display: initial;
-  }
-}
-</style>
-{% endblock %}
-
-{% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
-
 {% block main %}
-<div class="page">
-
-  <header class="page-intro kim-!-padding-block-start-7-8 kim-!-padding-block-end-8-9">
-    <canvas class="page-intro-background" width="1000" height="500" hidden></canvas>
-    <div class="kimWrapper">
-      <img class="page-intro-noodle" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
-      <h1 class="kimHeading-xl page-intro-heading">Hello universe,<br>I&rsquo;m beeps.</h1>
-      <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-      <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
-      <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
-      <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
+  <header class="kimSplash">
+    <canvas class="kimSplash_background" width="1000" height="500" hidden></canvas>
+    <div class="kimWrapper kimSplash_inner">
+      <h1 class="kimSplash_text">
+        <strong>I'm beeps.</strong>
+        A shapeshifter on the internet that builds websites &amp; writes stuff.
+      </h1>
+      <img class="kimSplash_image" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
     </div>
   </header>
   
-  <section class="page-blog kim-!-margin-block-end-8-9" id="blog" aria-labelledby="blog-heading">
+  <header class="kim-!-padding-block-start-7-8 kim-!-padding-block-end-8-9">
     <div class="kimWrapper">
       <div class="kimGrid">
-        <div class="page-blogs-noodle kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+          <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
+          <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
+          <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
+          <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-action">More about beeps</a></p>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="kim-!-margin-block-end-8-9" id="blog" aria-labelledby="blog-heading">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
           <img srcset="{{ '/assets/images/noodle-blog.png' | url }} 1x, {{ '/assets/images/noodle-blog@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-blog.png' | url }}" alt="">
         </div>
         <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-threeQuarters">
-          <h2 class="kimHeading-l page-blogs-heading" id="blog-heading">Recent blog posts</h2>
+          <h2 class="kimHeading-l" id="blog-heading">Recent blog posts</h2>
           <div class="kimGrid kim-!-margin-bottom-6">
             {% for post in collections.blog | reverse | head(3) %}
               <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
@@ -99,67 +51,65 @@ metadata:
               </div>
             {% endfor %}
           </div>
-          <p class="kimBody kim-!-margin-block-start-5"><a href="{{ '/blog/' | url }}" class="kimLink-plain">All blog posts &rarr;</a></p>
+          <p class="kimBody kim-!-margin-block-start-5"><a href="{{ '/blog/' | url }}" class="kimLink-action">All blog posts</a></p>
         </div>
       </div>
     </div>
   </section>
-
-</div>
 {% endblock %}
 
 {% block beforeFooter %}
-{%- if webrings or buttons.homepage %}
-  <div class="kimGrid">
-    {%- if webrings %}
-    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <h2 class="kimHeading-xs" id="webrings">Webrings</h2>
-      <dl class="kimGrid page-rings">
-        {%- for ring in webrings %}
-        <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
-          <dt>
-            <a class="kimLink-plain" href="{{ ring.url }}">
-              {% include "./assets/images/" + ring.icon %}<br>
-              {{ ring.name }}
-            </a>
-          </dt>
-          <dd>
-            <a class="kimLink-plain" href="{{ ring.previousUrl }}" aria-label="Previous site in {{ ring.name }} webring">
-              ← Previous
-            </a>
-          </dd>
-          <dd>
-            <a class="kimLink-plain" href="{{ ring.nextUrl }}" aria-label="Next site in {{ ring.name }} webring">
-              → Next
-            </a>
-          </dd>
-        </div>
-        {%- endfor %}
-      </dl>
-    </div>
-    {%- endif %}
-    {%- if buttons.homepage %}
-      {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
-      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-        <h2 class="kimHeading-xs">Buttons</h2>
-        <div class="kimButtonGrid">
-          {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
-        </div>
+  {%- if webrings or buttons.homepage %}
+    <div class="kimGrid">
+      {%- if webrings %}
+      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-xs" id="webrings">Webrings</h2>
+        <dl class="kimGrid">
+          {%- for ring in webrings %}
+          <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
+            <dt>
+              <a class="kimLink" href="{{ ring.url }}">
+                {% include "./assets/images/" + ring.icon %}<br>
+                {{ ring.name }}
+              </a>
+            </dt>
+            <dd>
+              <a class="kimLink-noUnderline" href="{{ ring.previousUrl }}" aria-label="Previous site in {{ ring.name }} webring">
+                ← Previous
+              </a>
+            </dd>
+            <dd>
+              <a class="kimLink-noUnderline" href="{{ ring.nextUrl }}" aria-label="Next site in {{ ring.name }} webring">
+                → Next
+              </a>
+            </dd>
+          </div>
+          {%- endfor %}
+        </dl>
       </div>
-    {%- endif %}
-  </div>
-
-  <hr class="kimRule kimRule-hairline">
-{%- endif %}
+      {%- endif %}
+      {%- if buttons.homepage %}
+        {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          <h2 class="kimHeading-xs">Buttons</h2>
+          <div class="kimButtonGrid">
+            {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
+          </div>
+        </div>
+      {%- endif %}
+    </div>
+  
+    <hr class="kimRule kimRule-regular">
+  {%- endif %}
 {% endblock %}
 
 {% block scripts %}
-{{ super() }}
-<script type="module">
-  import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-  new Spots(document.querySelector(".page-intro-background"), {
-    heightProportion: .5,
-    useCalendarThemes: true
-  });
-</script>
+  {{ super() }}
+  <script type="module">
+    import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
+    new Spots(document.querySelector(".kimSplash_background"), {
+      heightProportion: .8,
+      useCalendarThemes: true
+    });
+  </script>
 {% endblock %}

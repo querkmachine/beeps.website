@@ -1,0 +1,20 @@
+@use "../helpers/links";
+
+.kimNavigation {
+  color: var(--color-canvas-text);
+  background-color: var(--color-canvas-background);
+  border-block: var(--border-regular) solid var(--color-base);
+}
+
+.kimNavigation_inner {
+  padding-block: var(--space-3-4);
+}
+
+.kimNavigation_link {
+  @include links.link-helper(
+    $color: light-dark(var(--color-canvas-text), var(--color-link)),
+    $hover-color: light-dark(var(--color-canvas-text), var(--color-link-hover)),
+    $initial-underline: false,
+    $visited-styles: false
+  );
+}

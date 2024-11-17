@@ -1,7 +1,7 @@
 {% macro kimBlogComment(comment) %}
   <figure class="kimComment">
     <figcaption class="kimComment_meta">
-      <a class="kimLink kimLink-plain kimComment_user" href="{{ comment.account.url }}" rel="nofollow noopener noreferrer">
+      <a class="kimLink kimLink-noUnderline kimComment_user" href="{{ comment.account.url }}" rel="nofollow noopener noreferrer">
         <img class="kimComment_avatar" alt="" src="{{ comment.account.avatar }}" loading="lazy" width="50" height="50">
         <span class="kimComment_name">{{ comment.account.acct }}</span>
       </a>

@@ -1,0 +1,14 @@
+@use "a11y";
+
+@mixin button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: currentcolor;
+  background-color: transparent;
+  font: inherit;
+
+  &:focus-visible {
+    @include a11y.focus-ring;
+  }
+}
