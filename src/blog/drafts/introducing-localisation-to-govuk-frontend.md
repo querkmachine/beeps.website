@@ -1,4 +1,5 @@
 ---
+design: magazine
 title: Introducing localisation to GOV.UK Frontend
 date: 9999-01-01
 tags: [web development]

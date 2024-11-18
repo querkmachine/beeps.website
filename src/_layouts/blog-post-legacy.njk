@@ -1,0 +1,154 @@
+{% from "src/_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/interaction-list.njk" import kimInteractionList %}
+
+{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.blog | getNextCollectionItem(page) %}
+
+  <div class="kim-!-margin-block-8-9">
+    <div class="kimWrapper">
+      <article itemscope itemtype="https://schema.org/BlogPosting">
+      
+        <header class="kim-!-margin-block-end-8-9">
+          <h1 class="kimHeading-xl kim-!-margin-block-end-3" itemprop="name">
+            {{- title | markdownInline | safe -}}
+          </h1>
+          {%- if metadata.description %}
+            <div class="kimBody-l">{{ metadata.description }}</div>
+          {%- endif %}
+        </header>
+        
+        <div class="kimGrid">
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          
+            <footer>
+              <dl class="kimMeta">
+                {%- if date %}
+                  <div class="kimMeta_item">
+                    <dt class="kimMeta_key">Published</dt>
+                    <dd class="kimMeta_value">
+                      <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
+                        {{- date | formatDate('human') -}}
+                      </time>
+                    </dd>
+                  </div>
+                {%- endif %}
+                {%- if updated %}
+                  <div class="kimMeta_item">
+                    <dt class="kimMeta_key">Last updated</dt>
+                    <dd class="kimMeta_value">
+                      <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
+                        {{- updated | formatDate('human') -}}
+                      </time>
+                    </dd>
+                  </div>
+                {%- endif %}
+                {%- if tags %}
+                  <div class="kimMeta_item">
+                    <dt class="kimMeta_key">Tagged</dt>
+                    <dd class="kimMeta_value">
+                      <ul class="kimList">
+                        {% for tag in tags | filterTagList | sort %}
+                          {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+                          <li>
+                            <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
+                              {{- tag | tagify -}}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </dd>
+                  </div>
+                {%- endif %}
+              </dl>
+            </footer>
+            
+            <hr class="kimRule">
+            
+            {% include "table-of-contents.njk" %}
+          
+          </div>
+          
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds" itemprop="articleBody">
+            {%- if page.templateSyntax === "njk,md" %}
+              {{ content | safe }}
+            {%- else %}
+              <div class="kimProse">
+                {{ content | safe }}
+              </div>
+            {%- endif %}
+            <p class="kimBody-s">
+              Thought this was neat? Why not
+              <a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?
+            </p>
+          </div>
+        </div>
+        
+      </article>
+      
+      {%- if interactions %}
+        <div class="kimGrid kim-!-doNotPrint">
+          
+          {%- if (stats.favourites > 0) or (stats.shares > 0) %}
+            <section id="interactions" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+              <hr class="kimRule kimRule-thick">
+    
+              {%- if stats.favourites > 0 %}
+                <h2 class="kimHeading-s">
+                  {{ stats.favourites }} {{ 'favourite' if stats.favourites == 1 else 'favourites' }}
+                </h2>
+                {{ kimInteractionList(favourites, stats.favourites) }}
+              {%- endif %}
+    
+              {%- if stats.shares > 0 %}
+                <h2 class="kimHeading-s">
+                  {{ stats.shares }} {{ 'share' if stats.shares == 1 else 'shares' }}
+                </h2>
+                {{ kimInteractionList(shares, stats.shares) }}
+              {%- endif %}
+    
+            </section>
+          {%- else %}
+            {# Placeholder column if there's nothing to actually show here. Not ideal, but eeeeeeh. #}
+            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird" aria-hidden="true">
+              <hr class="kimRule kimRule-thick">
+            </div>
+          {%- endif %}
+          
+          <section id="comments" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+            <hr class="kimRule kimRule-thick">
+            
+            <h2 class="kimHeading-s">
+              Comments
+            </h2>
+            <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on Mastodon</a>.</p>
+            
+            {%- if comments %}
+            {% from "src/_includes/blog-comments.njk" import kimBlogComments %}
+            {{ kimBlogComments(comments) }}
+            {%- endif %}
+            
+          </section>
+        </div>
+      {%- endif %}
+      
+      <nav aria-label="Next and previous blog post" class="kim-!-doNotPrint">
+        <hr class="kimRule kimRule-thick">
+        <div class="kimGrid">
+          {% if previousPost %}
+            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
+              <div class="kimHeading-s">Previous post</div>
+              {{ kimBlogCard(previousPost, { element: 'div', rel: 'prev' }) }}
+              <hr class="kimRule kimRule-hairline">
+            </div>
+          {% endif %}
+          {% if nextPost %}
+            <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
+              <div class="kimHeading-s">Next post</div>
+              {{ kimBlogCard(nextPost, { element: 'div', rel: 'next' }) }}
+              <hr class="kimRule kimRule-hairline">
+            </div>
+          {% endif %}
+        </div>
+      </nav>
+    </div>
+  </div>

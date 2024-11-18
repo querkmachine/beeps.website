@@ -1,0 +1,84 @@
+{% from "src/_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/interaction-list.njk" import kimInteractionList %}
+
+{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.blog | getNextCollectionItem(page) %}
+
+<div class="kimWrapper">
+  <div class="kimArticle">
+    <article class="kimArticle_wrapper" itemscope itemtype="https://schema.org/BlogPosting">
+      <header class="kimArticle_header">
+        <h1 class="kimHeading-xl" itemprop="name">
+          {{- title | markdownInline | safe -}}
+        </h1>
+        {%- if metadata.description %}
+          <div class="kimBody-l">{{ metadata.description }}</div>
+        {%- endif %}
+      </header>
+      <nav class="kimArticle_toc">
+        {% include "table-of-contents.njk" %}
+      </nav>
+      <div class="kimArticle_body">
+        {%- if page.templateSyntax === "njk,md" %}
+          {{ content | safe }}
+        {%- else %}
+          <div class="kimProse">
+            {{ content | safe }}
+          </div>
+        {%- endif %}
+      </div>
+      <div class="kimArticle_share">
+        <p class="kimBody-s">
+          Thought this was neat? Why not
+          <a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?
+        </p>
+      </div>
+      <footer class="kimArticle_meta">
+        <dl class="kimMeta">
+          {%- if date %}
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key">Published</dt>
+              <dd class="kimMeta_value">
+                <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
+                  {{- date | formatDate('human') -}}
+                </time>
+              </dd>
+            </div>
+          {%- endif %}
+          {%- if updated %}
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key">Last updated</dt>
+              <dd class="kimMeta_value">
+                <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
+                  {{- updated | formatDate('human') -}}
+                </time>
+              </dd>
+            </div>
+          {%- endif %}
+          {%- if tags %}
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key">Tagged</dt>
+              <dd class="kimMeta_value">
+                <ul class="kimList">
+                  {% for tag in tags | filterTagList | sort %}
+                    {% set tagUrl %}/blog/{{ tag | slugify }}/{% endset %}
+                    <li>
+                      <a class="kimLink-plain" href="{{ tagUrl | url }}" {%- if page.url === tagUrl %} aria-current="true"{% endif %}>
+                        {{- tag | tagify -}}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </dd>
+            </div>
+          {%- endif %}
+        </dl>
+      </footer>
+      <div class="kimArticle_navigation">
+        {{ kimBlogCard(previousPost, { element: 'div', rel: 'prev' }) }}
+        {{ kimBlogCard(nextPost, { element: 'div', rel: 'next' }) }}
+      </div>
+    </article>
+    
+  </div>
+</div>

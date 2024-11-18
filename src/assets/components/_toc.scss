@@ -3,6 +3,8 @@
 @use "../helpers/media-queries";
 
 .kimToc {
+  font-size: var(--size--1);
+
   &[open] .kimToc_collapsibleSummary {
     margin-block-end: var(--space-2);
 
@@ -23,6 +25,7 @@
 
 .kimToc_collapsibleSummary {
   position: relative;
+  font-weight: bold;
   cursor: pointer;
 
   &::before {
