@@ -88,7 +88,7 @@
               {%- for link in site.footerLinks %}
                 <li>
                   <a class="kimLink-plain" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                    {{- link.text -}}
+                    {{- link.html | safe if link.html else link.text -}}
                   </a>
                 </li>
               {%- endfor%}
@@ -100,7 +100,7 @@
               {%- for link in site.legalLinks %}
                 <li>
                   <a class="kimLink-plain" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                    {{- link.text -}}
+                    {{- link.html | safe if link.html else link.text -}}
                   </a>
                 </li>
               {%- endfor%}

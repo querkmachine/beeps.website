@@ -26,7 +26,8 @@ export default function () {
       { href: "/contact/", text: "Contact beeps" },
     ],
     legalLinks: [
-      { href: "/links/", text: "Cool links" },
+      { href: "/links/", html: "Cool links &amp; friends" },
+      { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
       { href: "/colophon/", text: "Colophon" },
       { href: "/privacy/", text: "Cookies and privacy" },
       {
