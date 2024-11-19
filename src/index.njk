@@ -11,58 +11,57 @@ metadata:
 
 {% block head %}
 <style>
-.page {
-  overflow-x: hidden;
-}
+/**
+ * Intro splash
+ */
 .page-intro {
-  position: relative;
+  margin-block-end: var(--space-5);
 }
-.page-intro-heading {
-  color: var(--color-accent);
+
+/** 
+ * Blogs
+ */
+.page-blog {
+  background-color: color-mix(in lch, var(--color-background) 70%, #000);
+  margin-block-end: var(--space-7);
 }
-.page-intro-background {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  z-index: -1;
+[data-color-scheme="light"] .page-blog {
+  background-color: color-mix(in lch, var(--color-background) 95%, #000);
 }
-.page-intro-noodle {
-  inline-size: auto;
-  block-size: 8rem;
+.page-blog-noodle,
+.page-about-noodle {
+  margin-block-start: -5%;
 }
-.page-blogs-noodle {
-  display: none;
+.page-blog-heading {
+  margin-block-start: var(--space-5);
 }
-.page-rings { margin-block: 0; }
-.page-rings svg { inline-size: 1.5em; block-size: 1.5em; forced-color-adjust: auto; }
-.page-rings div { margin-block-end: var(--space-3); }
-.page-rings dt { font-weight: bold; }
-.page-rings dd { margin-inline: 0; }
-@media (min-width: 42em) {
-  .page-intro .kimBody {
-    max-inline-size: 64%;
-  }
-  .page-intro-noodle {
-    inline-size: 50%;
-    block-size: auto;
-    float: inline-end;
-    shape-outside: url("{{ '/assets/images/noodle-home--mask.gif' | url }}");
-    shape-margin: var(--space-7);
-  }
-  .page-intro-heading {
-    margin-block-start: 5%;
-  }
-  .page-blogs-heading {
-    margin-block-start: 0;
-  }
+
+/**
+ * About
+ */
+.page-about {
+  margin-block-end: var(--space-8-9);
 }
-@media (min-width: 768px) {
-  .page-blogs-noodle {
-    margin-top: -5%;
-    display: initial;
-  }
+
+/**
+ * Webrings
+ */ 
+.page-rings { 
+  margin-block: 0;
+}
+.page-rings svg { 
+  inline-size: 1.5em;
+  block-size: 1.5em;
+  forced-color-adjust: auto;
+}
+.page-rings div { 
+  margin-block-end: var(--space-3);
+}
+.page-rings dt { 
+  font-weight: bold;
+}
+.page-rings dd {
+  margin-inline: 0;
 }
 </style>
 {% endblock %}
@@ -70,42 +69,55 @@ metadata:
 {% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
 
 {% block main %}
-<div class="page">
-
-  <header class="page-intro kim-!-padding-block-start-7-8 kim-!-padding-block-end-8-9">
-    <canvas class="page-intro-background" width="1000" height="500" hidden></canvas>
-    <div class="kimWrapper">
-      <img class="page-intro-noodle" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
-      <h1 class="kimHeading-xl page-intro-heading">Hello universe,<br>I&rsquo;m beeps.</h1>
-      <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-      <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
-      <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
-      <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
-    </div>
-  </header>
+<header class="kimSplash page-intro">
+  <canvas class="kimSplash_background" width="1000" height="500" hidden></canvas>
+  <div class="kimWrapper kimSplash_inner">
+    <h1 class="kimSplash_text">
+      <strong>I'm beeps.</strong>
+      A shapeshifter on the internet that builds websites &amp; writes stuff.
+    </h1>
+    <img class="kimSplash_image" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
+  </div>
+</header>
   
-  <section class="page-blog kim-!-margin-block-end-8-9" id="blog" aria-labelledby="blog-heading">
-    <div class="kimWrapper">
-      <div class="kimGrid">
-        <div class="page-blogs-noodle kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
-          <img srcset="{{ '/assets/images/noodle-blog.png' | url }} 1x, {{ '/assets/images/noodle-blog@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-blog.png' | url }}" alt="">
+<section class="page-blog" id="blog" aria-labelledby="blog-heading">
+  <div class="kimWrapper">
+    <div class="kimGrid">
+      <div class="page-blog-noodle kimGrid_column kimGrid_column-full nx:kimGrid_column-oneQuarter">
+        <img srcset="{{ '/assets/images/noodle-blog.png' | url }} 1x, {{ '/assets/images/noodle-blog@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-blog.png' | url }}" alt="">
+      </div>
+      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-threeQuarters">
+        <h2 class="kimHeading-m page-blog-heading" id="blog-heading">Recent blog posts</h2>
+        <div class="kimGrid">
+          {% for post in collections.blog | reverse | head(3) %}
+            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-block-end-4-5">
+              {{ kimBlogCard(post, { element: "div" }) }}
+            </div>
+          {% endfor %}
         </div>
-        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-threeQuarters">
-          <h2 class="kimHeading-l page-blogs-heading" id="blog-heading">Recent blog posts</h2>
-          <div class="kimGrid kim-!-margin-bottom-6">
-            {% for post in collections.blog | reverse | head(3) %}
-              <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-                {{ kimBlogCard(post, { element: "div" }) }}
-              </div>
-            {% endfor %}
-          </div>
-          <p class="kimBody kim-!-margin-block-start-5"><a href="{{ '/blog/' | url }}" class="kimLink-plain">All blog posts &rarr;</a></p>
-        </div>
+        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain">All blog posts &rarr;</a></p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</div>
+<section class="page-about" id="about" aria-labelledby="about-heading">
+  <div class="kimWrapper">
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-m kim-!-margin-block-start-0" id="about-heading">About beeps</h2>
+        <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
+        <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
+        <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
+        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
+      </div>
+      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
+        <img class="page-about-noodle" src="{{ '/assets/images/noodle-opengraph.png' | url }}" alt="" width="408" height="500">
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
 
 {% block beforeFooter %}
@@ -157,8 +169,8 @@ metadata:
 {{ super() }}
 <script type="module">
   import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-  new Spots(document.querySelector(".page-intro-background"), {
-    heightProportion: .5,
+  new Spots(document.querySelector(".kimSplash_background"), {
+    heightProportion: .75,
     useCalendarThemes: true
   });
 </script>
