@@ -29,6 +29,7 @@ import {
   formatDate,
   formatISODate,
   getFirstNItems,
+  mergeArrays,
 } from "./config/utils.js";
 
 // Nunjucks shortcodes
@@ -102,6 +103,9 @@ export default function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
+
+  // Custom Nunjucks functions
+  eleventyConfig.addNunjucksGlobal("merge", mergeArrays);
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);

@@ -4,6 +4,8 @@
       <span>Development</span>
     </summary>
     <div>
+      <code>cssComponents</code>
+      <textarea>{{ cssComponents | dump }}</textarea>
       <code>page</code>
       <textarea>{{ page | dump }}</textarea>
       <code>site</code>
@@ -15,26 +17,21 @@
 
   <style>
     #dev-tag {
-      position: absolute;
+      position: sticky;
+      width: 100%;
       top: 0;
       left: 0;
       z-index: 9999;
-    }
-    #dev-tag[open] {
-      position: static;
-      width: 100%;
+      color: white;
       background-color: red;
     }
     #dev-tag summary { list-style: none; }
     #dev-tag summary::-webkit-details-marker { display: none; }
-    #dev-tag summary span  {
+    #dev-tag summary {
       padding: .25em 1em .25em .5em;
-      color: white;
-      background-color: red;
       font-size: smaller;
       font-weight: bold;
       text-transform: uppercase;
-      clip-path: polygon(0 0, 100% 0, calc(100% - .5em) 100%, 0 100%);
       cursor: pointer;
     }
     #dev-tag div {

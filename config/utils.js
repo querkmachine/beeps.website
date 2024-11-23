@@ -66,4 +66,25 @@ const getFirstNItems = function (array, n) {
   return array.slice(0, n);
 };
 
-export { cachebustAssetUrl, formatDate, formatISODate, getFirstNItems };
+/**
+ * Takes arrays, merges them, removes duplicates.
+ *
+ * @param {array} arrays - Any number of arrays.
+ * @param {array} - The one true array.
+ */
+const mergeArrays = function (...arrays) {
+  return arrays.reduce((mergedArray, currentArray) => {
+    if (!Array.isArray(currentArray)) {
+      currentArray = [];
+    }
+    return Array.from(new Set(mergedArray.concat(currentArray)));
+  }, []);
+};
+
+export {
+  cachebustAssetUrl,
+  formatDate,
+  formatISODate,
+  getFirstNItems,
+  mergeArrays,
+};
