@@ -23,7 +23,7 @@ import {
   markdownFilterInline,
 } from "./config/markdown.js";
 import { urlizeOpenGraphImage } from "./config/opengraph.js";
-import { outputStylesheet } from "./config/sass.js";
+import { compileStylesheets } from "./config/sass.js";
 import {
   cachebustAssetUrl,
   formatDate,
@@ -98,7 +98,7 @@ export default function (eleventyConfig) {
 
   // Watch and compile Sass files
   eleventyConfig.addWatchTarget(paths.srcAssets + "/**/*.scss");
-  eleventyConfig.on("beforeBuild", outputStylesheet);
+  eleventyConfig.on("beforeBuild", compileStylesheets);
 
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
@@ -112,7 +112,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("mastodon", shortcodeMastodon);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    shortcodeResponsiveImage
+    shortcodeResponsiveImage,
   );
   eleventyConfig.addPairedNunjucksShortcode("twitter", shortcodeTwitter);
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
