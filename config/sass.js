@@ -42,7 +42,7 @@ const compileSassFile = function (file) {
 
 const transformCss = async function (css) {
   return postcss([postcssPresetEnv, postcssCssNano])
-    .process(css)
+    .process(css, { from: undefined })
     .then(async (result) => result.css);
 };
 
