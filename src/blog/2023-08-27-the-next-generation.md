@@ -8,6 +8,8 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "111006035644776672"
+cssComponents:
+  - figure
 ---
 
 {% figure caption="Original Emy, as drawn by BatPunk.", float="right" %}

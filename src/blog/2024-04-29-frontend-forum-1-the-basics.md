@@ -8,6 +8,10 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "112356621485493294"
+cssComponents:
+  - blockquote
+  - character
+  - code
 ---
 
 Frontend website development has been my full-time job for about a decade now, and I've been doing it as a hobby for [over two decades]({{ '/blog/2023-07-25-20-years/' | url }}).

@@ -1,5 +1,7 @@
 ---
 title: I'm a furry
+cssComponents:
+  - figure
 ---
 
 I've been involved in the [furry fandom](https://en.wikipedia.org/wiki/Furry_fandom) for over half of my life.

@@ -8,6 +8,8 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "111427818188547326"
+cssComponents:
+  - callout
 ---
 
 I am a frontend developer. I'm also a civil servant.

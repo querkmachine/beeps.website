@@ -8,6 +8,8 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "113158136167913317"
+cssComponents:
+  - character
 ---
 
 If it wasn't obvious from some of my past posts, I don't particularly care for Bluesky.

@@ -6,6 +6,8 @@ date: 2022-10-27
 tags: [self-identity]
 metadata:
   description: Have you ever said hello to yourself, and had your subconscious say hello back? An exploration of multiplicity and whether that applies to me.
+cssComponents:
+  - callout
 ---
 
 {% callout %}

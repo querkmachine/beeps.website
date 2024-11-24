@@ -8,4 +8,4 @@ metadata:
 
 {% responsiveImage "./src/images/steakrub.jpg", "Photo of a steak, cooked medium well." %}
 
-<p>Random recipe I tried out to spice up my cheap steak. Perhaps overpowered the steak a bit much, but still delicious. (<a href="http://allrecipes.com/recipe/242012/steak-dry-rub/">Recipe</a>)</p>
+Random recipe I tried out to spice up my cheap steak. Perhaps overpowered the steak a bit much, but still delicious. ([Recipe](http://allrecipes.com/recipe/242012/steak-dry-rub/))

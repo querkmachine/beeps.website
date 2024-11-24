@@ -8,6 +8,10 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "110267424452120489"
+cssComponents:
+  - character
+  - figure
+  - code
 ---
 
 User stylesheets are a feature of web browsers that, appropriate to the name, allow the user to add their own custom CSS styles to webpages. These changes could be for accessibility reasons, to hide certain features, or simply to enforce a certain stylistic preference.

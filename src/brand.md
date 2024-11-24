@@ -3,6 +3,10 @@ layout: brand.njk
 title: beeps' brand
 metadata:
   description: Style guide for my personal projects, including this website.
+cssComponents:
+  - table
+  - blockquote
+  - code
 ---
 
 {% set palette = {

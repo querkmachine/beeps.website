@@ -8,6 +8,9 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "111557752407785137"
+cssComponents:
+  - figure
+  - character
 ---
 
 [Arc](https://arc.net/) is one of the "new generation" of web browsers that have started popping up in recent years. Like many of them, it claims to protect the privacy of the user from the evils of privacy-invading online practices. Like many of them, it claims to reinvent and revolutionise how web browsers are used.

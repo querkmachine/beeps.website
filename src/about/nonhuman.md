@@ -1,6 +1,8 @@
 ---
 title: I'm not human
 redirect_from: /about/robot/
+cssComponents:
+  - callout
 ---
 
 In mid-2022, after some period of thinking, discussion and exploration, come to the conclusion that I don't really consider myself human.

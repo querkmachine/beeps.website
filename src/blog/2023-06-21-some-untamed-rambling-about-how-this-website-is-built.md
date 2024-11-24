@@ -8,6 +8,9 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "110584543730484954"
+cssComponents:
+  - character
+  - code
 ---
 
 Hi, I'm beeps. I make websites for a living.

@@ -8,6 +8,9 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "111677926746194347"
+cssComponents:
+  - character
+  - callout
 ---
 
 This year was, on the whole, pretty alright.

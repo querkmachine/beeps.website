@@ -3,6 +3,17 @@ title: Markdown and Nunjucks shortcode examples
 layout: generic.njk
 metadata:
   noRobots: true
+cssComponents:
+  - blockquote
+  - code
+  - table
+  - callout
+  - character
+  - figure
+  - image-differ
+  - youtube
+  - twitter
+  - mastodon
 ---
 
 A page for testing markdown styles, plugins and custom shortcodes.

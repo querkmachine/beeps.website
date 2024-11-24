@@ -1,6 +1,6 @@
 {%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
 {%- set colorSchemeJsUrl = '/assets/javascript/color-scheme.js' | url | cachebust -%}
-
+{%- set cssComponents = merge(cssComponents, ["masthead", "footer", "noodle-bowl", "color-scheme-switch"]) -%}
 <!doctype html>
 <html lang="en-GB" class="kimPage">
 <head>
@@ -31,6 +31,11 @@
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="{{ webfontUrl }}"></noscript>
   <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+  
+  {# CSS components #}
+  {%- for item in cssComponents %}
+  <link rel="stylesheet" href="{{ '/assets/components/' + item + '.css' | url | cachebust }}" media="all">
+  {%- endfor %}
   
   {# Color scheme switcher JS #}
   <script src="{{ colorSchemeJsUrl }}"></script>

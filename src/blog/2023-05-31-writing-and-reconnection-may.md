@@ -8,6 +8,8 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "110463780635686591"
+cssComponents:
+  - figure
 ---
 
 I really don't have much to preamble this month, so let's get right into it.

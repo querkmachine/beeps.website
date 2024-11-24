@@ -10,6 +10,10 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "109826013960339119"
+cssComponents:
+  - character
+  - figure
+  - twitter
 ---
 
 I recently left Twitter. The reasons why probably need little explanation for a contemporaneous reader in the know.

@@ -8,6 +8,8 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "109944653729116139"
+cssComponents:
+  - character
 ---
 
 February, perhaps congruently with it being the shortest month, has not lent itself to productivity.

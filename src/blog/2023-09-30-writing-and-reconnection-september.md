@@ -8,6 +8,8 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "111155007349809456"
+cssComponents:
+  - character
 ---
 
 This is the month that I burned out properly.

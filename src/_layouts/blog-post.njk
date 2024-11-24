@@ -1,3 +1,20 @@
+{% set cssComponents = merge(cssComponents, ['toc', 'meta']) %}
+
+{# 'Legacy' post, include prose styles #}
+{%- if page.templateSyntax !== "njk,md" %}
+  {% set cssComponents = merge(cssComponents, ['prose']) %}
+{%- endif %}
+
+{# Has interactions, include that too #}
+{%- if (stats.favourites > 0) or (stats.shares > 0) %}
+  {% set cssComponents = merge(cssComponents, ['interaction-list']) %}
+{%- endif %}
+
+{# Has comments, include that and prose styles #}
+{%- if comments %}
+  {% set cssComponents = merge(cssComponents, ['comment', 'prose']) %}
+{%- endif %}
+
 {% extends 'src/_layouts/layout.njk' %}
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}

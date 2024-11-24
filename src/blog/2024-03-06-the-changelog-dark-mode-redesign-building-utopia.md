@@ -8,6 +8,10 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "112048544232255093"
+cssComponents:
+  - figure
+  - image-differ
+  - code
 ---
 
 It's only been about six weeks since [the last Changelog]({{ '/blog/2024-01-23-the-changelog-mastodon-opengraph-third-party-code/' | url }}), but there's been no shortage of changes going on behind the scenes. If anything it's probably been the periods of greatest upheaval this site has had for a long time, and it's probably not even been that obvious.

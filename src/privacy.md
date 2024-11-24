@@ -3,6 +3,8 @@ layout: generic.njk
 title: Privacy
 metadata:
   description: Privacy policy, data collection, etc.
+cssComponents:
+  - code
 ---
 
 This website doesn't collect any information about the people who visit it outside of basic server logs created by my hosting provider.
