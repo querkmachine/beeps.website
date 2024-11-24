@@ -12,8 +12,7 @@ cssComponents:
   - figure
   - image-differ
   - youtube
-  - twitter
-  - mastodon
+  - social-embed
 ---
 
 A page for testing markdown styles, plugins and custom shortcodes.
@@ -281,16 +280,22 @@ OK that's about it for now. Bye!
 {% youtube "Z54wvKb5aig", { aspectRatio: 1 } %}
 {% youtube "2J5tjfqbWkA", { aspectRatio: "4/3" } %}
 
-### Twitter "embed"
+### Social media "embed"
 
-{% twitter username="batbeeps", number="1462180413548421121", date="2021-11-20T22:05:51.000Z" %}
+{% socialEmbed host="twitter.com", username="batbeeps", number="1462180413548421121", date="2021-11-20T22:05:51.000Z" %}
 Why is these so little actual consistency here aaaugghhhh
 
 {% responsiveImage "./src/images/star-trek-inconsistency.jpeg", "Screenshot of some Star Trek films thumbnails as they appear in iTunes Movies. 2 to 4 have a painted rainbow motif. 5, 6, 9 and 10 have a large Starfleet delta on the right containing the logo with some actor headshots to the left and the hero ship at the bottom. 8 has a similar layout except the logo is with the actor headshots on the left. 7 has a different layout entirely consisting of the film logo and various shots from the film assembled in a row against a metallic delta background." %}
-{% endtwitter %}
+{% endsocialEmbed %}
 
-{% mastodon host="chitter.xyz", username="batbeeps", number="111773929720283664", date="2024-01-17T23:40:16.287Z" %}
+{% socialEmbed host="chitter.xyz", username="batbeeps", number="111773929720283664", date="2024-01-17T23:40:16.287Z" %}
 I don't actually touch type in the 'correct' way—by the time school bothered to teach it I'd already used computers enough to make up my own method.
 
 As a result, I'm very right paw dominant when I type, about two thirds of the keyboard is used with my right paw, so I doubt I could go much faster than that.
-{% endmastodon %}
+{% endsocialEmbed %}
+
+{% socialEmbed host="bsky.app", username="beeps.gay", number="3lbmu3r6h2g2j", date="2024-11-23T15:54" %}
+I'd somehow convinced myself the Vanessa Carlton song couldn't be named “A Thousand Miles" because that's a Proclaimers song, and you can't have two songs with the same name cuz it'd be too confusing.
+
+Anyway according to my brain the song is called “Homebound (Making My Way Downtown)” now.
+{% endsocialEmbed %}

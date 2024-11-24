@@ -5,16 +5,17 @@ tags: [design]
 metadata:
   description: Minimalist, ship-focused thumbnails for each of the Star Trek movies.
 cssComponents:
-  - twitter
+  - social-embed
 ---
 
 Two days ago I was idly browsing my iTunes film collection (okay, not so idly, I was watching _Star Trek IV: The One With The Whales_ for the sixth time) when I was reminded of a particularly frustrating aspect of the iTunes Star Trek films:
 
-{% twitter username="batbeeps", number="1462180413548421121", date="2021-11-20T22:05:51.000Z" %}
+{% socialEmbed host="twitter.com", username="batbeeps", number="1462180413548421121", date="2021-11-20T22:05:51.000Z" %}
 
 Why is these so little actual consistency here aaaugghhhh
 
-{% responsiveImage "./src/images/star-trek-inconsistency.jpeg", "Screenshot of some Star Trek films thumbnails as they appear in iTunes Movies. 2 to 4 have a painted rainbow motif. 5, 6, 9 and 10 have a large Starfleet delta on the right containing the logo with some actor headshots to the left and the hero ship at the bottom. 8 has a similar layout except the logo is with the actor headshots on the left. 7 has a different layout entirely consisting of the film logo and various shots from the film assembled in a row against a metallic delta background." %} {% endtwitter %}
+{% responsiveImage "./src/images/star-trek-inconsistency.jpeg", "Screenshot of some Star Trek films thumbnails as they appear in iTunes Movies. 2 to 4 have a painted rainbow motif. 5, 6, 9 and 10 have a large Starfleet delta on the right containing the logo with some actor headshots to the left and the hero ship at the bottom. 8 has a similar layout except the logo is with the actor headshots on the left. 7 has a different layout entirely consisting of the film logo and various shots from the film assembled in a row against a metallic delta background." %}
+{% endsocialEmbed %}
 
 Everything is a mess and I hate it.
 

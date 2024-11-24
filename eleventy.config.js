@@ -37,9 +37,8 @@ import shortcodeCallout from "./config/shortcodes/callout.js";
 import shortcodeCharacter from "./config/shortcodes/character.js";
 import shortcodeFigure from "./config/shortcodes/figure.js";
 import shortcodeImageDiffer from "./config/shortcodes/imageDiffer.js";
-import shortcodeMastodon from "./config/shortcodes/mastodon.js";
 import shortcodeResponsiveImage from "./config/shortcodes/responsiveImages.js";
-import shortcodeTwitter from "./config/shortcodes/twitter.js";
+import shortcodeSocialEmbed from "./config/shortcodes/socialEmbed.js";
 import shortcodeYouTube from "./config/shortcodes/youtube.js";
 
 /**
@@ -113,12 +112,14 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
   eleventyConfig.addNunjucksAsyncShortcode("imageDiffer", shortcodeImageDiffer);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
-  eleventyConfig.addPairedNunjucksShortcode("mastodon", shortcodeMastodon);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
     shortcodeResponsiveImage,
   );
-  eleventyConfig.addPairedNunjucksShortcode("twitter", shortcodeTwitter);
+  eleventyConfig.addPairedNunjucksShortcode(
+    "socialEmbed",
+    shortcodeSocialEmbed,
+  );
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
   // Filters
