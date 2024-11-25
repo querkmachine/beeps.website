@@ -47,11 +47,6 @@ export default [
   { alt: "Lewis Dorigo", url: "//dorigo.co/" },
   { alt: "Lupinia Studios", url: "//www.lupinia.net/" },
   { alt: "maple mavica syrup", url: "//maple.pet/" },
-  {
-    src: "/assets/images/buttons/nano.png",
-    alt: "Nano",
-    url: "//nano.lgbt/",
-  },
   { alt: "Ninji", url: "//wuffs.org/" },
   {
     src: "/assets/images/buttons/niss.png",
