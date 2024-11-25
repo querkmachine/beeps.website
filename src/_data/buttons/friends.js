@@ -144,4 +144,9 @@ export default [
     url: "//maff.scot/",
   },
   { alt: "Yao", url: "//yaodema.com/" },
+  {
+    src: "/assets/images/buttons/522.png",
+    alt: "522@5snb.club",
+    url: "//www.5snb.club/",
+  },
 ];

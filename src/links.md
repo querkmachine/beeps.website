@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2024-09-30
+updated: 2024-11-25
 metadata:
   description: Cool sites on the information cyber highway that I like.
 ---
@@ -75,7 +75,7 @@ Miscellany, &c.
 Some other webbed sites of mine that might be of interest.
 
 - [GOV.UK Browser Data]({{ '/govuk-browser-data/' | url }}) — collected browser and operating system analytics from the GOV.UK website
-- [Twitter archive](//tweets.beeps.website) — archive of my Twitter posts
+- [Twitter archive](//tweets.beeps.website) — archive of my Twitter posts from before I left the site
 - [placeholder.rocks](//placeholder.rocks/) — _Steven Universe_ placeholder image generator
 - [placeponi.es](//placeponi.es/) — _My Little Pony_ placeholder image generator
 

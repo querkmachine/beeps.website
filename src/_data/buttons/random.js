@@ -93,20 +93,27 @@ export default [
     showOnHomepage: true,
   },
   {
-    src: "/assets/images/buttons/reject_humanity.png",
-    alt: "Reject humanity",
-    url: "/about/nonhuman/",
+    src: "/assets/images/buttons/this_machine_kills_fascists.png",
+    alt: "This machine kills fascists",
+    url: "//www.redbubble.com/i/sticker/Robotkin-This-machine-kills-fascists-by-querkmachine/119537500.EJUG5",
     showOnHomepage: true,
   },
   {
-    src: "/assets/images/buttons/this_machine_kills_fascists.png",
-    alt: "This machine kills fascists",
-    url: "/about/nonhuman/",
+    src: "/assets/images/buttons/i_am_a_robot.png",
+    alt: "I am a robot",
+    url: "//www.redbubble.com/i/sticker/Robotkin-I-am-a-robot-CAPTCHA-by-querkmachine/119537343.EJUG5",
+    showOnHomepage: true,
   },
   {
     src: "/assets/images/buttons/robot_cats_now.gif",
     alt: "Robot cats NOW!",
     url: "/about/nonhuman/",
+  },
+  {
+    src: "/assets/images/buttons/reject_humanity.png",
+    alt: "Reject humanity",
+    url: "/about/nonhuman/",
+    showOnHomepage: true,
   },
   { src: "/assets/images/buttons/spam.gif", alt: "Spam" },
   {
@@ -115,8 +122,7 @@ export default [
   },
   {
     src: "/assets/images/buttons/best_viewed_any.gif",
-    alt: "Best viewed in any browser",
-    showOnHomepage: true,
+    alt: "Best viewed in any damn browser",
   },
   {
     src: "/assets/images/buttons/anything_but_chrome.gif",
@@ -150,6 +156,7 @@ export default [
     src: "/assets/images/buttons/github.png",
     alt: "Check out my GitHub",
     url: "//github.com/querkmachine",
+    showOnHomepage: true,
   },
   { src: "/assets/images/buttons/enhanced_html.gif", alt: "Enhanced HTML" },
   {
