@@ -8,6 +8,9 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "113276809888056815"
+cssComponents:
+  - character
+  - callout
 ---
 
 {% callout %}

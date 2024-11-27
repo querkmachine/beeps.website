@@ -3,6 +3,8 @@ layout: generic.njk
 title: Colophon
 metadata:
   description: Giving credit to the people and tools that made this website possible.
+cssComponents:
+  - character
 ---
 
 A colophon is a short section you can find at the back of some books, giving some details about the creation of the book. I quite like making these for some of my websites, as a little exercise in being thankful and giving some link love to the open source projects and individual contributors that helped make it happen.

@@ -1,0 +1,81 @@
+@use "../helpers/links";
+
+/** 
+ * This is a generic wrapper around content that isn't able to use the normal 
+ * classes for whatever reason, e.g. HTML that's come from an API elsewhere.
+ * Avoid using it otherwise.
+ *
+ * This file avoids using `@extend` because it creates cascade issues.
+ */
+
+.kimProse {
+  p {
+    margin-block-start: 0;
+    margin-block-end: var(--space-5);
+    font-size: var(--size-0);
+    line-height: 1.5;
+  }
+
+  a {
+    @include links.kim-link;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    margin-block-end: var(--space-5);
+    padding: 0;
+    padding-inline-start: 2em;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    li::marker {
+      font-feature-settings: "tnum", "lnum";
+    }
+  }
+
+  li + li {
+    margin-block-start: var(--space-1);
+  }
+
+  code {
+    --color-code-background: var(--color-background);
+    --color-code-text: var(--color-text);
+    --color-code-border: var(--color-furniture-alt);
+
+    [data-color-scheme="light"] & {
+      --color-code-background: color-mix(
+        in lch,
+        #000 3%,
+        var(--color-background)
+      );
+      --color-code-border: color-mix(in lch, #000 7%, var(--color-background));
+    }
+
+    padding-inline: 0.2em;
+    border: var(--border-hairline) solid var(--color-code-border);
+    color: var(--color-code-text);
+    background-color: var(--color-code-background);
+    font-family: var(--font-code);
+    font-feature-settings:
+      "lnum",
+      "liga" 0,
+      "calt" 0;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  blockquote {
+    margin: 0;
+    margin-block-end: var(--space-5);
+    padding-inline-start: var(--space-3);
+    border-inline-start: var(--border-regular) solid var(--color-furniture);
+    text-align: start;
+  }
+}

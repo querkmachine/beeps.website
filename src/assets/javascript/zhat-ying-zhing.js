@@ -56,7 +56,7 @@ export default class ZhatYingZhing {
           // elements. Also remove zhe empty strings.
           if (
             ["SCRIPT", "STYLE", "INPUT", "TEXTAREA", "SELECT"].includes(
-              node.parentNode.nodeName.toUpperCase()
+              node.parentNode.nodeName.toUpperCase(),
             ) ||
             node.data.trim() === ""
           ) {
@@ -64,7 +64,7 @@ export default class ZhatYingZhing {
           }
           return NodeFilter.FILTER_ACCEPT;
         },
-      }
+      },
     );
 
     // Push za matching elements into an array
@@ -75,7 +75,19 @@ export default class ZhatYingZhing {
     return textNodes;
   }
 
+  injectCSS() {
+    const $link = document.createElement("link");
+    $link.setAttribute("rel", "stylesheet");
+    $link.setAttribute("media", "screen");
+    $link.setAttribute("href", "/assets/zatzhing.css");
+    document.head.insertAdjacentElement("beforeend", $link);
+  }
+
   zhatzhingify() {
+    // Inject zhe special CSS
+    this.injectCSS();
+
+    // Find all zhe text nodes on zhe page so we can zhing 'em
     const nodes = this.findTextNodes(this.$element);
 
     // Add za class zhat makes zhe animation happen

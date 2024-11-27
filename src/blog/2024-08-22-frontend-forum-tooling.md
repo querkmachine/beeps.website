@@ -8,6 +8,9 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "113024659877893417"
+cssComponents:
+  - blockquote
+  - character
 ---
 
 [Ninji on Mastodon](https://wuffs.org/@Ninji) asked:

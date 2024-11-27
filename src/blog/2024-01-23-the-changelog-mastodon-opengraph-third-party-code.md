@@ -8,6 +8,10 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "111804875011370844"
+cssComponents:
+  - figure
+  - youtube
+  - character
 ---
 
 This is my personal website. Hello! This version of the website has been online for about three years, which is practically a record by my standards. Suffice to say that it's pretty "finished" and set in its ways by now.

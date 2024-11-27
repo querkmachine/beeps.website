@@ -23,12 +23,13 @@ import {
   markdownFilterInline,
 } from "./config/markdown.js";
 import { urlizeOpenGraphImage } from "./config/opengraph.js";
-import { outputStylesheet } from "./config/sass.js";
+import { compileStylesheets } from "./config/sass.js";
 import {
   cachebustAssetUrl,
   formatDate,
   formatISODate,
   getFirstNItems,
+  mergeArrays,
 } from "./config/utils.js";
 
 // Nunjucks shortcodes
@@ -36,9 +37,8 @@ import shortcodeCallout from "./config/shortcodes/callout.js";
 import shortcodeCharacter from "./config/shortcodes/character.js";
 import shortcodeFigure from "./config/shortcodes/figure.js";
 import shortcodeImageDiffer from "./config/shortcodes/imageDiffer.js";
-import shortcodeMastodon from "./config/shortcodes/mastodon.js";
 import shortcodeResponsiveImage from "./config/shortcodes/responsiveImages.js";
-import shortcodeTwitter from "./config/shortcodes/twitter.js";
+import shortcodeSocialEmbed from "./config/shortcodes/socialEmbed.js";
 import shortcodeYouTube from "./config/shortcodes/youtube.js";
 
 /**
@@ -98,10 +98,13 @@ export default function (eleventyConfig) {
 
   // Watch and compile Sass files
   eleventyConfig.addWatchTarget(paths.srcAssets + "/**/*.scss");
-  eleventyConfig.on("beforeBuild", outputStylesheet);
+  eleventyConfig.on("beforeBuild", compileStylesheets);
 
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
+
+  // Custom Nunjucks functions
+  eleventyConfig.addNunjucksGlobal("merge", mergeArrays);
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
@@ -109,12 +112,14 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
   eleventyConfig.addNunjucksAsyncShortcode("imageDiffer", shortcodeImageDiffer);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
-  eleventyConfig.addPairedNunjucksShortcode("mastodon", shortcodeMastodon);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    shortcodeResponsiveImage
+    shortcodeResponsiveImage,
   );
-  eleventyConfig.addPairedNunjucksShortcode("twitter", shortcodeTwitter);
+  eleventyConfig.addPairedNunjucksShortcode(
+    "socialEmbed",
+    shortcodeSocialEmbed,
+  );
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
   // Filters

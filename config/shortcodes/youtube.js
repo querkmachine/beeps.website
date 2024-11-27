@@ -18,7 +18,7 @@ const youtubeShortcode = function (videoId, settings = {}) {
   const width = 500;
   const height = width * multiplier;
 
-  return `<div class="kimEmbed" style="aspect-ratio:${
+  return `<div class="kimYouTube" style="aspect-ratio:${
     settings.aspectRatio
   }"><iframe width="${width}" height="${Math.round(
     height,

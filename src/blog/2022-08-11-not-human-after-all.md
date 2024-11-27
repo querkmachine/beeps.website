@@ -5,6 +5,8 @@ updated: 2022-08-17
 tags: [self-identity, transition]
 metadata:
   description: I'm not a human. Let's talk about that.
+cssComponents:
+  - callout
 ---
 
 {% callout %}

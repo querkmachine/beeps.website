@@ -1,3 +1,15 @@
+{% set cssComponents = merge(cssComponents, ['toc', 'meta']) %}
+
+{# Has interactions, include that too #}
+{%- if (stats.favourites > 0) or (stats.shares > 0) %}
+  {% set cssComponents = merge(cssComponents, ['interaction-list']) %}
+{%- endif %}
+
+{# Has comments, include that and prose styles #}
+{%- if comments %}
+  {% set cssComponents = merge(cssComponents, ['comment', 'prose']) %}
+{%- endif %}
+
 {% extends 'src/_layouts/layout.njk' %}
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
@@ -72,13 +84,7 @@
           </div>
           
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds" itemprop="articleBody">
-            {%- if page.templateSyntax === "njk,md" %}
-              {{ content | safe }}
-            {%- else %}
-              <div class="kimProse">
-                {{ content | safe }}
-              </div>
-            {%- endif %}
+            {{ content | safe }}
             <p class="kimBody-s">
               Thought this was neat? Why not
               <a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?

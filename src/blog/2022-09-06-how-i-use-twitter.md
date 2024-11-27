@@ -5,6 +5,8 @@ updated: 2023-01-25
 tags: [technology]
 metadata:
   description: My rules of engagement for social media and how I avoid being overwhelmed by Twitter.
+cssComponents:
+  - callout
 ---
 
 {% callout %}

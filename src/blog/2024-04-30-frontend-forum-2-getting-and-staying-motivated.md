@@ -8,6 +8,9 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "112362335554169869"
+cssComponents:
+  - blockquote
+  - character
 ---
 
 I'm not gonna be publishing one of these every day, I swear.

@@ -10,6 +10,10 @@ interactions:
   host: chitter.xyz
   username: batbeeps
   id: "109826013960339119"
+cssComponents:
+  - character
+  - figure
+  - social-embed
 ---
 
 I recently left Twitter. The reasons why probably need little explanation for a contemporaneous reader in the know.
@@ -26,11 +30,11 @@ In short, [Mastodon is now my main short-form writing outlet](https://chitter.xy
 
 Twitter has a lot of accounts that post bat photos, be they for education, charity or just for bat enthusiasts like myself. Think your [Bat Conservation International](https://twitter.com/@BatConIntl), your [Bat World Sanctuary](https://twitter.com/batworld), your [Occassional Bat](https://twitter.com/OccasionalBat).
 
-{% twitter username="BatsDaily", number="1603676469766807555", date="2022-12-16T09:00:39.000Z" %}
+{% socialEmbed host="twitter.com", username="BatsDaily", number="1603676469766807555", date="2022-12-16T09:00:39.000Z" %}
 AAAAAAAAAAAAAAAHHHHHH!!!! 🦇
 
 {% responsiveImage "./src/images/batsdaily-screm.jpeg", "A small brown bat lays belly-down on a rock, it's head pointing upwards and mouth wide open as though screaming." %}
-{% endtwitter %}
+{% endsocialEmbed %}
 
 Very relatable.
 

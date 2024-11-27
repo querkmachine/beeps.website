@@ -2,21 +2,22 @@
 title: A general life update
 date: 2024-09-23
 tags:
-  [
-    yearly theme,
-    transition,
-    gaming,
-    medical,
-    furry fandom,
-    web development,
-    technology,
-  ]
+  - yearly theme
+  - transition
+  - gaming
+  - medical
+  - furry fandom
+  - web development
+  - technology
 metadata:
   description: Been a while since I mentioned the yearly theme, work and gender healthcare. Let's talk about that.
 interactions:
   host: chitter.xyz
   username: batbeeps
   id: "113187429981906883"
+cssComponents:
+  - character
+  - figure
 ---
 
 It's been a little while since I wrote about some stuff. Let's do that!

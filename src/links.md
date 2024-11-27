@@ -4,6 +4,9 @@ title: Cool links
 updated: 2024-11-25
 metadata:
   description: Cool sites on the information cyber highway that I like.
+cssComponents:
+  - character
+  - button-grid
 ---
 
 {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
