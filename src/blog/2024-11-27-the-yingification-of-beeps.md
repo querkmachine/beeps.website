@@ -87,7 +87,7 @@ I can't really explain how those seemingly-contradictory things gel together. Ma
 And what about [my fursona, Ash]({{ '/ash/' | url }})? Well, Ash is staying Ash. It's just so happens that Ash is a shapeshifter, so Ash can also be a yinglet whenever she wants to be. Convenient!
 
 {% figure caption="Ash in the midst of shapeshifting from her normal appearance into a yinglet, as illustrated by [TuxedoDragon](//tuxedodragon.art)." %}
-{% responsiveImage "./src/images/yinglimorpho_ash_transparent.png", "" %}
+{% responsiveImage "./src/images/yinglimorpho_ash_transparent.png", "Illustration of Ash the amphimorpho mid-transformation. She appears to be doing bounding run on all six-legs, with her rear end still fully amphimorpho but becoming smaller and more yinglet-shaped towards the front until the head and forelegs which are fully yingletised." %}
 {% endfigure %}
 
 I don't have any plans to permanently present as a yinglet in my online presence, but at this point I outta know better than to say 'never'.
