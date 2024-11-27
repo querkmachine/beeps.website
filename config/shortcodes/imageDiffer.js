@@ -6,7 +6,7 @@ const imageDifferShortCode = async function (
   image2Src,
   image2Alt,
 ) {
-  const imageOptions = { htmlPicture: false, classes: "kimImageDiffer_image" };
+  const imageOptions = { classes: "kimImageDiffer_image" };
   const image1 = await responsiveImagesShortcode(
     image1Src,
     image1Alt,

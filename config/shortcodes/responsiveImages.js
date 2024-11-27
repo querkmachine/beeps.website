@@ -11,7 +11,6 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     lazy: true,
     classes: "",
     link: false,
-    htmlPicture: true,
   };
   const settings = { ...defaultArgs, ...args };
 
@@ -27,26 +26,15 @@ const responsiveImagesShortcode = async function (src, alt, args) {
 
   let originalSize = metadata.webp[metadata.webp.length - 1];
 
-  // Generate <img> element
-  let imageCode = `<img${settings.lazy ? ` loading="lazy"` : ""} src="${
-    originalSize.url
-  }" width="${originalSize.width}" height="${
-    originalSize.height
-  }" alt="${alt}"${settings.classes ? ` class="${settings.classes}"` : ""}>`;
-
-  // Generate <picture> element, if configured
-  if (settings.htmlPicture) {
-    imageCode = `<picture>
-  ${Object.values(metadata)
-    .map((imageFormat) => {
-      return `<source type="image/${
-        imageFormat[0].format
-      }" srcset="${imageFormat
-        .map((entry) => entry.srcset)
-        .join(", ")}" sizes="(min-width: 768px) 66vi, 100vi">`;
-    })
-    .join("\n")}${imageCode}</picture>`;
-  }
+  let imageCode = `<img`;
+  imageCode += settings.classes ? ` class="${settings.classes}"` : "";
+  imageCode += settings.lazy ? ` loading="lazy"` : "";
+  imageCode += ` src="${originalSize.url}"`;
+  imageCode += ` srcset="${metadata.webp.map((entry) => entry.srcset).join(", ")}"`;
+  imageCode += ` sizes="(min-width: 768px) 66vi, 100vi"`;
+  imageCode += ` width="${originalSize.width}"`;
+  imageCode += ` height="${originalSize.height}"`;
+  imageCode += ` alt="${alt}">`;
 
   // If a link is configured, create that too
   if (typeof settings.link === "boolean" && settings.link === true) {
