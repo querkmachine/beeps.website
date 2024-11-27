@@ -71,7 +71,7 @@ Mid-year peer reviews happened recently and provided the usual heady mix of head
 This past six months, I've been trying to do a lot more 'extra-curricular' activities that're outside of the job description, such as publicly publishing [GOV.UK browser stats]({{ '/govuk-browser-data/' | url }}) each month and contributing to community projects like the [WCAG Primer](https://alphagov.github.io/wcag-primer/) —which, in my mind, succeeds my own attempts to rewrite WCAG criteria for a non-technical audience.
 
 {% character character="ash", variant="paw" %}
-These things come out of my usual work hours, so I am effective paid for doing them. No frets about being exploited there.
+These things come out of my usual work hours, so I'm effectively paid for doing them. No frets about being exploited there.
 {% endcharacter %}
 
 The main takeaway for improvement I've gotten is that I'm bad at explaining my process, which is fair. My process when it comes to web development is chaotic, a real 'throwing stuff and seeing what sticks' approach, which usually isn't conducive to succinct description.
