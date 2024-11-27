@@ -37,6 +37,7 @@ I wrote fairly extensively about the initial thoughts, research, and final concl
 - [Discovery]({{ '/blog/2022-07-27-discovery/' | url }}) (27 July 2022)
 - [Homework]({{ '/blog/2022-07-30-homework/' | url }}) (30 July 2022)
 - [(Not) Human After All]({{ '/blog/2022-08-11-not-human-after-all/' | url }}) (11 August 2022)
+- [The yingification of beeps]({{ '/blog/2024-11-27-the-yingification-of-beeps/' | url }}) (27 November 2024)
 
 I've also published a [follow-up post of questions and answers]({{ '/blog/2022-07-28-discovery-faq/' | url }}).
 
