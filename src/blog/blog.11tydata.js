@@ -37,7 +37,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return {
@@ -58,7 +58,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return await favourites.map((item) => {
@@ -86,7 +86,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return await shares.map((item) => {
@@ -114,7 +114,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       comments = comments.descendants.map((item) => {
@@ -126,6 +126,16 @@ export default {
 
         // Sanitise the HTML to remove any script tags or other dodgy stuff
         item.content = sanitizeHtml(item.content);
+
+        // Replace custom emojis, gotta have them custom emojis
+        item.emojis.forEach((emoji) => {
+          item.content = item.content.replaceAll(
+            `:${emoji.shortcode}:`,
+            () =>
+              `<img class="emoji" alt="${emoji.shortcode}" src="${emoji.url}">`,
+          );
+        });
+        console.log(item.content);
 
         // Locally download and cache avatar
         const avatarFilename = item.account.avatar

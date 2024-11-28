@@ -78,4 +78,13 @@
     border-inline-start: var(--border-regular) solid var(--color-furniture);
     text-align: start;
   }
+
+  img.emoji {
+    inline-size: 1.4em;
+    block-size: 1.4em;
+    margin-block-end: 0;
+    position: relative;
+    inset-block-start: -0.1em;
+    vertical-align: middle;
+  }
 }
