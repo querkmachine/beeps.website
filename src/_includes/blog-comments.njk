@@ -2,7 +2,7 @@
   <figure class="kimComment">
     <figcaption class="kimComment_meta">
       <a class="kimLink kimLink-plain kimComment_user" href="{{ comment.account.url }}" rel="nofollow noopener noreferrer">
-        <img class="kimComment_avatar" alt="" src="{{ comment.account.avatar }}" loading="lazy" width="50" height="50">
+        <img class="kimComment_avatar" alt="" src="{{ ('/.avatar-cache/' + comment.account.avatar) | url }}" loading="lazy" width="50" height="50">
         <span class="kimComment_name">{{ comment.account.acct }}</span>
       </a>
       <time class="kimBody-s kimComment_time" datetime="{{ comment.created_at }}">{{ comment.created_at | formatISODate('humanWithTime') }}</time>

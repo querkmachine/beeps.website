@@ -1,6 +1,17 @@
+import { writeFile } from "node:fs/promises";
+import path from "node:path";
 import EleventyFetch from "@11ty/eleventy-fetch";
 import { DateTime } from "luxon";
 import sanitizeHtml from "sanitize-html";
+
+async function cacheFediverseAvatar(avatarUrl, avatarFilename) {
+  try {
+    const avatar = await EleventyFetch(avatarUrl, { type: "buffer" });
+    await writeFile(path.join(".avatar-cache", avatarFilename), avatar);
+  } catch (err) {
+    // Suppress errors, I don't really care if this fails
+  }
+}
 
 export default {
   layout: "blog-post.njk",
@@ -23,7 +34,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return {
@@ -36,7 +47,7 @@ export default {
       // Skip if there's no usable metadata on this post
       if (!data.interactions) return null;
 
-      return await EleventyFetch(
+      const favourites = await EleventyFetch(
         `https://${data.interactions.host}/api/v1/statuses/${data.interactions.id}/favourited_by`,
         {
           duration:
@@ -44,14 +55,27 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
+
+      return await favourites.map((item) => {
+        const avatarFilename = item.avatar
+          ? item.avatar.split("/").at(-1)
+          : null;
+        cacheFediverseAvatar(item.avatar, avatarFilename);
+
+        return {
+          url: item.url,
+          acct: item.acct,
+          avatar: avatarFilename,
+        };
+      });
     },
     shares: async (data) => {
       // Skip if there's no usable metadata on this post
       if (!data.interactions) return null;
 
-      return await EleventyFetch(
+      const shares = await EleventyFetch(
         `https://${data.interactions.host}/api/v1/statuses/${data.interactions.id}/reblogged_by`,
         {
           duration:
@@ -59,8 +83,21 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
+
+      return await shares.map((item) => {
+        const avatarFilename = item.avatar
+          ? item.avatar.split("/").at(-1)
+          : null;
+        cacheFediverseAvatar(item.avatar, avatarFilename);
+
+        return {
+          url: item.url,
+          acct: item.acct,
+          avatar: avatarFilename,
+        };
+      });
     },
     comments: async (data) => {
       // Skip if there's no usable metadata on this post
@@ -74,7 +111,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       comments = comments.descendants.map((item) => {
@@ -86,6 +123,13 @@ export default {
 
         // Sanitise the HTML to remove any script tags or other dodgy stuff
         item.content = sanitizeHtml(item.content);
+
+        // Locally download and cache avatar
+        const avatarFilename = item.account.avatar
+          ? item.account.avatar.split("/").at(-1)
+          : null;
+        cacheFediverseAvatar(item.account.avatar, avatarFilename);
+        item.account.avatar = avatarFilename;
 
         return item;
       });

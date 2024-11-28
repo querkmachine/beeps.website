@@ -5,7 +5,7 @@
     {%- for item in collection | head(avatarDisplayLimit) %}
     <li class="kimInteractionList_item">
       <a class="kimInteractionList_link" href="{{ item.url }}" rel="nofollow noreferrer noopener" title="{{ item.acct }}">
-        <img class="kimInteractionList_avatar" alt="{{ item.acct }}" src="{{ item.avatar }}" loading="lazy" width="50" height="50">
+        <img class="kimInteractionList_avatar" alt="{{ item.acct }}" src="{{ ('/.avatar-cache/' + item.avatar) | url }}" loading="lazy" width="50" height="50">
       </a>
     </li>
     {%- endfor %}

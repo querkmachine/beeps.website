@@ -82,6 +82,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/fonts");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/javascript");
+  eleventyConfig.addPassthroughCopy(".avatar-cache");
 
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(paths.src + "/.htaccess");
