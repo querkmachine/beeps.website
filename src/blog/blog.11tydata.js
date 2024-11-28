@@ -1,13 +1,16 @@
-import { writeFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import EleventyFetch from "@11ty/eleventy-fetch";
 import { DateTime } from "luxon";
 import sanitizeHtml from "sanitize-html";
 
 async function cacheFediverseAvatar(avatarUrl, avatarFilename) {
+  const folder = path.join("_site", ".avatar-cache");
+  await mkdir(folder, { recursive: true });
+
   try {
     const avatar = await EleventyFetch(avatarUrl, { type: "buffer" });
-    await writeFile(path.join(".avatar-cache", avatarFilename), avatar);
+    await writeFile(path.join(folder, avatarFilename), avatar);
   } catch (err) {
     // Suppress errors, I don't really care if this fails
   }
@@ -34,7 +37,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
 
       return {
@@ -55,7 +58,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
 
       return await favourites.map((item) => {
@@ -83,7 +86,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
 
       return await shares.map((item) => {
@@ -111,7 +114,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        },
+        }
       );
 
       comments = comments.descendants.map((item) => {
