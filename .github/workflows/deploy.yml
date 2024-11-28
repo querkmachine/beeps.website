@@ -8,6 +8,8 @@ on:
       - "src/**"
       - "!src/blog/drafts/**"
       - "eleventy.config.js"
+  schedule:
+    - cron: "45 4 */7 * *"
   workflow_dispatch:
 
 concurrency:
