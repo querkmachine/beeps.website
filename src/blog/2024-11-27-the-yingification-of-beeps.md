@@ -4,6 +4,10 @@ date: 2024-11-27
 tags: [self-identity]
 metadata:
   description: I guess I'm a therian now. Or should that be zherian?
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113557250233305760"
 cssComponents:
   - character
   - figure
