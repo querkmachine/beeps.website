@@ -145,15 +145,13 @@
         <div class="kimGrid">
           {% if previousPost %}
             <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
-              <div class="kimHeading-s">Previous post</div>
-              {{ kimBlogCard(previousPost, { element: 'div', rel: 'prev' }) }}
+              {{ kimBlogCard(previousPost, { prelabel: 'Previous post', element: 'div', rel: 'prev' }) }}
               <hr class="kimRule kimRule-hairline">
             </div>
           {% endif %}
           {% if nextPost %}
             <div class="kimGrid_column kimGrid_column-full{% if previousPost and nextPost %} defiant:kimGrid_column-oneHalf{% endif %}">
-              <div class="kimHeading-s">Next post</div>
-              {{ kimBlogCard(nextPost, { element: 'div', rel: 'next' }) }}
+              {{ kimBlogCard(nextPost, { prelabel: 'Next post', element: 'div', rel: 'next' }) }}
               <hr class="kimRule kimRule-hairline">
             </div>
           {% endif %}

@@ -6,6 +6,7 @@
     itemscope
     itemtype="https://schema.org/BlogPosting">
     <strong class="kimBlogCard_heading">
+      {%- if options.prelabel %}{{ options.prelabel }}: {% endif -%}
       <a class="kimLink kimBlogCard_link" href="{{ post.url | absoluteUrl(site.domain) }}" itemprop="url" {%- if options.rel %} rel="{{ options.rel }}"{% endif %}>
         <span itemprop="name">
           {{- post.data.title | markdownInline | safe -}}
