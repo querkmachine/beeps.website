@@ -113,4 +113,15 @@ export default {
     nintendo: 8,
     edge: 5,
   },
+  "2024-11": {
+    silk: 1649,
+    chrome: 811,
+    safari: 717,
+    "android-webview": 277,
+    opera: 171,
+    edge: 27,
+    firefox: 14,
+    nintendo: 4,
+    yandex: 1,
+  },
 };
