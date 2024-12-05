@@ -114,11 +114,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    shortcodeResponsiveImage
+    shortcodeResponsiveImage,
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "socialEmbed",
-    shortcodeSocialEmbed
+    shortcodeSocialEmbed,
   );
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
