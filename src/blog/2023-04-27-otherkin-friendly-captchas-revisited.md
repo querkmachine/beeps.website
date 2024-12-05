@@ -11,6 +11,7 @@ interactions:
   id: "110272578792454801"
 cssComponents:
   - callout
+  - code
 ---
 
 {% responsiveImage "./src/images/robot-captcha.png", "A fake screenshot of a checkbox-type CAPTCHA, with the text reading 'I am a robot' and the box checked." %}
