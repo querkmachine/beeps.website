@@ -37,7 +37,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return {
@@ -58,7 +58,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return await favourites.map((item) => {
@@ -86,7 +86,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       return await shares.map((item) => {
@@ -114,7 +114,7 @@ export default {
               ? "1d"
               : "7d",
           type: "json",
-        }
+        },
       );
 
       comments = comments.descendants.map((item) => {

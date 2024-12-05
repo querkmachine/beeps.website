@@ -159,8 +159,8 @@ const htmlTableHeaders = (data, config) => {
   let output = columns.map(
     (col) =>
       `<th class="kimTable_header" scope="col">${config.columnFormatFunction(
-        col
-      )}</th>`
+        col,
+      )}</th>`,
   );
 
   if (config.truncateColumns) {
@@ -182,7 +182,7 @@ const htmlTableData = (data, config) => {
       return `<td class="kimTable_cell">${config.cellFormatFunction(
         data,
         currentRow,
-        col
+        col,
       )}</td>`;
     });
 
