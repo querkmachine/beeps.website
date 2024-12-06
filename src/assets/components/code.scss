@@ -1,3 +1,5 @@
+@use "../helpers/a11y";
+
 // There are also lots of colours here not used elsewhere on the site,
 // as more colours are needed than are in the beeps brand palette.
 
@@ -52,6 +54,7 @@
   margin-block-end: var(--space-5);
   padding: var(--space-3);
   border-width: var(--border-regular);
+  position: relative;
   color: var(--color-code-text);
   background-color: var(--color-code-background);
   white-space: break-spaces;
@@ -61,6 +64,10 @@
   hyphens: none;
   tab-size: 4;
   overflow-x: auto;
+
+  &:has(.kimCodeBlock_copyButton) {
+    padding-block-start: var(--space-6);
+  }
 
   // Highlight.js styles
   .hljs-comment {
@@ -128,6 +135,30 @@
   .hljs-meta,
   .hljs-title.class_ {
     font-weight: bold;
+  }
+}
+
+.kimCodeBlock_copyButton {
+  display: inline-block;
+  margin: 0;
+  padding-block: var(--space-1);
+  padding-inline: var(--space-2);
+  border: var(--border-hairline) solid var(--color-code-border);
+  position: absolute;
+  inset-block-start: calc(var(--border-hairline) * -1);
+  inset-inline-end: calc(var(--border-hairline) * -1);
+  color: var(--color-link);
+  background: none;
+  font-family: var(--font-body);
+  font-size: var(--size--1);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-code-border);
+  }
+
+  &:focus-visible {
+    @include a11y.kim-focus-ring;
   }
 }
 

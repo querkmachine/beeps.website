@@ -3,8 +3,9 @@ async function importModule(name) {
   new module();
 }
 
-async function importModuleIfPresent(name) {
-  const $elements = document.querySelectorAll(`[data-js='${name}']`);
+async function importModuleIfPresent(name, customSelector) {
+  const selector = customSelector ?? `[data-js='${name}']`; 
+  const $elements = document.querySelectorAll(selector);
   if ($elements.length > 0) {
     const { default: module } = await import(`./${name}.js`);
     $elements.forEach(($e) => {
@@ -13,6 +14,7 @@ async function importModuleIfPresent(name) {
   }
 }
 
+importModuleIfPresent("copy-code", ".kimCodeBlock");
 importModuleIfPresent("image-differ");
 importModuleIfPresent("scroll-sync");
 importModuleIfPresent("share");
