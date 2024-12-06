@@ -67,3 +67,12 @@
     @include -kim-link-underline($color: var(--color-link-underline-hover));
   }
 }
+
+@mixin kim-extend-link {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+}

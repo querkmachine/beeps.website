@@ -1,0 +1,36 @@
+@use "../helpers/links";
+
+.kimLinkEmbed {
+  --image-width: clamp(100px, 25%, 150px);
+
+  display: block;
+  margin-block-end: var(--space-5);
+  padding-block: var(--space-4);
+  padding-inline-end: var(--space-4);
+  padding-inline-start: calc(var(--image-width) + var(--space-4));
+  border: var(--border-regular) solid var(--color-furniture);
+  border-radius: var(--radius-embed);
+  position: relative;
+  overflow: hidden;
+}
+
+.kimLinkEmbed_image {
+  inline-size: var(--image-width);
+  block-size: 100%;
+  border-inline-end: var(--border-hairline) solid var(--color-furniture);
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  object-fit: cover;
+}
+
+.kimLinkEmbed_title {
+  @include links.kim-extend-link;
+}
+
+.kimLinkEmbed_description,
+.kimLinkEmbed_metadata {
+  margin-block-start: var(--space-1);
+  margin-block-end: 0;
+  font-size: var(--size--1);
+}

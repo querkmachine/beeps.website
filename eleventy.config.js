@@ -37,6 +37,7 @@ import shortcodeCallout from "./config/shortcodes/callout.js";
 import shortcodeCharacter from "./config/shortcodes/character.js";
 import shortcodeFigure from "./config/shortcodes/figure.js";
 import shortcodeImageDiffer from "./config/shortcodes/imageDiffer.js";
+import shortcodeLink from "./config/shortcodes/link.js";
 import shortcodeResponsiveImage from "./config/shortcodes/responsiveImages.js";
 import shortcodeSocialEmbed from "./config/shortcodes/socialEmbed.js";
 import shortcodeYouTube from "./config/shortcodes/youtube.js";
@@ -111,6 +112,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("character", shortcodeCharacter);
   eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
   eleventyConfig.addNunjucksAsyncShortcode("imageDiffer", shortcodeImageDiffer);
+  eleventyConfig.addNunjucksAsyncShortcode("link", shortcodeLink);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
