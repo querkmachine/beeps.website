@@ -144,4 +144,9 @@ export default [
     alt: "522@5snb.club",
     url: "//www.5snb.club/",
   },
+  {
+    src: "/assets/images/buttons/volpeon.svg",
+    alt: "Volpeon",
+    url: "//volpeon.ink/",
+  },
 ];
