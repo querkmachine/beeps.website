@@ -1,0 +1,13 @@
+@use "../helpers/a11y";
+
+.kimSkiplink {
+  position: absolute;
+  inset-block-start: -9999em;
+  inset-inline-start: -9999em;
+
+  &:focus {
+    @include a11y.focus-ring;
+
+    position: static;
+  }
+}
