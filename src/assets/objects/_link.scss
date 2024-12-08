@@ -1,0 +1,50 @@
+@use "../helpers/links";
+
+.kimLink {
+  @include links.link-helper;
+}
+
+.kimLink-plain {
+  @include links.link-helper($initial-underline: false);
+}
+
+.kimLink-jump {
+  --height: 2em;
+
+  @include links.link-helper(
+    $color: var(--color-link),
+    $visited-color: var(--color-link),
+    $initial-underline: false
+  );
+
+  & {
+    align-items: center;
+    font-weight: bold;
+    line-height: var(--height);
+  }
+
+  &::before {
+    content: "➔";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: var(--height);
+    block-size: var(--height);
+    border: var(--border-hairline) solid var(--color-link);
+    line-height: 1;
+    float: inline-start;
+    margin-inline-end: var(--space-2);
+  }
+
+  &:hover::before {
+    color: var(--color-canvas);
+    background-color: var(--color-link);
+  }
+
+  &:focus-visible::before {
+    border-width: var(--border-regular);
+    border-color: var(--color-focus-text);
+    color: var(--color-focus-text);
+    background-color: var(--color-focus-background);
+  }
+}

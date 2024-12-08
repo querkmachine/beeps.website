@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  margin-block-end: var(--space-5);
+}
