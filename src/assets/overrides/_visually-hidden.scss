@@ -1,0 +1,5 @@
+@use "../helpers/a11y";
+
+.kim-\!-visually-hidden {
+  @include a11y.visually-hidden($important: true);
+}
