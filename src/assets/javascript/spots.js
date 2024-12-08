@@ -26,6 +26,7 @@ export default class Spots {
     this.prefersReducedMotion = matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
+    this.prefersLightMode = matchMedia("(prefers-color-scheme: light)").matches;
 
     // Wait until the page has finished loading other stuff. Pretty much all of
     // it is higher priority than our fun spot decor
@@ -57,10 +58,9 @@ export default class Spots {
     }
 
     // Default colours
-    this.strokeColors =
-      document.documentElement.dataset.colorScheme === "light"
-        ? [[179, 255, 179]]
-        : [[120, 105, 153]];
+    this.strokeColors = this.prefersLightMode
+      ? [[179, 255, 179]]
+      : [[120, 105, 153]];
 
     if (this.settings.useCalendarThemes) {
       // Some days have unique colours, so get the date.
@@ -139,15 +139,14 @@ export default class Spots {
       this.play();
     }).observe(this.$canvas);
 
-    // Mutation observer to see if the colour scheme has been changed
-    new MutationObserver((mutations) => {
-      if (mutations[0].attributeName !== "data-color-scheme") {
-        return;
-      }
-      this.pause();
-      this.setStrokeColor();
-      this.play();
-    }).observe(document.documentElement, { attributes: true });
+    // Media query event to see if the colour scheme has been changed
+    window
+      .matchMedia("(prefers-color-scheme)")
+      .addEventListener("change", () => {
+        this.pause();
+        this.setStrokeColor();
+        this.play();
+      });
   }
 
   tick(timestamp) {
