@@ -1,13 +1,4 @@
----
-title: "beeps — front-end developer, furry, robot"
-isFullTitle: true
-metadata:
-  description: The personal website of beeps (aka, Kim Grey), the web developer, not the other ones.
-cssComponents:
-  - splash
-  - button-grid
-  - blog-card
----
+{% set cssComponents = merge(cssComponents, ["splash", "button-grid", "blog-card"]) %}
 
 {% extends 'src/_layouts/layout.njk' %}
 
@@ -26,11 +17,8 @@ cssComponents:
  * Blogs
  */
 .page-blog {
-  background-color: color-mix(in lch, var(--color-background) 70%, #000);
+  border-block: var(--border-regular) dotted var(--color-furniture);
   margin-block-end: var(--space-7);
-}
-[data-color-scheme="light"] .page-blog {
-  background-color: color-mix(in lch, var(--color-background) 95%, #000);
 }
 .page-blog-noodle,
 .page-about-noodle {
@@ -70,8 +58,6 @@ cssComponents:
 </style>
 {% endblock %}
 
-{% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
-
 {% block main %}
 <header class="kimSplash page-intro">
   <canvas class="kimSplash_background" width="1000" height="500" hidden></canvas>
@@ -99,7 +85,7 @@ cssComponents:
             </div>
           {% endfor %}
         </div>
-        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain">All blog posts &rarr;</a></p>
+        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-jump">All blog posts</a></p>
       </div>
     </div>
   </div>
@@ -110,10 +96,8 @@ cssComponents:
     <div class="kimGrid">
       <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
         <h2 class="kimHeading-m kim-!-margin-block-start-0" id="about-heading">About beeps</h2>
-        <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-        <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
-        <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
-        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
+        {{ content | safe }}
+        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-jump">More about beeps</a></p>
       </div>
       <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
         <img class="page-about-noodle" src="{{ '/assets/images/noodle-opengraph.png' | url }}" alt="" width="408" height="500">
@@ -135,7 +119,7 @@ cssComponents:
         <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
           <dt>
             <a class="kimLink-plain" href="{{ ring.url }}">
-              {% include "./assets/images/" + ring.icon %}<br>
+              {% include "../assets/images/" + ring.icon %}<br>
               {{ ring.name }}
             </a>
           </dt>
