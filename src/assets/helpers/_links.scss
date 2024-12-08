@@ -1,0 +1,52 @@
+@use "a11y";
+
+@mixin -link-underline($color: var(--color-link)) {
+  & {
+    text-decoration: none;
+    box-shadow: inset 0 -0.4em 0 0 color-mix(in lch, #{$color} 20%, transparent);
+  }
+}
+
+@mixin link-helper(
+  $color: var(--color-link),
+  $visited-color: var(--color-link-visited),
+  $hover-color: var(--color-link-hover),
+  $initial-underline: true
+) {
+  & {
+    color: $color;
+    word-break: break-word;
+
+    @if $initial-underline {
+      @include -link-underline;
+    } @else {
+      text-decoration: none;
+    }
+  }
+
+  @media print {
+    color: var(--c-black);
+
+    &::after {
+      content: " (" attr(href) ")";
+      display: inline;
+      font-size: smaller;
+    }
+  }
+
+  &:visited {
+    color: $visited-color;
+  }
+
+  &:hover {
+    color: $hover-color;
+
+    @if not $initial-underline {
+      @include -link-underline;
+    }
+  }
+
+  &:focus-visible {
+    @include a11y.focus-ring;
+  }
+}

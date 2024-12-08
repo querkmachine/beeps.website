@@ -1,0 +1,24 @@
+.kimPage {
+  color-scheme: dark light;
+  background-color: var(--color-canvas);
+  text-size-adjust: 100%;
+}
+
+.kimPage_body {
+  min-block-size: 100vb;
+  margin: 0;
+  color: var(--color-text);
+  background-color: transparent;
+  font-family: var(--font-body);
+  font-size: var(--size-0);
+  font-feature-settings: "onum";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-wrap: pretty;
+  line-height: 1.5;
+
+  @media print {
+    color: var(--c-black) !important;
+    background-color: var(--c-white) !important;
+  }
+}

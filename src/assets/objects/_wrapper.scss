@@ -1,0 +1,5 @@
+@use "../helpers/layout";
+
+.kimWrapper {
+  @include layout.width-container;
+}
