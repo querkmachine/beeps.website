@@ -41,7 +41,7 @@
     "postcss-preset-env": "^10.1.1",
     "prettier": "^3.4.2",
     "sanitize-html": "^2.13.1",
-    "sass": "^1.81.0"
+    "sass": "^1.82.0"
   },
   "lint-staged": {
     "!_site/**/*": "prettier --write --ignore-unknown"
