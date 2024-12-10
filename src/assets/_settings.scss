@@ -60,7 +60,7 @@
   --color-text: var(--c-white);
   --color-text-accent: var(--c-green);
   --color-canvas: var(--c-dark-purple);
-  --color-surface: var(--c-off-black);
+  --color-surface: color-mix(in lch, var(--c-purple) 25%, transparent);
   --color-furniture: var(--c-purple);
   --color-link: var(--c-green);
   --color-link-visited: color-mix(

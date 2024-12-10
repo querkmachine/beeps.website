@@ -14,6 +14,7 @@ async function importModuleIfPresent(name) {
 }
 
 importModuleIfPresent("image-differ");
+importModuleIfPresent("masthead");
 importModuleIfPresent("scroll-sync");
 importModuleIfPresent("share");
 importModuleIfPresent("tabs");

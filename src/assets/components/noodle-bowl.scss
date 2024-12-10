@@ -1,5 +1,3 @@
-@use "../helpers/media-queries";
-
 .kimNoodleBowl {
   --height: 30vh;
   --min-height: 22rem;
@@ -19,7 +17,7 @@
   height: var(--canvas-height);
   position: absolute;
   top: var(--offset-top);
-  background-color: var(--color-furniture-alt);
+  background-color: var(--color-surface);
   outline: var(--border-regular) solid transparent;
 }
 
@@ -66,13 +64,13 @@
     animation-direction: alternate-reverse;
 
     // Move pawbs further apart if we have space
-    @include media-queries.kim-mq($from: 430px) {
+    @container (min-width: 430px) {
       --pawb-offset: calc(var(--pawb-width) * 1.2);
     }
 
     // Hide pawbs entirely on really narrow screens to prevent introducing
     // a horizontal scrollbar
-    @include media-queries.kim-mq($to: 370px) {
+    @container (max-width: 370px) {
       content: none;
     }
 

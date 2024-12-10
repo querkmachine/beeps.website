@@ -53,34 +53,44 @@
 <body class="kimPage_body">
 
   {% include "src/_includes/development-tag.njk" %}
-
-  <a class="kimSkiplink" href="#content">Skip to main content</a>
   
-  {% block beforeMasthead %}{% endblock %}
+  {% block beforeMasthead %}
+    <div class="kimWrapper">
+      <a class="kimSkiplink" href="#content">Skip to main content</a>
+    </div>
+  {% endblock %}
   {% block masthead %}
-    <header class="kimMasthead">
+    <header class="kimMasthead" data-js="masthead">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_brand" href="{{ '/' | url }}">
-          <span class="kimMasthead_logo">{% include "logo.njk" %}</span>
-          <span class="kimMasthead_name">{{ site.name }}</span>
+        <a class="kimMasthead_logo" href="{{ '/' | url }}" aria-hidden="true">
+          {% include "logo.njk" %}
+        </a>
+      <a class="kimMasthead_name" href="{{ '/' | url }}">
+          {{- site.name -}}
         </a>
         {%- if mastheadSection %}
-          <a class="kimLink-plain kimMasthead_section" href="{{ mastheadSection.href | url }}">
+          <a class="kimMasthead_section" href="{{ mastheadSection.href | url }}">
             {{- mastheadSection.text -}}
           </a>
         {%- endif %}
+        <a class="kimMasthead_menu-link" href="{{ '/sitemap/' | url }}">Sitemap</a>
+        <button class="kimMasthead_menu-toggle" type="button" aria-controls="navigation" hidden>Menu</button>
       </div>
     </header>
-    <hr class="kim-!-sr">
+    <hr class="kim-!-visually-hidden">
   {% endblock %}
-  {% block afterMasthead %}{% endblock %}
+  {% block afterMasthead %}
+    <nav id="navigation" hidden>
+      navigational
+    </nav>
+  {% endblock %}
 
   <main id="content">
     {% block main %}{% endblock %}
   </main>
   
   {% block footer %}
-    <hr class="kim-!-sr">
+    <hr class="kim-!-visually-hidden">
     <footer class="kimFooter">
       {% block footerDecor %}
         <div class="kimNoodleBowl" role="presentation">
@@ -134,8 +144,7 @@
   <script type="module">
     import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
     new Spots(document.querySelector(".kimNoodleBowl_canvas"), {
-      isAnimated: true,
-      colors: [[255,255,255]]
+      isAnimated: true
     });
   </script>
   {% endblock %}
