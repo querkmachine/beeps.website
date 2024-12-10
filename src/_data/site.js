@@ -18,16 +18,26 @@ export default function () {
       "https://twitter.com/batbeeps",
       "https://github.com/querkmachine",
     ],
-    footerLinks: [
-      { href: "/about/", text: "About beeps" },
-      { href: "/now/", text: "beeps NOW!" },
-      { href: "/ash/", text: "Ash the amphimorpho" },
-      { href: "/brand/", text: "beeps' brand" },
-      { href: "/contact/", text: "Contact beeps" },
+    navigation: [
+      {
+        heading: "More beeping",
+        links: [
+          { href: "/about/", text: "About beeps" },
+          { href: "/now/", text: "beeps NOW!" },
+          { href: "/brand/", text: "beeps' brand" },
+          { href: "/contact/", text: "Contact beeps" },
+        ],
+      },
+      {
+        heading: "Other stuff",
+        links: [
+          { href: "/ash/", text: "Ash the amphimorpho" },
+          { href: "/links/", html: "Cool links &amp; friends" },
+          { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
+        ],
+      },
     ],
     legalLinks: [
-      { href: "/links/", html: "Cool links &amp; friends" },
-      { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
       { href: "/colophon/", text: "Colophon" },
       { href: "/privacy/", text: "Cookies and privacy" },
       {

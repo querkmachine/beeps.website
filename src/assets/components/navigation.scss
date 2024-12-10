@@ -1,0 +1,15 @@
+@use "../helpers/links";
+
+.kimNavigation {
+  padding-block: var(--space-5);
+  background-color: var(--color-surface);
+  border-block: var(--border-regular) solid var(--color-furniture);
+}
+
+.kimNavigation_link {
+  @include links.link-helper(
+    $color: var(--color-link),
+    $visited-color: var(--color-link),
+    $initial-underline: false
+  );
+}
