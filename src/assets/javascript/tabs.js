@@ -14,6 +14,12 @@ export default class Tabs {
     this.idPrefix = this.$module.id || `tabs-${this.createRandomId()}`;
     this.$module.id = this.idPrefix;
 
+    // Give all panels the `tabpanel` role and make them keyboard focusable
+    this.$panels.forEach(($panel) => {
+      $panel.setAttribute("tabindex", "0");
+      $panel.setAttribute("role", "tabpanel");
+    });
+
     // Build the tabs HTML in JS
     this.buildTabsHTML();
 
@@ -30,6 +36,7 @@ export default class Tabs {
     // Create the list element to hold the tabs within
     const $tablist = document.createElement("ul");
     $tablist.className = "kimTabs_tablist";
+    $tablist.setAttribute("role", "tablist");
 
     // Loop through each panel and create a link leading to it
     this.$panels.forEach(($panel) => {
@@ -44,6 +51,7 @@ export default class Tabs {
       $link.className = "kimTabs_link";
       $link.innerText = $panel.getAttribute("data-label");
       $link.setAttribute("href", `#${panelId}`);
+      $link.setAttribute("role", "tab");
       $link.setAttribute("aria-controls", panelId);
       $link.setAttribute("aria-selected", "false");
       $link.addEventListener("click", this.onTabClick.bind(this));
