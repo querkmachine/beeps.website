@@ -79,7 +79,7 @@
     --color-text: var(--c-off-black);
     --color-text-accent: var(--c-purple);
     --color-canvas: var(--c-white);
-    --color-surface: color-mix(in lch, var(--c-pale-green) 25%, transparent);
+    --color-surface: color-mix(in lch, var(--c-pale-green) 10%, transparent);
     --color-furniture: var(--c-pale-green);
     --color-link: var(--c-purple);
   }

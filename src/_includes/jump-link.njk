@@ -1,0 +1,10 @@
+{% macro kimJumpLink(params) %}
+{%- set icon = params.icon | default('arrow-right') -%}
+
+<a href="{{ params.href | url }}" class="kimLink-jump">
+  <span class="kimLink_icon">
+    {% include "../assets/icons/" + icon + ".svg" %}
+  </span>
+  {{ params.html | safe if params.html else params.text }}
+</a>
+{% endmacro %}

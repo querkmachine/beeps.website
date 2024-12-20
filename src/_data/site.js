@@ -32,8 +32,8 @@ export default function () {
         heading: "Other stuff",
         links: [
           { href: "/ash/", text: "Ash the amphimorpho" },
-          { href: "/links/", html: "Cool links &amp; friends" },
           { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
+          { href: "/links/", html: "Cool links &amp; friend sites" },
         ],
       },
     ],
@@ -43,6 +43,7 @@ export default function () {
       {
         href: "/feed.xml",
         text: "RSS feed",
+        icon: "rss",
         attributes: {
           rel: "alternate",
           type: "application/atom+xml",
