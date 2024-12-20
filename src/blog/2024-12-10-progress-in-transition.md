@@ -109,7 +109,7 @@ I'm not going into detail yet as it's an unresolved situation, but I currently _
 Even with a GP that has been very cooperative with the gender clinic, there are these annoying hurdles seemingly introduced by a lack of trust or understanding.
 {% endcharacter %}
 
-I, personally, had a very pleasant experience with the staff at my gender clinic, all of whom were professional, compassionate, knowledgeable, and clearly doing their best with limited resources and uncomfortable levels of scrutiny. They made every effort to ensure I was comfortable and that accommodations were available for [my anxiety-ridden, neurodivergent ass]({{ '/about/neurodivergence/' | url }}), although I ultimately never needed any of them.
+I, personally, had a very pleasant experience with the staff at my gender clinic, all of whom were professional, compassionate, knowledgeable, and clearly doing their best with limited resources and uncomfortable levels of scrutiny. They made every effort to ensure I was comfortable and that accommodations were available for [my anxiety-ridden, neurodivergent ass]({{ '/about/neurodivergent/' | url }}), although I ultimately never needed any of them.
 
 I've heard lots of stories that this isn't consistent between clinics, and that some staff are rude, dismissive, and probing in uncomfortable ways.
 
