@@ -1,0 +1,44 @@
+---
+title: Navigation
+metadata:
+  noRobots: true
+  description: A big list of links for your perusal.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block main %}
+<div class="kim-!-margin-block-8-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+          <h1 class="kimHeading-l kim-!-margin-block-start-0">
+            {{ title }}
+          </h1>
+          
+          {%- for section in site.navigation %}
+            <h2 class="kimHeading-m">{{ section.heading }}</h2>
+            <ul class="kimList">
+              {%- for link in section.links %}
+              <li><a class="kimLink" href="{{ link.href | url }}">
+                {{- link.html | safe if link.html else link.text -}}
+              </a></li>
+              {%- endfor %}
+            </ul>
+          {%- endfor %}
+          
+          <h2 class="kimHeading-m">Legal and utility links</h2>
+          <ul class="kimList">
+            {%- for link in site.legalLinks %}
+              <li>
+                <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                  {{- link.html | safe if link.html else link.text -}}
+                </a>
+              </li>
+            {%- endfor%}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

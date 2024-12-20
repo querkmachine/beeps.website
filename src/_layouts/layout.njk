@@ -73,7 +73,7 @@
             {{- mastheadSection.text -}}
           </a>
         {%- endif %}
-        <a class="kimMasthead_menu-link" href="{{ '/sitemap/' | url }}">Sitemap</a>
+        <a class="kimMasthead_menu-link" href="{{ '/navigation/' | url }}">Sitemap</a>
         <button class="kimMasthead_menu-toggle" type="button" aria-controls="navigation" hidden>Menu</button>
       </div>
     </header>
@@ -116,7 +116,7 @@
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
         
-        <ul class="kimList kimFooter_links" aria-label="Legal links">
+        <ul class="kimList kimFooter_links" aria-label="Legal and utility links">
           {%- for link in site.legalLinks %}
             <li>
               <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>

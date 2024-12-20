@@ -6,8 +6,9 @@
   inset-inline-start: -9999em;
 
   &:focus {
-    @include a11y.focus-ring;
-
-    position: static;
+    @include a11y.focus-ring-block;
+    position: absolute;
+    inset-block-start: 0.5em;
+    inset-inline-start: unset;
   }
 }
