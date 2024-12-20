@@ -123,7 +123,7 @@ Ultimately, I believe that the gender clinic system shouldn't really exist, at l
 
 By its nature, it's a form of gatekeeping.
 
-Imagine if you had to convince a series of priests that you were a Christian before you were ever allowed to set participate in mass? Wearing a cross and quoting scripture isn't good enough, rote knowledge and external symbols are proof of research, not proof of your spiritual belief.
+Imagine if you had to convince a series of priests that you were a Christian before you were ever allowed to participate in mass? Wearing a cross and quoting scripture isn't good enough, rote knowledge and external symbols are proof of research, not proof of your spiritual belief.
 
 You can't ever objectively prove you're a Christian, so any demands that you do so are mere gatekeeping.
 
@@ -143,7 +143,7 @@ Bombshell moment incoming...
 
 This is because there aren't _any_ drugs in the UK that are approved for transgender HRT. All HRT used in this fashion is prescribed 'off-label', and requires individual, informed consent from the intended recipient before a prescription will be issued.
 
-I'm not arguing for the abolition of the gender clinic system. Having a specialist to talk to and receive guidance from from is incredibly helpful, but it really feels like these should be optional and accessed at the patient's discretion rather than being a hard requirement.
+I'm not arguing for the abolition of the gender clinic system. Having a specialist to talk to and receive guidance from is incredibly helpful, but it really feels like these should be optional and accessed at the patient's discretion rather than being a hard requirement.
 
 Some sort of pre-assessment before surgical procedures take place also makes sense to keep, but this is already true of all non-emergency surgeries.
 
