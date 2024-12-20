@@ -1,8 +1,9 @@
-{% set cssComponents = merge(cssComponents, ["splash", "button-grid", "blog-card"]) %}
+{% set cssComponents = merge(cssComponents, ["splash", "webring", "button-grid", "blog-card"]) %}
 
 {% extends 'src/_layouts/layout.njk' %}
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/jump-link.njk" import kimJumpLink %}
 
 {% block head %}
 <style>
@@ -34,27 +35,6 @@
 .page-about {
   margin-block-end: var(--space-8-9);
 }
-
-/**
- * Webrings
- */ 
-.page-rings { 
-  margin-block: 0;
-}
-.page-rings svg { 
-  inline-size: 1.5em;
-  block-size: 1.5em;
-  forced-color-adjust: auto;
-}
-.page-rings div { 
-  margin-block-end: var(--space-3);
-}
-.page-rings dt { 
-  font-weight: bold;
-}
-.page-rings dd {
-  margin-inline: 0;
-}
 </style>
 {% endblock %}
 
@@ -85,7 +65,12 @@
             </div>
           {% endfor %}
         </div>
-        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-jump">All blog posts</a></p>
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/blog/",
+            text: "All blog posts"
+          }) }}
+        </p>
       </div>
     </div>
   </div>
@@ -97,7 +82,12 @@
       <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
         <h2 class="kimHeading-m kim-!-margin-block-start-0" id="about-heading">About beeps</h2>
         {{ content | safe }}
-        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-jump">More about beeps</a></p>
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/about/",
+            text: "More about beeps"
+          }) }}
+        </p>
       </div>
       <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
         <img class="page-about-noodle" src="{{ '/assets/images/noodle-opengraph.png' | url }}" alt="" width="408" height="500">
@@ -113,35 +103,31 @@
   <div class="kimGrid">
     {%- if webrings %}
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <h2 class="kimHeading-xs" id="webrings">Webrings</h2>
-      <dl class="kimGrid page-rings">
+      <h2 class="kim-!-visually-hidden">Webrings</h2>
+      <div class="kimGrid">
         {%- for ring in webrings %}
         <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
-          <dt>
-            <a class="kimLink-plain" href="{{ ring.url }}">
-              {% include "../assets/images/" + ring.icon %}<br>
+          <div class="kimWebring">
+            <a class="kimWebring_name" href="{{ ring.url }}">
+              {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
               {{ ring.name }}
-            </a>
-          </dt>
-          <dd>
-            <a class="kimLink-plain" href="{{ ring.previousUrl }}" aria-label="Previous site in {{ ring.name }} webring">
+            </a><br>
+            <a class="kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
               ← Previous
-            </a>
-          </dd>
-          <dd>
-            <a class="kimLink-plain" href="{{ ring.nextUrl }}" aria-label="Next site in {{ ring.name }} webring">
+            </a><br>
+            <a class="kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
               → Next
             </a>
-          </dd>
+          </div>
         </div>
         {%- endfor %}
-      </dl>
+      </div>
     </div>
     {%- endif %}
     {%- if buttons.homepage %}
       {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
       <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-        <h2 class="kimHeading-xs">Buttons</h2>
+        <h2 class="kim-!-visually-hidden">Buttons</h2>
         <div class="kimButtonGrid">
           {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
         </div>

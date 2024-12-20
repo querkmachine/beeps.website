@@ -1,0 +1,30 @@
+.kimFooter {
+}
+
+.kimFooter_inner {
+  margin-block: var(--space-5);
+}
+
+.kimFooter_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: var(--size--1);
+
+  li + li {
+    margin-block-start: unset;
+  }
+
+  svg {
+    inline-size: 1em;
+    block-size: 1em;
+    margin-inline-end: var(--space-1);
+    vertical-align: middle;
+  }
+}
+
+.kimFooter_copyright {
+  max-inline-size: 42em;
+  font-size: var(--size--1);
+  text-wrap: balance;
+}
