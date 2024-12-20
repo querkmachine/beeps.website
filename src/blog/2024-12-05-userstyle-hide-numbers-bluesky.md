@@ -4,6 +4,10 @@ date: 2024-12-05
 tags: [web development]
 metadata:
   description: Free yourself from the tyranny of subconsciously tying your self-worth to a bunch of digits.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113600811275036821"
 cssComponents:
   - code
 ---

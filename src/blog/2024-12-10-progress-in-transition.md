@@ -4,6 +4,10 @@ date: 2024-12-20
 tags: [transition, politics]
 metadata:
   description: I finally got prescribed estrogen. Now why the hell did it take so long?
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113685199061197725"
 cssComponents:
   - character
   - figure
