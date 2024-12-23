@@ -1,7 +1,7 @@
 ---
 title: Progress in transition
 date: 2024-12-20
-tags: [transition, politics]
+tags: [transition, politics, medical]
 metadata:
   description: I finally got prescribed estrogen. Now why the hell did it take so long?
 interactions:
