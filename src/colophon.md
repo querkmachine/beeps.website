@@ -53,11 +53,17 @@ This website implements [button schema](https://codeberg.org/LunarEclipse/well-k
 ## Artwork
 
 {% character character="ash", variant="happy" %}
-Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by [TuxedoDragon](https://tuxedodragon.art/).
+Ash the amphimorpho is [an original character]({{ '/about/furry/' | url }}) based on the [amphimorpho species](https://amphimorpho.carrd.co/) created by my friend, [TuxedoDragon](https://tuxedodragon.art/).
 
 Illustrations on the homepage and 404 page, in the footer, and on OpenGraph images are also illustrated by [TuxedoDragon](https://tuxedodragon.art/).
 
 Ash's headshots were illustrated by [Caius Nocturne](https://nocturne.works/).
+{% endcharacter %}
+
+{% character character="yinglet", variant="happy" %}
+Ash's yinglet form is depicted using customised [Yingmotes](https://github.com/mynotaurus/yingmotes), created by my friend, [Myno](https://zatzhing.me/)!
+
+Za yinglet species was created by [Valsalia](https://www.valsalia.com/).
 {% endcharacter %}
 
 {% character character="emy", variant="wave" %}

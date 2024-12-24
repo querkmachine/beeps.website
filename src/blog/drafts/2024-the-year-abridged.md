@@ -4,7 +4,8 @@ date: 2025-01-01
 tags: [yearly theme, transition, furry fandom, self-identity]
 metadata:
   description:
-cssComponents: []
+cssComponents:
+  - character
 ---
 
 This is becoming a bit of a tradition, huh? Here's some of my highlights of the year 2024.
@@ -37,7 +38,9 @@ Back in May, [in a case of history repeating]({{ '/blog/2023-08-27-the-next-gene
 
 I ended up being a yinglet on the internet for a few weeks, including for the length of ConFuzzled. It ended up being a surprisingly comfortable and pervasive state of mind, which never really went away. Enough so that I decided, fuck it, [it's a therian thing I guess]({{ '/blog/2024-11-27-the-yingification-of-beeps/' | url }}).
 
+{% character character="yinglet", variant="hearts" %}
 Za folks I've met zhrough zhe (former) Cohost Enclave have been soso very nice and welcoming and I love zhem too. You rock.
+{% endcharacter %}
 
 ## I (finally) got HRT through the NHS
 

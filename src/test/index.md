@@ -115,7 +115,7 @@ This is some text in a callout.
 **Bold** _italics_ [link](#). Markdown!
 {% endcallout %}
 
-### Character - Ash
+### Character - Ash (amphimorpho form)
 
 {% character character="ash", variant="alarmed" %}
 Eeek! An alien!
@@ -167,6 +167,52 @@ Bap!
 
 {% character character="ash", variant="tail" %}
 Thwap!
+{% endcharacter %}
+
+### Character - Ash (yinglet form)
+
+{% character character="yinglet", variant="annoyed" %}
+I can't believe I changed species, AGAIN!
+{% endcharacter %}
+
+{% character character="yinglet", variant="awestruck" %}
+Zhough zhis one is kinda funky actually!
+{% endcharacter %}
+
+{% character character="yinglet", variant="blushing" %}
+And really quite cosy in some unexplainable way...
+{% endcharacter %}
+
+{% character character="yinglet", variant="happy" %}
+Actually, zhis might be good to stick wizh for a while.
+{% endcharacter %}
+
+{% character character="yinglet", variant="hearts" %}
+A long while.
+{% endcharacter %}
+
+{% character character="yinglet", variant="laugh" %}
+Wehehe, zat's what I get for changing once again, I guess.
+{% endcharacter %}
+
+{% character character="yinglet", variant="scared" %}
+Unless I'm stuck like zhis forever...
+{% endcharacter %}
+
+{% character character="yinglet", variant="sad" %}
+I'll miss being a noodle!
+{% endcharacter %}
+
+{% character character="yinglet", variant="suspicious" %}
+I wonder which dastardly critter did zhis to me...
+{% endcharacter %}
+
+{% character character="yinglet", variant="smirking" %}
+I zhink I have some plans for zheir near future.
+{% endcharacter %}
+
+{% character character="yinglet", variant="thinking" %}
+At least, I zhink I do...
 {% endcharacter %}
 
 ### Character - Emy

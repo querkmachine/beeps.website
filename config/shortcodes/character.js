@@ -125,6 +125,63 @@ const variants = {
       alt: "A robot bat looking and waving at you.",
     },
   ],
+  yinglet: [
+    {
+      name: "annoyed",
+      image: "annoyed.svg",
+      alt: "An annoyed looking yinglet with a red frustration symbol.",
+    },
+    {
+      name: "awestruck",
+      image: "awestruck.svg",
+      alt: "A yinglet looking amazed with many yellow sparkles floating around it.",
+    },
+    {
+      name: "blushing",
+      image: "blushing.svg",
+      alt: "A yinglet looking taken aback and blushing hot red.",
+    },
+    {
+      name: "happy",
+      image: "happy.svg",
+      alt: "A yinglet smiling with its eyes closed.",
+    },
+    {
+      name: "hearts",
+      image: "hearts.svg",
+      alt: "A yinglet smiling deeply, its eyes closed and surrounded by floating hearts.",
+    },
+    {
+      name: "laugh",
+      image: "laugh.svg",
+      alt: "A yinglet laughing heartily.",
+    },
+    {
+      name: "sad",
+      image: "sad.svg",
+      alt: "A yinglet looking upset, ears flopped backward and slightly deflated.",
+    },
+    {
+      name: "scared",
+      image: "scared.svg",
+      alt: "A yinglet only just peeking out from behind an invisible wall, blue in the face and with a large sweat drop.",
+    },
+    {
+      name: "smirking",
+      image: "smirking.svg",
+      alt: "A yinglet smirking coyly.",
+    },
+    {
+      name: "suspicious",
+      image: "suspicious.svg",
+      alt: "A yinglet squinting at something with suspicion.",
+    },
+    {
+      name: "thinking",
+      image: "thinking.svg",
+      alt: "A yinglet with a hand on its chin and a thought bubble.",
+    },
+  ],
 };
 
 const characterShortcode = function (content, args) {
