@@ -19,13 +19,17 @@
   <link rel="pingback" href="https://webmention.io/beeps.website/xmlrpc">
   
   {#- Page title #}
-  {%- set pageTitle %}
-    {{- (metadata.title or title) | markdownInline | safe | striptags -}}
+  {%- set pageTitle = (metadata.title or title) -%}
+  {%- set sectionTitle = mastheadSection.text -%}
+  
+  {%- set headTitle %}
+    {{- pageTitle | markdownInline | safe | striptags -}}
     {%- if not isFullTitle -%}
-      {%- if mastheadSection %} / {{ mastheadSection.text | markdownInline | safe | striptags }}{% endif %} / {{ site.name }}
+      {%- if sectionTitle and (sectionTitle != pageTitle) %} / {{ sectionTitle | markdownInline | safe | striptags }}{% endif %} / {{ site.name }}
     {%- endif -%}
   {%- endset %}
-  <title>{{ pageTitle }}</title>
+  
+  <title>{{ headTitle }}</title>
 
   {#- Stylesheets #}
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
