@@ -8,6 +8,7 @@ export default class ZhatYingZhing {
       return;
     }
 
+    this.alreadyRan = false;
     this.$element = $element;
     this.bindKeyActivation();
   }
@@ -84,6 +85,10 @@ export default class ZhatYingZhing {
   }
 
   zhatzhingify() {
+    if (this.alreadyRan) {
+      return;
+    }
+
     // Inject zhe special CSS
     this.injectCSS();
 
@@ -93,6 +98,12 @@ export default class ZhatYingZhing {
     // Add za class zhat makes zhe animation happen
     document.body.classList.add("kim-gotZhatZhinged");
 
+    // Remove it after 2.5 seconds (za animation takes 2 seconds but I'm adding
+    // some buffer)
+    setTimeout(() => {
+      document.body.classList.remove("kim-gotZhatZhinged");
+    }, 2500);
+
     // Loop zhrough zhe matching elements and perform a replacement on zhem
     nodes.forEach((node) => {
       let str = node.data;
@@ -100,5 +111,7 @@ export default class ZhatYingZhing {
       str = str.replaceAll(/th/g, "zh");
       node.data = str;
     });
+
+    this.alreadyRan = true;
   }
 }

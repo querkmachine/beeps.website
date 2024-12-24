@@ -1,30 +1,33 @@
 .kimPage_body.kim-gotZhatZhinged::after {
-  content: "WEHEHE";
+  content: "";
+  display: block;
+  inline-size: 20vmin;
+  block-size: 20vmin;
   position: fixed;
-  inset-inline-start: 50vw;
-  inset-block-start: -100vh;
-  color: var(--color-accent);
-  font-weight: bold;
-  font-size: var(--size-5);
+  right: 100%;
+  bottom: 0;
   animation-name: zhatzhing;
   animation-duration: 2s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  background-image: url("images/zatzhing.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes zhatzhing {
   0% {
-    inset-block-start: 55vh;
-    opacity: 0;
+    transform: translateY(100%);
+    right: -20vmin;
   }
-  50% {
-    inset-block-start: 50vh;
-    opacity: 1;
+  10%,
+  20% {
+    transform: translateY(0);
+    right: 0;
   }
   100% {
-    inset-block-start: 45vh;
-    opacity: 0;
+    transform: translateY(0);
+    right: 100%;
   }
 }
