@@ -3,7 +3,7 @@ title: "2024: the year, abridged"
 date: 2024-12-24
 tags: [yearly theme, transition, furry fandom, self-identity]
 metadata:
-  description:
+  description: Yearly themes, HRT, yinglets, and anxiety, oh my.
 cssComponents:
   - character
 ---
