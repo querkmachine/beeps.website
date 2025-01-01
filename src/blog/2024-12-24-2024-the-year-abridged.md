@@ -4,6 +4,10 @@ date: 2024-12-24
 tags: [yearly theme, transition, furry fandom, self-identity]
 metadata:
   description: Yearly themes, HRT, yinglets, and anxiety, oh my.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113710032263136241"
 cssComponents:
   - character
 ---
