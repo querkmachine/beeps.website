@@ -124,4 +124,14 @@ export default {
     nintendo: 4,
     yandex: 1,
   },
+  "2024-12": {
+    silk: 1604,
+    chrome: 967,
+    safari: 682,
+    "android-webview": 391,
+    opera: 207,
+    edge: 54,
+    firefox: 11,
+    nintendo: 8,
+  },
 };
