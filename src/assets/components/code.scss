@@ -1,0 +1,137 @@
+// There are also lots of colours here not used elsewhere on the site,
+// as more colours are needed than are in the beeps brand palette.
+
+.kimCode,
+.kimCodeBlock {
+  --color-code-background: var(--color-surface);
+  --color-code-text: var(--color-text);
+  --color-code-border: var(--color-furniture);
+  --color-code-h-red: 5;
+  --color-code-h-orange: 30;
+  --color-code-h-yellow: 45;
+  --color-code-h-green: 120;
+  --color-code-h-cyan: 175;
+  --color-code-h-blue: 210;
+  --color-code-h-purple: 260;
+  --color-code-h-pink: 300;
+  --color-code-s: 50%;
+  --color-code-l: 75%;
+
+  @media (prefers-color-scheme: light) {
+    --color-code-s: 80%;
+    --color-code-l: 40%;
+  }
+
+  border: var(--border-regular) solid var(--color-code-border);
+  color: var(--color-code-text);
+  background-color: var(--color-code-background);
+  font-family: var(--font-code);
+  font-feature-settings:
+    "lnum",
+    "liga" 0,
+    "calt" 0;
+}
+
+// Unhighlighted inline code
+.kimCode {
+  padding-inline: 0.2em;
+  border-width: var(--border-hairline);
+  white-space: normal;
+  word-break: break-word;
+}
+
+// Code blocks
+.kimCodeBlock {
+  display: block;
+  margin-block-end: var(--space-5);
+  padding: var(--space-3);
+  border-width: var(--border-regular);
+  color: var(--color-code-text);
+  background-color: var(--color-code-background);
+  white-space: break-spaces;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  hyphens: none;
+  tab-size: 4;
+  overflow-x: auto;
+
+  // Highlight.js styles
+  .hljs-comment {
+    color: hsl(
+      var(--color-code-h-purple) var(--color-code-s) var(--color-code-l)
+    );
+    font-style: italic;
+  }
+
+  .hljs-tag,
+  .hljs-selector-tag,
+  .hljs-keyword,
+  .hljs-meta,
+  .hljs-variable,
+  .hljs-literal {
+    color: hsl(
+      var(--color-code-h-yellow) var(--color-code-s) var(--color-code-l)
+    );
+  }
+
+  .hljs-selector-id {
+    color: hsl(var(--color-code-h-red) var(--color-code-s) var(--color-code-l));
+  }
+
+  .hljs-selector-class,
+  .hljs-title.function_ {
+    color: hsl(
+      var(--color-code-h-cyan) var(--color-code-s) var(--color-code-l)
+    );
+  }
+
+  .hljs-property,
+  .hljs-params {
+    color: hsl(
+      var(--color-code-h-blue) var(--color-code-s) var(--color-code-l)
+    );
+  }
+
+  .hljs-attr,
+  .hljs-selector-attr,
+  .hljs-title.class_ {
+    color: hsl(
+      var(--color-code-h-pink) var(--color-code-s) var(--color-code-l)
+    );
+  }
+
+  .hljs-selector-pseudo,
+  .hljs-attribute {
+    color: hsl(
+      var(--color-code-h-green) var(--color-code-s) var(--color-code-l)
+    );
+  }
+
+  .hljs-string,
+  .hljs-subst {
+    color: var(--color-code-text);
+  }
+
+  .hljs-number {
+    color: hsl(
+      var(--color-code-h-orange) var(--color-code-s) var(--color-code-l)
+    );
+  }
+
+  .hljs-meta,
+  .hljs-title.class_ {
+    font-weight: bold;
+  }
+}
+
+// Keyboard keys <kbd>
+.kimKeyboard {
+  display: inline-block;
+  padding-inline: 0.3em;
+  font-family: inherit;
+  font-size: var(--size--1);
+  border: var(--border-hairline) solid currentcolor;
+  border-radius: 0.3em;
+  box-shadow: inset 0 -1px 0 currentcolor;
+}
