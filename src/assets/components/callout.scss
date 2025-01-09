@@ -1,0 +1,10 @@
+.kimCallout {
+  margin-block-end: var(--space-5);
+  padding: var(--space-3);
+  border-inline-start: var(--border-thick) solid var(--color-furniture);
+  background-color: var(--color-surface);
+}
+
+.kimCallout :last-child {
+  margin-block-end: 0;
+}
