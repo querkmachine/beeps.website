@@ -1,0 +1,34 @@
+.kimSocialEmbed {
+  margin: 0;
+  margin-block-end: var(--space-5);
+  border: var(--border-regular) solid var(--color-furniture);
+}
+
+.kimSocialEmbed_header {
+  padding: var(--space-3);
+  border-block-end: var(--border-hairline) solid var(--color-furniture);
+  background-color: var(--color-surface);
+}
+
+.kimSocialEmbed_user {
+  font-size: var(--size--1);
+  line-height: 1.1;
+
+  strong {
+    font-size: var(--size-0);
+  }
+}
+
+.kimSocialEmbed_body {
+  margin: 0;
+  padding: var(--space-3);
+
+  :last-child {
+    margin-block-end: 0;
+  }
+}
+
+.kimSocialEmbed_meta {
+  margin-block-start: var(--space-1);
+  font-size: var(--size--1);
+}

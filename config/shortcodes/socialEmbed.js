@@ -38,13 +38,13 @@ const socialEmbedShortcode = function (content, args) {
   }
 
   let html = `<figure class="kimSocialEmbed">`;
+  html += `<figcaption class="kimSocialEmbed_header">`;
   html += `<a class="kimLink-plain kimSocialEmbed_user" href="${userUrl}">`;
   html += `<strong>${userDisplayName}</strong> ${serviceLabel}`;
   html += `</a>`;
-  html += `<blockquote class="kimSocialEmbed_body">${markdownFilter(content)}</blockquote>`;
-  html += `<figcaption class="kimSocialEmbed_meta">`;
-  html += `Posted at `;
-  html += `<a href="${postUrl}">`;
+  html += `<div class="kimSocialEmbed_meta">`;
+  html += `posted at `;
+  html += `<a class="kimLink" href="${postUrl}">`;
   html += `<time datetime="${args.date}">`;
   html += formatISODate(args.date, "humanWithTime");
   html += `</time>`;
@@ -52,7 +52,9 @@ const socialEmbedShortcode = function (content, args) {
   if (showSource) {
     html += ` on <a href="https://${args.host}">${args.host}</a>`;
   }
+  html += `</div>`;
   html += `</figcaption>`;
+  html += `<blockquote class="kimSocialEmbed_body">${markdownFilter(content)}</blockquote>`;
   html += `</figure>`;
 
   return html;
