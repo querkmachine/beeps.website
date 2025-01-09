@@ -18,5 +18,4 @@ importModuleIfPresent("masthead");
 importModuleIfPresent("scroll-sync");
 importModuleIfPresent("share");
 importModuleIfPresent("tabs");
-importModuleIfPresent("toc");
 importModule("zhat-ying-zhing");

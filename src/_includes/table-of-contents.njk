@@ -1,11 +1,6 @@
 {%- if (content | toc) %}
-  <nav class="kimToc" aria-labelledby="toc-header">
-    <details class="kimToc_collapsible" data-js="toc">
-      <summary class="kimToc_collapsibleSummary">
-        <span class="kimHeading-xs" id="toc-header">Contents</span>
-      </summary>
-      {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
-    </details>
-    <hr class="kimRule">
+  <nav class="kimToc" aria-labelledby="toc-heading">
+    <h2 class="kimBody kimToc_heading" id="toc-heading">Contents</h2>
+    {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
   </nav>
 {%- endif %}
