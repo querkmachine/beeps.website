@@ -4,8 +4,6 @@ export default class Masthead {
       return;
     }
 
-    console.log({ $module });
-
     this.$module = $module;
 
     this.$fallbackLink = this.$module.querySelector(".kimMasthead_menu-link");
@@ -15,12 +13,8 @@ export default class Masthead {
       return;
     }
 
-    console.log(this.$fallbackLink, this.$toggle);
-
     this.navigationId = this.$toggle.getAttribute("aria-controls");
     this.$navigation = document.getElementById(this.navigationId);
-
-    console.log(this.$navigation);
 
     // Hide fallback, unhide toggle
     this.$fallbackLink.setAttribute("hidden", "hidden");
