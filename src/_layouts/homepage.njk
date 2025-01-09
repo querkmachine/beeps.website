@@ -35,6 +35,15 @@
 .page-about {
   margin-block-end: var(--space-8-9);
 }
+
+/**
+ * WIP
+ */
+.page-wip {
+  background-color: var(--color-surface);
+  border: var(--border-regular) solid var(--color-furniture);
+  padding: var(--space-3);
+}
 </style>
 {% endblock %}
 
@@ -49,6 +58,17 @@
     <img class="kimSplash_image" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
   </div>
 </header>
+
+<div class="kimWrapper">
+  <div class="kimGrid">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+      <aside class="page-wip kim-!-margin-block-end-8-9">
+        <h2 class="kimBody-l">Redesigning in the open</h2>
+        <p class="kimBody">I'm currently rebuilding various parts of my website, and doing so in the open so that you can see what kind of stuff is going on. I can't guarantee things will be at their best in the meantime. Please excuse the mess.</p>
+      </aside>
+    </div>
+  </div>
+</div>
   
 <section class="page-blog" id="blog" aria-labelledby="blog-heading">
   <div class="kimWrapper">
