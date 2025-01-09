@@ -1,0 +1,42 @@
+.kimCharacter {
+  display: flex;
+  margin: 0;
+  margin-block-end: var(--space-5);
+}
+
+.kimCharacter_cite {
+  display: flex;
+  padding: var(--space-1);
+  flex: 0 0 5rem;
+  background-color: var(--color-furniture);
+  align-items: flex-end;
+}
+
+.kimCharacter_image {
+  margin: 0;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.kimCharacter_speech {
+  flex-grow: 1;
+  margin: 0;
+  padding: var(--space-3);
+  background-color: var(--color-surface);
+
+  :last-child {
+    margin-block-end: 0;
+  }
+}
+
+.kimCharacter-ash {
+}
+
+.kimCharacter-yinglet {
+  .kimCharacter_cite {
+    padding-block-end: 0;
+  }
+}
+
+.kimCharacter-emy {
+}
