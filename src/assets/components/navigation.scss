@@ -2,8 +2,11 @@
 
 .kimNavigation {
   padding-block: var(--space-5);
-  background-color: var(--color-surface);
   border-block: var(--border-regular) solid var(--color-furniture);
+  background-color: var(--color-surface);
+
+  // Account for the 1px bottom border on the masthead
+  margin-block-start: calc(0px - var(--border-hairline));
 }
 
 .kimNavigation_link {

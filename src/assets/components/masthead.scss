@@ -46,7 +46,11 @@
 .kimMasthead_name,
 .kimMasthead_section {
   margin-inline-start: var(--space-2);
-  font-size: var(--size-2);
+  font-size: var(--size-1);
+
+  @container (min-width: 500px) {
+    font-size: var(--size-2);
+  }
 
   @include links.link-helper(
     $color: var(--color-link),
@@ -58,7 +62,7 @@
 .kimMasthead_name {
   font-weight: bold;
 
-  @container (max-width: 360px) {
+  @container (max-width: 380px) {
     @include a11y.visually-hidden;
   }
 }
