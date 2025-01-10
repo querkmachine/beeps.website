@@ -1,0 +1,460 @@
+---
+title: Every HTML element
+updated: 2025-01-09
+metadata:
+  description: Every element in use in HTML and a brief description of what it's for.
+cssComponents:
+  - code
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% macro _item(tag, params) %}
+  {%- set mdnLink = params.mdn | default("https://developer.mozilla.org/en-US/docs/Web/HTML/Element/" + tag) -%}
+  <div class="kimGrid" id="{{ tag }}">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
+      <h3 class="kimBody">
+        {{ _e(tag) }}
+        {%- if params.name %}:<br>the {{ params.name }} element{% endif %}
+      </h3>
+      <p class="kimBody-s">{{ params.category }}</p>
+    </div>
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
+      {% markdown %}{{ caller() if caller }}{% endmarkdown %}
+    </div>
+    {%- if not params.obsolete %}
+      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
+        <ul class="kimList">
+          <li><a class="kimLink" href="{{ mdnLink }}">MDN reference</a></li>
+          {%- if params.spec %}
+          <li><a class="kimLink" href="{{ params.spec }}">HTML specification</a></li>
+          {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+  </div>
+  <hr class="kimRule kimRule-hairline">
+{% endmacro %}
+
+{% macro _e(tag) -%}
+<code class="kimCode"><a class="kimLink-noVisited" href="#{{ tag }}">&lt;{{ tag }}&gt;</a></code>
+{%- endmacro %}
+
+{% macro _obsolete(replacementTag) %}
+
+{% endmacro %}
+
+{% block head %}
+{% endblock %}
+
+{% block main %}
+<div class="kimWrapper kim-!-margin-block-8-9">
+  <h1 class="kimHeading-xl">{{ title }}</h1>
+  <p class="kimBody-l">HTML is a semantic language: every element provides a specific meaning to its contents or function. This is a quick reference for what those meanings are.</p>
+  <p class="kimBody-l">Well-written HTML will use the most appropriate element for the job, but you don't need to know every single element from memory!</p>
+  
+  <hr class="kimRule kimRule-thick">
+  
+  <h2 class="kimHeading-l">Required elements</h2>
+  
+  {% call _item("body", {
+    name: "Document Body",
+    spec: "https://html.spec.whatwg.org/multipage/sections.html#the-body-element"
+  }) %}
+    Surrounds all 'visible' content on a webpage. That is, all content that would normally be displayed to a user.
+    
+    All webpages must contain a body element, even if it's empty, and there can only be one body element. If omitted, the browser will try to insert one when rendering the page.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Generic elements</h2>
+  
+  {% call _item("div", {
+    name: "Content Division",
+    spec: "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element"
+  }) %}
+    One of the two generic HTML elements, divs do not have any specific meaning associated with them. They can be used for any purpose where a more appropriate element doesn't exist.
+    
+    Divs can contain any other HTML element normally allowed within page content.
+  {% endcall %}
+  
+  {% call _item("span", {
+    name: "Content Span",
+    spec: "https://html.spec.whatwg.org/multipage/grouping-content.html#the-span-element"
+  }) %}
+    One of the two generic HTML elements, spans do not have any specific meaning associated with them. They can be used for any purpose where a more appropriate element doesn't exist.
+    
+    Spans are considered text elements, and may only contain other text elements.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Sections of a page</h2>
+  
+  {% call _item("article", {
+    name: "Article",
+    spec: "https://html.spec.whatwg.org/multipage/sections.html#the-article-element"
+  }) %}
+    An independent, self-contained section of content, such that it could be separated from the surrounding context and still make sense. Common examples include articles, blog posts, forum posts and comments.
+    
+    Articles may contain their own {{ _e("header") }} and {{ _e("footer") }} elements, which will be scoped to the article. For example, to contain the title, publish date and other metadata about the article.
+  {% endcall %}
+  
+  {% call _item("aside", {
+    name: "Aside",
+    spec: "https://html.spec.whatwg.org/multipage/sections.html#the-aside-element"
+  }) %}
+    A section of content that is indirectly related to the primary content, such that removing it would not compromise understanding the content. Common examples include decorative pullquotes and tangents to the main content.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Text semantics</h2>
+  
+  <h3 class="kimHeading-m">Block text elements</h3>
+  
+  {% call _item("address", {
+    name: "Contact Details",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-address-element"
+  }) %}
+    Container indicating that the enclosed content is contact information for the author of the page content.
+    
+    Note that this is specifically for the content author, and not arbitrary postal addresses or contact information.
+  {% endcall %}
+  
+  {% call _item("blockquote", {
+    name: "Block Quotation",
+    spec: "https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element"
+  }) %}
+    Container indicating that the enclosed text is a quotation from a third-party, typically rendered separately from non-quoted content.
+    
+    For quotations inline with other text, use {{_e("q")}}.
+    
+    If the quote has a citation, this should appear outside of the blockquote element, such as in a {{_e("figcaption")}}, with both the blockquote and figcaption wrapped in a {{_e("figure")}}. Use the {{_e("cite")}} element if it's appropriate to your needs.
+  {% endcall %}
+  
+  <h3 class="kimHeading-m">Inline text elements</h3>
+  
+  {% call _item("a", {
+    name: "Anchor",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element"
+  }) %}
+    Short for 'anchor'. A link that, when clicked, directs the user to a different page or to the `id` of an element on a page. The text of the link should be descriptive of where it leads.
+    
+    If submitting a form or activating custom functionality, use a {{ _e("button") }} instead.
+  {% endcall %}
+  
+  {% call _item("abbr", {
+    name: "Abbreviation",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element"
+  }) %}
+    An acronym or abbreviation. Define both the abbreviation and its expanded meaning within the element.
+    
+    Avoid expanding upon the abbreviation in the `title` attribute, as not all users, such as those using touch screens or assistive technologies, will be able to access it.
+  {% endcall %}
+  
+  {% call _item("b", {
+    name: "Bring Attention To",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element"
+  }) %}
+    Text that typically has visual importance, but does not carry any semantic importance. Common examples include the name of a product in a review or a person's name in a biography.
+    
+    If the text should have semantic importance, use {{_e("strong")}}. For headings, use {{_e("h1")}}–{{_e("h6")}}. 
+  {% endcall %}
+  
+  {% call _item("bdi", {
+    name: "Bidirectional Isolate",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element"
+  }) %}
+    Tells the browser that the contained text is written in a different direction (right-to-left or left-to-right) to the surrounding text, so that the browser knows to switch directions. For example, an Arabic name written in an English language article.
+    
+    Modern browsers are usually quite capable of working this out themselves, however this element may be useful if the two are heavily intertwined.
+  {% endcall %}
+  
+  {% call _item("bdo", {
+    name: "Bidirectional Override",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element"
+  }) %}
+    Tells the browser that the contained text should be written in a specific direction, which may differ from what the browser would normally assume. The direction to use is specified by setting the `dir` attribute to either `ltr` or `rtl`.
+    
+    There's usually very little reason to use this, but it's there.
+  {% endcall %}
+  
+  {% call _item("br", {
+    name: "Line Break",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element"
+  }) %}
+    Adds a line break into the flow of text, forcing subsequent text to begin on a new line.
+    
+    Don't use for producing distinct paragraphs, for paragraphs, use {{_e("p")}}. For lists of items, use {{_e("ol")}} or {{_e("ul")}}. 
+  {% endcall %}
+  
+  {% call _item("cite", {
+    name: "Citation",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element"
+  }) %}
+    The name of the creative work that is being cited by the surrounding text. For example, the name of a book, specification, television program, website, etc.
+    
+    Cite is only intended for the name of the work, rather than the names of authors or other metadata like publishing date or page numbers, but it's one of those things that no one really cares that much about.
+  {% endcall %}
+  
+  {% call _item("code", {
+    name: "Code",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element"
+  }) %}
+    A section of computer code. By default, this is usually rendered in monospace text. Any content within the code element that would normally be parsed as HTML, such as &lt; and &gt; characters, need to be manually escaped.
+    
+    The code element can be combined with {{_e("pre")}} to create multi-line code blocks.
+  {% endcall %}
+  
+  {% call _item("data", {
+    name: "Data",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element"
+  }) %}
+    Along with the `value` attribute, provides a machine-readable version of the content within the element, such as an ID for a user or product. May be useful for scripting.
+    
+    There is no specification for how scripts consume this information. It is up to the webpage author and the data consumer to agree on the standard.
+    
+    For providing machine-readable dates and times, use {{_e("time")}} instead.
+  {% endcall %}
+  
+  {% call _item("del", {
+    name: "Deleted Text",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-del-element"
+  }) %}
+    Text that is no longer relevant, usually rendered 'struck through'. A `datetime` attribute can be added to provide information on when it was removed.
+    
+    The companion to {{_e("ins")}}, which is for newly added text.
+  {% endcall %}
+  
+  {% call _item("ins", {
+    name: "Inserted Text",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ins-element"
+  }) %}
+    Text that has been added to the document at a later point. A `datetime` attribute can be added to provide information on when it was added.
+    
+    The companion to {{_e("del")}}, whic is for removed text.
+  {% endcall %}
+  
+  {% call _item("dfn", {
+    name: "Definition",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element"
+  }) %}
+    A word or phrase that is being defined, such as in a dictionary or glossary of terms.
+    
+    It should be used as part of a {{_e("p")}}, {{_e("section")}} or {{_e("dt")}}/{{_e("dd")}}.
+  {% endcall %}
+  
+  {% call _item("em", {
+    name: "Emphasis",
+    spec: "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element"
+  }) %}
+    Text with stress emphasis. This is the kind of text that would be said in a different tone of voice when spoken aloud, for example, <q>Now is <em>not</em> the time!</q>
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Lists</h2>
+  
+  {% call _item("dd", {
+    name: "Definition Detail",
+    spec: "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element"
+  }) %}
+    A value for the preceding {{_e("dt")}} in a {{_e("dl")}}. 
+  {% endcall %}
+  
+  {% call _item("dl", {
+    name: "Definition List",
+    spec: "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element"
+  }) %}
+    Container for a list of keys and values, defined by a single {{_e("dt")}} followed by one or more {{_e("dd")}} elements.
+    
+    Each set of {{_e("dt")}} and {{_e("dd")}} elements may optionally be wrapped in a {{_e("div")}} for ease of styling.
+  {% endcall %}
+  
+  {% call _item("dt", {
+    name: "Definition Term",
+    spec: "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element"
+  }) %}
+    A key within a {{_e("dl")}}. Each {{_e("dd")}} that follows it will be associated to it.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Tables</h2>
+  
+  {% call _item("caption", {
+    name: "Table Caption",
+    spec: "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element"
+  }) %}
+    The title of a {{_e("table")}}. A table may only have one caption.
+    
+    Providing a caption isn't required, but is useful for providing a succinct description of the table for assistive technology users. 
+  {% endcall %}
+  
+  {% call _item("col", {
+    name: "Table Column",
+    spec: "https://html.spec.whatwg.org/multipage/tables.html#the-col-element"
+  }) %}
+    A mechanism for passing HTML attributes to the columns in a {{_e("table")}}, without having to repeat them for each table cell. Cols can only be used within a {{_e("colgroup")}}.
+  {% endcall %}
+  
+  {% call _item("colgroup", {
+    name: "Table Column Group",
+    spec: "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element"
+  }) %}
+    Container for a list of {{_e("col")}} elements within a {{_e("table")}}. A table may only contain one colgroup.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Interactive elements</h2>
+  
+  {% call _item("details", {
+    name: "Details",
+    spec: "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+  }) %}
+    Container element for a disclosure widget that can show or hide content on a page.
+    
+    Must contain a {{_e("summary")}} element, which is used for the visible toggle. All content within the details element other than the {{_e("summary")}} will be shown and hidden when interacting with it.
+  {% endcall %}
+  
+  {% call _item("dialog", {
+    name: "Dialog",
+    spec: "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+  }) %}
+    Container element for content that appears in a dialog (also known as a 'modal' or 'modal window'). Dialogs appear 'above' the content of a page and can optionally prevent interaction with the rest of the page until the user has made a choice.
+    
+    Useful examples of dialogs include confirmations that a user wants to do something, or certain multitasking situations, such as writing an email whilst still navigating around their inbox. Less useful examples include cookie conset dialogs and newsletter sign up forms.
+    
+    Dialogs require JavaScript to be shown and hidden.
+  {% endcall %}
+  
+  {% call _item("summary", {
+    name: "Details Summary",
+    spec: "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element"
+  }) %}
+    The persistent, visible label for a {{_e("details")}} element.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Embedded media</h2>
+  
+  {% call _item("audio", {
+    name: "Audio",
+    spec: "https://html.spec.whatwg.org/multipage/media.html#the-audio-element"
+  }) %}
+    An embedded audio file, defined using the `src` attribute or one or more {{_e("source")}} elements.
+    
+    By default, the element renders invisibly. The `controls` attribute must be included to provide playback controls.
+    
+    Any HTML placed inside of the element, that isn't {{_e("source")}} elements, will be displayed if the browser or device is incapable of audio playback.
+  {% endcall %}
+  
+  {% call _item("embed", {
+    name: "Embedded Media",
+    spec: "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element"
+  }) %}
+    Used for embedding external content into a page, usually from an external application or a browser plugin.
+    
+    Historically, this was commonly used for embedding Flash and Java content but has fallen out of use since. It has largely been superceded in modern times by more discrete elements like {{_e("canvas")}}, {{_e("audio")}} and {{_e("video")}}.
+  {% endcall %}
+  
+  <h3 class="kimHeading-m">Image maps</h3>
+  
+  {% call _item("area", {
+    name: "Image Area",
+    spec: "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element"
+  }) %}
+    Defines a clickable region within an image {{ _e("map") }}.
+    
+    Image maps usually provide poor accessibility and should be avoided.
+  {% endcall %}
+  
+  <h2 class="kimHeading-m">Nested webpages</h2>
+  
+  {% call _item("fencedframe", {
+    name: "Fenced Frame",
+    spec: "https://wicg.github.io/fenced-frame/#the-fencedframe-element"
+  }) %}
+    A restricted alternative to {{_e("iframe")}} that intends to better preserve user privacy without breaking the {{_e("iframe")}} element's backwards compatibility. 
+    
+    This element is experimental and isn't widely supported yet.
+  {% endcall %}
+  
+  {% call _item("iframe", {
+    name: "Inline Frame",
+    spec: "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+  }) %}
+    Embeds a different webpage within the current page. This is commonly used for including content hosted on other websites, such as YouTube videos.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Forms</h2>
+  
+  {% call _item("button", {
+      name: "Button",
+      spec: "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element"
+    }) %}
+An interactive element that, once activated, performs an action.
+
+* For buttons with a `type` of `submit`, the default behaviour is to submit the {{_e("form")}} the button is contained within. If there is no form element, this does nothing. 
+* For buttons with a `type` of `reset`, the default behaviour is to revert the {{_e("form")}} to the state it was when the page was originally loaded.
+* For buttons with a `type` of `button`, there is no default behaviour. Functionality must be added using JavaScript or other HTML attributes.
+
+If not specified, a button's default type is `submit`.
+    {% endcall %}
+    
+    {% call _item("datalist", {
+      name: "Data List",
+      spec: "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+    }) %}
+      Container for a list of {{_e("option")}} elements, representing suggested data for use with other form inputs. Currently, only certain `type`s of {{_e("input")}} support datalist.
+      
+      Datalists must have an `id` attribute. Form inputs can then reference the datalist using the `list` attribute.
+    {% endcall %}
+  
+  <h2 class="kimHeading-l">Scripting</h2>
+  
+  {% call _item("canvas", {
+    name: "Graphics Canvas",
+    spec: "https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element"
+  }) %}
+    A rendering context specific for use with the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) (for 2D graphics) and [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) (for 2D and 3D graphics).
+    
+    Doesn't really do anything by itself.
+  {% endcall %}
+  
+  <h2 class="kimHeading-l">Metadata</h2>
+  
+  <h3 class="kimHeading-m">Metadata about the content</h3>
+  
+  <h3 class="kimHeading-m">Metadata about the document</h3>
+  
+  {% call _item("base", {
+    name: "Base URL",
+    spec: "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element"
+  }) %}
+    Defines the base URL for a document. This instructs the browser to rewrite all relative URLs within the page (such as links and images) using the base element's `href` attribute as its starting point.
+    
+    This element is most useful if a page has been moved to a different URL, but content on the page still expects it be in the previous location.
+  {% endcall %}
+  
+  <hr class="kimRule kimRule-thick">
+  
+  <h2 class="kimHeading-l">Deprecated and obsolete elements</h2>
+  <p class="kimBody">These elements have been removed from the most recent HTML spec. They may still work in some browsers for backwards compatibility reasons, but their ongoing use should be discouraged.</p>
+  
+  {% call _item("acronym", { name: "Acronym", obsolete: true }) %}
+    Was used for marking up acronyms. Use {{ _e("abbr") }} instead.
+  {% endcall %}
+  
+  {% call _item("big", { name: "Bigger Text", obsolete: true }) %}
+    Was used to render text slightly larger than its surrounding text, back when CSS wasn't really a thing yet. Today, use CSS `font-size` instead.
+  {% endcall %}
+  
+  {% call _item("blink", { name: "Blinking", obsolete: true }) %}
+    Was used to give content a flashing effect. Was removed for being obnoxious and bad for accessibility. If you simply **must** reproduce this, use [CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead.
+  {% endcall %}
+  
+  {% call _item("center", { name: "Centered Text", obsolete: true }) %}
+    Was used to render content in the middle of the page, back when CSS wasn't really a thing yet. Today there are multiple ways of doing this in CSS, including `text-align`, auto `margin`s, and flexbox.
+  {% endcall %}
+  
+  {% call _item("dir", { name: "Directory", obsolete: true }) %}
+    Was used to render a list of files and folders, similarly to the file system on a computer. Use {{_e("ul")}} instead.
+  {% endcall %}
+  
+  {% call _item("marquee", { name: "Scrolling Marquee", obsolete: true }) %}
+    Allowed content to scroll vertically or horizontally across the screen. Use [CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead.
+  {% endcall %}
+  
+</div>
+{% endblock %}
