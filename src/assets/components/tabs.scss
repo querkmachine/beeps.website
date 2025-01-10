@@ -1,0 +1,66 @@
+@use "../helpers/links";
+
+// There isn't any unique styling applied until the component is initialised,
+// so everything needs to be wrapped up in this
+.kimTabs-active {
+  --tabs-border-width: var(--border-hairline);
+  --tabs-border-color: var(--color-furniture);
+
+  .kimTabs_tablist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin: 0;
+    margin-block-end: var(--space-1);
+    padding: 0;
+    border-block-end: var(--tabs-border-width) solid var(--tabs-border-color);
+    list-style: none;
+  }
+
+  .kimTabs_tab {
+    margin-block-end: calc(0px - var(--tabs-border-width));
+    padding: var(--space-2) var(--space-3-4);
+    border: var(--tabs-border-width) solid var(--tabs-border-color);
+    position: relative;
+    background-color: var(--color-surface);
+
+    &:has(.kimTabs_link[aria-selected="true"]) {
+      padding-block-start: var(--space-1);
+      border-block-start-width: calc(var(--tabs-border-width) + var(--space-1));
+      border-block-end-color: var(--color-canvas);
+      background-color: var(--color-canvas);
+    }
+  }
+
+  .kimTabs_link {
+    @include links.link-helper($initial-underline: false);
+
+    // Extend link to cover entire tab area
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &[aria-selected="true"] {
+      // Set an outline for forced colour mode users. The outline colour gets
+      // forcibly set in in this case.
+      outline: var(--border-regular) solid transparent;
+      outline-offset: calc(0px - var(--border-regular));
+    }
+  }
+
+  // We can't display: none the panels as we use funky scroll syncronisation stuff on the browser stats pages, which doesn't work with non-rendered elements.
+  .kimTabs_panel[aria-hidden="true"] {
+    display: block;
+
+    @supports (content-visibility: hidden) {
+      content-visibility: hidden;
+    }
+
+    @supports not (content-visibility: hidden) {
+      block-size: 0;
+      overflow: hidden;
+    }
+  }
+}

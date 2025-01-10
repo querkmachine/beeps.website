@@ -25,7 +25,7 @@ cssComponents:
     inline-size: 13ch;
     position: sticky;
     inset-inline-start: 0;
-    background-color: var(--color-background);
+    background-color: var(--color-canvas);
   }
   .page-data-table .kimTable :is(th, td):not(:first-child) {
     inline-size: 10ch;
@@ -40,7 +40,7 @@ cssComponents:
 {% block main %}
 <div class="kimWrapper kim-!-margin-block-8-9">
   <h1 class="kimHeading-xl">{{ title }}</h1>
-  <p class="kimBody-l">Collated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a href="#caveats">there are a lot of caveats to consider</a>.</p>
+  <p class="kimBody-l">Collated session data from the GOV.UK website, for people who find that kind of thing interesting/informative. Try not take this as gospel, <a class="kimLink" href="#caveats">there are a lot of caveats to consider</a>.</p>
   
   <h2 class="kimHeading-l" id="browsers">Browsers</h2>
   <p class="kimBody">Browsers sorted by the recent month's data. Percentage data is as a proportion of all sessions for that month.</p>
