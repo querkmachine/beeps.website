@@ -4,12 +4,17 @@
   @include links.link-helper;
 }
 
+.kimLink-noVisited {
+  @include links.link-helper($visited-color: var(--color-link));
+}
+
 .kimLink-plain {
   @include links.link-helper($initial-underline: false);
 }
 
 .kimLink,
-.kimLink-plain {
+.kimLink-plain,
+.kimLink-noVisited {
   &:has(svg) {
     display: inline-flex;
     gap: var(--space-1);
