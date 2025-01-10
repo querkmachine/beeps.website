@@ -4,34 +4,26 @@
   @include links.link-helper;
 }
 
-.kimLink_icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  inline-size: var(--height);
-  block-size: var(--height);
-  border: var(--border-hairline) solid var(--color-link);
-  line-height: 1;
-  float: inline-start;
-  margin-inline-end: var(--space-2);
-
-  :hover & {
-    color: var(--color-canvas);
-    background-color: var(--color-link);
-  }
-
-  :focus-visible & {
-    border-width: var(--border-regular);
-    border-color: var(--color-focus-text);
-    color: var(--color-focus-text);
-    background-color: var(--color-focus-background);
-  }
-}
-
 .kimLink-plain {
   @include links.link-helper($initial-underline: false);
 }
 
+.kimLink,
+.kimLink-plain {
+  &:has(svg) {
+    display: inline-flex;
+    gap: var(--space-1);
+    vertical-align: baseline;
+
+    svg {
+      block-size: 1em;
+      position: relative;
+      inset-block-start: 0.18em;
+    }
+  }
+}
+
+// Jump links
 .kimLink-jump {
   --height: 2em;
 
@@ -45,5 +37,33 @@
     align-items: center;
     font-weight: bold;
     line-height: var(--height);
+  }
+}
+
+.kimLink-jump .kimLink_icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: var(--height);
+  block-size: var(--height);
+  border: var(--border-hairline) solid var(--color-link);
+  line-height: 1;
+  float: inline-start;
+  margin-inline-end: var(--space-2);
+
+  svg {
+    margin-inline-end: 0;
+  }
+
+  :hover & {
+    color: var(--color-canvas);
+    background-color: var(--color-link);
+  }
+
+  :focus-visible & {
+    border-width: var(--border-regular);
+    border-color: var(--color-focus-text);
+    color: var(--color-focus-text);
+    background-color: var(--color-focus-background);
   }
 }
