@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: beeps NOW!
-updated: 2024-12-02
+updated: 2025-01-10
 metadata:
   description: A basic overview of what I'm up to at the moment.
 ---
@@ -12,30 +12,26 @@ Last updated: {{ updated | formatDate('human') }}
 
 ## Now
 
-❄️ The cold and dark of an approaching winter has probably suppressed my mood a bit. I'm generally finding myself to be more exhausted and less sociable than I'd like.
+🥦 I've started a new diet and exercise regime as part of the [Year of Health]({{ '/blog/2025-01-01-the-year-of-health/' | url }}). So far it's... not been fun.
 
-🧑‍💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team, currently working on some things I can't talk about publicly yet. I'm also helping with updates to the [WCAG Primer](https://alphagov.github.io/wcag-primer/).
+🧑‍💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team, currently working on some long-term things I can't talk about publicly yet. I'm also helping with updates to the [WCAG Primer](https://alphagov.github.io/wcag-primer/).
 
-🎨 I've had a heavy itch to redesign this website a bit—and have redesigned the homepage slightly—but am struggling to figure out how best to achieve what I'm after.
+🎨 I've started [giving this website a fresh lick of paint]({{ '/blog/2025-01-10-renovating-in-the-open/' | url }}).
 
-🎶 Lately, I've been jamming out to [_Hyperdrama_](https://album.link/i/1724935208) by Justice, [_The Last Flight_](https://album.link/i/1748134573) by Public Service Broadcasting, and [_I Made An Album_](https://album.link/i/1686402099) by Daði Freyr.
+🎶 Lately, I've been on a musical theatre kick and been relistening to the soundtracks to [Matilda](https://album.link/gb/i/471417216) and [Hamilton](https://album.link/gb/i/1025210938).
 
-🖖 I'm rewatching _Star Trek: Enterprise_ alongside [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/), _Star Trek: Lower Decks_ alongside [_Greatest Trek_](https://maximumfun.org/podcasts/greatest-trek). I've also been watching _Only Connect_ and _Formula 1_, whenever those are on.
+🖖 I'm currently watching the latest series of _What We Do in the Shadows_, _Guy Montgomery's Guy Mont Spelling Bee_, _Jet Lag: The Game_, and rewatching _Star Trek: Enterprise_ alongside [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/),
 
-🎮 I've been playing [_Two Point Hospital_](https://www.twopointstudios.com/en/games/two-point-hospital) and [_Two Point Campus_](https://www.twopointstudios.com/en/games/two-point-campus). Deux points.
+🎮 I got lost in the _Factorio_ rabbit hole again over Christmas and finally conquered Gleba. Finally.
 
 ## Recently
 
-🧑‍💻 At work, I led development and release of Charles III's updated royal coat of arms and the new [Service Navigation component](https://design-system.service.gov.uk/components/service-navigation/), and helped do some accessibility investigations around the Design System website.
-
-🕸️ After a bit of a lull in the middle of the year, I've started putting more effort into writing blog posts again. I've also been making a fair few improvements to the underlying bits of this site, including porting everything to [Eleventy 3 and ESM]({{ '/blog/2024-10-02-the-changelog-eleventy-3-forced-colours-new-art/' | url }}), rewriting how external images are handled, and component-ising all of the CSS files.
-
-🥚 I also implemented a stupid easter egg zhat you'll just have to find.
+🎅 Christmas, obviously. Some time off work was nice, though I didn't get to see as many people as I'd like.
 
 ## Soon
 
-🎅 Christmas, obviously. A bit of a break outta be nice.
+🐾 [NordicFuzzCon](https://nordicfuzzcon.org/) in Malmö, Sweden in February and [ConFuzzled](https://confuzzled.org.uk/) in Birmingham in May. Two conventions in one year! Fancy!
 
-💭 I'm looking to improve my ability to actually explain my thought process when I do things, via the mediums of blogging and mentoring. This is probably easier said than done. [My brain isn't exactly a neurotypical place.]({{ '/about/neurodivergent/' | url }})
+🚄 I'd like to travel a bit more this year. Probably take some long weekends in other parts of the country.
 
-🏖️ Taylor and I are sorting out arrangements to attend [NordicFuzzCon](https://nordicfuzzcon.org/) in Malmö, Sweden in February; and we'll also be attending [ConFuzzled](https://confuzzled.org.uk/) in May. Two conventions in one year! Fancy!
+📺 _Severence_ season two. 👀
