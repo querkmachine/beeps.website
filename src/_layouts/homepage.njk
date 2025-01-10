@@ -1,4 +1,4 @@
-{% set cssComponents = merge(cssComponents, ["splash", "webring", "button-grid", "blog-card"]) %}
+{% set cssComponents = merge(cssComponents, ["callout", "splash", "webring", "button-grid", "blog-card"]) %}
 
 {% extends 'src/_layouts/layout.njk' %}
 
@@ -35,15 +35,6 @@
 .page-about {
   margin-block-end: var(--space-8-9);
 }
-
-/**
- * WIP
- */
-.page-wip {
-  background-color: var(--color-surface);
-  border: var(--border-regular) solid var(--color-furniture);
-  padding: var(--space-3);
-}
 </style>
 {% endblock %}
 
@@ -62,7 +53,7 @@
 <div class="kimWrapper">
   <div class="kimGrid">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <aside class="page-wip kim-!-margin-block-end-8-9">
+      <aside class="kimCallout kim-!-margin-block-end-8-9">
         <h2 class="kimBody-l">Redesigning in the open</h2>
         <p class="kimBody">I'm currently rebuilding various parts of my website, and doing so in the open so that you can see what kind of stuff is going on. I can't guarantee things will be at their best in the meantime. Please excuse the mess.</p>
       </aside>
