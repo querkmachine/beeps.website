@@ -1,0 +1,46 @@
+@use "../helpers/links";
+
+/** 
+ * This is a generic wrapper around content that isn't able to use the normal 
+ * classes for whatever reason, e.g. HTML that's come from an API elsewhere.
+ * Avoid using it otherwise.
+ *
+ * This file avoids using `@extend` because it creates cascade issues.
+ */
+
+.kimProse {
+  p {
+    margin-block-start: 0;
+    margin-block-end: var(--space-5);
+    font-size: var(--size-0);
+    line-height: 1.5;
+  }
+
+  a {
+    @include links.link-helper;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    margin-block-end: var(--space-5);
+    padding: 0;
+    padding-inline-start: 2em;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    li::marker {
+      font-feature-settings: "tnum", "lnum";
+    }
+  }
+
+  li + li {
+    margin-block-start: var(--space-1);
+  }
+}

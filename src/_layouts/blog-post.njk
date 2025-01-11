@@ -86,7 +86,7 @@
             {{ content | safe }}
             <p class="kimBody-s">
               Thought this was neat? Why not
-              <a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?
+              <a class="kimLink" href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@
             <h2 class="kimHeading-s">
               Comments
             </h2>
-            <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on the fediverse</a>.</p>
+            <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a class="kimLink" href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on the fediverse</a>.</p>
             
             {%- if comments %}
             {% from "src/_includes/blog-comments.njk" import kimBlogComments %}

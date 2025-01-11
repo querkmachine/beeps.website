@@ -5,7 +5,9 @@
         <img class="kimComment_avatar" alt="" src="{{ ('/.avatar-cache/' + comment.account.avatar) | url }}" loading="lazy" width="50" height="50">
         <span class="kimComment_name">{{ comment.account.acct }}</span>
       </a>
-      <time class="kimBody-s kimComment_time" datetime="{{ comment.created_at }}">{{ comment.created_at | formatISODate('humanWithTime') }}</time>
+      <div>
+        <time class="kimBody-s kimComment_time" datetime="{{ comment.created_at }}">{{ comment.created_at | formatISODate('humanWithTime') }}</time>
+      </div>
     </figcaption>
     <blockquote class="kimProse kimComment_content">
       {{ comment.content | safe }}
