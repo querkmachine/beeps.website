@@ -8,7 +8,7 @@
   <style>
   .page-sticky-heading {
     position: sticky;
-    top: 1rem;
+    inset-block-start: var(--space-5);
   }
   </style>
 {% endblock %}
@@ -17,17 +17,21 @@
   <div class="kim-!-margin-block-8-9">
     <div class="kimWrapper" itemscope itemtype="https://schema.org/Blog">
     
-      {%- if tag %}
-        <span class="kim-!-visually-hidden" itemprop="name">{{ site.blogName }}</span>
-        <h1 class="kimHeading-xl">
-          Blog posts tagged as {{ tag | tagify }}
-        </h1>
-      {%- else %}
-        <h1 class="kimHeading-xl" itemprop="name">
-          {{ site.blogName }}
-        </h1>
-        <p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet here you are. Also there's an <a class="kimLink-plain" href="{{ '/feed.xml' | url }}" target="_blank" type="application/atom+xml" rel="alternate">{% include "../assets/icons/rss.svg" %} RSS feed</a>.</p>
-      {%- endif %}
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+          {%- if tag %}
+            <span class="kim-!-visually-hidden" itemprop="name">{{ site.blogName }}</span>
+            <h1 class="kimHeading-xl">
+              Blog posts tagged as {{ tag | tagify }}
+            </h1>
+          {%- else %}
+            <h1 class="kimHeading-xl" itemprop="name">
+              {{ site.blogName }}
+            </h1>
+            <p class="kimBody-l" itemprop="description">This is my personal blog, full of inane ramblings not wholly intended to be read by anyone. And yet, here you are. Also there&rsquo;s an <a class="kimLink-plain" href="{{ '/feed.xml' | url }}" target="_blank" type="application/atom+xml" rel="alternate">{% include "../assets/icons/rss.svg" %} RSS feed</a> if you're so inclined.</p>
+          {%- endif %}
+        </div>
+      </div>
             
       {%- for year in yearList %}
         <hr class="kimRule">
