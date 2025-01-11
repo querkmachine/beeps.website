@@ -14,15 +14,16 @@
 .kimHeading-xl {
   margin-block-start: 0;
   margin-block-end: var(--space-8);
+  color: var(--color-text-accent);
   font-size: var(--size-5);
   line-height: 1;
 
-  &::after {
+  &::before {
     content: "";
     display: block;
     inline-size: 2.5em;
-    margin-block-start: var(--space-3);
-    border-block-end: var(--border-regular) solid var(--color-furniture);
+    margin-block-end: var(--space-3);
+    border-block-end: var(--border-thick) solid var(--color-furniture);
   }
 }
 
