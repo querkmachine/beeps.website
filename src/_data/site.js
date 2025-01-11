@@ -25,7 +25,6 @@ export default function () {
           { href: "/blog/", text: "Blog" },
           { href: "/about/", text: "About beeps" },
           { href: "/now/", text: "/now" },
-          { href: "/brand/", text: "beeps' brand" },
           { href: "/contact/", text: "Contact" },
         ],
       },
@@ -43,6 +42,7 @@ export default function () {
     ],
     legalLinks: [
       { href: "#top", text: "Top of page", icon: "arrow-up" },
+      { href: "/brand/", text: "beeps' brand" },
       { href: "/colophon/", text: "Colophon" },
       { href: "/privacy/", text: "Cookies and privacy" },
       {
