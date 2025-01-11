@@ -5,6 +5,7 @@
 .kimMasthead {
   border-block-start: var(--border-thick) solid var(--color-furniture);
   background-color: var(--color-surface);
+  view-transition-name: masthead;
 }
 
 .kimMasthead_inner {
