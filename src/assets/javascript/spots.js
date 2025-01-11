@@ -141,8 +141,11 @@ export default class Spots {
 
     // Media query event to see if the colour scheme has been changed
     window
-      .matchMedia("(prefers-color-scheme)")
+      .matchMedia("(prefers-color-scheme: light)")
       .addEventListener("change", () => {
+        this.prefersLightMode = matchMedia(
+          "(prefers-color-scheme: light)",
+        ).matches;
         this.pause();
         this.setStrokeColor();
         this.play();
