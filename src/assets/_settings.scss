@@ -53,20 +53,25 @@
   --c-purple: #786999;
   --c-dark-purple: #2a2536;
   --c-green: oklch(85.29% 0.323 142.82);
-  --c-pale-green: #97e697;
+  --c-dark-green: #12803b;
   --c-yellow: #fc0;
 
   // Semantic colours
   --color-text: var(--c-white);
   --color-text-accent: var(--c-green);
+  --color-text-subtle: color-mix(
+    in hsl,
+    var(--color-text) 80%,
+    var(--color-canvas)
+  );
   --color-canvas: var(--c-dark-purple);
-  --color-surface: color-mix(in lch, var(--c-purple) 25%, var(--color-canvas));
+  --color-surface: color-mix(in hsl, var(--c-purple) 25%, var(--color-canvas));
   --color-furniture: var(--c-purple);
   --color-link: var(--c-green);
   --color-link-visited: color-mix(
-    in lch,
+    in hsl,
     var(--color-link) 80%,
-    var(--color-text)
+    var(--color-canvas)
   );
   --color-link-hover: var(--color-link-visited);
   --color-focus-text: var(--c-black);
@@ -77,14 +82,13 @@
   :root {
     // Semantic colours
     --color-text: var(--c-off-black);
-    --color-text-accent: var(--c-purple);
+    --color-text-accent: var(--c-dark-green);
     --color-canvas: var(--c-white);
     --color-surface: color-mix(
-      in lch,
-      var(--c-pale-green) 10%,
+      in hsl,
+      var(--c-dark-green) 7%,
       var(--color-canvas)
     );
-    --color-furniture: var(--c-pale-green);
-    --color-link: var(--c-purple);
+    --color-link: var(--c-dark-green);
   }
 }
