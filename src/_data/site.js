@@ -41,7 +41,6 @@ export default function () {
       },
     ],
     legalLinks: [
-      { href: "#top", text: "Top of page", icon: "arrow-up" },
       { href: "/brand/", text: "beeps' brand" },
       { href: "/colophon/", text: "Colophon" },
       { href: "/privacy/", text: "Cookies and privacy" },

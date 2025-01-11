@@ -57,7 +57,7 @@
   {% block masthead %}
     <header class="kimMasthead" data-js="masthead" id="top">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_logo" href="{{ '/' | url }}" aria-hidden="true">
+        <a class="kimMasthead_logo" href="{{ '/' | url }}" tabindex="-1">
           {% include "logo.njk" %}
         </a>
       <a class="kimMasthead_name" href="{{ '/' | url }}">
@@ -105,6 +105,12 @@
         {% block beforeFooter %}{% endblock%}
         
         <ul class="kimList kimFooter_links" aria-label="Legal and utility links">
+          <li>
+            <a class="kimLink" href="#top">
+              {% include "../assets/icons/arrow-up.svg" %}
+              Back to top
+            </a>
+          </li>
           {%- for link in site.legalLinks %}
             <li>
               <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
