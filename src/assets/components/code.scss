@@ -17,11 +17,6 @@
   --color-code-s: 50%;
   --color-code-l: 75%;
 
-  @media (prefers-color-scheme: light) {
-    --color-code-s: 80%;
-    --color-code-l: 40%;
-  }
-
   border: var(--border-regular) solid var(--color-code-border);
   color: var(--color-code-text);
   background-color: var(--color-code-background);
@@ -30,6 +25,11 @@
     "lnum",
     "liga" 0,
     "calt" 0;
+
+  @media (prefers-color-scheme: light) {
+    --color-code-s: 80%;
+    --color-code-l: 40%;
+  }
 }
 
 // Unhighlighted inline code
