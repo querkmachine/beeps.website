@@ -1,7 +1,0 @@
-@use "../helpers/media-queries";
-
-@include media-queries.kim-print {
-  .kim-\!-doNotPrint {
-    display: none !important;
-  }
-}

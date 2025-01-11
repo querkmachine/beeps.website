@@ -16,6 +16,14 @@
   margin-block-end: var(--space-8);
   font-size: var(--size-5);
   line-height: 1;
+
+  &::after {
+    content: "";
+    display: block;
+    inline-size: 2.5em;
+    margin-block-start: var(--space-3);
+    border-block-end: var(--border-regular) solid var(--color-furniture);
+  }
 }
 
 .kimHeading-l {

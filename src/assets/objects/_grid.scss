@@ -1,28 +1,43 @@
-@use "../settings/breakpoints";
-@use "../settings/layout" as layoutSettings;
-@use "../helpers/media-queries";
+$-breakpoints: (
+  nx: 320px,
+  constitution: 400px,
+  galaxy: 600px,
+  defiant: 768px,
+  intrepid: 1000px,
+);
+
+$-grid-columns: (
+  "full": 100%,
+  "threeQuarters": 75%,
+  "twoThirds": 66.666%,
+  "oneHalf": 50%,
+  "oneThird": 33.333%,
+  "oneQuarter": 25%,
+);
 
 .kimGrid {
   display: flex;
   flex-wrap: wrap;
-  margin-inline: calc(0px - var(--grid-gutter-half));
+  margin-inline: calc(var(--grid-gutter-half) * -1);
 }
 
-.kimGrid_column {
+[class*="kimGrid_column-"] {
+  container-name: grid-column;
+  container-type: inline-size;
   padding-inline: var(--grid-gutter-half);
 }
 
-@each $name, $width in layoutSettings.$kim-grid-widths {
+@each $name, $width in $-grid-columns {
   .kimGrid_column-#{$name} {
-    width: $width;
+    inline-size: $width;
   }
 }
 
-@each $breakpoint, $value in breakpoints.$kim-breakpoints {
-  @include media-queries.kim-mq($from: $breakpoint) {
-    @each $name, $width in layoutSettings.$kim-grid-widths {
+@each $breakpoint, $value in $-breakpoints {
+  @container (min-width: #{$value}) {
+    @each $name, $width in $-grid-columns {
       .#{$breakpoint}\:kimGrid_column-#{$name} {
-        width: $width;
+        inline-size: $width;
       }
     }
   }

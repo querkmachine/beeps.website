@@ -1,13 +1,11 @@
 {%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
-{%- set colorSchemeJsUrl = '/assets/javascript/color-scheme.js' | url | cachebust -%}
-{%- set cssComponents = merge(cssComponents, ["masthead", "footer", "noodle-bowl", "color-scheme-switch"]) -%}
+{%- set cssComponents = merge(cssComponents, ["masthead", "navigation", "footer", "noodle-bowl"]) -%}
 <!doctype html>
 <html lang="en-GB" class="kimPage">
 <head>
 
   {#- Preload stuff #}
   <link rel="preload" as="style" href="{{ webfontUrl }}">
-  <link rel="preload" as="script" href="{{ colorSchemeJsUrl }}">
 
   {#- Technical metadata #}
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -41,9 +39,6 @@
   <link rel="stylesheet" href="{{ '/assets/components/' + item + '.css' | url | cachebust }}" media="all">
   {%- endfor %}
   
-  {# Color scheme switcher JS #}
-  <script src="{{ colorSchemeJsUrl }}"></script>
-  
   {% include "src/_includes/page-head.njk" %}
   
   {#- Page-specific head content #}
@@ -53,34 +48,59 @@
 <body class="kimPage_body">
 
   {% include "src/_includes/development-tag.njk" %}
-
-  <a class="kimSkiplink" href="#content">Skip to main content</a>
   
-  {% block beforeMasthead %}{% endblock %}
+  {% block beforeMasthead %}
+    <div class="kimWrapper">
+      <a class="kimSkiplink" href="#content">Skip to main content</a>
+    </div>
+  {% endblock %}
   {% block masthead %}
-    <header class="kimMasthead">
+    <header class="kimMasthead" data-js="masthead" id="top">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_brand" href="{{ '/' | url }}">
-          <span class="kimMasthead_logo">{% include "logo.njk" %}</span>
-          <span class="kimMasthead_name">{{ site.name }}</span>
+        <a class="kimMasthead_logo" href="{{ '/' | url }}" aria-hidden="true">
+          {% include "logo.njk" %}
+        </a>
+      <a class="kimMasthead_name" href="{{ '/' | url }}">
+          {{- site.name -}}
         </a>
         {%- if mastheadSection %}
-          <a class="kimLink-plain kimMasthead_section" href="{{ mastheadSection.href | url }}">
+          <a class="kimMasthead_section" href="{{ mastheadSection.href | url }}">
             {{- mastheadSection.text -}}
           </a>
         {%- endif %}
+        <a class="kimMasthead_menu-link" href="{{ '/navigation/' | url }}">Sitemap</a>
+        <button class="kimMasthead_menu-toggle" type="button" aria-controls="navigation" hidden>Menu</button>
       </div>
     </header>
-    <hr class="kim-!-sr">
+    <hr class="kim-!-visually-hidden">
   {% endblock %}
-  {% block afterMasthead %}{% endblock %}
+  {% block afterMasthead %}
+    <nav class="kimNavigation" id="navigation" aria-label="Main navigation" hidden>
+      <div class="kimWrapper">
+        <div class="kimGrid">
+          {%- for section in site.navigation %}
+            <div class="kimGrid_column-full galaxy:kimGrid_column-oneThird kimNavigation_section">
+              <h2 class="kimBody-l">{{ section.heading }}</h2>
+              <ul class="kimList">
+                {%- for link in section.links %}
+                <li><a class="kimNavigation_link" href="{{ link.href | url }}">
+                  {{- link.html | safe if link.html else link.text -}}
+                </a></li>
+                {%- endfor %}
+              </ul>
+            </div>
+          {%- endfor %}
+        </div>
+      </div>
+    </nav>
+  {% endblock %}
 
   <main id="content">
     {% block main %}{% endblock %}
   </main>
   
   {% block footer %}
-    <hr class="kim-!-sr">
+    <hr class="kim-!-visually-hidden">
     <footer class="kimFooter">
       {% block footerDecor %}
         <div class="kimNoodleBowl" role="presentation">
@@ -90,40 +110,26 @@
       {% endblock %}
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
-        <div class="kimGrid">
-          <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-            <h2 class="kimHeading-xs" id="footer-links-beeps">More beeping</h2>
-            <ul class="kimList kimFooter_links" aria-labelledby="footer-links-beeps">
-              {%- for link in site.footerLinks %}
-                <li>
-                  <a class="kimLink-plain" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                    {{- link.html | safe if link.html else link.text -}}
-                  </a>
-                </li>
-              {%- endfor%}
-            </ul>
-          </div>
-          <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-            <h2 class="kimHeading-xs" id="footer-links-other">Things and stuff</h2>
-            <ul class="kimList kimFooter_links" aria-labelledby="footer-links-other">
-              {%- for link in site.legalLinks %}
-                <li>
-                  <a class="kimLink-plain" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                    {{- link.html | safe if link.html else link.text -}}
-                  </a>
-                </li>
-              {%- endfor%}
-            </ul>
-          </div>
-          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-            <h2 class="kimHeading-xs">Small print</h2>
-            {% block copyrights %}
-            <p class="kimBody-s">Artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
-            {% endblock %}
-            
-            {% include "src/_includes/color-scheme-switch.njk" %}
-          </div>
+        
+        <ul class="kimList kimFooter_links" aria-label="Legal and utility links">
+          {%- for link in site.legalLinks %}
+            <li>
+              <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                {%- if link.icon %}
+                  {% include "../assets/icons/" + link.icon + ".svg" %}
+                {%- endif %}
+                {{- link.html | safe if link.html else link.text -}}
+              </a>
+            </li>
+          {%- endfor%}
+        </ul>
+        
+        {% block copyrights %}
+        <div class="kimFooter_copyright">
+          <p>Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
         </div>
+        {% endblock %}
+            
         {% block afterFooter %}{% endblock %}
       </div>
     </footer>
@@ -135,8 +141,7 @@
   <script type="module">
     import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
     new Spots(document.querySelector(".kimNoodleBowl_canvas"), {
-      isAnimated: true,
-      colors: [[255,255,255]]
+      isAnimated: true
     });
   </script>
   {% endblock %}

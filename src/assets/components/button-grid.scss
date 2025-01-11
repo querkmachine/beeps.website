@@ -1,3 +1,5 @@
+@use "../helpers/a11y";
+
 .kimButtonGrid {
   display: grid;
   gap: 10px;
@@ -7,6 +9,10 @@
 
   a {
     display: block;
+
+    &:focus-visible {
+      @include a11y.focus-ring-block;
+    }
   }
 
   img {

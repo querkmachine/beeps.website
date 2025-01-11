@@ -1,15 +1,13 @@
 .kimComment {
   margin: 0;
+  margin-block-end: var(--space-5);
+  border: var(--border-regular) solid var(--color-furniture);
 }
 
 .kimComment_meta {
-  margin-block-end: var(--space-3);
-  padding-block: var(--space-2);
-  border-inline-width: 0;
-  border-block-width: var(--border-hairline);
-  border-style: solid;
-  border-color: var(--color-furniture-alt);
-  overflow: hidden;
+  padding: var(--space-3);
+  border-block-end: var(--border-hairline) solid var(--color-furniture);
+  background-color: var(--color-surface);
 }
 
 .kimComment_avatar {
@@ -23,15 +21,23 @@
   object-fit: cover;
 }
 
-.kimComment_name {
+.kimComment_user {
+  font-size: var(--size-0);
+  font-weight: 700;
+  line-height: 1.1;
   word-break: break-word;
 }
 
 .kimComment_time {
-  display: block;
-  margin: 0;
+  margin-block-start: var(--space-1);
+  font-size: var(--size--1);
 }
 
 .kimComment_content {
   margin: 0;
+  padding: var(--space-3);
+
+  :last-child {
+    margin-block-end: 0;
+  }
 }

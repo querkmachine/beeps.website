@@ -1,17 +1,9 @@
----
-title: "beeps — front-end developer, furry, robot"
-isFullTitle: true
-metadata:
-  description: The personal website of beeps (aka, Kim Grey), the web developer, not the other ones.
-cssComponents:
-  - splash
-  - button-grid
-  - blog-card
----
+{% set cssComponents = merge(cssComponents, ["callout", "splash", "webring", "button-grid", "blog-card"]) %}
 
 {% extends 'src/_layouts/layout.njk' %}
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_includes/jump-link.njk" import kimJumpLink %}
 
 {% block head %}
 <style>
@@ -26,11 +18,8 @@ cssComponents:
  * Blogs
  */
 .page-blog {
-  background-color: color-mix(in lch, var(--color-background) 70%, #000);
+  border-block: var(--border-regular) dotted var(--color-furniture);
   margin-block-end: var(--space-7);
-}
-[data-color-scheme="light"] .page-blog {
-  background-color: color-mix(in lch, var(--color-background) 95%, #000);
 }
 .page-blog-noodle,
 .page-about-noodle {
@@ -46,31 +35,8 @@ cssComponents:
 .page-about {
   margin-block-end: var(--space-8-9);
 }
-
-/**
- * Webrings
- */ 
-.page-rings { 
-  margin-block: 0;
-}
-.page-rings svg { 
-  inline-size: 1.5em;
-  block-size: 1.5em;
-  forced-color-adjust: auto;
-}
-.page-rings div { 
-  margin-block-end: var(--space-3);
-}
-.page-rings dt { 
-  font-weight: bold;
-}
-.page-rings dd {
-  margin-inline: 0;
-}
 </style>
 {% endblock %}
-
-{% block masthead %}{# Where we're going, we don't need mastheads. #}{% endblock %}
 
 {% block main %}
 <header class="kimSplash page-intro">
@@ -83,6 +49,17 @@ cssComponents:
     <img class="kimSplash_image" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="" width="552" height="778">
   </div>
 </header>
+
+<div class="kimWrapper">
+  <div class="kimGrid">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+      <aside class="kimCallout kim-!-margin-block-end-8-9">
+        <h2 class="kimBody-l">Redesigning in the open</h2>
+        <p class="kimBody">I'm currently <a class="kimLink" href="{{ '/blog/2025-01-10-renovating-in-the-open' | url }}">rebuilding various parts of my website</a>, and doing so in the open so that you can see what kind of stuff is going on. I can't guarantee things will be at their best in the meantime. Please excuse the mess.</p>
+      </aside>
+    </div>
+  </div>
+</div>
   
 <section class="page-blog" id="blog" aria-labelledby="blog-heading">
   <div class="kimWrapper">
@@ -99,7 +76,12 @@ cssComponents:
             </div>
           {% endfor %}
         </div>
-        <p class="kimBody"><a href="{{ '/blog/' | url }}" class="kimLink-plain">All blog posts &rarr;</a></p>
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/blog/",
+            text: "All blog posts"
+          }) }}
+        </p>
       </div>
     </div>
   </div>
@@ -110,10 +92,13 @@ cssComponents:
     <div class="kimGrid">
       <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
         <h2 class="kimHeading-m kim-!-margin-block-start-0" id="about-heading">About beeps</h2>
-        <p class="kimBody">I&rsquo;m a Bristol-based <a href="{{ '/about/work/' | url }}">frontend developer</a> specialising in accessibility, design systems, and the semantic web. I currently work at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> on the <a href="http://design-system.service.gov.uk/">GOV.UK Design System</a>.</p>
-        <p class="kimBody">I'm an <a href="{{ '/about/gender/' | url }}">agender</a> (I use it/its pronouns), <a href="{{ '/about/asexuality/' | url }}">asexual</a>, <a href="{{ '/about/nonhuman/' | url }}">alterhuman robot</a>. I'm also <a href="{{ '/about/furry/' | url }}">a shapeshifting critter on the internet</a>. It's all a bit complicated.</p>
-        <p class="kimBody">This is my personal website where I kinda just put whatever. It&rsquo;s not like you can stop me.</p>
-        <p class="kimBody"><a href="{{ '/about/' | url }}" class="kimLink-plain">More about me &rarr;</a></p>
+        {{ content | safe }}
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/about/",
+            text: "More about beeps"
+          }) }}
+        </p>
       </div>
       <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
         <img class="page-about-noodle" src="{{ '/assets/images/noodle-opengraph.png' | url }}" alt="" width="408" height="500">
@@ -129,35 +114,31 @@ cssComponents:
   <div class="kimGrid">
     {%- if webrings %}
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <h2 class="kimHeading-xs" id="webrings">Webrings</h2>
-      <dl class="kimGrid page-rings">
+      <h2 class="kim-!-visually-hidden">Webrings</h2>
+      <div class="kimGrid">
         {%- for ring in webrings %}
         <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
-          <dt>
-            <a class="kimLink-plain" href="{{ ring.url }}">
-              {% include "./assets/images/" + ring.icon %}<br>
+          <div class="kimWebring">
+            <a class="kimWebring_name" href="{{ ring.url }}">
+              {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
               {{ ring.name }}
-            </a>
-          </dt>
-          <dd>
-            <a class="kimLink-plain" href="{{ ring.previousUrl }}" aria-label="Previous site in {{ ring.name }} webring">
+            </a><br>
+            <a class="kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
               ← Previous
-            </a>
-          </dd>
-          <dd>
-            <a class="kimLink-plain" href="{{ ring.nextUrl }}" aria-label="Next site in {{ ring.name }} webring">
+            </a><br>
+            <a class="kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
               → Next
             </a>
-          </dd>
+          </div>
         </div>
         {%- endfor %}
-      </dl>
+      </div>
     </div>
     {%- endif %}
     {%- if buttons.homepage %}
       {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
       <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-        <h2 class="kimHeading-xs">Buttons</h2>
+        <h2 class="kim-!-visually-hidden">Buttons</h2>
         <div class="kimButtonGrid">
           {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
         </div>

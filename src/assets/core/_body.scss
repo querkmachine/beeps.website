@@ -1,7 +1,6 @@
-@use "../helpers/media-queries";
-
 .kimPage {
-  background-color: var(--color-background);
+  color-scheme: dark light;
+  background-color: var(--color-canvas);
   text-size-adjust: 100%;
 }
 
@@ -18,8 +17,8 @@
   text-wrap: pretty;
   line-height: 1.5;
 
-  @include media-queries.kim-print {
-    color: black !important;
-    background-color: white !important;
+  @media print {
+    color: var(--c-black) !important;
+    background-color: var(--c-white) !important;
   }
 }

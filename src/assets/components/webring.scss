@@ -1,0 +1,35 @@
+@use "../helpers/a11y";
+@use "../helpers/links";
+
+.kimWebring {
+}
+
+.kimWebring_name,
+.kimWebring_link {
+  @include links.link-helper(
+    $color: var(--color-link),
+    $visited-color: var(--color-link),
+    $initial-underline: false
+  );
+}
+
+.kimWebring_name {
+  font-weight: bold;
+
+  svg {
+    inline-size: 1.5em;
+    block-size: 1.5em;
+    forced-color-adjust: auto;
+  }
+
+  &:focus-visible svg {
+    --color-text: var(--color-focus-text);
+    --color-furniture: var(--color-focus-text);
+
+    @include a11y.focus-ring-block;
+  }
+}
+
+.kimWebring_link {
+  margin-block-end: var(--space-3);
+}

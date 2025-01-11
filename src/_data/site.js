@@ -18,21 +18,34 @@ export default function () {
       "https://twitter.com/batbeeps",
       "https://github.com/querkmachine",
     ],
-    footerLinks: [
-      { href: "/about/", text: "About beeps" },
-      { href: "/now/", text: "beeps NOW!" },
-      { href: "/ash/", text: "Ash the amphimorpho" },
-      { href: "/brand/", text: "beeps' brand" },
-      { href: "/contact/", text: "Contact beeps" },
+    navigation: [
+      {
+        heading: "More beeping",
+        links: [
+          { href: "/blog/", text: "Blog" },
+          { href: "/about/", text: "About beeps" },
+          { href: "/now/", text: "/now" },
+          { href: "/brand/", text: "beeps' brand" },
+          { href: "/contact/", text: "Contact" },
+        ],
+      },
+      {
+        heading: "Other stuff",
+        links: [
+          { href: "/ash/", text: "Ash the amphimorpho" },
+          { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
+          { href: "/links/", html: "Cool links &amp; friend sites" },
+        ],
+      },
     ],
     legalLinks: [
-      { href: "/links/", html: "Cool links &amp; friends" },
-      { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
+      { href: "#top", text: "Top of page", icon: "arrow-up" },
       { href: "/colophon/", text: "Colophon" },
       { href: "/privacy/", text: "Cookies and privacy" },
       {
         href: "/feed.xml",
         text: "RSS feed",
+        icon: "rss",
         attributes: {
           rel: "alternate",
           type: "application/atom+xml",

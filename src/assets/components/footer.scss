@@ -1,15 +1,23 @@
-@use "../helpers/media-queries";
-
 .kimFooter {
-  position: sticky;
-  inset-block-start: 100%;
-
-  @include media-queries.kim-print {
-    display: none;
-  }
 }
 
 .kimFooter_inner {
-  padding-block: var(--space-6);
-  border-block-end: var(--border-thick) solid var(--color-furniture);
+  margin-block: var(--space-5);
+}
+
+.kimFooter_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: var(--size--1);
+
+  li + li {
+    margin-block-start: unset;
+  }
+}
+
+.kimFooter_copyright {
+  max-inline-size: 42em;
+  font-size: var(--size--1);
+  text-wrap: balance;
 }

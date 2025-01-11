@@ -220,7 +220,7 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
   return `<table class="kimTable">
     ${
       config.caption
-        ? `<caption class="kim-!-sr kimTable_caption">${config.caption}</caption>`
+        ? `<caption class="kim-!-visually-hidden kimTable_caption">${config.caption}</caption>`
         : ""
     }
     <thead class="kimTable_head">

@@ -1,42 +1,32 @@
 @use "a11y";
-@use "media-queries";
 
-@mixin -kim-link-underline($color) {
+@mixin -link-underline($color: var(--color-link)) {
   & {
     text-decoration: underline;
-    text-decoration-thickness: 0.6em;
-    text-decoration-color: $color;
-    text-decoration-skip-ink: none;
-    text-underline-offset: -0.25em;
-  }
-
-  @media (forced-colors: active) {
-    text-decoration-thickness: unset;
-    text-decoration-skip-ink: auto;
-    text-underline-offset: unset;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1578em;
   }
 }
 
-@mixin -kim-link-common {
+@mixin link-helper(
+  $color: var(--color-link),
+  $visited-color: var(--color-link-visited),
+  $hover-color: var(--color-link-hover),
+  $initial-underline: true
+) {
   & {
-    color: var(--color-link);
+    color: $color;
     word-break: break-word;
-  }
 
-  &:focus-visible {
-    @include a11y.kim-focus-ring;
-
-    img {
-      @include a11y.kim-focus-ring--block;
+    @if $initial-underline {
+      @include -link-underline;
+    } @else {
+      text-decoration: none;
     }
   }
 
-  @include media-queries.kim-print {
-    color: black;
-    text-decoration: underline;
-    text-decoration-thickness: unset;
-    text-decoration-color: currentcolor;
-    text-underline-offset: unset;
+  @media print {
+    color: var(--c-black);
 
     &::after {
       content: " (" attr(href) ")";
@@ -44,26 +34,20 @@
       font-size: smaller;
     }
   }
-}
-
-@mixin kim-link {
-  @include -kim-link-common;
-  @include -kim-link-underline($color: var(--color-link-underline));
 
   &:visited {
-    text-decoration-color: var(--color-link-underline-visited);
+    color: $visited-color;
   }
 
   &:hover {
-    text-decoration-color: var(--color-link-underline-hover);
+    color: $hover-color;
+
+    @if not $initial-underline {
+      @include -link-underline;
+    }
   }
-}
 
-@mixin kim-link-no-underline {
-  text-decoration: none;
-  @include -kim-link-common;
-
-  &:hover {
-    @include -kim-link-underline($color: var(--color-link-underline-hover));
+  &:focus-visible {
+    @include a11y.focus-ring;
   }
 }

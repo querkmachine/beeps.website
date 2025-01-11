@@ -1,0 +1,18 @@
+@use "../helpers/links";
+
+.kimNavigation {
+  padding-block: var(--space-5);
+  border-block: var(--border-regular) solid var(--color-furniture);
+  background-color: var(--color-surface);
+
+  // Account for the 1px bottom border on the masthead
+  margin-block-start: calc(0px - var(--border-hairline));
+}
+
+.kimNavigation_link {
+  @include links.link-helper(
+    $color: var(--color-link),
+    $visited-color: var(--color-link),
+    $initial-underline: false
+  );
+}

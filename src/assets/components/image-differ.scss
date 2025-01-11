@@ -26,8 +26,8 @@ $-thumb-inline-size: 1.5rem;
 }
 
 .kimImageDiffer {
-  --thumb-background: var(--color-furniture);
-  --thumb-markers: var(--color-background);
+  --thumb-background: var(--color-canvas);
+  --thumb-markers: var(--color-text);
 
   display: flex;
   flex-direction: column;
@@ -84,11 +84,11 @@ $-thumb-inline-size: 1.5rem;
     outline: none;
 
     &::-webkit-slider-thumb {
-      @include a11y.kim-focus-ring--block($background-color: false);
+      @include a11y.focus-ring-block($background-color: false);
     }
 
     &::-moz-range-thumb {
-      @include a11y.kim-focus-ring--block($background-color: false);
+      @include a11y.focus-ring-block($background-color: false);
     }
   }
 }

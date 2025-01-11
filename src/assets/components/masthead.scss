@@ -1,63 +1,130 @@
 @use "../helpers/a11y";
-@use "../helpers/media-queries";
+@use "../helpers/links";
+@use "../helpers/reset";
 
 .kimMasthead {
-  color: var(--color-text);
-  background-color: var(--color-background);
-  font-family: var(--font-header);
-  font-size: var(--size-2);
-
-  @include media-queries.kim-print {
-    display: none;
-  }
+  border-block-start: var(--border-thick) solid var(--color-furniture);
 }
 
 .kimMasthead_inner {
   display: flex;
-  padding-block-end: var(--space-4);
-  border-block-start: var(--border-thick) solid var(--color-furniture);
-}
+  align-items: baseline;
+  padding-block-end: var(--space-1);
+  position: relative;
 
-.kimMasthead_brand {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: center;
-  margin-inline-end: var(--space-3);
-  padding: var(--space-2);
-  color: var(--color-background);
-  background-color: var(--color-furniture);
-  font-weight: 700;
-  text-decoration: none;
-
-  &:hover .kimMasthead_logo {
-    fill: var(--color-link-underline-hover);
-  }
-
-  &:focus-visible {
-    outline: none;
-
-    .kimMasthead_name {
-      @include a11y.kim-focus-ring;
-    }
+  &::after {
+    content: "";
+    border-block-end: 1px solid var(--color-furniture);
+    position: absolute;
+    inset-inline: var(--grid-gutter);
+    inset-block-end: 0;
   }
 }
 
 .kimMasthead_logo {
-  fill: currentcolor;
+  display: inline-block;
+  margin-block-start: calc(var(--border-thick) * -1);
+  margin-block-end: calc(var(--border-thick) * -1);
+  padding-block-start: var(--space-5);
+  padding-block-end: var(--space-2);
+  padding-inline: var(--space-2);
+  color: var(--color-canvas);
+  background-color: var(--color-link);
   line-height: 0;
+
+  &:focus-visible {
+    @include a11y.focus-ring;
+  }
+}
+
+.kimMasthead_logo svg {
+  inline-size: 45px;
+  block-size: 45px;
+  fill: currentcolor;
+}
+
+.kimMasthead_name,
+.kimMasthead_section {
+  margin-inline-start: var(--space-2);
+  font-size: var(--size-1);
+
+  @container (min-width: 500px) {
+    font-size: var(--size-2);
+  }
+
+  @include links.link-helper(
+    $color: var(--color-link),
+    $visited-color: var(--color-link),
+    $initial-underline: false
+  );
 }
 
 .kimMasthead_name {
-  margin-inline-start: var(--space-3);
+  font-weight: bold;
 
-  @include media-queries.kim-cq($to: constitution) {
-    @include a11y.kim-visually-hidden;
+  @container (max-width: 380px) {
+    @include a11y.visually-hidden;
   }
 }
 
 .kimMasthead_section {
-  display: inline-block;
-  align-self: center;
-  margin-block: var(--space-1);
-  line-height: 1;
+}
+
+.kimMasthead_menu-link {
+  @include links.link-helper(
+    $color: var(--color-link),
+    $visited-color: var(--color-link),
+    $hover-color: var(--color-link-hover)
+  );
+}
+
+.kimMasthead_menu-toggle {
+  @include reset.button;
+  --icon-size: 1rem;
+
+  position: relative;
+  color: var(--color-link);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+  }
+
+  &::before {
+    block-size: var(--icon-size);
+    inline-size: var(--icon-size);
+    margin-inline-end: var(--space-2);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      currentcolor,
+      currentcolor calc(var(--icon-size) * 0.2),
+      transparent calc(var(--icon-size) * 0.2),
+      transparent calc(var(--icon-size) * 0.4)
+    );
+  }
+
+  &::after {
+    position: absolute;
+    inset: calc(var(--space-2) * -1);
+  }
+
+  &[aria-expanded="true"] {
+    box-shadow: 0 calc(var(--border-regular) + var(--space-1)) 0
+      var(--color-furniture);
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:focus-visible {
+    @include a11y.focus-ring;
+  }
+}
+
+.kimMasthead_menu-link,
+.kimMasthead_menu-toggle {
+  margin-inline-start: auto;
 }

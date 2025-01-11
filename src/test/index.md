@@ -27,7 +27,7 @@ over multiple lines.
 
 ### Inline styles
 
-Plain text **Bold** _italic_ **_bold and italic_** ~~deleted~~ [link](#) `inline code` <hi@berly.kim>
+Plain text **Bold** _italic_ **_bold and italic_** ~~deleted~~ [link](#) `inline code` <hi@berly.kim> <kbd>Ctrl</kbd>
 
 ### Typography replacements
 

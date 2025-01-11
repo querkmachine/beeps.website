@@ -1,75 +1,36 @@
-@use "../helpers/a11y";
 @use "../helpers/links";
-@use "../helpers/media-queries";
 
 .kimToc {
-  &[open] .kimToc_collapsibleSummary {
-    margin-block-end: var(--space-2);
-
-    &::before {
-      clip-path: polygon(50% 100%, 0 0, 100% 0);
-    }
-  }
-
-  @include media-queries.kim-mq($from: galaxy) {
-    position: sticky;
-    inset-block-start: var(--space-3);
-  }
-
-  @include media-queries.kim-print {
-    display: none;
-  }
+  margin-block-end: var(--space-5);
+  border-block-end: var(--border-hairline) solid var(--color-furniture);
+  position: sticky;
+  inset-block-start: var(--space-5);
 }
 
-.kimToc_collapsibleSummary {
-  position: relative;
-  cursor: pointer;
-
-  &::before {
-    --marker-size: 0.75rem;
-
-    margin-inline-end: var(--space-2);
-    content: "";
-    display: inline-block;
-    width: var(--marker-size);
-    height: var(--marker-size);
-    background-color: var(--color-link);
-    clip-path: polygon(100% 50%, 0 0, 0 100%);
-
-    @media (forced-colors: active) {
-      background-color: LinkText;
-    }
-  }
-
-  &::marker {
-    content: none;
-  }
-
-  &::-webkit-details-marker {
-    display: none;
-  }
-
-  &:focus-visible {
-    @include a11y.kim-focus-ring;
-  }
+.kimToc_heading {
+  margin-block-end: var(--space-2);
 }
 
-.kimToc_inner {
+// I wish the Eleventy plugin gave me more control over the output code, so I
+// wouldn't have to duplicate a bunch of styles from elsehwere to here. Ho hum.
+
+.kimToc_inner ol {
+  margin: 0;
+  margin-block-end: var(--space-5);
+  padding: 0;
+  font-size: var(--size--1);
+  list-style-type: none;
+
   ol {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  li {
-    margin-block-start: var(--space-1);
-  }
-
-  ol > li > ol li {
     margin-inline-start: var(--space-3);
+    margin-block: var(--space-1);
   }
+}
 
-  a {
-    @include links.kim-link-no-underline;
-  }
+.kimToc_inner li + li {
+  margin-block-start: var(--space-1);
+}
+
+.kimToc_inner a {
+  @include links.link-helper($initial-underline: false);
 }

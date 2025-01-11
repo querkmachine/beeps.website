@@ -1,7 +1,21 @@
 .kimBlockquote {
   margin: 0;
   margin-block-end: var(--space-5);
-  padding-inline-start: var(--space-3);
-  border-inline-start: var(--border-regular) solid var(--color-furniture);
   text-align: start;
+}
+
+.kimBlockquote p {
+  color: var(--color-text-accent);
+  font-size: var(--size-0);
+  font-weight: 700;
+  quotes: "“" "”";
+  position: relative;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &:last-child::after {
+    content: close-quote;
+  }
 }

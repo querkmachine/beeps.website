@@ -16,7 +16,6 @@
 
 .kimSplash_text {
   margin-block: var(--space-8-9);
-  color: var(--color-subtext);
   font-weight: bold;
   font-size: 12cqi;
   text-wrap: balance;
@@ -25,7 +24,7 @@
 
   strong {
     display: block;
-    color: var(--color-accent);
+    color: var(--color-text-accent);
   }
 }
 
