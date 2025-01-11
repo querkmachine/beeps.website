@@ -3,9 +3,8 @@ title: Renovating in the open
 date: 2025-01-11
 tags: [meta, web development]
 metadata:
-  description: This website's getting a little renovation work,
-cssComponents:
-  - character
+  description: This website's getting a little renovation work.
+cssComponents: []
 ---
 
 Just a programming note that I'm making some big ol' changes to this website.
