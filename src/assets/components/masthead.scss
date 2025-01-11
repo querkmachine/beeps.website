@@ -29,6 +29,10 @@
   background-color: var(--color-link);
   line-height: 0;
 
+  &:hover {
+    background-color: var(--color-link-hover);
+  }
+
   &:focus-visible {
     @include a11y.focus-ring;
   }
@@ -106,7 +110,8 @@
   }
 
   &:hover {
-    box-shadow: 0 var(--bottom-spacing) 0 var(--color-link);
+    color: var(--color-link-hover);
+    box-shadow: 0 var(--bottom-spacing) 0 currentcolor;
   }
 
   &[aria-expanded="true"] {
