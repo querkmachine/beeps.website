@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: beeps NOW!
-updated: 2025-01-10
+updated: 2025-01-11
 metadata:
   description: A basic overview of what I'm up to at the moment.
 ---

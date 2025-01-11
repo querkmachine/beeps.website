@@ -1,6 +1,6 @@
 ---
 title: Renovating in the open
-date: 2025-01-10
+date: 2025-01-11
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work,
@@ -18,7 +18,7 @@ I'm going to be updating this blog post whenever a new thing has been changed, s
 
 ## Ch-ch-ch-changelog
 
-### 2025-01-10
+### 2025-01-11
 
 The first "open" release. Notable changes include:
 
@@ -29,6 +29,6 @@ The first "open" release. Notable changes include:
 - Redesigned how the site name/logo looks.
 - Redesigned the site's footer.
 - Redesigned links.
-- Redesigned various in-page components, including callouts, character callouts, and social media embeds.
+- Redesigned various in-page components, including callouts, character callouts, comments, and social media embeds.
 - Removed the manual colour scheme switch. Sorry to the fans of that feature; it's just too much annoying code for too minor functionality. I think I have a nicer way to reinstate it with much less code, but it'll take a little while.
 - Removed collapsible tables of contents. Same issue: too much code, too little functionality.
