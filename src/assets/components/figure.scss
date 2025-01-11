@@ -30,10 +30,12 @@
   .kimFigure-left {
     float: inline-start;
     clear: inline-start;
+    margin-inline-end: var(--space-3);
   }
 
   .kimFigure-right {
     float: inline-end;
     clear: inline-end;
+    margin-inline-start: var(--space-3);
   }
 }
