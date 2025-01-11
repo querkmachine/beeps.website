@@ -4,6 +4,7 @@
 
 .kimMasthead {
   border-block-start: var(--border-thick) solid var(--color-furniture);
+  background-color: var(--color-surface);
 }
 
 .kimMasthead_inner {
@@ -11,14 +12,6 @@
   align-items: baseline;
   padding-block-end: var(--space-1);
   position: relative;
-
-  &::after {
-    content: "";
-    border-block-end: 1px solid var(--color-furniture);
-    position: absolute;
-    inset-inline: var(--grid-gutter);
-    inset-block-end: 0;
-  }
 }
 
 .kimMasthead_logo {

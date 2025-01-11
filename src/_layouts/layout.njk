@@ -76,7 +76,7 @@
   {% endblock %}
   {% block afterMasthead %}
     <nav class="kimNavigation" id="navigation" aria-label="Main navigation" hidden>
-      <div class="kimWrapper">
+      <div class="kimWrapper kimNavigation_inner">
         <div class="kimGrid">
           {%- for section in site.navigation %}
             <div class="kimGrid_column-full galaxy:kimGrid_column-oneThird kimNavigation_section">
@@ -100,14 +100,7 @@
   </main>
   
   {% block footer %}
-    <hr class="kim-!-visually-hidden">
     <footer class="kimFooter">
-      {% block footerDecor %}
-        <div class="kimNoodleBowl" role="presentation">
-          <canvas class="kimNoodleBowl_canvas"></canvas>
-          <div class="kimNoodleBowl_inner"></div>
-        </div>
-      {% endblock %}
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
         
@@ -129,9 +122,13 @@
           <p>Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
         </div>
         {% endblock %}
-            
-        {% block afterFooter %}{% endblock %}
       </div>
+      
+      {% block footerDecor %}
+        <div class="kimNoodleBowl" role="presentation">
+          <div class="kimNoodleBowl_inner"></div>
+        </div>
+      {% endblock %}
     </footer>
   {% endblock %}
   

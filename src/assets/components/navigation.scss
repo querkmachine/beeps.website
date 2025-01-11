@@ -1,12 +1,21 @@
 @use "../helpers/links";
 
 .kimNavigation {
-  padding-block: var(--space-5);
-  border-block: var(--border-regular) solid var(--color-furniture);
+  border-block-end: var(--border-regular) solid var(--color-furniture);
   background-color: var(--color-surface);
+}
 
-  // Account for the 1px bottom border on the masthead
-  margin-block-start: calc(0px - var(--border-hairline));
+.kimNavigation_inner {
+  padding-block: var(--space-5);
+  position: relative;
+
+  &::before {
+    content: "";
+    border-block-start: var(--border-hairline) solid var(--color-furniture);
+    position: absolute;
+    inset-block-start: calc(var(--border-hairline) * -1);
+    inset-inline: var(--grid-gutter);
+  }
 }
 
 .kimNavigation_link {
