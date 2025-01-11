@@ -16,7 +16,7 @@ Last updated: {{ updated | formatDate('human') }}
 
 🧑‍💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team, currently working on some long-term things I can't talk about publicly yet. I'm also helping with updates to the [WCAG Primer](https://alphagov.github.io/wcag-primer/).
 
-🎨 I've started [giving this website a fresh lick of paint]({{ '/blog/2025-01-10-renovating-in-the-open/' | url }}).
+🎨 I've started [giving this website a fresh lick of paint]({{ '/blog/2025-01-11-renovating-in-the-open/' | url }}).
 
 🎶 Lately, I've been on a musical theatre kick and been relistening to the soundtracks to [Matilda](https://album.link/gb/i/471417216) and [Hamilton](https://album.link/gb/i/1025210938).
 
