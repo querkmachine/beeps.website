@@ -3,7 +3,10 @@
 @use "../helpers/reset";
 
 .kimMasthead {
-  border-block-start: var(--border-thick) solid var(--color-furniture);
+  --top-spacing: var(--border-thick);
+  --bottom-spacing: var(--space-2);
+
+  border-block-start: var(--top-spacing) solid var(--color-furniture);
   background-color: var(--color-surface);
   view-transition-name: masthead;
 }
@@ -11,14 +14,14 @@
 .kimMasthead_inner {
   display: flex;
   align-items: baseline;
-  padding-block-end: var(--space-1);
+  padding-block-end: var(--bottom-spacing);
   position: relative;
 }
 
 .kimMasthead_logo {
   display: inline-block;
-  margin-block-start: calc(var(--border-thick) * -1);
-  margin-block-end: calc(var(--border-thick) * -1);
+  margin-block-start: calc(var(--top-spacing) * -1);
+  margin-block-end: calc(var(--top-spacing) * -1);
   padding-block-start: var(--space-5);
   padding-block-end: var(--space-2);
   padding-inline: var(--space-2);
@@ -41,6 +44,7 @@
 .kimMasthead_section {
   margin-inline-start: var(--space-2);
   font-size: var(--size-1);
+  line-height: 1;
 
   @container (min-width: 500px) {
     font-size: var(--size-2);
@@ -59,9 +63,6 @@
   @container (max-width: 380px) {
     @include a11y.visually-hidden;
   }
-}
-
-.kimMasthead_section {
 }
 
 .kimMasthead_menu-link {
@@ -104,9 +105,12 @@
     inset: calc(var(--space-2) * -1);
   }
 
+  &:hover {
+    box-shadow: 0 var(--bottom-spacing) 0 var(--color-link);
+  }
+
   &[aria-expanded="true"] {
-    box-shadow: 0 calc(var(--border-regular) + var(--space-1)) 0
-      var(--color-furniture);
+    box-shadow: 0 var(--bottom-spacing) 0 var(--color-furniture);
 
     &::before {
       transform: rotate(90deg);
