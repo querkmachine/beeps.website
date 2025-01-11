@@ -30,10 +30,13 @@ export default function () {
         ],
       },
       {
+        heading: "Web working",
+        links: [{ href: "/govuk-browser-data/", text: "GOV.UK browser data" }],
+      },
+      {
         heading: "Other stuff",
         links: [
           { href: "/ash/", text: "Ash the amphimorpho" },
-          { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
           { href: "/links/", html: "Cool links &amp; friend sites" },
         ],
       },
