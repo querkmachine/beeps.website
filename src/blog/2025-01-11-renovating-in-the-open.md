@@ -1,10 +1,12 @@
 ---
 title: Renovating in the open
 date: 2025-01-11
+updated: 2025-01-12
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work.
-cssComponents: []
+cssComponents:
+  - code
 ---
 
 Just a programming note that I'm making some big ol' changes to this website.
@@ -31,3 +33,19 @@ The first "open" release. Notable changes include:
 - Redesigned various in-page components, including callouts, character callouts, comments, and social media embeds.
 - Removed the manual colour scheme switch. Sorry to the fans of that feature; it's just too much annoying code for too minor functionality. I think I have a nicer way to reinstate it with much less code, but it'll take a little while.
 - Removed collapsible tables of contents. Same issue: too much code, too little functionality.
+
+### 2025-01-12
+
+- Added some (hopefully) subtle page transitions on supporting browsers.
+- Added some scroll padding so that when you jump to a section of a page, it doesn't butt right up against the top of the window.
+- Added hover styles to logo and menu button.
+- Redesigned the footer area of each page to mirror the header.
+- Changed how some of the `color-mix` colours, such as link hover/visited colours and 'surface' colours, were being calculated.
+- Changed structure of the main and footer navigations.
+- Changed keyboard focus styles on webring names.
+- Changed the blog archive page so that the introductory content is two-thirds width.
+- Changed XL headings so that the colour bar appears above the text instead of below it. Also, they're green now.
+- Changed the border and added background colour to the blogs section of the homepage.
+- Made minor changes to the 404 page text formatting.
+- Fixed homepage 'spots' not changing colour along with the wider colour scheme.
+- Fixed the menu button getting misaligned on narrow screens.
