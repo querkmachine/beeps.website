@@ -1,8 +1,9 @@
 ---
 layout: brand.njk
 title: beeps' brand
+updated: 2025-01-14
 metadata:
-  description: Style guide for my personal projects, including this website.
+  description: The style guide for my personal projects, including this website.
 cssComponents:
   - table
   - blockquote
@@ -13,18 +14,26 @@ cssComponents:
 {% set palette = {
   white: "#ffffff",
   "off-black": "#334139",
-  "light-purple": "#786999",
-  "light-green": "#97e697",
-  "deep-purple": "#2a2536",
-  "brilliant-green": "#00fa17"
+  "purple": "#786999",
+  "dark-purple": "#2a2536",
+  "pale-purple": "#3d364f",
+  "green": "#00fa17",
+  "green-alt": "#12c873",
+  "dark-green": "#12803b",
+  "dark-green-alt": "#2baf5d",
+  "pale-green": "#f2f3f2",
+  "light-grey": "#d4d4d7",
+  "dark-grey": "#586b60"
 } %}
 
 {% set colourAssignments = [
   { name: "Text", dark: "white", light: "off-black" },
-  { name: "Background", dark: "deep-purple", light: "white" },
-  { name: "Primary", dark: "brilliant-green", light: "light-purple" },
-  { name: "Accents requiring contrast", dark: "brilliant-green", light: "light-purple" },
-  { name: "Accents not requiring contrast", dark: "light-purple", light: "light-green" }
+  { name: "Supporting text", dark: "light-grey", light: "dark-grey" },
+  { name: "Accent text and links", dark: "green", light: "dark-green" },
+  { name: "Hovered and visited links", dark: "green-alt", light: "dark-green-alt" },
+  { name: "Canvas", dark: "dark-purple", light: "white" },
+  { name: "Surface", dark: "pale-purple", light: "pale-green" },
+  { name: "Page furniture", dark: "purple", light: "purple" }
 ] %}
 
 <style>
@@ -51,6 +60,11 @@ A lot of famous individuals are well known for [always wearing the same clothes]
 I don't wear exactly the same clothes every day, but when it comes to building random pages and side projects, I usually spend more time thinking about how it looks than how it works. Consequentially, since late-2021, I've tried to cut down on decision fatigue by making my personal projects follow the same set of basic design rules.
 
 ---
+
+## General principles
+
+- Be square and blocky. There aren't many circles or curves here.
+- Follow good accessibility practices. Use contrasting colours, write good copy.
 
 ## Colours
 
@@ -85,12 +99,10 @@ Always aim to achieve at least a 4.5:1 contrast ratio between text and backgroun
 
 [Space Mono](https://fonts.google.com/specimen/Space+Mono) is used for code snippets and as a stylistic alternative for small amounts of text. It's used in bold (700) and regular (400) weights.
 
-> <div style="font-family:'Space Mono'"><span style="font-weight:700">Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, "Because it is there." </span><span style="font-weight:400">Well, space is there, and we're going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there.</span></div>
-
 ## Robat icon
 
-This isn't used a whole lot, but in places where a logo or icon is needed—and the space is either too small or a dabbing robot bat would be inappropriate—there's an icon.
+This isn't used that much, but in places where a logo or icon is useful, there's an icon.
 
 <div class="page-icon">
-  <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Robot bat icon">
+  <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Silhouette of a stylised bat's head, within which the cutout of a mechanical gear is visible.">
 </div>
