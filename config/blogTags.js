@@ -22,8 +22,7 @@ const getAllTags = function (collection) {
  */
 const filterCommonTags = function (tags) {
   return (tags || []).filter(
-    (tag) =>
-      ["all", "blog", "nav", "post", "posts", "stash"].indexOf(tag) === -1,
+    (tag) => ["all", "blog", "stash", "every-element"].indexOf(tag) === -1,
   );
 };
 
