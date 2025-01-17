@@ -11,6 +11,7 @@ interactions:
 cssComponents:
   - character
   - callout
+  - code
 ---
 
 {% callout %}
