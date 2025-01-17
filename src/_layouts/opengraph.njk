@@ -89,7 +89,9 @@
     <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.png' | url }}" class="page-noodle">
     <script type="module">
       import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-      new Spots(document.querySelector(".page-background"));
+      new Spots(document.querySelector(".page-background"), {
+        colors: [[120, 105, 153]]
+      });
     </script>
   </body>
 </html>
