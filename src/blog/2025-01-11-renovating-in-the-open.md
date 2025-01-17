@@ -1,7 +1,7 @@
 ---
 title: Renovating in the open
 date: 2025-01-11
-updated: 2025-01-12
+updated: 2025-01-17
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work.
@@ -49,3 +49,8 @@ The first "open" release. Notable changes include:
 - Made minor changes to the 404 page text formatting.
 - Fixed homepage 'spots' not changing colour along with the wider colour scheme.
 - Fixed the menu button getting misaligned on narrow screens.
+
+### 2025-01-17
+
+- Reworked how dark and light mode colours are defined. This new method isn't as backwards compatible, but makes it possible to force a specific mode by changing the `color-scheme` CSS property.
+- Fixed OpenGraph images generating with the wrong colours.
