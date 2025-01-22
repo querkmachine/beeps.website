@@ -13,10 +13,10 @@ cssComponents:
   {%- set mdnLink = params.data.mdn | default("https://developer.mozilla.org/en-US/docs/Web/HTML/Element/" + tag) -%}
   <div class="kimGrid" id="{{ params.data.tag }}">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
-      <h3 class="kimBody">
+      <h2 class="kimBody">
         {{ _e(params.data.tag) }}
         {%- if params.data.name %}:<br>the {{ params.data.name }} element{% endif %}
-      </h3>
+      </h2>
       {%- if params.data.experimental %}
         <p class="kimBody">🧪 Experimental</p>
       {%- elif params.data.obsolete %}
