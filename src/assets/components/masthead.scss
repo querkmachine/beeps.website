@@ -50,7 +50,7 @@
   font-size: var(--size-1);
   line-height: 1;
 
-  @container (min-width: 500px) {
+  @container (min-width: 550px) {
     font-size: var(--size-2);
   }
 
@@ -64,7 +64,7 @@
 .kimMasthead_name {
   font-weight: bold;
 
-  @container (max-width: 380px) {
+  @container (max-width: 440px) {
     @include a11y.visually-hidden;
   }
 }
