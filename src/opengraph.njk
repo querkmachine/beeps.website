@@ -13,7 +13,6 @@ eleventyExcludeFromCollections: true
 {% endblock %}
 
 {% block title %}
-  <div class="kimHeading-xl page-beeps">beeps</div>
   {%- if preview.data.isBlogPost %}
     <div class="kimHeading-l kim-!-margin-block-start-0">
       {{ (preview.data.title or "") | markdownInline | safe }}
