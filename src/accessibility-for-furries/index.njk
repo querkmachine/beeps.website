@@ -1,0 +1,73 @@
+---
+title: "Web accessibility auditing for furry fandom websites"
+metadata:
+  description: Furry websites tend to be rubbish for accessibility. Let's fix that.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% from "src/_includes/jump-link.njk" import kimJumpLink %}
+
+{% block main %}
+<div class="kim-!-margin-block-8-9">
+  <div class="kimWrapper">
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full">
+        <h1 class="kimHeading-xl">{{ title }}</h1>
+      </div>
+    </div>
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        <p class="kimBody-l"><b>Hey you! Yeah, you!</b> Do you own, operate, or are otherwise involved in the administration of a website oriented at the furry fandom?</p>
+        <p class="kimBody">Despite the proliferation of queer, neurodivergent, and disabled people in the furry fandom, considerations for these individuals have historically focused on <strong>physical spaces</strong>. Quiet rooms at conventions, wheelchair ramps at venues, and badges indicating one's comfort with personal contact.</p>
+        <p class="kimBody">What most of the fandom <em>sucks</em> at is accessibility of online spaces, and not without reason. Many furry websites are passion projects operated by volunteers on threadbare budgets. Keeping the lights on and gears turning is always going to be a greater priority than delivering a good experience for disabled users.</p>
+      </div>
+    </div>
+    
+    <hr class="kimRule kimRule-thick">
+    
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneThird">
+        <img class="kimSplash_image" srcset="{{ '/assets/images/noodle-home.png' | url }} 1x, {{ '/assets/images/noodle-home@2x.png' | url }} 2x" src="{{ '/assets/images/noodle-home.png' | url }}" alt="A mammal-like creature with a long, furred, serpentine like body and six legs. It has black and white fur with green eyes, ears and a goopy green tailtip. It's wearing a black denim jacket covered in various patches, looking at you, and throwing a peace sign." width="552" height="778">
+      </div>
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-s">I want to help change that</h2>
+        <p class="kimBody">Hi, I'm beeps. I'm a frontend developer who specialises in web accessibility. I've also been a furry since 2005. Volunteering on web projects in the fandom were instrumental in gaining my early development experience and building out my early portfolio.</p>
+        <p class="kimBody">So I want to give something back.</p>
+        <p class="kimBody">Send me a link to your website, and I'll do an accessibility audit of it, <strong style="color: var(--color-text-accent)">for free</strong>.</p>
+        <p class="kimBody">The audit will assess a few prominent pages against the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA standard. This is the most common standard used for compliance with accessibility legislation around the world, such as the Americans with Disabilities Act, the European Accessibility Act, and the UK's Equality Act. </p>
+      </div>
+    </div>
+    
+    <hr class="kimRule kimRule-thick">
+    
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-s">What you get</h2>
+        <p class="kimBody">I will identify a handful of pages from your website to test. This will usually be a mixture of prominent pages, such as the homepage, and common user touchpoints, such as login and search pages.</p>
+        <p class="kimBody">I'll use a mix of manual and automated testing methods to identify any issues I can find with them.</p>
+        <p class="kimBody">I'll write up my findings into an easy-to-digest report noting each issue found, the accessibility criteria they fail to meet, and recommendations on how to fix them.</p>
+        <p class="kimBody">This report will be published on this website; however, only you will receive the link. Who else you share the report with is up to you.</p>
+        <p class="kimBody">(If your project is open source, I might even contribute some pull requests myself, but no promises.)</p>
+      </div>
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneThird">
+        <img src="{{ '/assets/images/noodle-blog@2x.png' | url }}" alt="A mammal-like creature with a long, furred, serpentine like body and six legs. It has black and white fur with green eyes, ears and a goopy green tailtip. It sits on the floor, hunched over a stickerbombed laptop, deep in thought." width="462" height="613">
+      </div>
+    </div>
+    
+    <hr class="kimRule kimRule-thick">
+    
+    <div class="kimGrid">
+      <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
+        <p class="kimBody">Want in? Any questions? Hit me up via email or one of my socials if you're interested!</p>
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/contact/",
+            text: "Contact beeps"
+          }) }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

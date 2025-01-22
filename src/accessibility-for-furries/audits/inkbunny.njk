@@ -1,14 +1,17 @@
 ---
 title: Inkbunny accessibility report
+redirect_from: "/furry-a11y/inkbunny/"
 metadata:
   noRobots: true
 cssComponents:
   - code
+  - prose
 ---
 
 {% extends 'src/_layouts/html-report.njk' %}
 
 {% block content %}
+<div class="kimProse">
 <h1 id="inkbunny-accessibility-report">Inkbunny accessibility report</h1>
 
 <p>Written by Kimberly Grey — <a href="https://berly.kim">berly.kim</a><br>
@@ -293,5 +296,5 @@ cssComponents:
 <p>In the case of the switchers, these buttons are also unusable for people using voice control mechanisms, as they have no visible name to refer to the buttons by.</p>
 
 <p>In the case of the main navigation, I note that each button has the text of the button included within it, but hidden using a <code>display: none</code> style. This text is actually still inaccessible to screen readers, as they do not read content that has been hidden in this way. Use the <a href="https://piccalil.li/quick-tip/visually-hidden/">visually-hidden pattern</a> instead.</p>
-
+</div>
 {% endblock %}
