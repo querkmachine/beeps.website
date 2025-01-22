@@ -30,7 +30,13 @@ export default function () {
       },
       {
         heading: "Web working",
-        links: [{ href: "/govuk-browser-data/", text: "GOV.UK browser data" }],
+        links: [
+          {
+            href: "/accessibility-for-furries/",
+            text: "Accessibility audits for furries",
+          },
+          { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
+        ],
       },
       {
         heading: "Other stuff",
