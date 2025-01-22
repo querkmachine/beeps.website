@@ -9,10 +9,6 @@ Amphimorpho are... not a particularly well known fursona species. Naturally, som
 
 In lieu of making you read [the extensive reference guide for the species](https://amphimorpho.carrd.co/), I figured I should collect those common mistakes here.
 
-{% callout %}
-This page is a supplement to [Ash's reference sheet]({{ '/ash/' | url }}). Go check that out if you haven't already.
-{% endcallout %}
-
 ## Appearance
 
 ### Facial features
