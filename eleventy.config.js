@@ -57,6 +57,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",
+    stylesheet: "/assets/feed.xsl",
     collection: {
       name: "blog",
       limit: 10,
@@ -82,6 +83,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/fonts");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/javascript");
+  eleventyConfig.addPassthroughCopy(paths.srcAssets + "/feed.xsl");
 
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(paths.src + "/.htaccess");
@@ -114,11 +116,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addNunjucksAsyncShortcode(
     "responsiveImage",
-    shortcodeResponsiveImage,
+    shortcodeResponsiveImage
   );
   eleventyConfig.addPairedNunjucksShortcode(
     "socialEmbed",
-    shortcodeSocialEmbed,
+    shortcodeSocialEmbed
   );
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
