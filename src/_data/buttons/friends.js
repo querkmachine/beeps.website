@@ -36,7 +36,7 @@ export default [
     url: "//freeplay.floof.company/",
   },
   { alt: "Halley Starbun", url: "//halley.systems/" },
-  { alt: "Harley Watson", url: "//lobi.to/" },
+  { alt: "Unilobito", url: "//lobi.to/" },
   { alt: "Harsh Browns", url: "//visitmy.website/" },
   { alt: "Ji'hyn", url: "//jihyn.com/" },
   {
