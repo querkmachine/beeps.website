@@ -13,7 +13,7 @@
   &:has(svg) {
     display: inline-flex;
     gap: var(--space-1);
-    vertical-align: baseline;
+    vertical-align: bottom;
 
     svg {
       block-size: 1em;
