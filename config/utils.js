@@ -11,6 +11,11 @@ import { DateTime } from "luxon";
  * @tutorial https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
  */
 const cachebustAssetUrl = function (url) {
+  // Only cachebust on production
+  if (process.env.ENVIRONMENT !== "prod") {
+    return url;
+  }
+
   const [urlPart, paramPart] = url.split("?");
   const params = new URLSearchParams(paramPart || "");
   params.set("v", DateTime.local().toFormat("X"));
