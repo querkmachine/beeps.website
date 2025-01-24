@@ -1,7 +1,7 @@
 ---
 title: Renovating in the open
 date: 2025-01-11
-updated: 2025-01-22
+updated: 2025-01-23
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work.
@@ -59,3 +59,8 @@ The first "open" release. Notable changes include:
 
 - Fixed various broken styles on Ash's reference page.
 - Adjusted the breakpoints for when things in the masthead change.
+
+### 2025-01-23
+
+- Fixed links with icons being misaligned with their surrounding text.
+- Added a stylesheet to the RSS feed, with information about what it is, so users aren't faced with a mess of XML if they happen to click on it.
