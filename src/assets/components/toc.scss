@@ -1,10 +1,12 @@
 @use "../helpers/links";
 
 .kimToc {
+  max-block-size: 90vh;
   margin-block-end: var(--space-5);
   border-block-end: var(--border-hairline) solid var(--color-furniture);
   position: sticky;
   inset-block-start: var(--space-5);
+  overflow-y: scroll;
 }
 
 .kimToc_heading {
