@@ -81,7 +81,7 @@ As these icons are all supplementary to the adjacent text content, there isn’t
 />
 ```
 
-Related WCAG criterion: [1.1.1 Non-Text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html
+Related WCAG criterion: [1.1.1 Non-Text Content (Level A)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)
 
 ### Avoid using headings for presentational purposes
 
