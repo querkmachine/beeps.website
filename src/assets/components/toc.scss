@@ -1,16 +1,19 @@
 @use "../helpers/links";
 
 .kimToc {
-  max-block-size: 90vh;
   margin-block-end: var(--space-5);
   border-block-end: var(--border-hairline) solid var(--color-furniture);
   position: sticky;
   inset-block-start: var(--space-5);
-  overflow-y: scroll;
 }
 
 .kimToc_heading {
   margin-block-end: var(--space-2);
+}
+
+.kimToc_inner {
+  max-block-size: calc(100vh - var(--space-9));
+  overflow-y: scroll;
 }
 
 // I wish the Eleventy plugin gave me more control over the output code, so I
@@ -24,8 +27,15 @@
   list-style-type: none;
 
   ol {
-    margin-inline-start: var(--space-3);
+    padding-inline-start: var(--space-5);
     margin-block: var(--space-1);
+
+    li::before {
+      content: "\2014";
+      margin-inline-start: calc(0px - var(--space-5));
+      float: left;
+      color: var(--color-text-subtle);
+    }
   }
 }
 
