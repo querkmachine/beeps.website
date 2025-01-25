@@ -13,18 +13,13 @@
         </span>
       </a>
     </strong>
-    <div class="kimBlogCard_date">
-      <time datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
-        {{- post.date | formatDate('human') -}}
+    <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
+      {{- post.date | formatDate('human') -}}
+    </time>
+    {%- if post.data.updated %}
+      <time class="kimBlogCard_date" datetime="{{ post.data.updated | formatDate('iso') }}" itemprop="dateUpdated">
+        Updated {{ post.data.updated | formatDate('human') -}}
       </time>
-      {%- if post.data.updated %}
-        <span class="kim-!-margin-inline-start-3">
-          Last updated
-          <time datetime="{{ post.data.updated | formatDate('iso') }}" itemprop="dateUpdated">
-            {{- post.data.updated | formatDate('human') -}}
-          </time>
-        </span>
-      {%- endif %}
-    </div>
+    {%- endif %}
   </{{ element }}>
 {% endmacro %}

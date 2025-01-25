@@ -1,7 +1,7 @@
 ---
 title: Renovating in the open
 date: 2025-01-11
-updated: 2025-01-23
+updated: 2025-01-25
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work.
@@ -64,3 +64,13 @@ The first "open" release. Notable changes include:
 
 - Fixed links with icons being misaligned with their surrounding text.
 - Added a stylesheet to the RSS feed, with information about what it is, so users aren't faced with a mess of XML if they happen to click on it.
+
+### 2025-01-24
+
+- Capped the maximum height of tables of contents.
+
+### 2025-01-25
+
+- Tweaked the prior changes to tables of contents.
+- Added dashes to subsections in tables of contents.
+- Changed styles of dates on blog post listings.

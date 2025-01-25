@@ -72,7 +72,7 @@
         <h2 class="kimHeading-m page-blog-heading" id="blog-heading">Recent blog posts</h2>
         <div class="kimGrid">
           {% for post in collections.blog | reverse | head(3) %}
-            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-block-end-4-5">
+            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-block-end-3">
               {{ kimBlogCard(post, { element: "div" }) }}
             </div>
           {% endfor %}
