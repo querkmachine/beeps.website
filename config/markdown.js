@@ -116,7 +116,7 @@ const markdownItClasses = function (md) {
   };
 
   // Horizontal rule
-  addClassesToRule(md, "hr", "kimRule");
+  addClassesToRule(md, "hr", "kimRule kimRule-fancy");
 
   // Images
   addClassesToRule(md, "image", "kimImage");

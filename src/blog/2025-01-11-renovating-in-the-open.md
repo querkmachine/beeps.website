@@ -21,7 +21,7 @@ I'm not planning on any major overhauls, but enough stuff is going to be changed
 
 I'm going to be updating this blog post whenever a new thing has been changed, so keep your peepers on it!
 
-## Ch-ch-ch-changelog
+## Changelog
 
 ### 2025-01-11
 
@@ -82,5 +82,6 @@ The first "open" release. Notable changes include:
 ### 2025-01-26
 
 - Added a new link callout component.
+- Added a 'fancy' variant of the horizontal rule
 - Changed the design of arrow icons.
 - Fixed hover and focus states not being applied correctly to jump link icons.

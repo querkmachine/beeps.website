@@ -1,14 +1,33 @@
 .kimRule {
-  block-size: 0;
+  --height: var(--border-regular);
+
+  display: block;
+  block-size: var(--height);
   margin-block: var(--space-5);
   border: none;
-  border-block-start: var(--border-regular) solid var(--color-furniture);
+  border-block-start: var(--height) solid var(--color-furniture);
+  position: relative;
+  text-align: center;
+  overflow: visible;
 
   &-thick {
-    border-block-start-width: var(--border-thick);
+    --height: var(--border-thick);
   }
 
   &-hairline {
-    border-block-start-width: var(--border-hairline);
+    --height: var(--border-hairline);
+  }
+
+  &-fancy::after {
+    --decor-size: calc(var(--border-thick) + (var(--border-regular) * 2));
+
+    content: "";
+    display: inline-block;
+    inline-size: var(--decor-size);
+    block-size: var(--decor-size);
+    border: var(--border-regular) solid var(--color-canvas);
+    position: relative;
+    inset-block-start: calc((var(--decor-size) * -0.5) - (var(--height) * 0.5));
+    background-color: var(--color-furniture);
   }
 }
