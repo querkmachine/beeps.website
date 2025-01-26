@@ -4,6 +4,10 @@ date: 2025-01-01
 tags: [yearly theme, medical]
 metadata:
   description: My body sucks and I hate it, but I suppose I should make it not die.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113753791187092943"
 cssComponents:
   - callout
   - figure

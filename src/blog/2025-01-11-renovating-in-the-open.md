@@ -5,6 +5,10 @@ updated: 2025-01-26
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113809632629456392"
 cssComponents:
   - code
 ---
