@@ -51,3 +51,12 @@
     @include a11y.focus-ring;
   }
 }
+
+@mixin extend-link {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+}

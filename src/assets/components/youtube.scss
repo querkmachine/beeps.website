@@ -3,6 +3,7 @@
   block-size: auto;
   margin-block-end: var(--space-5);
   position: relative;
+  border: var(--border-regular) solid var(--color-furniture);
   aspect-ratio: 16 / 9;
 
   iframe {
