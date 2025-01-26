@@ -99,10 +99,32 @@ Always aim to achieve at least a 4.5:1 contrast ratio between text and backgroun
 
 [Space Mono](https://fonts.google.com/specimen/Space+Mono) is used for code snippets and as a stylistic alternative for small amounts of text. It's used in bold (700) and regular (400) weights.
 
-## Robat icon
+## Iconography
 
-This isn't used that much, but in places where a logo or icon is useful, there's an icon.
+### Robat icon
+
+The logo of the website (and pretty much just this website). This has been a symbol I've used for longer than you'd expect, [since around 2010]({{ '/blog/2023-07-25-20-years/#numbers' | url }}).
 
 <div class="page-icon">
   <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Silhouette of a stylised bat's head, within which the cutout of a mechanical gear is visible.">
+</div>
+
+### Utility icons
+
+Some custom made icons for custom made uses.
+
+{%- set icons = [
+  "arrow-n",
+  "arrow-ne",
+  "arrow-e",
+  "arrow-se",
+  "arrow-s",
+  "arrow-sw",
+  "arrow-w",
+  "arrow-nw",
+  "rss"
+] -%}
+
+<div style="display: flex; flex-wrap: wrap; gap: var(--space-3);">
+{%- for i in icons -%}<span>{% include "./assets/icons/" + i + ".svg" %}</span>{% endfor -%}
 </div>
