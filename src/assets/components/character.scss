@@ -1,14 +1,16 @@
 .kimCharacter {
   display: flex;
+  flex-direction: column;
   margin: 0;
   margin-block-end: var(--space-5);
 }
 
 .kimCharacter_cite {
-  display: flex;
+  display: inline-flex;
+  inline-size: 5rem;
   padding: var(--space-1);
-  flex: 0 0 5rem;
   background-color: var(--color-furniture);
+  align-self: flex-start;
   align-items: flex-end;
 }
 
