@@ -1,7 +1,7 @@
 ---
 title: Renovating in the open
 date: 2025-01-11
-updated: 2025-01-26
+updated: 2025-01-30
 tags: [meta, web development]
 metadata:
   description: This website's getting a little renovation work.
@@ -85,3 +85,8 @@ The first "open" release. Notable changes include:
 - Added a 'fancy' variant of the horizontal rule
 - Changed the design of arrow icons.
 - Fixed hover and focus states not being applied correctly to jump link icons.
+
+### 2025-01-30
+
+- Fixed images that are also links not having a focus style.
+- Changed the design of character callout boxes.
