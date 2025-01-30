@@ -52,6 +52,12 @@
   }
 }
 
+@mixin link-image {
+  &:focus-visible {
+    @include a11y.focus-ring-block;
+  }
+}
+
 @mixin extend-link {
   &::after {
     content: "";

@@ -23,6 +23,11 @@
   }
 }
 
+.kimLink-image {
+  display: inline-block;
+  @include links.link-image;
+}
+
 // Jump links
 .kimLink-jump {
   --height: 2em;

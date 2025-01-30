@@ -38,9 +38,9 @@ const responsiveImagesShortcode = async function (src, alt, args) {
 
   // If a link is configured, create that too
   if (typeof settings.link === "boolean" && settings.link === true) {
-    imageCode = `<a href="${originalSize.url}">${imageCode}</a>`;
+    imageCode = `<a class="kimLink-image" href="${originalSize.url}">${imageCode}</a>`;
   } else if (typeof settings.link === "string") {
-    imageCode = `<a href="${settings.link}">${imageCode}</a>`;
+    imageCode = `<a class="kimLink-image" href="${settings.link}">${imageCode}</a>`;
   }
 
   return imageCode;
