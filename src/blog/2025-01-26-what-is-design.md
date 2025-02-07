@@ -4,6 +4,10 @@ date: 2025-01-26
 tags: [design]
 metadata:
   description: A short monologue from my unconscious self.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113895195002998651"
 cssComponents:
   - blockquote
 ---

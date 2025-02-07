@@ -4,6 +4,10 @@ date: 2025-01-31
 tags: [yearly theme, medical]
 metadata:
   description: Part one of twelve (or more?)
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113923297589524004"
 cssComponents:
   - character
   - figure
