@@ -20,7 +20,7 @@ export default function () {
     ],
     navigation: [
       {
-        heading: "More beeping",
+        heading: "Beeping",
         links: [
           { href: "/blog/", text: "Blog" },
           { href: "/about/", text: "About beeps" },
@@ -29,7 +29,7 @@ export default function () {
         ],
       },
       {
-        heading: "Web working",
+        heading: "Web development",
         links: [
           {
             href: "/accessibility-for-furries/",
@@ -39,9 +39,13 @@ export default function () {
         ],
       },
       {
-        heading: "Other stuff",
+        heading: "More stuff",
         links: [
-          { href: "/ash/", text: "Ash the amphimorpho" },
+          {
+            href: "/ash/",
+            text: "Ash the amphimorpho",
+            classes: "kimNavigation_link-ash",
+          },
           { href: "/links/", html: "Cool links &amp; friend sites" },
         ],
       },

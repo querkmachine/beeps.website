@@ -83,9 +83,11 @@
               <h2 class="kimBody-l">{{ section.heading }}</h2>
               <ul class="kimList">
                 {%- for link in section.links %}
-                <li><a class="kimNavigation_link" href="{{ link.href | url }}">
-                  {{- link.html | safe if link.html else link.text -}}
-                </a></li>
+                <li>
+                  <a class="kimNavigation_link {%- if link.classes %} {{ link.classes }}{% endif %}" href="{{ link.href | url }}">
+                    {{- link.html | safe if link.html else link.text -}}
+                  </a>
+                </li>
                 {%- endfor %}
               </ul>
             </div>

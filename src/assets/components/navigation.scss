@@ -24,4 +24,22 @@
     $visited-color: var(--color-link),
     $initial-underline: false
   );
+
+  &-ash {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      inline-size: 2rem;
+      block-size: 2rem;
+      position: absolute;
+      inset-block-start: -0.25rem;
+      inset-inline-end: -2rem;
+      background-image: url("/assets/images/ash/tongue.svg");
+      background-repeat: no-repeat;
+      object-fit: contain;
+      transform: rotate(3deg);
+    }
+  }
 }
