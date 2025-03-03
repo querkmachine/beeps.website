@@ -4,6 +4,10 @@ date: 2025-02-07
 tags: [yearly theme, medical]
 metadata:
   description: Well, that was unexpected.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "113964598648134007"
 cssComponents:
   - character
   - figure
