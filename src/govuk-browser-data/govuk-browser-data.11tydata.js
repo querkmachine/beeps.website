@@ -197,7 +197,7 @@ const htmlTableData = (data, config) => {
     return output.join("\n");
   };
 
-  const output = rows.map((row) => {
+  const output = rows.reverse().map((row) => {
     return `<tr>
         <th class="kimTable_header" scope="row">${formatDate(row)}</th>
         ${htmlTableColumns(cols, row)}

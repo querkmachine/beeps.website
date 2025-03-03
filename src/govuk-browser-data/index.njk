@@ -12,20 +12,33 @@ cssComponents:
 {% block head %}
 <style>
   .page-data-table {
-    overflow-x: auto;
+    max-block-size: 25rem;
+    overflow: auto;
   }
   .page-data-table .kimTable {
     table-layout: fixed;
     font-size: var(--size--1);
+    border-collapse: unset;
+    border-spacing: 0;
   }
   .page-data-table .kimTable :is(th, td) {
     box-sizing: content-box;
   }
+  .page-data-table .kimTable_head,
+  .page-data-table .kimTable :is(th, td):first-child {
+    position: sticky;
+    background-color: var(--color-canvas);
+  }
+  .page-data-table .kimTable_head {
+    inset-block-start: 0;
+    z-index: 1;
+  }
   .page-data-table .kimTable :is(th, td):first-child {
     inline-size: 13ch;
-    position: sticky;
-    inset-inline-start: 0;
-    background-color: var(--color-canvas);
+    
+    @container (min-inline-size: 30rem) {
+      inset-inline-start: 0;
+    }
   }
   .page-data-table .kimTable :is(th, td):not(:first-child) {
     inline-size: 10ch;
