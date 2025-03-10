@@ -6,6 +6,6 @@ ErrorDocument 404 /404/
 
 <IfModule mod_headers.c>
   <FilesMatch ".(css|js|ico|svg|png|jpg|jpeg|gif|webp|woff2)$">
-    Header set Cache-Control "max-age=31536000, public"
+    Header set Cache-Control "max-age=94608000, public"
   </FilesMatch>
 </IfModule>
