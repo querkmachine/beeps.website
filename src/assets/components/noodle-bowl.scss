@@ -14,13 +14,13 @@
 .kimNoodleBowl_inner {
   block-size: var(--height);
   position: relative;
-  background-image: url("/assets/images/noodle-footer.png");
+  background-image: url("/assets/images/noodle-footer.webp");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto 100%;
 
   @media (min-resolution: 2x) {
-    background-image: url("/assets/images/noodle-footer@2x.png");
+    background-image: url("/assets/images/noodle-footer@2x.webp");
   }
 
   &::before,
@@ -44,7 +44,7 @@
     block-size: var(--pawb-height);
     position: absolute;
     inset-block-end: calc(var(--pawb-height) * -0.5);
-    background-image: url("/assets/images/noodle-footer--pawbs.png");
+    background-image: url("/assets/images/noodle-footer--pawbs.webp");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: auto 100%;
