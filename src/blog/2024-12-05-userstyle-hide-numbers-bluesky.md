@@ -60,4 +60,4 @@ If you're not sure how to use a user style, check out [my blog post on user styl
 
 This code is provided as-is and is unlikely to receive future updates.
 
-Personally, I've stopped using Bluesky entirely. If you still want to see my online rambles over there, follow [the bridged fediverse account](https://bsky.app/profile/beeps.social.beeps.gay.ap.brid.gy) instead.
+Personally, I've stopped using Bluesky entirely. If you still want to see my online rambles over there, follow [the bridged fediverse account](https://bsky.app/profile/beeps.gay) instead.
