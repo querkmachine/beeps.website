@@ -44,7 +44,7 @@ const getLinkDetails = async function (url) {
 const linkShortcode = async function (url) {
   const details = await getLinkDetails(url);
   const metadata = [details.author, details.site_name].filter(
-    (val) => val !== null
+    (val) => val !== null,
   );
 
   let returnHtml = `<div class="kimLinkEmbed">`;
