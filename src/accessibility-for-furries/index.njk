@@ -28,7 +28,7 @@ metadata:
     
     <div class="kimGrid">
       <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneThird">
-        <img class="kimSplash_image" srcset="{{ '/assets/images/noodle-home.webp' | url }} 1x, {{ '/assets/images/noodle-home@2x.webp' | url }} 2x" src="{{ '/assets/images/noodle-home.webp' | url }}" alt="A mammal-like creature with a long, furred, serpentine like body and six legs. It has black and white fur with green eyes, ears and a goopy green tailtip. It's wearing a black denim jacket covered in various patches, looking at you, and throwing a peace sign." width="552" height="778">
+        {% responsiveImage "./src/assets/images/noodle-home.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears, and four arms. It looks at you, smiling toothily and throwing a peace sign. It's wearing a black denim jacket covered in various patches and a purple t-shirt.", { sizes: "100vi" } %}
       </div>
       <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-twoThirds">
         <h2 class="kimHeading-s">I want to help change that</h2>
@@ -51,7 +51,7 @@ metadata:
         <p class="kimBody">(If your project is open source, I might even contribute some pull requests myself, but no promises.)</p>
       </div>
       <div class="kimGrid_column kimGrid_column-full intrepid:kimGrid_column-oneThird">
-        <img src="{{ '/assets/images/noodle-blog@2x.webp' | url }}" alt="A mammal-like creature with a long, furred, serpentine like body and six legs. It has black and white fur with green eyes, ears and a goopy green tailtip. It sits on the floor, hunched over a stickerbombed laptop, deep in thought." width="462" height="613">
+        {% responsiveImage "./src/assets/images/noodle-blog.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It sits on the ground, hunched over a stickerbombed laptop, deep in thought.", { sizes: "100vi" } %}
       </div>
     </div>
     

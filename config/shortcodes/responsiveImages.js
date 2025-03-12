@@ -11,6 +11,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     lazy: true,
     classes: "",
     link: false,
+    sizes: "(min-width: 768px) 66vi, 100vi",
   };
   const settings = { ...defaultArgs, ...args };
 
@@ -31,7 +32,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
   imageCode += settings.lazy ? ` loading="lazy"` : "";
   imageCode += ` src="${originalSize.url}"`;
   imageCode += ` srcset="${metadata.webp.map((entry) => entry.srcset).join(", ")}"`;
-  imageCode += ` sizes="(min-width: 768px) 66vi, 100vi"`;
+  imageCode += ` sizes="${settings.sizes}"`;
   imageCode += ` width="${originalSize.width}"`;
   imageCode += ` height="${originalSize.height}"`;
   imageCode += ` alt="${alt}">`;
