@@ -77,7 +77,7 @@ This can be determined in code using the `prefers-reduced-motion` media query.
 ```js
 // returns `true` if the user has enabled the reduced motion setting, otherwise `false`
 const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
+  "(prefers-reduced-motion: reduce)",
 ).matches;
 ```
 
