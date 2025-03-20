@@ -53,6 +53,7 @@ export default function () {
     legalLinks: [
       { href: "/brand/", text: "beeps' brand" },
       { href: "/colophon/", text: "Colophon" },
+      { href: "/accessibility/", text: "Accessibility statement" },
       { href: "/privacy/", text: "Cookies and privacy" },
       {
         href: "/feed.xml",
