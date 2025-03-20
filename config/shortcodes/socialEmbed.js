@@ -50,7 +50,7 @@ const socialEmbedShortcode = function (content, args) {
   html += `</time>`;
   html += `</a>`;
   if (showSource) {
-    html += ` on <a href="https://${args.host}">${args.host}</a>`;
+    html += ` on <a class="kimLink" href="https://${args.host}">${args.host}</a>`;
   }
   html += `</div>`;
   html += `</figcaption>`;
