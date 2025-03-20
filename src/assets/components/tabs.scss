@@ -1,3 +1,4 @@
+@use "../helpers/a11y";
 @use "../helpers/links";
 
 // There isn't any unique styling applied until the component is initialised,
@@ -18,36 +19,41 @@
   }
 
   .kimTabs_tab {
+    &:has(.kimTabs_link[aria-selected="true"]) {
+    }
+  }
+
+  .kimTabs_link {
     margin-block-end: calc(0px - var(--tabs-border-width));
     padding: var(--space-2) var(--space-3-4);
     border: var(--tabs-border-width) solid var(--tabs-border-color);
     position: relative;
     background-color: var(--color-surface);
+    text-decoration: none;
 
-    &:has(.kimTabs_link[aria-selected="true"]) {
+    &:focus-visible {
+      outline: none;
+
+      .kimTabs_label {
+        @include a11y.focus-ring;
+      }
+    }
+
+    &[aria-selected="true"] {
       padding-block-start: var(--space-1);
       border-block-start-width: calc(var(--tabs-border-width) + var(--space-1));
       border-block-end-color: var(--color-canvas);
       background-color: var(--color-canvas);
-    }
-  }
 
-  .kimTabs_link {
-    @include links.link-helper($initial-underline: false);
-
-    // Extend link to cover entire tab area
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-    }
-
-    &[aria-selected="true"] {
       // Set an outline for forced colour mode users. The outline colour gets
       // forcibly set in in this case.
       outline: var(--border-regular) solid transparent;
       outline-offset: calc(0px - var(--border-regular));
     }
+  }
+
+  .kimTabs_label {
+    @include links.link-helper($initial-underline: false);
   }
 
   // We can't display: none the panels as we use funky scroll syncronisation stuff on the browser stats pages, which doesn't work with non-rendered elements.

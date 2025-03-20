@@ -16,7 +16,6 @@ export default class Tabs {
 
     // Give all panels the `tabpanel` role and make them keyboard focusable
     this.$panels.forEach(($panel) => {
-      $panel.setAttribute("tabindex", "0");
       $panel.setAttribute("role", "tabpanel");
     });
 
@@ -34,7 +33,7 @@ export default class Tabs {
   }
   buildTabsHTML() {
     // Create the list element to hold the tabs within
-    const $tablist = document.createElement("ul");
+    const $tablist = document.createElement("div");
     $tablist.className = "kimTabs_tablist";
     $tablist.setAttribute("role", "tablist");
 
@@ -44,22 +43,22 @@ export default class Tabs {
       const panelId = `${this.idPrefix}-${this.createRandomId()}`;
       $panel.id = panelId;
 
-      const $li = document.createElement("li");
-      $li.className = "kimTabs_tab";
+      const $linkText = document.createElement("span");
+      $linkText.className = "kimTabs_label";
+      $linkText.innerText = $panel.getAttribute("data-label");
 
       const $link = document.createElement("a");
       $link.className = "kimTabs_link";
-      $link.innerText = $panel.getAttribute("data-label");
       $link.setAttribute("href", `#${panelId}`);
       $link.setAttribute("role", "tab");
       $link.setAttribute("aria-controls", panelId);
       $link.setAttribute("aria-selected", "false");
       $link.addEventListener("click", this.onTabClick.bind(this));
       $link.addEventListener("keydown", this.onTabKeydown.bind(this));
+      $link.insertAdjacentElement("beforeend", $linkText);
       this.$tabs.push($link);
 
-      $li.insertAdjacentElement("beforeend", $link);
-      $tablist.insertAdjacentElement("beforeend", $li);
+      $tablist.insertAdjacentElement("beforeend", $link);
     });
 
     this.$module.insertAdjacentElement("afterbegin", $tablist);
@@ -119,14 +118,11 @@ export default class Tabs {
   }
   activatePreviousPanel() {
     const $currentTab = this.getCurrentTab();
-    const $previousTablistItem =
-      $currentTab.parentElement.previousElementSibling;
+    const $previousTab = $currentTab.previousElementSibling;
 
-    if (!$previousTablistItem) {
+    if (!$previousTab) {
       return;
     }
-
-    const $previousTab = $previousTablistItem.querySelector("a");
 
     this.hidePanel($currentTab);
     this.showPanel($previousTab);
@@ -134,13 +130,11 @@ export default class Tabs {
   }
   activateNextPanel() {
     const $currentTab = this.getCurrentTab();
-    const $nextTablistItem = $currentTab.parentElement.nextElementSibling;
+    const $nextTab = $currentTab.nextElementSibling;
 
-    if (!$nextTablistItem) {
+    if (!$nextTab) {
       return;
     }
-
-    const $nextTab = $nextTablistItem.querySelector("a");
 
     this.hidePanel($currentTab);
     this.showPanel($nextTab);
