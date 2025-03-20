@@ -8,7 +8,6 @@ cssComponents:
   - table
   - blockquote
   - code
-  - callout
 ---
 
 {% set palette = {
@@ -50,10 +49,6 @@ cssComponents:
 <code class="kimCode">{{ mainColorHex }}</code>
 </span>
 {% endmacro %}
-
-{% callout %}
-This website is currently being [redesigned in the open]({{ '/blog/2025-01-11-renovating-in-the-open' | url }}). The information on this page is probably going to be out of date until things have settled down.
-{% endcallout %}
 
 A lot of famous individuals are well known for [always wearing the same clothes](https://edition.cnn.com/2015/10/09/world/gallery/decision-fatigue-same-clothes/index.html). Usually they credit this to reducing "decision fatigue"—not having to choose how to dress every day leaves time to mull over the more important decisions.
 
