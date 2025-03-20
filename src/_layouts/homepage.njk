@@ -113,11 +113,13 @@
               {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
               {{ ring.name }}
             </a><br>
-            <a class="kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
-              ← Previous
+            <a class="kimLink-plain kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
+              {% include "../assets/icons/arrow-e.svg" %}
+              Next
             </a><br>
-            <a class="kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
-              → Next
+            <a class="kimLink-plain kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
+              {% include "../assets/icons/arrow-w.svg" %}
+              Previous
             </a>
           </div>
         </div>
