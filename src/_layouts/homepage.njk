@@ -19,8 +19,9 @@
  */
 .page-blog {
   margin-block-end: var(--space-7);
-  border-block: var(--border-regular) dashed var(--color-furniture);
+  border: var(--border-regular) solid var(--color-furniture);
   background-color: var(--color-surface);
+  background-image: linear-gradient(to bottom right in oklch, var(--color-surface-accent), var(--color-surface));
 }
 .page-blog-noodle,
 .page-about-noodle {
@@ -51,9 +52,9 @@
   </div>
 </header>
   
-<section class="page-blog" id="blog" aria-labelledby="blog-heading">
+<section id="blog" aria-labelledby="blog-heading">
   <div class="kimWrapper">
-    <div class="kimGrid">
+    <div class="kimGrid page-blog">
       <div class="page-blog-noodle kimGrid_column kimGrid_column-full nx:kimGrid_column-oneQuarter">
         {% responsiveImage "./src/assets/images/noodle-blog.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It sits on the ground, hunched over a stickerbombed laptop, deep in thought.", { sizes: "25vi" } %}
       </div>

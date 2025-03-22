@@ -1,7 +1,8 @@
+@use "sass:color";
+
 :root {
   // Font families
-  --font-body:
-    "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
+  --font-body: "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   --font-heading: var(--font-body);
   --font-code: "Space Mono", monospace, monospace;
@@ -67,8 +68,12 @@
   );
   --color-canvas: light-dark(var(--c-white), var(--c-dark-purple));
   --color-surface: light-dark(
-    color-mix(in hsl, var(--c-dark-green) 7%, var(--color-canvas)),
-    color-mix(in hsl, var(--c-purple) 25%, var(--color-canvas))
+    #{color.change(#786999, $lightness: 96%)},
+    #{color.change(#786999, $lightness: 15%)}
+  );
+  --color-surface-accent: light-dark(
+    #{color.change(#00fa17, $lightness: 94%)},
+    #{color.change(#00fa17, $lightness: 15%)}
   );
   --color-furniture: var(--c-purple);
   --color-link: light-dark(var(--c-dark-green), var(--c-green));
