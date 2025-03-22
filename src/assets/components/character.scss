@@ -12,6 +12,11 @@
   background-color: var(--color-furniture);
   align-self: flex-start;
   align-items: flex-end;
+
+  @media (forced-colors: active) {
+    border: var(--border-regular) solid transparent;
+    border-bottom: none;
+  }
 }
 
 .kimCharacter_image {
@@ -25,6 +30,10 @@
   margin: 0;
   padding: var(--space-3);
   background-color: var(--color-surface);
+
+  @media (forced-colors: active) {
+    border: var(--border-regular) solid transparent;
+  }
 
   :last-child {
     margin-block-end: 0;

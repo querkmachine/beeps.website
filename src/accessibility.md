@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Accessibility statement
-updated: 2025-03-20
+updated: 2025-03-22
 metadata:
   description: Accessibility compliance, known issues, and how to report issues.
 cssComponents:
@@ -43,7 +43,6 @@ Some pages feature content embedded from third-party sources, such as YouTube. A
 
 These issues do not constitute a failure under WCAG 2.2 Level AA criteria, however may still represent a degraded experience or accessibility barrier to users.
 
-- The edges of character callout boxes aren't visible in forced colours mode, making it difficult to distinguish them from surrounding text.
 - The bottom border of the website header isn't visible in forced colours mode.
 - The icon of the navigation menu button isn't visible in forced colours mode.
 - The about and now pages use system emoji as iconography. Not all devices are capable of rendering emoji or the full range of emoji. Additionally, these may create a confusing and overly verbose experience for screen reader users.
