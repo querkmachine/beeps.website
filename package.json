@@ -41,7 +41,7 @@
     "postcss": "^8.5.3",
     "postcss-preset-env": "^10.1.5",
     "prettier": "^3.5.3",
-    "sanitize-html": "^2.14.0",
+    "sanitize-html": "^2.15.0",
     "sass": "^1.85.1"
   },
   "lint-staged": {
