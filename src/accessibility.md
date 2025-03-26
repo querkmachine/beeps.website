@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Accessibility statement
-updated: 2025-03-22
+updated: 2025-03-26
 metadata:
   description: Accessibility compliance, known issues, and how to report issues.
 cssComponents:
@@ -15,7 +15,7 @@ I want as many people as possible to be able to view and use this website. For e
 - Change colours, contrast levels and fonts using your browser or device settings.
 - Zoom in up to 400% without needing to horizontally scroll to view content.
 - Navigate most of the website using just a keyboard, mouse, or speech recongition software.
-  Listen to most of the website using a screen reader.
+- Listen to most of the website using a screen reader.
 
 If you have a disability and need advice on making your device easier to use, AbilityNet publishes [simple 'how to' guides on how to change your device settings](https://mcmw.abilitynet.org.uk/).
 
@@ -46,6 +46,7 @@ These issues do not constitute a failure under WCAG 2.2 Level AA criteria, howev
 - The bottom border of the website header isn't visible in forced colours mode.
 - The icon of the navigation menu button isn't visible in forced colours mode.
 - The about and now pages use system emoji as iconography. Not all devices are capable of rendering emoji or the full range of emoji. Additionally, these may create a confusing and overly verbose experience for screen reader users.
+- The GOV.UK browser data page requires two-dimensional scrolling to view the full content of data tables. This isn't a failure under [WCAG's Reflow criterion](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html), which has an exception for data tables, but may be difficult for some users to navigate.
 
 ## Preparation of this accessibility statement
 
