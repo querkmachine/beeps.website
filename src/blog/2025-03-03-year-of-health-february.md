@@ -4,6 +4,10 @@ date: 2025-03-03
 tags: [yearly theme, medical]
 metadata:
   description: Wherein things go a little off the rails.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "114100844374920722"
 ---
 
 First up, read [the last blog post]({{ '/blog/2025-02-07-year-of-health-twist/' | url }}) if you haven't already. Done that? Good.
