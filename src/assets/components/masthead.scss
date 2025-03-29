@@ -83,41 +83,37 @@
 
   position: relative;
   color: var(--color-link);
+  box-shadow: 0 var(--bottom-spacing) 0 currentcolor;
   cursor: pointer;
 
-  &::before,
+  svg {
+    inline-size: 0.75em;
+    block-size: 0.75em;
+    margin-inline-end: var(--space-1);
+  }
+
   &::after {
     content: "";
     display: inline-block;
   }
 
-  &::before {
-    block-size: var(--icon-size);
-    inline-size: var(--icon-size);
-    margin-inline-end: var(--space-2);
-    background-image: repeating-linear-gradient(
-      to bottom,
-      currentcolor,
-      currentcolor calc(var(--icon-size) * 0.2),
-      transparent calc(var(--icon-size) * 0.2),
-      transparent calc(var(--icon-size) * 0.4)
-    );
-  }
-
   &::after {
     position: absolute;
     inset: calc(var(--space-2) * -1);
+
+    @media (forced-colors: active) {
+      border: 2px solid transparent;
+    }
   }
 
   &:hover {
     color: var(--color-link-hover);
-    box-shadow: 0 var(--bottom-spacing) 0 currentcolor;
   }
 
   &[aria-expanded="true"] {
     box-shadow: 0 var(--bottom-spacing) 0 var(--color-furniture);
 
-    &::before {
+    svg {
       transform: rotate(90deg);
     }
   }

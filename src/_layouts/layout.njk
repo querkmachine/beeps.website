@@ -69,7 +69,10 @@
           </a>
         {%- endif %}
         <a class="kimMasthead_menu-link" href="{{ '/navigation/' | url }}">Sitemap</a>
-        <button class="kimMasthead_menu-toggle" type="button" aria-controls="navigation" hidden>Menu</button>
+        <button class="kimMasthead_menu-toggle" type="button" aria-controls="navigation" hidden>
+          {% include "../assets/icons/menu.svg" %}
+          Menu
+        </button>
       </div>
     </header>
     <hr class="kim-!-visually-hidden">
