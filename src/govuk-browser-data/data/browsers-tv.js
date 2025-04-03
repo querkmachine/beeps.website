@@ -156,4 +156,14 @@ export default {
     nintendo: 4,
     "playstation-4": 2,
   },
+  "2025-03": {
+    silk: 1569,
+    chrome: 1347,
+    "android-webview": 591,
+    safari: 535,
+    opera: 150,
+    edge: 21,
+    firefox: 8,
+    nintendo: 7,
+  },
 };
