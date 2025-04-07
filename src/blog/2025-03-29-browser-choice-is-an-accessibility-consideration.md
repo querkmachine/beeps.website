@@ -35,7 +35,7 @@ The [draft Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/) i
 
 The same story happens over and over again. The [Web USB API](https://wicg.github.io/webusb/) (in Chromium since September 2017), [Keyboard Map](https://wicg.github.io/keyboard-map/) and [Keyboard Lock](https://wicg.github.io/keyboard-lock/) APIs (July 2018), [WebXR API](https://immersive-web.github.io/webxr/) (December 2019), [Serial API](https://wicg.github.io/serial/) (March 2021), [Idle Detection API](https://wicg.github.io/idle-detection/) (September 2021), and probably many more... all predominantly or entirely created by Google staffers, all implemented in Chromium despite a lack of input from, if not outright objections by, other browser vendors.
 
-And this sucks for web standards, because something being included in the most popular browser means that a sizeable chunk of developers immediately treat it as widely available, and begin implementing it into things, which makes changes to the specification even harder for other vendors to .
+And this sucks for web standards, because something being included in the most popular browser means that a sizeable chunk of developers immediately treat it as widely available, and begin implementing it into things, which makes changes to the specification even harder for other vendors to contribute.
 
 Google isn't the only browser vendor guilty of this kind of behaviour, mind. Apple's tendency towards utmost secrecy until something has been publicly announced at an Apple Event means that their draft specifications typically aren't published until something is already in Safari's beta track too. Google just does it much more brazenly.
 
