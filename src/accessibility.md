@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Accessibility statement
-updated: 2025-03-26
+updated: 2025-04-08
 metadata:
   description: Accessibility compliance, known issues, and how to report issues.
 cssComponents:
@@ -29,7 +29,10 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations
 
-The borders of currently selected tabs (in tab groups) don't have a 3:1 minimum contrast ratio against the background, failing [WCAG's Use of Color criterion](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html).
+These are known areas where the website does not meet the WCAG 2.2 level AA standard.
+
+- The borders of currently selected tabs (in tab groups) don't have a 3:1 minimum contrast ratio against the background, failing [WCAG's Use of Color criterion](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color).
+- The headline of the homepage uses container query units for font sizing. When zooming in, this can prevents the headline text from increasing in size once the container is as wide as the viewport, failing [WCAG's Resize Text criterion](https://www.w3.org/WAI/WCAG22/Understanding/resize-text).
 
 ### Disproportionate burden
 
@@ -44,7 +47,6 @@ Some pages feature content embedded from third-party sources, such as YouTube. A
 These issues do not constitute a failure under WCAG 2.2 Level AA criteria, however may still represent a degraded experience or accessibility barrier to users.
 
 - The bottom border of the website header isn't visible in forced colours mode.
-- The icon of the navigation menu button isn't visible in forced colours mode.
 - The about and now pages use system emoji as iconography. Not all devices are capable of rendering emoji or the full range of emoji. Additionally, these may create a confusing and overly verbose experience for screen reader users.
 - The GOV.UK browser data page requires two-dimensional scrolling to view the full content of data tables. This isn't a failure under [WCAG's Reflow criterion](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html), which has an exception for data tables, but may be difficult for some users to navigate.
 
