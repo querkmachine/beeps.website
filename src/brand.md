@@ -1,7 +1,7 @@
 ---
 layout: brand.njk
 title: beeps' brand
-updated: 2025-01-14
+updated: 2025-04-19
 metadata:
   description: The style guide for my personal projects, including this website.
 cssComponents:
@@ -10,29 +10,14 @@ cssComponents:
   - code
 ---
 
-{% set palette = {
-  white: "#ffffff",
-  "off-black": "#334139",
-  "purple": "#786999",
-  "dark-purple": "#2a2536",
-  "pale-purple": "#3d364f",
-  "green": "#00fa17",
-  "green-alt": "#12c873",
-  "dark-green": "#12803b",
-  "dark-green-alt": "#2baf5d",
-  "pale-green": "#f2f3f2",
-  "light-grey": "#d4d4d7",
-  "dark-grey": "#586b60"
-} %}
-
 {% set colourAssignments = [
-  { name: "Text", dark: "white", light: "off-black" },
-  { name: "Supporting text", dark: "light-grey", light: "dark-grey" },
-  { name: "Accent text and links", dark: "green", light: "dark-green" },
-  { name: "Hovered and visited links", dark: "green-alt", light: "dark-green-alt" },
-  { name: "Canvas", dark: "dark-purple", light: "white" },
-  { name: "Surface", dark: "pale-purple", light: "pale-green" },
-  { name: "Page furniture", dark: "purple", light: "purple" }
+  { name: "Text", dark: "#ffffff", light: "#334139" },
+  { name: "Supporting text", dark: "#d4d4d7", light: "#586b60" },
+  { name: "Accent text and links", dark: "#00fa17", light: "#12803b" },
+  { name: "Hovered and visited links", dark: "#12c873", light: "#2baf5d" },
+  { name: "Canvas", dark: "#2a2536", light: "#ffffff" },
+  { name: "Surface", dark: "#3d364f", light: "#f4f3f7" },
+  { name: "Page furniture", dark: "#786999", light: "#786999" }
 ] %}
 
 <style>
@@ -43,10 +28,10 @@ cssComponents:
 }
 </style>
 
-{% macro _swatch(mainColorName, mainColorHex) %}
+{% macro _swatch(hex) %}
 <span class="page-swatch">
-<span class="page-swatch__preview" style="background-color: var(--brand-color-{{ mainColorName }});"></span>
-<code class="kimCode">{{ mainColorHex }}</code>
+<span class="page-swatch__preview" style="background-color: {{ hex }};"></span>
+<code class="kimCode">{{ hex }}</code>
 </span>
 {% endmacro %}
 
@@ -117,6 +102,7 @@ Some custom made icons for custom made uses.
   "arrow-sw",
   "arrow-w",
   "arrow-nw",
+  "menu",
   "rss"
 ] -%}
 
