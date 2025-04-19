@@ -5,11 +5,6 @@
   {% set cssComponents = merge(cssComponents, ['interaction-list']) %}
 {%- endif %}
 
-{# Has comments, include that and prose styles #}
-{%- if comments %}
-  {% set cssComponents = merge(cssComponents, ['comment', 'prose']) %}
-{%- endif %}
-
 {% extends 'src/_layouts/layout.njk' %}
 
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
@@ -84,9 +79,8 @@
           
           <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds" itemprop="articleBody">
             {{ content | safe }}
-            <p class="kimBody-s">
-              Thought this was neat? Why not
-              <a class="kimLink" href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url" data-js="share">share a link to this page</a>?
+            <p class="kim-!-visually-hidden">
+              <a href="{{ page.url | absoluteUrl(site.domain) }}" itemprop="url">Link to this post</a>
             </p>
           </div>
         </div>
@@ -94,48 +88,34 @@
       </article>
       
       {%- if interactions %}
-        <div class="kimGrid kim-!-doNotPrint">
+        <hr class="kimRule kimRule-regular kimRule-fancy">
+        
+        <div class="kimGrid kim-!-doNotPrint" id="interactions">
+        
+          <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+            <h2 class="kimHeading-s">Liked this?</h2>
+            <p class="kimBody">Consider <a class="kimLink" href="{{ page.url | absoluteUrl(site.domain) }}" data-js="share">sharing a link to this post</a>.</p>
+            <p class="kimBody">You can <a class="kimLink" href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">favourite, share or reply to this post on the fediverse</a>.</p>
+          </div>
           
-          {%- if (stats.favourites > 0) or (stats.shares > 0) %}
-            <section id="interactions" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-              <hr class="kimRule kimRule-thick">
-    
-              {%- if stats.favourites > 0 %}
-                <h2 class="kimHeading-s">
+            {%- if stats.favourites > 0 %}
+              <section class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+                <h3 class="kimHeading-s">
                   {{ stats.favourites }} {{ 'favourite' if stats.favourites == 1 else 'favourites' }}
-                </h2>
+                </h3>
                 {{ kimInteractionList(favourites, stats.favourites) }}
-              {%- endif %}
-    
-              {%- if stats.shares > 0 %}
-                <h2 class="kimHeading-s">
-                  {{ stats.shares }} {{ 'share' if stats.shares == 1 else 'shares' }}
-                </h2>
-                {{ kimInteractionList(shares, stats.shares) }}
-              {%- endif %}
-    
-            </section>
-          {%- else %}
-            {# Placeholder column if there's nothing to actually show here. Not ideal, but eeeeeeh. #}
-            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird" aria-hidden="true">
-              <hr class="kimRule kimRule-thick">
-            </div>
-          {%- endif %}
-          
-          <section id="comments" class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-            <hr class="kimRule kimRule-thick">
-            
-            <h2 class="kimHeading-s">
-              Comments
-            </h2>
-            <p class="kimBody"><strong>Thoughts? Questions?</strong> You can favourite, share or comment on this post by <a class="kimLink" href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">replying to it on the fediverse</a>.</p>
-            
-            {%- if comments %}
-            {% from "src/_includes/blog-comments.njk" import kimBlogComments %}
-            {{ kimBlogComments(comments) }}
+              </section>
             {%- endif %}
-            
-          </section>
+    
+            {%- if stats.shares > 0 %}
+              <section class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+                <h3 class="kimHeading-s">
+                  {{ stats.shares }} {{ 'share' if stats.shares == 1 else 'shares' }}
+                </h3>
+                {{ kimInteractionList(shares, stats.shares) }}
+              </section>
+            {%- endif %}
+          
         </div>
       {%- endif %}
       

@@ -9,7 +9,7 @@ export default class Share {
     $module.addEventListener("click", this.onClick.bind(this));
 
     // Override the link text to what the new function is
-    $module.innerText = "share this page";
+    $module.innerText = "sharing this page";
 
     this.$module = $module;
   }
