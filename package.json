@@ -35,13 +35,13 @@
     "husky": "^9.1.7",
     "jsdom": "^26.0.0",
     "lint-staged": "^15.5.1",
-    "luxon": "^3.6.0",
+    "luxon": "^3.6.1",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "postcss": "^8.5.3",
     "postcss-preset-env": "^10.1.5",
     "prettier": "^3.5.3",
-    "sanitize-html": "^2.15.0",
+    "sanitize-html": "^2.16.0",
     "sass": "^1.86.3"
   },
   "lint-staged": {
