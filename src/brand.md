@@ -1,7 +1,7 @@
 ---
 layout: brand.njk
 title: beeps' brand
-updated: 2025-01-14
+updated: 2025-04-19
 metadata:
   description: The style guide for my personal projects, including this website.
 cssComponents:
@@ -20,7 +20,7 @@ cssComponents:
   "green-alt": "#12c873",
   "dark-green": "#12803b",
   "dark-green-alt": "#2baf5d",
-  "pale-green": "#f2f3f2",
+  "pale-purple": "#f4f3f7",
   "light-grey": "#d4d4d7",
   "dark-grey": "#586b60"
 } %}
@@ -31,7 +31,7 @@ cssComponents:
   { name: "Accent text and links", dark: "green", light: "dark-green" },
   { name: "Hovered and visited links", dark: "green-alt", light: "dark-green-alt" },
   { name: "Canvas", dark: "dark-purple", light: "white" },
-  { name: "Surface", dark: "pale-purple", light: "pale-green" },
+  { name: "Surface", dark: "pale-purple", light: "pale-purple" },
   { name: "Page furniture", dark: "purple", light: "purple" }
 ] %}
 
@@ -117,6 +117,7 @@ Some custom made icons for custom made uses.
   "arrow-sw",
   "arrow-w",
   "arrow-nw",
+  "menu",
   "rss"
 ] -%}
 
