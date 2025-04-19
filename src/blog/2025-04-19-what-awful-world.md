@@ -6,6 +6,10 @@ metadata:
   description: A speech.
 cssComponents:
   - blockquote
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "114366503442186811"
 ---
 
 An impromptu speech, given in front of a crowd of a few hundred people protesting against the Supreme Court ruling regarding the Equality Act and how it applies to transgender people, today around 3:45pm.

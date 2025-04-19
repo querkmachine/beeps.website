@@ -7,6 +7,10 @@ metadata:
 cssComponents:
   - figure
   - callout
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "114352553484421659"
 ---
 
 {% callout %}

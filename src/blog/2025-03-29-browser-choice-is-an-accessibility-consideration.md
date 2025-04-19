@@ -6,6 +6,10 @@ metadata:
   description: Let people use the browser they want, they probably have good reasons.
 cssComponents:
   - callout
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "114247856005471562"
 ---
 
 In the last couple of years, there's been a growing distaste amongst the more techy crowd towards Google Chrome and the prevalence of other Chromium project-based web browsers.
