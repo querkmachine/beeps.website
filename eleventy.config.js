@@ -5,7 +5,6 @@ import site from "./src/_data/site.js";
 // 11ty plugins
 import loggingPlugin from "@11ty/eleventy-plugin-directory-output";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import tocPlugin from "eleventy-plugin-toc";
 
 // Helpful functions that do stuff
 import {
@@ -55,7 +54,6 @@ export default function (eleventyConfig) {
 
   // Load plugins
   eleventyConfig.addPlugin(loggingPlugin);
-  eleventyConfig.addPlugin(tocPlugin);
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",
