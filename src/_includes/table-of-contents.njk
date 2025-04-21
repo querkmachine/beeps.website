@@ -16,7 +16,7 @@
 {%- if toc | length > 0%}
 <nav class="kimToc" aria-labelledby="toc-heading">
   <h2 class="kimBody kimToc_heading" id="toc-heading">Contents</h2>
-  <ul class="kimList kimBody-s">
+  <ul class="kimList kimBody-s kimToc_list">
     {%- for i in toc %}
       {{ _tocItem(i) }}
     {%- endfor %}

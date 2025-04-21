@@ -11,38 +11,7 @@
   margin-block-end: var(--space-2);
 }
 
-.kimToc_inner {
+.kimToc_list {
   max-block-size: calc(100vh - var(--space-9));
   overflow-y: scroll;
-}
-
-// I wish the Eleventy plugin gave me more control over the output code, so I
-// wouldn't have to duplicate a bunch of styles from elsehwere to here. Ho hum.
-
-.kimToc_inner ol {
-  margin: 0;
-  margin-block-end: var(--space-5);
-  padding: 0;
-  font-size: var(--size--1);
-  list-style-type: none;
-
-  ol {
-    padding-inline-start: var(--space-5);
-    margin-block: var(--space-1);
-
-    li::before {
-      content: "\2014";
-      margin-inline-start: calc(0px - var(--space-5));
-      float: left;
-      color: var(--color-text-subtle);
-    }
-  }
-}
-
-.kimToc_inner li + li {
-  margin-block-start: var(--space-1);
-}
-
-.kimToc_inner a {
-  @include links.link-helper($initial-underline: false);
 }
