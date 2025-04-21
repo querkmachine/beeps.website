@@ -1,6 +1,25 @@
-{%- if (content | toc) %}
-  <nav class="kimToc" aria-labelledby="toc-heading">
-    <h2 class="kimBody kimToc_heading" id="toc-heading">Contents</h2>
-    {{ content | toc('{"tags": ["h2", "h3"], "wrapper": "div", "wrapperClass": "kimToc_inner"}') | safe }}
-  </nav>
+{%- macro _tocItem(item) %}
+  <li>
+    <a class="kimLink-plain" href="#{{ item.id }}">{{ item.html | safe }}</a>
+    {%- if item.children | length > 0 %}
+      <ul class="kimList kim-!-margin-inline-start-4 kim-!-margin-block-start-1 kim-!-margin-block-end-0">
+        {%- for ci in item.children %}
+          {{ _tocItem(ci) }}
+        {%- endfor %}
+      </ul>
+    {%- endif %}
+  </li>
+{%- endmacro %}
+
+{%- set toc = getTableOfContents(content) %}
+
+{%- if toc | length > 0%}
+<nav class="kimToc" aria-labelledby="toc-heading">
+  <h2 class="kimBody kimToc_heading" id="toc-heading">Contents</h2>
+  <ul class="kimList kimBody-s">
+    {%- for i in toc %}
+      {{ _tocItem(i) }}
+    {%- endfor %}
+  </ul>
+</nav>
 {%- endif %}

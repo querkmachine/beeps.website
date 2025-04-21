@@ -24,6 +24,7 @@ import {
 } from "./config/markdown.js";
 import { urlizeOpenGraphImage } from "./config/opengraph.js";
 import { compileStylesheets } from "./config/sass.js";
+import { getTableOfContents } from "./config/tableOfContents.js";
 import {
   cachebustAssetUrl,
   formatDate,
@@ -108,6 +109,7 @@ export default function (eleventyConfig) {
 
   // Custom Nunjucks functions
   eleventyConfig.addNunjucksGlobal("merge", mergeArrays);
+  eleventyConfig.addNunjucksGlobal("getTableOfContents", getTableOfContents);
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
