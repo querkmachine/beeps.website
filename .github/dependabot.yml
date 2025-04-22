@@ -31,6 +31,7 @@ updates:
         patterns:
           - "highlight.js"
           - "luxon"
+          - "node-html-parser"
           - "sanitize-html"
 
   - package-ecosystem: github-actions

@@ -5,7 +5,6 @@ import site from "./src/_data/site.js";
 // 11ty plugins
 import loggingPlugin from "@11ty/eleventy-plugin-directory-output";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import tocPlugin from "eleventy-plugin-toc";
 
 // Helpful functions that do stuff
 import {
@@ -24,6 +23,7 @@ import {
 } from "./config/markdown.js";
 import { urlizeOpenGraphImage } from "./config/opengraph.js";
 import { compileStylesheets } from "./config/sass.js";
+import { getTableOfContents } from "./config/tableOfContents.js";
 import {
   cachebustAssetUrl,
   formatDate,
@@ -54,7 +54,6 @@ export default function (eleventyConfig) {
 
   // Load plugins
   eleventyConfig.addPlugin(loggingPlugin);
-  eleventyConfig.addPlugin(tocPlugin);
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",
@@ -108,6 +107,7 @@ export default function (eleventyConfig) {
 
   // Custom Nunjucks functions
   eleventyConfig.addNunjucksGlobal("merge", mergeArrays);
+  eleventyConfig.addNunjucksGlobal("getTableOfContents", getTableOfContents);
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
