@@ -45,7 +45,7 @@ This is in addition to all sorts of other small stories, accessibility improveme
 
 I've also [discovered and reported a healthy cache of browser and assistive technology bugs](https://github.com/alphagov/reported-bugs/issues?q=+is:issue+author:querkmachine) to the likes of Apple, Google and Mozilla.
 
-Apart from development-y tasks, I've been staff and moderator for both of the [Design System Day 2022](https://design-system.service.gov.uk/community/design-system-day-2022/) and [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day-2023/) conferences organised by the Design System team.
+Apart from development-y tasks, I've been staff and moderator for both of the [Design System Day 2022](https://design-system.service.gov.uk/community/design-system-day-2022/) and [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day-2023/) conferences organised by the Design System team, and contribute to the [WCAG Primer](https://github.com/alphagov/wcag-primer) project.
 
 ### At Felinesoft (2014–2022)
 
@@ -69,7 +69,7 @@ We also did some work on the side, producing campaign websites and materials for
 
 Goram & Vincent (at the time when I worked there, at least) is a small, agile full-service agency that do everything from branding and graphic design to website development and video production. I worked there as a full-stack developer during my degree's industrial placement year.
 
-During my time there, I worked on simple campaign websites for Continental Tyres and Glorious Brands; built content-content managed sites for the BMJ and Beeston Media; developed a store locator for Stila; designed an ecommerce platform for Shiner; and wrote Ruby as I maintained the MyDrinkaware tracking app.
+During my time there, I worked on simple campaign websites for Continental Tyres and Glorious Brands; built content-managed sites for the BMJ and Beeston Media; developed a store locator for Stila; designed an ecommerce platform for Shiner; and wrote a teeny bit of Ruby as I maintained the MyDrinkaware tracking app.
 
 ### Community and volunteer projects
 
