@@ -83,7 +83,6 @@
 
   position: relative;
   color: var(--color-link);
-  box-shadow: 0 var(--bottom-spacing) 0 currentcolor;
   cursor: pointer;
 
   svg {
@@ -108,6 +107,7 @@
 
   &:hover {
     color: var(--color-link-hover);
+    box-shadow: 0 var(--bottom-spacing) 0 var(--color-link-hover);
   }
 
   &[aria-expanded="true"] {

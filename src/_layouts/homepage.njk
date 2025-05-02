@@ -1,4 +1,4 @@
-{% set cssComponents = merge(cssComponents, ["callout", "splash", "webring", "button-grid", "blog-card"]) %}
+{% set cssComponents = merge(cssComponents, ["splash", "webring", "button-grid", "blog-card"]) %}
 
 {% extends 'src/_layouts/layout.njk' %}
 
@@ -25,7 +25,7 @@
 }
 .page-blog-noodle,
 .page-about-noodle {
-  margin-block-start: -5%;
+  margin-block: -5%;
 }
 .page-blog-heading {
   margin-block-start: var(--space-5);
@@ -35,7 +35,7 @@
  * About
  */
 .page-about {
-  margin-block-end: var(--space-8-9);
+  margin-block-end: var(--space-7);
 }
 
 /**
@@ -89,18 +89,16 @@
 <section id="blog" aria-labelledby="blog-heading">
   <div class="kimWrapper">
     <div class="kimGrid page-blog">
-      <div class="page-blog-noodle kimGrid_column kimGrid_column-full nx:kimGrid_column-oneQuarter">
+      <div class="page-blog-noodle kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
         {% responsiveImage "./src/assets/images/noodle-blog.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It sits on the ground, hunched over a stickerbombed laptop, deep in thought.", { sizes: "25vi" } %}
       </div>
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-threeQuarters">
+      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
         <h2 class="kimHeading-m page-blog-heading" id="blog-heading">Recent blog posts</h2>
-        <div class="kimGrid">
+        <ol class="kimList kimList-spaced">
           {% for post in collections.blog | reverse | head(3) %}
-            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-block-end-3">
-              {{ kimBlogCard(post, { element: "div" }) }}
-            </div>
+            {{ kimBlogCard(post) }}
           {% endfor %}
-        </div>
+        </ol>
         <p class="kimBody">
           {{ kimJumpLink({
             href: "/blog/",
