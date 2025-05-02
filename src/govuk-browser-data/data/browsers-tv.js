@@ -166,4 +166,15 @@ export default {
     firefox: 8,
     nintendo: 7,
   },
+  "2025-04": {
+    silk: 1628,
+    chrome: 1359,
+    "android-webview": 514,
+    safari: 507,
+    opera: 122,
+    firefox: 20,
+    nintendo: 4,
+    edge: 2,
+    yandex: 1,
+  },
 };
