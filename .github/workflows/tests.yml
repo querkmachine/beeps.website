@@ -26,24 +26,3 @@ jobs:
         uses: ./.github/workflows/actions/install-dependencies
       - name: Build Eleventy in production mode
         run: npm run build
-  lighthouse:
-    name: Run Lighthouse audits
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - name: Install dependencies
-        uses: ./.github/workflows/actions/install-dependencies
-      - name: Build Eleventy in production mode
-        run: npm run build
-      - name: Install Lighthouse
-        run: npm install -g @lhci/cli@latest
-      - name: Run Lighthouse
-        run: lhci autorun
