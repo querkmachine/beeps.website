@@ -1,7 +1,7 @@
 ---
 title: Otherkin-friendly CAPTCHAs, revisited
 date: 2023-04-27
-updated: 2025-04-29
+updated: 2025-05-09
 tags: [self-identity, web development]
 metadata:
   description: Using userstyles to make CAPTCHAs more respectful of non-human identities.
@@ -41,13 +41,15 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
  * (3) Cloudflare Turnstile
  * (4) Microsoft CAPTCHA
  * (5) Friendly Captcha
+ * (6) ALTCHA
  */
  
 /* 1 */ #recaptcha-anchor-label,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label,
 /* 3 */ div#content div#challenge-stage div.cb-c label.cb-lb span.cb-lb-t,
 /* 4 */ #root > .box > .box > p[data-theme="home.instructions"],
-/* 5 */ .text:is([data-loc="t_ready"], [data-loc="t_completed"]) {
+/* 5 */ .text:is([data-loc="t_ready"], [data-loc="t_completed"]),
+/* 6 */ label[for="altcha_checkbox"] {
   font-size: 0 !important;
   line-height: 0 !important;
 }
@@ -56,7 +58,8 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label::before,
 /* 3 */ div#content div#challenge-stage div.cb-c label.cb-lb span.cb-lb-t::before,
 /* 4 */ #root > .box > .box > p[data-theme="home.instructions"]::before,
-/* 5 */ .text:is([data-loc="t_ready"], [data-loc="t_completed"])::before {
+/* 5 */ .text:is([data-loc="t_ready"], [data-loc="t_completed"])::before,
+/* 6 */ label[for="altcha_checkbox"]::before {
   font-size: 14px;
   line-height: 1.2;
 }
@@ -64,8 +67,9 @@ Perhaps unsurprisingly, I know a lot of folks who feel the same way and have ask
 /* 1 */ #recaptcha-anchor-label::before,
 /* 2 */ body > div#anchor > div.label-container > label-td > label-tc > div#label::before,
 /* 3 */ div#content div#challenge-stage div.cb-c label.cb-lb span.cb-lb-t::before,
-/* 5 */ .text[data-loc="t_ready"]::before {
-  /* Message that usually appears next to a checkbox. */
+/* 5 */ .text[data-loc="t_ready"]::before,
+/* 6 */ label[for="altcha_checkbox"]::before {
+  /* Message that usually appears next to a challenge. */
   content: "I'm a robot";
 }
 
@@ -87,8 +91,16 @@ If there are other CAPTCHA systems that aren't included yet, let me know! I'll t
 
 Thanks again to [mavica](https://maple.pet). Why not check out bytes [Netizen link cache](https://links.netizen.club)? It makes me wanna make some 88&times;31 pixel buttons.
 
+## Caveats
+
+A few caveats:
+
+- Cloudflare seemingly operates a few different versions of Turnstile. While looking similar,they have different underlying code. I try to keep on top of them, but Turnstile is also the hardest CAPTCHA to consistently reproduce, so it's pretty likely that the override won't always work.
+- ALTCHA is a self-hosted CAPTCHA that can be heavily customised by the user. Although the userstyle _should_ still override the text, it won't look seamless in all instances.
+
 ## Updates
 
 - 2023-12-12: Updated to add [Friendly Captcha](https://friendlycaptcha.com/) support and restructure the code a little.
 - 2024-05-17: Code updated to account for updates to Cloudflare Turnstile. Thanks to rk for helping identify the changes.
 - 2025-04-29: Updated to account for changes to Friendly Captcha.
+- 2025-05-09: Added ALTCHA and caveats section.
