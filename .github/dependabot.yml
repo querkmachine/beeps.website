@@ -3,7 +3,6 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: /
-    reviewers: [querkmachine]
     schedule:
       interval: "weekly"
     allow:
