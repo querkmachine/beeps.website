@@ -1,0 +1,104 @@
+{% extends 'src/_layouts/blank.njk' %}
+
+{% block head %}
+  <meta name="robots" content="noindex">
+  <style>
+    body {
+      margin: 0;
+      background-color: var(--color-canvas);
+    }
+    
+    #chart {
+      inline-size: 100%;
+      block-size: 25rem;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <canvas id="chart" role="img" aria-label="{{ title }}"></canvas>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>const data = {{ content | safe }}</script>
+  <script>
+    const light = matchMedia("(prefers-color-scheme: light)").matches;
+    const root = getComputedStyle(document.documentElement);
+    const activeLineColor = light ? root.getPropertyValue("--c-dark-green") : root.getPropertyValue("--c-green");
+    const inactiveLineColor = light ? root.getPropertyValue("--c-pale-green") : root.getPropertyValue("--c-dark-green");
+        
+    Chart.defaults.font.family = root.getPropertyValue("--font-code");
+    Chart.defaults.font.size = 14;
+    Chart.defaults.backgroundColor = light ? root.getPropertyValue("--c-white") : root.getPropertyValue("--c-dark-purple");
+    Chart.defaults.color = light ? root.getPropertyValue("--c-off-black") : root.getPropertyValue("--c-white");
+    Chart.defaults.borderColor = root.getPropertyValue("--c-purple");
+  
+    const ctx = document.getElementById('chart');
+    new Chart(ctx, {
+      type: "line",
+      data,
+      options: {
+        maintainAspectRatio: false,
+        layout: {
+          padding: 0,
+        },
+        aspectRatio: 3,
+        elements: {
+          line: {
+            borderColor: activeLineColor,
+          },
+          point: {
+            pointRadius: 6,
+            pointBorderWidth: 3,
+            borderColor: activeLineColor
+          }
+        },
+        scales: {
+          y: {
+            display: false,
+            beginAtZero: true
+          },
+          x: {
+            ticks: {
+              minRotation: 90,
+              maxRotation: 90,
+              font: {
+                size: 12
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              usePointStyle: true,
+              font: {
+                family: root.getPropertyValue("--font-body")
+              }
+            }
+          }
+        },
+        onHover: (e, activeEls, chart) => {
+          if (activeEls.length === 0) {
+            chart.data.datasets.forEach((dataset) => {
+              dataset.borderColor = activeLineColor;
+            });
+            chart.update();
+            return;
+          }
+        
+          const hoveredEl = chart.getElementsAtEventForMode(e, 'point', {
+            intersect: true
+          }, true)[0]
+        
+          chart.data.datasets.forEach((dataset, i) => {
+            dataset.borderColor = (hoveredEl.datasetIndex === i) ? activeLineColor : inactiveLineColor;
+          });
+        
+          chart.update();
+        },
+      }
+    });
+  </script>
+{% endblock %}

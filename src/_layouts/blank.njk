@@ -1,0 +1,47 @@
+{%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
+<!doctype html>
+<html lang="en-GB" class="kimPage">
+<head>
+
+  {#- Preload stuff #}
+  <link rel="preload" as="style" href="{{ webfontUrl }}">
+
+  {#- Technical metadata #}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  {#- Page title #}
+  {%- set pageTitle = (metadata.title or title) -%}
+  {%- set sectionTitle = mastheadSection.text -%}
+  
+  {%- set headTitle %}
+    {{- pageTitle | markdownInline | safe | striptags -}}
+    {%- if not isFullTitle -%}
+      {%- if sectionTitle and (sectionTitle != pageTitle) %} / {{ sectionTitle | markdownInline | safe | striptags }}{% endif %} / {{ site.name }}
+    {%- endif -%}
+  {%- endset %}
+  
+  <title>{{ headTitle }}</title>
+
+  {#- Stylesheets #}
+  <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ webfontUrl }}"></noscript>
+  <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+  
+  {# CSS components #}
+  {%- for item in cssComponents %}
+  <link rel="stylesheet" href="{{ '/assets/components/' + item + '.css' | url | cachebust }}" media="all">
+  {%- endfor %}
+  
+  {% include "src/_includes/page-head.njk" %}
+  
+  {#- Page-specific head content #}
+  {% block head %}{% endblock %}
+  
+</head>
+<body class="kimPage_body">
+
+  {% block main %}{% endblock %}
+  {% block scripts %}{% endblock %}
+  
+</body>
+</html>

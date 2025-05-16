@@ -47,6 +47,12 @@ cssComponents:
   .page-data-table .kimTable_head :is(th, td) {
     vertical-align: bottom;
   }
+  .page-chart-embed {
+    inline-size: 100%;
+    block-size: 25rem;
+    margin-block-end: var(--space-5);
+    border: none;
+  }
 </style>
 {% endblock %}
 
@@ -62,6 +68,7 @@ cssComponents:
   
   <h2 class="kimHeading-l" id="browsers">Browsers</h2>
   <p class="kimBody">Browsers sorted by the recent month's data. Percentage data is as a proportion of all sessions for that month.</p>
+  <iframe class="page-chart-embed" loading="lazy" src="{{ '/govuk-browser-data/charts/browsers-overall/' | url }}" title="Chart of the most popular web browsers over time"></iframe>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
@@ -90,6 +97,7 @@ cssComponents:
   
   <h3 class="kimHeading-m" id="browsers-mobile">Mobile browsers</h3>
   <p class="kimBody">Percentage data is as a proportion of all mobile device sessions for that month.</p>
+  <iframe class="page-chart-embed" loading="lazy" src="{{ '/govuk-browser-data/charts/browsers-mobile/' | url }}" title="Chart of sessions by mobile browsers over time"></iframe>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percent | safe }}</div>
@@ -104,6 +112,7 @@ cssComponents:
   
   <h3 class="kimHeading-m" id="browsers-tablet">Tablet browsers</h3>
   <p class="kimBody">Percentage data is as a proportion of all tablet device sessions for that month.</p>
+  <iframe class="page-chart-embed" loading="lazy" src="{{ '/govuk-browser-data/charts/browsers-tablet/' | url }}" title="Chart of sessions by tablet browsers over time"></iframe>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percent | safe }}</div>
@@ -118,6 +127,7 @@ cssComponents:
   
   <h3 class="kimHeading-m" id="browsers-desktop">Desktop browsers</h3>
   <p class="kimBody">Percentage data is as a proportion of all desktop and laptop device sessions for that month.</p>
+  <iframe class="page-chart-embed" loading="lazy" src="{{ '/govuk-browser-data/charts/browsers-desktop/' | url }}" title="Chart of sessions by desktop computer browsers over time"></iframe>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percent | safe }}</div>
@@ -132,6 +142,7 @@ cssComponents:
   
   <h3 class="kimHeading-m" id="browsers-tv">Smart TV and games console browsers</h3>
   <p class="kimBody">Percentage data is as a proportion of all smart TV and game console sessions for that month.</p>
+  <iframe class="page-chart-embed" loading="lazy" src="{{ '/govuk-browser-data/charts/browsers-tv/' | url }}" title="Chart of sessions by smart TV and games console browsers over time"></iframe>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percent | safe }}</div>
@@ -146,6 +157,7 @@ cssComponents:
   
   <h2 class="kimHeading-l" id="operating-systems">Operating systems</h2>
   <p class="kimBody">Percentage data is as a proportion of all sessions for that month.</p>
+  <iframe class="page-chart-embed" loading="lazy" src="{{ '/govuk-browser-data/charts/operating-systems/' | url }}" title="Chart of sessions by the top operating systems over time"></iframe>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
       <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percent | safe }}</div>
