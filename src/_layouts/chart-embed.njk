@@ -1,0 +1,58 @@
+{% extends 'src/_layouts/unbranded.njk' %}
+
+{% block head %}
+  <meta name="robots" content="noindex">
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <canvas id="chart" role="img" aria-label="{{ title }}"></canvas>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9"></script>
+  <script>const data = {{ content | safe }}</script>
+  <script>
+    const ctx = document.getElementById('chart');
+    new Chart(ctx, {
+      type: "line",
+      data,
+      options: {
+        aspectRatio: 3,
+        animation: {
+            duration: 0
+        },
+        elements: {
+          point: {
+            pointRadius: 6,
+            pointBorderWidth: 3
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            min: 0,
+            max: 1,
+            stacked: true,
+            ticks: {
+              format: {
+                style: 'percent'
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              usePointStyle: true
+            }
+          }
+        }
+      }
+    });
+  </script>
+{% endblock %}

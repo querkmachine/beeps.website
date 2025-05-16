@@ -18,8 +18,64 @@ const browserName = (key) => {
   return dictBrowsers[key] ?? key;
 };
 
+const browserColor = (key) => {
+  const seriesStyles = {
+    "android-webview": { color: "#a4c639", point: "rect", dashed: true },
+    chrome: { color: "#34a853", point: "rect" },
+    edge: { color: "#00a1f1", point: "triangle" },
+    firefox: { color: "#e66000", point: "rectRot" },
+    "mozilla-compatible": { color: "#e6a800" },
+    opera: { color: "#cc0f16", point: "crossRot", radius: 8 },
+    safari: { color: "#777777", point: "circle", radius: 5 },
+    "safari-webview": {
+      color: "#999999",
+      point: "circle",
+      radius: 5,
+      dashed: true,
+    },
+    samsung: { color: "#7781fe", point: "star", radius: 8 },
+    silk: { color: "#00a5b8", point: "cross", radius: 8 },
+    whale: { color: "#06c3a7" },
+    yandex: { color: "#ffcc00", point: "rectRounded", radius: 5 },
+    "not-set": { color: "#dedede", point: "line" },
+  };
+
+  return {
+    fill: "origin",
+    borderColor: seriesStyles[key]?.color ?? "#999999",
+    borderDash: seriesStyles[key]?.dashed ? [5, 5] : undefined,
+    backgroundColor: seriesStyles[key]?.color ?? "#999999",
+    pointBackgroundColor: seriesStyles[key]?.color ?? "#999999",
+    pointStyle: seriesStyles[key]?.point ?? "rectRounded",
+    pointRadius: 0,
+    showLine: false,
+  };
+};
+
 const systemName = (key) => {
   return dictSystems[key] ?? key;
+};
+
+const systemColor = (key) => {
+  const seriesStyles = {
+    android: { color: "#a4c639", point: "rect", dashed: true },
+    "chrome-os": { color: "#34a853", point: "rect" },
+    ios: { color: "#5fc9f8", point: "circle", radius: 5, dashed: true },
+    linux: { color: "#dd4814", point: "rectRot" },
+    macos: { color: "#1d1d1f", point: "circle", radius: 5 },
+    windows: { color: "#0078d7", point: "triangle" },
+  };
+
+  return {
+    fill: "origin",
+    borderColor: seriesStyles[key]?.color ?? "#999999",
+    borderDash: seriesStyles[key]?.dashed ? [5, 5] : undefined,
+    backgroundColor: seriesStyles[key]?.color ?? "#999999",
+    pointBackgroundColor: seriesStyles[key]?.color ?? "#999999",
+    pointStyle: seriesStyles[key]?.point ?? "rectRounded",
+    pointRadius: 0,
+    showLine: false,
+  };
 };
 
 const browserSystemName = (comboKey) => {
@@ -80,7 +136,7 @@ const getAllTableRows = (data) => {
   return Object.keys(data);
 };
 
-const getAllTableColumns = (data) => {
+const getAllTableColumns = (data, filterNotSet = false) => {
   // We need to do some funky stuff here as we want to:
   // 1. Get all column headers that exist in the entire data set, including
   //    ones that might only exist in a single month.
@@ -99,6 +155,11 @@ const getAllTableColumns = (data) => {
   // Loop through the months and then the keys within that month
   for (const month in data) {
     for (const key in data[month]) {
+      // Skip over 'not-set' if configured to
+      if (filterNotSet && key === "not-set") {
+        continue;
+      }
+
       // Add the key to the map with the most recent data, if there is any
       cols.set(key, lastMonthData[key] ?? 0);
     }
@@ -242,9 +303,56 @@ const htmlConvertDataToTable = (data, userConfig = {}) => {
   </table>`;
 };
 
+const chartConvertDataToChartObject = (data, userConfig = {}) => {
+  const defaultConfig = {
+    seriesFormatFunction: (str) => str,
+    seriesStyleFunction: () => null,
+    truncateSeries: 5,
+  };
+  const config = { ...defaultConfig, ...userConfig };
+
+  const datasetColors = ["#786999", "#968AB0", "#B4ACC6", "#D2CDDD", "#F0EEF4"];
+
+  const series = getAllTableColumns(data) ?? []; // Browsers/OSes
+  const dates = getAllTableRows(data) ?? []; // Dates
+  let datasets = [];
+
+  series.forEach((s, i) => {
+    const returnData = [];
+
+    dates.forEach((d) => {
+      const dateTotal = Object.values(data[d]).reduce(
+        (acc, val) => acc + val,
+        0,
+      );
+
+      returnData.push((data[d][s] ?? 0) / dateTotal);
+    });
+
+    datasets.push({
+      label: config.seriesFormatFunction(s),
+      data: returnData,
+      fill: "origin",
+      borderColor: "rgba(0, 0, 0, .1)",
+      backgroundColor: datasetColors[i] ?? "#999999",
+      pointBackgroundColor: datasetColors[i] ?? "#999999",
+      pointStyle: "circle",
+      pointRadius: 0,
+    });
+  });
+
+  return {
+    labels: dates,
+    datasets: datasets.slice(0, config.truncateSeries),
+  };
+};
+
 export default function () {
   return {
     devices: {
+      chart: chartConvertDataToChartObject(dataDeviceTypes, {
+        seriesFormatFunction: deviceName,
+      }),
       raw: htmlConvertDataToTable(dataDeviceTypes, {
         caption: "Device types - raw data",
         columnFormatFunction: deviceName,
@@ -261,6 +369,10 @@ export default function () {
       }),
     },
     systems: {
+      chart: chartConvertDataToChartObject(dataOperatingSystems, {
+        seriesFormatFunction: systemName,
+        seriesStyleFunction: systemColor,
+      }),
       raw: htmlConvertDataToTable(dataOperatingSystems, {
         caption: "Operating systems - raw data",
         columnFormatFunction: systemName,
@@ -297,6 +409,10 @@ export default function () {
     },
     browsers: {
       overall: {
+        chart: chartConvertDataToChartObject(dataBrowsers, {
+          seriesFormatFunction: browserName,
+          seriesStyleFunction: browserColor,
+        }),
         raw: htmlConvertDataToTable(dataBrowsers, {
           caption: "All browsers - raw data",
           columnFormatFunction: browserName,
@@ -313,6 +429,10 @@ export default function () {
         }),
       },
       mobile: {
+        chart: chartConvertDataToChartObject(dataBrowsersMobile, {
+          seriesFormatFunction: browserName,
+          seriesStyleFunction: browserColor,
+        }),
         raw: htmlConvertDataToTable(dataBrowsersMobile, {
           caption: "Mobile browsers - raw data",
           columnFormatFunction: browserName,
@@ -329,6 +449,10 @@ export default function () {
         }),
       },
       tablet: {
+        chart: chartConvertDataToChartObject(dataBrowsersTablet, {
+          seriesFormatFunction: browserName,
+          seriesStyleFunction: browserColor,
+        }),
         raw: htmlConvertDataToTable(dataBrowsersTablet, {
           captions: "Tablet browsers - raw data",
           columnFormatFunction: browserName,
@@ -345,6 +469,10 @@ export default function () {
         }),
       },
       desktop: {
+        chart: chartConvertDataToChartObject(dataBrowsersDesktop, {
+          seriesFormatFunction: browserName,
+          seriesStyleFunction: browserColor,
+        }),
         raw: htmlConvertDataToTable(dataBrowsersDesktop, {
           captions: "Desktop browsers - raw data",
           columnFormatFunction: browserName,
@@ -361,6 +489,10 @@ export default function () {
         }),
       },
       tv: {
+        chart: chartConvertDataToChartObject(dataBrowsersTv, {
+          seriesFormatFunction: browserName,
+          seriesStyleFunction: browserColor,
+        }),
         raw: htmlConvertDataToTable(dataBrowsersTv, {
           captions: "Smart TV and game console browsers - raw data",
           columnFormatFunction: browserName,
