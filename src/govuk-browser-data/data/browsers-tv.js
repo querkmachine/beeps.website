@@ -177,4 +177,15 @@ export default {
     edge: 2,
     yandex: 1,
   },
+  "2025-05": {
+    silk: 1506,
+    chrome: 1330,
+    safari: 499,
+    opera: 188,
+    "android-webview": 168,
+    firefox: 8,
+    nintendo: 8,
+    yandex: 1,
+    phoenix: 1,
+  },
 };
