@@ -15,6 +15,7 @@ export default {
   "nintendo-wiiu": "Nintendo WiiU",
   nokia: "Nokia",
   "not-set": "(not set)",
+  ohos: "OpenHarmony",
   openbsd: "OpenBSD",
   os2: "OS/2",
   palmos: "PalmOS",
