@@ -2,7 +2,8 @@
 
 :root {
   // Font families
-  --font-body: "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
+  --font-body:
+    "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   --font-heading: var(--font-body);
   --font-code: "Space Mono", monospace, monospace;
@@ -56,6 +57,7 @@
   --c-dark-purple: #2a2536;
   --c-green: oklch(85.29% 0.323 142.82);
   --c-dark-green: #12803b;
+  --c-pale-green: #d8eade;
   --c-yellow: #fc0;
 
   // Semantic colours
