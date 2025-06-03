@@ -1,6 +1,7 @@
 ---
 title: A userstyle to hide the numbers on Bluesky
 date: 2024-12-05
+updated: 2025-06-03
 tags: [web development]
 metadata:
   description: Free yourself from the tyranny of subconsciously tying your self-worth to a bunch of digits.
@@ -43,21 +44,26 @@ If you're not sure how to use a user style, check out [my blog post on user styl
   display: none !important;
 }
 
-/* Hide the follower and following links on profiles. */
-[data-testid="profileHeaderFollowersButton"],
-[data-testid="profileHeaderFollowsButton"] {
-  display: none !important;
+/* Hide the follower and following links on profiles and the popups when 
+ * hovering over usernames. */
+[href$="/followers"],
+[href$="/follows"] {
+    display: none !important;
 }
 
-/* ALTERNATIVELY: To hide just the numbers and not the entire links, comment
- * out the above block and uncomment this one. */
-/* [data-testid="profileHeaderFollowersButton"] span:first-child,
-[data-testid="profileHeaderFollowsButton"] span:first-child {
+/* ALTERNATIVELY: To hide just the numbers and not the entire links,
+ * comment out the above block and uncomment this one. */
+/*[href$="/followers"] span:first-child,
+[href$="/follows"] span:first-child {
   display: none !important;
-} */
+}*/
 ```
 <!-- prettier-ignore-end -->
 
 This code is provided as-is and is unlikely to receive future updates.
 
 Personally, I've stopped using Bluesky entirely. If you still want to see my online rambles over there, follow [the bridged fediverse account](https://bsky.app/profile/beeps.gay) instead.
+
+## Updates
+
+- 2025-06-03: Updated to also remove follower and following counts on the popups that appear when hovering over a user name.
