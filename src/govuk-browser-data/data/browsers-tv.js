@@ -1,4 +1,17 @@
 export default {
+  "2023-12": {
+    silk: 2027,
+    chrome: 1044,
+    safari: 630,
+    opera: 263,
+    "android-webview": 151,
+    firefox: 112,
+    edge: 36,
+    nintendo: 12,
+    "not-set": 4,
+    samsung: 1,
+    "android-runtime": 1,
+  },
   "2024-01": {
     silk: 2322,
     chrome: 1075,

@@ -1,4 +1,10 @@
 export default {
+  "2023-12": {
+    mobile: 42603406,
+    desktop: 28196575,
+    tablet: 974469,
+    tv: 4291,
+  },
   "2024-01": {
     mobile: 57553345,
     desktop: 43560230,
