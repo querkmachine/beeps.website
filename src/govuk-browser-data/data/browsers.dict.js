@@ -28,7 +28,7 @@ export default {
   "not-set": "(not set)",
   opera: "Opera",
   "opera-mini": "Opera Mini",
-  palemoon: "PaleMoon",
+  palemoon: "Pale Moon",
   phoenix: "Phoenix",
   "playstation-3": "PlayStation 3 Browser",
   "playstation-4": "PlayStation 4 Browser",
