@@ -1,4 +1,16 @@
 export default {
+  "2023-09": {
+    chrome: 1116,
+    safari: 980,
+    edge: 55,
+    firefox: 97,
+    "android-webview": 91,
+    opera: 401,
+    silk: 2576,
+    "android-runtime": 3,
+    "playstation-4": 15,
+    nintendo: 11,
+  },
   "2023-10": {
     chrome: 1204,
     safari: 949,
