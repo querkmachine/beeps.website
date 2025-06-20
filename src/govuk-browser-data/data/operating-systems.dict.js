@@ -9,7 +9,7 @@ export default {
   lg: "LG",
   linux: "Linux",
   macos: "macOS",
-  mot: "MOT",
+  mot: "Motorola",
   netbsd: "NetBSD",
   "nintendo-3ds": "Nintendo 3DS",
   "nintendo-wiiu": "Nintendo WiiU",
