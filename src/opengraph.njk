@@ -10,11 +10,16 @@ eleventyExcludeFromCollections: true
 {% extends 'src/_layouts/opengraph.njk' %}
 
 {% block head %}
+<style>
+</style>
 {% endblock %}
 
 {% block title %}
   {%- if preview.data.isBlogPost %}
-    <div class="kimHeading-l kim-!-margin-block-start-0">
+    <div class="kimHeading-m kim-!-margin-block-start-0">
+      {{ preview.date | formatDate('human') }}
+    </div>
+    <div class="kimHeading-xl kim-!-margin-block-start-0">
       {{ (preview.data.title or "") | markdownInline | safe }}
     </div>
   {%- elif preview.url == '/' %}
@@ -27,13 +32,5 @@ eleventyExcludeFromCollections: true
     <div class="kimHeading-xl">
       {{ (preview.data.title or "") | markdownInline | safe }}
     </div>
-  {%- endif %}
-{% endblock %}
-
-{% block metadata %}
-  {%- if preview.data.isBlogPost and preview.date %}
-    {{ preview.date | formatDate('human') }}
-  {%- else %}
-    {{ super() }}
   {%- endif %}
 {% endblock %}
