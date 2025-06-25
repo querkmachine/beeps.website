@@ -102,7 +102,7 @@ A bit of hubbub has been made about the cost of the brand refresh, lamenting tha
 
 This perspective only focuses on the logo, and completely ignores the other additions to the brand that are being introduced over time. It ignores that everything was tested, prototyped, refined, and tested again dozens of times with members of the public. It might not be obvious from a single side-by-side graphic, but a lot of time went into interrogating what we had and experimenting with what could be added.
 
-It was the full-time salaried efforts of dozens of design, development,  and delivery specialists for more than a year. By that metric, it's actually quite cheap.
+It was the full-time salaried efforts of dozens of design, development, and delivery specialists for more than a year. By that metric, it's actually quite cheap.
 
 The place we landed was well-considered and intentional. Just because the destination of that journey was a logo that intentionally looks quite similar to the existing one doesn't mean that the money was wasted, or that creating something radically different would have been better value for money.
 
@@ -113,6 +113,8 @@ And hey, [we could've spent £100,000 on utter dogshit](https://www.lancashirete
 {% endcharacter %}
 
 ## What's to come
+
+All of this work is out in the open. You can [read the brand guidelines](https://www.gov.uk/government/publications/govuk-brand-guidelines) yourself, you can [download and play with the assets](https://github.com/alphagov/govuk-brand-assets) as you please.
 
 As mentioned before, today is just square one of what's to come. 
 
