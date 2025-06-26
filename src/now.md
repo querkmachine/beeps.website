@@ -26,6 +26,8 @@ Last updated: {{ updated | formatDate('human') }}
 
 ## Recently
 
+📣 I've begun voice training and laser hair removal so that I can Be More Trans.
+
 😺 I've been doing a bit of work on [BristolFurs](https://bristolfurs.co.uk) website-related stuff.
 
 🏳️‍🌈 I went to Birmingham for ConFuzzled 2025 and Cardiff for Pride Cymru, pride event of Wales.
