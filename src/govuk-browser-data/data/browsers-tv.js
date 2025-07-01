@@ -334,4 +334,14 @@ export default {
     yandex: 1,
     phoenix: 1,
   },
+  "2025-06": {
+    chrome: 1408,
+    safari: 432,
+    firefox: 5,
+    "android-webview": 65,
+    opera: 126,
+    silk: 1349,
+    yandex: 1,
+    nintendo: 6,
+  },
 };
