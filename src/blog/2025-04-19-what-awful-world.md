@@ -1,6 +1,7 @@
 ---
 title: What awful world
 date: 2025-04-19
+updated: 2025-07-01
 tags: [transition]
 metadata:
   description: A speech.

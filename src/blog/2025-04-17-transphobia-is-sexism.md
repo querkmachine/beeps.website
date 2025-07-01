@@ -1,6 +1,7 @@
 ---
 title: Transphobia is sexism
 date: 2025-04-17
+updated: 2025-07-01
 tags: [transition]
 metadata:
   description: Headline.
