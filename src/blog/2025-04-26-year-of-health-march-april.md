@@ -4,6 +4,10 @@ date: 2025-04-26
 tags: [yearly theme, medical, transition]
 metadata:
   description: Keeping on, keeping on.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "114404577664531219"
 ---
 
 Things are still a bit of a mess.
