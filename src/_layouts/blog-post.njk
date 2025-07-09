@@ -19,7 +19,7 @@
       <article itemscope itemtype="https://schema.org/BlogPosting">
       
         <header class="kim-!-margin-block-end-8-9">
-          <h1 class="kimHeading-xl kim-!-margin-block-end-3" itemprop="name">
+          <h1 class="kimHeading-xl kim-!-margin-block-end-3" itemprop="name" {%- if titleLang %} lang="{{ titleLang }}"{% endif %}>
             {{- title | markdownInline | safe -}}
           </h1>
           {%- if metadata.description %}

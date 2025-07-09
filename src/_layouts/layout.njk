@@ -27,7 +27,7 @@
     {%- endif -%}
   {%- endset %}
   
-  <title>{{ headTitle }}</title>
+  <title {%- if titleLang %} lang="{{ titleLang }}"{% endif %}>{{ headTitle }}</title>
 
   {#- Stylesheets #}
   <link rel="stylesheet" href="{{ webfontUrl }}" media="print" onload="this.media='all'">
