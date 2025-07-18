@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2025-01-26
+updated: 2025-06-18
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -42,7 +42,9 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 These channels are neat, and most of them don't even have a million subscribers, which is somehow not a lot these days.
 
 - [Auto Schenanigans](https://www.youtube.com/@AutoShenanigans) has a bloke drive around the UK and sardonically tell you things about roads and petrol. He's kinda like one of those train YouTubers but for motorways.
+- [Benjamin Partridge](https://www.youtube.com/@beefanddairynetwork9273) is known for several of comedy podcasts, but for some reason his YouTube channel consists almost entirely of Magnum ice cream reviews.
 - [Chain Bear](https://www.youtube.com/@chainbear) makes video essays about Formula 1 and motorsport, usually to explain some piece of technology or weird application of the rules. They're pretty calming, and proved quite useful when I was first getting into F1.
+- [Eddache](https://www.youtube.com/@eddache) makes animated video essays about animation. Also sometimes non-animated things.
 - [FUNKe](https://www.youtube.com/@FUNKe) makes cool, animated video essays about video games (and somehow the band Weezer without ever actually making a video _about_ Weezer). I can't say I play games (or Weezer) enough to really get it, but the presentation style is da bomb y'all.
 - [The Infinite Review](https://www.youtube.com/@TheInfiniteReview) seeks to make a review about everything in the universe ever. It might take a while.
 - [Jago Hazzard](https://www.youtube.com/@JagoHazzard) has a bloke train around London and sardonically tell you things about railway lines and rolling stock. He's kinda like one of those car YouTubers but for the London Underground.
@@ -72,6 +74,7 @@ Miscellany, &c.
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - _[Meet Me In The Woods](https://mmitwcomic.neocities.org/)_ is a sci-fi mystery webcomic. It's also indirectly the source material for [my fursona]({{ '/about/furry/' | url }}). I'm totally not biased.
 - _[Out-of-Placers](https://valsalia.com/comic/out-of-placers/)_ is a fantasy webcomic about coming to terms with change. It features lots of fun and thought-out speculative biology. (Be aware that it can get sorta not safe for work at times.)
+- _[Pipe Up!](https://pipeup.thecomicseries.com/)_, a webcomic about a rabbit hosting [a plural system]({{ '/about/olive/' | url }}) and how they handle their usual front going missing.
 
 ## My dumb links
 

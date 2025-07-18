@@ -149,4 +149,19 @@ export default [
     alt: "Volpeon",
     url: "//volpeon.ink/",
   },
+  {
+    src: "/assets/images/buttons/otterspace.gif",
+    alt: "Cooper - The Otterspace",
+    url: "//ottr.uk/",
+  },
+  {
+    src: "/assets/images/buttons/synthdownload.svg",
+    alt: "Sneexy - synth.download",
+    url: "//synth.download/",
+  },
+  {
+    src: "/assets/images/buttons/kobold60.gif",
+    alt: "Abyss - kobold60",
+    url: "//kobold60.com/",
+  },
 ];
