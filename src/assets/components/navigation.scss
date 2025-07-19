@@ -18,12 +18,18 @@
   }
 }
 
+.kimNavigation_item {
+  position: relative;
+}
+
 .kimNavigation_link {
+  font-weight: 500;
   @include links.link-helper(
     $color: var(--color-link),
     $visited-color: var(--color-link),
     $initial-underline: false
   );
+  @include links.extend-link($pseudo: "before");
 
   &-ash {
     position: relative;
@@ -42,4 +48,10 @@
       transform: rotate(3deg);
     }
   }
+}
+
+.kimNavigation_description {
+  display: block;
+  color: var(--color-text-subtle);
+  font-size: var(--size--1);
 }

@@ -58,8 +58,8 @@
   }
 }
 
-@mixin extend-link {
-  &::after {
+@mixin extend-link($pseudo: "after") {
+  &::#{$pseudo} {
     content: "";
     display: block;
     position: absolute;

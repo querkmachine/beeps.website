@@ -22,10 +22,26 @@ export default function () {
       {
         heading: "Beeping",
         links: [
-          { href: "/blog/", text: "Blog" },
-          { href: "/about/", text: "About beeps" },
-          { href: "/now/", text: "/now" },
-          { href: "/contact/", text: "Contact" },
+          {
+            href: "/blog/",
+            text: "Blog",
+            description: "Aimless whitterings about life and other stuff.",
+          },
+          {
+            href: "/about/",
+            text: "About beeps",
+            description: "Everything about me. Like, everything.",
+          },
+          {
+            href: "/now/",
+            text: "beeps NOW!",
+            description: "Stuff I've been up to recently.",
+          },
+          {
+            href: "/contact/",
+            text: "Contact",
+            description: "Get in touch! Or don't.",
+          },
         ],
       },
       {
@@ -33,20 +49,31 @@ export default function () {
         links: [
           {
             href: "/accessibility-for-furries/",
-            text: "Accessibility audits for furries",
+            text: "Accessibility for furries",
+            description: "Free web accessibility audits for the fandom.",
           },
-          { href: "/govuk-browser-data/", text: "GOV.UK browser data" },
+          {
+            href: "/govuk-browser-data/",
+            text: "GOV.UK browser data",
+            description:
+              "Monthly analytics data from one of the UK's busiest websites.",
+          },
         ],
       },
       {
-        heading: "More stuff",
+        heading: "And more",
         links: [
           {
             href: "/ash/",
             text: "Ash the amphimorpho",
+            description: "Reference sheet and lore for my fursona.",
             classes: "kimNavigation_link-ash",
           },
-          { href: "/links/", html: "Cool links &amp; friend sites" },
+          {
+            href: "/links/",
+            html: "Cool links &amp; friend sites",
+            description: "Neat peeps and neat things.",
+          },
         ],
       },
     ],

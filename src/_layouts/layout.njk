@@ -83,13 +83,16 @@
         <div class="kimGrid">
           {%- for section in site.navigation %}
             <div class="kimGrid_column-full galaxy:kimGrid_column-oneThird kimNavigation_section">
-              <h2 class="kimBody-l">{{ section.heading }}</h2>
-              <ul class="kimList">
+              <h2 class="kimBody">{{ section.heading }}</h2>
+              <ul class="kimList kimList-spaced">
                 {%- for link in section.links %}
-                <li>
+                <li class="kimNavigation_item">
                   <a class="kimNavigation_link {%- if link.classes %} {{ link.classes }}{% endif %}" href="{{ link.href | url }}">
                     {{- link.html | safe if link.html else link.text -}}
                   </a>
+                  {%- if link.description %}
+                    <span class="kimNavigation_description">{{ link.description }}</span>
+                  {%- endif %}
                 </li>
                 {%- endfor %}
               </ul>

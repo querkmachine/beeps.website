@@ -20,9 +20,14 @@ metadata:
             <h2 class="kimHeading-m">{{ section.heading }}</h2>
             <ul class="kimList">
               {%- for link in section.links %}
-              <li><a class="kimLink" href="{{ link.href | url }}">
-                {{- link.html | safe if link.html else link.text -}}
-              </a></li>
+              <li>
+                <a class="kimLink" href="{{ link.href | url }}">
+                  {{- link.html | safe if link.html else link.text -}}
+                </a>
+                {%- if link.description %}
+                <br><span class="kimBody-s">{{ link.description }}</span>
+                {%- endif %}
+              </li>
               {%- endfor %}
             </ul>
           {%- endfor %}
