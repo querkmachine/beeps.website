@@ -25,6 +25,7 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | thank you so much   | tack så mycket          |                                         |
 | you're welcome      | tack tack               | essentially 'thank you for thanking me' |
 | [statement], right? | [statement], eller hur? | lit. 'or what?'                         |
+| cool!               | häftigt!                |                                         |
 
 ### Connecting words
 
@@ -35,6 +36,7 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | but     | men     |             |
 | as, so  | så      |             |
 | with    | med     |             |
+| to, on  | på      |             |
 
 ### Pronouns
 
@@ -62,19 +64,23 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | their (plural)   | deras        | —             | —                |                    |
 | its              | dess         | —             | —                |                    |
 
-### Doing words
+### Verbs
 
 | English              | Svenska   | Note                          |
 | :------------------- | :-------- | :---------------------------- |
 | like                 | tycker om | lit. 'think about'            |
 | work                 | arbetar   | ar beta r                     |
 | need                 | behöver   | like 'behoove'                |
+| have [to]            | får       |                               |
+| look                 | kolla     |                               |
+| see                  | ser       |                               |
 | buy                  | köp       |                               |
 | own                  | äger      |                               |
 | make, do             | göra      |                               |
 | looking, watching    | tittar på | lit. 'looking on'             |
 | thinking, intending  | tänker    |                               |
-| plays                | spelar    |                               |
+| inviting, treating   | bjuda     |                               |
+| plays                | spelar    | playing a spelling game       |
 | studies              | pluggar   | plugs away at                 |
 | cleans               | städar    |                               |
 | wakes up             | vaknar    | like 'wake now'               |
@@ -83,35 +89,39 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | paints               | målar     |                               |
 | works out, exercises | tränar    | like 'trainer'                |
 | dances               | dansar    | Ted Dansen dances, Ted Dansar |
-| camps, goes camping  | tältar    |                               |
-| sails, goes sailing  | seglar    |                               |
-| swims, goes swimming | simmar    | Sims shouldn't go swimming    |
+| campsing             | tältar    | like 'tent-er'                |
+| sailsing             | seglar    | like 'sailor'                 |
+| swimming             | simmar    | Sims shouldn't go swimming    |
 
 ### Adjectives
 
-| English     | Svenska  | Note               |
-| :---------- | :------- | :----------------- |
-| good        | bra      | what's good, brah? |
-| new         | ny, nytt |                    |
-| easy        | lätt     | latte's are easy   |
-| small       | liten    | little kitten :3   |
-| sweet, cute | söt      |                    |
-| big         | stor     | a big store        |
-| tall        | lång     | like 'long'        |
-| fat         | fett     |                    |
-| hungry      | hungrig  |                    |
+| English     | Svenska    | Note                               |
+| :---------- | :--------- | :--------------------------------- |
+| good        | bra        | what's good, brah?                 |
+| new         | ny, nytt   |                                    |
+| easy        | lätt       | latte's are easy                   |
+| small       | liten      | little kitten :3                   |
+| sweet, cute | söt        |                                    |
+| scary       | skrämmande | scary things make you 'scram, man' |
+| big         | stor       | a big store                        |
+| tall        | lång       | like 'long'                        |
+| fat         | fett       |                                    |
+| hungry      | hungrig    |                                    |
 
-## Adverbs
+### Adverbs
 
 | English          | Svenska       | Note         |
 | :--------------- | :------------ | :----------- |
 | happy            | lyckligt      | 'lick light' |
 | early            | tidigt        |              |
 | always [verb]    | [verb] alltid | 'all time'?  |
+| often [verb]     | [verb] ofta   | often        |
 | sometimes [verb] | [verb] ibland |              |
 | never [verb]     | [verb] aldrig |              |
 
-## Places
+## Nouns
+
+### Places
 
 | English              | Svenska        | Note                         |
 | :------------------- | :------------- | :--------------------------- |
@@ -126,13 +136,13 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | Sweden               | Sverige        | pronounced like 'so very uh' |
 | UK, Great Britain    | Storbritannien | Big Britannia                |
 
-## Food & drink
+### Food & drink
 
 | English | Svenska | Note   |
 | :------ | :------ | :----- |
 | salad   | sallad  | two Ls |
 
-## Furniture
+### Furniture
 
 | English       | Svenska   | Note                   |
 | :------------ | :-------- | :--------------------- |
@@ -140,7 +150,7 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | refridgerator | kylskåp   | Kyle's cap             |
 | bed           | säng      | sang to sleep          |
 
-## Jobs
+### Jobs
 
 | English       | Svenska        | Note                                  |
 | :------------ | :------------- | :------------------------------------ |
@@ -152,9 +162,23 @@ This is mostly here for my own reference, so if you found this page, good sleuth
 | farmer        | bonde          | James Bond retires to become a farmer |
 | boss          | chef           | Yes chef                              |
 
-## Activities
+### Activities
 
 | English  | Svenska | Note        |
 | :------- | :------ | :---------- |
 | football | fotboll | two Ls      |
 | chess    | schack  | school hack |
+
+### Animals
+
+| English                | Svenska                  | Note                                                |
+| :--------------------- | :----------------------- | :-------------------------------------------------- |
+| bat, the bat           | fladdermus, fladdermusen | like 'flapper mouse'                                |
+| bear, the bear         | björn, björnen           |                                                     |
+| bee, the bee           | bi, biet                 | ends in 'et' because it's ett bi, rather than en bi |
+| dragon, the dragon     | drake, draken            |                                                     |
+| elephant, the elephant | elefant, elefanten       | ele fan ten                                         |
+| lion, the lion         | lejon, lejonen           | spelled like 'legion', said like 'leon'             |
+| penguin, the penguin   | pingvin, pingvinen       |                                                     |
+| reindeer, the reindeer | ren, renen               |                                                     |
+| sheep, the sheep       | får, fåren               |                                                     |
