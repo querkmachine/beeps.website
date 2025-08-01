@@ -344,4 +344,14 @@ export default {
     yandex: 1,
     nintendo: 6,
   },
+  "2025-07": {
+    chrome: 1924,
+    safari: 444,
+    edge: 1,
+    firefox: 5,
+    "android-webview": 89,
+    opera: 122,
+    silk: 1451,
+    nintendo: 6,
+  },
 };
