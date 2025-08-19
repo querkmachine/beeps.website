@@ -4,7 +4,8 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: "weekly"
+      interval: "cron"
+      cronjob: "0 4 * */1 6"
     allow:
       - dependency-type: direct
       - dependency-name: caniuse-lite
@@ -37,10 +38,12 @@ updates:
     directory: /
     reviewers: [querkmachine]
     schedule:
-      interval: "weekly"
+      interval: "cron"
+      cronjob: "0 4 * */1 6"
 
   - package-ecosystem: github-actions
     directory: /.github/workflows/actions/install-dependencies
     reviewers: [querkmachine]
     schedule:
-      interval: "weekly"
+      interval: "cron"
+      cronjob: "0 4 * */1 6"
