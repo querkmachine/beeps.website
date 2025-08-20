@@ -1,7 +1,7 @@
 ---
 title: Otherkin-friendly CAPTCHAs, revisited
 date: 2023-04-27
-updated: 2025-05-09
+updated: 2025-08-09
 tags: [self-identity, web development]
 metadata:
   description: Using userstyles to make CAPTCHAs more respectful of non-human identities.
@@ -95,7 +95,7 @@ Thanks again to [mavica](https://maple.pet). Why not check out bytes [Netizen li
 
 A few caveats:
 
-- Cloudflare seemingly operates a few different versions of Turnstile. While looking similar,they have different underlying code. I try to keep on top of them, but Turnstile is also the hardest CAPTCHA to consistently reproduce, so it's pretty likely that the override won't always work.
+- Cloudflare has started making versions of their CAPTCHA that use shadow roots—tl;dr, parts of the webpage which are isolated from the rest of the page. User styles are unable to affect things in shadow roots, so this style cannot override them.
 - ALTCHA is a self-hosted CAPTCHA that can be heavily customised by the user. Although the userstyle _should_ still override the text, it won't look seamless in all instances.
 
 ## Updates
@@ -103,4 +103,5 @@ A few caveats:
 - 2023-12-12: Updated to add [Friendly Captcha](https://friendlycaptcha.com/) support and restructure the code a little.
 - 2024-05-17: Code updated to account for updates to Cloudflare Turnstile. Thanks to rk for helping identify the changes.
 - 2025-04-29: Updated to account for changes to Friendly Captcha.
-- 2025-05-09: Added ALTCHA and caveats section.
+- 2025-05-09: Added [ALTCHA](https://altcha.org/) support and caveats section.
+- 2025-08-09: Updated caveats with more information about why the userstyle doesn't always work with Cloudflare Turnstile.

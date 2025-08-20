@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2025-06-18
+updated: 2025-08-09
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -54,6 +54,7 @@ These channels are neat, and most of them don't even have a million subscribers,
 - [Mr V's Garage](https://www.youtube.com/@MrVsGarage) makes a heady mix of extremely-over-the-top-elaborate videos (as well as general news and info) about formula racing.
 - [Noodle](https://www.youtube.com/@noodlefunny), like FUNKe, makes hella enjoyable animated video essays about video games (and sometimes other things).
 - [Planet Clue](https://www.youtube.com/@planetclue) makes deep dive essays into technology and game franchises from the 90s and 2000s.
+- [Shadok](https://www.youtube.com/@shadokwastaken) is an animator who makes funny little videos. They also make the LOVEWEB series of animated video essays about internet culture.
 - [Squirrels at the Window](https://www.youtube.com/@Squirrels_at_the_window). It's just squirrels. We like squirrels.
 
 ## Blogroll
