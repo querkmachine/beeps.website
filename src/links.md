@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2025-08-09
+updated: 2025-08-23
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -72,6 +72,7 @@ Blogs that I actively keep tabs on and read at least some quantity of the posts.
 Miscellany, &c.
 
 - [The Cutting Room Floor](https://tcrf.net/) documents all the parts of video games that made it into the files but didn't make it into the final game. It's a fascinating insight into how popular games were developed and refined.
+- [eightyeightthirtyone](https://eightyeightthirty.one/) maps out the connections between websites on the indie web, [including my own](https://eightyeightthirty.one/#beeps.website).
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - _[Meet Me In The Woods](https://mmitwcomic.neocities.org/)_ is a sci-fi mystery webcomic. It's also indirectly the source material for [my fursona]({{ '/about/furry/' | url }}). I'm totally not biased.
 - _[Out-of-Placers](https://valsalia.com/comic/out-of-placers/)_ is a fantasy webcomic about coming to terms with change. It features lots of fun and thought-out speculative biology. (Be aware that it can get sorta not safe for work at times.)

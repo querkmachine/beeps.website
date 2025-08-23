@@ -48,6 +48,10 @@ export default [
     alt: "no binary? no problem!",
     url: "/about/gender/",
   },
+  {
+    src: "/assets/images/buttons/queer_coded.png",
+    alt: "You're telling me a queer coded this?",
+  },
   { src: "/assets/images/buttons/love_blahaj.gif", alt: "Love BLÅHAJ" },
   {
     src: "/assets/images/buttons/gecs_now.gif",

@@ -70,7 +70,11 @@ export default [
     alt: "Pont",
     url: "//pont.cool/",
   },
-  { alt: "QuARC", url: "//quarc.neocities.org/" },
+  {
+    src: "/assets/images/buttons/quarc.png",
+    alt: "QuARC",
+    url: "//quarc.neocities.org/",
+  },
   { alt: "rabbithawk256", url: "//rabbithawk256.dev/" },
   { alt: "raccoon", url: "//www.raccoon.fun/" },
   { alt: "Romaric Pascal", url: "//romaricpascal.is/" },
@@ -97,7 +101,11 @@ export default [
     url: "//ulhar.neocities.org/",
   },
   { alt: "Vanita Barrett", url: "//vanitabarrett.co.uk/" },
-  { alt: "Violet Procyon", url: "//violet.pm/" },
+  {
+    src: "/assets/images/buttons/violet.png",
+    alt: "Violet Procyon",
+    url: "//violet.pm/",
+  },
   {
     src: "/assets/images/buttons/zatzhing.gif",
     alt: "Zatzhing.me",
@@ -126,7 +134,11 @@ export default [
     url: "//pivot.gay/",
   },
   { alt: "keeri", url: "//keeri.place/" },
-  { alt: "ninee (0x9E01)", url: "//www.ninee.xyz/" },
+  {
+    src: "/assets/images/buttons/ninee.png",
+    alt: "ninee (0x9E01)",
+    url: "//www.ninee.xyz/",
+  },
   { src: "/assets/images/buttons/cabl.gif", alt: "Cabl", url: "//cabl.rodeo/" },
   {
     src: "/assets/images/buttons/two.png",
@@ -163,5 +175,54 @@ export default [
     src: "/assets/images/buttons/kobold60.gif",
     alt: "Abyss - kobold60",
     url: "//kobold60.com/",
+  },
+  {
+    src: "/assets/images/buttons/yoyle_city.png",
+    alt: "yoyle.city",
+    url: "//yoyle.city/",
+  },
+  {
+    src: "/assets/images/buttons/vulpinecitrus.png",
+    alt: "VulpineCitrus",
+    url: "//vulpinecitrus.info/",
+  },
+  {
+    src: "/assets/images/buttons/flann.png",
+    alt: "Flann",
+    url: "//this.squirrel.rocks/",
+  },
+  {
+    alt: "Space Nest system",
+    url: "//therianava.li/",
+  },
+  {
+    src: "/assets/images/buttons/odoben.png",
+    alt: "Odoben's Space",
+    url: "//odoben.space/",
+  },
+  {
+    src: "/assets/images/buttons/mathie.png",
+    alt: "Mathie",
+    url: "//mathie.gay/",
+  },
+  {
+    src: "/assets/images/buttons/hsa.gif",
+    alt: "Highly Suspect Agency",
+    url: "//highlysuspect.agency/",
+  },
+  {
+    src: "/assets/images/buttons/lotte.gif",
+    alt: "lotte's space",
+    url: "//comforttiger.space/",
+  },
+  {
+    src: "/assets/images/buttons/candied_reptile.gif",
+    alt: "Candied Reptile",
+    url: "//candiedreptile.club/",
+  },
+  {
+    src: "/assets/images/buttons/507131.png",
+    alt: "507131 (aka abbie)",
+    url: "//abbie.moe/",
   },
 ];
