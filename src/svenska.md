@@ -15,17 +15,25 @@ This isn't an exhaustive list of stuff I've learned, some of them are easy enoug
 
 This is mostly here for my own reference, so if you found this page, good sleuthing I guess?
 
-## ä, å, ö
+{% callout %}
+This is pretty much all based on my own research and deduction. Stuff might be wrong, but if it is, then I haven't learned that it's wrong yet. 🤷
+{% endcallout %}
+
+## General rules and notes
+
+### å, ä, ö
 
 These are considered their own letters in Swedish, not a/o with diacritics added.
 
-- ä = pronounced like 'air'
-- å = pronounced like 'oh'
-- ö = pronounced like 'urr'
+- å = pronounced like 'oa' in 'oar'
+- ä = pronounced like 'eeh'
+- ö = pronounced like 'uuh'
 
-## 'en' vs. 'ett'
+They come after the the 26 English alphabet characters in terms of sorting order.
 
-'en' is used for common gender nouns. 'ett' is used for neutral gender nouns. There is no hard or fast rule for what noun uses which gender—you just need to memorise them.
+### 'en' vs. 'ett'
+
+'en' is used for common gender nouns. 'ett' is used for neutral gender (neuter) nouns. There is no hard or fast rule for what nouns use which gender—you just need to memorise them.
 
 This is necessary for definite articles, where the gender affects the suffix of the word.
 
@@ -39,17 +47,121 @@ e.g. ett hus (a house) &rarr; ett stort hus (a big house)
 
 And both together: e.g. stort huset (the big house)
 
-## Too many men
+### Plurals
 
-Lots of words are variations on man/men so I wanted to pull them out for ease of reference.
+Most gendered nouns are pluralised by suffixing them with -ar.
 
-| English       | Svenska |
-| :------------ | :------ |
-| man, husband  | man     |
-| men, husbands | män     |
-| the man       | mannen  |
-| the men       | männen  |
-| but           | men     |
+e.g. jordgubbe (strawberry) &rarr; jordgubbar (strawberries)
+e.g. tidning (newspaper) &rarr; tidningar (newspapers)
+e.g. pojke (boy) &rarr; pojkar (boys)
+
+Female gendered nouns may be suffixed with -or.
+
+e.g. kvinna (woman) &rarr; kvinnor (women)
+e.g. flicka (girl) &rarr; flickor (girls)
+
+Neuter nouns do not change for their plural forms, so quantity must be determined by context.
+
+e.g. bi (bee _or_ bees)
+e.g. brev (letter _or_ letters)
+
+#### Definitive plurals
+
+Gendered definitive plurals are **additionally** suffixed by -na.
+
+e.g. jordgubbar (strawberries) &rarr; jordgubbarna (the strawberries)
+e.g. pojkar (boys) &rarr; pojkarna (the boys)
+e.g. kvinnor (women) &rarr; kvinnorna (the women)
+
+Neuter definitive plurals are suffixed by -en, instead of the -et that their definitive forms usually use.
+
+e.g. biet (the bee) &rarr; bien (the bees)
+e.g. brevet (the letter) &rarr; breven (the letters)
+
+### Capitalisation
+
+Other than the first letter of a sentence, only proper nouns (those of people, places, and brand names) are typically capitalised. Other nouns are always lower case.
+
+e.g. de pratar engelska i England (they speak English in England)
+e.g. jag är i Norge på juli (I am in Norway in July).
+
+Abbreviations are also capitalised.
+
+### Punctuation
+
+Generally speaking, punctuation rules are mostly the same as in English.
+
+#### Quotation marks
+
+Quotation marks use 'end' quotations at both the start and end of the quote.
+
+e.g. ”Hej! Jag heter är beeps.”
+
+Some historical or 'fancy' cases use inward pointing guillemets instead of quotation marks.
+
+e.g. »Hej! Jag heter är beeps.«
+
+### Abbreviations
+
+Abbreviations are truncated by use of a colon separating the first and last letters.
+
+e.g. Sankt (Saint) can be shortened to S:t, such as in S:t Eriksplan
+
+For ordinal numbers, the number is used instead of the first letter
+
+e.g. tredje (third) can be shortened to 3:e
+
+Colons are also used to separate suffixes (such as defintives, plurals, and posessives) where they may affect the reading.
+
+e.g. b:et (the B)
+e.g. CD:n (the CD)
+e.g. USA:s (USA's)
+
+### Dates and times
+
+Dates are typically written as YYYY-MM-DD in modern documents. Times are written in the 24-hour clock, separated by a colon or period.
+
+e.g. 2025-08-28 på 22:57
+
+The expanded date format includes the day and month name in an order similar to British English.
+
+e.g. torsdag 28 augusti 2025 (Thursday 28 August 2025)
+
+### Numbers
+
+Numbers use a space to separate thousands and a comma to separate decimals.
+
+e.g. 12 345,67
+
+#### Currency
+
+Sweden no longer issues physical currency in decimal amounts, the smallest coin value being 1 kr, but prices may still be fractional for the purposes of digital payments.
+
+The Swedish kroner can be abbreviated to 'kr' or to 'SEK'. Both may appear before or after the value, separated by a space. 'kr' typically comes after, whereas 'SEK' comes before.
+
+e.g. 29,50 kr
+e.g. SEK 29,50
+
+Foreign currency symbols appear after the value, separated by a space.
+
+e.g. 9,99 €
+e.g. 9,99 £
+
+### Weights and measures
+
+Metric weights and measures use the same names and abbreviations as in English.
+
+e.g. 25 kg
+e.g. 42 cm
+e.g. 2 l
+
+Imperial weights and measures use different names. Other than English stone, they are not abbreviated.
+
+e.g. 5 fot (5 feet)
+e.g. 6 tum (6 inches)
+e.g. 82 pund (82 pounds)
+e.g. 22 uns (22 ounces)
+e.g. 12 eng. sten (12 English stone)
 
 ## Common phrases
 
@@ -91,15 +203,15 @@ e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live
 
 ## Pronouns
 
-| English | Svenska  | Note |
-| :------ | :------- | :--- |
-| I       | jag      |      |
-| you     | du, ni   |      |
-| we      | vi       |      |
-| he      | han      |      |
-| she     | hon      |      |
-| they    | de       |      |
-| it      | det, den |      |
+| English | Svenska  | Note                                 |
+| :------ | :------- | :----------------------------------- |
+| I       | jag      |                                      |
+| you     | du, ni   |                                      |
+| we      | vi       |                                      |
+| he      | han      |                                      |
+| she     | hon      |                                      |
+| they    | de       |                                      |
+| it      | den, det | 'den' for gendered, 'det' for neuter |
 
 ## du vs. ni
 
@@ -109,17 +221,18 @@ Historically, 'du' is informal whereas 'ni' is formal. In the modern day, howeve
 
 ### Posessive pronouns
 
-| English          | Svenska (en) | Svenska (ett) | Svenska (plural) | Note               |
-| :--------------- | :----------- | :------------ | :--------------- | :----------------- |
-| my               | min          | mitt          | mina             |                    |
-| your             | din          | ditt          | dina             | (singular subject) |
-| your             | er           | ert           | era              | (plural subjects)  |
-| our              | vår          | vårt          | våra             |                    |
-| his              | hans         | —             | —                |                    |
-| her              | hennes       | —             | —                |                    |
-| their (singular) | hens         | —             | —                |                    |
-| their (plural)   | deras        | —             | —                |                    |
-| its              | dess         | —             | —                |                    |
+| English          | Svenska (en) | Svenska (ett) | Svenska (plural) |
+| :--------------- | :----------- | :------------ | :--------------- |
+| my               | min          | mitt          | mina             |
+| (my) own         | sin          | sitt          |                  |
+| your (singular)  | din          | ditt          | dina             |
+| your (plural)    | er           | ert           | era              |
+| our              | vår          | vårt          | våra             |
+| his              | hans         | —             | —                |
+| hers             | hennes       | —             | —                |
+| their (singular) | hens         | —             | —                |
+| their (plural)   | deras        | —             | —                |
+| its              | dess         | —             | —                |
 
 ## Verbs
 
@@ -224,6 +337,13 @@ e.g. att skriva svenska är lätt (to write Swedish is easy) &rarr; att skriva s
 {% callout %}
 Remember, definitive articles have en, ett, or some variation thereof added to the end.
 {% endcallout %}
+
+### Posessive nouns
+
+Posessive plurals are suffixed with an -s. Unlike English, there is no apostrophe separating it.
+
+e.g. flickas mat (girls's food)
+e.g. mannens hund (the man's dog)
 
 ### People
 
@@ -361,3 +481,17 @@ All animals use 'en', but the word 'animal' itself uses 'ett'.
 | night    | natt     |                   |
 | morning  | morgon   |                   |
 | tomorrow | i morgon | lit. 'in morning' |
+
+## Other notes
+
+### Too many men
+
+Lots of words are variations on man/men so I wanted to pull them out for ease of reference.
+
+| English       | Svenska |
+| :------------ | :------ |
+| man, husband  | man     |
+| men, husbands | män     |
+| the man       | mannen  |
+| the men       | männen  |
+| but           | men     |
