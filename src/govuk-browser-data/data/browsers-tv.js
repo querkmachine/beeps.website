@@ -354,4 +354,16 @@ export default {
     silk: 1451,
     nintendo: 6,
   },
+  "2025-08": {
+    chrome: 2491,
+    safari: 357,
+    edge: 1,
+    firefox: 7,
+    opera: 107,
+    "android-webview": 69,
+    silk: 1351,
+    yandex: 2,
+    phoenix: 1,
+    nintendo: 25,
+  },
 };
