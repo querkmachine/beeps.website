@@ -133,7 +133,7 @@ Numbers use a space to separate thousands and a comma to separate decimals.
 
 e.g. 12 345,67
 
-#### Currency
+### Currency
 
 Sweden no longer issues physical currency in decimal amounts, the smallest coin value being 1 kr, but prices may still be fractional for the purposes of digital payments.
 
@@ -189,6 +189,18 @@ e.g. du förstår svenska (you understand Swedish) &rarr; förstår du svenska? 
 
 e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live you in downtown?)
 
+| English   | Svenska | Note                               |
+| :-------- | :------ | :--------------------------------- |
+| who       | vem     |                                    |
+| what      | vad     |                                    |
+| when      | när     |                                    |
+| time when | då      | sort of nostalgic in tone          |
+| where     | var     |                                    |
+| where     | där     | a specific location                |
+| to where  | dit     |                                    |
+| why       | varför  | same as Middle English 'wherefore' |
+| how       | hur     |                                    |
+
 ### Connecting words
 
 | English | Svenska | Note             |
@@ -203,28 +215,28 @@ e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live
 
 ## Pronouns
 
-| English | Svenska  | Note                                 |
-| :------ | :------- | :----------------------------------- |
-| I       | jag      |                                      |
-| you     | du, ni   |                                      |
-| we      | vi       |                                      |
-| he      | han      |                                      |
-| she     | hon      |                                      |
-| they    | de       |                                      |
-| it      | den, det | 'den' for gendered, 'det' for neuter |
-
-## du vs. ni
-
-Historically, 'du' is informal whereas 'ni' is formal. In the modern day, however, 'du' is used almost universally.
-
-'Ni' remains as an optional way of showing deference and respect, and is more common in rural or traditional settings.
+| English       | Svenska  | Note                                 |
+| :------------ | :------- | :----------------------------------- |
+| I             | jag      |                                      |
+| me            | mig      |                                      |
+| you (subject) | du, ni   | you do something                     |
+| you (object)  | dig      | something happens to you             |
+| we            | vi       |                                      |
+| us            | oss      |                                      |
+| he            | han      |                                      |
+| him           | honom    |                                      |
+| she           | hon      |                                      |
+| her           | henne    |                                      |
+| they          | de       |                                      |
+| them          | dem      |                                      |
+| it            | den, det | 'den' for gendered, 'det' for neuter |
 
 ### Posessive pronouns
 
 | English          | Svenska (en) | Svenska (ett) | Svenska (plural) |
 | :--------------- | :----------- | :------------ | :--------------- |
 | my               | min          | mitt          | mina             |
-| (my) own         | sin          | sitt          |                  |
+| (my) own         | sin          | sitt          | sina             |
 | your (singular)  | din          | ditt          | dina             |
 | your (plural)    | er           | ert           | era              |
 | our              | vår          | vårt          | våra             |
@@ -233,6 +245,26 @@ Historically, 'du' is informal whereas 'ni' is formal. In the modern day, howeve
 | their (singular) | hens         | —             | —                |
 | their (plural)   | deras        | —             | —                |
 | its              | dess         | —             | —                |
+
+### du vs. ni
+
+Historically, 'du' is informal whereas 'ni' is formal. In the modern day, however, 'du' is used almost universally.
+
+'Ni' remains as an optional way of showing deference and respect, and is more common in rural or traditional settings.
+
+### Posessive pronouns
+
+| English          | Svenska (en) | Svenska (ett) | Svenska (plural) | Note             |
+| :--------------- | :----------- | :------------ | :--------------- | :--------------- |
+| my               | min          | mitt          | mina             |                  |
+| your             | din          | ditt          | dina             | singular subject |
+| your             | er           | ert           | era              | plural subjects  |
+| our              | vår          | vårt          | våra             |                  |
+| his              | hans         | —             | —                |                  |
+| her              | hennes       | —             | —                |                  |
+| their (singular) | hens         | —             | —                |                  |
+| their (plural)   | deras        | —             | —                |                  |
+| its              | dess         | —             | —                |                  |
 
 ## Verbs
 
@@ -325,7 +357,7 @@ e.g. att skriva svenska är lätt (to write Swedish is easy) &rarr; att skriva s
 | English          | Svenska       | Note                                               |
 | :--------------- | :------------ | :------------------------------------------------- |
 | home             | hemma         |                                                    |
-| happy            | lyckligt      | 'lick light'                                       |
+| happily          | lyckligt      | 'lick light'                                       |
 | early            | tidigt        |                                                    |
 | always [verb]    | [verb] alltid | 'all time'?                                        |
 | often [verb]     | [verb] ofta   | often                                              |
@@ -384,56 +416,56 @@ e.g. mannens hund (the man's dog)
 
 ### Food & drink
 
-| English       | Svenska    | Note                                          |
-| :------------ | :--------- | :-------------------------------------------- |
-| food          | mat        |                                               |
-| meal          | måltid     |                                               |
-| breakfast     | frukost    | like 'fruit toast'                            |
-| dinner        | middag     | dinner is **not** at midday                   |
-| soup          | soppa      | sopping wet soup                              |
-| salad         | sallad     | two Ls                                        |
-| apple         | äpple      |                                               |
-| orange        | apelsin    | derived from 'apple' + 'Sino' = Chinese apple |
-| strawberry    | jordgubbe  |
-| Danish pastry | wienerbröd | lit. 'Vienna bread'                           |
-| sandwich      | smörgås    |                                               |
-| chicken       | kyckling   | chickens be kicking?                          |
-| pork          | fläskkött  | lit. 'flesh meat'                             |
-| beef          | nötkött    | lit. 'cattle meat'                            |
-| ice cream     | glass      | not 'glas', which means glass                 |
-| oil           | olja       | not to be confused with 'öl' for beer         |
+| English       | Svenska                  | Note                                          |
+| :------------ | :----------------------- | :-------------------------------------------- |
+| food          | mat, maten               |                                               |
+| meal          | måltid, måltiden         |                                               |
+| breakfast     | frukost, frukosten       | like 'fruit toast'                            |
+| dinner        | middag, middagen         | dinner is **not** at midday                   |
+| soup          | soppa, soppan            | sopping wet soup                              |
+| salad         | sallad, salladen         | two Ls                                        |
+| apple         | äpple, äpplen            |                                               |
+| orange        | apelsin, apelsinen       | derived from 'apple' + 'Sino' = Chinese apple |
+| strawberry    | jordgubbe, jordgubben    |
+| Danish pastry | wienerbröd, wienerbrödet | lit. 'Vienna bread'                           |
+| sandwich      | smörgås, smörgåsen       |                                               |
+| chicken       | kyckling, kycklingen     | chickens be kicking?                          |
+| pork          | fläsket, fläskkött       | lit. 'flesh', 'flesh meat'                    |
+| beef          | nötkött, nötköttet       | lit. 'cattle meat'                            |
+| ice cream     | glass, glassen           | not 'glas', which means glass                 |
+| oil           | olja, oljan              | not to be confused with 'öl' for beer         |
 
 ### Objects
 
-| English      | Svenska   | Note                                 |
-| :----------- | :-------- | :----------------------------------- |
-| desk         | skrivbord | scribe board, lit '(to) write table' |
-| refrigerator | kylskåp   | Kyle's cap                           |
-| bed          | säng      | sang to sleep                        |
-| bag          | väska     | you gotta vask for a bag             |
-| money        | pengar    |                                      |
-| ticket       | biljett   | need a ticket to get on a jett       |
-| book         | bok       |                                      |
-| letter       | brev      | a brief letter                       |
-| newspaper    | tidning   |                                      |
-| fork         | gaffel    | eat a waffel with a fork             |
-| knife        | kniv      |                                      |
-| spoon        | sked      | a food sled                          |
-| plate        | tallrik   | Tall Rick                            |
-| cup          | kopp      |                                      |
+| English      | Svenska                | Note                                 |
+| :----------- | :--------------------- | :----------------------------------- |
+| desk         | skrivbord, skrivbordet | scribe board, lit '(to) write table' |
+| refrigerator | kylskåp, kylskåpet     | Kyle's cap                           |
+| bed          | säng, sängen           | sang to sleep                        |
+| bag          | väska, väskan          | you gotta vask for a bag             |
+| money        | pengar, pengarna       | always plural                        |
+| ticket       | biljett, biljetten     | need a ticket to get on a jett       |
+| book         | bok, boken             |                                      |
+| letter       | brev, brevet           | a brief letter                       |
+| newspaper    | tidning, tidningen     |                                      |
+| fork         | gaffel, gaffeln        | eat a waffel with a fork             |
+| knife        | kniv, kniven           |                                      |
+| spoon        | sked, skeden           | a food sled                          |
+| plate        | tallrik, tallriken     | Tall Rick                            |
+| cup          | kopp, koppen           |                                      |
 
 ### Jobs
 
-| English       | Svenska        | Note                                  |
-| :------------ | :------------- | :------------------------------------ |
-| web developer | webbutvecklare | web but veck lare                     |
-| engineer      | ingenjör       | in gen jor                            |
-| doctor        | läkare         | doctors are care                      |
-| teacher       | lärare         | teachers are rare                     |
-| actor         | skådespelare   | ska despel are - actors despel?       |
-| farmer        | bonde          | James Bond retires to become a farmer |
-| boss          | chef           | Yes chef                              |
-| cook, chef    | cock           |                                       |
+| English       | Svenska                         | Note                                  |
+| :------------ | :------------------------------ | :------------------------------------ |
+| web developer | webbutvecklare, webbutvecklaren | web but veck lare                     |
+| engineer      | ingenjör, ingenjören            | in gen jor                            |
+| doctor        | läkare, läkaren                 | doctors are care                      |
+| teacher       | lärare, läraren                 | teachers are rare                     |
+| actor         | skådespelare, skådespelaren     | ska despel are - actors despel?       |
+| farmer        | bonde, bonden                   | James Bond retires to become a farmer |
+| boss          | chef, chefen                    | Yes chef                              |
+| cook, chef    | kock, kocken                    |                                       |
 
 ### Activities
 
@@ -447,40 +479,61 @@ e.g. mannens hund (the man's dog)
 
 ### Animals
 
-All animals use 'en', but the word 'animal' itself uses 'ett'.
+Most animals use 'en', but the word 'animal' itself uses 'ett'.
 
-| English                | Svenska                  | Note                                    |
-| :--------------------- | :----------------------- | :-------------------------------------- |
-| animal, the animal     | djur, djuret             | deer is animal                          |
-| pet, the pet           | husdjur, husdjuret       | lit. 'house animal'                     |
-| ant, the ant           | myra, myran              |                                         |
-| bat, the bat           | fladdermus, fladdermusen | like 'flapper mouse'                    |
-| bear, the bear         | björn, björnen           |                                         |
-| bee, the bee           | bi, biet                 | ends in 'et' because it's _ett_ bi      |
-| crab, the crab         | krabb, krabban           |                                         |
-| (roe) deer, the deer   | rådjur, rådjuren         | ro-djur                                 |
-| duck, the duck         | anka, ankan              |                                         |
-| dragon, the dragon     | drake, draken            |                                         |
-| elephant, the elephant | elefant, elefanten       | ele fan ten                             |
-| hippo, the hippo       | flodhäst, flodhästen     | like 'flood hast'                       |
-| horse, the horse       | häst, hästen             | horse goes fast = hast                  |
-| lion, the lion         | lejon, lejonen           | spelled like 'legion', said like 'leon' |
-| moose, the moose       | älg, älgen               | like elk, pronounced like 'elg'         |
-| mouse, the mouse       | mus, musen               |                                         |
-| penguin, the penguin   | pingvin, pingvinen       |                                         |
-| reindeer, the reindeer | ren, renen               | ren deer                                |
-| sheep, the sheep       | får, fåren               | the sheep are far away                  |
-| spider, the spider     | spindel, spindeln        | spiders spin webs                       |
-| squirrel, the squirrel | ekorr, ekorren           | squirrels like acorns ('ekorren')       |
-| turtle, the turtle     | sköldpadda, sköldpaddan  | 'scold paddle'?                         |
+| English    | Svenska                  | Note                                    |
+| :--------- | :----------------------- | :-------------------------------------- |
+| animal     | djur, djuret             | deer is animal                          |
+| pet        | husdjur, husdjuret       | lit. 'house animal'                     |
+| ant        | myra, myran              |                                         |
+| bat        | fladdermus, fladdermusen | like 'flapper mouse'                    |
+| bear       | björn, björnen           |                                         |
+| bee        | bi, biet                 | ends in 'et' because it's _ett_ bi      |
+| crab       | krabb, krabban           |                                         |
+| (roe) deer | rådjur, rådjuren         | ro-djur                                 |
+| duck       | anka, ankan              |                                         |
+| dragon     | drake, draken            |                                         |
+| elephant   | elefant, elefanten       | ele fan ten                             |
+| hippo      | flodhäst, flodhästen     | like 'flood hast'                       |
+| horse      | häst, hästen             | horse goes fast = hast                  |
+| lion       | lejon, lejonen           | spelled like 'legion', said like 'leon' |
+| moose      | älg, älgen               | like elk, pronounced like 'elg'         |
+| mouse      | mus, musen               |                                         |
+| penguin    | pingvin, pingvinen       |                                         |
+| reindeer   | ren, renen               | ren deer                                |
+| sheep      | får, fåren               | the sheep are far away                  |
+| spider     | spindel, spindeln        | spiders spin webs                       |
+| squirrel   | ekorr, ekorren           | squirrels like acorns ('ekorren')       |
+| turtle     | sköldpadda, sköldpaddan  | 'scold paddle'?                         |
 
 ### Times
 
-| English  | Svenska  | Note              |
-| :------- | :------- | :---------------- |
-| night    | natt     |                   |
-| morning  | morgon   |                   |
-| tomorrow | i morgon | lit. 'in morning' |
+| English  | Svenska          | Note              |
+| :------- | :--------------- | :---------------- |
+| night    | natt, natten     |                   |
+| morning  | morgon, morgonen |                   |
+| tomorrow | i morgon         | lit. 'in morning' |
+
+### Clothing and accessories
+
+| English       | Svenska              | Note                                           |
+| :------------ | :------------------- | :--------------------------------------------- |
+| clothes       | kläder, klädern      |                                                |
+| belt          | skärp, skarpen       |                                                |
+| button        | knapp, knappen       |                                                |
+| coat          | rock, rocken         | don't forget your coat when rock climbing      |
+| dress         | klänning, klänningen | dress like the klan??                          |
+| glove         | handske, handsken    | hand-ske                                       |
+| jacket        | jacka, jackan        |                                                |
+| pocket        | ficka, fickan        | fika is a pocket of time                       |
+| scarf         | halsduk, halsduken   | a mallard duck looks like it's wearing a scarf |
+| shirt         | skjorta, skjortan    | sk-jort-a                                      |
+| skirt         | kjol, kjolen         | weirdly pronounced like 'shawl'                |
+| sock          | strumpa, strumpan    |                                                |
+| suit, costume | kostym, kostymen     | like 'costume'                                 |
+| sweater       | tröja, tröjan        | Trojan sweater                                 |
+| tie           | slips, slipsen       | slips on a tie                                 |
+| trousers      | byxor, byxorna       |                                                |
 
 ## Other notes
 
@@ -495,3 +548,4 @@ Lots of words are variations on man/men so I wanted to pull them out for ease of
 | the man       | mannen  |
 | the men       | männen  |
 | but           | men     |
+| while         | medan   |
