@@ -5,8 +5,8 @@
 .kimHeading-s,
 .kimHeading-xs {
   font-family: var(--font-header);
-  font-feature-settings: "ss01", "ss04", "case";
-  font-weight: 700;
+  font-weight: 670;
+  font-variant-alternates: styleset(machine);
   text-wrap: balance;
   letter-spacing: -0.02em;
 }
@@ -60,6 +60,7 @@
 .kimSubheading-l,
 .kimSubheading-m {
   font-family: var(--font-header);
+  font-variant-alternates: stylistic(machine);
   text-wrap: balance;
   letter-spacing: 0;
   line-height: 1.25;
@@ -84,6 +85,7 @@
 .kimBody-s {
   margin-block-start: 0;
   margin-block-end: var(--space-5);
+  font-variant-alternates: styleset(human);
   line-height: 1.5;
 }
 

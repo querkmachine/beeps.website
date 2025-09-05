@@ -16,15 +16,16 @@
 
 .kimSplash_text {
   margin-block: var(--space-7-8);
-  font-weight: bold;
   font-size: 12cqi;
+  font-weight: 670;
   text-wrap: balance;
+  font-variant-alternates: styleset(machine);
   line-height: 0.9;
-  opacity: 0.85;
 
   strong {
     display: block;
     color: var(--color-text-accent);
+    font-weight: inherit;
   }
 }
 

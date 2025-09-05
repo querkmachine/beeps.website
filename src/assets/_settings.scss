@@ -2,10 +2,11 @@
 
 :root {
   // Font families
-  --font-body: "Space Grotesk", system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body:
+    "Hubot Sans", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   --font-heading: var(--font-body);
-  --font-code: "Space Mono", monospace, monospace;
+  --font-code: ui-monospace, monospace;
 
   // Type sizes
   --size--2: clamp(0.7813rem, 0.7469rem + 0.1717vw, 0.88rem);
