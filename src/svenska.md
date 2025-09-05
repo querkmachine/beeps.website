@@ -252,23 +252,9 @@ Historically, 'du' is informal whereas 'ni' is formal. In the modern day, howeve
 
 'Ni' remains as an optional way of showing deference and respect, and is more common in rural or traditional settings.
 
-### Posessive pronouns
-
-| English          | Svenska (en) | Svenska (ett) | Svenska (plural) | Note             |
-| :--------------- | :----------- | :------------ | :--------------- | :--------------- |
-| my               | min          | mitt          | mina             |                  |
-| your             | din          | ditt          | dina             | singular subject |
-| your             | er           | ert           | era              | plural subjects  |
-| our              | vår          | vårt          | våra             |                  |
-| his              | hans         | —             | —                |                  |
-| her              | hennes       | —             | —                |                  |
-| their (singular) | hens         | —             | —                |                  |
-| their (plural)   | deras        | —             | —                |                  |
-| its              | dess         | —             | —                |                  |
-
 ## Verbs
 
-{% callout %}Many, many verbs end in 'ar' sounds!{% endcallout %}
+{% callout %}Many, many verbs end in 'ar' or 'er' sounds!{% endcallout %}
 
 Verbs can be reversed by adding 'inte' after them.
 
@@ -276,43 +262,76 @@ e.g. du äter choklad (you are eating chocolate) &rarr; do äter inte choklad (y
 
 The actual prefix 'to' is 'att' for verbs. If a sentence is to begin with the verb (i.e. it is not being said about a specific subject) then start the sentence with 'att'.
 
-| English              | Svenska (present) | Note                          |
-| :------------------- | :---------------- | :---------------------------- |
-| to eat               | äter              |                               |
-| to drink             | dricker           |                               |
-| to let               | låt               |                               |
-| to like              | tycker om         | lit. 'think about'            |
-| to love              | älskar            | I love Alaska-r               |
-| to work              | arbetar           | ar beta r                     |
-| to need              | behöver           | like 'behoove'                |
-| to have [to]         | får               |                               |
-| to look              | kolla             | holla at that thing           |
-| to watch             | tittar på         | lit. 'looking on'             |
-| to follow            | följa             | Följa Boy tellem              |
-| to speak             | talar             | Tellarites speak              |
-| to laugh             | skratta           |                               |
-| to see               | ser               |                               |
-| to buy               | köp               |                               |
-| to own               | äger              |                               |
-| to make, to do       | göra              |                               |
-| to understand        | förstår           | understanding four stars      |
-| to think, to intend  | tänker            | think tank-er                 |
-| to invite, to treat  | bjuda             |                               |
-| to play              | spelar            | playing a spelling game       |
-| to study             | pluggar           | plugs away at                 |
-| to clean             | städar            |                               |
-| to wake up           | vaknar            | like 'wake now'               |
-| to shower            | duschar           | like 'does shower'            |
-| to bake              | bakar             |                               |
-| to read              | läser             | laser scanning a book?        |
-| to write             | skriva            |                               |
-| to paint             | målar             |                               |
-| to work out/exercise | tränar            | like 'trainer'                |
-| to dance             | dansar            | Ted Dansen dances, Ted Dansar |
-| to go camping        | tältar            | like 'tent-er'                |
-| to go sailing        | seglar            | like 'sailor'                 |
-| to go swimming       | simmar            | Sims shouldn't go swimming    |
-| to do business       | affär             | business affairs              |
+e.g. du äter bra (you are eating good) &rarr; att äter bra (to eat good)
+
+| English                  | Svenska (present) | Note                            |
+| :----------------------- | :---------------- | :------------------------------ |
+| to exist, to be          | finns             |                                 |
+| to go                    | åker              |                                 |
+| to follow                | följa             | Följa Boy tellem                |
+| to walk                  | går               |                                 |
+| to run                   | springer          | Run with a spring in your step  |
+| to jump                  | hoppar            |                                 |
+| to fly                   | flyger            |                                 |
+| to stand                 | står              | stand and står                  |
+| to sit                   | sitter            |                                 |
+| to eat                   | äter              |                                 |
+| to drink                 | dricker           |                                 |
+| to let                   | låt               |                                 |
+| to like                  | tycker om         | lit. 'think about'              |
+| to love                  | älskar            | I love Alaska-r                 |
+| to work                  | arbetar           | ar beta r                       |
+| to want                  | vill              | I vill have it                  |
+| to have                  | ha                |                                 |
+| to need                  | behöver           | like 'behoove'                  |
+| to have [to]             | får               |                                 |
+| to look                  | kolla             | holla at that thing             |
+| to find                  | hittar            |                                 |
+| to choose                | väljer            | Choose Jean Valjean             |
+| to watch                 | tittar på         | lit. 'looking on'               |
+| to show                  | visar             | show with vision                |
+| to listen                | lyssnar           |                                 |
+| to hear                  | hör               |                                 |
+| to speak                 | talar             | Tellarites speak                |
+| to laugh                 | skratta           |                                 |
+| to cry                   | gråter            | a child crying is quite grating |
+| to see                   | ser               |                                 |
+| to buy                   | köper             |                                 |
+| to sell                  | säljer            |                                 |
+| to pay                   | betalar           |                                 |
+| to take                  | tar               |                                 |
+| to own                   | äger              |                                 |
+| to make, to do           | göra              |                                 |
+| to use                   | använder          |                                 |
+| to prepare, to repair    | lagar             |                                 |
+| to understand            | förstår           | understanding four stars        |
+| to think, to intend      | tänker            | think tank-er                   |
+| to invite, to treat      | bjuda             |                                 |
+| to support               | stöttar           | support otter                   |
+| to play (an instrument)  | spelar            | playing a spelling game         |
+| to play (a game)         | leker             | Lakers play basketball          |
+| to study                 | pluggar           | plugs away at                   |
+| to clean                 | städar            |                                 |
+| to wash                  | tvättar           |                                 |
+| to sleep                 | sover             |                                 |
+| to wake up               | vaknar            | like 'wake now'                 |
+| to shower                | duschar           | like 'does shower'              |
+| to cook                  | lagar (mat)       | lit. 'prepare food'             |
+| to bake                  | bakar             |                                 |
+| to read                  | läser             | laser scanning a book?          |
+| to write                 | skriva            |                                 |
+| to speak/say             | pratar            |                                 |
+| to draw                  | ritar             |                                 |
+| to paint                 | målar             |                                 |
+| to write                 | skriver           |                                 |
+| to sing                  | sjunger           |                                 |
+| to dance                 | dansar            | Ted Dansen dances, Ted Dansar   |
+| to wear                  | har på            | lit. 'have on'                  |
+| to work out, to exercise | tränar            | like 'trainer'                  |
+| to go camping            | tältar            | like 'tent-er'                  |
+| to go sailing            | seglar            | like 'sailor'                   |
+| to go swimming           | simmar            | Sims shouldn't go swimming      |
+| to do business           | affär             | business affairs                |
 
 ## Adjectives
 
