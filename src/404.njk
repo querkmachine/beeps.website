@@ -7,14 +7,6 @@ eleventyExcludeFromCollections: true
 
 {% block head %}
 <style>
-  .page-background {
-    inline-size: 100%;
-    block-size: 100%;
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-  }
-  
   .page-content {
     max-width: 22em;
     margin-inline: auto;
@@ -59,10 +51,6 @@ eleventyExcludeFromCollections: true
 </style>
 {% endblock %}
 
-{% block beforeMasthead %}
-<canvas class="page-background" id="background" width="1000" height="500" hidden></canvas>
-{% endblock %}
-
 {% block main %}
   <div class="kim-!-padding-block-start-3-4 kim-!-padding-block-end-3-4">
     <div class="kimWrapper">
@@ -83,11 +71,3 @@ eleventyExcludeFromCollections: true
 
 {% block masthead %}{# Keep it simple, stupid. #}{% endblock %}
 {% block footer %}{# Keep it really simple, stupid. #}{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-<script type="module">
-  import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-  new Spots(document.querySelector(".page-background"), { isAnimated: true });
-</script>
-{% endblock %}

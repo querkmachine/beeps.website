@@ -20,15 +20,6 @@
       .kimPage_body {
         position: relative;
       }
-      .page-background {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
       .page-noodle {
         width: 30vw;
         position: absolute;
@@ -78,7 +69,6 @@
     {% block head %}{% endblock %}
   </head>
   <body class="kimPage_body">    
-    <canvas class="page-background" id="background" width="1200" height="630" hidden></canvas>
     <div class="page-wrapper">
       {% block title %}{% endblock %}
     </div>
@@ -87,11 +77,5 @@
       <span class="page-name">{% block metadata %}beeps.website{% endblock %}</span>
     </div>
     <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.webp' | url }}" class="page-noodle">
-    <script type="module">
-      import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-      new Spots(document.querySelector(".page-background"), {
-        colors: [[120, 105, 153]]
-      });
-    </script>
   </body>
 </html>
