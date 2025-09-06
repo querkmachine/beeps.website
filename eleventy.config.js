@@ -106,6 +106,9 @@ export default function (eleventyConfig) {
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
 
+  // Bundles
+  eleventyConfig.addBundle("css");
+
   // Custom Nunjucks functions
   eleventyConfig.addNunjucksGlobal("merge", mergeArrays);
   eleventyConfig.addNunjucksGlobal("getTableOfContents", getTableOfContents);

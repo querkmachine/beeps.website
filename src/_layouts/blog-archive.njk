@@ -4,14 +4,12 @@
 
 {% set yearList = postsList | getArchiveYears | reverse %}
 
-{% block head %}
-  <style>
-  .page-sticky-heading {
-    position: sticky;
-    inset-block-start: var(--space-5);
-  }
-  </style>
-{% endblock %}
+{% css %}
+.page-sticky-heading {
+  position: sticky;
+  inset-block-start: var(--space-5);
+}
+{% endcss %}
 
 {% block main %}
   <div class="kim-!-margin-block-8-9">

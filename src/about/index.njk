@@ -7,15 +7,13 @@ metadata:
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
+{% css%}
 .page-emoji {
   display: block;
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 3em;
 }
-</style>
-{% endblock %}
+{% endcss %}
 
 {% macro _item(emoji) %}
 <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">

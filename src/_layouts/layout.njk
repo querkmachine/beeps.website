@@ -39,6 +39,9 @@
   <link rel="stylesheet" href="{{ '/assets/components/' + item + '.css' | url | cachebust }}" media="all">
   {%- endfor %}
   
+  {# Per-page CSS #}
+  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}" media="all">
+  
   {% include "src/_includes/page-head.njk" %}
   
   {#- Page-specific head content #}
