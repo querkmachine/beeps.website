@@ -3,30 +3,35 @@
 @use "../helpers/reset";
 
 .kimMasthead {
+  --logo-size: 3rem;
   --top-spacing: var(--border-thick);
   --bottom-spacing: var(--space-2);
 
-  border-block-start: var(--top-spacing) solid var(--color-furniture);
-  background-color: var(--color-surface);
+  border-block-start: var(--top-spacing) double var(--color-furniture);
 }
 
 .kimMasthead_inner {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: end;
   padding-block-end: var(--bottom-spacing);
   position: relative;
+  container-type: inline-size;
 }
 
 .kimMasthead_logo {
+  --ribbon-size: calc(var(--logo-size) * 1.5);
+
+  flex-shrink: 0;
   display: inline-block;
+  inline-size: calc(var(--logo-size) * 1.5);
   margin-block-start: calc(var(--top-spacing) * -1);
-  margin-block-end: calc(var(--top-spacing) * -1);
+  margin-inline-end: var(--space-2);
   padding-block-start: var(--space-5);
   padding-block-end: var(--space-2);
-  padding-inline: var(--space-2);
   color: var(--color-canvas);
-  background-color: var(--color-link);
-  line-height: 0;
+  background-color: var(--color-accent);
+  text-align: center;
 
   &:hover {
     background-color: var(--color-link-hover);
@@ -38,37 +43,38 @@
 }
 
 .kimMasthead_logo svg {
-  inline-size: 45px;
-  block-size: 45px;
+  inline-size: var(--logo-size);
+  block-size: var(--logo-size);
   fill: currentcolor;
+
+  // remove line-height from the image
+  vertical-align: middle;
 }
 
-.kimMasthead_name,
 .kimMasthead_section {
-  margin-inline-start: var(--space-2);
+  margin-block: var(--bottom-spacing);
   font-size: var(--size-1);
+  font-weight: 450;
+  font-stretch: 90%;
+  text-transform: uppercase;
   line-height: 1;
-
-  @container (min-width: 550px) {
-    font-size: var(--size-2);
-  }
 
   @include links.link-helper(
     $color: var(--color-link),
     $visited-color: var(--color-link),
     $initial-underline: false
   );
-}
 
-.kimMasthead_name {
-  font-weight: bold;
-
-  @container (max-width: 440px) {
-    @include a11y.visually-hidden;
+  @container (max-inline-size: 35rem) {
+    order: 3;
+    inline-size: 100%;
+    border-inline-start: var(--border-regular) solid currentcolor;
+    padding-inline-start: var(--bottom-spacing);
   }
 }
 
 .kimMasthead_menu-link {
+  margin-block-end: var(--bottom-spacing);
   @include links.link-helper(
     $color: var(--color-link),
     $visited-color: var(--color-link),
@@ -80,9 +86,15 @@
   @include reset.button;
   --icon-size: 1rem;
 
+  flex-shrink: 0;
+  padding-block: calc(var(--bottom-spacing) - var(--border-hairline));
+  padding-inline: var(--space-2);
+  border: var(--border-hairline) solid currentcolor;
   position: relative;
   color: var(--color-link);
-  box-shadow: 0 var(--bottom-spacing) 0 currentcolor;
+  font-weight: 450;
+  text-transform: uppercase;
+  line-height: 1;
   cursor: pointer;
 
   svg {
@@ -91,27 +103,13 @@
     margin-inline-end: var(--space-1);
   }
 
-  &::after {
-    content: "";
-    display: inline-block;
-  }
-
-  &::after {
-    position: absolute;
-    inset: calc(var(--space-2) * -1);
-
-    @media (forced-colors: active) {
-      border: 2px solid transparent;
-    }
-  }
-
-  &:hover {
-    color: var(--color-link-hover);
+  &:hover,
+  &[aria-expanded="true"] {
+    color: var(--color-canvas);
+    background-color: var(--color-link);
   }
 
   &[aria-expanded="true"] {
-    box-shadow: 0 var(--bottom-spacing) 0 var(--color-furniture);
-
     svg {
       transform: rotate(90deg);
     }

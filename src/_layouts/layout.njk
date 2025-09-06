@@ -57,11 +57,8 @@
   {% block masthead %}
     <header class="kimMasthead" data-js="masthead" id="top">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_logo" href="{{ '/' | url }}" tabindex="-1">
+        <a class="kimMasthead_logo" href="{{ '/' | url }}" aria-label="beeps - website homepage">
           {% include "logo.njk" %}
-        </a>
-      <a class="kimMasthead_name" href="{{ '/' | url }}">
-          {{- site.name -}}
         </a>
         {%- if mastheadSection %}
           <a class="kimMasthead_section" href="{{ mastheadSection.href | url }}">
