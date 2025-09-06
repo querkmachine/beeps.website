@@ -8,8 +8,7 @@ permalink: "/cv/"
 
 {% extends 'src/_layouts/unbranded.njk' %}
 
-{% block head %}
-<style>
+{% css %}
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&display=swap');
 
 html {
@@ -92,8 +91,7 @@ footer {
     display: none;
   }
 }
-</style>
-{% endblock %}
+{% endcss %}
 
 {% block main %}
 <div id="printme">Need a paper copy for some reason? <a href="javascript:window.print()">This page can be printed.</a></div>

@@ -12,19 +12,17 @@ eleventyExcludeFromCollections: true
 {% set title = preview.data.title | default("") %}
 {% set titleLength = title | length %}
 
-{% block head %}
-<style>
-  .page-override-size {
-    display: -webkit-box;
-    margin-block-end: 0;
-    padding-block-end: .1em; /* Fix descenders being cut off */
-    font-size: var(--size-4);
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-</style>
-{% endblock %}
+{% css %}
+.page-override-size {
+  display: -webkit-box;
+  margin-block-end: 0;
+  padding-block-end: .1em; /* Fix descenders being cut off */
+  font-size: var(--size-4);
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+{% endcss %}
 
 {% block title %}
   {%- if preview.data.isBlogPost %}

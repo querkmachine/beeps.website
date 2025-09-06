@@ -5,51 +5,49 @@ eleventyExcludeFromCollections: true
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
-  .page-content {
-    max-width: 22em;
-    margin-inline: auto;
-    text-align: center;
-  }
-    
-  .page-noodle {
-    margin-block-end: 0;
-  }
+{% css %}
+.page-content {
+  max-width: 22em;
+  margin-inline: auto;
+  text-align: center;
+}
   
-  .page-heading {
-    margin-block-start: calc(var(--space-3) * -1);
-    margin-block-end: var(--space-5);
-    transform: rotate(2deg);
-  }
-  
-  .page-advice {
-    transform: rotate(-3deg);
-  }
-  
-  .page-it,
-  .page-you {
-    color: var(--color-text-accent);
-  }
-  
-  .page-it {
-    position: relative;
-  }
-  
-  .page-it::after {
-    content: "";
-    display: block;
-    width: 100%;
-    aspect-ratio: 9/16;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-image: url("{{ '/assets/images/noodle-404-drips.webp' | url }}");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-</style>
-{% endblock %}
+.page-noodle {
+  margin-block-end: 0;
+}
+
+.page-heading {
+  margin-block-start: calc(var(--space-3) * -1);
+  margin-block-end: var(--space-5);
+  transform: rotate(2deg);
+}
+
+.page-advice {
+  transform: rotate(-3deg);
+}
+
+.page-it,
+.page-you {
+  color: var(--color-text-accent);
+}
+
+.page-it {
+  position: relative;
+}
+
+.page-it::after {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 9/16;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-image: url("{{ '/assets/images/noodle-404-drips.webp' | url }}");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+{% endcss %}
 
 {% block main %}
   <div class="kim-!-padding-block-start-3-4 kim-!-padding-block-end-3-4">

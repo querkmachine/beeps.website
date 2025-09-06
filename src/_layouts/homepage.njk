@@ -5,8 +5,7 @@
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
 {% from "src/_includes/jump-link.njk" import kimJumpLink %}
 
-{% block head %}
-<style>
+{% css %}
 /**
  * Intro splash
  */
@@ -66,8 +65,7 @@
 .page-trans-rights span {
   font-weight: 900;
 }
-</style>
-{% endblock %}
+{% endcss %}
 
 {% block main %}
 <header class="kimSplash page-intro">

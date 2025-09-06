@@ -9,51 +9,49 @@ cssComponents:
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
-  .page-data-table {
-    max-block-size: 25rem;
-    overflow: auto;
+{% css %}
+.page-data-table {
+  max-block-size: 25rem;
+  overflow: auto;
+}
+.page-data-table .kimTable {
+  table-layout: fixed;
+  font-size: var(--size--1);
+  border-collapse: unset;
+  border-spacing: 0;
+}
+.page-data-table .kimTable :is(th, td) {
+  box-sizing: content-box;
+}
+.page-data-table .kimTable_head,
+.page-data-table .kimTable :is(th, td):first-child {
+  position: sticky;
+  background-color: var(--color-canvas);
+}
+.page-data-table .kimTable_head {
+  inset-block-start: 0;
+  z-index: 1;
+}
+.page-data-table .kimTable :is(th, td):first-child {
+  inline-size: 13ch;
+  
+  @container (min-inline-size: 30rem) {
+    inset-inline-start: 0;
   }
-  .page-data-table .kimTable {
-    table-layout: fixed;
-    font-size: var(--size--1);
-    border-collapse: unset;
-    border-spacing: 0;
-  }
-  .page-data-table .kimTable :is(th, td) {
-    box-sizing: content-box;
-  }
-  .page-data-table .kimTable_head,
-  .page-data-table .kimTable :is(th, td):first-child {
-    position: sticky;
-    background-color: var(--color-canvas);
-  }
-  .page-data-table .kimTable_head {
-    inset-block-start: 0;
-    z-index: 1;
-  }
-  .page-data-table .kimTable :is(th, td):first-child {
-    inline-size: 13ch;
-    
-    @container (min-inline-size: 30rem) {
-      inset-inline-start: 0;
-    }
-  }
-  .page-data-table .kimTable :is(th, td):not(:first-child) {
-    inline-size: 10ch;
-    text-align: end;
-  }
-  .page-data-table .kimTable_head :is(th, td) {
-    vertical-align: bottom;
-  }
-  .page-chart-embed {
-    inline-size: 100%;
-    border: none;
-    aspect-ratio: 3 / 1;
-  }
-</style>
-{% endblock %}
+}
+.page-data-table .kimTable :is(th, td):not(:first-child) {
+  inline-size: 10ch;
+  text-align: end;
+}
+.page-data-table .kimTable_head :is(th, td) {
+  vertical-align: bottom;
+}
+.page-chart-embed {
+  inline-size: 100%;
+  border: none;
+  aspect-ratio: 3 / 1;
+}
+{% endcss %}
 
 {% block main %}
 <div class="kimWrapper kim-!-margin-block-8-9">

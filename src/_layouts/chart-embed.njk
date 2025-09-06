@@ -2,12 +2,13 @@
 
 {% block head %}
   <meta name="robots" content="noindex">
-  <style>
-    body {
-      margin: 0;
-    }
-  </style>
 {% endblock %}
+
+{% css %}
+body {
+  margin: 0;
+}
+{% endcss %}
 
 {% block main %}
   <canvas id="chart" role="img" aria-label="{{ title }}"></canvas>

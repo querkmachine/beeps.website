@@ -10,8 +10,7 @@ cssComponents:
 ---
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
+{% css %}
 .page-pretitle {
   color: var(--color-text);
 }
@@ -66,8 +65,7 @@ cssComponents:
 .page-figure {
   padding-block-start: var(--space-2);
 }
-</style>
-{% endblock %}
+{% endcss %}
 
 {% macro _swatch(color, description) %}
 <div class="kimGrid_column kimGrid_column-oneHalf galaxy:kimGrid_column-oneThird">
