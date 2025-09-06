@@ -165,21 +165,22 @@ e.g. 12 eng. sten (12 English stone)
 
 ## Common phrases
 
-| English             | Svenska                 | Note                                               |
-| :------------------ | :---------------------- | :------------------------------------------------- |
-| welcome             | välkommen               | Welcome VALerie                                    |
-| sorry               | förlåt                  | pronounced like 'forlorn'                          |
-| excuse me           | ursäkta                 | U R sakta                                          |
-| please, thank you   | tack                    |                                                    |
-| thank you so much   | tack så mycket          |                                                    |
-| you're welcome      | varsågod                | formal?                                            |
-| you're welcome      | tack tack               | informal?, essentially 'thank you for thanking me' |
-| [statement], right? | [statement], eller hur? | lit. 'or what?'                                    |
-| cool!               | häftigt!                |                                                    |
-| help                | hjälp                   |                                                    |
-| on the way          | på vag                  | lit. 'on move'                                     |
-| what is your name?  | vad heter du?           | lit. 'what called you?'                            |
-| there is...         | det finns...            | lit. 'there exists...'                             |
+| English             | Svenska                 | Note                      |
+| :------------------ | :---------------------- | :------------------------ |
+| welcome             | välkommen               | Welcome VALerie           |
+| sorry               | förlåt                  | pronounced like 'forlorn' |
+| excuse me           | ursäkta                 | U R sakta                 |
+| please, thank you   | tack                    |                           |
+| thank you so much   | tack så mycket          |                           |
+| you're welcome      | varsågod                | formal?                   |
+| [statement], right? | [statement], eller hur? | lit. 'or what?'           |
+| cool!               | häftigt!                |                           |
+| check that out!     | kolla!                  | lit. 'check'              |
+| help                | hjälp                   |                           |
+| on the way          | på vag                  | lit. 'on move'            |
+| what is your name?  | vad heter du?           | lit. 'what called you?'   |
+| my name is...       | jag heter...            | lit. 'I am called...'     |
+| there is/are...     | det finns...            | lit. 'there exists...'    |
 
 ### Questions
 
@@ -264,50 +265,64 @@ The actual prefix 'to' is 'att' for verbs. If a sentence is to begin with the ve
 
 e.g. du äter bra (you are eating good) &rarr; att äter bra (to eat good)
 
+### Abstract verbs
+
+| English             | Svenska (present) | Note                     |
+| :------------------ | :---------------- | :----------------------- |
+| to exist, to be     | finns             |                          |
+| to let, to allow    | låt               |                          |
+| to think            | tycker            |                          |
+| to like             | tycker om         | lit. 'think about'       |
+| to love             | älskar            | I love Alaska-r          |
+| to have             | ha                |                          |
+| to want             | vill ha           | I vill have it           |
+| to need             | behöver           | like 'behoove'           |
+| to have (to do)     | får               |                          |
+| to choose           | väljer            | Choose Jean Valjean      |
+| to understand       | förstår           | understanding four stars |
+| to think, to intend | tänker            | think tank-er            |
+| to support          | stöttar           | support otter            |
+
+### Movement
+
+| English   | Svenska (present) | Note                           |
+| :-------- | :---------------- | :----------------------------- |
+| to go     | åker              |                                |
+| to follow | följa             |                                |
+| to walk   | går               |                                |
+| to run    | springer          | Run with a spring in your step |
+| to jump   | hoppar            |                                |
+| to fly    | flyger            |                                |
+| to stand  | står              | stand and står                 |
+| to sit    | sitter            |                                |
+
+### Activities
+
 | English                  | Svenska (present) | Note                            |
 | :----------------------- | :---------------- | :------------------------------ |
-| to exist, to be          | finns             |                                 |
-| to go                    | åker              |                                 |
-| to follow                | följa             | Följa Boy tellem                |
-| to walk                  | går               |                                 |
-| to run                   | springer          | Run with a spring in your step  |
-| to jump                  | hoppar            |                                 |
-| to fly                   | flyger            |                                 |
-| to stand                 | står              | stand and står                  |
-| to sit                   | sitter            |                                 |
 | to eat                   | äter              |                                 |
 | to drink                 | dricker           |                                 |
-| to let                   | låt               |                                 |
-| to like                  | tycker om         | lit. 'think about'              |
-| to love                  | älskar            | I love Alaska-r                 |
 | to work                  | arbetar           | ar beta r                       |
-| to want                  | vill              | I vill have it                  |
-| to have                  | ha                |                                 |
-| to need                  | behöver           | like 'behoove'                  |
-| to have [to]             | får               |                                 |
-| to look                  | kolla             | holla at that thing             |
+| to look                  | titt              |                                 |
 | to find                  | hittar            |                                 |
-| to choose                | väljer            | Choose Jean Valjean             |
 | to watch                 | tittar på         | lit. 'looking on'               |
 | to show                  | visar             | show with vision                |
 | to listen                | lyssnar           |                                 |
 | to hear                  | hör               |                                 |
-| to speak                 | talar             | Tellarites speak                |
+| to speak (as a language) | talar             | Tellarites speak                |
+| to talk (as to converse) | pratar            |                                 |
 | to laugh                 | skratta           |                                 |
 | to cry                   | gråter            | a child crying is quite grating |
 | to see                   | ser               |                                 |
 | to buy                   | köper             |                                 |
-| to sell                  | säljer            |                                 |
-| to pay                   | betalar           |                                 |
+| to sell                  | säljer            | säljer boy sellem               |
+| to pay                   | betalar           | beta lar                        |
 | to take                  | tar               |                                 |
 | to own                   | äger              |                                 |
 | to make, to do           | göra              |                                 |
-| to use                   | använder          |                                 |
-| to prepare, to repair    | lagar             |                                 |
-| to understand            | förstår           | understanding four stars        |
-| to think, to intend      | tänker            | think tank-er                   |
+| to use                   | använder          | an van der                      |
+| to prepare, to repair    | lagar             | a brewer prepares lager         |
 | to invite, to treat      | bjuda             |                                 |
-| to support               | stöttar           | support otter                   |
 | to play (an instrument)  | spelar            | playing a spelling game         |
 | to play (a game)         | leker             | Lakers play basketball          |
 | to study                 | pluggar           | plugs away at                   |
@@ -319,11 +334,9 @@ e.g. du äter bra (you are eating good) &rarr; att äter bra (to eat good)
 | to cook                  | lagar (mat)       | lit. 'prepare food'             |
 | to bake                  | bakar             |                                 |
 | to read                  | läser             | laser scanning a book?          |
-| to write                 | skriva            |                                 |
-| to speak/say             | pratar            |                                 |
+| to write                 | skriver           |                                 |
 | to draw                  | ritar             |                                 |
 | to paint                 | målar             |                                 |
-| to write                 | skriver           |                                 |
 | to sing                  | sjunger           |                                 |
 | to dance                 | dansar            | Ted Dansen dances, Ted Dansar   |
 | to wear                  | har på            | lit. 'have on'                  |
@@ -332,6 +345,12 @@ e.g. du äter bra (you are eating good) &rarr; att äter bra (to eat good)
 | to go sailing            | seglar            | like 'sailor'                   |
 | to go swimming           | simmar            | Sims shouldn't go swimming      |
 | to do business           | affär             | business affairs                |
+
+### Things you don't normally do verbs
+
+| English | Svenska (present) | Note                              |
+| :------ | :---------------- | :-------------------------------- |
+| to rain | regnar            | like 'regnal', someone who reigns |
 
 ## Adjectives
 
