@@ -190,29 +190,57 @@ e.g. du förstår svenska (you understand Swedish) &rarr; förstår du svenska? 
 
 e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live you in downtown?)
 
-| English   | Svenska | Note                               |
-| :-------- | :------ | :--------------------------------- |
-| who       | vem     |                                    |
-| what      | vad     |                                    |
-| when      | när     |                                    |
-| time when | då      | sort of nostalgic in tone          |
-| where     | var     |                                    |
-| where     | där     | a specific location                |
-| to where  | dit     |                                    |
-| why       | varför  | same as Middle English 'wherefore' |
-| how       | hur     |                                    |
+| English            | Svenska (en)    | Svenska (ett)   | Svenska (pl.)  | Note                               |
+| :----------------- | :-------------- | :-------------- | :------------- | :--------------------------------- |
+| who                | vem             |                 |                |                                    |
+| whose              | vems            |                 |                |                                    |
+| what               | vad             |                 |                |                                    |
+| when               | när             |                 |                |                                    |
+| time when          | då              |                 |                | sort of nostalgic in tone          |
+| where              | var             | vart            | vara           |                                    |
+| where              | där             |                 |                | a specific location                |
+| to where           | dit             |                 |                |                                    |
+| which              | vilken          | vilket          | vilka          |                                    |
+| why                | varför          |                 |                | same as Middle English 'wherefore' |
+| how                | hur             |                 |                |                                    |
+| do you have...     | har du ingen... | har du inget... | har du inga... |                                    |
+| do you know...     | vet du...       |                 |                |                                    |
+| what is ... doing? | vad gör...      |                 |                |                                    |
 
 ### Connecting words
 
-| English | Svenska | Note             |
-| :------ | :------ | :--------------- |
-| very    | väldigt | val digs it      |
-| maybe   | kanske  | 'can she?' maybe |
-| but     | men     |                  |
-| with    | med     |                  |
-| as, so  | så      |                  |
-| to, on  | på      |                  |
-| from    | från    |                  |
+| English          | Svenska     | Note             |
+| :--------------- | :---------- | :--------------- |
+| very             | väldigt     | val digs it      |
+| maybe            | kanske      | 'can she?' maybe |
+| but              | men         |                  |
+| with             | med         |                  |
+| without          | utan        |                  |
+| as, so           | så          |                  |
+| on, to           | på          |                  |
+| to               | till        |                  |
+| towards, against | mot         |                  |
+| from             | från        |                  |
+| by, at, on       | vid         |                  |
+| at               | hos         |                  |
+| of, in           | av          |                  |
+| for, about       | om          |                  |
+| that             | att         |                  |
+| but              | utan        |                  |
+| because          | eftersom    |                  |
+| through, across  | genom       |                  |
+| between          | mellan      |                  |
+| according to     | enligt      | like 'enlighten' |
+| before           | före, innan |                  |
+| after            | efter       |                  |
+| in front of      | framför     |                  |
+| behind           | bakom       |                  |
+| outside          | utanför     |                  |
+| ahead, before    | framåt      |                  |
+| over, above      | över        |                  |
+| beside           | bredvid     |                  |
+| for              | åt          |                  |
+| if               | om          |                  |
 
 ## Pronouns
 
@@ -234,18 +262,18 @@ e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live
 
 ### Posessive pronouns
 
-| English          | Svenska (en) | Svenska (ett) | Svenska (plural) |
-| :--------------- | :----------- | :------------ | :--------------- |
-| my               | min          | mitt          | mina             |
-| (my) own         | sin          | sitt          | sina             |
-| your (singular)  | din          | ditt          | dina             |
-| your (plural)    | er           | ert           | era              |
-| our              | vår          | vårt          | våra             |
-| his              | hans         | —             | —                |
-| hers             | hennes       | —             | —                |
-| their (singular) | hens         | —             | —                |
-| their (plural)   | deras        | —             | —                |
-| its              | dess         | —             | —                |
+| English          | Svenska (en) | Svenska (ett) | Svenska (pl.) |
+| :--------------- | :----------- | :------------ | :------------ |
+| my               | min          | mitt          | mina          |
+| (my) own         | sin          | sitt          | sina          |
+| your (singular)  | din          | ditt          | dina          |
+| your (plural)    | er           | ert           | era           |
+| our              | vår          | vårt          | våra          |
+| his              | hans         | —             | —             |
+| hers             | hennes       | —             | —             |
+| their (singular) | hens         | —             | —             |
+| their (plural)   | deras        | —             | —             |
+| its              | dess         | —             | —             |
 
 ### du vs. ni
 
@@ -390,6 +418,33 @@ e.g. att skriva svenska är lätt (to write Swedish is easy) &rarr; att skriva s
 | over there   | där borta    | lit. 'there away' |
 | far away     | långt borta  | lit. 'long away'  |
 
+### Quantity
+
+| English  | Svenska (en) | Svenska (ett) | Svenska (pl.) |
+| :------- | :----------- | :------------ | :------------ |
+| several  | flera        | —             | —             |
+| many     | många        | —             | —             |
+| no, none | ingen        | inget         | inga          |
+
+### Colours
+
+| English   | Svenska (en) | Svenska (ett) | Svenska (pl.) |
+| :-------- | :----------- | :------------ | :------------ |
+| colour    | färg         | —             | —             |
+| colourful | färgglad     | färgglatt     | färgglada     |
+| black     | svart        | svartt        | svarta        |
+| white     | vit          | vitt          | vita          |
+| grey      | grå          | gråt          | gråa          |
+| red       | röd          | röt           | röda          |
+| green     | grön         | grönt         | gröna         |
+| blue      | blå          | blåt          | blåa          |
+| yellow    | gul          | gult          | gula          |
+| orange    | orange       | —             | —             |
+| pink      | rosa         | —             | —             |
+| purple    | lila         | —             | —             |
+| golden    | gyllene      | —             |               |
+| silver    | silver       | —             |               |
+
 ## Adverbs
 
 | English          | Svenska       | Note                                               |
@@ -414,6 +469,13 @@ Posessive plurals are suffixed with an -s. Unlike English, there is no apostroph
 
 e.g. flickas mat (girls's food)
 e.g. mannens hund (the man's dog)
+
+### Abstract concepts
+
+| English          | Svenska (en) | Svenska (ett) | Svenska (pl.) | Note |
+| :--------------- | :----------- | :------------ | :------------ | :--- |
+| question, asking | frågar       |               | frågor        |      |
+| answer           | svaren       | svaret        |               |      |
 
 ### People
 
@@ -546,11 +608,12 @@ Most animals use 'en', but the word 'animal' itself uses 'ett'.
 
 ### Times
 
-| English  | Svenska          | Note              |
-| :------- | :--------------- | :---------------- |
-| night    | natt, natten     |                   |
-| morning  | morgon, morgonen |                   |
-| tomorrow | i morgon         | lit. 'in morning' |
+| English               | Svenska          | Note              |
+| :-------------------- | :--------------- | :---------------- |
+| night                 | natt, natten     |                   |
+| morning               | morgon, morgonen |                   |
+| tomorrow              | i morgon         | lit. 'in morning' |
+| whenever, at any time | när som helst    |                   |
 
 ### Clothing and accessories
 
