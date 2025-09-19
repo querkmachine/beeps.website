@@ -59,7 +59,7 @@
     <div class="kimGrid">
       {%- if webrings %}
       <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-        <h2 class="kimHeading-s pageSection_heading">Webrings</h2>
+        <h2 class="kimHeading-xs pageSection_heading">Webrings</h2>
         <div class="kimGrid">
           {%- for ring in webrings %}
           <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
@@ -85,7 +85,7 @@
       {%- if buttons.homepage %}
         {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
         <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-          <h2 class="kimHeading-s pageSection_heading">Buttons</h2>
+          <h2 class="kimHeading-xs pageSection_heading">Buttons</h2>
           <div class="kimButtonGrid">
             {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
           </div>
