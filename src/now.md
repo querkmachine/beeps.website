@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: beeps NOW!
-updated: 2025-06-26
+updated: 2025-09-19
 metadata:
   description: A basic overview of what I'm up to at the moment.
 ---
@@ -12,30 +12,26 @@ Last updated: {{ updated | formatDate('human') }}
 
 ## Now
 
-💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team. Currently, and for the last several months, I've been working on the upcoming GOV.UK brand refresh. I'm also assisting with updates to the [WCAG Primer](https://alphagov.github.io/wcag-primer/) and have been iterating upon how I record and distribute [GOV.UK browser data]({{ '/govuk-browser-data/' | url }}).
+💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team. Currently, and for the last several months, I've been working on the GOV.UK brand refresh and related work. I'm also writing WCAG understanding documents for the [WCAG Primer](https://alphagov.github.io/wcag-primer/).
+
+🇸🇪 I'm learning to speak Swedish! <span lang="sv">Jag pratar en lite svenska.</span>
 
 🏥 Unfortunately, I'm dealing with a lot of health-related issues at the moment. Since the start of the year I've been diagnosed with asthma, hypertension, and sleep apnea. It's been a lot.
 
-🎶 Lately, [I've been listening](https://www.last.fm/user/robomilk/library) to my whole library on shuffle, rediscovering music I've not listened to for a while. Also Eurovision happened, so I've been listening to entries from that for a while.
+🎶 Lately, I saw Daði Freyr and Montaigne (Iceland and Australia's Eurovision entrants in 2020 and 2021) live, so [I've been listening](https://www.last.fm/user/robomilk/library) to them a whole lot!
 
-📺 [I'm watching](https://trakt.tv/users/batbeeps/history) _3 Body Problem_, _Murderbot_, _Jet Lag: The Game_, the new _Formula 1_ season, and various Dropout shows. As per usual, I'm rewatching _Star Trek: Enterprise_ along with [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/).
+📺 [I'm watching](https://trakt.tv/users/batbeeps/history) _Jet Lag: The Game_, _Taskmaster_, _Only Connect_, the new _Formula 1_ season, and various Dropout shows. As per usual, I'm rewatching _Star Trek: Enterprise_ along with [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/).
 
-📚 I'm currently (slowly) reading _The Anthropocene Reviewed: Essays on a Human-Centered Planet_ by John Green.
+📚 I'm currently (slowly) reading _The Anthropocene Reviewed: Essays on a Human-Centered Planet_ by John Green. I also randomly found this comic named _White House Robot Romance_, which is a weird but pretty neat concept.
 
-🎮 I've mostly been playing [OpenTTD](https://www.openttd.org/), finally working out how schedules work. [Pokémon TCG Pocket](https://tcgpocket.pokemon.com/) is also distracting me twice a day.
+🎮 I've mostly been playing [Factorio](https://factorio.com/), having fallen down that well **again**.
 
 ## Recently
 
 📣 I've begun voice training and laser hair removal so that I can Be More Trans.
 
-😺 I've been doing a bit of work on [BristolFurs](https://bristolfurs.co.uk) website-related stuff.
-
-🏳️‍🌈 I went to Birmingham for ConFuzzled 2025 and Cardiff for Pride Cymru, pride event of Wales.
+🎙️ I attended a bunch of live events, including the London e-Prix, a live edition of [the _Three Bean Salad_ podcast](<https://en.wikipedia.org/wiki/Three_Bean_Salad_(podcast)>), and a concert for Daði Freyr (supported by Montaigne).
 
 ## Soon
 
-🇸🇪 I'm going to Stockholm for a long weekend at the end of June.
-
-🏎️ In July, I'll be going to Bristol Pride and be attending the London e-Prix for the first time!
-
-🫘 In September, I'll be seeing _[Three Bean Salad](https://linktr.ee/threebeansalad)_ live and might be headed to the London Podcast Festival again, depending on what the schedule is like.
+🐾 I'll be attending Scotiacon in Glasgow in February, and ConFuzzled in Birmingham in May.
