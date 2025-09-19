@@ -16,84 +16,86 @@
   </div>
 </header>
 
-<div class="kimWrapper page-section">
-  <div class="kimGrid">
+<div class="kimWrapper">
 
-    <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="about" aria-labelledby="about-heading">
-      <h2 class="kimHeading-m page-section__heading" id="about-heading">About beeps</h2>
-      {{ content | safe }}
-      <p class="kimBody">
-        {{ kimJumpLink({
-          href: "/about/",
-          text: "More about beeps"
-        }) }}
-      </p>
-    </section>
-    
-    <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="blog" aria-labelledby="blog-heading">
-      <h2 class="kimHeading-m page-section__heading" id="blog-heading">Blog</h2>
-      <ul class="kimList kimList-spaced">
-        {% for post in collections.blog | reverse | head(5) %}
-          {{ kimBlogCard(post) }}
-        {% endfor %}
-      </ul>
-      <p class="kimBody">
-        {{ kimJumpLink({
-          href: "/blog/",
-          text: "All blog posts"
-        }) }}
-      </p>
-    </section>
-
-  </div>
-</div>
-
-<section class="page-trans-rights kimWrapper">
-  <p>Transformation is part of being alive. <span>Transgender rights are human rights.</span></p>
-</section>
-{% endblock %}
-
-{% block beforeFooter %}
-{%- if webrings or buttons.homepage %}
-  <div class="kimGrid">
-    {%- if webrings %}
-    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <h2 class="kim-!-visually-hidden">Webrings</h2>
-      <div class="kimGrid">
-        {%- for ring in webrings %}
-        <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
-          <div class="kimWebring">
-            <a class="kimWebring_name" href="{{ ring.url }}">
-              {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
-              {{ ring.name }}
-            </a><br>
-            <a class="kimLink-plain kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
-              {% include "../assets/icons/arrow-e.svg" %}
-              Next
-            </a><br>
-            <a class="kimLink-plain kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
-              {% include "../assets/icons/arrow-w.svg" %}
-              Previous
-            </a>
-          </div>
-        </div>
-        {%- endfor %}
-      </div>
+  <div class="page-section">
+    <div class="kimGrid">
+  
+      <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="about" aria-labelledby="about-heading">
+        <h2 class="kimHeading-m page-section__heading" id="about-heading">About beeps</h2>
+        {{ content | safe }}
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/about/",
+            text: "More about beeps"
+          }) }}
+        </p>
+      </section>
+      
+      <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="blog" aria-labelledby="blog-heading">
+        <h2 class="kimHeading-m page-section__heading" id="blog-heading">Blog</h2>
+        <ul class="kimList kimList-spaced">
+          {% for post in collections.blog | reverse | head(5) %}
+            {{ kimBlogCard(post) }}
+          {% endfor %}
+        </ul>
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/blog/",
+            text: "All blog posts"
+          }) }}
+        </p>
+      </section>
+  
     </div>
-    {%- endif %}
-    {%- if buttons.homepage %}
-      {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
-      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-        <h2 class="kim-!-visually-hidden">Buttons</h2>
-        <div class="kimButtonGrid">
-          {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
-        </div>
-      </div>
-    {%- endif %}
   </div>
+  
+  <section class="page-trans-rights">
+    <p>Transformation is part of being alive. <span>Transgender rights are human rights.</span></p>
+  </section>
 
-  <hr class="kimRule kimRule-hairline kim-!-margin-block-start-0">
-{%- endif %}
+  {%- if webrings or buttons.homepage %}
+  <div class="page-section">
+    <div class="kimGrid">
+      {%- if webrings %}
+      <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-s page-section__heading">Webrings</h2>
+        <div class="kimGrid">
+          {%- for ring in webrings %}
+          <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
+            <div class="kimWebring">
+              <a class="kimWebring_name" href="{{ ring.url }}">
+                {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
+                {{ ring.name }}
+              </a><br>
+              <a class="kimLink-plain kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
+                {% include "../assets/icons/arrow-e.svg" %}
+                Next
+              </a><br>
+              <a class="kimLink-plain kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
+                {% include "../assets/icons/arrow-w.svg" %}
+                Previous
+              </a>
+            </div>
+          </div>
+          {%- endfor %}
+        </div>
+      </section>
+      {%- endif %}
+      {%- if buttons.homepage %}
+        {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
+        <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          <h2 class="kimHeading-s page-section__heading">Buttons</h2>
+          <div class="kimButtonGrid">
+            {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
+          </div>
+        </section>
+      {%- endif %}
+    </div>
+  </div>
+  {%- endif %}
+  
+  </div>
 {% endblock %}
 
 {% css %}
@@ -102,7 +104,7 @@
  */
  
 .page-section {
-  margin-block-start: calc(0px - var(--space-4-5));
+  margin-block: var(--space-4-5);
 }
 
 .page-section__heading {
