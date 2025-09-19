@@ -29,8 +29,8 @@ cssComponents:
 </style>
 
 {% macro _swatch(hex) %}
-<span class="page-swatch">
-<span class="page-swatch__preview" style="background-color: {{ hex }};"></span>
+<span class="pageSwatch">
+<span class="pageSwatch_preview" style="background-color: {{ hex }};"></span>
 <code class="kimCode">{{ hex }}</code>
 </span>
 {% endmacro %}
@@ -85,7 +85,7 @@ Always aim to achieve at least a 4.5:1 contrast ratio between text and backgroun
 
 The logo of the website (and pretty much just this website). This has been a symbol I've used for longer than you'd expect, [since around 2010]({{ '/blog/2023-07-25-20-years/#numbers' | url }}).
 
-<div class="page-icon">
+<div class="pageLogo">
   <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Silhouette of a stylised bat's head, within which the cutout of a mechanical gear is visible.">
 </div>
 
@@ -106,6 +106,6 @@ Some custom made icons for custom made uses.
   "rss"
 ] -%}
 
-<div style="display: flex; flex-wrap: wrap; gap: var(--space-3);">
+<div class="pageIconGrid">
 {%- for i in icons -%}<span>{% include "./assets/icons/" + i + ".svg" %}</span>{% endfor -%}
 </div>

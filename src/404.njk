@@ -6,36 +6,36 @@ eleventyExcludeFromCollections: true
 {% extends 'src/_layouts/layout.njk' %}
 
 {% css %}
-.page-content {
+.pageWrapper {
   max-width: 22em;
   margin-inline: auto;
   text-align: center;
 }
   
-.page-noodle {
+.pageImage {
   margin-block-end: 0;
 }
 
-.page-heading {
+.pageHeading {
   margin-block-start: calc(var(--space-3) * -1);
   margin-block-end: var(--space-5);
   transform: rotate(2deg);
 }
 
-.page-advice {
+.pageContent {
   transform: rotate(-3deg);
 }
 
-.page-it,
-.page-you {
+.pageIt,
+.pageYou {
   color: var(--color-text-accent);
 }
 
-.page-it {
+.pageIt {
   position: relative;
 }
 
-.page-it::after {
+.pageIt::after {
   content: "";
   display: block;
   width: 100%;
@@ -52,13 +52,13 @@ eleventyExcludeFromCollections: true
 {% block main %}
   <div class="kim-!-padding-block-start-3-4 kim-!-padding-block-end-3-4">
     <div class="kimWrapper">
-      <div class="page-content">
-        {% responsiveImage "./src/assets/images/noodle-404.webp", "An amphimorpho stuck to the wall, looking at the viewer aggressively.", { classes: "page-noodle", lazy: false } %}
-        <h1 class="kimHeading-s page-heading">
+      <div class="pageWrapper">
+        {% responsiveImage "./src/assets/images/noodle-404.webp", "An amphimorpho stuck to the wall, looking at the viewer aggressively.", { classes: "pageImage", lazy: false } %}
+        <h1 class="kimHeading-s pageHeading">
           The page you were looking for couldn&rsquo;t be found&hellip;<br>
-          but <span class="page-it">it</span> has found <span class="page-you">you</span>!
+          but <span class="pageIt">it</span> has found <span class="pageYou">you</span>!
         </h1>
-        <div class="page-advice">
+        <div class="pageContent">
           <p class="kimBody">You might want to get out of here fast.<br>
           <a href="{{ '/' | url }}" class="kimLink">Return home, quickly!</a></p>
         </div>

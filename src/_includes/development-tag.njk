@@ -1,6 +1,6 @@
 {%- if site.environment == "dev" %}
-  <details id="dev-tag">
-    <summary id="dev-tag__label">
+  <details id="pageDevTag">
+    <summary>
       <span>Development</span>
     </summary>
     <div>
@@ -16,7 +16,7 @@
   </details>
 
   <style>
-    #dev-tag {
+    #pageDevTag {
       position: sticky;
       width: 100%;
       top: 0;
@@ -25,22 +25,22 @@
       color: white;
       background-color: #c00;
     }
-    #dev-tag summary { list-style: none; }
-    #dev-tag summary::-webkit-details-marker { display: none; }
-    #dev-tag summary {
+    #pageDevTag summary { list-style: none; }
+    #pageDevTag summary::-webkit-details-marker { display: none; }
+    #pageDevTag summary {
       padding: .25em 1em .25em .5em;
       font-size: smaller;
       font-weight: bold;
       text-transform: uppercase;
       cursor: pointer;
     }
-    #dev-tag div {
+    #pageDevTag div {
       display: grid;
       grid-template-columns: 8em 1fr;
       gap: .5em;
       padding: .5em;
     }
-    #dev-tag textarea {
+    #pageDevTag textarea {
       width: 100%;
       height: 10em;
       resize: vertical;

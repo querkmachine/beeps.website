@@ -18,11 +18,11 @@
 
 <div class="kimWrapper">
 
-  <div class="page-section">
+  <div class="pageSection">
     <div class="kimGrid">
   
       <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="about" aria-labelledby="about-heading">
-        <h2 class="kimHeading-m page-section__heading" id="about-heading">About beeps</h2>
+        <h2 class="kimHeading-m pageSection_heading" id="about-heading">About beeps</h2>
         {{ content | safe }}
         <p class="kimBody">
           {{ kimJumpLink({
@@ -33,7 +33,7 @@
       </section>
       
       <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="blog" aria-labelledby="blog-heading">
-        <h2 class="kimHeading-m page-section__heading" id="blog-heading">Blog</h2>
+        <h2 class="kimHeading-m pageSection_heading" id="blog-heading">Blog</h2>
         <ul class="kimList kimList-spaced">
           {% for post in collections.blog | reverse | head(5) %}
             {{ kimBlogCard(post) }}
@@ -50,16 +50,16 @@
     </div>
   </div>
   
-  <section class="page-trans-rights">
+  <section class="pageTransRights">
     <p>Transformation is part of being alive. <span>Transgender rights are human rights.</span></p>
   </section>
 
   {%- if webrings or buttons.homepage %}
-  <div class="page-section">
+  <div class="pageSection">
     <div class="kimGrid">
       {%- if webrings %}
       <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-        <h2 class="kimHeading-s page-section__heading">Webrings</h2>
+        <h2 class="kimHeading-s pageSection_heading">Webrings</h2>
         <div class="kimGrid">
           {%- for ring in webrings %}
           <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
@@ -85,7 +85,7 @@
       {%- if buttons.homepage %}
         {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
         <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-          <h2 class="kimHeading-s page-section__heading">Buttons</h2>
+          <h2 class="kimHeading-s pageSection_heading">Buttons</h2>
           <div class="kimButtonGrid">
             {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
           </div>
@@ -103,11 +103,11 @@
  * Sections
  */
  
-.page-section {
+.pageSection {
   margin-block: var(--space-4-5);
 }
 
-.page-section__heading {
+.pageSection_heading {
   margin-block-start: 0;
   padding-block-start: var(--space-3);
   border-block-start: var(--border-regular) solid var(--color-furniture);
@@ -117,7 +117,7 @@
  * Trans rights
  */ 
  
-.page-trans-rights {
+.pageTransRights {
   --pink: #F7A8B8;
   --blue: #55CDFC;
   padding-block: var(--space-7);
@@ -126,13 +126,13 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .page-trans-rights {
+  .pageTransRights {
     --pink: #C92EBF;
     --blue: #2E68FF;
   }
 }
 
-.page-trans-rights p {
+.pageTransRights p {
   margin: 0;
   padding-block: var(--space-1);
   color: var(--pink);
@@ -143,7 +143,7 @@
   text-align: center;
 }
 
-.page-trans-rights span {
+.pageTransRights span {
   font-weight: 900;
   color: var(--blue);
 }

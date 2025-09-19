@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
 {% set titleLength = title | length %}
 
 {% css %}
-.page-override-size {
+.pageOverrideTitleSize {
   display: -webkit-box;
   margin-block-end: 0;
   padding-block-end: .1em; /* Fix descenders being cut off */
@@ -29,7 +29,7 @@ eleventyExcludeFromCollections: true
     <div class="kimHeading-m kim-!-margin-block-start-0">
       {{ preview.date | formatDate('human') }}
     </div>
-    <div class="kimHeading-xl kim-!-margin-block-start-0 {%- if titleLength >= 50 %} page-override-size{% endif %}">
+    <div class="kimHeading-xl kim-!-margin-block-start-0 {%- if titleLength >= 50 %} pageOverrideTitleSize{% endif %}">
       {{ title | markdownInline | safe }}
     </div>
   {%- elif preview.url == '/' %}
