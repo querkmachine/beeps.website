@@ -54,7 +54,7 @@
   --c-black: #4b4b4b;
   --c-white: #fff;
   --c-neon-green: #00e200;
-  --c-muted-green: #6a9969;
+  --c-muted-green: #588157;
   --c-neon-purple: #7c56fc;
   --c-muted-purple: #786999;
 
@@ -62,18 +62,7 @@
   --c-green: var(--c-neon-green);
   --c-purple: var(--c-neon-purple);
 
-  @media (prefers-color-scheme: light) {
-    --c-green: var(--c-muted-green);
-    --c-purple: var(--c-muted-purple);
-  }
-
-  // --c-dark-purple: #2a2536;
-  // --c-green: oklch(85.29% 0.323 142.82);
-  // --c-dark-green: #12803b;
-
-  // v dark purp #241f2e
-
-  // Semantic colours
+  // Layout colours
   --color-canvas: light-dark(
     color-mix(in hsl, var(--c-purple), #fff 95%),
     color-mix(in hsl, var(--c-purple), #000 75%)
@@ -85,6 +74,7 @@
   --color-furniture: var(--c-purple);
   --color-accent: var(--c-green);
 
+  // Text colours
   --color-text: light-dark(var(--c-black), var(--c-white));
   --color-text-accent: light-dark(
     color-mix(in hsl, var(--c-green), #000 10%),
@@ -103,31 +93,13 @@
   );
   --color-link-hover: var(--color-link-visited);
 
-  // --color-text: light-dark(var(--c-off-black), var(--c-white));
-  // --color-text-accent: light-dark(var(--c-dark-green), var(--c-green));
-  // --color-text-subtle: color-mix(
-  //   in hsl,
-  //   var(--color-text) 80%,
-  //   var(--color-canvas)
-  // );
-  // --color-canvas: light-dark(var(--c-white), var(--c-dark-purple));
-  // --color-surface: light-dark(
-  //   #{color.change(#786999, $lightness: 96%)},
-  //   #{color.change(#786999, $lightness: 15%)}
-  // );
-  // --color-surface-accent: light-dark(
-  //   #{color.change(#00fa17, $lightness: 94%)},
-  //   #{color.change(#00fa17, $lightness: 15%)}
-  // );
-  // --color-furniture: var(--c-purple);
-  // --color-link: light-dark(var(--c-dark-green), var(--c-green));
-  // --color-link-visited: color-mix(
-  //   in hsl,
-  //   var(--color-link) 80%,
-  //   var(--color-canvas)
-  // );
-  // --color-link-hover: var(--color-link-visited);
-
+  // Focus styles
   --color-focus-text: #000;
   --color-focus-background: #fc0;
+
+  // Light mode
+  @media (prefers-color-scheme: light) {
+    --c-green: var(--c-muted-green);
+    --c-purple: var(--c-muted-purple);
+  }
 }
