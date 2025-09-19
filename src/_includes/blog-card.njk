@@ -9,6 +9,7 @@
       {%- if options.prelabel %}{{ options.prelabel }}: {% endif -%}
       <a class="kimLink kimBlogCard_link" href="{{ post.url | absoluteUrl(site.domain) }}" itemprop="url" {%- if options.rel %} rel="{{ options.rel }}"{% endif %}>
         <span itemprop="name" {%- if post.data.titleLang %} lang="{{ post.data.titleLang }}"{% endif %}>
+          <span class="kim-!-visually-hidden">Published</span>
           {{- post.data.title | markdownInline | safe -}}
         </span>
       </a>
