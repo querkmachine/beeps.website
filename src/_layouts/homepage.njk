@@ -5,70 +5,8 @@
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
 {% from "src/_includes/jump-link.njk" import kimJumpLink %}
 
-{% css %}
-/**
- * Intro splash
- */
-.page-intro {
-  margin-block-end: var(--space-5);
-}
-
-/** 
- * Blogs
- */
-.page-blog {
-  margin-block-end: var(--space-7);
-  border: var(--border-regular) solid var(--color-furniture);
-  background-color: var(--color-surface);
-}
-.page-blog-noodle,
-.page-about-noodle {
-  margin-block-start: -5%;
-}
-.page-blog-heading {
-  margin-block-start: var(--space-5);
-}
-
-/**
- * About
- */
-.page-about {
-  margin-block-end: var(--space-8-9);
-}
-
-/**
- * Trans rights
- */ 
-.page-trans-rights {
-  padding-block: var(--space-7);
-  position: relative;
-  background-color: var(--color-surface);
-}
-.page-trans-rights p {
-  margin: 0;
-  padding-block: var(--space-1);
-  color: var(--c-text);
-  font-size: var(--size-4);
-  font-weight: 600;
-  line-height: 1;
-  text-wrap: balance;
-  text-align: center;
-  text-transform: uppercase;
-}
-@supports (background-clip: text) {
-  .page-trans-rights p {
-    color: transparent;
-    background-image: linear-gradient(to bottom, rgb(85, 205, 252), rgb(179, 157, 233), rgb(247, 168, 184), rgb(246, 216, 221), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(246, 216, 221), rgb(247, 168, 184), rgb(179, 157, 233), rgb(85, 205, 252));
-    background-clip: text;
-  }
-}
-.page-trans-rights span {
-  font-weight: 900;
-}
-{% endcss %}
-
 {% block main %}
-<header class="kimSplash page-intro">
+<header class="kimSplash">
   <div class="kimWrapper kimSplash_inner">
     <h1 class="kimSplash_text">
       <strong>I&rsquo;m beeps.</strong>
@@ -77,52 +15,38 @@
     {% responsiveImage "./src/assets/images/noodle-home.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears, and four arms. It looks at you, smiling toothily and throwing a peace sign. It's wearing a black denim jacket covered in various patches and a purple t-shirt.", { classes: "kimSplash_image", lazy: false, sizes: "100vi" } %}
   </div>
 </header>
-  
-<section id="blog" aria-labelledby="blog-heading">
-  <div class="kimWrapper">
-    <div class="kimGrid page-blog">
-      <div class="page-blog-noodle kimGrid_column kimGrid_column-full nx:kimGrid_column-oneQuarter">
-        {% responsiveImage "./src/assets/images/noodle-blog.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It sits on the ground, hunched over a stickerbombed laptop, deep in thought.", { sizes: "25vi" } %}
-      </div>
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-threeQuarters">
-        <h2 class="kimHeading-m page-blog-heading" id="blog-heading">Recent blog posts</h2>
-        <div class="kimGrid">
-          {% for post in collections.blog | reverse | head(3) %}
-            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-block-end-3">
-              {{ kimBlogCard(post, { element: "div" }) }}
-            </div>
-          {% endfor %}
-        </div>
-        <p class="kimBody">
-          {{ kimJumpLink({
-            href: "/blog/",
-            text: "All blog posts"
-          }) }}
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="page-about" id="about" aria-labelledby="about-heading">
-  <div class="kimWrapper">
-    <div class="kimGrid">
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
-        <h2 class="kimHeading-m kim-!-margin-block-start-0" id="about-heading">About beeps</h2>
-        {{ content | safe }}
-        <p class="kimBody">
-          {{ kimJumpLink({
-            href: "/about/",
-            text: "More about beeps"
-          }) }}
-        </p>
-      </div>
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
-        {% responsiveImage "./src/assets/images/noodle-opengraph.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It points towards something to its left, looking at the viewer with wide eyes and sticking out its tongue.", { classes: "page-about-noodle", sizes: "33vi" } %}
-      </div>
-    </div>
+<div class="kimWrapper page-section">
+  <div class="kimGrid">
+
+    <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="about" aria-labelledby="about-heading">
+      <h2 class="kimHeading-m page-section__heading" id="about-heading">About beeps</h2>
+      {{ content | safe }}
+      <p class="kimBody">
+        {{ kimJumpLink({
+          href: "/about/",
+          text: "More about beeps"
+        }) }}
+      </p>
+    </section>
+    
+    <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="blog" aria-labelledby="blog-heading">
+      <h2 class="kimHeading-m page-section__heading" id="blog-heading">Blog</h2>
+      <ul class="kimList kimList-spaced">
+        {% for post in collections.blog | reverse | head(5) %}
+          {{ kimBlogCard(post) }}
+        {% endfor %}
+      </ul>
+      <p class="kimBody">
+        {{ kimJumpLink({
+          href: "/blog/",
+          text: "All blog posts"
+        }) }}
+      </p>
+    </section>
+
   </div>
-</section>
+</div>
 
 <section class="page-trans-rights kimWrapper">
   <p>Transformation is part of being alive. <span>Transgender rights are human rights.</span></p>
@@ -171,3 +95,55 @@
   <hr class="kimRule kimRule-hairline kim-!-margin-block-start-0">
 {%- endif %}
 {% endblock %}
+
+{% css %}
+/**
+ * Sections
+ */
+ 
+.page-section {
+  margin-block-start: calc(0px - var(--space-4-5));
+}
+
+.page-section__heading {
+  margin-block-start: 0;
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-regular) solid var(--color-furniture);
+}
+
+/**
+ * Trans rights
+ */ 
+ 
+.page-trans-rights {
+  --pink: #F7A8B8;
+  --blue: #55CDFC;
+  padding-block: var(--space-7);
+  position: relative;
+  background-color: var(--color-surface);
+}
+
+@media (prefers-color-scheme: light) {
+  .page-trans-rights {
+    --pink: #C92EBF;
+    --blue: #2E68FF;
+  }
+}
+
+.page-trans-rights p {
+  margin: 0;
+  padding-block: var(--space-1);
+  color: var(--pink);
+  font-size: var(--size-4);
+  font-weight: 600;
+  line-height: 1;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.page-trans-rights span {
+  font-weight: 900;
+  color: var(--blue);
+}
+
+{% endcss %}

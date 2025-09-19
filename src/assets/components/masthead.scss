@@ -51,13 +51,18 @@
   vertical-align: middle;
 }
 
+.kimMasthead_section,
+.kimMasthead_menu-link,
+.kimMasthead_menu-toggle {
+  font-size: var(--size-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-stretch: 90%;
+  line-height: 1;
+}
+
 .kimMasthead_section {
   margin-block: var(--bottom-spacing);
-  font-size: var(--size-1);
-  font-weight: 450;
-  font-stretch: 90%;
-  text-transform: uppercase;
-  line-height: 1;
 
   @include links.link-helper(
     $color: var(--color-link),
@@ -83,24 +88,26 @@
 }
 
 .kimMasthead_menu-toggle {
-  @include reset.button;
-  --icon-size: 1rem;
+  --icon-size: 0.9rem;
 
   flex-shrink: 0;
-  padding-block: calc(var(--bottom-spacing) - var(--border-hairline));
-  padding-inline: var(--space-2);
-  border: var(--border-hairline) solid currentcolor;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
   position: relative;
+  padding-block: calc(var(--bottom-spacing) - var(--border-hairline));
+  padding-inline: var(--space-3);
+  border: var(--border-hairline) solid currentcolor;
   color: var(--color-link);
-  font-weight: 450;
-  text-transform: uppercase;
-  line-height: 1;
+  background: none;
+  font-family: inherit;
+  font-size: var(--size-0);
   cursor: pointer;
 
   svg {
-    inline-size: 0.75em;
-    block-size: 0.75em;
-    margin-inline-end: var(--space-1);
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
   }
 
   &:hover,
