@@ -1,17 +1,6 @@
-@use "../helpers/links";
-
 .kimToc {
-  margin-block-end: var(--space-5);
-  border-block-end: var(--border-hairline) solid var(--color-furniture);
-  position: sticky;
-  inset-block-start: var(--space-5);
-}
-
-.kimToc_heading {
-  margin-block-end: var(--space-2);
-}
-
-.kimToc_list {
-  max-block-size: calc(100vh - var(--space-9));
-  overflow-y: scroll;
+  @media (min-width: 52rem) {
+    position: sticky;
+    inset-block-start: var(--space-5);
+  }
 }

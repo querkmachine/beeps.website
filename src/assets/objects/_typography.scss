@@ -3,12 +3,14 @@
 .kimHeading-l,
 .kimHeading-m,
 .kimHeading-s,
-.kimHeading-xs {
-  font-family: var(--font-header);
+.kimHeading-xs,
+.kimHeading-2xs {
+  font-family: var(--font-heading);
   font-weight: 670;
   font-variant-alternates: styleset(machine);
   text-wrap: balance;
   letter-spacing: -0.02em;
+  line-height: 1.5;
 }
 
 .kimHeading-xl {
@@ -17,14 +19,6 @@
   color: var(--color-text-accent);
   font-size: var(--size-5);
   line-height: 1;
-
-  &::before {
-    content: "";
-    display: block;
-    inline-size: 2.5em;
-    margin-block-end: var(--space-3);
-    border-block-end: var(--border-thick) solid var(--color-furniture);
-  }
 }
 
 .kimHeading-l {
@@ -45,21 +39,26 @@
   margin-block-start: var(--space-5);
   margin-block-end: var(--space-5);
   font-size: var(--size-2);
-  line-height: 1.5;
 }
 
 .kimHeading-xs {
   margin-block-start: var(--space-5);
   margin-block-end: var(--space-4);
   font-size: var(--size-1);
-  line-height: 1.5;
+}
+
+.kimHeading-2xs {
+  margin-block-start: 0;
+  margin-block-end: var(--space-2);
+  font-size: var(--size-0);
+  letter-spacing: unset;
 }
 
 // Subheadings
 .kimSubheading-xl,
 .kimSubheading-l,
 .kimSubheading-m {
-  font-family: var(--font-header);
+  font-family: var(--font-heading);
   font-variant-alternates: stylistic(machine);
   text-wrap: balance;
   letter-spacing: 0;
