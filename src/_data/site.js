@@ -3,7 +3,7 @@ const environment = process.env.ENVIRONMENT;
 export default function () {
   return {
     name: "beeps",
-    blogName: "beeps' blog",
+    blogName: "beeps’ blog",
     blogDescription: "The inane ramblings of beeps.",
     authorName: "beeps",
     authorEmail: "hi@berly.kim",
