@@ -18,6 +18,7 @@
   margin-block-end: var(--space-8);
   color: var(--color-text-accent);
   font-size: var(--size-5);
+  font-stretch: 120%;
   line-height: 1;
 }
 
@@ -60,6 +61,7 @@
 .kimSubheading-m {
   font-family: var(--font-heading);
   font-variant-alternates: stylistic(machine);
+  font-stretch: 100%;
   text-wrap: balance;
   letter-spacing: 0;
   line-height: 1.25;
