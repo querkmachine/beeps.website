@@ -1,16 +1,20 @@
 .kimSplash {
+  --offset: var(--space-5-6);
+
+  margin-block: var(--offset);
   position: relative;
 }
 
 .kimSplash_inner {
-  container-type: inline-size;
   position: relative;
 }
 
 .kimSplash_text {
-  margin-block: var(--space-8-9);
+  margin: 0;
+  padding: var(--space-4);
   color: var(--color-text-subtle);
-  font-size: var(--size-6);
+  background-color: var(--color-surface);
+  font-size: var(--size-4);
   font-weight: 640;
   font-stretch: 120%;
   text-wrap: balance;
@@ -27,22 +31,31 @@
 .kimSplash_image {
   inline-size: 60cqi;
   block-size: auto;
-  margin-block-start: -10cqi;
+  margin-block-start: calc(0px - var(--offset) * 1.25);
   margin-block-end: 0;
   position: relative;
   pointer-events: none;
 }
 
-@container (min-width: 768px) {
+@media (min-width: 42rem) {
+  .kimSplash {
+    --offset: var(--space-8-9);
+    margin-block: var(--offset);
+  }
+
   .kimSplash_text {
     padding-inline-end: 40cqi;
+    font-size: var(--size-6);
   }
 
   .kimSplash_image {
-    inline-size: 45cqi;
+    max-inline-size: 45cqi;
+    max-block-size: calc(100% + var(--offset) * 2);
     margin-block-start: 0;
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-end: var(--grid-gutter);
+    inset-inline-end: calc(0px - var(--space-1));
+    inset-block: calc(0px - var(--offset));
+    object-fit: contain;
+    object-position: center right;
   }
 }
