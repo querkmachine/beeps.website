@@ -14,6 +14,7 @@ cssComponents:
 .pagePretitle {
   color: var(--color-text);
 }
+
 .pageMainImage {
   margin-block-start: var(--space-8-9);
   margin-block-end: var(--space-7);
@@ -23,21 +24,24 @@ cssComponents:
 .pageMainImage img {
   margin-block: calc(0px - var(--space-6));
 }
+
 .pageSwatchList {
   margin-block-end: var(--space-6-7);
 }
+
 .pageSwatch {
-  padding-block-start: var(--space-2);
-  
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: 4rem 1fr;
 }
 .pageSwatch__preview {
-  block-size: 3rem;
-  margin-block-end: var(--space-1);
+  aspect-ratio: 1;
   background-color: var(--color);
   border: var(--border-hairline) solid var(--color-text);
   box-shadow: inset 0 0 0 var(--border-regular) var(--color-canvas);
   forced-color-adjust: none;
 }
+
 .pageRule {
   max-inline-size: var(--grid-max-width);
   margin-block: var(--space-7-8);
@@ -54,27 +58,30 @@ cssComponents:
 .pageRule:nth-of-type(5n) {
   transform: rotate(-2deg);
 }
+
 .pageColumns {
   column-width: 30ch;
   column-gap: var(--grid-gutter);
   column-fill: balance;
 }
-.pageColumns .kimFigure {
-  break-inside: avoid;
-}
+
 .pageFigure {
   padding-block-start: var(--space-2);
+}
+
+.pageColumns .kimFigure {
+  break-inside: avoid;
 }
 {% endcss %}
 
 {% macro _swatch(color, description) %}
-<div class="kimGrid_column kimGrid_column-oneHalf galaxy:kimGrid_column-oneThird">
-  <p class="kimBody pageSwatch">
+  <li class="pageSwatch">
     <div class="pageSwatch__preview" style="--color: {{ color }};" role="presentation"></div>
-    <code class="kimCode">{{ color }}</code><br>
-    {{ description }}
-  </p>
-</div>
+    <p class="kimBody-s kim-!-margin-block-end-0">
+      <code class="kimCode">{{ color }}</code><br>
+      {{ description }}
+    </p>
+  </li>
 {% endmacro %}
 
 {% block main %}
@@ -88,16 +95,6 @@ cssComponents:
     <div class="kimWrapper">
       {% responsiveImage "./src/images/ash-ref-main.png", "A reference sheet showing the front and side profile of a long, slender mammal like creature with six legs, rabbit-like ears, and an extremely long tail ending with a goopy tip. The creature is mostly black and white, except for the eyes, tongue, paw pads, inner ears and tail tip, which are a luminescent green.", { lazy: false, link: true } %}
     </div>
-  </div>
-  
-  <div class="pageSwatchList">
-    <section class="kimWrapper" aria-label="Colour reference">
-      <div class="kimGrid">
-        {{ _swatch("#1d2f23", "Hair, legs, shoulders, rear, top of tail.") }}
-        {{ _swatch("#f1fff2", "Mid torso, chest, paws, bottom of tail, face, outer ears.") }}
-        {{ _swatch("#4ce74c", "Hair tips, eyes, exposed skin (paw pads, inner ears, tongue), tail tip.") }}
-      </div>
-    </section>
   </div>
   
   <section class="kimWrapper" aria-label="Introduction">
@@ -134,13 +131,12 @@ cssComponents:
         </table>
       </div>
       <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf">
-        <h2 class="kimHeading-s kim-!-margin-block-start-0">Handy links</h2>
-        <ul class="kimList">
-          <li><a class="kimLink" href="{{ '/ash/artist-checklist/' }}">Artist checklist</a> &mdash; A list of common mistakes made when drawing Ash</li>
-          <li><a class="kimLink" href="https://amphimorpho.carrd.co/">Amphimorpho species guide</a></li>
-          <li><a class="kimLink" href="https://amphimorpho.carrd.co/#secretpage">The secret page about mutant amphimorpho specifically 👀</a></li>
+        <h2 class="kimHeading-s kim-!-margin-block-start-0">Colour reference</h2>
+        <ul class="kimList kimList-spaced">
+          {{ _swatch("#1d2f23", "Hair, legs, shoulders, rear, top of tail.") }}
+          {{ _swatch("#f1fff2", "Mid torso, chest, paws, bottom of tail, face, outer ears.") }}
+          {{ _swatch("#4ce74c", "Hair tips, eyes, exposed skin (paw pads, inner ears, tongue), tail tip.") }}
         </ul>
-        <p class="kimBody">The amphimorpho species and all artwork on this page was created by <a class="kimLink" href="https://tuxedodragon.neocities.org/">TuxedoDragon</a>.</p>
       </div>
     </div>
   </section>
@@ -239,6 +235,16 @@ cssComponents:
   </section>
   
   <hr class="kimRule kimRule-thick kimRule-fancy pageRule">
+  
+  <section class="kimWrapper">
+    <h2 class="kimHeading-s kim-!-margin-block-start-0">Handy links</h2>
+    <ul class="kimList">
+      <li><a class="kimLink" href="{{ '/ash/artist-checklist/' }}">Artist checklist</a> &mdash; A list of common mistakes made when drawing Ash</li>
+      <li><a class="kimLink" href="https://amphimorpho.carrd.co/">Amphimorpho species guide</a>, and the <a class="kimLink" href="https://amphimorpho.carrd.co/#secretpage">page about mutant amphimorpho</a> specifically</li>
+      <li><a class="kimLink" href="https://drive.google.com/drive/folders/19qVI1AfHifEhgE5zVRZxcVszl7cTYe0N">A bunch more very niche details</a> about the species</li>
+    </ul>
+    <p class="kimBody">The amphimorpho species and all artwork on this page was created by <a class="kimLink" href="https://tuxedodragon.neocities.org/">TuxedoDragon</a>.</p>
+  </section>
   
   <div class="kimWrapper">
     {% callout %}
