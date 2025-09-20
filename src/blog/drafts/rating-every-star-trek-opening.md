@@ -1,6 +1,5 @@
 ---
 title: Rating every _Star Trek_ opening sequence
-date: 9999-01-01
 tags: [random]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Frontend Forum #: Getting a job in frontend development"
-date: 9999-01-01
 tags: [web development, frontend forum]
 ---
 

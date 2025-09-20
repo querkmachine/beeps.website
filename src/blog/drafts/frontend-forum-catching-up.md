@@ -1,6 +1,5 @@
 ---
 title: "Frontend Forum #: Catching up to 2024"
-date: 9999-01-01
 tags: [web development, frontend forum]
 ---
 

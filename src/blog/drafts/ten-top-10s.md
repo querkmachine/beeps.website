@@ -1,6 +1,5 @@
 ---
 title: Ten top 10s
-date: 9999-01-01
 tags: [technology, random]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: The curse of subpixel rounding
-date: 9999-01-01
 tags: [web development]
 metadata:
   description: An annoying and invisible piece of how your browser renders things.

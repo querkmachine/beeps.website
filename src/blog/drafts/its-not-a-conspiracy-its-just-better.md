@@ -1,6 +1,5 @@
 ---
 title: It's not a conspiracy, it's just making things better
-date: 9999-01-01
 tags: [technology, web development]
 ---
 

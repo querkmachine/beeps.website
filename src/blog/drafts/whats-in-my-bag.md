@@ -1,6 +1,5 @@
 ---
 title: What's in my bag?
-date: 9999-01-01
 tags: [random]
 ---
 

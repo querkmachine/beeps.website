@@ -1,6 +1,5 @@
 ---
 title: "Frontend Forum #: Hosting"
-date: 9999-01-01
 tags: [web development, frontend forum]
 ---
 
