@@ -103,23 +103,25 @@
               <p class="kimBody-s">You can <a class="kimLink" href="https://{{ interactions.host }}/@{{ interactions.username }}/{{ interactions.id }}">favourite, share or reply to this post on the fediverse</a>.</p>
             </div>
             
-            {%- if stats.favourites > 0 %}
-              <section class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-                <h3 class="kimHeading-2xs">
-                  {{ stats.favourites }} {{ 'favourite' if stats.favourites == 1 else 'favourites' }}
-                </h3>
-                {{ kimInteractionList(favourites, stats.favourites) }}
-              </section>
-            {%- endif %}
-      
-            {%- if stats.shares > 0 %}
-              <section class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-                <h3 class="kimHeading-2xs">
-                  {{ stats.shares }} {{ 'share' if stats.shares == 1 else 'shares' }}
-                </h3>
-                {{ kimInteractionList(shares, stats.shares) }}
-              </section>
-            {%- endif %}
+            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+              {%- if stats.favourites > 0 %}
+                <section>
+                  <h3 class="kimHeading-2xs">
+                    {{ stats.favourites }} {{ 'favourite' if stats.favourites == 1 else 'favourites' }}
+                  </h3>
+                  {{ kimInteractionList(favourites, stats.favourites) }}
+                </section>
+              {%- endif %}
+        
+              {%- if stats.shares > 0 %}
+                <section>
+                  <h3 class="kimHeading-2xs">
+                    {{ stats.shares }} {{ 'share' if stats.shares == 1 else 'shares' }}
+                  </h3>
+                  {{ kimInteractionList(shares, stats.shares) }}
+                </section>
+              {%- endif %}
+            </div>
               
           </div>
         </aside>
