@@ -1,4 +1,4 @@
-{% set cssComponents = merge(cssComponents, ["toc"]) %}
+{% set cssComponents = merge(cssComponents, ['toc', 'meta']) %}
 
 {% extends 'src/_layouts/layout.njk' %}
 
@@ -6,6 +6,32 @@
   <div class="kimWrapper">
     <article class="pageGeneric">
       <header class="pageGeneric_header">
+      
+        {%- if date or updated %}
+        <dl class="kimMeta">
+          {%- if date %}
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key kim-!-visually-hidden">Published</dt>
+              <dd class="kimMeta_value">
+                <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
+                  {{- date | formatDate('human') -}}
+                </time>
+              </dd>
+            </div>
+          {%- endif %}
+          {%- if updated %}
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key">Last updated</dt>
+              <dd class="kimMeta_value">
+                <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
+                  {{- updated | formatDate('human') -}}
+                </time>
+              </dd>
+            </div>
+          {%- endif %}
+        </dl>
+        {%- endif %}
+      
         {%- if preTitle %}
         <div class="kimSubheading-l">{{ preTitle | markdownInline | safe }}</div>
         {%- endif %}

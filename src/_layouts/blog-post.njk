@@ -1,4 +1,4 @@
-{% set cssComponents = merge(cssComponents, ['toc', 'blog-card']) %}
+{% set cssComponents = merge(cssComponents, ['toc', 'meta', 'blog-card']) %}
 
 {# Has interactions, include that too #}
 {%- if (stats.favourites > 0) or (stats.shares > 0) %}
@@ -18,11 +18,12 @@
     <article itemscope itemtype="https://schema.org/BlogPosting" class="pagePost">
       <header class="pagePost_header">
       
-        <dl class="pageMeta">
+        {%- if date or updated %}
+        <dl class="kimMeta">
           {%- if date %}
-            <div class="pageMeta_item">
-              <dt class="pageMeta_key kim-!-visually-hidden">Published</dt>
-              <dd class="pageMeta_value">
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key kim-!-visually-hidden">Published</dt>
+              <dd class="kimMeta_value">
                 <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
                   {{- date | formatDate('human') -}}
                 </time>
@@ -30,9 +31,9 @@
             </div>
           {%- endif %}
           {%- if updated %}
-            <div class="pageMeta_item">
-              <dt class="pageMeta_key">Last updated</dt>
-              <dd class="pageMeta_value">
+            <div class="kimMeta_item">
+              <dt class="kimMeta_key">Last updated</dt>
+              <dd class="kimMeta_value">
                 <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
                   {{- updated | formatDate('human') -}}
                 </time>
@@ -40,6 +41,7 @@
             </div>
           {%- endif %}
         </dl>
+        {%- endif %}
         
         <h1 class="kimHeading-xl pageTitle" itemprop="name" {%- if titleLang %} lang="{{ titleLang }}"{% endif %}>
           {{- title | markdownInline | safe -}}
@@ -195,19 +197,5 @@
 .pageBlurb {
   margin-block-start: var(--space-3);
   text-wrap: balance;
-}
-
-.pageMeta {
-  display: flex;
-  flex-direction: column;
-  margin-block-end: var(--space-5);
-  color: var(--color-text-subtle);
-  font-size: var(--size--1);
-}
-
-.pageMeta_key,
-.pageMeta_value {
-  display: inline;
-  margin: 0;
 }
 {% endcss %}

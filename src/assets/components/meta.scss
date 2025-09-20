@@ -1,0 +1,13 @@
+.kimMeta {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: var(--space-5);
+  color: var(--color-text-subtle);
+  font-size: var(--size--1);
+}
+
+.kimMeta_key,
+.kimMeta_value {
+  display: inline;
+  margin: 0;
+}

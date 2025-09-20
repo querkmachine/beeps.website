@@ -19,8 +19,6 @@ Here's some lesser known neat webbed sites I like.
 I'm not responsible for the content of any of these sites, which might change at any time without me noticing. I feel like I shouldn't need to clarify that.
 {% endcharacter %}
 
-Last updated: {{ updated | formatDate('human') }}
-
 ## Friends, acquaintances, and personal sites I just find quite neat
 
 Personal websites are _the bomb_. In an era where so much self-expression has moved to social media, having a website that is entirely your own is almost like an act of individual defiance. There are no Linktrees or Squarespaces here.
