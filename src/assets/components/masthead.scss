@@ -7,7 +7,101 @@
   --top-spacing: var(--border-thick);
   --bottom-spacing: var(--space-2);
 
-  border-block-start: var(--top-spacing) double var(--color-furniture);
+  &::before {
+    content: "";
+    display: block;
+    block-size: var(--top-spacing);
+    background-color: var(--color-furniture);
+  }
+
+  // Transgender Day of Visibility
+  &[data-date="03-31"]::before,
+  // Transgender Day of Remembrance
+  &[data-date="11-20"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(91, 206, 250),
+      rgb(255, 255, 255),
+      rgb(245, 169, 184)
+    );
+  }
+
+  // First Contact Day
+  &[data-date="04-05"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(234, 80, 80),
+      rgb(251, 198, 54),
+      rgb(56, 150, 230)
+    );
+  }
+
+  // International Asexuality Day
+  &[data-date="04-06"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(0, 0, 0),
+      rgb(255, 255, 255),
+      rgb(163, 163, 163),
+      rgb(140, 34, 119)
+    );
+  }
+
+  // Agender Pride Day
+  &[data-date="05-19"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(0, 0, 0),
+      rgb(255, 255, 255),
+      rgb(185, 185, 185),
+      rgb(190, 244, 144)
+    );
+  }
+
+  // Otherkin Day
+  &[data-date="07-05"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(31, 133, 80),
+      rgb(255, 255, 255),
+      rgb(93, 50, 152)
+    );
+  }
+
+  // Birthday
+  &[data-date="09-22"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(210, 67, 95),
+      rgb(255, 125, 69),
+      rgb(245, 223, 133),
+      rgb(118, 193, 150),
+      rgb(98, 150, 202),
+      rgb(97, 59, 143)
+    );
+  }
+
+  // Halloween
+  &[data-date="10-31"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(244, 162, 29),
+      rgb(0, 0, 0)
+    );
+  }
+
+  // Christmas period
+  &[data-date="12-24"]::before,
+  &[data-date="12-25"]::before,
+  &[data-date="12-26"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(40, 165, 131),
+      rgb(40, 86, 12),
+      rgb(201, 3, 11),
+      rgb(253, 59, 74)
+    );
+  }
 }
 
 .kimMasthead_inner {
