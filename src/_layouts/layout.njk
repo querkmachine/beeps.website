@@ -112,6 +112,12 @@
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
         
+        {% block copyrights %}
+        <div class="kimFooter_copyright">
+          <p class="kimBody-s">Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
+        </div>
+        {% endblock %}
+        
         <ul class="kimList kimFooter_links" aria-label="Legal and utility links">
           <li>
             <a class="kimLink" href="#top">
@@ -130,12 +136,6 @@
             </li>
           {%- endfor%}
         </ul>
-        
-        {% block copyrights %}
-        <div class="kimFooter_copyright">
-          <p>Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
-        </div>
-        {% endblock %}
       </div>
       
       {% block footerDecor %}
