@@ -3,6 +3,10 @@
 .kimNavigation {
   border-block-end: var(--border-regular) solid var(--color-furniture);
   background-color: var(--color-surface);
+
+  @media (min-width: 45rem) {
+    margin-block-end: calc(0px - var(--space-3));
+  }
 }
 
 .kimNavigation_inner {
