@@ -35,7 +35,7 @@
         {%- if preTitle %}
         <div class="kimSubheading-l">{{ preTitle | markdownInline | safe }}</div>
         {%- endif %}
-        <h1 class="kimHeading-xl">
+        <h1 class="kimHeading-xl pageTitle">
           {{- title | markdownInline | safe -}}
         </h1>
       </header>
@@ -94,6 +94,10 @@
 }
 
 .pageGeneric_body > :last-child {
+  margin-block-end: 0;
+}
+
+.pageTitle {
   margin-block-end: 0;
 }
 {% endcss %}
