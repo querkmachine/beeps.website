@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Accessibility statement
-updated: 2025-04-08
+updated: 2025-09-24
 metadata:
   description: Accessibility compliance, known issues, and how to report issues.
 cssComponents:
@@ -29,10 +29,7 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations
 
-These are known areas where the website does not meet the WCAG 2.2 level AA standard.
-
-- The borders of currently selected tabs (in tab groups) don't have a 3:1 minimum contrast ratio against the background, failing [WCAG's Use of Color criterion](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color).
-- The headline of the homepage uses container query units for font sizing. When zooming in, this can prevents the headline text from increasing in size once the container is as wide as the viewport, failing [WCAG's Resize Text criterion](https://www.w3.org/WAI/WCAG22/Understanding/resize-text).
+There are no known areas where the website does not meet the WCAG 2.2 level AA standard.
 
 ### Disproportionate burden
 
