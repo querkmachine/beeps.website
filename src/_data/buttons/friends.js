@@ -225,4 +225,8 @@ export default [
     alt: "507131 (aka abbie)",
     url: "//abbie.moe/",
   },
+  {
+    alt: "Lupi",
+    url: "//chimoora.zone/",
+  },
 ];

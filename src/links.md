@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2025-08-23
+updated: 2025-09-25
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -67,48 +67,22 @@ Blogs that I actively keep tabs on and read at least some quantity of the posts.
 - [Food is Stupid](https://foodisstupid.substack.com/). This blog is cursed. This food is cursed. None of you are without sin. (Half the posts are behind a paywall, such is the business of blogging, but the rest of them are still excellent.)
 - [Xe Iaso](https://xeiaso.net/) writes about all sorts of software things that I barely understand but find interesting anyway. Also where I stole the idea of having character callouts in blog posts, though my reasons are far less Socratic.
 
-## Other neat spots
+## Webcomics
 
-Miscellany, &c.
+Like comic books, but on the web.
 
-- [The Cutting Room Floor](https://tcrf.net/) documents all the parts of video games that made it into the files but didn't make it into the final game. It's a fascinating insight into how popular games were developed and refined.
-- [eightyeightthirtyone](https://eightyeightthirty.one/) maps out the connections between websites on the indie web, [including my own](https://eightyeightthirty.one/#beeps.website).
-- [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - _[Meet Me In The Woods](https://mmitwcomic.neocities.org/)_ is a sci-fi mystery webcomic. It's also indirectly the source material for [my fursona]({{ '/about/furry/' | url }}). I'm totally not biased.
 - _[Out-of-Placers](https://valsalia.com/comic/out-of-placers/)_ is a fantasy webcomic about coming to terms with change. It features lots of fun and thought-out speculative biology. (Be aware that it can get sorta not safe for work at times.)
 - _[Pipe Up!](https://pipeup.thecomicseries.com/)_, a webcomic about a rabbit hosting [a plural system]({{ '/about/olive/' | url }}) and how they handle their usual front going missing.
 
-## My dumb links
+## Other neat spots
 
-Some other webbed sites of mine that might be of interest.
+Miscellany, &c.
 
-- [GOV.UK Browser Data]({{ '/govuk-browser-data/' | url }}) — collected browser and operating system analytics from the GOV.UK website
-- [Twitter archive](//tweets.beeps.website) — archive of my Twitter posts from before I left the site
-- [placeholder.rocks](//placeholder.rocks/) — _Steven Universe_ placeholder image generator
-- [placeponi.es](//placeponi.es/) — _My Little Pony_ placeholder image generator
-
-### Character playlists
-
-I've had a lot of [furry] characters and fursonas over the years, many of them with fairly distinct personalities and interests, and with that comes distinct music taste!
-
-For some years I've curated music into playlists based on which of my critters would most like them. They're public on Apple Music for other's curiosity and enjoyment.
-
-- [Alexander's playlist](https://music.apple.com/gb/playlist/character-playlist-alexander/pl.u-V9D77e9t10Ro5k) — electronic, dance
-- [Ash's playlist](https://music.apple.com/gb/playlist/character-playlist-ash/pl.u-JPAZzKNuWvm7gA) — alternative pop and rock
-- [Emy's playlist](https://music.apple.com/gb/playlist/character-playlist-emy/pl.u-38oWWgetg1vRp8) — electronic, classic rock
-- [Grey's playlist](https://music.apple.com/gb/playlist/character-playlist-grey/pl.u-mJy81mPsBKb87M) — alternative and classic rock, hip-hop
-- [Kim's playlist](https://music.apple.com/gb/playlist/character-playlist-kim/pl.u-9N9LXAdT7DjRq0) — pop, R&B
-- [Meredith's playlist](https://music.apple.com/gb/playlist/character-playlist-meredith/pl.u-9N9LLpyT7DjRq0) — 4'33" by John Cage
-- [Tori's playlist](https://music.apple.com/gb/playlist/character-playlist-tori/pl.u-DdANNBoTlAjpZx) — indie and alternative rock
-
-### Spreadsheets of random things
-
-I like to spreadsheet some very random things. Don't even ask why, I don't know.
-
-- [My Pokémon card collection](https://docs.google.com/spreadsheets/d/1ksxzmEJv55HA5d_OF7WboRJAq6RvJn8TmNY8t9rDSxs)
-- [Rating various energy drinks out of 10](https://docs.google.com/spreadsheets/d/1pwVmU1uGuxEN8s0UAMVPwaGSYMn2DXYG8fjk5oIurIM)
-- [Every piece of Apple hardware I've ever owned](https://docs.google.com/spreadsheets/d/1aXLbc45k2r6z4pXtMruZZfrdYmOhrCvPk7NFYaSRpf4)
-- [Recurring _Star Trek_ character appearances and the in-universe series chronology](https://docs.google.com/spreadsheets/d/1imQVy6udrv9muzmet7poyVhM2tTdosbbOFwpPfZqLmI)
+- [Critter Time](https://crittertime.fun/) is a retro-themed forum for furries. Yes, a forum. In 2025. It's wonderful.
+- [The Cutting Room Floor](https://tcrf.net/) documents all the parts of video games that made it into the files but didn't make it into the final game. It's a fascinating insight into how popular games were developed and refined.
+- [eightyeightthirtyone](https://eightyeightthirty.one/) maps out the connections between websites on the indie web, [including my own](https://eightyeightthirty.one/#beeps.website).
+- [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 
 ## Buttons
 
