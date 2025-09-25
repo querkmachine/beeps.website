@@ -29,7 +29,7 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 {%- for i in buttons.friendsitesButtons %}{{- kim88x31Button(i) -}}{%- endfor %}
 </div>
 
-<ul class="kimList kimList-bulleted kimList-columns">
+<ul class="kimList kimList-bulleted pageLinkColumns">
   {%- for i in buttons.friendsites %}
   <li><a class="kimLink" href="{{ i.url }}">{{ i.alt }}</a></li>
   {%- endfor %}
@@ -97,3 +97,10 @@ Use any of these buttons, if you so desire. You can acquire these buttons progra
 <div class="kimButtonGrid">
 {%- for i in buttons.beeps %}{{- kim88x31Button(i) -}}{%- endfor %}
 </div>
+
+{% css %}
+.pageLinkColumns {
+column-width: 20ch;
+column-gap: var(--grid-gutter);
+}
+{% endcss %}
