@@ -5,118 +5,24 @@
 {% from "src/_includes/blog-card.njk" import kimBlogCard %}
 {% from "src/_includes/jump-link.njk" import kimJumpLink %}
 
-{% block head %}
-<style>
-/**
- * Intro splash
- */
-.page-intro {
-  margin-block-end: var(--space-5);
-}
-
-/** 
- * Blogs
- */
-.page-blog {
-  margin-block-end: var(--space-7);
-  border: var(--border-regular) solid var(--color-furniture);
-  background-color: var(--color-surface);
-  background-image: linear-gradient(to bottom right in oklch, var(--color-surface-accent), var(--color-surface));
-}
-.page-blog-noodle,
-.page-about-noodle {
-  margin-block-start: -5%;
-}
-.page-blog-heading {
-  margin-block-start: var(--space-5);
-}
-
-/**
- * About
- */
-.page-about {
-  margin-block-end: var(--space-8-9);
-}
-
-/**
- * Trans rights
- */ 
-.page-trans-rights {
-  padding-block-start: calc(var(--space-7) + var(--space-3));
-  padding-block-end: var(--space-7);
-  position: relative;
-  background-image: linear-gradient(to right, rgb(85, 205, 252), rgb(179, 157, 233), rgb(247, 168, 184), rgb(246, 216, 221), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(246, 216, 221), rgb(247, 168, 184), rgb(179, 157, 233), rgb(85, 205, 252));
-}
-.page-trans-rights::before {
-  content: "";
-  inline-size: 100%;
-  block-size: var(--space-3);
-  position: absolute;
-  inset-block-start: 0;
-  background-image: linear-gradient(to bottom, var(--color-canvas), color-mix(in hsl, var(--color-canvas), transparent 50%));
-}
-.page-trans-rights p {
-  margin: 0;
-  color: var(--c-off-black);
-  font-size: var(--size-4);
-  font-weight: 600;
-  line-height: 1;
-  text-wrap: balance;
-  text-align: center;
-}
-@supports (-webkit-text-stroke: 1px red) {
-  .page-trans-rights span {
-    color: transparent;
-    font-weight: 700;
-    -webkit-text-stroke: 1px var(--c-off-black);
-  }
-}
-</style>
-{% endblock %}
-
 {% block main %}
-<header class="kimSplash page-intro">
-  <canvas class="kimSplash_background" width="1000" height="500" hidden></canvas>
+<header class="kimSplash">
   <div class="kimWrapper kimSplash_inner">
-    <h1 class="kimSplash_text">
-      <strong>I'm beeps.</strong>
-      A shapeshifter on the internet that builds websites &amp; writes stuff.
+    <h1 class="kimHeading-xl kimSplash_text">
+      <strong>I&rsquo;m beeps.</strong>
+      An internet cryptid that builds websites &amp; writes stuff.
     </h1>
     {% responsiveImage "./src/assets/images/noodle-home.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears, and four arms. It looks at you, smiling toothily and throwing a peace sign. It's wearing a black denim jacket covered in various patches and a purple t-shirt.", { classes: "kimSplash_image", lazy: false, sizes: "100vi" } %}
   </div>
 </header>
-  
-<section id="blog" aria-labelledby="blog-heading">
-  <div class="kimWrapper">
-    <div class="kimGrid page-blog">
-      <div class="page-blog-noodle kimGrid_column kimGrid_column-full nx:kimGrid_column-oneQuarter">
-        {% responsiveImage "./src/assets/images/noodle-blog.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It sits on the ground, hunched over a stickerbombed laptop, deep in thought.", { sizes: "25vi" } %}
-      </div>
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-threeQuarters">
-        <h2 class="kimHeading-m page-blog-heading" id="blog-heading">Recent blog posts</h2>
-        <div class="kimGrid">
-          {% for post in collections.blog | reverse | head(3) %}
-            <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird kim-!-margin-block-end-3">
-              {{ kimBlogCard(post, { element: "div" }) }}
-            </div>
-          {% endfor %}
-        </div>
-        <p class="kimBody">
-          {{ kimJumpLink({
-            href: "/blog/",
-            text: "All blog posts"
-          }) }}
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="page-about" id="about" aria-labelledby="about-heading">
-  <div class="kimWrapper">
+<div class="kimWrapper">
+
+  <div class="pageSection">
     <div class="kimGrid">
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-twoThirds">
-        <h2 class="kimHeading-m kim-!-margin-block-start-0" id="about-heading">About beeps</h2>
+  
+      <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="about" aria-labelledby="about-heading">
+        <h2 class="kimHeading-m pageSection_heading" id="about-heading">About beeps</h2>
         {{ content | safe }}
         <p class="kimBody">
           {{ kimJumpLink({
@@ -124,71 +30,123 @@
             text: "More about beeps"
           }) }}
         </p>
-      </div>
-      <div class="kimGrid_column kimGrid_column-full nx:kimGrid_column-oneThird">
-        {% responsiveImage "./src/assets/images/noodle-opengraph.webp", "A black, white and green cat-rabbit-like creature with a long tail, long ears and four arms. It points towards something to its left, looking at the viewer with wide eyes and sticking out its tongue.", { classes: "page-about-noodle", sizes: "33vi" } %}
-      </div>
+      </section>
+      
+      <section class="kimGrid_column-full galaxy:kimGrid_column-oneHalf" id="blog" aria-labelledby="blog-heading">
+        <h2 class="kimHeading-m pageSection_heading" id="blog-heading">Blog</h2>
+        <ul class="kimList kimList-spaced">
+          {% for post in collections.blog | reverse | head(5) %}
+            {{ kimBlogCard(post) }}
+          {% endfor %}
+        </ul>
+        <p class="kimBody">
+          {{ kimJumpLink({
+            href: "/blog/",
+            text: "All blog posts"
+          }) }}
+        </p>
+      </section>
+  
     </div>
   </div>
-</section>
+  
+  <section class="pageTransRights">
+    <p>Transformation is part of being alive. <span>Transgender rights are human rights.</span></p>
+  </section>
 
-<section class="page-trans-rights">
-  <div class="kimWrapper">
-    <p><span>Transformation is part of being alive.</span> Transgender rights are human rights.</p>
-  </div>
-</section>
-{% endblock %}
-
-{% block beforeFooter %}
-{%- if webrings or buttons.homepage %}
-  <div class="kimGrid">
-    {%- if webrings %}
-    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <h2 class="kim-!-visually-hidden">Webrings</h2>
-      <div class="kimGrid">
-        {%- for ring in webrings %}
-        <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
-          <div class="kimWebring">
-            <a class="kimWebring_name" href="{{ ring.url }}">
-              {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
-              {{ ring.name }}
-            </a><br>
-            <a class="kimLink-plain kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
-              {% include "../assets/icons/arrow-e.svg" %}
-              Next
-            </a><br>
-            <a class="kimLink-plain kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
-              {% include "../assets/icons/arrow-w.svg" %}
-              Previous
-            </a>
+  {%- if webrings or buttons.homepage %}
+  <div class="pageSection">
+    <div class="kimGrid">
+      {%- if webrings %}
+      <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+        <h2 class="kimHeading-xs pageSection_heading">Webrings</h2>
+        <div class="kimGrid">
+          {%- for ring in webrings %}
+          <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
+            <div class="kimWebring">
+              <a class="kimWebring_name" href="{{ ring.url }}">
+                {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
+                {{ ring.name }}
+              </a><br>
+              <a class="kimLink-plain kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
+                {% include "../assets/icons/arrow-e.svg" %}
+                Next
+              </a><br>
+              <a class="kimLink-plain kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
+                {% include "../assets/icons/arrow-w.svg" %}
+                Previous
+              </a>
+            </div>
           </div>
+          {%- endfor %}
         </div>
-        {%- endfor %}
-      </div>
+      </section>
+      {%- endif %}
+      {%- if buttons.homepage %}
+        {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
+        <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          <h2 class="kimHeading-xs pageSection_heading">Buttons</h2>
+          <div class="kimButtonGrid">
+            {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
+          </div>
+        </section>
+      {%- endif %}
     </div>
-    {%- endif %}
-    {%- if buttons.homepage %}
-      {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
-      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
-        <h2 class="kim-!-visually-hidden">Buttons</h2>
-        <div class="kimButtonGrid">
-          {%- for button in buttons.homepage %}{{ kim88x31Button(button) }}{%- endfor %}
-        </div>
-      </div>
-    {%- endif %}
   </div>
-
-  <hr class="kimRule kimRule-hairline kim-!-margin-block-start-0">
-{%- endif %}
+  {%- endif %}
+  
+  </div>
 {% endblock %}
 
-{% block scripts %}
-{{ super() }}
-<script type="module">
-  import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-  new Spots(document.querySelector(".kimSplash_background"), {
-    heightProportion: .75,
-    useCalendarThemes: true
-  });
-</script>
-{% endblock %}
+{% css %}
+/**
+ * Sections
+ */
+ 
+.pageSection {
+  margin-block: var(--space-4-5);
+}
+
+.pageSection_heading {
+  margin-block-start: 0;
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-regular) solid var(--color-furniture);
+}
+
+/**
+ * Trans rights
+ */ 
+ 
+.pageTransRights {
+  --pink: #F7A8B8;
+  --blue: #55CDFC;
+  padding-block: var(--space-7);
+  padding-inline: var(--space-4);
+  position: relative;
+  background-color: var(--color-surface);
+}
+
+@media (prefers-color-scheme: light) {
+  .pageTransRights {
+    --pink: #C92EBF;
+    --blue: #2E68FF;
+  }
+}
+
+.pageTransRights p {
+  margin: 0;
+  padding-block: var(--space-1);
+  color: var(--pink);
+  font-size: var(--size-4);
+  font-weight: 600;
+  line-height: 1;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.pageTransRights span {
+  font-weight: 900;
+  color: var(--blue);
+}
+
+{% endcss %}

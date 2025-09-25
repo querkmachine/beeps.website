@@ -1,19 +1,13 @@
 .kimMeta {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   margin-block-end: var(--space-5);
-  border-block-end: var(--border-hairline) solid var(--color-furniture);
-}
-
-.kimMeta_item {
-  margin-block-end: var(--space-3);
-}
-
-.kimMeta_key {
-  font-weight: 700;
-}
-
-.kimMeta_value {
-  margin: 0;
-  margin-block-start: var(--space-1);
+  color: var(--color-text-subtle);
   font-size: var(--size--1);
+}
+
+.kimMeta_key,
+.kimMeta_value {
+  display: inline;
+  margin: 0;
 }

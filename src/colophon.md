@@ -1,6 +1,7 @@
 ---
 layout: generic.njk
 title: Colophon
+updated: 2025-09-24
 metadata:
   description: Giving credit to the people and tools that made this website possible.
 cssComponents:
@@ -34,7 +35,7 @@ Hat tips to the following folks for contributing something that currently exists
 
 ## Design
 
-Type is set in [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) designed by [Florian Karsten](https://floriankarsten.com/) and [Space Mono](https://fonts.google.com/specimen/Space+Mono) designed by [Colophon Foundry](https://www.colophon-foundry.org/).
+Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans) typeface released by GitHub.
 
 ## Tools and services
 

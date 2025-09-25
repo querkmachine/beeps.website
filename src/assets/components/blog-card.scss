@@ -1,7 +1,13 @@
 .kimBlogCard {
 }
 
+.kimBlogCard_heading {
+  font-weight: 670;
+}
+
 .kimBlogCard_date {
   display: block;
+  margin-block-start: var(--space-1);
+  color: var(--color-text-subtle);
   font-size: var(--size--1);
 }

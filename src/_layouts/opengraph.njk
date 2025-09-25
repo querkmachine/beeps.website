@@ -20,22 +20,13 @@
       .kimPage_body {
         position: relative;
       }
-      .page-background {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-      .page-noodle {
+      .pageNoodle {
         width: 30vw;
         position: absolute;
         bottom: -2vw;
         right: 3vw;
       }
-      .page-wrapper {
+      .pageWrapper {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -46,7 +37,7 @@
       .kimHeading-xl {
         font-size: 6.5vw;
       }
-      .page-foot {
+      .pageFooter {
         display: flex;
         align-items: center;
         padding: 1vw 6vw;
@@ -57,41 +48,30 @@
         color: var(--color-canvas);
         background-color: var(--color-text-accent);
       }
-      .page-logo {
+      .pageLogo {
         margin-right: 2vw;
         line-height: 0;
       }
-      .page-logo svg {
+      .pageLogo svg {
         width: 5vw;
         height: 5vw;
         fill: currentcolor;
       }
-      .page-name {
+      .pageTitle {
         font-size: 3vw;
         font-weight: 600;
-      }
-      .page-beeps {
-        margin-block-end: var(--space-8);
-        color: var(--color-text-accent);
       }
     </style>
     {% block head %}{% endblock %}
   </head>
   <body class="kimPage_body">    
-    <canvas class="page-background" id="background" width="1200" height="630" hidden></canvas>
-    <div class="page-wrapper">
+    <div class="pageWrapper">
       {% block title %}{% endblock %}
     </div>
-    <div class="page-foot">
-      <span class="page-logo">{% include "logo.njk" %}</span>
-      <span class="page-name">{% block metadata %}beeps.website{% endblock %}</span>
+    <div class="pageFooter">
+      <span class="pageLogo">{% include "logo.njk" %}</span>
+      <span class="pageTitle">{% block metadata %}beeps.website{% endblock %}</span>
     </div>
-    <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.webp' | url }}" class="page-noodle">
-    <script type="module">
-      import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-      new Spots(document.querySelector(".page-background"), {
-        colors: [[120, 105, 153]]
-      });
-    </script>
+    <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.webp' | url }}" class="pageNoodle">
   </body>
 </html>

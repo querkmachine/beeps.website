@@ -1,7 +1,7 @@
 ---
 layout: brand.njk
 title: beeps' brand
-updated: 2025-04-19
+updated: 2025-09-24
 metadata:
   description: The style guide for my personal projects, including this website.
 cssComponents:
@@ -11,13 +11,13 @@ cssComponents:
 ---
 
 {% set colourAssignments = [
-  { name: "Text", dark: "#ffffff", light: "#334139" },
-  { name: "Supporting text", dark: "#d4d4d7", light: "#586b60" },
-  { name: "Accent text and links", dark: "#00fa17", light: "#12803b" },
-  { name: "Hovered and visited links", dark: "#12c873", light: "#2baf5d" },
-  { name: "Canvas", dark: "#2a2536", light: "#ffffff" },
-  { name: "Surface", dark: "#3d364f", light: "#f4f3f7" },
-  { name: "Page furniture", dark: "#786999", light: "#786999" }
+  { name: "Text", dark: "#ffffff", light: "#4b4b4b" },
+  { name: "Supporting text", dark: "#f5f5f5", light: "#6d6d6e" },
+  { name: "Accent text and links", dark: "#0ff10f", light: "#578057" },
+  { name: "Hovered and visited links", dark: "#0bc148", light: "#6c9679" },
+  { name: "Canvas", dark: "#252134", light: "#f9f9f9" },
+  { name: "Surface", dark: "#302750", light: "#ffffff" },
+  { name: "Page furniture", dark: "#7c56fc", light: "#786999" }
 ] %}
 
 <style>
@@ -29,8 +29,8 @@ cssComponents:
 </style>
 
 {% macro _swatch(hex) %}
-<span class="page-swatch">
-<span class="page-swatch__preview" style="background-color: {{ hex }};"></span>
+<span class="pageSwatch">
+<span class="pageSwatch_preview" style="background-color: {{ hex }};"></span>
 <code class="kimCode">{{ hex }}</code>
 </span>
 {% endmacro %}
@@ -43,7 +43,7 @@ I don't wear exactly the same clothes every day, but when it comes to building r
 
 ## General principles
 
-- Be square and blocky. There aren't many circles or curves here.
+- Be unaplogetically square and blocky. There aren't many circles or curves here.
 - Follow good accessibility practices. Use contrasting colours, write good copy.
 
 ## Colours
@@ -73,11 +73,13 @@ Always aim to achieve at least a 4.5:1 contrast ratio between text and backgroun
 
 ## Typography
 
-[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) is used for the majority of text. As a variable font, it's available in all widths from bold (700) to thin (300).
+[Hubot Sans](https://github.com/github/hubot-sans) is used for the majority of text.
 
-> <div style="font-family:'Space Grotesk'"><span style="font-weight:700">We choose to go to the Moon. </span> <span style="font-weight:600">We choose to go to the Moon... </span><span style="font-weight:500">We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard; </span><span style="font-weight:400">because that goal will serve to organize and measure the best of our energies and skills,</span> <span style="font-weight:300">because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one we intend to win, and the others, too.</span></div>
+As a variable font, it's available in all weights from heavy (900) to light (200), can be compressed and expanded from 75% to 125%, and has real italics, allowing for a wide variety of expression.
 
-[Space Mono](https://fonts.google.com/specimen/Space+Mono) is used for code snippets and as a stylistic alternative for small amounts of text. It's used in bold (700) and regular (400) weights.
+> <div style="font-family:'Hubot Sans'"><span style="font-weight:900;font-stretch:125%">We choose to go to the Moon. </span> <span style="font-weight:600">We choose to go to the Moon&hellip; </span><span style="font-weight:500">We choose to go to the Moon in this decade and do the other things, not because they are easy, but <em>because they are hard</em>; </span><span style="font-weight:400;font-stretch:90%;">because that goal will serve to organize and measure the best of our energies and skills,</span> <span style="font-weight:300;font-stretch:75%;">because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one we intend to win, and the others, too.</span></div>
+
+Code samples are set in the device's default monospace font.
 
 ## Iconography
 
@@ -85,7 +87,7 @@ Always aim to achieve at least a 4.5:1 contrast ratio between text and backgroun
 
 The logo of the website (and pretty much just this website). This has been a symbol I've used for longer than you'd expect, [since around 2010]({{ '/blog/2023-07-25-20-years/#numbers' | url }}).
 
-<div class="page-icon">
+<div class="pageLogo">
   <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Silhouette of a stylised bat's head, within which the cutout of a mechanical gear is visible.">
 </div>
 
@@ -106,6 +108,6 @@ Some custom made icons for custom made uses.
   "rss"
 ] -%}
 
-<div style="display: flex; flex-wrap: wrap; gap: var(--space-3);">
+<div class="pageIconGrid">
 {%- for i in icons -%}<span>{% include "./assets/icons/" + i + ".svg" %}</span>{% endfor -%}
 </div>

@@ -7,19 +7,17 @@ metadata:
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
-.page-emoji {
+{% css%}
+.pageEmoji {
   display: block;
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 3em;
 }
-</style>
-{% endblock %}
+{% endcss %}
 
 {% macro _item(emoji) %}
 <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-  <span class="page-emoji">{{ emoji }}</span>
+  <span class="pageEmoji">{{ emoji }}</span>
   {% markdown %}{{- caller() -}}{% endmarkdown %}
 </div>
 {% endmacro %}

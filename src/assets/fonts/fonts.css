@@ -1,39 +1,18 @@
 @font-face {
-  font-family: "Space Mono";
-  src: url("SpaceMono-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "Hubot Sans";
+  src:
+    url("Hubot-Sans.woff2") format("woff2 supports variations"),
+    url("Hubot-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
   font-style: normal;
-  font-display: optional;
+  font-stretch: 75% 125%;
+  font-optical-sizing: auto;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: "Space Mono";
-  src: url("SpaceMono-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "Space Mono";
-  src: url("SpaceMono-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "Space Mono";
-  src: url("SpaceMono-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic;
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("SpaceGrotesk.woff2") format("woff2-variations");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: optional;
+@font-feature-values "Hubot Sans" {
+  @styleset {
+    human: 1;
+    machine: 4;
+  }
 }

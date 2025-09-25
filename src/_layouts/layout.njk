@@ -39,6 +39,9 @@
   <link rel="stylesheet" href="{{ '/assets/components/' + item + '.css' | url | cachebust }}" media="all">
   {%- endfor %}
   
+  {# Per-page CSS #}
+  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}" media="all">
+  
   {% include "src/_includes/page-head.njk" %}
   
   {#- Page-specific head content #}
@@ -57,11 +60,8 @@
   {% block masthead %}
     <header class="kimMasthead" data-js="masthead" id="top">
       <div class="kimWrapper kimMasthead_inner">
-        <a class="kimMasthead_logo" href="{{ '/' | url }}" tabindex="-1">
+        <a class="kimMasthead_logo" href="{{ '/' | url }}" aria-label="beeps - website homepage">
           {% include "logo.njk" %}
-        </a>
-      <a class="kimMasthead_name" href="{{ '/' | url }}">
-          {{- site.name -}}
         </a>
         {%- if mastheadSection %}
           <a class="kimMasthead_section" href="{{ mastheadSection.href | url }}">
@@ -112,6 +112,12 @@
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
         
+        {% block copyrights %}
+        <div class="kimFooter_copyright">
+          <p class="kimBody-s">Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
+        </div>
+        {% endblock %}
+        
         <ul class="kimList kimFooter_links" aria-label="Legal and utility links">
           <li>
             <a class="kimLink" href="#top">
@@ -130,12 +136,6 @@
             </li>
           {%- endfor%}
         </ul>
-        
-        {% block copyrights %}
-        <div class="kimFooter_copyright">
-          <p>Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
-        </div>
-        {% endblock %}
       </div>
       
       {% block footerDecor %}
@@ -149,12 +149,6 @@
   {# Other scripts #}
   {% block scripts %}
   <script type="module" src="{{ '/assets/javascript/entry.js' | url | cachebust }}"></script>
-  <script type="module">
-    import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-    new Spots(document.querySelector(".kimNoodleBowl_canvas"), {
-      isAnimated: true
-    });
-  </script>
   {% endblock %}
   
 </body>

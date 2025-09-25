@@ -5,74 +5,60 @@ eleventyExcludeFromCollections: true
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
-  .page-background {
-    inline-size: 100%;
-    block-size: 100%;
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-  }
+{% css %}
+.pageWrapper {
+  max-width: 22em;
+  margin-inline: auto;
+  text-align: center;
+}
   
-  .page-content {
-    max-width: 22em;
-    margin-inline: auto;
-    text-align: center;
-  }
-    
-  .page-noodle {
-    margin-block-end: 0;
-  }
-  
-  .page-heading {
-    margin-block-start: calc(var(--space-3) * -1);
-    margin-block-end: var(--space-5);
-    transform: rotate(2deg);
-  }
-  
-  .page-advice {
-    transform: rotate(-3deg);
-  }
-  
-  .page-it,
-  .page-you {
-    color: var(--color-text-accent);
-  }
-  
-  .page-it {
-    position: relative;
-  }
-  
-  .page-it::after {
-    content: "";
-    display: block;
-    width: 100%;
-    aspect-ratio: 9/16;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-image: url("{{ '/assets/images/noodle-404-drips.webp' | url }}");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-</style>
-{% endblock %}
+.pageImage {
+  margin-block-end: 0;
+}
 
-{% block beforeMasthead %}
-<canvas class="page-background" id="background" width="1000" height="500" hidden></canvas>
-{% endblock %}
+.pageHeading {
+  margin-block-start: calc(var(--space-3) * -1);
+  margin-block-end: var(--space-5);
+  transform: rotate(2deg);
+}
+
+.pageContent {
+  transform: rotate(-3deg);
+}
+
+.pageIt,
+.pageYou {
+  color: var(--color-text-accent);
+}
+
+.pageIt {
+  position: relative;
+}
+
+.pageIt::after {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 9/16;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-image: url("{{ '/assets/images/noodle-404-drips.webp' | url }}");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+{% endcss %}
 
 {% block main %}
   <div class="kim-!-padding-block-start-3-4 kim-!-padding-block-end-3-4">
     <div class="kimWrapper">
-      <div class="page-content">
-        {% responsiveImage "./src/assets/images/noodle-404.webp", "An amphimorpho stuck to the wall, looking at the viewer aggressively.", { classes: "page-noodle", lazy: false } %}
-        <h1 class="kimHeading-s page-heading">
+      <div class="pageWrapper">
+        {% responsiveImage "./src/assets/images/noodle-404.webp", "An amphimorpho stuck to the wall, looking at the viewer aggressively.", { classes: "pageImage", lazy: false } %}
+        <h1 class="kimHeading-s pageHeading">
           The page you were looking for couldn&rsquo;t be found&hellip;<br>
-          but <span class="page-it">it</span> has found <span class="page-you">you</span>!
+          but <span class="pageIt">it</span> has found <span class="pageYou">you</span>!
         </h1>
-        <div class="page-advice">
+        <div class="pageContent">
           <p class="kimBody">You might want to get out of here fast.<br>
           <a href="{{ '/' | url }}" class="kimLink">Return home, quickly!</a></p>
         </div>
@@ -83,11 +69,3 @@ eleventyExcludeFromCollections: true
 
 {% block masthead %}{# Keep it simple, stupid. #}{% endblock %}
 {% block footer %}{# Keep it really simple, stupid. #}{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-<script type="module">
-  import Spots from "{{ '/assets/javascript/spots.js' | url | cachebust }}";
-  new Spots(document.querySelector(".page-background"), { isAnimated: true });
-</script>
-{% endblock %}

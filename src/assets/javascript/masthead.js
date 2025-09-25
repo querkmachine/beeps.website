@@ -25,15 +25,21 @@ export default class Masthead {
 
     // Bind toggle functionality
     this.$toggle.addEventListener("click", this.toggle.bind(this));
+
+    // Add date
+    this.$module.dataset.date = new Date().toISOString().substring(5, 10);
   }
+
   open() {
     this.$toggle.setAttribute("aria-expanded", "true");
     this.$navigation.removeAttribute("hidden");
   }
+
   close() {
     this.$toggle.setAttribute("aria-expanded", "false");
     this.$navigation.setAttribute("hidden", "hidden");
   }
+
   toggle() {
     if (this.$toggle.getAttribute("aria-expanded") === "true") {
       this.close();

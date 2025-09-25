@@ -3,30 +3,129 @@
 @use "../helpers/reset";
 
 .kimMasthead {
+  --logo-size: 3rem;
   --top-spacing: var(--border-thick);
   --bottom-spacing: var(--space-2);
 
-  border-block-start: var(--top-spacing) solid var(--color-furniture);
-  background-color: var(--color-surface);
+  &::before {
+    content: "";
+    display: block;
+    block-size: var(--top-spacing);
+    background-color: var(--color-furniture);
+  }
+
+  // Transgender Day of Visibility
+  &[data-date="03-31"]::before,
+  // Transgender Day of Remembrance
+  &[data-date="11-20"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(91, 206, 250),
+      rgb(255, 255, 255),
+      rgb(245, 169, 184)
+    );
+  }
+
+  // First Contact Day
+  &[data-date="04-05"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(234, 80, 80),
+      rgb(251, 198, 54),
+      rgb(56, 150, 230)
+    );
+  }
+
+  // International Asexuality Day
+  &[data-date="04-06"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(0, 0, 0),
+      rgb(255, 255, 255),
+      rgb(163, 163, 163),
+      rgb(140, 34, 119)
+    );
+  }
+
+  // Agender Pride Day
+  &[data-date="05-19"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(0, 0, 0),
+      rgb(255, 255, 255),
+      rgb(185, 185, 185),
+      rgb(190, 244, 144)
+    );
+  }
+
+  // Otherkin Day
+  &[data-date="07-05"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(31, 133, 80),
+      rgb(255, 255, 255),
+      rgb(93, 50, 152)
+    );
+  }
+
+  // Birthday
+  &[data-date="09-22"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(210, 67, 95),
+      rgb(255, 125, 69),
+      rgb(245, 223, 133),
+      rgb(118, 193, 150),
+      rgb(98, 150, 202),
+      rgb(97, 59, 143)
+    );
+  }
+
+  // Halloween
+  &[data-date="10-31"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(244, 162, 29),
+      rgb(0, 0, 0)
+    );
+  }
+
+  // Christmas period
+  &[data-date="12-24"]::before,
+  &[data-date="12-25"]::before,
+  &[data-date="12-26"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(40, 165, 131),
+      rgb(40, 86, 12),
+      rgb(201, 3, 11),
+      rgb(253, 59, 74)
+    );
+  }
 }
 
 .kimMasthead_inner {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: end;
   padding-block-end: var(--bottom-spacing);
   position: relative;
+  container-type: inline-size;
 }
 
 .kimMasthead_logo {
+  --ribbon-size: calc(var(--logo-size) * 1.5);
+
+  flex-shrink: 0;
   display: inline-block;
+  inline-size: calc(var(--logo-size) * 1.5);
   margin-block-start: calc(var(--top-spacing) * -1);
-  margin-block-end: calc(var(--top-spacing) * -1);
+  margin-inline-end: var(--space-2);
   padding-block-start: var(--space-5);
   padding-block-end: var(--space-2);
-  padding-inline: var(--space-2);
   color: var(--color-canvas);
-  background-color: var(--color-link);
-  line-height: 0;
+  background-color: var(--color-accent);
+  text-align: center;
 
   &:hover {
     background-color: var(--color-link-hover);
@@ -38,37 +137,43 @@
 }
 
 .kimMasthead_logo svg {
-  inline-size: 45px;
-  block-size: 45px;
+  inline-size: var(--logo-size);
+  block-size: var(--logo-size);
   fill: currentcolor;
+
+  // remove line-height from the image
+  vertical-align: middle;
 }
 
-.kimMasthead_name,
-.kimMasthead_section {
-  margin-inline-start: var(--space-2);
+.kimMasthead_section,
+.kimMasthead_menu-link,
+.kimMasthead_menu-toggle {
   font-size: var(--size-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-stretch: 90%;
   line-height: 1;
+}
 
-  @container (min-width: 550px) {
-    font-size: var(--size-2);
-  }
+.kimMasthead_section {
+  margin-block: var(--bottom-spacing);
 
   @include links.link-helper(
     $color: var(--color-link),
     $visited-color: var(--color-link),
     $initial-underline: false
   );
-}
 
-.kimMasthead_name {
-  font-weight: bold;
-
-  @container (max-width: 440px) {
-    @include a11y.visually-hidden;
+  @container (max-inline-size: 35rem) {
+    order: 3;
+    inline-size: 100%;
+    border-inline-start: var(--border-regular) solid currentcolor;
+    padding-inline-start: var(--bottom-spacing);
   }
 }
 
 .kimMasthead_menu-link {
+  margin-block-end: var(--bottom-spacing);
   @include links.link-helper(
     $color: var(--color-link),
     $visited-color: var(--color-link),
@@ -77,41 +182,35 @@
 }
 
 .kimMasthead_menu-toggle {
-  @include reset.button;
-  --icon-size: 1rem;
+  --icon-size: 0.9rem;
 
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
   position: relative;
+  padding-block: calc(var(--bottom-spacing) - var(--border-hairline));
+  padding-inline: var(--space-3);
+  border: var(--border-hairline) solid currentcolor;
   color: var(--color-link);
-  box-shadow: 0 var(--bottom-spacing) 0 currentcolor;
+  background: none;
+  font-family: inherit;
+  font-size: var(--size-0);
   cursor: pointer;
 
   svg {
-    inline-size: 0.75em;
-    block-size: 0.75em;
-    margin-inline-end: var(--space-1);
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
   }
 
-  &::after {
-    content: "";
-    display: inline-block;
-  }
-
-  &::after {
-    position: absolute;
-    inset: calc(var(--space-2) * -1);
-
-    @media (forced-colors: active) {
-      border: 2px solid transparent;
-    }
-  }
-
-  &:hover {
-    color: var(--color-link-hover);
+  &:hover,
+  &[aria-expanded="true"] {
+    color: var(--color-canvas);
+    background-color: var(--color-link);
   }
 
   &[aria-expanded="true"] {
-    box-shadow: 0 var(--bottom-spacing) 0 var(--color-furniture);
-
     svg {
       transform: rotate(90deg);
     }

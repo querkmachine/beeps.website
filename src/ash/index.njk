@@ -10,96 +10,91 @@ cssComponents:
 ---
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
-.page-pretitle {
+{% css %}
+.pagePretitle {
   color: var(--color-text);
 }
-.page-main-image {
+
+.pageMainImage {
   margin-block-start: var(--space-8-9);
   margin-block-end: var(--space-7);
   background-color: var(--color-furniture);
   line-height: 0;
 }
-.page-main-image img {
+.pageMainImage img {
   margin-block: calc(0px - var(--space-6));
 }
-.page-swatches {
+
+.pageSwatchList {
   margin-block-end: var(--space-6-7);
 }
-.page-swatch {
-  padding-block-start: var(--space-2);
-  
+
+.pageSwatch {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: 4rem 1fr;
 }
-.page-swatch__preview {
-  block-size: 3rem;
-  margin-block-end: var(--space-1);
+.pageSwatch__preview {
+  aspect-ratio: 1;
   background-color: var(--color);
   border: var(--border-hairline) solid var(--color-text);
   box-shadow: inset 0 0 0 var(--border-regular) var(--color-canvas);
   forced-color-adjust: none;
 }
-.page-rule {
+
+.pageRule {
   max-inline-size: var(--grid-max-width);
   margin-block: var(--space-7-8);
   margin-inline: auto;
   transform: rotate(2deg);
   clear: both;
 }
-.page-rule:nth-of-type(2n) {
+.pageRule:nth-of-type(2n) {
   transform: rotate(-1.5deg);
 }
-.page-rule:nth-of-type(3n) {
+.pageRule:nth-of-type(3n) {
   transform: rotate(1.5deg);
 }
-.page-rule:nth-of-type(5n) {
+.pageRule:nth-of-type(5n) {
   transform: rotate(-2deg);
 }
-.page-columns {
+
+.pageColumns {
   column-width: 30ch;
   column-gap: var(--grid-gutter);
   column-fill: balance;
 }
-.page-columns .kimFigure {
-  break-inside: avoid;
-}
-.page-figure {
+
+.pageFigure {
   padding-block-start: var(--space-2);
 }
-</style>
-{% endblock %}
+
+.pageColumns .kimFigure {
+  break-inside: avoid;
+}
+{% endcss %}
 
 {% macro _swatch(color, description) %}
-<div class="kimGrid_column kimGrid_column-oneHalf galaxy:kimGrid_column-oneThird">
-  <p class="kimBody page-swatch">
-    <div class="page-swatch__preview" style="--color: {{ color }};" role="presentation"></div>
-    <code class="kimCode">{{ color }}</code><br>
-    {{ description }}
-  </p>
-</div>
+  <li class="pageSwatch">
+    <div class="pageSwatch__preview" style="--color: {{ color }};" role="presentation"></div>
+    <p class="kimBody-s kim-!-margin-block-end-0">
+      <code class="kimCode">{{ color }}</code><br>
+      {{ description }}
+    </p>
+  </li>
 {% endmacro %}
 
 {% block main %}
 <div class="kim-!-margin-block-8-9">
   <h1 class="kimWrapper kimHeading-xl">
-    <div class="kimSubheading-m page-pretitle">Pretty much everything you might want to know about</div>
+    <div class="kimSubheading-m pagePretitle">Pretty much everything you might want to know about</div>
     Ash the Amphimorpho
   </h1>
   
-  <div class="page-main-image">
+  <div class="pageMainImage">
     <div class="kimWrapper">
       {% responsiveImage "./src/images/ash-ref-main.png", "A reference sheet showing the front and side profile of a long, slender mammal like creature with six legs, rabbit-like ears, and an extremely long tail ending with a goopy tip. The creature is mostly black and white, except for the eyes, tongue, paw pads, inner ears and tail tip, which are a luminescent green.", { lazy: false, link: true } %}
     </div>
-  </div>
-  
-  <div class="page-swatches">
-    <section class="kimWrapper" aria-label="Colour reference">
-      <div class="kimGrid">
-        {{ _swatch("#1d2f23", "Hair, legs, shoulders, rear, top of tail.") }}
-        {{ _swatch("#f1fff2", "Mid torso, chest, paws, bottom of tail, face, outer ears.") }}
-        {{ _swatch("#4ce74c", "Hair tips, eyes, exposed skin (paw pads, inner ears, tongue), tail tip.") }}
-      </div>
-    </section>
   </div>
   
   <section class="kimWrapper" aria-label="Introduction">
@@ -136,60 +131,59 @@ cssComponents:
         </table>
       </div>
       <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf">
-        <h2 class="kimHeading-s kim-!-margin-block-start-0">Handy links</h2>
-        <ul class="kimList">
-          <li><a class="kimLink" href="{{ '/ash/artist-checklist/' }}">Artist checklist</a> &mdash; A list of common mistakes made when drawing Ash</li>
-          <li><a class="kimLink" href="https://amphimorpho.carrd.co/">Amphimorpho species guide</a></li>
-          <li><a class="kimLink" href="https://amphimorpho.carrd.co/#secretpage">The secret page about mutant amphimorpho specifically 👀</a></li>
+        <h2 class="kimHeading-s kim-!-margin-block-start-0">Colour reference</h2>
+        <ul class="kimList kimList-spaced">
+          {{ _swatch("#1d2f23", "Hair, legs, shoulders, rear, top of tail.") }}
+          {{ _swatch("#f1fff2", "Mid torso, chest, paws, bottom of tail, face, outer ears.") }}
+          {{ _swatch("#4ce74c", "Hair tips, eyes, exposed skin (paw pads, inner ears, tongue), tail tip.") }}
         </ul>
-        <p class="kimBody">The amphimorpho species and all artwork on this page was created by <a class="kimLink" href="https://tuxedodragon.neocities.org/">TuxedoDragon</a>.</p>
       </div>
     </div>
   </section>
   
-  <hr class="kimRule kimRule-thick kimRule-fancy page-rule">
+  <hr class="kimRule kimRule-thick kimRule-fancy pageRule">
   
   <section class="kimWrapper">
     <h2 class="kimHeading-l kim-!-margin-block-start-0">Overview</h2>
-    <div class="page-columns">
+    <div class="pageColumns">
       <p class="kimBody">Ash is a former human who was infected by and transformed into an amphimorpho, a genetically engineered chimeric species created through combining the DNA of various Terran species with alien genetic material.</p>
       <p class="kimBody">Amphimorpho are very large, relatively light creatures. In this form, Ash is around 6 metres long from snout to tail tip (3.75 metres of which is just her tail) and weighs around 115 kilograms.</p>
     </div>
     
-    <hr class="kimRule kimRule-hairline page-rule">
+    <hr class="kimRule kimRule-hairline pageRule">
     
     <h3 class="kimHeading-m">Personality</h3>
-    <div class="page-columns">
+    <div class="pageColumns">
       <p class="kimBody">Ash is composed and stoic, relaxed under pressure and readily adaptable to change; all traits that came into play when she was initially mutated, with Ash quickly coming to grips with the situation and working to bring calm and levity to the situation.</p>
       <p class="kimBody">She is kind and helpful to those who have done no wrong but can be viciously aggressive to those who have slighted her or her loved ones.</p>
       <p class="kimBody">She takes great excitement in the unusual, the supernatural and the macabre. She adores and embraces the weird, often encouraging events in her life in that direction. Upon her initial mutation into an amphimorpho, she was excited at the prospect of becoming non-human. When it appeared that the process had reversed itself, she broke down, expressing that she secretly suffered significant species dysphoria.</p>
       <p class="kimBody">She is a ‘cosy’ goth, subscribing to certain aesthetic and musical elements of the subculture and rejecting the pessimistic and ‘miserable’ stereotype that comes with it in favour of a more optimistic approach.</p>
     </div>
     
-    <hr class="kimRule kimRule-hairline page-rule">
+    <hr class="kimRule kimRule-hairline pageRule">
     
     <h3 class="kimHeading-m">Appearance</h3>
-    <div class="page-columns">
+    <div class="pageColumns">
       <p class="kimBody">In her basal (default) form, Ash appears as a very long, mammal-like animal with black and white fur and softly luminescent neon green skin. Her tail is nearly twice as long as her torso and ends in a 'goopy' green tip.</p>
       <p class="kimBody">She has four or six cat-like legs and paws. With six legs, the middle pair are offset towards the front pair.</p>
       <p class="kimBody">She has large, rabbit-like ears that are independently moveable and help to express emotion.</p>
-      {% figure float="left", classes="page-figure", caption="Sharp teeth, no nostils." %}
+      {% figure float="left", classes="pageFigure", caption="Sharp teeth, no nostils." %}
       {% responsiveImage "./src/images/ash-ref-teeth.png", "Side profile of Ash's head with an open mouth, showing the sharp teeth and nostil-less snout.", { link: true } %}
       {% endfigure %}
       <p class="kimBody">She has a snout with no nostrils, sharp teeth, and a slightly forked tongue.</p>
       <p class="kimBody">She has black, shaggy, medium length hair with green tips, which is reminescent of her hairstyle prior to being mutated. Her hair often covers one of her eyes.</p>
     </div>
     
-    <hr class="kimRule kimRule-hairline page-rule">
+    <hr class="kimRule kimRule-hairline pageRule">
     
     <h3 class="kimHeading-m">Abilities</h3>
-    <div class="page-columns">
+    <div class="pageColumns">
       <p class="kimBody">As an amphimorpho, Ash has enhanced senses and is capable of shapeshifting and accelerated healing.</p>
       <p class="kimBody">Amphimorpho bodies are very soft, with a texture akin to memory foam. They lack a well-defined skeletal structure or internal organs; instead transferring energy directly from cell to cell or shifting internal systems as they become required. This lack of structural rigidity allows for great feats of dexterity.</p>
       <p class="kimBody">Her tail is strong and prehensile, capable of lifting significant weight.</p>
       <p class="kimBody">She has enhanced hearing and sight. In her basal form, she lacks nostrils and has to breathe and smell through her mouth.</p>
       <p class="kimBody">Due to the energy needs associated with shapeshifting, amphimorpho are capable of consuming and storing a significant quantity of calories without ill effects and without creating waste products.</p>
-      {% figure float="right", classes="page-figure", caption="Ash mid-mutation." %}
+      {% figure float="right", classes="pageFigure", caption="Ash mid-mutation." %}
       {% responsiveImage "./src/images/ash-ref-tf.png", "Illustration of Ash as a human mutating into an amphimorpho, having grown fur over much of her body, long ears, and a long tail. Her hands and feet have become paws, whilst her shirt and jeans are in the midst of tearing off.", { link: true } %}
       {% endfigure %}
       <p class="kimBody">As a <a class="kimLink" href="https://amphimorpho.carrd.co/#secretpage">mutant amphimorpho</a>, Ash is a carrier of the amphimorpho virus and can transmit it to others through fluid transmission, such as through bites or extended exposure to her goop.</p>
@@ -197,36 +191,36 @@ cssComponents:
     </div>
   </section>
   
-  <hr class="kimRule kimRule-thick kimRule-fancy page-rule">
+  <hr class="kimRule kimRule-thick kimRule-fancy pageRule">
   
   <section class="kimWrapper">
     <h2 class="kimHeading-l kim-!-margin-block-start-0">Shapeshifting</h2>
-    <div class="page-columns">
+    <div class="pageColumns">
       <p class="kimBody">Ash's basal form can change in size, proportions, have four or six limbs (as either two or four &ldquo;arms&rdquo;) and have a stomach pouch. She can freely adapt to walking on two, four, or six legs, regardless of how many she currently sports.</p>
       <p class="kimBody">She can manipulate her density when shapeshifting, but cannot become dramatically larger or smaller than normal.</p>
       <p class="kimBody">Both shifting and maintaining a shifted form requires concentration and a significant amount of energy. Normally, Ash can only reproduce the outside appearance of something, but she can perfectly mimic any living thing if first able to imprint from it by touching it.</p>
       <p class="kimBody">She is able to alter her fur pattern and colours at will, these changes remain permanent until manually reverted.</p>
     </div>
     
-    <hr class="kimRule kimRule-hairline page-rule">
+    <hr class="kimRule kimRule-hairline pageRule">
     
     <h3 class="kimHeading-m">Human form</h3>
-    <div class="page-columns">
-      {% figure float="left", classes="page-figure", caption="Ash in human guise." %}
+    <div class="pageColumns">
+      {% figure float="left", classes="pageFigure", caption="Ash in human guise." %}
       {% responsiveImage "./src/images/ash-ref-human.png", "Ash as a human, a medium height, gender androgynous individual waving happily towards the viewer whilst wearing a denim jacket and torn jeans.", { link: true } %}
       {% endfigure %}
       <p class="kimBody">When interacting with human society, Ash shifts into a human appearance that roughly matches her appearance prior to mutation.</p>
       <p class="kimBody">She retains the same shaggy hair that her amphimorpho form has, with the dyed tips remaining the luminescent green. Her eyes, upon close inspection, also still appear to softly glow green.</p>
       <p class="kimBody">Clothing-wise, she prefers darkly coloured and gender-neutral styles. She usually wears t-shirts, distressed jeans, customised boots, and a black denim jacket covered with patches which she is very protective about.</p>
-      {% figure classes="page-figure", caption="Patches from Ash's jacket." %}
+      {% figure classes="pageFigure", caption="Patches from Ash's jacket." %}
       {% responsiveImage "./src/images/ash-ref-patches.png", "A collection of various designs including purple bat wings, the agender pride flag, and green paw print in a circle, a blushing cartoon bat, a squirrel, the word 'batty' surrounded by bat silhouettes, and a heart-shaped transgender pride flag.", { link: true } %}
       {% endfigure %}
     </div>
     
-    <hr class="kimRule kimRule-hairline page-rule">
+    <hr class="kimRule kimRule-hairline pageRule">
     
     <h3 class="kimHeading-m">Other forms</h3>
-    <div class="page-columns">
+    <div class="pageColumns">
       <p class="kimBody">Ash can change the physical composition of her form, for example, to become a pooltoy or plush toy.</p> 
       <p class="kimBody">Some of Ash's common alternative forms include:</p>
       <ul class="kimList kimList-bulleted">
@@ -240,7 +234,17 @@ cssComponents:
     </div>
   </section>
   
-  <hr class="kimRule kimRule-thick kimRule-fancy page-rule">
+  <hr class="kimRule kimRule-thick kimRule-fancy pageRule">
+  
+  <section class="kimWrapper">
+    <h2 class="kimHeading-s kim-!-margin-block-start-0">Handy links</h2>
+    <ul class="kimList">
+      <li><a class="kimLink" href="{{ '/ash/artist-checklist/' }}">Artist checklist</a> &mdash; A list of common mistakes made when drawing Ash</li>
+      <li><a class="kimLink" href="https://amphimorpho.carrd.co/">Amphimorpho species guide</a>, and the <a class="kimLink" href="https://amphimorpho.carrd.co/#secretpage">page about mutant amphimorpho</a> specifically</li>
+      <li><a class="kimLink" href="https://drive.google.com/drive/folders/19qVI1AfHifEhgE5zVRZxcVszl7cTYe0N">A bunch more very niche details</a> about the species</li>
+    </ul>
+    <p class="kimBody">The amphimorpho species and all artwork on this page was created by <a class="kimLink" href="https://tuxedodragon.neocities.org/">TuxedoDragon</a>.</p>
+  </section>
   
   <div class="kimWrapper">
     {% callout %}

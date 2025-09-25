@@ -1,6 +1,6 @@
 export default {
   mastheadSection: {
     href: "/ash/",
-    text: "Ash",
+    text: "Ash the Amphimorpho",
   },
 };

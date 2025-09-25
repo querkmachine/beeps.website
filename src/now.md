@@ -8,8 +8,6 @@ metadata:
 
 A "now" page is [a conceptual accompaniment to an about page](https://nownownow.com/about). While an about page can tell you about my background and my identity, it doesn't tell you about what I'm currently doing or what I currently care about. Thus, this.
 
-Last updated: {{ updated | formatDate('human') }}
-
 ## Now
 
 💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team. Currently, and for the last several months, I've been working on the GOV.UK brand refresh and related work. I'm also writing WCAG understanding documents for the [WCAG Primer](https://alphagov.github.io/wcag-primer/).

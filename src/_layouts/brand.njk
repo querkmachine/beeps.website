@@ -1,20 +1,26 @@
 {% extends 'src/_layouts/generic.njk' %}
 
-{% block head %}
-<style>
-  .page-swatch {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-  }
-  .page-swatch__preview {
-    width: 1.75rem;
-    height: 1.75rem;
-    border: 1px solid currentcolor;
-    forced-color-adjust: none;
-  }
-  .page-icon {
-    max-width: 14em;
-  }
-</style>
-{% endblock %}
+{% css %}
+.pageSwatch {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.pageSwatch_preview {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid currentcolor;
+  forced-color-adjust: none;
+}
+
+.pageLogo {
+  max-width: 14em;
+}
+
+.pageIconGrid {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: var(--space-3);
+}
+{% endcss %}

@@ -9,51 +9,49 @@ cssComponents:
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% block head %}
-<style>
-  .page-data-table {
-    max-block-size: 25rem;
-    overflow: auto;
+{% css %}
+.pageDataTable {
+  max-block-size: 25rem;
+  overflow: auto;
+}
+.pageDataTable .kimTable {
+  table-layout: fixed;
+  font-size: var(--size--1);
+  border-collapse: unset;
+  border-spacing: 0;
+}
+.pageDataTable .kimTable :is(th, td) {
+  box-sizing: content-box;
+}
+.pageDataTable .kimTable_head,
+.pageDataTable .kimTable :is(th, td):first-child {
+  position: sticky;
+  background-color: var(--color-canvas);
+}
+.pageDataTable .kimTable_head {
+  inset-block-start: 0;
+  z-index: 1;
+}
+.pageDataTable .kimTable :is(th, td):first-child {
+  inline-size: 13ch;
+  
+  @container (min-inline-size: 30rem) {
+    inset-inline-start: 0;
   }
-  .page-data-table .kimTable {
-    table-layout: fixed;
-    font-size: var(--size--1);
-    border-collapse: unset;
-    border-spacing: 0;
-  }
-  .page-data-table .kimTable :is(th, td) {
-    box-sizing: content-box;
-  }
-  .page-data-table .kimTable_head,
-  .page-data-table .kimTable :is(th, td):first-child {
-    position: sticky;
-    background-color: var(--color-canvas);
-  }
-  .page-data-table .kimTable_head {
-    inset-block-start: 0;
-    z-index: 1;
-  }
-  .page-data-table .kimTable :is(th, td):first-child {
-    inline-size: 13ch;
-    
-    @container (min-inline-size: 30rem) {
-      inset-inline-start: 0;
-    }
-  }
-  .page-data-table .kimTable :is(th, td):not(:first-child) {
-    inline-size: 10ch;
-    text-align: end;
-  }
-  .page-data-table .kimTable_head :is(th, td) {
-    vertical-align: bottom;
-  }
-  .page-chart-embed {
-    inline-size: 100%;
-    border: none;
-    aspect-ratio: 3 / 1;
-  }
-</style>
-{% endblock %}
+}
+.pageDataTable .kimTable :is(th, td):not(:first-child) {
+  inline-size: 10ch;
+  text-align: end;
+}
+.pageDataTable .kimTable_head :is(th, td) {
+  vertical-align: bottom;
+}
+.pageChartEmbed {
+  inline-size: 100%;
+  border: none;
+  aspect-ratio: 3 / 1;
+}
+{% endcss %}
 
 {% block main %}
 <div class="kimWrapper kim-!-margin-block-8-9">
@@ -69,16 +67,16 @@ cssComponents:
   <p class="kimBody">Browsers sorted by the recent month's data. Percentage data is as a proportion of all sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers">{{ browsers.overall.raw | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Chart">
-      <iframe class="page-chart-embed" src="{{ '/govuk-browser-data/charts/browsers-overall/' | url }}" title="Chart of overall browser share over time" loading="lazy"></iframe>
+      <iframe class="pageChartEmbed" src="{{ '/govuk-browser-data/charts/browsers-overall/' | url }}" title="Chart of overall browser share over time" loading="lazy"></iframe>
     </div>
   </div>
   
@@ -86,13 +84,13 @@ cssComponents:
   <p class="kimBody">Percentage data is as a proportion of all sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="devices">{{ devices.raw | safe }}</div>
     </div>
   </div>
   
@@ -100,16 +98,16 @@ cssComponents:
   <p class="kimBody">Percentage data is as a proportion of all mobile device sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-mobile">{{ browsers.mobile.raw | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Chart">
-      <iframe class="page-chart-embed" src="{{ '/govuk-browser-data/charts/browsers-mobile/' | url }}" title="Chart of mobile browser share over time" loading="lazy"></iframe>
+      <iframe class="pageChartEmbed" src="{{ '/govuk-browser-data/charts/browsers-mobile/' | url }}" title="Chart of mobile browser share over time" loading="lazy"></iframe>
     </div>
   </div>
   
@@ -117,16 +115,16 @@ cssComponents:
   <p class="kimBody">Percentage data is as a proportion of all tablet device sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-tablet">{{ browsers.tablet.raw | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Chart">
-      <iframe class="page-chart-embed" src="{{ '/govuk-browser-data/charts/browsers-tablet/' | url }}" title="Chart of tablet browser share over time" loading="lazy"></iframe>
+      <iframe class="pageChartEmbed" src="{{ '/govuk-browser-data/charts/browsers-tablet/' | url }}" title="Chart of tablet browser share over time" loading="lazy"></iframe>
     </div>
   </div>
   
@@ -134,16 +132,16 @@ cssComponents:
   <p class="kimBody">Percentage data is as a proportion of all desktop and laptop device sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-desktop">{{ browsers.desktop.raw | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Chart">
-      <iframe class="page-chart-embed" src="{{ '/govuk-browser-data/charts/browsers-desktop/' | url }}" title="Chart of desktop browser share over time" loading="lazy"></iframe>
+      <iframe class="pageChartEmbed" src="{{ '/govuk-browser-data/charts/browsers-desktop/' | url }}" title="Chart of desktop browser share over time" loading="lazy"></iframe>
     </div>
   </div>
   
@@ -151,16 +149,16 @@ cssComponents:
   <p class="kimBody">Percentage data is as a proportion of all smart TV and game console sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="browsers-tv">{{ browsers.tv.raw | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Chart">
-      <iframe class="page-chart-embed" src="{{ '/govuk-browser-data/charts/browsers-tv/' | url }}" title="Chart of smart TV and games console browser share over time" loading="lazy"></iframe>
+      <iframe class="pageChartEmbed" src="{{ '/govuk-browser-data/charts/browsers-tv/' | url }}" title="Chart of smart TV and games console browser share over time" loading="lazy"></iframe>
     </div>
   </div>
   
@@ -168,16 +166,16 @@ cssComponents:
   <p class="kimBody">Percentage data is as a proportion of all sessions for that month.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="systems">{{ systems.raw | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Chart">
-      <iframe class="page-chart-embed" src="{{ '/govuk-browser-data/charts/operating-systems/' | url }}" title="Chart of operating systems share over time" loading="lazy"></iframe>
+      <iframe class="pageChartEmbed" src="{{ '/govuk-browser-data/charts/operating-systems/' | url }}" title="Chart of operating systems share over time" loading="lazy"></iframe>
     </div>
   </div>
   
@@ -185,13 +183,13 @@ cssComponents:
   <p class="kimBody">The 20 most popular browser/OS combinations as of the most recent month's data. Percentage data is derived from the total of each browser that had over 1,000 sessions, which accounts for approximately 99.98% of all sessions.</p>
   <div class="kimTabs" data-js="tabs">
     <div class="kimTabs_panel" data-label="Percentage">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percent | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percent | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Change">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percentChange | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.percentChange | safe }}</div>
     </div>
     <div class="kimTabs_panel" data-label="Raw">
-      <div class="page-data-table" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.raw | safe }}</div>
+      <div class="pageDataTable" data-js="scroll-sync" data-scroll-sync-group="combos">{{ combos.raw | safe }}</div>
     </div>
   </div>
   

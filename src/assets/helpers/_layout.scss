@@ -3,7 +3,6 @@
   --gutter-left: calc(var(--grid-gutter) + env(safe-area-inset-left));
   --gutter-right: calc(var(--grid-gutter) + env(safe-area-inset-right));
 
-  display: block;
   container-name: width-container;
   container-type: inline-size;
   max-inline-size: var(--grid-max-width);
