@@ -118,19 +118,12 @@
  */ 
  
 .pageTransRights {
-  --pink: #F7A8B8;
-  --blue: #55CDFC;
+  --pink: light-dark(#C92EBF, #F7A8B8);
+  --blue: light-dark(#2E68FF, #55CDFC);
   padding-block: var(--space-7);
   padding-inline: var(--space-4);
   position: relative;
   background-color: var(--color-surface);
-}
-
-@media (prefers-color-scheme: light) {
-  .pageTransRights {
-    --pink: #C92EBF;
-    --blue: #2E68FF;
-  }
 }
 
 .pageTransRights p {

@@ -59,8 +59,8 @@
   --c-muted-purple: #786999;
 
   // Contextual raw colours
-  --c-green: var(--c-neon-green);
-  --c-purple: var(--c-neon-purple);
+  --c-green: light-dark(var(--c-muted-green), var(--c-neon-green));
+  --c-purple: light-dark(var(--c-muted-purple), var(--c-neon-purple));
 
   // Layout colours
   --color-canvas: light-dark(
@@ -96,10 +96,4 @@
   // Focus styles
   --color-focus-text: #000;
   --color-focus-background: #fc0;
-
-  // Light mode
-  @media (prefers-color-scheme: light) {
-    --c-green: var(--c-muted-green);
-    --c-purple: var(--c-muted-purple);
-  }
 }
