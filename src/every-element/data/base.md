@@ -1,7 +1,7 @@
 ---
 tag: base
 name: Base URL
-category: Technical metadata
+category: Metadata
 spec: https://html.spec.whatwg.org/multipage/semantics.html#the-base-element
 ---
 

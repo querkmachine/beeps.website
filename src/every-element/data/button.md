@@ -18,4 +18,4 @@ An interactive element that, once activated, performs an action.
 - For buttons with a `type` of `reset`, the default behaviour is to revert the `form` to the state it was when the page was originally loaded.
 - For buttons with a `type` of `button`, there is no default behaviour. Functionality must be added using JavaScript or other HTML attributes.
 
-If not specified, a button's default type is `submit`.
+If a type isn't specified, a button's default type is `submit`.

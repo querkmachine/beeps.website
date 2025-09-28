@@ -23,4 +23,4 @@ Datalists must have an `id` attribute. Form inputs can then reference the data l
 
 Currently, only certain `type`s of [`input`](#input) support data lists, and each one presents the suggestions differently. See [the `datalist` examples on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist#examples).
 
-Data lists don't require the user to use a suggested value. If the user's options should be restricted, use `radio` [`input`](#input) elements or the [`select`](#select) element.
+Data lists don't require the user to use a suggested value. If the user's options should be restricted, use radio [`input`](#input) elements or the [`select`](#select) element.

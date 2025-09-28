@@ -9,9 +9,9 @@ Represents a thematic break between paragraphs, such as the start of a new topic
 
 <!-- prettier-ignore-start -->
 ```html
-<p></p>
+<p>The astronauts last meal on Earth was steak and eggs, with coffee and a slice of cake.</p>
 <hr>
-<p></p>
+<p>As they began to board the capsule...</p>
 ```
 <!-- prettier-ignore-end -->
 

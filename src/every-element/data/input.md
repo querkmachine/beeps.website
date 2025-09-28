@@ -5,11 +5,11 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/input.html#the-input-element
 ---
 
-Inserts an interactive control that can accept input from a user and send that input to a server. It is one of the most powerful and complex HTML elements.
+Inserts an interactive control that can accept input from a user and send it to a server. The appearance, functionality, and restrictions of an input are determined by the `type` attribute.
 
 Inputs must be within a [`form`](#form) and have a `name` attribute to send their data to a server. Inputs should have a [`label`](#label) element associated with them that describes what the user is expected to enter or select.
 
-The appearance, functionality, and restrictions of an input are determined by the `type` attribute.
+It is one of the most powerful and complex HTML elements.
 
 ### The `text` type
 
@@ -151,3 +151,5 @@ If you want a user to upload an image, use the `file` type instead.
 ### The `hidden` type
 
 An invisible input that holds read-only information to be sent to the server along with other inputs.
+
+Avoid relying on hidden inputs for critical functionality, as tech savvy users can still view and edit the values of hidden inputs.
