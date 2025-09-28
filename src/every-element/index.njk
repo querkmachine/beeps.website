@@ -17,16 +17,16 @@ cssComponents:
         {{ _e(params.data.tag) }}
         {%- if params.data.name %}:<br>the {{ params.data.name }} element{% endif %}
       </h2>
-      {%- if params.data.experimental %}
-        <p class="kimBody">🧪 Experimental</p>
-      {%- elif params.data.obsolete %}
-        <p class="kimBody">☠️ Obsolete</p>
-      {%- endif %}
       {%- if params.data.category %}
         <p class="kimBody-s">{{ params.data.category }}</p>
       {%- endif %}
     </div>
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
+      {%- if params.data.experimental %}
+        <p class="kimBody">🧪 Experimental</p>
+      {%- elif params.data.obsolete %}
+        <p class="kimBody">☠️ Obsolete</p>
+      {%- endif %}
       {{ params.content | safe }}
     </div>
     {%- if not params.data.obsolete %}

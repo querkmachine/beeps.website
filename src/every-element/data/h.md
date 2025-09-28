@@ -1,5 +1,5 @@
 ---
-tag: h1
+tag: h#
 name: Heading
 category: Sections of a page
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements

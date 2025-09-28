@@ -15,4 +15,4 @@ Embeds a different webpage within the current page. This is commonly used for in
 ```
 <!-- prettier-ignore-end -->
 
-Any content within the `iframe`'s opening and closing tags will be shown if the user's device is unable to render frames.
+Any content within the `iframe`'s opening and closing tags will be shown to the user if their browser is unable to render the frames.

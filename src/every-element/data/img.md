@@ -11,7 +11,7 @@ Images should include an `alt` attribute that [succinctly describes the contents
 
 <!-- prettier-ignore-start -->
 ```html
-<img src="saturn.jpg" alt="Close up photograph of the planet Saturn, with a particular focus on the planet's ring system.">
+<img src="saturn.jpg" alt="Close up photograph of the planet Saturn, with a particular focus on the planet's ring system." width="600" height="470">
 ```
 <!-- prettier-ignore-end -->
 

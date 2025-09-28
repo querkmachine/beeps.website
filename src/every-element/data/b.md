@@ -11,4 +11,4 @@ Text that usually has visual importance, but does not carry any importance in th
 5, 4, 3, 2, 1... <b>Blast off!</b>
 ```
 
-If the text is important to the content, use [`strong`](#strong). For headings, use [`h1`](#h1)–[`h6`](#h6).
+If the text is important to the content, use [`strong`](#strong). For headings, use [`h1`–`h6`](#h%23).

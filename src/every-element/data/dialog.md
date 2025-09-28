@@ -9,4 +9,4 @@ Container element for content that appears in a dialog (variably known as a 'mod
 
 Useful examples of dialogs include confirmations that a user wants to do something, or certain multitasking situations, such as writing an email whilst still navigating around their inbox. Less useful examples include cookie conset dialogs and newsletter sign up forms.
 
-Dialogs require JavaScript to be shown and hidden.
+Dialogs currently require JavaScript to be shown and hidden.

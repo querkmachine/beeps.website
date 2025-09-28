@@ -53,6 +53,11 @@ export default function () {
             description: "Free web accessibility audits for the fandom.",
           },
           {
+            href: "/every-element/",
+            text: "Every HTML element",
+            description: "A one-page guide to HTML semantics.",
+          },
+          {
             href: "/govuk-browser-data/",
             text: "GOV.UK browser data",
             description:
