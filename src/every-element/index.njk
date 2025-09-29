@@ -2,9 +2,10 @@
 title: Every HTML element
 updated: 2025-01-09
 metadata:
-  description: Every element in use in HTML and a brief description of what it's for.
+  description: Every element in HTML and a brief description of what it's used for.
 cssComponents:
   - code
+  - tag
 ---
 
 {% extends 'src/_layouts/layout.njk' %}
@@ -23,9 +24,9 @@ cssComponents:
     </div>
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
       {%- if params.data.experimental %}
-        <p class="kimBody">🧪 Experimental</p>
+        <p class="kimBody"><span class="kimTag kimTag-accent">Experimental</span></p>
       {%- elif params.data.obsolete %}
-        <p class="kimBody">☠️ Obsolete</p>
+        <p class="kimBody"><span class="kimTag">Obsolete</span></p>
       {%- endif %}
       {{ params.content | safe }}
     </div>
@@ -52,7 +53,7 @@ cssComponents:
   <div class="kimGrid"> 
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
       <h1 class="kimHeading-xl">{{ title }}</h1>
-      <p class="kimBody">HTML is a semantic language: every element provides a specific meaning to its contents or function. This is a quick reference for what those meanings are.</p>
+      <p class="kimBody">HTML is a semantic language. Nearly every element provides a specific meaning to its contents or function. This is a quick reference for what those meanings are.</p>
       <p class="kimBody">Well-written HTML will use the most appropriate element for the job, but you don't need to know every single element from memory!</p>
       <p class="kimBody">I highly encourage you to use your browser's find-in-page feature on this page.</p>
     </div>

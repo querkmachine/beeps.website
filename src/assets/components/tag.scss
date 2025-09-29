@@ -1,0 +1,17 @@
+.kimTag {
+  display: inline-block;
+  padding-inline: var(--space-1);
+  margin-inline: calc(0px - var(--space-1));
+  border: 1px solid transparent;
+  font-weight: bold;
+  background-color: var(--color-surface);
+  box-decoration-break: clone;
+}
+
+.kimTag-accent {
+  background-color: color-mix(
+    in lch,
+    var(--color-canvas),
+    var(--color-accent) 20%
+  );
+}
