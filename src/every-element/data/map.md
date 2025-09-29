@@ -5,7 +5,7 @@ category: Image maps
 spec: https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element
 ---
 
-Surrounds one or more [`area`](#area) elements. Along with the `name` attribute and an [`img`](#img), it can be used to create an image with multiple interactive regions.
+Surrounds one or more [`area`](#area) elements. Along with the `name` attribute and an [`img`](#img) (or rarely, an [`object`](#object)), it can be used to create an image with multiple interactive regions.
 
 <!-- prettier-ignore-start -->
 ```html
