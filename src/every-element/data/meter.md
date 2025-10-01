@@ -9,12 +9,12 @@ Provides a read-only visual representation of a value within a numerical range.
 
 The lower and upper bounds are provided using the `min` and `max` attributes, respectively. The current value is provided using the `value` attribute.
 
-Any text inside of the `meter` element is used as a fallback, for browsers that cannot display the element. As it's technically a form control, `meter` should have an accompanying [`label`](#label) element.
+Any text inside of the `meter` element is announced by screen readers and used as a fallback for browsers that cannot display the element. As it's technically a form control, `meter` should have an accompanying [`label`](#label) element.
 
 <!-- prettier-ignore-start -->
 ```html
-<label for="fuel">Liquid oxygen remaining</label>
-<meter min="0" max="553358" value="449658">81.26% remaining</meter>
+<label for="lox">Liquid oxygen remaining</label>
+<meter id="lox" min="0" max="553358" value="449658">81.26% remaining</meter>
 ```
 <!-- prettier-ignore-end -->
 
