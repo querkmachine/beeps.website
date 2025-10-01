@@ -9,6 +9,6 @@ Represents typed input within content, such as keys the user can press as part o
 
 <!-- prettier-ignore-start -->
 ```html
-Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd> and select the reboot option, or open the command line and type <kbd>sudo restart<kbd>.
+Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd> and select the reboot option, or open the command line and type <kbd>shutdown /r<kbd>.
 ```
 <!-- prettier-ignore-end -->

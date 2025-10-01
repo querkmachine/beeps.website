@@ -1,7 +1,7 @@
 ---
 tag: canvas
 name: Canvas
-category: Canvas
+category: Scripting
 spec: https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element
 ---
 
