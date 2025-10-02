@@ -5,6 +5,10 @@ date: 2025-07-09
 tags: [mental health, svenska, yearly theme]
 metadata:
   description: I'm learning Swedish. For reasons.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "114825654336806010"
 ---
 
 I wasn't great at languages (or 'modern foreign languages' as it was officially called) in school.

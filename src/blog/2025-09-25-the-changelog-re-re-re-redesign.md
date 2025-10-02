@@ -7,6 +7,10 @@ metadata:
 cssComponents:
   - figure
   - image-differ
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "115266934315098428"
 ---
 
 Back in January, I did a little bit of [renovating in the open]({{ '/blog/2025-01-11-renovating-in-the-open/' | url }}), during which I stripped things back and changed a bunch of things around over a period of a few weeks.

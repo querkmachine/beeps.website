@@ -4,6 +4,10 @@ date: 2025-10-01
 tags: [technology]
 metadata:
   description: Can we get straight to the point here?
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "115301266688876511"
 ---
 
 Can we get straight to the point here?
