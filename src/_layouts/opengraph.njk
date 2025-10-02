@@ -3,14 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
-    <style>
-      @font-face {
-        font-family: "Space Grotesk";
-        src: url("{{ '/assets/fonts/SpaceGrotesk.woff2' | url }}") format("woff2-variations");
-        font-weight: 300 700;
-        font-style: normal;
-      }
-    </style>
+    <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url | cachebust }}" media="all">
     <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
     <style>
       .kimPage {
