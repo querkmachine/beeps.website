@@ -366,4 +366,17 @@ export default {
     phoenix: 1,
     nintendo: 25,
   },
+  "2025-09": {
+    chrome: 2926,
+    safari: 425,
+    firefox: 6,
+    "android-webview": 85,
+    opera: 98,
+    silk: 1340,
+    yandex: 2,
+    "mozilla-compatible": 1,
+    phoenix: 3,
+    "android-runtime": 21,
+    nintendo: 8,
+  },
 };

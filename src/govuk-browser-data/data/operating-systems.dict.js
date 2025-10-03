@@ -5,6 +5,7 @@ export default {
   "firefox-os": "Firefox OS",
   freebsd: "FreeBSD",
   fuchsia: "Fuchsia",
+  "google-tv": "Google TV",
   ios: "iOS/iPadOS",
   lg: "LG",
   linux: "Linux",
