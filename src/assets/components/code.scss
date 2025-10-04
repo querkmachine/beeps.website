@@ -52,9 +52,6 @@
     "lnum",
     "liga" 0,
     "calt" 0;
-
-  @media (prefers-color-scheme: light) {
-  }
 }
 
 // Unhighlighted inline code
@@ -70,6 +67,7 @@
   display: block;
   margin-block-end: var(--space-5);
   padding: var(--space-3);
+  position: relative;
   border-width: var(--border-regular);
   color: var(--color-code-text);
   background-color: var(--color-code-background);
@@ -80,6 +78,21 @@
   hyphens: none;
   tab-size: 4;
   overflow-x: auto;
+
+  // Language label
+  &[data-language]::before {
+    content: attr(data-language);
+    padding-inline: var(--space-2);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: 100%;
+    color: var(--color-code-text);
+    background-color: var(--color-code-border);
+    font-size: var(--size--1);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 
   // Highlight.js styles
   .hljs-comment {
@@ -145,4 +158,9 @@
   border: var(--border-hairline) solid currentcolor;
   border-radius: 0.3em;
   box-shadow: inset 0 -1px 0 currentcolor;
+}
+
+// Remove the user agent stylesheet's margins on <pre> elements
+pre:has(.kimCodeBlock) {
+  margin: 0;
 }

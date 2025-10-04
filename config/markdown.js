@@ -88,6 +88,7 @@ const markdownItClasses = function (md) {
           tokens[idx].info ? ` kimCodeBlock-${tokens[idx].info}` : ""
         }`,
       ]);
+      tokens[idx].attrPush(["data-language", tokens[idx].info]);
     }
     return codeFenceRenderer(tokens, idx, options, env, self);
   };

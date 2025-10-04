@@ -53,6 +53,12 @@ export default function () {
             description: "Free web accessibility audits for the fandom.",
           },
           {
+            href: "/snippets/",
+            text: "Snippets",
+            description:
+              "Hopefully useful bits of code to make accessible websites with.",
+          },
+          {
             href: "/govuk-browser-data/",
             text: "GOV.UK browser data",
             description:
