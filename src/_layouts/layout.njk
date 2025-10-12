@@ -50,6 +50,21 @@
 </head>
 <body class="kimPage_body">
 
+  {# Custom CSS element #}
+  <script>
+    let $cssElement = document.getElementById("customCSS");
+    if (!$cssElement) {
+      $cssElement = document.createElement("style");
+      $cssElement.id = "customCSS";
+      document.head.insertAdjacentElement("beforeend", $cssElement);
+    }
+    window.$cssElement = $cssElement;
+  
+  if (localStorage.getItem("customCSS")) {
+    window.$cssElement.innerText = localStorage.getItem("customCSS");
+  }
+  </script>
+
   {% include "src/_includes/development-tag.njk" %}
   
   {% block beforeMasthead %}
@@ -134,7 +149,7 @@
                 {{- link.html | safe if link.html else link.text -}}
               </a>
             </li>
-          {%- endfor%}
+          {%- endfor %}
         </ul>
       </div>
       

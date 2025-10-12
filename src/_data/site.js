@@ -78,10 +78,6 @@ export default function () {
       },
     ],
     legalLinks: [
-      { href: "/brand/", text: "beeps' brand" },
-      { href: "/colophon/", text: "Colophon" },
-      { href: "/accessibility/", text: "Accessibility statement" },
-      { href: "/privacy/", text: "Cookies and privacy" },
       {
         href: "/feed.xml",
         text: "RSS feed",
@@ -91,6 +87,11 @@ export default function () {
           type: "application/atom+xml",
         },
       },
+      { href: "/brand/", text: "beeps' brand" },
+      { href: "/colophon/", text: "Colophon" },
+      { href: "/accessibility/", text: "Accessibility statement" },
+      { href: "/privacy/", text: "Cookies and privacy" },
+      { href: "/customise/", text: "Customise CSS" },
     ],
   };
 }
