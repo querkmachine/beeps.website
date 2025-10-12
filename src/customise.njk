@@ -1,0 +1,71 @@
+---
+title: Customise this site
+metadata:
+  description: Write your own CSS to customise how this site looks.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block main %}
+  <div class="kim-!-margin-block-8-9">
+    <div class="kimWrapper">
+      <h1 class="kimHeading-xl">
+        {{ title }}
+      </h1>
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+          <p class="kimBody-l">Write your own CSS to customise how this site looks.</p>
+          <p class="kimBody">This code is stored on your device and is never sent to the server. JavaScript must be available for it to work.</p>
+          <p class="kimBody">This is here as an experiment. I might get rid of it again at some point. 🤷</p>
+        </div>
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+          <label for="css" class="kim-!-visually-hidden">Write some CSS</label>
+          <textarea class="pageCodeEditor" id="css" rows="30" cols="80" disabled>
+.kimPage {
+  /** Force light or dark mode by uncommenting one of these. */
+  /* color-scheme: light; */
+  /* color-scheme: dark; */
+  
+  /** Change body font by uncommenting and editing this. */
+  /* --font-body: system-ui, sans-serif; */
+}</textarea>
+        </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% css %}
+.pageCodeEditor {
+  inline-size: 100%;
+  margin-block-end: var(--space-5);
+  padding: var(--space-3);
+  border: var(--border-regular) solid var(--color-furniture);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-family: var(--font-code);
+  font-size: var(--size--1);
+  resize: vertical;
+  tab-size: 4;
+}
+.pageCodeEditor:focus-visible {
+  outline: 3px solid var(--color-focus-text);
+  box-shadow: 0 0 0 5px var(--color-focus-background);
+}
+{% endcss %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    const $cssEditor = document.getElementById("css");
+    $cssEditor.disabled = false;
+    
+    $cssEditor.addEventListener("input", function() {
+      localStorage.setItem("customCSS", $cssEditor.value);
+      window.$cssElement.innerText = $cssEditor.value;
+    })
+    
+    if(localStorage.getItem("customCSS")) {
+      $cssEditor.value = localStorage.getItem("customCSS");
+    }
+  </script>
+{% endblock %}
