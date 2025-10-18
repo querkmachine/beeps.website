@@ -8,7 +8,7 @@
     before: function (data) {
       return data.reduce((redirects, page) => {
         if (Array.isArray(page.data.redirect_from)) {
-          for (let url of page.direct.redirect_from) {
+          for (let url of page.data.redirect_from) {
             redirects.push({ to: page.url, from: url })
           }
         } else if (typeof page.data.redirect_from === "string") {
