@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2025-09-25
+updated: 2025-10-24
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -44,6 +44,7 @@ These channels are neat, and most of them don't even have a million subscribers,
 - [Chain Bear](https://www.youtube.com/@chainbear) makes video essays about Formula 1 and motorsport, usually to explain some piece of technology or weird application of the rules. They're pretty calming, and proved quite useful when I was first getting into F1.
 - [Eddache](https://www.youtube.com/@eddache) makes animated video essays about animation. Also sometimes non-animated things.
 - [FUNKe](https://www.youtube.com/@FUNKe) makes cool, animated video essays about video games (and somehow the band Weezer without ever actually making a video _about_ Weezer). I can't say I play games (or Weezer) enough to really get it, but the presentation style is da bomb y'all.
+- [Homemade Ecosystems](https://www.youtube.com/@HomemadeEcosystems) is a biologist who builds terrariums with insects in a deadpan, monotone style.
 - [The Infinite Review](https://www.youtube.com/@TheInfiniteReview) seeks to make a review about everything in the universe ever. It might take a while.
 - [Jago Hazzard](https://www.youtube.com/@JagoHazzard) has a bloke train around London and sardonically tell you things about railway lines and rolling stock. He's kinda like one of those car YouTubers but for the London Underground.
 - [Junkball](https://www.youtube.com/@JunkBallMedia) makes video essays about stupid things in _Star Trek_ and if that doesn't sell you then there's probably nothing here for you.
@@ -81,6 +82,8 @@ Miscellany, &c.
 - [The Cutting Room Floor](https://tcrf.net/) documents all the parts of video games that made it into the files but didn't make it into the final game. It's a fascinating insight into how popular games were developed and refined.
 - [eightyeightthirtyone](https://eightyeightthirty.one/) maps out the connections between websites on the indie web, [including my own](https://eightyeightthirty.one/#beeps.website).
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
+- [Knockout](https://knockout.chat/), another forum with very chill vibes that I enjoy lurking on.
+- [Tiled Words](https://tiledwords.com/) is a crossword-like daily puzzle game where you answer the given clues by assembling the crossword grid.
 
 ## Buttons
 
