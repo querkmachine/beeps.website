@@ -17,5 +17,15 @@
 
   img {
     margin-block-end: 0;
+    image-rendering: pixelated;
+    transition-property: background-color, transform, outline;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background-color: var(--color-furniture);
+      transform: scale(2);
+      outline: var(--border-regular) solid var(--color-furniture);
+    }
   }
 }
