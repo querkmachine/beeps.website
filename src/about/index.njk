@@ -25,13 +25,9 @@ metadata:
 {% block main %}
   <article class="kim-!-margin-block-9">
     <div class="kimWrapper">
-      <div class="kimGrid">
-        <header class="kimGrid_column kimGrid_column-full">
-          <h1 class="kimHeading-xl">
-            {{ title }}
-          </h1>
-        </header>
-      </div>
+      <h1 class="kimHeading-xl">
+        {{ title }}
+      </h1>
       <div class="kimGrid">
         {% call _item("🪪") %}
         [My name is beeps.]({{ '/about/name/' | url }}) I also go by Kim, but in more casual settings I prefer that folks call me beeps.
