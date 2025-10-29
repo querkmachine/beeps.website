@@ -1,0 +1,233 @@
+---
+layout: null
+title: Made by beeps
+metadata:
+  description: A variety of side projects I want to brag about.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% macro _item(params) %}
+<div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+  <article class="kim-!-margin-block-end-6">
+    <img class="kim-!-margin-block-end-3" src="{{ params.image.src | url }}" alt="{{ params.image.alt }}">
+    <h3 class="kimHeading-xs kim-!-margin-block-start-0">
+      {%- if params.href %}
+        <a class="kimLink" href="{{ params.href }}">{{ params.title }}</a>
+      {%- else %}
+        {{- params.title -}}
+      {%- endif %}
+    </h3>
+    {%- if caller %}
+      {% markdown %}{{- caller() -}}{% endmarkdown %}
+    {%- endif %}
+  </article>
+</div>
+{% endmacro %}
+
+{% block main %}
+  <div class="kim-!-margin-block-9">
+    <div class="kimWrapper">
+      <div class="kimGrid">
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+          <h1 class="kimHeading-xl">
+            {{- title -}}
+          </h1>
+          <p class="kimBody-l">{{ "Over the years I've done a lot of random things that aren't (entirely) frontend development. Here's some of them." | markdownInline }}</p>
+        </div>
+      </div>
+      
+      <h2 class="kimHeading-l">
+        Developer resources
+      </h2>
+      <div class="kimGrid">
+        {% call _item({
+          title: "Randomize Everything",
+          href: "//extensions.panic.com/extensions/querkmachine/querkmachine.RandomizeEverything/",
+          image: {
+            src: "/assets/images/projects/randomize-everything.png",
+            alt: "Two right-pointing arrows crossing over one another on a purple background."
+          }
+        }) %}
+        An extension for Panic's [Nova code editor](//nova.app) that generates all sorts of random placeholder content. Handy for prototyping!
+        {% endcall %}
+        {% call _item({
+          title: "placeholder.rocks",
+          href: "//placeholder.rocks",
+          image: {
+            src: "/assets/images/projects/placeholder-rocks.png",
+            alt: "The placeholder.rocks logo, featuring the text 'placeholder rocks' with a star between the two words, styled to resemble the Steven Universe logo."
+          }
+        }) %}
+        Rockin' placeholder images featuring the characters from _Steven Universe_ (who are sentient alien rocks, geddit?)
+        {% endcall %}
+        {% call _item({
+          title: "placeponi.es",
+          href: "//placeponi.es",
+          image: {
+            src: "/assets/images/projects/placeponies.png",
+            alt: "Pinkie Pie, a bright pink pony from the My Little Pony television series, looking at and motioning to the reader."
+          }
+        }) %}
+        A placeholder image generation service using characters from _My Little Pony: Friendship is Magic_. 
+        {% endcall %}
+        {% call _item({
+          title: "Eleventy Webring",
+          href: "//github.com/querkmachine/eleventy-webring",
+          image: {
+            src: "/assets/images/projects/eleventy-webring.png",
+            alt: "Black text on a light grey background reading 'Eleventy webring', with two arrows below it styled like links reading 'previous' and 'next'."
+          }
+        }) %}
+        A simple [Eleventy](//11ty.dev)-based framework for building webrings with no client-side JavaScript needed.
+        {% endcall %}
+        {% call _item({
+          title: "One Stylesheet",
+          href: "//github.com/querkmachine/one-stylesheet",
+          image: {
+            src: "/assets/images/projects/one-stylesheet.png",
+            alt: "Green text on a dark purple background reading 'One Stylesheet'."
+          }
+        }) %}
+        A classless CSS library for building simple websites that look an awful lot [like this website]({{ '/brand/' | url }}).
+        {% endcall %}
+        {% call _item({
+          title: "Vanilla Validation",
+          href: "//www.npmjs.com/package/@querkmachine/vanilla-validation",
+          image: {
+            src: "/assets/images/projects/vanilla-validation.png",
+            alt: "Text designed to resemble a basic form input, reading 'This is Vanilla Validation. A simple client-side validation library.' The text 'Vanilla Validation' is styled to evoke an error message."
+          }
+        }) %}
+        JavaScript package that extends HTML's validation rules to make client-side validation work a little more like [GOV.UK's validation pattern](https://design-system.service.gov.uk/patterns/validation/).
+        {% endcall %}
+      </div>
+      
+      <h2 class="kimHeading-l">
+        Communities
+      </h2>
+      <div class="kimGrid">
+      {% call _item({
+          title: "Severn Bronies",
+          href: "//severnbronies.co.uk",
+          image: {
+            src: "/assets/images/projects/severn-bronies.png",
+            alt: "Illustration of many pony characters, both canon and original creations, celebrating together."
+          }
+        }) %}
+        Operating regular social events for pony-inclined people in south west England and south Wales since 2012.
+        {% endcall %}
+        {% call _item({
+          title: "Amphimorpho Webring",
+          href: "//noodle-r.ing",
+          image: {
+            src: "/assets/images/projects/amphimorpho-webring.png",
+            alt: "Illustration of several amphimorpho hanging out in a large bowl."
+          }
+        }) %}
+        A webring for people with amphimorpho characters and fursonas.
+        {% endcall %}
+        {% call _item({
+          title: "Star Trek Furs",
+          href: "//barq.app/c/gHB02T0",
+          image: {
+            src: "/assets/images/projects/star-trek-furs.png",
+            alt: "Screenshot of Doctor T'Ana, a Caitian character from Star Trek (a humanoid cat species) performing a wrestling move on a human."
+          }
+        }) %}
+        Barq and Discord-based community for fuzzy _Star Trek_ fans.
+        {% endcall %}
+        {% call _item({
+          title: "Synthetic Society",
+          image: {
+            src: "/assets/images/projects/synthetic-society.png",
+            alt: "A variety of hearts arranged in a repeating pattern. The hearts allude to different objects and materials, including rubber, textiles, clothing, machines, and digital programs."
+          }
+        }) %}
+        An invite-only community for people with non-human, non-biological identities. Comes with [bits and bobs](https://github.com/querkmachine/synthetic-society-bits-n-bobs).
+        {% endcall %}
+        {% call _item({
+          title: "Darn Blimps",
+          href: "//darnblimps.com",
+          image: {
+            src: "/assets/images/projects/darn-blimps.png",
+            alt: "Isometric 3D screenshot of a Minecraft world."
+          }
+        }) %}
+        A public Minecraft server that I used to operate in the early 2010s, now preserved in perpituity.
+        {% endcall %}
+      </div>
+      
+      <h2 class="kimHeading-l">
+        Educational
+      </h2>
+      <div class="kimGrid">
+        {% call _item({
+          title: "BatsBatsBats",
+          href: "//social.beeps.gay/@batsbatsbats",
+          image: {
+            src: "/assets/images/projects/batsbatsbats.png",
+            alt: "Black screen with thin white text on it asking 'got bats?' in the style of the 'got milk?' advertisements."
+          }
+        }) %}
+        A Mastodon bot that posts a freely-licensed photo of a bat approximately every hour.
+        {% endcall %}
+        {% call _item({
+          title: "WikiFur",
+          href: "//wikifur.com",
+          image: {
+            src: "/assets/images/projects/wikifur.png",
+            alt: "The WikiFur logo, a paw print embedded within another paw print."
+          }
+        }) %}
+        Long time volunteer and curator of the primary online encyclopedia for subjects relating to the furry fandom.
+        {% endcall %}
+        {% call _item({
+          title: "Encyclopedia Robotica",
+          href: "//encyclopediarobotica.org",
+          image: {
+            src: "/assets/images/projects/encyclopedia-robotica.png",
+            alt: "The Encyclopedia Robotica logo, featuring a grey gear within which is a tricolour of red, green and blue."
+          }
+        }) %}
+        Main steward of the wiki for robotkin and machinekin identifying beings.
+        {% endcall %}
+      </div>
+      
+      <h2 class="kimHeading-l">
+        Graphic design
+      </h2>
+      <div class="kimGrid">
+        {% call _item({
+          title: "Spectracraft",
+          image: {
+            src: "/assets/images/projects/spectracraft.png",
+            alt: "Logo in the style of the Minecraft logo, but it reads 'Spectracraft' instead and uses rainbow colouration. 'Season 1' is written below it in a texture resembling Minecraft logs."
+          }
+        }) %}
+        Logo design for a private Minecraft server.
+        {% endcall %}
+        {% call _item({
+          title: "Death Wore Endless Feathers",
+          href: "//www.adventuregamestudio.co.uk/play/game/1184/",
+          image: {
+            src: "/assets/images/projects/death-wore-endless-feathers.png",
+            alt: "Screenshot of a point and click game utilising pixel sprites and painted backgrounds. There are multiple characters hanging out in a pizzaria."
+          }
+        }) %}
+        I contributed the logo and some background art to this award winning, cyberpunk indie game.
+        {% endcall %}
+        {% call _item({
+          title: "Merchandise",
+          href: "//www.redbubble.com/people/querkmachine/shop",
+          image: {
+            src: "/assets/images/projects/redbubble.png",
+            alt: "A black background with three radio buttons, reading 'male', 'female', and 'robot'. The third one is checked."
+          }
+        }) %}
+        I've occassionally made things and put them up for sale on RedBubble. Get 'em on a sticker or something.
+        {% endcall %}
+      </div>
+    </div>
+  </article>
+{% endblock %}

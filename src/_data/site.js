@@ -25,12 +25,8 @@ export default function () {
           {
             href: "/blog/",
             text: "Blog",
-            description: "Aimless whitterings about life and other stuff.",
-          },
-          {
-            href: "/about/",
-            text: "About beeps",
-            description: "Everything about me. Like, everything.",
+            description:
+              "Aimless whitterings about life, web development, and other stuff.",
           },
           {
             href: "/now/",
@@ -38,9 +34,14 @@ export default function () {
             description: "Stuff I've been up to recently.",
           },
           {
-            href: "/contact/",
-            text: "Contact",
-            description: "Get in touch! Or don't.",
+            href: "/about/",
+            text: "About beeps",
+            description: "Everything about me. Like, everything.",
+          },
+          {
+            href: "/made-by-beeps/",
+            text: "Made by beeps",
+            description: "I have too many side projects.",
           },
         ],
       },
@@ -73,6 +74,11 @@ export default function () {
             href: "/links/",
             html: "Cool links &amp; friend sites",
             description: "Neat peeps and neat things.",
+          },
+          {
+            href: "/contact/",
+            text: "Contact",
+            description: "Get in touch! Or don't. It's a free internet.",
           },
         ],
       },
