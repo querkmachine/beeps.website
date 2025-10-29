@@ -32,7 +32,7 @@ A couple of years ago, upon procuring my shiny M1 Pro Mac, I moved to use Firefo
 After some time in a limited beta, Arc went free to use in July of this year. I can't recall if I'd actually heard much about it before then, but the list of features intrigued me—particularly the concepts of "Spaces" and "Boosts".
 
 {% figure caption="This is what Arc looks like, by the way." %}
-{% responsiveImage "./src/images/arc-browser.jpg", "A screenshot of the Arc browser, with the majority of the screen showing the homepage of this website. A narrow purple sidebar on the left shows a grid of buttons with icons in it with a vertical list of tabs beneath it.", { link: true } %}
+{% image "/images/arc-browser.jpg", "A screenshot of the Arc browser, with the majority of the screen showing the homepage of this website. A narrow purple sidebar on the left shows a grid of buttons with icons in it with a vertical list of tabs beneath it.", { link: true } %}
 {% endfigure %}
 
 Spaces gave you the ability to have multiple simultaneous-but-separate profiles. I already had something like these in Firefox with the first-party [Multi-Account Containers extension](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) and had found them invaluable to my workflows, so having a version more integrated into the browser was an intriguing concept.
@@ -146,7 +146,7 @@ This is also fairly minor—none of this makes actual development easier—but i
 Maybe just another developer brain thing, but Arc lets you do basically everything through a command palette. New tabs, searching, browser history, extensions, and other commands: all searchable and usable from one place.
 
 {% figure caption="Arc's command palette lets you do almost anything just from your keyboard." %}
-{% responsiveImage "./src/images/arc-browser-commands.jpg", "A screenshot of the Arc browser's command palette. A search field has searched for 'developer', bringing up a list with one open tab, the option to search for 'developer', a history entry for Google Developers, and the options to toggle developer mode and open developer tools.", { link: true } %}
+{% image "/images/arc-browser-commands.jpg", "A screenshot of the Arc browser's command palette. A search field has searched for 'developer', bringing up a list with one open tab, the option to search for 'developer', a history entry for Google Developers, and the options to toggle developer mode and open developer tools.", { link: true } %}
 {% endfigure %}
 
 As someone who already uses [Raycast](https://www.raycast.com/) to do an awful lot of my computing, having single points of access like this is a huge deal for me.
@@ -208,7 +208,7 @@ No, it's not "real AI" and is just another large language model based on ChatGPT
 What I respect about their implementation is that they haven't just taken ChatGPT and stuffed it in a sidebar. The AI tools are much more specific and nuanced.
 
 {% figure float="right", caption="AI summaries are actually quite useful if you're just looking to get the gist of something." %}
-{% responsiveImage "./src/images/arc-browser-ai-summary.jpg", "A screenshot of a search results page, with the Arc browser summarising an article about the mobile version of itself into a single sentence and list of themed bullet points.", { link: true } %}
+{% image "/images/arc-browser-ai-summary.jpg", "A screenshot of a search results page, with the Arc browser summarising an article about the mobile version of itself into a single sentence and list of themed bullet points.", { link: true } %}
 {% endfigure %}
 
 I actually quite appreciate the ability to get a summary of a link's content without having to open it. It once again plays to Arc's philosophy of webpages being transient and is a novel way of avoiding clickbait and meandering articles.

@@ -19,7 +19,7 @@ I'm not gonna be publishing one of these every day, I swear.
 
 > Maybe some motivational tips on how to actually "finish" it? Like, I know what I want to do and somewhat how to do it, but like... I just don't feel like it, you know?
 
-{% responsiveImage "./src/images/shia-la-beouf-just-do-it.gif", "Video clip of Shia LaBeouf gesticulating aggressively at the viewer whilst shouting the words transposed on top of the clip: 'just do it'." %}
+{% image "/images/shia-la-beouf-just-do-it.gif", "Video clip of Shia LaBeouf gesticulating aggressively at the viewer whilst shouting the words transposed on top of the clip: 'just do it'." %}
 
 Okay, maybe that's not so helpful.
 
@@ -47,7 +47,7 @@ Right now.
 
 Go on.
 
-{% responsiveImage "./src/images/shia-la-beouf-just-do-it.gif", "The same clip of Shia LaBeouf shouting 'just do it'." %}
+{% image "/images/shia-la-beouf-just-do-it.gif", "The same clip of Shia LaBeouf shouting 'just do it'." %}
 
 Having something online, no matter how incomplete, is better than having nothing.
 
@@ -83,4 +83,4 @@ Yeah, probably. A motivational speaker I am not.
 
 In this regard, I can only speak my truth, and that's that you should...
 
-{% responsiveImage "./src/images/shia-la-beouf-just-do-it.gif", "Shia LaBeouf shouting 'just do it'." %}
+{% image "/images/shia-la-beouf-just-do-it.gif", "Shia LaBeouf shouting 'just do it'." %}

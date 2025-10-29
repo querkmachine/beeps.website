@@ -39,7 +39,7 @@ The post about [using user styles to make CAPTCHAs reflect non-human identities]
 
 ## I properly acknowledged that I'm neurodivergent
 
-{% responsiveImage "./src/images/2023-neurodiverse.jpg", "A watercolour-style painting of an alien landscape in green and yellow hues, with the ground covered in a winding tangled array of wires." %}
+{% image "/images/2023-neurodiverse.jpg", "A watercolour-style painting of an alien landscape in green and yellow hues, with the ground covered in a winding tangled array of wires." %}
 
 May ended up being an unusually busy month, and that started with [rather belatedly working out that I'm neurodivergent]({{ '/blog/2023-05-16-let-me-tell-you-a-secret/' | url }}), or, at least, more neurodivergent than I originally considered myself.
 
@@ -65,7 +65,7 @@ I didn't end up [writing about the change until August]({{ '/blog/2023-08-27-the
 
 ConFuzzled!
 
-{% responsiveImage "./src/images/2023-convention.jpg", "A watercolour-style painting of a variety of unusual animal-like creatures." %}
+{% image "/images/2023-convention.jpg", "A watercolour-style painting of a variety of unusual animal-like creatures." %}
 
 Let me tell you, it's awfully inconvenient to change fursona mere weeks before you attend a furry convention. Your badges are all of the wrong species, your door sign is already printed, and you've already decided to go to the bat panel...
 
@@ -91,7 +91,7 @@ Overall, working fewer days and spending those extended hours working from home 
 
 ## I embraced polyamory
 
-{% responsiveImage "./src/images/2023-polyamory.jpg", "A watercolour-style painting of small robot bat looking happy whilst surrounded by floating red, pink and purple love hearts." %}
+{% image "/images/2023-polyamory.jpg", "A watercolour-style painting of small robot bat looking happy whilst surrounded by floating red, pink and purple love hearts." %}
 
 Polyamory is an aspect of my identity I've never really felt the need to go into much detail about, insomuch as it doesn't feel that outside of the realm of normalcy.
 
@@ -113,7 +113,7 @@ If anyone, _anyone_, ever says that access to transgender healthcare in the UK i
 
 ## 2024: the year to come
 
-{% responsiveImage "./src/images/2023-future.jpg", "A watercolour-style painting of a silhouetted robot overlooking a cityscape painted in vibrant rainbow colours." %}
+{% image "/images/2023-future.jpg", "A watercolour-style painting of a silhouetted robot overlooking a cityscape painted in vibrant rainbow colours." %}
 
 I've not got much to promise for the year ahead. I'm generally comfortable with my working and personal life, and I'm not seeking out any great waves to come and shake things up.
 

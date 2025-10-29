@@ -13,7 +13,7 @@ cssComponents:
 ---
 
 {% figure caption="Original Emy, as drawn by BatPunk.", float="right" %}
-{% responsiveImage "./src/images/emy-by-batpunk.jpg", "A hand-drawn illustration of an anthropomorphic Honduran white bat bust, wearing large round glasses and a pink sweater with a button badge reading 'Try Something NEW Every Day'. She's smiling with her mouth open, exposing her fangs." %}
+{% image "/images/emy-by-batpunk.jpg", "A hand-drawn illustration of an anthropomorphic Honduran white bat bust, wearing large round glasses and a pink sweater with a button badge reading 'Try Something NEW Every Day'. She's smiling with her mouth open, exposing her fangs." %}
 {% endfigure %}
 
 Emy is a bat. She's been my fursona since 2017.
@@ -25,7 +25,7 @@ Honestly, she didn't get much characterisation. For a while, her biggest quirk w
 Then she became a robot.
 
 {% figure caption='Emy, but a robot. By <a href="https://twitter.com/integration_art">Integration</a>.', float="right" %}
-{% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst it uses the other to repair the parts of the disassembled wing." %}
+{% image "/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst it uses the other to repair the parts of the disassembled wing." %}
 {% endfigure %}
 
 This change was initially intended to be temporary, but it ended up sticking. During this time Emy took on a new life of sorts. Finally, she came into her own as a character, with a backstory and relationships.
@@ -83,5 +83,5 @@ I don't know. I just don't know. Maybe a change will happen to my online present
 Welcome to the legacy, Ash.
 
 {% figure caption='Artwork by <a href="https://tuxedodragon.carrd.co/">TuxedoDragon</a>.' %}
-{% responsiveImage "./src/images/ash-by-tuxedodragon.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly." %}
+{% image "/images/ash-by-tuxedodragon.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly." %}
 {% endfigure %}

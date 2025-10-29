@@ -24,7 +24,7 @@ I've also just got lots of little things here and there that I really should get
 
 What kind of theme could encompass such a diversity of stuff?
 
-{% responsiveImage "./src/images/YearOfOrder1.png", "A faux todo list with three items. Collectively they read 'The Year of Getting My Shit in Order'. The middle one is checked off and faded out, making it also read 'The Year of Order'." %}
+{% image "/images/YearOfOrder1.png", "A faux todo list with three items. Collectively they read 'The Year of Getting My Shit in Order'. The middle one is checked off and faded out, making it also read 'The Year of Order'." %}
 
 ## Welcome, to the Year of Getting My Shit In Order.
 

@@ -38,7 +38,7 @@ Emotionally, it hasn't really hit me like the full-on 'second puberty' that HRT 
 
 Of course, later on in the year I would come to realise my dysphoria wasn't really gender-related at all, but I've kept it up anyway for other reasons.
 
-{% responsiveImage "./src/images/gru-agender.jpg", "Gru from the Despicable Me series (with a robot bat photoshopped over his head) presents a series of slides. Panel 1: Confidently motions to 'Start trying to get estrogen in 2014' slide. Panel 2: Taps head at 'Finally starts in 2022 by going private' slide. Panel 3: Looks away as the slide changes to 'Realise you're actually agender'. Panel 4: Looks in confusion at the new slide." %}
+{% image "/images/gru-agender.jpg", "Gru from the Despicable Me series (with a robot bat photoshopped over his head) presents a series of slides. Panel 1: Confidently motions to 'Start trying to get estrogen in 2014' slide. Panel 2: Taps head at 'Finally starts in 2022 by going private' slide. Panel 3: Looks away as the slide changes to 'Realise you're actually agender'. Panel 4: Looks in confusion at the new slide." %}
 
 ## I started living with my partner
 
@@ -90,7 +90,7 @@ Since embracing Olive as a part of ourselves, they've gradually become more voca
 
 ## I spent a bit of time in hospital
 
-{% responsiveImage "./src/images/but-not-for-me.jpg", "An image macro. A man wearing a thick jacket (with robot bat photoshopped over his head) stands next to a car, brandishing a small handgun at a man offscreen. It says 'but not for me' in Impact font." %}
+{% image "/images/but-not-for-me.jpg", "An image macro. A man wearing a thick jacket (with robot bat photoshopped over his head) stands next to a car, brandishing a small handgun at a man offscreen. It says 'but not for me' in Impact font." %}
 
 On Halloween, Taylor was unfortunately involved in a road traffic collision and ended up breaking various body parts. We got to experience the painfully slow wait times of the underfunded NHS, followed by several weeks of Taylor being in frequent physical pain and poor mental health.
 

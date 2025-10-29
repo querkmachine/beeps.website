@@ -22,7 +22,7 @@ I'm not an expert in that topic _at all_, so I may not use the preferred termino
 
 Last year (oh how time flies), we launched the [GOV.UK Design System's Exit this Page component](https://design-system.service.gov.uk/components/exit-this-page/), or EtP for short.
 
-{% responsiveImage "./src/images/exit-this-page.png", "A large red button with 'Exit this page' written on it in plain white text." %}
+{% image "/images/exit-this-page.png", "A large red button with 'Exit this page' written on it in plain white text." %}
 
 On the surface, it's a simple component. It's a big red button that sticks to the top of the screen. If you click it, you're taken away to BBC Weather.
 

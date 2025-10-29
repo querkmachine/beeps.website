@@ -1,50 +1,51 @@
 import paths from "../paths.js";
-import pluginImages from "@11ty/eleventy-img";
+import Image from "@11ty/eleventy-img";
 
 const responsiveImagesShortcode = async function (src, alt, args) {
-  if (alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
-  }
-
   const defaultArgs = {
     lazy: true,
     classes: "",
     link: false,
-    sizes: "(min-width: 768px) 66vi, 100vi",
+    sizes: "100vi",
   };
   const settings = { ...defaultArgs, ...args };
 
-  let metadata = await pluginImages(src, {
+  let metadata = await Image(`${paths.src}${src}`, {
+    // Compile in-memory for local dev
+    transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
+
+    // Output options
     widths: [300, 600, 900, 1200, null],
     formats: ["webp"],
     urlPath: "/images/",
     outputDir: paths.output + "/images/",
+
+    // Don't convert SVG files
+    svgShortCircuit: true,
+
+    // Maintain animated images
     sharpOptions: {
       animated: true,
     },
   });
 
-  let originalSize = metadata.webp[metadata.webp.length - 1];
-
-  let imageCode = `<img`;
-  imageCode += settings.classes ? ` class="${settings.classes}"` : "";
-  imageCode += settings.lazy ? ` loading="lazy"` : "";
-  imageCode += ` src="${originalSize.url}"`;
-  imageCode += ` srcset="${metadata.webp.map((entry) => entry.srcset).join(", ")}"`;
-  imageCode += ` sizes="${settings.sizes}"`;
-  imageCode += ` width="${originalSize.width}"`;
-  imageCode += ` height="${originalSize.height}"`;
-  imageCode += ` alt="${alt}">`;
+  let html = Image.generateHTML(metadata, {
+    alt,
+    sizes: settings.sizes,
+    class: settings.classes,
+    loading: settings.lazy ? "lazy" : "eager",
+    decoding: "async",
+  });
 
   // If a link is configured, create that too
   if (typeof settings.link === "boolean" && settings.link === true) {
-    imageCode = `<a class="kimLink-image" href="${originalSize.url}">${imageCode}</a>`;
+    const imageUrl = metadata.webp[metadata.webp.length - 1].url;
+    html = `<a class="kimLink-image" href="${imageUrl}">${html}</a>`;
   } else if (typeof settings.link === "string") {
-    imageCode = `<a class="kimLink-image" href="${settings.link}">${imageCode}</a>`;
+    html = `<a class="kimLink-image" href="${settings.link}">${html}</a>`;
   }
 
-  return imageCode;
+  return html;
 };
 
 export default responsiveImagesShortcode;

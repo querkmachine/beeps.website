@@ -41,7 +41,7 @@ When they’re ready, turn off the hob and drain off the excess water. Return th
 
 Serve it up and season with a bit more pepper or one of those little green garnishes, because why not.
 
-{% figure caption="Potatoes, mashed." %} {% responsiveImage "./src/images/pillowy-mounds-of-mashed-potatoes.jpg", "Photograph of a plate with steak and mashed potatoes, sprinkled with a little pepper." %} {% endfigure %}
+{% figure caption="Potatoes, mashed." %} {% image "/images/pillowy-mounds-of-mashed-potatoes.jpg", "Photograph of a plate with steak and mashed potatoes, sprinkled with a little pepper." %} {% endfigure %}
 
 ## Verdict
 

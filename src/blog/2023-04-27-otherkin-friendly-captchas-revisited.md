@@ -14,7 +14,7 @@ cssComponents:
   - code
 ---
 
-{% responsiveImage "./src/images/robot-captcha.png", "A fake screenshot of a checkbox-type CAPTCHA, with the text reading 'I am a robot' and the box checked." %}
+{% image "/images/robot-captcha.png", "A fake screenshot of a checkbox-type CAPTCHA, with the text reading 'I am a robot' and the box checked." %}
 
 {% callout %}
 This is an updated version of [a blog post by mavica](https://maple.pet/blog/fighting-otherkin-erasure-from-captchas). All credit for this idea belongs to byte.

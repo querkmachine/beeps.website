@@ -32,7 +32,7 @@ I've included links to websites and product pages for the things I mention here.
 My daily driver is a [14-inch M1 Pro MacBook Pro](https://support.apple.com/kb/SP854) that I have stickerbombed halfway to hell.
 
 {% figure caption="<a href=\"https://www.redbubble.com/people/querkmachine/shop\">I actually created some of these stickers!</a> I really should get back into designing random merch." %}
-{% responsiveImage "./src/images/macbook-feb-2024.jpg", "A top-down photograph of a laptop that has been sticker bombed with dozens, if not hundreds, of stickers." %}
+{% image "/images/macbook-feb-2024.jpg", "A top-down photograph of a laptop that has been sticker bombed with dozens, if not hundreds, of stickers." %}
 {% endfigure %}
 
 Despite being a couple of years old now, it's still crazy fast thanks to the wildly good performance of Apple Silicon. If anything, it's overkill.
@@ -110,7 +110,7 @@ Imperceptible to others, maybe, but the fractions of a second longer everything 
 So imagine my surprise when [Nova](https://nova.app) [paid, subscription required for updates after the first year] was introduced in 2020.
 
 {% figure caption="Writing this very blog post in Nova. How meta." %}
-{% responsiveImage "./src/images/nova.png", "A screenshot of a code editor. The top has a list of tabs. The main part of it shows the current blog post, as it is being authored in Markdown. The left shows a sidebar with a long list of files in it of various types. The bottom shows a terminal prompt, with information about the site being built." %}
+{% image "/images/nova.png", "A screenshot of a code editor. The top has a list of tabs. The main part of it shows the current blog post, as it is being authored in Markdown. The left shows a sidebar with a long list of files in it of various types. The bottom shows a terminal prompt, with information about the site being built." %}
 {% endfigure %}
 
 And guess what? It was **fast**. It's made by [Panic](https://www.panic.com/), who have an extensive pedigree in creating excellent developer tools for Mac and iOS, so I wasn't that surprised that it was good. It was surprising that it managed to usurp Sublime as my code editor of choice.
@@ -128,7 +128,7 @@ Nova has a terminal built right into it, so why do I still use [iTerm 2](https:/
 It can be bound to a global hotkey, which is useful. It has split panes, which is useful. It's crazy configurable in ways I've never used and probably never will, which is useful in a sense.
 
 {% figure caption="I have iTerm remain permanently docked to the top half of my screen and focusable with a quick keypress." %}
-{% responsiveImage "./src/images/iterm.png", "A screenshot of a terminal app. The top has a list of tabs. The left half shows the output of the 'neofetch' command, which has returned various pieces of system hardware and software information next to an ASCII representation of the Apple logo. The right shows the text of the current page as returned by the 'cat' command. The bottom of the window includes more system details, including battery level, CPU usage and network utilisation." %}
+{% image "/images/iterm.png", "A screenshot of a terminal app. The top has a list of tabs. The left half shows the output of the 'neofetch' command, which has returned various pieces of system hardware and software information next to an ASCII representation of the Apple logo. The right shows the text of the current page as returned by the 'cat' command. The bottom of the window includes more system details, including battery level, CPU usage and network utilisation." %}
 {% endfigure %}
 
 A much more conscious choice is my use of Zsh. Zsh (or Z shell, when it's been naughty) is the default on macOS these days, but I've been using it for a fair while longer than that. It's got some useful features going for it that Bash doesn't (File globbing! In-prompt information! Command history!), whilst still being Bash-like enough basically anything that works in Bash will usually also work in Zsh.
@@ -150,7 +150,7 @@ The founder/senior leaders have started spouting what I will _generously_ call '
 Can I live without [Raycast](https://www.raycast.com/) [free with premium tiers]? Probably. Would I be anywhere as productive? Probably not. An extensible, customisable keyboard launcher that can be pulled up multiple times a minute is a must-have for me. On top of that, it provides clipboard history, window management, file search, text expansion, and so much more. Hot tip: Raycast works really well with the hyper key concept I mentioned alongside Karabiner-Elements earlier!
 
 {% figure caption="Having a dictionary and thesaurus you can open in less than a second is really helpful when writing blog posts." %}
-{% responsiveImage "./src/images/raycast.png", "A screenshot of A white, somewhat glossy window, which is showing the dictionary definitions and synonyms for the words 'productivity'." %}
+{% image "/images/raycast.png", "A screenshot of A white, somewhat glossy window, which is showing the dictionary definitions and synonyms for the words 'productivity'." %}
 {% endfigure %}
 
 I think [1Password](https://1password.com/) [paid subscription] is probably the best password manager in the world. It does pretty much everything I can imagine ever wanting a password manager to do and it does it with the level of refinement that you expect of top-tier Mac software.

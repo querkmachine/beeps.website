@@ -133,7 +133,7 @@ The selected states of the accent colour and theme options are not visible in fo
 
 Additionally, the accent colour swatches are not visible either.
 
-{% responsiveImage "./src/accessibility-for-furries/audits/evie/forced-color-themes.png", "Screenshot of the colour scheme settings in forced colours mode. The accent colour options are entirely invisible, whilst the light/dark options are visible but the currently selected option is not." %}
+{% image "/accessibility-for-furries/audits/evie/forced-color-themes.png", "Screenshot of the colour scheme settings in forced colours mode. The accent colour options are entirely invisible, whilst the light/dark options are visible but the currently selected option is not." %}
 
 You could potentially rectify this by adding forced colour-specific styles for the selection state, using the same technique described above.
 
@@ -170,7 +170,7 @@ These are issues that do not necessarily violate WCAG Level A or AA, but may vio
 Pages should only have a single `<h1>` element that acts as the title for the entire page.
 
 {% figure caption="Multiple level 1 headings in VoiceOver's heading navigation.", float="right" %}
-{% responsiveImage "./src/accessibility-for-furries/audits/evie/vo-rotor-headings.png", "Screenshot of VoiceOver's rotor, showing multiple level 1 headings on the homepage." %}
+{% image "/accessibility-for-furries/audits/evie/vo-rotor-headings.png", "Screenshot of VoiceOver's rotor, showing multiple level 1 headings on the homepage." %}
 {% endfigure %}
 
 On blog archive pages, the `<h1>` element is used for the titles of each post. Ideally, the `<h1>` should be a unique and descriptive heading for the page (such as 'Post archive, page 3') and the post headings be `<h2>` elements, with each subsequent heading 'knocked down' a level.
@@ -211,7 +211,7 @@ For example, the navigation for moving between archive pages could be marked up 
 
 This label will then be exposed in the landmark navigation tools provided by screen readers.
 
-{% responsiveImage "./src/accessibility-for-furries/audits/evie/vo-rotor-landmarks.png", "Screenshot of VoiceOver's rotor, showing a list of landmarks, with the last one specifically named as 'Pagination navigation'." %}
+{% image "/accessibility-for-furries/audits/evie/vo-rotor-landmarks.png", "Screenshot of VoiceOver's rotor, showing a list of landmarks, with the last one specifically named as 'Pagination navigation'." %}
 
 ### Use appropriate form input types
 

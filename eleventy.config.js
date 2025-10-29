@@ -3,6 +3,7 @@ import paths from "./config/paths.js";
 import site from "./src/_data/site.js";
 
 // 11ty plugins
+import { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
 import loggingPlugin from "@11ty/eleventy-plugin-directory-output";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
@@ -54,6 +55,7 @@ export default function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Load plugins
+  eleventyConfig.addPlugin(eleventyImageOnRequestDuringServePlugin);
   eleventyConfig.addPlugin(loggingPlugin);
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
@@ -121,10 +123,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("link", shortcodeLink);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addNunjucksShortcode("redaction", shortcodeRedaction);
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "responsiveImage",
-    shortcodeResponsiveImage,
-  );
+  eleventyConfig.addNunjucksAsyncShortcode("image", shortcodeResponsiveImage);
   eleventyConfig.addPairedNunjucksShortcode(
     "socialEmbed",
     shortcodeSocialEmbed,

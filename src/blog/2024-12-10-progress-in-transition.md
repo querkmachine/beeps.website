@@ -16,7 +16,7 @@ cssComponents:
 Yesterday, I went to a pharmacy and picked up some prescription medication.
 
 {% figure float="right", caption="Pics or it didn't happen." %}
-{% responsiveImage "./src/images/estrogen.jpg", "Photograph of two small, square, beige boxes labelled: Evorel 100, estradiol patch, 8 patches." %}
+{% image "/images/estrogen.jpg", "Photograph of two small, square, beige boxes labelled: Evorel 100, estradiol patch, 8 patches." %}
 {% endfigure %}
 
 Not really a notable thing in itself, except that this medication was estrogen, prescribed for the purpose of physical feminisation.

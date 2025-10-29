@@ -33,7 +33,7 @@ Twitter has a lot of accounts that post bat photos, be they for education, chari
 {% socialEmbed host="twitter.com", username="BatsDaily", number="1603676469766807555", date="2022-12-16T09:00:39.000Z" %}
 AAAAAAAAAAAAAAAHHHHHH!!!! 🦇
 
-{% responsiveImage "./src/images/batsdaily-screm.jpeg", "A small brown bat lays belly-down on a rock, it's head pointing upwards and mouth wide open as though screaming." %}
+{% image "/images/batsdaily-screm.jpeg", "A small brown bat lays belly-down on a rock, it's head pointing upwards and mouth wide open as though screaming." %}
 {% endsocialEmbed %}
 
 Very relatable.
@@ -49,7 +49,7 @@ Then I remembered that I know how to code things.
 ## Building the bat bot
 
 {% figure float="right" %}
-{% responsiveImage "./src/images/robat-circuits.png", "Robot bat with a door on their torso open, exposing a circuit board-like pattern." %}
+{% image "/images/robat-circuits.png", "Robot bat with a door on their torso open, exposing a circuit board-like pattern." %}
 {% endfigure %}
 
 I have a bunch of prior experience using Mastodon's API. I'd used it before for random side projects like [Rainbow Dashboard](https://github.com/querkmachine/rainbow-dashboard), [Just One Toot](https://github.com/querkmachine/just-one-toot), and a Mastodon-based TweetDeck clone that I was working on until [someone beat me to it](https://mastodeck.com/).
