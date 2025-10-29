@@ -10,7 +10,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
   };
   const settings = { ...defaultArgs, ...args };
 
-  let metadata = await Image(src, {
+  let metadata = await Image(`${paths.src}${src}`, {
     // Compile in-memory for local dev
     transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
 

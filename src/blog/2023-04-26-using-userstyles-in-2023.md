@@ -39,7 +39,7 @@ With Safari, your user stylesheet can be located anywhere in your file system. I
 2. Click on the **Advanced** tab.
 3. Under the **Style sheet** dropdown, click on **Other...** and locate the CSS file you created earlier.
 
-{% responsiveImage "./src/images/userstyles-safari1.jpg", "A screenshot of Safari's advanced preferences interface, with the 'Style sheet' option highlighted." %}
+{% image "/images/userstyles-safari1.jpg", "A screenshot of Safari's advanced preferences interface, with the 'Style sheet' option highlighted." %}
 
 That's it! You're done!
 
@@ -56,7 +56,7 @@ Neither Chrome nor Edge has native support for user stylesheets. For these brows
 5. Click the **Save** button.
 
 {% figure caption="The CSS editing interface in Stylus." %}
-{% responsiveImage "./src/images/userstyles-stylus2.jpg", "A screenshot of the CSS editing interface in Stylus." %}
+{% image "/images/userstyles-stylus2.jpg", "A screenshot of the CSS editing interface in Stylus." %}
 {% endfigure%}
 
 ### Adding a style for a specific website or page
@@ -73,7 +73,7 @@ Unlike native user stylesheets in Safari, which apply to every site you visit, S
 5. Click the **Save** button.
 
 {% figure caption="The Stylus popover in Chrome, open to Google.com, showing the example URL. Clicking different parts of the URL will create a new user style scoped to that URL." %}
-{% responsiveImage "./src/images/userstyles-stylus1.jpg", "A screenshot of the Stylus popover in Chrome." %}
+{% image "/images/userstyles-stylus1.jpg", "A screenshot of the Stylus popover in Chrome." %}
 {% endfigure%}
 
 ## Using a user stylesheet in Firefox

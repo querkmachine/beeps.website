@@ -21,7 +21,7 @@ This has been a somewhat surprisingly productive month for writing, the headline
 The about section of the website got a mild sprucing up too, adding a new section about [neurodivergence and anxiety](({{ '/about/neurodivergent/' | url }})), to update some of the information [about non-human identity]({{ '/about/nonhuman/' | url }}), and to add a new fursona to [the furry page]({{ '/about/furry/' | url }}).
 
 {% figure caption='Artwork by <a href="https://ko-fi.com/epsilonphi">EpsilonPhi</a>.' %}
-{% responsiveImage "./src/images/ash-by-epsilonphi.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair. It's coloured a mix of mix of black and white, except for neon green inner ears and a gooey green tail tip." %}
+{% image "/images/ash-by-epsilonphi.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair. It's coloured a mix of mix of black and white, except for neon green inner ears and a gooey green tail tip." %}
 {% endfigure %}
 
 Yup, I have a second fursona now. This is Ash, a fictional alien-hybrid shapeshifting species known as [amphimorpho](https://amphimorpho.carrd.co/).

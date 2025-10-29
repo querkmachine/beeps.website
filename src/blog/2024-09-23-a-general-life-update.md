@@ -61,7 +61,7 @@ Work has been going well. Earlier in the month we held our fourth overall, secon
 It might sound weird to compare, but my pedigree in running brony and furry meets has given me a bit of a taste for helping with these kinds of scheduled in-person events. I honestly find running around and trying to preempt issues or solve developing problems the best part of things like this.
 
 {% figure float="right", caption="Family fun pit aside." %}
-{% responsiveImage "./src/images/family-fun-pit.jpg", "Looking down into a deep boat dry dock made of roughly hewn rock, overgrown with grass and filled with trash. A sign attached to a fence outside it reads 'Family Fun Hub'." %}
+{% image "/images/family-fun-pit.jpg", "Looking down into a deep boat dry dock made of roughly hewn rock, overgrown with grass and filled with trash. A sign attached to a fence outside it reads 'Family Fun Hub'." %}
 {% endfigure %}
 
 Despite being in neighbouring Manchester for much of my youth, I've only been over to Liverpool a couple of times in my life. It turns out that Liverpool is actually a pretty nice city.
@@ -89,7 +89,7 @@ Last weekend, I popped over to the [Formula 1 Exhibition](https://f1exhibition.c
 The exhibition was interesting enough. I'm a relatively new follower of Formula 1, so a lot of the historical stuff was more just a curiosity than anything meaningful to me, but it was nice to see familiar things up close for the first time. You can spend a good couple of hours in there just looking at stuff, it's a pretty sizeable collection.
 
 {% figure caption="I found the hastily inserted Franco Colapinto banner funny. He had replaced Logan Sargeant at Williams a couple of weeks prior." %}
-{% responsiveImage "./src/images/sudden-colapinto.jpg", "A series of three banners showing the Formula 1 drivers Nico Hülkenberg, Franco Colapinto, and Zhou Guanyu. Colapinto's banner has a notably different background colour than the others, and his pose is relatively unnatural, making it appear like they've photoshopped his head onto a different body." %}
+{% image "/images/sudden-colapinto.jpg", "A series of three banners showing the Formula 1 drivers Nico Hülkenberg, Franco Colapinto, and Zhou Guanyu. Colapinto's banner has a notably different background colour than the others, and his pose is relatively unnatural, making it appear like they've photoshopped his head onto a different body." %}
 {% endfigure %}
 
 It was an early start and I was so incredibly knackered by the time the podcasts came around, but they were still good fun. First up was [The Beef and Dairy Network Podcast](https://maximumfun.org/podcasts/beef-and-dairy-network/)—the number one podcast for those involved, or just interested, in the production of beef animals and dairy herds (in actuality, a surreal comedy show loosely based around being about cattle farming).

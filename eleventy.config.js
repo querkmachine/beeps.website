@@ -123,10 +123,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("link", shortcodeLink);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
   eleventyConfig.addNunjucksShortcode("redaction", shortcodeRedaction);
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "responsiveImage",
-    shortcodeResponsiveImage,
-  );
+  eleventyConfig.addNunjucksAsyncShortcode("image", shortcodeResponsiveImage);
   eleventyConfig.addPairedNunjucksShortcode(
     "socialEmbed",
     shortcodeSocialEmbed,

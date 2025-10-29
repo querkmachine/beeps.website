@@ -12,7 +12,7 @@ I had some pork shoulder steaks sitting around, which I originally intended to s
 
 Grilling it seemed to be the internet’s recommended cooking method, but I don’t have a barbecue (or indeed any outdoor space to put one) or one of those cool griddle pans, so I resorted to what I *do* have—a second-hand Lean Mean, Fat Reducing Grilling Machine.
 
-{% figure caption="My kitchen is very orange. Sorry about that." %} {% responsiveImage "./src/images/pork-shoulder.jpg", "Some saucy pork shoulders on a plate." %} {% endfigure %}
+{% figure caption="My kitchen is very orange. Sorry about that." %} {% image "/images/pork-shoulder.jpg", "Some saucy pork shoulders on a plate." %} {% endfigure %}
 
 ## What I gone and made
 

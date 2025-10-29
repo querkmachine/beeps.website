@@ -26,7 +26,7 @@ This isn't so much that I prefer Hubot Sans, but that I've been increasingly fru
 For the typographic normies reading this, not all italics (or 'obliques') are made equally. When a typeface has specifically designed italics, we call that 'true' italics. When those are missing, browsers and image editing software will try to create italics by skewing the default letterforms, creating 'faux' italics.
 
 {% figure caption="Serif typefaces, like Baskerville, usually show the differences much more clearly." %}
-{% responsiveImage "./src/images/true-faux-italics.png", "An image showing an elegant, almost calligraphic serif typeface on the top reading 'true italics', and a skewed upright serif typeface on the bottom reading 'faux italics'." %}
+{% image "/images/true-faux-italics.png", "An image showing an elegant, almost calligraphic serif typeface on the top reading 'true italics', and a skewed upright serif typeface on the bottom reading 'faux italics'." %}
 {% endfigure %}
 
 True italics are pretty much always preferable to faux italics, because true italics _are specifically designed for that purpose_. Faux italics can often look a little out of place, because they were never intended to exist.
@@ -56,7 +56,7 @@ This one's really just a sacrifice on the altar of performance and tidy code.
 The homepage has been lightly redesigned. I ended up removing two of the amazing Ash images by [TuxedoDragon](http://tuxedodragon.art) in the process, but I want to add them back somewhere soon!
 
 {% figure caption="Before and after comparison of the homepage." %}
-{% imageDiffer "./src/images/sep-2025-homepage-before.png", "The 'before' home page, featuring a large introductory paragraph with accompanying illustration; a horizontal list of blog posts with a gradient background and another illustration; an 'about me' section with a third illustration; a prominent 'trans rights' banner; and an expanded footer with webrings and buttons included.", "./src/images/sep-2025-homepage-after.png", "The 'after' homepage page. The introductory paragraph is smaller and displayed with a box behind it;the blog posts and 'about me' section now appear next to one another without illustrations; the 'trans rights' banner looks simpler; and the webrings and buttons have been moved from the footer to the page content." %}
+{% imageDiffer "/images/sep-2025-homepage-before.png", "The 'before' home page, featuring a large introductory paragraph with accompanying illustration; a horizontal list of blog posts with a gradient background and another illustration; an 'about me' section with a third illustration; a prominent 'trans rights' banner; and an expanded footer with webrings and buttons included.", "/images/sep-2025-homepage-after.png", "The 'after' homepage page. The introductory paragraph is smaller and displayed with a box behind it;the blog posts and 'about me' section now appear next to one another without illustrations; the 'trans rights' banner looks simpler; and the webrings and buttons have been moved from the footer to the page content." %}
 {% endfigure %}
 
 Blog posts and generic content pages have had their layouts reversed so that the primary content is on the left and supplemental information is on the right. These pages now use CSS grids for layout as well, somewhat deviating from [one of my old rules about how I build the site]({{ '/blog/2023-06-21-some-untamed-rambling-about-how-this-website-is-built/#no-models%2C-no-masters' | url }}), but y'know, times change, and also...

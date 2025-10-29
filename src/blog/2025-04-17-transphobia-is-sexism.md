@@ -73,7 +73,7 @@ Do you think that the embers of their vitriol die down just before they sleep, a
 Maybe that level of critical thinking is too much to ask from people who haven't realised they just fought for transgender men to be in their spaces instead.
 
 {% figure caption="Transmasc fashion models Arthur Macnair, Ethan DeNadai and Tai Hattingh. (Nicked from Lydia Garnett/Attitude.)" %}
-{% responsiveImage "./src/images/trans-men-masc-fashion-brand.jpg", "Black and white photo of three topless men. The leftmost model has a closely shaved head and a mustache, nose and ear piercings, and a number of tattoos on his face and torso. The central model has medium length curly hair and a beard, ear piercings and a couple of tattos. The right model has a shaved head, a goatee, a number of torso tattoos and some elaborate over-ear hoop piercings." %}
+{% image "/images/trans-men-masc-fashion-brand.jpg", "Black and white photo of three topless men. The leftmost model has a closely shaved head and a mustache, nose and ear piercings, and a number of tattoos on his face and torso. The central model has medium length curly hair and a beard, ear piercings and a couple of tattos. The right model has a shaved head, a goatee, a number of torso tattoos and some elaborate over-ear hoop piercings." %}
 {% endfigure %}
 
 Unless... it was never about 'biological women' in the first place?

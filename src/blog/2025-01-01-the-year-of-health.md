@@ -40,7 +40,7 @@ My blood pressure is very high, being variably very close to or within the hyper
 My cardiovascular health, in general, is pretty dire, with a resting heart rate typically between 85 and 95 BPM, reaching over 150 BPM when under strain.
 
 {% figure caption="Ha ha ha, oh no.", float="right" %}
-{% responsiveImage "./src/images/breathing-disturbances.jpg", "Screenshot from Apple's Health app, showing a graph of overnight breathing disturbances every single night for an entire month." %}
+{% image "/images/breathing-disturbances.jpg", "Screenshot from Apple's Health app, showing a graph of overnight breathing disturbances every single night for an entire month." %}
 {% endfigure %}
 
 I quite likely have undiagnosed asthma and sleep apnoea.

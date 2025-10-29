@@ -46,7 +46,7 @@ The workouts are more intense, involving a lot of rapidly changing speed and res
 The walking has been a mixed bag. I used to go on long walks during the Covid lockdowns, but have since fallen out of the practice. I quite like having the excuse to see new bits of Bristol again.
 
 {% figure caption="The area around the Severn Bridges makes for a surprisingly nice walk." %}
-{% responsiveImage "./src/images/price-of-wales-bridge-sunset.jpg", "A wide angle photograph of the Prince of Wales Bridge (formerly, the Second Severn Crossing) at around sunset. Most of the bridge's length is visible in silhouette above the Severn Estuary, with a rocky shore in the bottom-left sixth of the photo." %}
+{% image "/images/price-of-wales-bridge-sunset.jpg", "A wide angle photograph of the Prince of Wales Bridge (formerly, the Second Severn Crossing) at around sunset. Most of the bridge's length is visible in silhouette above the Severn Estuary, with a rocky shore in the bottom-left sixth of the photo." %}
 {% endfigure %}
 
 The downside has been _the pain_. Pretty much all of my resting days so far have been after walking days, because walking five to eight miles without stopping is something my feet and legs apparently disagree with.

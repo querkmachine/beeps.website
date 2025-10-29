@@ -20,7 +20,7 @@ I'm typing this from a hospital room.
 My body did a big oopsie.
 
 {% figure caption="Happy Mar10 Day to all with incorrect clocks who celebrate." %}
-{% responsiveImage "./src/images/hopspital.jpeg", "Photograph of my hospital room. In the foreground is an iPad showing an episode of Invincible and a laptop with this blog post open. In the background is a clock that shows the date March 10th for some reason." %}
+{% image "/images/hopspital.jpeg", "Photograph of my hospital room. In the foreground is an iPad showing an episode of Invincible and a laptop with this blog post open. In the background is a clock that shows the date March 10th for some reason." %}
 {% endfigure %}
 
 ## Tuesday

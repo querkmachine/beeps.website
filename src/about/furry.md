@@ -21,7 +21,7 @@ My main [fursona](https://en.wikipedia.org/wiki/Fursona) is named Ash. Ash is a 
 In August 2023 [I wrote about how Ash came to exist]({{ '/blog/2023-08-27-the-next-generation/' | url }}) and become my fursona.
 
 {% figure caption='Artwork by <a href="https://tuxedodragon.carrd.co/">TuxedoDragon</a>.' %}
-{% responsiveImage "./src/images/ash-by-tuxedodragon.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly." %}
+{% image "/images/ash-by-tuxedodragon.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair covering one eye. It's coloured a mix of black and white, except for neon green inner ears, paw pads and hair highlights, along with a gooey green tail tip. It's bounding forward on all four legs, yapping excitedly." %}
 {% endfigure %}
 
 ## My other fursona: Emy
@@ -31,7 +31,7 @@ My other fursona is a Honduran white bat named Emy who, [appropriately enough, i
 I've [written about Emy before]({{ '/blog/2022-04-10-a-robot-bat-on-the-internet/' | url }}) and why she was my face on the internet. She has since become secondary to Ash, but is still used in many places I frequent online (including on this website!)
 
 {% figure caption='Artwork by <a href="https://twitter.com/integration_art">Integration</a>.' %}
-{% responsiveImage "./src/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst it uses the other to repair the parts of the disassembled wing." %}
+{% image "/images/emy-by-integration.png", "A warmly lit room. The sun is setting outside of the window. Emy, a white, green and black, anthropomorphic robot bat, sits at a workbench. One wing has been detached and is laying in parts on the bench, whilst it uses the other to repair the parts of the disassembled wing." %}
 {% endfigure %}
 
 ## I am not my fursonas

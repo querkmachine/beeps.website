@@ -52,7 +52,7 @@ All of it's so good! And full of a bunch of little Easter eggs and references to
 I had some real paw-wringing moments over how big I could make them before having to worry about loading times.
 
 {% figure caption="Before and after comparison of the homepage images and layout." %}
-{% imageDiffer "./src/images/homepage-images-before.jpg", "The old homepage, with images featuring a minimalist robot bat waving and using a jetpack. The footer has a collage of various robot bats. Blog posts are presented in a vertical list.", "./src/images/homepage-images-after.jpg", "Afterwards, the top image is of an amphimoprpho wearing a black denim jacket sitting and shooting a peace sign. The blog posts are presented horizontally with an image of an amphimorpho focusing on a stickerbombed laptop. The footer has an amphimorpho popping out of it and smiling." %}
+{% imageDiffer "/images/homepage-images-before.jpg", "The old homepage, with images featuring a minimalist robot bat waving and using a jetpack. The footer has a collage of various robot bats. Blog posts are presented in a vertical list.", "/images/homepage-images-after.jpg", "Afterwards, the top image is of an amphimoprpho wearing a black denim jacket sitting and shooting a peace sign. The blog posts are presented horizontally with an image of an amphimorpho focusing on a stickerbombed laptop. The footer has an amphimorpho popping out of it and smiling." %}
 {% endfigure %}
 
 The blog post list and footer both got little redesigns at the same time, the latter complete with a little paw bouncing animation. It's totally unnecessary, but I love it.
@@ -102,7 +102,7 @@ I haven't quite squashed all of the accessibility bugs I found just yet, but I'm
 There was one bug reported to me this month by Tobi (hi!) that links become difficult to read when they're highlighted. Not a world-ending issue by any means, but I know some people like to highlight what they're currently reading to help them keep track of where they are on a page, so it's worth a look.
 
 {% figure caption="Well that's not ideal." %}
-{% responsiveImage "./src/images/link-highlight-bug.png", "A block of the homepage text highlighted, now appearing as white text against a pale green backing. Links appear in bright green, with the bottom half of each link obscured by a bright green box." %}
+{% image "/images/link-highlight-bug.png", "A block of the homepage text highlighted, now appearing as white text against a pale green backing. Links appear in bright green, with the bottom half of each link obscured by a bright green box." %}
 {% endfigure %}
 
 It turns out that my usually semi-sorta-transparent 'thicc' underlines are forcibly recoloured when text is highlighted. That should be an easy fix, right? It says right on [the MDN page for `::selection`](https://developer.mozilla.org/en-US/docs/Web/CSS/::selection) that you can recolour `text-decoration` (which includes underlines) when text is selected. Should be easy-peasy!

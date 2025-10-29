@@ -16,7 +16,7 @@ interactions:
 Today, the Government Digital Service (GDS to its friends) is launching the refreshed GOV.UK brand.
 
 {% figure caption="The old logo and colourway versus the new." %}
-{% responsiveImage "./src/images/govuk-brand-refresh.png", "Before and after image of the GOV.UK logo. The old is in black and white, with a minimalist Tudor crown icon and the site's name set in a sans-serif typeface. The new is white on a bright blue background, the dot of the wordmark raised up, enlargened, and changed into a cyan blue." %}
+{% image "/images/govuk-brand-refresh.png", "Before and after image of the GOV.UK logo. The old is in black and white, with a minimalist Tudor crown icon and the site's name set in a sans-serif typeface. The new is white on a bright blue background, the dot of the wordmark raised up, enlargened, and changed into a cyan blue." %}
 {% endfigure %}
 
 The likes of Reddit and tabloid news outlets picked up on this a few days ago, but this shouldn't really be news. In fact, [the initiative to update the brand was announced well over a year ago](https://www.civilserviceworld.com/professions/article/gov-uk-brand-refresh-gds-lnet-contract), including the reasons for it happening, and that the costs for it would be taken from GDS's normal operating budget.
@@ -34,7 +34,7 @@ Let's get underway, shall we?
 Hi, I'm beeps! This is my website.
 
 {% figure caption="I'm also a furry, which I feel obliged to point out because the last time I wrote about work, this was apparently a surprise to people.", float="right", classes="kim-!-padding-block-start-1" %}
-{% responsiveImage "./src/assets/images/noodle-home.webp", "A black, white, and green cat-rabbit-like creature with a long tail, long ears, and four arms. It looks at you, smiling toothily and throwing a peace sign. It's wearing a black denim jacket covered in various patches and a purple t-shirt." %}
+{% image "/assets/images/noodle-home.webp", "A black, white, and green cat-rabbit-like creature with a long tail, long ears, and four arms. It looks at you, smiling toothily and throwing a peace sign. It's wearing a black denim jacket covered in various patches and a purple t-shirt." %}
 {% endfigure %}
 
 I'm a frontend developer on the GOV.UK Design System team, where I've been involved in quite a few neat projects like [making components localisable](https://frontend.design-system.service.gov.uk/localise-govuk-frontend/), [building the Exit this Page component]({{ '/blog/2024-10-09-why-govuk-exit-this-page-doesnt-use-escape/' | url }}), and [launching King Charles III's Tudor Crown](https://www.bbc.co.uk/news/uk-68341982). I like to code, but I also have a bit of background in design.

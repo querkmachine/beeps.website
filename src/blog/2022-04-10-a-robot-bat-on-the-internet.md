@@ -74,4 +74,4 @@ She's my fursona, my brand, my beliefs, my interests, my history, and really—s
 
 Thanks for reading!
 
-{% responsiveImage "./src/images/wave.png", "My robot bat, waving you goodbye." %}
+{% image "/images/wave.png", "My robot bat, waving you goodbye." %}

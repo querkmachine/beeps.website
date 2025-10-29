@@ -37,7 +37,7 @@ The footer on this site has been a skinny little thing for quite some time. As o
 The final straw was finally deciding on a license for the things I write. I wanted this to go into the footer, so it provided ample excuse to rejig the layout and make everything a bit bigger. [Footer PR for the curious.](https://github.com/querkmachine/beeps.website/pull/45)
 
 {% figure caption="Before and after comparison of the footer on the homepage." %}
-{% imageDiffer "./src/images/footer-before.png", "The old footer, just a narrow strip of links in a horizontal list with a theme switcher floated to the far right.", "./src/images/footer-after.png", "Afterwards, the links have been categorised into two vertical columns on the left. The right column contains information about copyright and the theme switcher." %}
+{% imageDiffer "/images/footer-before.png", "The old footer, just a narrow strip of links in a horizontal list with a theme switcher floated to the far right.", "/images/footer-after.png", "Afterwards, the links have been categorised into two vertical columns on the left. The right column contains information about copyright and the theme switcher." %}
 {% endfigure %}
 
 This also gave me space to bring back the ["Keep circulating the HTML"](https://tvtropes.org/pmwiki/pmwiki.php/Main/KeepCirculatingTheTapes) message that previous versions of this site had.
@@ -51,7 +51,7 @@ In February, I ultimately decided that I wasn't keen on this. It just made the a
 I switched back to a linear layout but made the yearly separations more prominent—giving over the first third of the column to just the year heading, on wider screens—which makes it at least a little less daunting.
 
 {% figure caption="Before and after comparison of the blog archive page." %}
-{% imageDiffer "./src/images/blog-archive-before.png", "The 'before' archive page, featuring posts listed horizontally in a four-column grid, with each year separated by a heading and horizontal rule.", "./src/images/blog-archive-after.png", "The 'after' archive page, featuring posts listed vertically in a single column, with the year floated to its own column on the left." %}
+{% imageDiffer "/images/blog-archive-before.png", "The 'before' archive page, featuring posts listed horizontally in a four-column grid, with each year separated by a heading and horizontal rule.", "/images/blog-archive-after.png", "The 'after' archive page, featuring posts listed vertically in a single column, with the year floated to its own column on the left." %}
 {% endfigure %}
 
 The redesign also let me [dump some deadweight CSS](https://github.com/querkmachine/beeps.website/pull/44/files). Score.
@@ -61,7 +61,7 @@ I had similar complaints with [the about page]({{ '/blog/' | url }}), the landin
 Interestingly, doing this didn't require _any_ CSS changes, such is the power of my existing CSS objects and utilities.
 
 {% figure caption="Before and after comparison of the about page." %}
-{% imageDiffer "./src/images/about-before.png", "The 'before' about page, which is just a column of text running down the left of the screen.", "./src/images/about-after.png", "The 'after' about page, with each section as its own card in a three column grid. Each card has a clear icon (rather, emoji), link and short description." %}
+{% imageDiffer "/images/about-before.png", "The 'before' about page, which is just a column of text running down the left of the screen.", "/images/about-after.png", "The 'after' about page, with each section as its own card in a three column grid. Each card has a clear icon (rather, emoji), link and short description." %}
 {% endfigure %}
 
 Huh, wait... what's with the different colours in those screenshots?
@@ -73,7 +73,7 @@ For some strange reason, it had never struck me as weird that the site's light m
 For the sake of some semblance of brand consistency, I opted to change the dark mode to also use some variety of purple and green. This is just one part of some rather sweeping redesign work I plan on doing, but the rest won't happen until later this year.
 
 {% figure caption="Before and after comparison of the homepage." %}
-{% imageDiffer "./src/images/color-before.png", "Before: The homepage of this website with a dark grey background, orange spots and yellow heading and links.", "./src/images/color-after.png", "After: The homepage of this website with a dark blue/purple background, lighter purple spots, and bright green heading and links." %}
+{% imageDiffer "/images/color-before.png", "Before: The homepage of this website with a dark grey background, orange spots and yellow heading and links.", "/images/color-after.png", "After: The homepage of this website with a dark blue/purple background, lighter purple spots, and bright green heading and links." %}
 {% endfigure %}
 
 There's [a hearty dark mode pull request](https://github.com/querkmachine/beeps.website/pull/47) for the curious.
@@ -81,7 +81,7 @@ There's [a hearty dark mode pull request](https://github.com/querkmachine/beeps.
 Soon after this, I updated the code block styles to adopt the new dark mode palette too. This previously used a palette based on [Nova](https://nova.app)'s Neon theme, but I opted to change it up whilst I was concentrating on colours anyway.
 
 {% figure caption="Before and after comparison of a code block." %}
-{% imageDiffer "./src/images/code-before.png", "Old code blocks had a black background and higher saturated text with a glow effect on it.", "./src/images/code-after.png", "New code blocks use the same background colour as the dark theme and have less saturated colours. The glow effect has been removed, whilst a border now surrounds the code block." %}
+{% imageDiffer "/images/code-before.png", "Old code blocks had a black background and higher saturated text with a glow effect on it.", "/images/code-after.png", "New code blocks use the same background colour as the dark theme and have less saturated colours. The glow effect has been removed, whilst a border now surrounds the code block." %}
 {% endfigure %}
 
 It wasn't a dramatic change, but what's potentially interesting is how the new colours were created: all of them have a consistent saturation and lightness, but the hue is rotated through the use of `hsl()` and CSS custom properties.
@@ -126,7 +126,7 @@ I went in with a few goals:
 My goal wasn't to redesign the website, just to sift through the code with a fine comb and find out what could be tweaked or improved. This ended up being a huge chunk of work, so I'm gonna try and break it down a bit. But first, the visual diff:
 
 {% figure caption="Before and after comparison of the home page." %}
-{% imageDiffer "./src/images/utopia-before.png", "The homepage, complete with heading, paragraph of text, and a waving robot bat.", "./src/images/utopia-after.png", "The homepage again... but everything is a bit bigger." %}
+{% imageDiffer "/images/utopia-before.png", "The homepage, complete with heading, paragraph of text, and a waving robot bat.", "/images/utopia-after.png", "The homepage again... but everything is a bit bigger." %}
 {% endfigure %}
 
 The size difference? Uh, yeah, I'll get to that.
