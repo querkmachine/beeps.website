@@ -7,6 +7,11 @@ export default [
     motion: "high",
   },
   {
+    src: "/assets/images/88x31-a-static.png",
+    alt: "Dark blue and green static button with Ash the amphimorpho and 'beeps was here' text",
+    schemaAlt: "beeps was here",
+  },
+  {
     src: "/assets/images/88x31-n.gif",
     alt: "Dark blue and green animated button with Emy the robat",
     schemaAlt:
@@ -33,11 +38,6 @@ export default [
     alt: "Dark grey and orange static button with Emy the robat",
     schemaAlt: "beeps.website",
     colorScheme: "dark",
-  },
-  {
-    src: "/assets/images/88x31-a-static.png",
-    alt: "Dark blue and green static button with Ash the amphimorpho and 'beeps was here' text",
-    schemaAlt: "beeps was here",
   },
   {
     src: "/assets/images/88x31-r-static.png",

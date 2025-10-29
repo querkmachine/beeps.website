@@ -52,44 +52,6 @@ export default [
     src: "/assets/images/buttons/queer_coded.png",
     alt: "You're telling me a queer coded this?",
   },
-  { src: "/assets/images/buttons/love_blahaj.gif", alt: "Love BLÅHAJ" },
-  {
-    src: "/assets/images/buttons/gecs_now.gif",
-    alt: "Gecs NOW!",
-    url: "//www.youtube.com/watch?v=WZvfTyS1qb8",
-  },
-  {
-    src: "/assets/images/buttons/join_fediverse.gif",
-    alt: "Join the Fediverse",
-    url: "//social.beeps.gay/@beeps",
-  },
-  {
-    src: "/assets/images/buttons/mastodon.gif",
-    alt: "Join Mastodon",
-    url: "//social.beeps.gay/@beeps",
-  },
-  {
-    src: "/assets/images/buttons/i_was_on_cohost.gif",
-    alt: "I was on Cohost",
-    url: "/blog/2024-09-12-in-memory-of-cohost/",
-  },
-  { src: "/assets/images/buttons/no_paywalls.gif", alt: "No paywalls" },
-  {
-    src: "/assets/images/buttons/no_fucking_thanks.gif",
-    alt: "NFTs? No Fucking Thanks.",
-    url: "//www.web3isgoinggreat.com/",
-  },
-  {
-    src: "/assets/images/buttons/no_web3.gif",
-    alt: "Keep the web free. Say no to Web3.",
-    url: "//www.web3isgoinggreat.com/",
-    showOnHomepage: true,
-  },
-  {
-    src: "/assets/images/buttons/plush_rump.png",
-    alt: "Powered by plush rump.",
-    url: "/about/olive/",
-  },
   {
     src: "/assets/images/buttons/not_a_person.png",
     alt: "Not a person",
@@ -117,6 +79,39 @@ export default [
     src: "/assets/images/buttons/reject_humanity.png",
     alt: "Reject humanity",
     url: "/about/nonhuman/",
+    showOnHomepage: true,
+  },
+  {
+    src: "/assets/images/buttons/plush_rump.png",
+    alt: "Powered by plush rump.",
+    url: "/about/olive/",
+  },
+  { src: "/assets/images/buttons/love_blahaj.gif", alt: "Love BLÅHAJ" },
+  {
+    src: "/assets/images/buttons/join_fediverse.gif",
+    alt: "Join the Fediverse",
+    url: "//social.beeps.gay/@beeps",
+  },
+  {
+    src: "/assets/images/buttons/mastodon.gif",
+    alt: "Join Mastodon",
+    url: "//social.beeps.gay/@beeps",
+  },
+  {
+    src: "/assets/images/buttons/i_was_on_cohost.gif",
+    alt: "I was on Cohost",
+    url: "/blog/2024-09-12-in-memory-of-cohost/",
+  },
+  { src: "/assets/images/buttons/no_paywalls.gif", alt: "No paywalls" },
+  {
+    src: "/assets/images/buttons/no_fucking_thanks.gif",
+    alt: "NFTs? No Fucking Thanks.",
+    url: "//www.web3isgoinggreat.com/",
+  },
+  {
+    src: "/assets/images/buttons/no_web3.gif",
+    alt: "Keep the web free. Say no to Web3.",
+    url: "//www.web3isgoinggreat.com/",
     showOnHomepage: true,
   },
   { src: "/assets/images/buttons/spam.gif", alt: "Spam" },
@@ -216,8 +211,18 @@ export default [
     url: "/blog/2023-07-25-20-years/",
   },
   {
+    src: "/assets/images/buttons/gecs_now.gif",
+    alt: "Gecs NOW!",
+    url: "//www.youtube.com/watch?v=WZvfTyS1qb8",
+  },
+  {
     src: "/assets/images/buttons/cartoon_network.jpg",
     alt: "Cartoon Network fan",
+  },
+  {
+    src: "/assets/images/buttons/crouton.png",
+    alt: "Crouton.net",
+    url: "//crouton.net",
   },
   {
     src: "/assets/images/buttons/dr_pepper.gif",
