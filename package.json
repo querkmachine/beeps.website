@@ -32,7 +32,7 @@
     "glob": "^11.0.3",
     "highlight.js": "^11.11.1",
     "husky": "^9.1.7",
-    "jsdom": "^27.0.0",
+    "jsdom": "^27.1.0",
     "lint-staged": "^16.2.6",
     "luxon": "^3.7.2",
     "markdown-it": "^14.1.0",
