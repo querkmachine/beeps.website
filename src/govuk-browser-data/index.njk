@@ -228,7 +228,7 @@ cssComponents:
       <h3 class="kimHeading-s">What changes to data collection have taken place?</h3>
       <p class="kimBody">GOV.UK will occassionally make changes to their analytics code which can appear as significant changes in trends over a very short period of time. Browser and OS data is usually unaffected by these changes, but they sometimes are.</p>
       <ul class="kimList kimList-bulleted">
-        <li>In June 2023, many browsers that were forked from major were separated into their own groups. For example, Vivaldi started being recorded independently of Chrome, Pale Moon independently of Firefox, etc.</li>
+        <li>In June 2023, many browsers forked from other browsers were separated into their own groups. For example, Vivaldi started being recorded independently of Chrome, Pale Moon independently of Firefox, and so on.</li>
         <li>In August 2024, analytics code stopped being ran in browsers that don't fully support JavaScript modules. This includes many older browser versions, notably versions of Safari 10 and below and all versions of Internet Explorer. <a href="https://caniuse.com/es6-module" class="kimLink">Browser support for JS modules can be seen on Can I Use.</a></li>
       </ul>
       
@@ -248,8 +248,8 @@ cssComponents:
       <p class="kimBody">Android runtime is a "managed runtime" (whatever that is) that some Android apps use. I have no idea why it shows up in browser analytics data. Perhaps these are browsers on embedded systems or particularly weirdly implemented webviews? I don't know.</p>
       <p class="kimBody">Thanks Google.</p>
       
-      <h3 class="kimHeading-s">What does 'not set' mean?</h3>
+      <h3 class="kimHeading-s">Why are some browsers not recorded? What does 'not set' mean?</h3>
       <p class="kimBody">The name of the browser, operating system, or both were omitted from the user agent information that was sent to GOV.UK.</p>
-      <p class="kimBody">Removing this information is a common practice amongst privacy-oriented browsers and browser extensions.</p>
+      <p class="kimBody">Removing this information is a common practice amongst privacy-oriented browsers and browser extensions, and prevents them from being identified in analytics data.</p>
     </div>
 {% endblock %}

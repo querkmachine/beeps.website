@@ -379,4 +379,16 @@ export default {
     "android-runtime": 21,
     nintendo: 8,
   },
+  "2025-10": {
+    chrome: 2032,
+    safari: 398,
+    edge: 2,
+    firefox: 3,
+    opera: 115,
+    "android-webview": 94,
+    silk: 1230,
+    yandex: 1,
+    "android-runtime": 35,
+    nintendo: 6,
+  },
 };
