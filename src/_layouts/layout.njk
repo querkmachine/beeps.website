@@ -133,24 +133,33 @@
         </div>
         {% endblock %}
         
-        <ul class="kimList kimFooter_links" aria-label="Legal and utility links">
-          <li>
-            <a class="kimLink" href="#top">
-              {% include "../assets/icons/arrow-n.svg" %}
-              Back to top
-            </a>
-          </li>
-          {%- for link in site.legalLinks %}
-            <li>
-              <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                {%- if link.icon %}
-                  {% include "../assets/icons/" + link.icon + ".svg" %}
+        <div class="kimGrid">
+          {%- for section in site.footerLinks %}
+            <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+              <h2 class="kimHeading-xs">{{ section.heading }}</h2>
+              <ul class="kimList kimBody-s">
+                {%- if loop.first %}
+                  <li>
+                    <a class="kimLink" href="#top">
+                      {% include "../assets/icons/arrow-n.svg" %}
+                      Back to top
+                    </a>
+                  </li>
                 {%- endif %}
-                {{- link.html | safe if link.html else link.text -}}
-              </a>
-            </li>
+                {%- for link in section.links %}
+                  <li>
+                    <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                      {%- if link.icon %}
+                        {% include "../assets/icons/" + link.icon + ".svg" %}
+                      {%- endif %}
+                      {{- link.html | safe if link.html else link.text -}}
+                    </a>
+                  </li>
+                {%- endfor %}
+              </ul>
+            </div>
           {%- endfor %}
-        </ul>
+        </div>
       </div>
       
       {% block footerDecor %}

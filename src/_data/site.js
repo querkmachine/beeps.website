@@ -83,21 +83,31 @@ export default function () {
         ],
       },
     ],
-    legalLinks: [
+    footerLinks: [
       {
-        href: "/feed.xml",
-        text: "RSS feed",
-        icon: "rss",
-        attributes: {
-          rel: "alternate",
-          type: "application/atom+xml",
-        },
+        heading: "More beeping",
+        links: [
+          {
+            href: "/feed.xml",
+            text: "RSS feed",
+            icon: "rss",
+            attributes: {
+              rel: "alternate",
+              type: "application/atom+xml",
+            },
+          },
+          { href: "/brand/", text: "beeps' brand" },
+          { href: "/colophon/", text: "Colophon" },
+          { href: "/customise/", text: "Customise CSS" },
+        ],
       },
-      { href: "/brand/", text: "beeps' brand" },
-      { href: "/colophon/", text: "Colophon" },
-      { href: "/accessibility/", text: "Accessibility statement" },
-      { href: "/privacy/", text: "Cookies and privacy" },
-      { href: "/customise/", text: "Customise CSS" },
+      {
+        heading: "Legal gubbins",
+        links: [
+          { href: "/accessibility/", text: "Accessibility statement" },
+          { href: "/privacy/", text: "Cookies and privacy" },
+        ],
+      },
     ],
   };
 }
