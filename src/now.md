@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: beeps NOW!
-updated: 2025-09-19
+updated: 2025-11-16
 metadata:
   description: A basic overview of what I'm up to at the moment.
 ---
@@ -14,15 +14,15 @@ A "now" page is [a conceptual accompaniment to an about page](https://nownownow.
 
 🇸🇪 I'm learning to speak Swedish! <span lang="sv">Jag pratar en lite svenska.</span>
 
-🏥 Unfortunately, I'm dealing with a lot of health-related issues at the moment. Since the start of the year I've been diagnosed with asthma, hypertension, and sleep apnea. It's been a lot.
+🏥 Unfortunately, I've been dealing with a lot of health-related issues this year. Since the start of the year I've been diagnosed with asthma, hypertension, and obstructive sleep apnea. It's been a lot.
 
 🎶 Lately, I saw Daði Freyr and Montaigne (Iceland and Australia's Eurovision entrants in 2020 and 2021) live, so [I've been listening](https://www.last.fm/user/robomilk/library) to them a whole lot!
 
-📺 [I'm watching](https://trakt.tv/users/batbeeps/history) _Jet Lag: The Game_, _Taskmaster_, _Only Connect_, the new _Formula 1_ season, and various Dropout shows. As per usual, I'm rewatching _Star Trek: Enterprise_ along with [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/).
+📺 [I'm watching](https://trakt.tv/users/batbeeps/history) _Pluribus_, _The Boys_, _Only Connect_, the new _Formula 1_ season, and various Dropout shows. As per usual, I'm rewatching _Star Trek: Enterprise_ along with [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/).
 
-📚 I'm currently (slowly) reading _The Anthropocene Reviewed: Essays on a Human-Centered Planet_ by John Green. I also randomly found this comic named _White House Robot Romance_, which is a weird but pretty neat concept.
+📚 I'm currently (slowly) reading _All Systems Red_ by Martha Wells and _The Anthropocene Reviewed: Essays on a Human-Centered Planet_ by John Green.
 
-🎮 I've mostly been playing [Factorio](https://factorio.com/), having fallen down that well **again**.
+🎮 I've mostly been playing [Factorio](https://factorio.com/), having fallen down that well **again**. Also _Cassette Beasts_, which is an awesome game. 
 
 ## Recently
 
