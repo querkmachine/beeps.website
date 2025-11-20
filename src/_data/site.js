@@ -104,6 +104,7 @@ export default function () {
       {
         heading: "Legal gubbins",
         links: [
+          { href: "/ai-policy/", text: "AI policy" },
           { href: "/accessibility/", text: "Accessibility statement" },
           { href: "/privacy/", text: "Cookies and privacy" },
         ],

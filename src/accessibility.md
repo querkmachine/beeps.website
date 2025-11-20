@@ -4,8 +4,6 @@ title: Accessibility statement
 updated: 2025-09-24
 metadata:
   description: Accessibility compliance, known issues, and how to report issues.
-cssComponents:
-  - code
 ---
 
 This accessibility statement applies to the website hosted at **beeps.website**. It does not include subdomains of that domain, my other websites, or my presence on third-party websites or services.
