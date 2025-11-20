@@ -2,5 +2,16 @@
   @media (min-width: 52rem) {
     position: sticky;
     inset-block-start: var(--space-5);
+    scroll-target-group: auto;
+  }
+}
+
+.kimToc_link {
+  transition-property: font-weight;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+
+  &:target-current {
+    font-weight: 600;
   }
 }

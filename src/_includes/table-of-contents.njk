@@ -1,6 +1,6 @@
 {%- macro _tocItem(item) %}
   <li>
-    <a class="kimLink-plain" href="#{{ item.id }}">{{ item.html | safe }}</a>
+    <a class="kimLink-plain kimToc_link" href="#{{ item.id }}">{{ item.html | safe }}</a>
     {%- if item.children | length > 0 %}
       <ul class="kimList kim-!-margin-inline-start-4 kim-!-margin-block-start-1 kim-!-margin-block-end-0">
         {%- for ci in item.children %}

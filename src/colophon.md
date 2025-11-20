@@ -31,7 +31,7 @@ Certain aspects of the code, in particular the CSS architectural style, is cribb
 
 [Prettier](https://prettier.io/) is used to keep the code beautiful.
 
-Hat tips to the following folks for contributing something that currently exists in the site's code: [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/) and [Zach Leatherman](https://www.zachleat.com/web/automatic-opengraph/).
+Hat tips to the following folks for contributing something that currently exists in the site's code: [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/), [Una Kravets](https://una.im/scroll-target-group) and [Zach Leatherman](https://www.zachleat.com/web/automatic-opengraph/).
 
 ## Design
 
