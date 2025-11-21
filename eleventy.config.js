@@ -98,6 +98,9 @@ export default function (eleventyConfig) {
   // Copy manual .well-known directory entries
   eleventyConfig.addPassthroughCopy(paths.src + "/.well-known/**/*");
 
+  // Additionally copy favicon.ico to root, as some systems will look for it there
+  eleventyConfig.addPassthroughCopy({ "**/favicon.ico": "/" });
+
   // Markdown configuration
   eleventyConfig.setLibrary("md", markdownConfig);
 
