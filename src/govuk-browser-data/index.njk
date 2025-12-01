@@ -205,7 +205,7 @@ cssComponents:
         <li>Browsers that automatically restrict or block analytics tracking will, by their nature, be underrepresented in data or not appear at all.</li>
         <li>Although GOV.UK draws many international visitors, it’s a UK-centric website and the majority of sessions (about 90%) originate from within the UK. The data should not be considered representative of browser usage in other countries.</li>
         <li>Month-by-month differences can be affected by public holidays and seasonal trends, and may not represent wider trends. For example, there are notably fewer sessions from Windows devices in December and the summer months, when more people are off work.</li>
-        <li>This data is provided 'as is' without support or guarantees of accuracy. Percentages and monthly change values may not add up as expected due to rounding.</li>
+        <li>This data is provided 'as is' without support or guarantees of accuracy. Percentages and monthly change values may not add up as expected due to rounding or removal of 'junk' data in some contexts.</li>
       </ol>
     </div>
   </div>
@@ -251,5 +251,6 @@ cssComponents:
       <h3 class="kimHeading-s">Why are some browsers not recorded? What does 'not set' mean?</h3>
       <p class="kimBody">The name of the browser, operating system, or both were omitted from the user agent information that was sent to GOV.UK.</p>
       <p class="kimBody">Removing this information is a common practice amongst privacy-oriented browsers and browser extensions, and prevents them from being identified in analytics data.</p>
+      <p class="kimBody">There's a non-zero chance that this is where all the AI data scrapers are, as well.</p>
     </div>
 {% endblock %}
