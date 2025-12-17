@@ -1,5 +1,5 @@
 ---
-layout: generic.njk
+layout: generic-wide.njk
 title: Svenska
 metadata:
   description: Words, in Swedish.
@@ -31,21 +31,35 @@ These are considered their own letters in Swedish, not a/o with diacritics added
 
 They come after the the 26 English alphabet characters in terms of sorting order.
 
-### 'en' vs. 'ett'
+### Noun gender
 
-'en' is used for common gender nouns. 'ett' is used for neutral gender (neuter) nouns. There is no hard or fast rule for what nouns use which gender—you just need to memorise them.
+All nouns are either common gender (utrum) or neuter gender (neuterum). There are no hard or fast rules for what nouns use which gender—you just need to memorise them.
 
-This is necessary for definite articles, where the gender affects the suffix of the word.
+'en' is used for common gender nouns, 'ett' is used for neuter nouns. Knowing these are necessary for definite articles, where the gender affects the suffix of the word.
 
 e.g. en hund (a dog) &rarr; hunden (the dog)
 e.g. ett bi (a bee) &rarr; biet (the bee)
 
-It is also used for adjective agreement.
+They're also used for adjective agreement.
 
 e.g. en bil (a car) &rarr; en stor bil (a big car)
 e.g. ett hus (a house) &rarr; ett stort hus (a big house)
 
 And both together: e.g. stort huset (the big house)
+
+As a general guideline, common gender is used for:
+
+- most living things — like people, plants and animals
+- days, months, seasons
+- tools and utensils
+
+Neuter gender is used for:
+
+- diminutives of living things — children, babies
+- geographical names
+- abstract concepts
+- materials
+- nouns ending in -um or -eri
 
 ### Plurals
 
@@ -171,7 +185,7 @@ e.g. 12 eng. sten (12 English stone)
 | sorry               | förlåt                  | pronounced like 'forlorn' |
 | excuse me           | ursäkta                 | U R sakta                 |
 | please, thank you   | tack                    |                           |
-| thank you so much   | tack så mycket          |                           |
+| thank you so much   | tack så mycket          | lit. 'thank so very'      |
 | you're welcome      | varsågod                | formal?                   |
 | [statement], right? | [statement], eller hur? | lit. 'or what?'           |
 | cool!               | häftigt!                |                           |
@@ -179,7 +193,7 @@ e.g. 12 eng. sten (12 English stone)
 | help                | hjälp                   |                           |
 | on the way          | på vag                  | lit. 'on move'            |
 | what is your name?  | vad heter du?           | lit. 'what called you?'   |
-| my name is...       | jag heter...            | lit. 'I am called...'     |
+| my name is...       | jag heter...            | lit. 'I called...'        |
 | there is/are...     | det finns...            | lit. 'there exists...'    |
 
 ### Questions
@@ -209,38 +223,56 @@ e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live
 
 ### Connecting words
 
-| English          | Svenska     | Note             |
-| :--------------- | :---------- | :--------------- |
-| very             | väldigt     | val digs it      |
-| maybe            | kanske      | 'can she?' maybe |
-| but              | men         |                  |
-| with             | med         |                  |
-| without          | utan        |                  |
-| as, so           | så          |                  |
-| on, to           | på          |                  |
-| to               | till        |                  |
-| towards, against | mot         |                  |
-| from             | från        |                  |
-| by, at, on       | vid         |                  |
-| at               | hos         |                  |
-| of, in           | av          |                  |
-| for, about       | om          |                  |
-| that             | att         |                  |
-| but              | utan        |                  |
-| because          | eftersom    |                  |
-| through, across  | genom       |                  |
-| between          | mellan      |                  |
-| according to     | enligt      | like 'enlighten' |
-| before           | före, innan |                  |
-| after            | efter       |                  |
-| in front of      | framför     |                  |
-| behind           | bakom       |                  |
-| outside          | utanför     |                  |
-| ahead, before    | framåt      |                  |
-| over, above      | över        |                  |
-| beside           | bredvid     |                  |
-| for              | åt          |                  |
-| if               | om          |                  |
+| English          | Svenska       | Note             |
+| :--------------- | :------------ | :--------------- |
+| very             | väldigt       | val digs it      |
+| maybe            | kanske        | 'can she?' maybe |
+| but              | men           |                  |
+| with             | med           |                  |
+| without          | utan          |                  |
+| as, so           | så            |                  |
+| on, to           | på            |                  |
+| to               | till          |                  |
+| towards, against | mot           |                  |
+| from             | från          |                  |
+| by, at, on       | vid           |                  |
+| at               | hos           |                  |
+| of, in           | av            |                  |
+| for, about       | om            |                  |
+| that             | att           |                  |
+| but              | utan          |                  |
+| because, since   | eftersom      |                  |
+| according to     | enligt        | like 'enlighten' |
+| for              | åt            |                  |
+| while            | stund         |                  |
+| until            | tills, förrän |                  |
+
+### Relative locations
+
+| English         | Svenska     | Note |
+| :-------------- | :---------- | :--- |
+| through, across | genom       |      |
+| between         | mellan      |      |
+| before          | före, innan |      |
+| after           | efter       |      |
+| in front of     | framför     |      |
+| behind          | bakom       |      |
+| outside         | utanför     |      |
+| ahead, before   | framåt      |      |
+| over, above     | över        |      |
+| under           | under       |      |
+| beside          | bredvid     |      |
+| by              | av          |      |
+| into            | till        |      |
+| towards         | mot         |      |
+
+### Seasonal terms
+
+| English         | Svenska                 | Note                                    |
+| :-------------- | :---------------------- | :-------------------------------------- |
+| Merry Christmas | god jul                 | lit. 'good christmas'                   |
+| Happy new year  | gott nytt ar            | lit. 'good new year'                    |
+| Happy birthday  | grattis på födelsedagen | lit. 'congratulations on the birth day' |
 
 ## Pronouns
 
@@ -260,6 +292,12 @@ e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live
 | them          | dem      |                                      |
 | it            | den, det | 'den' for gendered, 'det' for neuter |
 
+#### 'du' vs. 'ni'
+
+Historically, 'du' is informal whereas 'ni' is formal. In the modern day, however, 'du' is used almost universally.
+
+'Ni' remains as an optional way of showing deference and respect, and is more common in rural or traditional settings.
+
 ### Posessive pronouns
 
 | English          | Svenska (en) | Svenska (ett) | Svenska (pl.) |
@@ -275,12 +313,6 @@ e.g. du bor i centrum (you live in downtown) &rarr; bor du i centrum? (lit. live
 | their (plural)   | deras        | —             | —             |
 | its              | dess         | —             | —             |
 
-### du vs. ni
-
-Historically, 'du' is informal whereas 'ni' is formal. In the modern day, however, 'du' is used almost universally.
-
-'Ni' remains as an optional way of showing deference and respect, and is more common in rural or traditional settings.
-
 ## Verbs
 
 {% callout %}Many, many verbs end in 'ar' or 'er' sounds!{% endcallout %}
@@ -295,21 +327,22 @@ e.g. du äter bra (you are eating good) &rarr; att äter bra (to eat good)
 
 ### Abstract verbs
 
-| English             | Svenska (present) | Note                     |
-| :------------------ | :---------------- | :----------------------- |
-| to exist, to be     | finns             |                          |
-| to let, to allow    | låt               |                          |
-| to think            | tycker            |                          |
-| to like             | tycker om         | lit. 'think about'       |
-| to love             | älskar            | I love Alaska-r          |
-| to have             | ha                |                          |
-| to want             | vill ha           | I vill have it           |
-| to need             | behöver           | like 'behoove'           |
-| to have (to do)     | får               |                          |
-| to choose           | väljer            | Choose Jean Valjean      |
-| to understand       | förstår           | understanding four stars |
-| to think, to intend | tänker            | think tank-er            |
-| to support          | stöttar           | support otter            |
+| English              | Svenska (present) | Note                     |
+| :------------------- | :---------------- | :----------------------- |
+| to exist, to be      | finns             |                          |
+| to let, to allow     | låt               |                          |
+| to think             | tycker            |                          |
+| to like              | tycker om         | lit. 'think about'       |
+| to love              | älskar            | I love Alaska-r          |
+| to have              | ha                |                          |
+| to want              | vill ha           | I vill have it           |
+| to need              | behöver           | like 'behoove'           |
+| to be required to do | får               |                          |
+| to choose            | väljer            | Choose Jean Valjean      |
+| to understand        | förstår           | understanding four stars |
+| to think, to intend  | tänker            | think tank-er            |
+| to support           | stöttar           | support otter            |
+| to be born           | född (?)          |                          |
 
 ### Movement
 
@@ -386,25 +419,49 @@ Adjectives can be reversed by adding 'inte' before them.
 
 e.g. att skriva svenska är lätt (to write Swedish is easy) &rarr; att skriva svenska är inte lätt (to write Swedish is not easy)
 
-| English     | Svenska    | Note                                         |
-| :---------- | :--------- | :------------------------------------------- |
-| good        | bra        | what's good, brah?                           |
-| new         | ny, nytt   |                                              |
-| easy        | lätt       | latte's are easy                             |
-| small       | liten      | little kitten :3                             |
-| sweet, cute | söt        |                                              |
-| scary       | skrämmande | scary things make you 'scram, man'           |
-| big         | stor       | a big store                                  |
-| tall        | lång       | like 'long'                                  |
-| fat         | fet, tjock |                                              |
-| thin        | tunn       | does not weigh a tunn                        |
-| hungry      | hungrig    |                                              |
-| scary       | skrämmande | scary things make you want to 'scram and...' |
-| quiet       | tyst       | quietly 'tyst tyst'                          |
-| cheap       | billig     |                                              |
-| expensive   | dyr        | 'dear'                                       |
-| old         | gammal     | gammons are old                              |
-| young       | ung        |                                              |
+| English         | Svenska (en) | Svenska (ett) | Svenska (pl.) | Note                                         |
+| :-------------- | :----------- | :------------ | :------------ | :------------------------------------------- |
+| good            | bra          |               |               | what's good, brah?                           |
+| new             | ny           | nytt          |               |                                              |
+| easy            | lätt         |               |               | latte's are easy                             |
+| sweet, cute     | söt          |               |               |                                              |
+| scary           | skrämmande   |               |               | scary things make you 'scram, man'           |
+| big             | stor         |               |               | a big store                                  |
+| little, small   | liten, små   | litet         | lilla         | little kitten :3                             |
+| tall            | lång         | långt         |               | like 'long'                                  |
+| fat             | fet, tjock   |               |               |                                              |
+| thin            | tunn         |               |               | does not weigh a tunn                        |
+| scary           | skrämmande   |               |               | scary things make you want to 'scram and...' |
+| quiet           | tyst         |               |               | quietly 'tyst tyst'                          |
+| cheap           | billig       |               |               |                                              |
+| expensive       | dyr          |               |               | 'dear'                                       |
+| old             | gammal       | gammalt       | gamla         | gammons are old                              |
+| young           | ung          |               |               |                                              |
+| open            | öppen        |               | öppna         |                                              |
+| dirty           | smutsig      | smutsigt      | smutsiga      |                                              |
+| clean           | ren          | rent          | rena          |                                              |
+| popular         | populär      |               |               |                                              |
+| possible        | möjlig       |               |               |                                              |
+| nice, beautiful | fin          |               |               |                                              |
+| the same        | samma        |               |               |                                              |
+| next            | nästa        |               |               |                                              |
+| important       | viktig       |               |               |                                              |
+| official        | officiell    |               |               |                                              |
+| necessary       | nödvändig    |               |               |                                              |
+| perfect         | perfekt      |               |               |                                              |
+| whole           | hel          |               |               |                                              |
+| alike           | lik          |               |               |                                              |
+
+### Feelings
+
+| English | Svenska (en)  | Svenska (ett) | Svenska (pl.) | Note |
+| :------ | :------------ | :------------ | :------------ | :--- |
+| happy   | glad, lycklig |               |               |      |
+| sad     | ledsen        |               |               |      |
+| angry   | arg           |               |               | ARG! |
+| hungry  | hungrig       |               |               |      |
+| thirsty | törstig       |               |               |      |
+| tired   | trött         |               |               |      |
 
 ### Directions
 
@@ -472,169 +529,292 @@ e.g. mannens hund (the man's dog)
 
 ### Abstract concepts
 
-| English          | Svenska (en) | Svenska (ett) | Svenska (pl.) | Note |
-| :--------------- | :----------- | :------------ | :------------ | :--- |
-| question, asking | frågar       |               | frågor        |      |
-| answer           | svaren       | svaret        |               |      |
+| English          | Gender | Svenska (en) | Svenska (ett) | Svenska (pl.) | Note |
+| :--------------- | :----- | :----------- | :------------ | :------------ | :--- |
+| question, asking |        | frågar       |               | frågor        |      |
+| answer           |        | svaren       | svaret        |               |      |
 
 ### People
 
-| English  | Svenska     | Svenska (definitive) | Note                  |
-| :------- | :---------- | :------------------- | :-------------------- |
-| friend   | (en) vän    | vännen               | a van full of friends |
-| woman    | (en) kvinna | kvinnan              |                       |
-| women    | kvinnor     | kvinnorna            |                       |
-| man      | (en) man    | mannen               |                       |
-| men      | män         | männen               |                       |
-| girl     | (en) flicka | flickan              |                       |
-| girls    | flickor     | flickorna            |                       |
-| boy      | (en) pojke  | pojken               |                       |
-| boys     | pojke       | pojkarna             |                       |
-| child    | (ett) barn  | barnet               |                       |
-| children | barn        | barnen               |                       |
+| English | Gender | Svenska | Note                            |
+| :------ | :----- | :------ | :------------------------------ |
+| friend  | Common | vän     | a van full of friends           |
+| woman   | Common | kvinna  |                                 |
+| women   | Common | kvinnor | definitive is 'kvinnorna'       |
+| man     | Common | man     |                                 |
+| men     | Common | män     |                                 |
+| girl    | Common | flicka  |                                 |
+| girls   | Common | flickor |                                 |
+| boy     | Common | pojke   |                                 |
+| boys    | Common | pojke   | definitive plural is 'pojkarna' |
+
+#### Immediate family members
+
+| English           | Gender | Svenska    | Note                           |
+| :---------------- | :----- | :--------- | :----------------------------- |
+| parent            | Common | förälder   | lit. 'fore elder'              |
+| mother            | Common | mor, mamma | 'mor' formal, 'mamma' informal |
+| father            | Common | far, pappa | 'mor' formal, 'mamma' informal |
+| sibling, siblings | Neuter | syskon     |                                |
+| brother           | Common | bror       |                                |
+| brothers          | Common | bröder     |                                |
+| sister            | Common | syster     |                                |
+| sisters           | Common | systrar    |                                |
+| twin              | Common | tvilling   |                                |
+| child             | Neuter | barn       |                                |
+| children          | Neuter | barn       | definitive is 'barnen'         |
+| son               | Common | son        |                                |
+| sons              | Common | söner      |                                |
+| daughter          | Common | dotter     |                                |
+| daughters         | Common | döttrar    |                                |
+
+#### Extended family members
+
+| English                | Gender | Svenska  | Note                                                          |
+| :--------------------- | :----- | :------- | :------------------------------------------------------------ |
+| (paternal) grandmother | Common | farmor   | lit. 'father mother'                                          |
+| (maternal) grandmother | Common | mormor   | lit. 'mother mother'                                          |
+| (paternal) grandfather | Common | farfar   | lit. 'father father'                                          |
+| (maternal) grandfather | Common | morfar   | lit. 'mother father'                                          |
+| grandchild             | Neuter | barnbarn | lit. 'child child'                                            |
+| grandchildren          | Neuter | barnbarn | definitive is 'barnbarnen'                                    |
+| (paternal) aunt        | Common | faster   | combination of 'far' and 'syster'                             |
+| (maternal) aunt        | Common | moster   | combination of 'mor' and 'syster', also generic term for aunt |
+| (paternal) uncle       | Common | farbror  | lit. 'father brother', also generic term for uncle            |
+| (maternal) uncle       | Common | morbror  | lit. 'mother brother'                                         |
+| cousin                 | Common | kusin    |                                                               |
+| cousins                | Common | kusiner  |                                                               |
 
 ### Places
 
-| English                | Svenska                  | Svenska (definitive) | Note                              |
-| :--------------------- | :----------------------- | :------------------- | :-------------------------------- |
-| apartment              | (en) lägenhet            | lägenheten           | lager hut?                        |
-| the centre, downtown   | centrum                  |                      |                                   |
-| bus stop               | (en) busshållplats       | busshållplatsen      | 'bus hall plat(form)s'            |
-| airport                | (en) flygplats           | flygplatsen          | 'fly g plat(form)s'               |
-| bakery                 | (ett) bageri             | bageriet             |                                   |
-| market                 | (en) marknad             | marknaden            |                                   |
-| grocery store          | mataffär                 |                      | 'mat affair' lit. 'food business' |
-| university             | universitet              |                      |                                   |
-| church                 | kyrka                    |                      |                                   |
-| castle                 | borg                     |                      |                                   |
-| -ö                     | island                   |                      |                                   |
-| -å                     | river                    |                      |                                   |
-| Gothenberg             | Göteborg                 |                      | 🐐🤖                              |
-| Sweden, Swedish        | Sverige, Svenska         |                      | pronounced like 'so very uh'      |
-| Great Britain, British | Storbritannien, Brittisk |                      | Big Britannia                     |
-| Norway, Norwegian      | Norge, Norska            |                      |                                   |
+| English                | Gender  | Svenska                  | Note                              |
+| :--------------------- | :------ | :----------------------- | :-------------------------------- |
+| apartment              | Common  | lägenhet                 | lager hut?                        |
+| the centre, downtown   |         | centrum                  |                                   |
+| bus stop               | Common  | busshållplats            | 'bus hall plat(form)s'            |
+| airport                | Common  | flygplats                | 'fly g plat(form)s'               |
+| bakery                 | Neuter  | bageri                   |                                   |
+| market                 | Common  | marknad                  |                                   |
+| grocery store          | Common? | mataffär                 | 'mat affair' lit. 'food business' |
+| university             | Neuter  | universitet              |                                   |
+| church                 | Common  | kyrka                    |                                   |
+| castle                 | Common? | borg                     |                                   |
+| -ö                     | Common? | island                   |                                   |
+| -å                     | Common? | river                    |                                   |
+| Gothenberg             |         | Göteborg                 | 🐐🤖                              |
+| Sweden, Swedish        |         | Sverige, Svenska         | pronounced like 'so very uh'      |
+| Great Britain, British |         | Storbritannien, Brittisk | Big Britannia                     |
+| Norway, Norwegian      |         | Norge, Norska            |                                   |
 
 ### Food & drink
 
-| English       | Svenska                  | Note                                          |
-| :------------ | :----------------------- | :-------------------------------------------- |
-| food          | mat, maten               |                                               |
-| meal          | måltid, måltiden         |                                               |
-| breakfast     | frukost, frukosten       | like 'fruit toast'                            |
-| dinner        | middag, middagen         | dinner is **not** at midday                   |
-| soup          | soppa, soppan            | sopping wet soup                              |
-| salad         | sallad, salladen         | two Ls                                        |
-| apple         | äpple, äpplen            |                                               |
-| orange        | apelsin, apelsinen       | derived from 'apple' + 'Sino' = Chinese apple |
-| strawberry    | jordgubbe, jordgubben    |
-| Danish pastry | wienerbröd, wienerbrödet | lit. 'Vienna bread'                           |
-| sandwich      | smörgås, smörgåsen       |                                               |
-| chicken       | kyckling, kycklingen     | chickens be kicking?                          |
-| pork          | fläsket, fläskkött       | lit. 'flesh', 'flesh meat'                    |
-| beef          | nötkött, nötköttet       | lit. 'cattle meat'                            |
-| ice cream     | glass, glassen           | not 'glas', which means glass                 |
-| oil           | olja, oljan              | not to be confused with 'öl' for beer         |
+| English       | Gender | Svenska    | Note                                                |
+| :------------ | :----- | :--------- | :-------------------------------------------------- |
+| food          | Common | mat        |                                                     |
+| meal          | Common | måltid     |                                                     |
+| breakfast     | Common | frukost    | like 'fruit toast'                                  |
+| lunch         | Common | lunch      |                                                     |
+| dinner        | Common | middag     | dinner is **not** at midday                         |
+| soup          | Common | soppa      | sopping wet soup                                    |
+| salad         | Common | sallad     | two Ls                                              |
+| apple         | Common | äpple      |                                                     |
+| orange        | Common | apelsin    | derived from 'apple' + 'Sino' = Chinese apple       |
+| strawberry    | Common | jordgubbe  |                                                     |
+| Danish pastry | Common | wienerbröd | lit. 'Vienna bread'                                 |
+| sandwich      | Common | smörgås    |                                                     |
+| chicken       | Common | kyckling   | chickens be kicking?                                |
+| pork          | Neuter | fläskkött  | definitive is 'fläsket', lit. 'flesh', 'flesh meat' |
+| beef          | Neuter | nötkött    | lit. 'cattle meat'                                  |
+| ice cream     | Common | glass      | not 'glas', which means glass                       |
+| oil           | Common | olja       | not to be confused with 'öl' for beer               |
 
 ### Objects
 
-| English      | Svenska                | Note                                 |
-| :----------- | :--------------------- | :----------------------------------- |
-| desk         | skrivbord, skrivbordet | scribe board, lit '(to) write table' |
-| refrigerator | kylskåp, kylskåpet     | Kyle's cap                           |
-| bed          | säng, sängen           | sang to sleep                        |
-| bag          | väska, väskan          | you gotta vask for a bag             |
-| money        | pengar, pengarna       | always plural                        |
-| ticket       | biljett, biljetten     | need a ticket to get on a jett       |
-| book         | bok, boken             |                                      |
-| letter       | brev, brevet           | a brief letter                       |
-| newspaper    | tidning, tidningen     |                                      |
-| fork         | gaffel, gaffeln        | eat a waffel with a fork             |
-| knife        | kniv, kniven           |                                      |
-| spoon        | sked, skeden           | a food sled                          |
-| plate        | tallrik, tallriken     | Tall Rick                            |
-| cup          | kopp, koppen           |                                      |
+| English      | Gender | Svenska   | Note                                    |
+| :----------- | :----- | :-------- | :-------------------------------------- |
+| table        | Neuter | bord      |                                         |
+| desk         | Neuter | skrivbord | scribe board, lit '(to) write table'    |
+| refrigerator | Neuter | kylskåp   | Kyle's cap                              |
+| bed          | Common | säng      | sang to sleep                           |
+| bag          | Common | väska     | you gotta vask for a bag                |
+| money        |        | pengar    | definitive is 'pengarna', always plural |
+| ticket       | Common | biljett   | need a ticket to get on a jett          |
+| book         | Common | bok       |                                         |
+| letter       | Neuter | brev      | a brief letter                          |
+| newspaper    | Common | tidning   |                                         |
+| fork         | Common | gaffel    | eat a waffel with a fork                |
+| knife        | Common | kniv      |                                         |
+| spoon        | Common | sked      | a food sled                             |
+| plate        | Common | tallrik   | Tall Rick                               |
+| cup          | Common | kopp      |                                         |
+| calendar     | Common | kalender  | 'der' not 'dar'                         |
 
 ### Jobs
 
-| English       | Svenska                         | Note                                  |
-| :------------ | :------------------------------ | :------------------------------------ |
-| web developer | webbutvecklare, webbutvecklaren | web but veck lare                     |
-| engineer      | ingenjör, ingenjören            | in gen jor                            |
-| doctor        | läkare, läkaren                 | doctors are care                      |
-| teacher       | lärare, läraren                 | teachers are rare                     |
-| actor         | skådespelare, skådespelaren     | ska despel are - actors despel?       |
-| farmer        | bonde, bonden                   | James Bond retires to become a farmer |
-| boss          | chef, chefen                    | Yes chef                              |
-| cook, chef    | kock, kocken                    |                                       |
+| English         | Gender | Svenska        | Note                                   |
+| :-------------- | :----- | :------------- | :------------------------------------- |
+| job             | Neuter | jobb           |                                        |
+| profession      | Neuter | yrke           | pronounced kinda like 'work'           |
+| career          | Common | karriär        |                                        |
+| worker, workers | Common | arbetare       | ar-beta-re                             |
+| professional    | Common | professionell  |                                        |
+| staff           | Common | personal       |                                        |
+| actor           | Common | skådespelare   | ska despel are - actors despel?        |
+| actress         | Common | skådespelarska | ska despel ar ska - ends how it begins |
+| author, writer  | Common | författare     |                                        |
+| architect       | Common | arkitekt       |                                        |
+| artist          | Common | artist         |                                        |
+| boss            | Common | chef           | Yes chef                               |
+| cook, chef      | Common | kock           |                                        |
+| doctor          | Common | läkare         | doctors are care                       |
+| engineer        | Common | ingenjör       | in gen jor                             |
+| farmer          | Common | bonde          | James Bond retires to become a farmer  |
+| firefighter     | Common | brandman       | lit. 'fire man'                        |
+| guard           | Common | vakt           |                                        |
+| interpreter     | Common | tolk           |                                        |
+| judge           | Common | domare         | judges have legal _domain_             |
+| model           | Common | modell         |                                        |
+| police officer  | Common | polis          |                                        |
+| priest          | Common | präst          |                                        |
+| secretary       | Common | sekreterare    | sek-ret-e-rare                         |
+| soldier         | Common | soldat         |                                        |
+| teacher         | Common | lärare         | teachers are rare                      |
+| web developer   | Common | webbutvecklare | web but veck lare                      |
 
 ### Activities
 
-| English       | Svenska    | Note          |
-| :------------ | :--------- | :------------ |
-| football      | fotboll    | one O, two Ls |
-| chess         | schack     | school hack   |
-| holiday       | semester   |               |
-| travel        | resa       |               |
-| business trip | affärsresa | A fars resa   |
+| English       | Gender | Svenska    | Note          |
+| :------------ | :----- | :--------- | :------------ |
+| football      | Common | fotboll    | one O, two Ls |
+| chess         | Neuter | schack     | school hack   |
+| holiday       | Common | semester   |               |
+| travel        | Common | resa       |               |
+| business trip | Common | affärsresa | A fars resa   |
 
 ### Animals
 
-Most animals use 'en', but the word 'animal' itself uses 'ett'.
+| English    | Gender | Svenska                  | Note                                    |
+| :--------- | :----- | :----------------------- | :-------------------------------------- |
+| animal     | Neuter | djur, djuret             | deer is animal                          |
+| pet        | Neuter | husdjur, husdjuret       | lit. 'house animal'                     |
+| ant        | Common | myra, myran              |                                         |
+| bat        | Common | fladdermus, fladdermusen | like 'flapper mouse'                    |
+| bear       | Common | björn, björnen           |                                         |
+| bee        | Neuter | bi, biet                 |                                         |
+| crab       | Common | krabb, krabban           |                                         |
+| (roe) deer | Common | rådjur, rådjuren         | ro-djur                                 |
+| duck       | Common | anka, ankan              |                                         |
+| dragon     | Common | drake, draken            |                                         |
+| elephant   | Common | elefant, elefanten       | ele fan ten                             |
+| hippo      | Common | flodhäst, flodhästen     | like 'flood hast'                       |
+| horse      | Common | häst, hästen             | horse goes fast = hast                  |
+| lion       | Common | lejon, lejonen           | spelled like 'legion', said like 'leon' |
+| moose      | Common | älg, älgen               | like elk, pronounced like 'elg'         |
+| mouse      | Common | mus, musen               |                                         |
+| penguin    | Common | pingvin, pingvinen       |                                         |
+| reindeer   | Common | ren, renen               | ren deer                                |
+| sheep      | Common | får, fåren               | the sheep are far away                  |
+| spider     | Common | spindel, spindeln        | spiders spin webs                       |
+| squirrel   | Common | ekorr, ekorren           | squirrels like acorns ('ekorren')       |
+| turtle     | Common | sköldpadda, sköldpaddan  | 'scold paddle'?                         |
 
-| English    | Svenska                  | Note                                    |
-| :--------- | :----------------------- | :-------------------------------------- |
-| animal     | djur, djuret             | deer is animal                          |
-| pet        | husdjur, husdjuret       | lit. 'house animal'                     |
-| ant        | myra, myran              |                                         |
-| bat        | fladdermus, fladdermusen | like 'flapper mouse'                    |
-| bear       | björn, björnen           |                                         |
-| bee        | bi, biet                 | ends in 'et' because it's _ett_ bi      |
-| crab       | krabb, krabban           |                                         |
-| (roe) deer | rådjur, rådjuren         | ro-djur                                 |
-| duck       | anka, ankan              |                                         |
-| dragon     | drake, draken            |                                         |
-| elephant   | elefant, elefanten       | ele fan ten                             |
-| hippo      | flodhäst, flodhästen     | like 'flood hast'                       |
-| horse      | häst, hästen             | horse goes fast = hast                  |
-| lion       | lejon, lejonen           | spelled like 'legion', said like 'leon' |
-| moose      | älg, älgen               | like elk, pronounced like 'elg'         |
-| mouse      | mus, musen               |                                         |
-| penguin    | pingvin, pingvinen       |                                         |
-| reindeer   | ren, renen               | ren deer                                |
-| sheep      | får, fåren               | the sheep are far away                  |
-| spider     | spindel, spindeln        | spiders spin webs                       |
-| squirrel   | ekorr, ekorren           | squirrels like acorns ('ekorren')       |
-| turtle     | sköldpadda, sköldpaddan  | 'scold paddle'?                         |
+### Days and times
 
-### Times
+| English  | Gender | Svenska    | Note |
+| :------- | :----- | :--------- | :--- |
+| date     | Neuter | datum      |      |
+| age      | Common | ålder      |      |
+| birthday | Common | födelsedag |      |
 
-| English               | Svenska          | Note              |
-| :-------------------- | :--------------- | :---------------- |
-| night                 | natt, natten     |                   |
-| morning               | morgon, morgonen |                   |
-| tomorrow              | i morgon         | lit. 'in morning' |
-| whenever, at any time | när som helst    |                   |
+#### Years
+
+| English   | Gender | Svenska    | Note                |
+| :-------- | :----- | :--------- | :------------------ |
+| year      | Neuter | år         |                     |
+| decade    | Neuter | årtionde   | lit. 'year tenth'   |
+| century   | Neuter | århundrade | lit. 'year hundred' |
+| quarter   | Common | kvart      |                     |
+| season    | Common | årstid     |                     |
+| spring    | Common | vår        |                     |
+| summer    | Common | sommar     |                     |
+| midsummer | Common | midsommar  |                     |
+| autumn    | Common | höst       |                     |
+| winter    | Common | vinter     |                     |
+
+#### Months
+
+| English   | Gender | Svenska   | Note |
+| :-------- | :----- | :-------- | :--- |
+| month     | Common | månad     |      |
+| January   | Common | januari   |      |
+| February  | Common | februari  |      |
+| March     | Common | mars      |      |
+| April     | Common | april     |      |
+| May       | Common | maj       |      |
+| June      | Common | juni      |      |
+| July      | Common | juli      |      |
+| August    | Common | augusti   |      |
+| September | Common | september |      |
+| October   | Common | oktober   |      |
+| November  | Common | november  |      |
+| December  | Common | december  |      |
+
+#### Weeks
+
+| English   | Gender | Svenska     | Note                |
+| :-------- | :----- | :---------- | :------------------ |
+| week      | Common | vecka       |                     |
+| weekday   | Common | vardag      | lit. 'every day'    |
+| weekend   | Common | helg        |                     |
+| day       | Common | dag         |                     |
+| today     | Common | i dag       | lit. 'in day'       |
+| morning   | Common | morgon      |                     |
+| midday    | Common | middag      |                     |
+| afternoon | Common | eftermiddag | lit. 'after midday' |
+| evening   | Common | kväll       |                     |
+| night     | Common | natt        |                     |
+| tomorrow  |        | i morgon    | lit. 'in morning'   |
+| Monday    | Common | mondag      |                     |
+| Tuesday   | Common | tidsdag     |                     |
+| Wednesday | Common | onsdag      |                     |
+| Thursday  | Common | törsdag     |                     |
+| Friday    | Common | fredag      |                     |
+| Saturday  | Common | lördag      |                     |
+| Sunday    | Common | söndag      |                     |
+
+#### Time
+
+| English               | Gender | Svenska       | Note                      |
+| :-------------------- | :----- | :------------ | :------------------------ |
+| time                  | Common | tid           |                           |
+| hour                  | Common | timme         |                           |
+| minute                | Common | minut         |                           |
+| second                | Common | sekund        |                           |
+| period                | Common | period        |                           |
+| moment                | Neuter | ögonblick     |                           |
+| generation            | Common | generation    |                           |
+| whenever, at any time |        | när som helst | lit. 'when as preferable' |
 
 ### Clothing and accessories
 
-| English       | Svenska              | Note                                           |
-| :------------ | :------------------- | :--------------------------------------------- |
-| clothes       | kläder, klädern      |                                                |
-| belt          | skärp, skarpen       |                                                |
-| button        | knapp, knappen       |                                                |
-| coat          | rock, rocken         | don't forget your coat when rock climbing      |
-| dress         | klänning, klänningen | dress like the klan??                          |
-| glove         | handske, handsken    | hand-ske                                       |
-| jacket        | jacka, jackan        |                                                |
-| pocket        | ficka, fickan        | fika is a pocket of time                       |
-| scarf         | halsduk, halsduken   | a mallard duck looks like it's wearing a scarf |
-| shirt         | skjorta, skjortan    | sk-jort-a                                      |
-| skirt         | kjol, kjolen         | weirdly pronounced like 'shawl'                |
-| sock          | strumpa, strumpan    |                                                |
-| suit, costume | kostym, kostymen     | like 'costume'                                 |
-| sweater       | tröja, tröjan        | Trojan sweater                                 |
-| tie           | slips, slipsen       | slips on a tie                                 |
-| trousers      | byxor, byxorna       |                                                |
+| English       | Gender | Svenska  | Note                                           |
+| :------------ | :----- | :------- | :--------------------------------------------- |
+| clothes       | Common | kläder   |                                                |
+| belt          | Common | skärp    |                                                |
+| button        | Common | knapp    |                                                |
+| coat          | Common | rock     | don't forget your coat when rock climbing      |
+| dress         | Common | klänning | dress like the klan??                          |
+| glove         | Common | handske  | hand-ske                                       |
+| jacket        | Common | jacka    |                                                |
+| pocket        | Common | ficka    | fika is a pocket of time                       |
+| scarf         | Common | halsduk  | a mallard duck looks like it's wearing a scarf |
+| shirt         | Common | skjorta  | sk-jort-a                                      |
+| skirt         | Common | kjol     | weirdly pronounced like 'shawl'                |
+| sock          | Common | strumpa  |                                                |
+| suit, costume | Common | kostym   | like 'costume'                                 |
+| sweater       | Common | tröja    | Trojan sweater                                 |
+| tie           | Common | slips    | slips on a tie                                 |
+| trousers      | Common | byxor    | definitive is 'byxorna'                        |
 
 ## Other notes
 
@@ -650,3 +830,11 @@ Lots of words are variations on man/men so I wanted to pull them out for ease of
 | the men       | männen  |
 | but           | men     |
 | while         | medan   |
+
+### Tongue twisters
+
+| Svenska                    | English                              |
+| :------------------------- | :----------------------------------- |
+| fåglarna flyger framåt     | the birds are flying ahead           |
+| min mormor är min mors mor | my grandmother is my mother's mother |
+| en ren ren                 | a clean reindeer                     |
