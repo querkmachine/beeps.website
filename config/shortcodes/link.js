@@ -2,7 +2,7 @@ import EleventyFetch from "@11ty/eleventy-fetch";
 import { JSDOM } from "jsdom";
 import sanitizeHtml from "sanitize-html";
 
-const getLinkDetails = async function (url) {
+const getLinkDetails = async function (url, args) {
   const pageHtml = await EleventyFetch(url, { type: "text", duration: "*" });
 
   const dom = new JSDOM(pageHtml);
@@ -41,7 +41,12 @@ const getLinkDetails = async function (url) {
   };
 };
 
-const linkShortcode = async function (url) {
+const linkShortcode = async function (url, args) {
+  const defaultArgs = {
+    includeDescription: true,
+  };
+  const settings = { ...defaultArgs, ...args };
+
   const details = await getLinkDetails(url);
   const metadata = [details.author, details.site_name].filter(
     (val) => val !== null,
@@ -52,7 +57,7 @@ const linkShortcode = async function (url) {
     returnHtml += `<img class="kimLinkEmbed_image" alt="" src="${details.image}">`;
   }
   returnHtml += `<a class="kimLink kimLinkEmbed_title" href="${url}">${details.title}</a>`;
-  if (details.description) {
+  if (details.description && settings.includeDescription) {
     returnHtml += `<p class="kimLinkEmbed_description">${sanitizeHtml(details.description)}</p>`;
   }
   if (metadata) {
