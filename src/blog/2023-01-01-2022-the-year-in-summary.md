@@ -12,6 +12,10 @@ interactions:
   id: "109613979213650471"
 ---
 
+<div class="kim-!-margin-block-end-5" role="presentation" aria-label="A series of horizontal stripes with a cutout in the top left corner reading '2022' and another in the bottom right corner reading 'the year in summary'.">
+{% include "../images/headings/2023-01-01-2022-the-year-in-summary.svg" %}
+</div>
+
 2022 was a year! I can't really say more than that without potentially breaching [my oath of impartiality](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code#political-impartiality), but a lot of stuff sure happened in the UK and around the world. Some of it was good, some of it was bad, and I don't disclose publicly which is which.
 
 Anyway, here's what happened in _my_ year.

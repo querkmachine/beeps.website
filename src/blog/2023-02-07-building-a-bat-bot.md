@@ -16,6 +16,10 @@ cssComponents:
   - social-embed
 ---
 
+<div class="kim-!-margin-block-end-5" role="presentation" aria-label="An illustration of a robot bat broken down into various parts, scatted across a rectangular surface. The text 'Building a bat bot' is written on the facing side of the surface.">
+{% include "../images/headings/2023-02-07-building-a-bat-bot.svg" %}
+</div>
+
 I recently left Twitter. The reasons why probably need little explanation for a contemporaneous reader in the know.
 
 {% character variant="angry" %}
