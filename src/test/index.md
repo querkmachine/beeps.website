@@ -13,7 +13,6 @@ cssComponents:
   - image-differ
   - youtube
   - social-embed
-  - link-embed
 ---
 
 A page for testing markdown styles, plugins and custom shortcodes.
@@ -320,13 +319,6 @@ OK that's about it for now. Bye!
 {% imageDiffer "/images/color-before.png", "Before: The homepage of this website with a dark grey background, orange spots and yellow heading and links.", "/images/color-after.png", "After: The homepage of this website with a dark blue/purple background, lighter purple spots, and bright green heading and links." %}
 
 ## Embeds
-
-### Link cards
-
-{% link "https://placeponi.es" %}
-{% link "https://beeps.website" %}
-{% link "https://www.bbc.co.uk/news/articles/c2dxlwz219ko" %}
-{% link "https://www.theverge.com/2024/12/5/24314147/openai-reasoning-model-o1-strawberry-chatgpt-pro-new-tier" %}
 
 ### YouTube
 
