@@ -4,7 +4,7 @@
 
 {% block main %}
   <div class="kimWrapper">
-    <article class="pageGeneric">
+    <article class="pageGeneric {%- if wideLayout %} pageGeneric-wide{% endif %}">
       <header class="pageGeneric_header">
       
         {%- if date or updated %}
@@ -56,8 +56,7 @@
   </div>
 {% endblock %}
 
-{% block css %}
-  {% css %}
+{% css %}
   .pageGeneric {
     display: grid;
     column-gap: var(--grid-gutter);
@@ -71,6 +70,10 @@
       grid-template-columns: 2fr 1fr;
       grid-template-rows: auto 1fr;
       grid-template-areas: "header ." "body toc";
+    }
+
+    .pageGeneric-wide {
+      grid-template-areas: "header ." "toc ." "body body";
     }
   }
 
@@ -101,5 +104,4 @@
   .pageTitle {
     margin-block-end: 0;
   }
-  {% endcss %}
-{% endblock %}
+{% endcss %}

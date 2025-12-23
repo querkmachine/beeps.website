@@ -1,6 +1,7 @@
 ---
 layout: generic-wide.njk
 title: Svenska
+updated: 2025-12-17
 metadata:
   description: Words, in Swedish.
   noRobots: true
