@@ -170,6 +170,13 @@
     border-inline-start: var(--border-regular) solid currentcolor;
     padding-inline-start: var(--bottom-spacing);
   }
+
+  @media print {
+    // Hide visible URLs when printed
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .kimMasthead_menu-link {

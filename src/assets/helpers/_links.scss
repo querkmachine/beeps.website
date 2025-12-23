@@ -26,8 +26,6 @@
   }
 
   @media print {
-    color: var(--c-black);
-
     &::after {
       content: " (" attr(href) ")";
       display: inline;

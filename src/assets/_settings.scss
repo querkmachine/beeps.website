@@ -97,3 +97,24 @@
   --color-focus-text: #000;
   --color-focus-background: #fc0;
 }
+
+@media print {
+  :root {
+    --c-muted-green: #588157;
+    --c-muted-purple: #786999;
+
+    --color-canvas: #fff;
+    --color-surface: #eee;
+
+    --color-furniture: var(--c-muted-purple);
+    --color-accent: var(--c-muted-green);
+
+    --color-text: #000;
+    --color-text-accent: var(--c-muted-green);
+    --color-text-subtle: #000;
+
+    --color-link: var(--c-muted-green);
+    --color-link-visited: var(--c-muted-green);
+    --color-link-hover: var(--c-muted-green);
+  }
+}

@@ -84,7 +84,7 @@
           </a>
         {%- endif %}
         <a class="kimMasthead_menu-link" href="{{ '/navigation/' | url }}">Sitemap</a>
-        <button class="kimMasthead_menu-toggle" type="button" aria-controls="navigation" hidden>
+        <button class="kimMasthead_menu-toggle kim-!-noPrint" type="button" aria-controls="navigation" hidden>
           {% include "../assets/icons/menu.svg" %}
           Menu
         </button>
@@ -123,7 +123,7 @@
   </main>
   
   {% block footer %}
-    <footer class="kimFooter">
+    <footer class="kimFooter kim-!-noPrint">
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
         

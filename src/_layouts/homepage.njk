@@ -68,11 +68,11 @@
                 {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
                 {{ ring.name }}
               </a><br>
-              <a class="kimLink-plain kimWebring_link kimWebring_link-next" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
+              <a class="kimLink-plain kimWebring_link kimWebring_link-next kim-!-noPrint" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
                 {% include "../assets/icons/arrow-e.svg" %}
                 Next
               </a><br>
-              <a class="kimLink-plain kimWebring_link kimWebring_link-prev" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
+              <a class="kimLink-plain kimWebring_link kimWebring_link-prev kim-!-noPrint" href="{{ ring.previousUrl }}" aria-label="Previous site in the {{ ring.name }}">
                 {% include "../assets/icons/arrow-w.svg" %}
                 Previous
               </a>

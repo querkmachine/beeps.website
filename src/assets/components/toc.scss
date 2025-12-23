@@ -14,4 +14,11 @@
   &:target-current {
     font-weight: 600;
   }
+
+  @media print {
+    // Hide visible URLs when printed
+    &::after {
+      display: none;
+    }
+  }
 }
