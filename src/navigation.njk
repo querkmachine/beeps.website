@@ -32,16 +32,19 @@ metadata:
             </ul>
           {%- endfor %}
           
-          <h2 class="kimHeading-m">Legal and utility links</h2>
-          <ul class="kimList">
-            {%- for link in site.legalLinks %}
-              <li>
-                <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                  {{- link.html | safe if link.html else link.text -}}
-                </a>
-              </li>
-            {%- endfor%}
-          </ul>
+          <h2 class="kimHeading-m">Utility and legal links</h2>
+          {%- for group in site.footerLinks %}
+            <h3 class="kimHeading-s">{{ group.heading }}</h3>
+            <ul class="kimList">
+              {%- for link in group.links %}
+                <li>
+                  <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                    {{- link.html | safe if link.html else link.text -}}
+                  </a>
+                </li>
+              {%- endfor%}
+            </ul>
+          {%- endfor %}
         </div>
       </div>
     </div>
