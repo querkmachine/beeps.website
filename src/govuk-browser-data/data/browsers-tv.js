@@ -403,4 +403,16 @@ export default {
     duckduckgo: 1,
     nintendo: 5,
   },
+  "2025-12": {
+    chrome: 665,
+    safari: 414,
+    edge: 1,
+    firefox: 9,
+    "android-webview": 89,
+    opera: 89,
+    silk: 859,
+    "not-set": 1,
+    "android-runtime": 14,
+    nintendo: 3,
+  },
 };
