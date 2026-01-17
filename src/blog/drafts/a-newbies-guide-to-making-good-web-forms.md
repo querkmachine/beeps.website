@@ -3,6 +3,7 @@ title: A newbie's guide to designing and building good web forms
 tags: [web development, design]
 cssComponents:
   - character
+  - code
 ---
 
 Forms have existed since 1677, when the outlaw Jonathan Formsby decided to extort money by leaving blank spaces on a piece of parchment and coercing the landed gentry into writing illicit personal details into the spaces at blunderbuss-point.
@@ -21,11 +22,11 @@ I'm calling these guidelines in my head, because there's inevitably going to be 
 I'm also going to shout out [Adam Silver](https://adamsilver.io/) here—and his book _[Form Design Patterns](https://formdesignpatterns.com/)_—who I consider to basically be the foremost authority on this kind of thing.
 {% endcharacter %}
 
-## Keep it stupid simple
+## Keep it simple
 
-The absolute first principle of form design is to know that **nobody wants to be filling out a form**. A form is a barrier that's preventing them from reaching the information they're trying to get or the outcome they're trying to achieve.
+The absolute first principle of form design is to remember is that **nobody wants to be filling out a form**. A form is a barrier that's preventing people from reaching the information they're trying to get or the outcome they're trying to achieve.
 
-It may be a necessary evil, but it's still an evil. Forms are the ideal place to trim as much cruft as you possibly can.
+It may be a necessary evil, but it's still an evil. Forms are therefore the ideal place to trim as much cruft as you possibly can.
 
 If you don't need a piece of information, don't ask for it. If you don't need it right now, ask for it later in the user journey or as part of a supplementary flow seperate from collecting the things you need to know _immediately_.
 
@@ -59,11 +60,37 @@ Questions, asked specifically enough like the name example above, can only have 
 
 You could try and design around the problem, such as adding hint text specifying "DD/MM/YYYY" format or similar, but that doesn't mean that someone has answered incorrectly just because they wrote it as "22 9 1991" instead.
 
-As much as possible, be flexible with what formats users can use. This lowers the barriers
+As much as possible, be flexible with what formats users can use. If an answer is "good enough" to be unambiguously understood, then accept it. Doing so reduces the likeliness that a user encounters an unnecessary validation error, lowering those barriers I mentioned earlier.
 
 ## Use the right input type for the answer
 
+HTML comes with a variety of input elements and types. It also comes with a bunch of [autocompletion options for autofill functionality](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete), and you can further utilise visual cues to hint about what kind of answer a user should give.
+
+Asking for an email address? Use `<input type="email">`.
+
+Asking for user's first name? Use `<input type="text" autocomplete="given-name">`.
+
+Asking for a payment card's security code? Use `<input type="text" inputmode="numeric" autocomplete="cc-csc">` and style the input fit 3 or 4 characters.
+
+Using these things together allows credential managers to fill things out automatically, mobile devices to display context-specific keyboards, and users to intuit what kind of information they need to provide based on the amount of space provided. Unsurprisingly, that makes filling out forms faster!
+
 ## Avoid validating values when the user is still providing them
+
+A lot of forms frameworks will provide the ability to validate what a user is typing into a field, either whilst typing or after they move on to a different field.
+
+Generally, you shouldn't do this.
+
+When users interact with forms they typically do so in two phases: providing answers and reviewing answers. They will first fill out every field, then check every field, and then submit the form.
+
+Performing validation in the middle of the 'providing' phase forces users into the 'reviewing' phase, distracting them from the task they were otherwise focused on.
+
+This validation can also be visually distracting—as new information is appearing on the screen, potentially shifting the locations of other content—and audibly distracting—as validation messaging interrupts users of screen reader software (assuming it informs these users of an error in the first place).
+
+Instead, perform validation at the point the user submits the form. This keeps them in that 'reviewing' phase until they're ready to move on to the next step of the journey.
+
+{% character character="ash", variant="thinking" %}
+You should generally be performing form validation on the server anyway, that's just good security practice. If you really want to do it on the client, you may want to utilise HTML's validation attributes and enhance them with a library like [Vanilla Validation](https://www.npmjs.com/package/@querkmachine/vanilla-validation) (plug, plug, shameless plug).
+{% endcharacter %}
 
 ## Required/optional
 
