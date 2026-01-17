@@ -102,6 +102,10 @@ export default [
     alt: "I was on Cohost",
     url: "/blog/2024-09-12-in-memory-of-cohost/",
   },
+  {
+    src: "/assets/images/buttons/no_planet_b.gif",
+    alt: "There is no Planet B.",
+  },
   { src: "/assets/images/buttons/no_paywalls.gif", alt: "No paywalls" },
   {
     src: "/assets/images/buttons/no_fucking_thanks.gif",
@@ -114,7 +118,6 @@ export default [
     url: "//www.web3isgoinggreat.com/",
     showOnHomepage: true,
   },
-  { src: "/assets/images/buttons/spam.gif", alt: "Spam" },
   {
     src: "/assets/images/buttons/best_viewed_800x600.gif",
     alt: "Best viewed in 800x600, 16 bit colour",
@@ -211,6 +214,20 @@ export default [
     url: "/blog/2023-07-25-20-years/",
   },
   {
+    src: "/assets/images/buttons/crouton.png",
+    alt: "Crouton.net",
+    url: "//crouton.net",
+  },
+  { src: "/assets/images/buttons/spam.gif", alt: "Spam" },
+  {
+    src: "/assets/images/buttons/pepsi.gif",
+    alt: "This site best viewed with Pepsi",
+  },
+  {
+    src: "/assets/images/buttons/dr_pepper.gif",
+    alt: "Powered by Dr Pepper",
+  },
+  {
     src: "/assets/images/buttons/gecs_now.gif",
     alt: "Gecs NOW!",
     url: "//www.youtube.com/watch?v=WZvfTyS1qb8",
@@ -218,15 +235,6 @@ export default [
   {
     src: "/assets/images/buttons/cartoon_network.jpg",
     alt: "Cartoon Network fan",
-  },
-  {
-    src: "/assets/images/buttons/crouton.png",
-    alt: "Crouton.net",
-    url: "//crouton.net",
-  },
-  {
-    src: "/assets/images/buttons/dr_pepper.gif",
-    alt: "Powered by Dr Pepper",
   },
   { src: "/assets/images/buttons/eevee.gif", alt: "I ❤️ Eevee" },
   {
