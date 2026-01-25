@@ -121,6 +121,14 @@
   <main id="content">
     {% block main %}{% endblock %}
   </main>
+
+  {% block footerDecor %}
+    <div class="kimNoodleBowl" role="presentation">
+      <div class="kimNoodleBowl_body"></div>
+      <div class="kimNoodleBowl_pawb"></div>
+      <div class="kimNoodleBowl_pawb"></div>
+    </div>
+  {% endblock %}
   
   {% block footer %}
     <footer class="kimFooter kim-!-noPrint">
@@ -161,12 +169,6 @@
           {%- endfor %}
         </div>
       </div>
-      
-      {% block footerDecor %}
-        <div class="kimNoodleBowl" role="presentation">
-          <div class="kimNoodleBowl_inner"></div>
-        </div>
-      {% endblock %}
     </footer>
   {% endblock %}
   

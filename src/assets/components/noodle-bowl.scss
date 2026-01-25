@@ -7,86 +7,87 @@
 
   position: relative;
   block-size: var(--height);
+  margin-block-start: calc(0px - var(--space-8));
   pointer-events: none;
-  overflow: hidden;
 }
 
-.kimNoodleBowl_inner {
+.kimNoodleBowl_body {
   block-size: var(--height);
   position: relative;
   background-image: url("/assets/images/noodle-footer.webp");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto 100%;
+  z-index: -1;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: kimBodyRise;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation-timeline: view();
+    animation-range-start: 20%;
+    animation-range-end: 50%;
+    animation-fill-mode: backwards;
+  }
 
   @media (min-resolution: 2x) {
     background-image: url("/assets/images/noodle-footer@2x.webp");
   }
+}
 
-  &::before,
-  &::after {
-    --pawb-min-height: calc(var(--min-height) * var(--pawb-height-multiplier));
-    --pawb-ideal-height: calc(
-      var(--fluid-height) * var(--pawb-height-multiplier)
-    );
-    --pawb-max-height: calc(var(--max-height) * var(--pawb-height-multiplier));
-    --pawb-height: clamp(
-      var(--pawb-min-height),
-      var(--pawb-ideal-height),
-      var(--pawb-max-height)
-    );
-    --pawb-width: calc(var(--pawb-height) * 1.57);
-    --pawb-offset: var(--pawb-width);
+.kimNoodleBowl_pawb {
+  --pawb-min-height: calc(var(--min-height) * var(--pawb-height-multiplier));
+  --pawb-ideal-height: calc(
+    var(--fluid-height) * var(--pawb-height-multiplier)
+  );
+  --pawb-max-height: calc(var(--max-height) * var(--pawb-height-multiplier));
+  --pawb-height: clamp(
+    var(--pawb-min-height),
+    var(--pawb-ideal-height),
+    var(--pawb-max-height)
+  );
+  --pawb-width: calc(var(--pawb-height) * 1.57);
+  --pawb-offset: var(--pawb-width);
 
-    content: "";
-    display: block;
-    inline-size: var(--pawb-width);
-    block-size: var(--pawb-height);
-    position: absolute;
-    inset-block-end: calc(var(--pawb-height) * -0.5);
-    background-image: url("/assets/images/noodle-footer--pawbs.webp");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: auto 100%;
-    animation-name: kimPawbBounce;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate-reverse;
+  inline-size: var(--pawb-width);
+  block-size: var(--pawb-height);
+  position: absolute;
+  inset-block-end: calc(var(--pawb-height) * -0.5);
+  background-image: url("/assets/images/noodle-footer--pawbs.webp");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto 100%;
 
-    // Move pawbs further apart if we have space
-    @container (min-width: 430px) {
-      --pawb-offset: calc(var(--pawb-width) * 1.2);
-    }
-
-    // Hide pawbs entirely on really narrow screens to prevent introducing
-    // a horizontal scrollbar
-    @container (max-width: 370px) {
-      content: none;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      animation-name: none;
-    }
+  // Move pawbs further apart if we have space
+  @container (min-width: 430px) {
+    --pawb-offset: calc(var(--pawb-width) * 1.2);
   }
 
-  &::before {
-    inset-inline-start: calc(50% - var(--pawb-offset));
-  }
-
-  &::after {
-    inset-inline-start: calc(50% + var(--pawb-offset));
-    animation-delay: -1s;
-    rotate: y 180deg;
+  // Hide pawbs entirely on really narrow screens to prevent introducing
+  // a horizontal scrollbar
+  @container (max-width: 370px) {
+    content: none;
   }
 }
 
-@keyframes kimPawbBounce {
-  0% {
-    translate: -50% 0;
-  }
+.kimNoodleBowl_pawb:nth-child(2) {
+  inset-inline-start: calc(
+    50% - (var(--pawb-width) * 0.5) - var(--pawb-offset)
+  );
+}
 
+.kimNoodleBowl_pawb:nth-child(3) {
+  inset-inline-start: calc(
+    50% - (var(--pawb-width) * 0.5) + var(--pawb-offset)
+  );
+  animation-delay: -1s;
+  rotate: y 180deg;
+}
+
+@keyframes kimBodyRise {
+  0% {
+    transform: translateY(100%);
+  }
   100% {
-    translate: -50% -1rem;
+    transform: translateY(0);
   }
 }

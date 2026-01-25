@@ -3,6 +3,10 @@
   background-color: var(--color-canvas);
   text-size-adjust: 100%;
   scroll-padding: var(--space-5);
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 .kimPage_body {
