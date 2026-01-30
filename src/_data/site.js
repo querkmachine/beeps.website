@@ -54,6 +54,11 @@ export default function () {
             description: "Free web accessibility audits for the fandom.",
           },
           {
+            href: "/stash/",
+            text: "The stash",
+            description: "Collated links about website design and development.",
+          },
+          {
             href: "/govuk-browser-data/",
             text: "GOV.UK browser data",
             description:

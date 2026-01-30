@@ -1,0 +1,53 @@
+---
+title: The stash
+metadata:
+  description: A collated collection of resources and reading about website design and development.
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% css %}
+.pageItemGrid {
+  margin-block-start: var(--space-5);
+}
+.pageItem {
+  margin: 0;
+  padding-block-start: var(--space-3);
+  border-width: 0;
+  border-block-start-width: var(--border-regular);
+  border-style: solid;
+  border-color: var(--color-furniture);
+}
+{% endcss %}
+
+{% block main %}
+<div class="kimWrapper kim-!-margin-block-8-9">
+  <h1 class="kimHeading-xl">{{ title }}</h1>
+
+  <div class="kimGrid">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+      <p class="kimBody-l">{{ metadata.description }}</p>
+    </div>
+  </div>
+
+  <div class="kimGrid pageItemGrid">
+    {%- for item in collections.stash | reverse %}
+      <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+        <article class="pageItem">
+          <time class="kimBody-s" datetime="{{ item.date | formatDate('iso') }}">
+            {{- item.date | formatDate('human') -}}
+          </time>
+          <h2 class="kimHeading-2xs">
+            <a class="kimLink" href="{{ item.data.href }}" rel="external">
+              {{- item.data.title | markdownInline | safe -}}
+            </a>
+          </h2>
+          <div class="kim-!-margin-block-start-1">
+            {{ item.content | safe }}
+          </div>
+        </article>
+      </div>
+    {%- endfor %}
+  </dl>
+</div>
+{% endblock %}
