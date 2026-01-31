@@ -121,16 +121,16 @@
   <main id="content">
     {% block main %}{% endblock %}
   </main>
-
-  {% block footerDecor %}
-    <div class="kimNoodleBowl" role="presentation">
-      <div class="kimNoodleBowl_body"></div>
-      <div class="kimNoodleBowl_pawb"></div>
-      <div class="kimNoodleBowl_pawb"></div>
-    </div>
-  {% endblock %}
   
   {% block footer %}
+    {% block footerDecor %}
+      <div class="kimNoodleBowl" role="presentation">
+        <div class="kimNoodleBowl_body"></div>
+        <div class="kimNoodleBowl_pawb"></div>
+        <div class="kimNoodleBowl_pawb"></div>
+      </div>
+    {% endblock %}
+
     <footer class="kimFooter kim-!-noPrint">
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
