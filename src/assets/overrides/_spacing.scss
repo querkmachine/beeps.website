@@ -31,19 +31,15 @@ $-units: (
 
 @each $i in $-units {
   @each $key, $dir in $-directions {
-    .kim-\!-margin#{if($key != "all", "-" + $key, null)}-#{$i} {
-      margin#{if($key != "all", "-" + $key, null)}: if(
-        $i == 0,
-        0,
-        var(--space-#{$i})
+    .kim-\!-margin#{if(sass($key != "all"): "-" + $key)}-#{$i} {
+      margin#{if(sass($key != "all"): "-" + $key)}: if(
+        sass($i == 0): 0; else: var(--space-#{$i})
       ) !important;
     }
 
-    .kim-\!-padding#{if($key != "all", "-" + $key, null)}-#{$i} {
-      padding#{if($key != "all", "-" + $key, null)}: if(
-        $i == 0,
-        0,
-        var(--space-#{$i})
+    .kim-\!-padding#{if(sass($key != "all"): "-" + $key)}-#{$i} {
+      padding#{if(sass($key != "all"): "-" + $key)}: if(
+        sass($i == 0): 0; else: var(--space-#{$i})
       ) !important;
     }
   }
