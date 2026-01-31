@@ -1,17 +1,10 @@
----js
-{
-  pagination: {
-    data: "collections.all",
-    size: 1,
-    alias: "preview"
-  },
-  permalink: function(data) {
-    return data.page.url
-      ? "{{ data.page.url }}opengraph/"
-      : false
-  },
-  eleventyExcludeFromCollections: true
-}
+---
+pagination:
+  data: collections.all
+  size: 1
+  alias: preview
+permalink: "{{ preview.data.page.url }}opengraph/"
+eleventyExcludeFromCollections: true
 ---
 
 {% extends 'src/_layouts/opengraph.njk' %}
