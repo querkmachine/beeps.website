@@ -109,7 +109,7 @@ You can check for the value of this media query in JavaScript by using [the `mat
 
 ```js
 const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduced)"
+  "(prefers-reduced-motion: reduced)",
 ).matches;
 
 if (!prefersReducedMotion) {

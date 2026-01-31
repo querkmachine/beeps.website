@@ -12,4 +12,4 @@ How I managed to spend my life thus far (a quarter of a century!) only really k
 
 But no more! I’m trying to expand my repertoire and, heck, I need a new hobby, so I’m trying to expand my knowledge and my tastebuds, and given I’m a web developer I figured I should blog about it too. ‘Cause that might just keep me motivated too.
 
-So hello and welcome to **_Kim Does Food_**, where Kim will shortly be doing food.
+So hello and welcome to ***Kim Does Food***, where Kim will shortly be doing food.

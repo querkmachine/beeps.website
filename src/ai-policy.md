@@ -10,7 +10,7 @@ cssComponents:
 
 I don't like generative artificial intelligence (genAI).
 
-I don't like that training them and using them requires immense use of natural resources and actively contributes to the climate crisis. 
+I don't like that training them and using them requires immense use of natural resources and actively contributes to the climate crisis.
 
 I don't like that they're overwhelmingly trained on other people's copyrighted content, without providing attribution or compensation.
 
@@ -32,7 +32,7 @@ You're free to train your large language model (LLM) on this website... if you p
 
 ## Generative AI's use on this website
 
-I try to avoid using genAI when coding, writing, or otherwise doing anything relating to this website. 
+I try to avoid using genAI when coding, writing, or otherwise doing anything relating to this website.
 
 I've previously dabbled in using a responsibly trained genAI a little in the past, [like in this blog post]({{ '/blog/2024-01-01-2023-the-year-in-review/' | url }}), but have long since stopped doing so. The licensing of training data doesn't negate the other negative effects, and the results were kind of rubbish anyway.
 
