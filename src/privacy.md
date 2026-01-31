@@ -6,7 +6,6 @@ metadata:
   description: Privacy policy, cookie policy, data collection, etc.
 cssComponents:
   - code
-
 ---
 
 This website does not store cookies on your device for any reason.
