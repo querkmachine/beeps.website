@@ -3,9 +3,9 @@
 <meta name="generator" content="{{ eleventy.generator }}">
 
 {# Determine which OpenGraph image to use for things #}
-{% set openGraphUrl = (page.url + 'opengraph/') %}
+{% set openGraphUrl = ('/.opengraph' + page.url) %}
 {%- if isBlogTagPage %}
-  {% set openGraphUrl = '/blog/opengraph/' %}
+  {% set openGraphUrl = '/.opengraph/blog/' %}
 {%- endif %}
 
 {#- Content metadata / OpenGraph #}
