@@ -1,0 +1,41 @@
+{% set cssComponents = merge(cssComponents, ['meta']) %}
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block main %}
+  <div class="kimWrapper">
+    <article class="kimGrid kim-!-margin-block-8-9">
+      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+        <header class="pageGeneric_header">
+
+          {%- if date %}
+          <dl class="kimMeta">
+            {%- if date %}
+              <div class="kimMeta_item">
+                <dt class="kimMeta_key kim-!-visually-hidden">Published</dt>
+                <dd class="kimMeta_value">
+                  <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
+                    {{- date | formatDate('human') -}}
+                  </time>
+                </dd>
+              </div>
+            {%- endif %}
+          </dl>
+          {%- endif %}
+
+          <h1 class="kimHeading-m kim-!-margin-block-start-0">
+            <a class="kimLink" href="{{ href }}" rel="external">
+              {{- title | markdownInline | safe -}}
+            </a>
+          </h1>
+        </header>
+
+        <div class="pageGeneric_body">
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+        </div>
+      </div>
+    </article>
+  </div>
+{% endblock %}
