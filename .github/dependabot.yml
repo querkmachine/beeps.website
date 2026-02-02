@@ -3,6 +3,7 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: /
+    reviewers: [querkmachine]
     schedule:
       interval: "cron"
       cronjob: "0 4 * */1 6"
@@ -13,22 +14,23 @@ updates:
       eleventy:
         patterns:
           - "@11ty/*"
-          - "eleventy-*"
       css:
         patterns:
-          - "sass"
+          - "cssnano"
           - "postcss"
           - "postcss-*"
+          - "sass"
       markdown:
         patterns:
           - "markdown-*"
       linters:
         patterns:
           - "husky"
-          - "prettier"
           - "lint-staged"
+          - "prettier"
       utils:
         patterns:
+          - "glob"
           - "highlight.js"
           - "luxon"
           - "node-html-parser"
