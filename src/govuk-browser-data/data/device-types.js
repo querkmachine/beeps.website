@@ -215,4 +215,10 @@ export default {
     tablet: 708890,
     tv: 2126,
   },
+  "2026-01": {
+    mobile: 54260038,
+    desktop: 33576115,
+    tablet: 975044,
+    tv: 2383,
+  },
 };
