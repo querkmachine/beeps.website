@@ -135,7 +135,7 @@
     <footer class="kimFooter kim-!-noPrint">
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
-        
+
         {% block copyrights %}
         <div class="kimFooter_copyright">
           <p class="kimBody-s">Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
@@ -144,17 +144,11 @@
         
         <div class="kimGrid">
           {%- for section in site.footerLinks %}
-            <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-              <h2 class="kimHeading-xs">{{ section.heading }}</h2>
+            <div class="kimGrid_column kimGrid_column-full constitution:kimGrid_column-oneHalf intrepid:kimGrid_column-oneQuarter">
+              {%- if section.heading %}
+                <h2 class="kimHeading-2xs">{{ section.heading }}</h2>
+              {%- endif %}
               <ul class="kimList kimBody-s">
-                {%- if loop.first %}
-                  <li>
-                    <a class="kimLink" href="#top">
-                      {% include "../assets/icons/arrow-n.svg" %}
-                      Back to top
-                    </a>
-                  </li>
-                {%- endif %}
                 {%- for link in section.links %}
                   <li>
                     <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>

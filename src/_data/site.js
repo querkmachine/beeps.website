@@ -93,17 +93,8 @@ export default function () {
     ],
     footerLinks: [
       {
-        heading: "More beeping",
+        heading: "About this website",
         links: [
-          {
-            href: "/feed.xml",
-            text: "RSS feed",
-            icon: "rss",
-            attributes: {
-              rel: "alternate",
-              type: "application/atom+xml",
-            },
-          },
           { href: "/brand/", text: "beeps' brand" },
           { href: "/colophon/", text: "Colophon" },
           { href: "/customise/", text: "Customise CSS" },
@@ -112,9 +103,33 @@ export default function () {
       {
         heading: "Legal gubbins",
         links: [
-          { href: "/ai-policy/", text: "AI policy" },
           { href: "/accessibility/", text: "Accessibility statement" },
+          { href: "/ai-policy/", text: "AI policy" },
           { href: "/privacy/", text: "Cookies and privacy" },
+        ],
+      },
+      {
+        heading: "Handy clickables",
+        links: [
+          {
+            href: "/feed.xml",
+            text: "Blog RSS feed",
+            icon: "rss",
+            attributes: {
+              rel: "alternate",
+              type: "application/atom+xml",
+            },
+          },
+          {
+            href: "/stash/feed.xml",
+            text: "Stash RSS feed",
+            icon: "rss",
+            attributes: {
+              rel: "alternate",
+              type: "application/atom+xml",
+            },
+          },
+          { href: "#top", text: "Back to top", icon: "arrow-n" },
         ],
       },
     ],
