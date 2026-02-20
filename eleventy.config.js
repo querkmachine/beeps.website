@@ -29,6 +29,7 @@ import {
   cachebustAssetUrl,
   formatDate,
   formatISODate,
+  getDomainFromURL,
   getFirstNItems,
   mergeArrays,
 } from "./config/utils.js";
@@ -140,6 +141,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("tagify", formatAsTag);
   eleventyConfig.addFilter("getArchiveYears", getArchiveYears);
   eleventyConfig.addFilter("getArchivePostsByYear", getArchivePostsByYear);
+  eleventyConfig.addFilter("getDomainFromURL", getDomainFromURL);
   eleventyConfig.addFilter("markdown", markdownFilter);
   eleventyConfig.addFilter("markdownInline", markdownFilterInline);
   eleventyConfig.addFilter("urlizeOpenGraphImage", urlizeOpenGraphImage);

@@ -5,6 +5,9 @@ metadata:
 mastheadSection:
   href: "/stash/"
   text: "The stash"
+cssComponents:
+  - meta
+  - code
 ---
 
 {% extends 'src/_layouts/layout.njk' %}
@@ -37,17 +40,44 @@ mastheadSection:
     {%- for item in collections.stash | reverse %}
       <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
         <article class="pageItem">
-          <time class="kimBody-s" datetime="{{ item.date | formatDate('iso') }}">
-            {{- item.date | formatDate('human') -}}
-          </time>
-          <h2 class="kimHeading-2xs">
-            <a class="kimLink" href="{{ item.data.href }}" rel="external">
-              {{- item.data.title | markdownInline | safe -}}
-            </a>
-          </h2>
+          <header>
+            <h2 class="kimHeading-2xs">
+              <a class="kimLink" href="{{ item.data.href }}" rel="external">
+                {{- item.data.title | markdownInline | safe -}}
+              </a>
+            </h2>
+          </header>
+
           <div class="kim-!-margin-block-start-1">
             {{ item.content | safe }}
           </div>
+
+          <footer>
+            <dl class="kimMeta kim-!-margin-block-end-0">
+              {%- if item.date %}
+                <div class="kimMeta_item">
+                  <dt class="kimMeta_key kim-!-visually-hidden">Shared</dt>
+                  <dd class="kimMeta_value">
+                    <time datetime="{{ item.date | formatDate('iso') }}">
+                      {{- item.date | formatDate('human') -}}
+                    </time>
+                  </dd>
+                </div>
+              {%- endif %}
+              <div class="kimMeta_item">
+                <dt class="kimMeta_key">From</dt>
+                <dd class="kimMeta_value">
+                  {{- item.data.href | getDomainFromURL -}}
+                </dd>
+              </div>
+            </dl>
+            <p class="kimBody-s">
+              <a class="kimLink" href="{{ item.url }}">
+                Permalink to stash entry
+                <span class="kim-!-visually-hidden">for {{ item.data.title }}</span>
+              </a>
+            </p>
+          </footer>
         </article>
       </div>
     {%- endfor %}
