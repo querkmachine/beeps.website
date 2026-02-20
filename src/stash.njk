@@ -1,10 +1,14 @@
 ---
-title: The stash
-metadata:
-  description: A collated collection of resources and reading about website design and development.
+eleventyComputed:
+  title: "{{ site.stashName }}"
+  metadata:
+    description: "{{ site.stashDescription }}"
 mastheadSection:
   href: "/stash/"
   text: "The stash"
+cssComponents:
+  - meta
+  - code
 ---
 
 {% extends 'src/_layouts/layout.njk' %}
@@ -14,40 +18,91 @@ mastheadSection:
   margin-block-start: var(--space-5);
 }
 .pageItem {
+  --bookmark-width: 1.25rem;
+  --bookmark-margin: var(--space-2);
+  --item-inset: calc(var(--bookmark-width) + var(--bookmark-margin));
+
   margin: 0;
-  padding-block-start: var(--space-3);
+  padding-inline-start: var(--item-inset);
   border-width: 0;
   border-block-start-width: var(--border-regular);
   border-style: solid;
   border-color: var(--color-furniture);
 }
+.pageItem_heading {
+  display: flex;
+  margin-inline-start: calc(0px - var(--item-inset));
+  padding-block-start: var(--bookmark-margin);
+  position: relative;
+}
+.pageItem_heading::before {
+  flex-shrink: 0;
+  content: "";
+  display: block;
+  inline-size: var(--bookmark-width);
+  block-size: 2.5rem;
+  margin-block-start: calc(0px - var(--bookmark-margin));
+  margin-inline-end: var(--bookmark-margin);
+  background-color: var(--color-furniture);
+  clip-path: polygon(0% 0%, 0% 100%, 50% calc(100% - .5rem), 100% 100%, 100% 0);
+}
 {% endcss %}
 
 {% block main %}
 <div class="kimWrapper kim-!-margin-block-8-9">
-  <h1 class="kimHeading-xl">{{ title }}</h1>
+  <h1 class="kimHeading-xl">{{ site.stashName }}</h1>
 
   <div class="kimGrid">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      <p class="kimBody-l">{{ metadata.description }}</p>
+      <p class="kimBody-l">{{ site.stashDescription }}</p>
+      <p class="kimBody">
+        Subscribe to <a class="kimLink" href="{{ '/stash/feed.xml' | url }}" target="_blank" type="application/atom+xml" rel="alternate">{% include "./assets/icons/rss.svg" %} the stash RSS feed</a>.
+      </p>
     </div>
   </div>
 
   <div class="kimGrid pageItemGrid">
     {%- for item in collections.stash | reverse %}
-      <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
+      <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf">
         <article class="pageItem">
-          <time class="kimBody-s" datetime="{{ item.date | formatDate('iso') }}">
-            {{- item.date | formatDate('human') -}}
-          </time>
-          <h2 class="kimHeading-2xs">
-            <a class="kimLink" href="{{ item.data.href }}" rel="external">
-              {{- item.data.title | markdownInline | safe -}}
-            </a>
-          </h2>
+          <header>
+            <h2 class="kimHeading-2xs pageItem_heading">
+              <a class="kimLink" href="{{ item.data.href }}" rel="external">
+                {{- item.data.title | markdownInline | safe -}}
+              </a>
+            </h2>
+          </header>
+
           <div class="kim-!-margin-block-start-1">
             {{ item.content | safe }}
           </div>
+
+          <footer>
+            <dl class="kimMeta kim-!-margin-block-end-0">
+              {%- if item.date %}
+                <div class="kimMeta_item">
+                  <dt class="kimMeta_key">Saved</dt>
+                  <dd class="kimMeta_value">
+                    <time datetime="{{ item.date | formatDate('iso') }}">
+                      {{- item.date | formatDate('human') -}}
+                    </time>
+                  </dd>
+                </div>
+              {%- endif %}
+              <div class="kimMeta_item">
+                <dt class="kimMeta_key">From</dt>
+                <dd class="kimMeta_value">
+                  {{- item.data.href | getDomainFromURL -}}
+                </dd>
+              </div>
+            </dl>
+            <p class="kimBody-s">
+              <a class="kimLink" href="{{ item.url }}">
+                Link to stash entry
+                <span class="kim-!-visually-hidden">for {{ item.data.title }}</span>
+              </a>
+            </p>
+          </footer>
         </article>
       </div>
     {%- endfor %}

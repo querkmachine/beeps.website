@@ -49,6 +49,10 @@ const formatDate = function (dateObj, format) {
 /**
  * Same idea as the above but accepts an ISO timestamp instead of requiring a
  * JS date object. Useful for data pulled from third-party services.
+ *
+ * @param {string} isoDate - Date in ISO format (YYYY-MM-DDTHH:MM:SS).
+ * @param {string} format - The format to convert the date into.
+ * @returns {string} - The formatted date.
  */
 const formatISODate = function (isoDate, format) {
   const date = new Date(isoDate);
@@ -75,7 +79,7 @@ const getFirstNItems = function (array, n) {
  * Takes arrays, merges them, removes duplicates.
  *
  * @param {array} arrays - Any number of arrays.
- * @param {array} - The one true array.
+ * @returns {array} - The one true array.
  */
 const mergeArrays = function (...arrays) {
   return arrays.reduce((mergedArray, currentArray) => {
@@ -86,10 +90,24 @@ const mergeArrays = function (...arrays) {
   }, []);
 };
 
+/**
+ * Takes a URL and extracts the domain portion.
+ *
+ * @param {string} url - The fully qualified URL.
+ * @returns {string} - The domain portion of the URL.
+ */
+const getDomainFromURL = function (url) {
+  let domain = new URL(url).hostname;
+
+  // Strip opening www. if one is present
+  return domain.startsWith("www.") ? domain.slice(4) : domain;
+};
+
 export {
   cachebustAssetUrl,
   formatDate,
   formatISODate,
+  getDomainFromURL,
   getFirstNItems,
   mergeArrays,
 };
