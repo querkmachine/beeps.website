@@ -5,6 +5,9 @@ export default function () {
     name: "beeps",
     blogName: "beeps’ blog",
     blogDescription: "The inane ramblings of beeps.",
+    stashName: "The stash",
+    stashDescription:
+      "A collated collection of resources and reading about website design and development.",
     authorName: "beeps",
     authorEmail: "hi@berly.kim",
     twitterUsername: "@batbeeps",

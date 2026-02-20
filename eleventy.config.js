@@ -76,6 +76,25 @@ export default function (eleventyConfig) {
       },
     },
   });
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/stash/feed.xml",
+    stylesheet: "/assets/feed.xsl",
+    collection: {
+      name: "stash",
+      limit: 50,
+    },
+    metadata: {
+      language: "en",
+      title: siteData.stashName,
+      subtitle: siteData.stashDescription,
+      base: siteData.domain,
+      author: {
+        name: siteData.authorName,
+        email: siteData.authorEmail,
+      },
+    },
+  });
 
   // Ignore the blog drafts directory if this is a production build
   if (process.env.ENVIRONMENT === "prod") {
