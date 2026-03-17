@@ -1,7 +1,6 @@
 export default [
   { alt: "a_bat", url: "//a-bat.com/" },
   { alt: "Alteran Labs", url: "//alteranlabs.co.uk/" },
-  { alt: "byte", url: "//bytebat.zone/" },
   { alt: "Caius Nocturne", url: "//nocturne.works/" },
   { alt: "Catbot", url: "//catbot-beeps.neocities.org/" },
   { alt: "Caylee Morris", url: "//caylee.dev/" },
@@ -79,7 +78,6 @@ export default [
     alt: "QuARC",
     url: "//quarc.neocities.org/",
   },
-  { alt: "rabbithawk256", url: "//rabbithawk256.dev/" },
   { alt: "raccoon", url: "//www.raccoon.fun/" },
   { alt: "Romaric Pascal", url: "//romaricpascal.is/" },
   { alt: "SDF", url: "//sdf.me.uk" },
@@ -149,11 +147,6 @@ export default [
     alt: "two",
     url: "//twotwos.nekoweb.org/",
   },
-  {
-    src: "/assets/images/buttons/maff.png",
-    alt: "maff.scot",
-    url: "//maff.scot/",
-  },
   { alt: "Yao", url: "//yaodema.com/" },
   {
     src: "/assets/images/buttons/522.png",
@@ -173,7 +166,7 @@ export default [
   {
     src: "/assets/images/buttons/synthdownload.svg",
     alt: "Sneexy - synth.download",
-    url: "//synth.download/",
+    url: "//sneexy.synth.download/",
   },
   {
     src: "/assets/images/buttons/kobold60.gif",
@@ -232,5 +225,13 @@ export default [
   {
     alt: "Lupi",
     url: "//chimoora.zone/",
+  },
+  {
+    alt: "Keys",
+    url: "//www.foxxo.co.uk/",
+  },
+  {
+    alt: "Halfy",
+    url: "//half-shot.uk/",
   },
 ];
