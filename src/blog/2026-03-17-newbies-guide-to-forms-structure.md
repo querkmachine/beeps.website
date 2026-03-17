@@ -4,6 +4,10 @@ tags: [web development, design]
 date: 2026-03-17
 cssComponents:
   - character
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "116246116569207163"
 ---
 
 Forms have existed since 1677, when the outlaw Jonathan Formsby decided to extort money by leaving blank spaces on a piece of parchment and coercing the landed gentry into writing illicit personal details into the spaces at blunderbuss-point.
