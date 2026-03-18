@@ -70,7 +70,7 @@ You could try to design around the problem, such as adding hint text specifying 
 
 On GOV.UK, even though [the date input component](https://design-system.service.gov.uk/components/date-input/) is built to encourage a 'DD MM YYYY' formatted answer, we encourage developers to accept a variety of variations for that format, allowing the names and abbreviations of months and not requiring leading zeroes.
 
-As much as possible, be flexible with what format an answer can be given in. If an answer is 'good enough' to be unambiguously understood, then accept it. Doing so reduces the likelihood that a user encounters an unnecessary validation error, lowering a barriers to completion.
+As much as possible, be flexible with what format an answer can be given in. If an answer is 'good enough' to be unambiguously understood, then accept it. Doing so reduces the likelihood that a user encounters an unnecessary validation error, lowering a barrier to completion.
 
 ## Mark what's optional, not required
 
