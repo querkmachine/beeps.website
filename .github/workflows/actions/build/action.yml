@@ -1,0 +1,31 @@
+name: Build website
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v6
+      with:
+        node-version-file: .nvmrc
+        cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
+    - name: Cache dependencies
+      uses: actions/cache@v5
+      id: npm-cache
+      with:
+        key: npm-cache-${{ hashFiles('package.json', 'package-lock.json') }}
+        path: node_modules
+    - name: Install dependencies
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      run: npm ci
+      working-directory: ${{ env.BUILD_PATH }}
+      shell: bash
+    - name: Restore Eleventy Fetch cache
+      uses: actions/cache@v5
+      with:
+        path: .cache
+        key: eleventy-fetch-cache-${{ github.run_id }}
+        restore-keys: |
+          eleventy-fetch-cache-
+    - name: Build Eleventy
+      run: npm run build
+      shell: bash

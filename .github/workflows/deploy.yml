@@ -23,22 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - name: Install dependencies
-        uses: ./.github/workflows/actions/install-dependencies
-      - name: Restore Eleventy Fetch cache
-        uses: actions/cache@v5
-        with:
-          path: .cache
-          key: eleventy-fetch-cache-${{ github.run_id }}
-          restore-keys: |
-            eleventy-fetch-cache-
-      - name: Build Eleventy
-        run: npm run build
+      - name: Build website
+        uses: ./.github/workflows/actions/build
       - name: Save artifact
         uses: actions/upload-artifact@v6
         with:

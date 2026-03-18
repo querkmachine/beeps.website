@@ -1,4 +1,4 @@
-name: Tests
+name: Run tests
 
 on:
   pull_request:
@@ -13,16 +13,33 @@ jobs:
     name: Test website build
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Node
-        uses: actions/setup-node@v6
+      - name: Build website
+        uses: ./.github/workflows/actions/build
+      - name: Save artifact
+        uses: actions/upload-artifact@v6
         with:
-          node-version-file: .nvmrc
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - name: Install dependencies
-        uses: ./.github/workflows/actions/install-dependencies
-      - name: Build Eleventy in production mode
-        run: npm run build
+          name: beeps-website-${{ github.head_ref || github.run_id }}
+          path: _site
+          retention-days: 1
+          include-hidden-files: true
+  check-links:
+    name: Check links
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: beeps-website-${{ github.head_ref || github.run_id }}
+      - name: Check links
+        uses: JustinBeckwith/linkinator-action@v2
+        with:
+          paths: "**/*.html"
+          cleanUrls: true
+          checkFragments: true
