@@ -27,7 +27,7 @@ The real challenge now is how to reveal as such to my extended family. I do not 
 
 As well as it all went, my family did present a few criticisms.
 
-1.  They absolutely do not like [my current surname](/2014/whats-in-a-name-part-two/). At all. Seems like I’ll have to change that.
+1.  They absolutely do not like [my current surname](/blog/2014-07-16-whats-in-a-name-part-two/). At all. Seems like I’ll have to change that.
 2.  Apparently my fashion sense is terrible.
 
 Well, live and learn I guess.

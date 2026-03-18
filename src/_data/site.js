@@ -18,7 +18,6 @@ export default function () {
       "https://chitter.xyz/@batbeeps",
       "https://social.beeps.gay/@beeps",
       "https://bsky.app/profile/beeps.gay",
-      "https://twitter.com/batbeeps",
       "https://github.com/querkmachine",
     ],
     navigation: [

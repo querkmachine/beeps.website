@@ -13,7 +13,7 @@ jobs:
     name: Test website build
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -26,3 +26,24 @@ jobs:
         uses: ./.github/workflows/actions/install-dependencies
       - name: Build Eleventy in production mode
         run: npm run build
+      - name: Save artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: beeps-website-pr-${{ github.head_ref || github.run_id }}
+          path: _site
+          retention-days: 1
+          include-hidden-files: true
+  test-links:
+    name: Check links
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: beeps-website-pr-${{ github.head_ref || github.run_id }}
+      - name: Check links
+        run: npx hyperlink index.html --canonicalroot 'https://beeps.website' --internal --recursive --pretty
+        shell: bash
