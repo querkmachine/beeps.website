@@ -29,7 +29,7 @@ jobs:
       - name: Save artifact
         uses: actions/upload-artifact@v6
         with:
-          name: beeps-website-pr-${{ github.head_ref || github.run_id }}
+          name: beeps-website-pr-${{ github.event.number }}
           path: _site
           retention-days: 1
           include-hidden-files: true
@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v7
         with:
-          name: beeps-website-pr-${{ github.head_ref || github.run_id }}
+          name: beeps-website-pr-${{ github.event.number }}
       - name: Check links
         run: npx hyperlink index.html --canonicalroot 'https://beeps.website' --internal --recursive --pretty
         shell: bash
