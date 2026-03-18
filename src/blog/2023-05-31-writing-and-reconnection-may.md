@@ -18,7 +18,7 @@ I really don't have much to preamble this month, so let's get right into it.
 
 This has been a somewhat surprisingly productive month for writing, the headline piece being [a rather important blog post about neurodivergence]({{ '/blog/2023-05-16-let-me-tell-you-a-secret/' | url }}) and coming to learn and come to terms with it. This post was originally intended to be far, far longer, but
 
-The about section of the website got a mild sprucing up too, adding a new section about [neurodivergence and anxiety](({{ '/about/neurodivergent/' | url }})), to update some of the information [about non-human identity]({{ '/about/nonhuman/' | url }}), and to add a new fursona to [the furry page]({{ '/about/furry/' | url }}).
+The about section of the website got a mild sprucing up too, adding a new section about [neurodivergence and anxiety]({{ '/about/neurodivergent/' | url }}), to update some of the information [about non-human identity]({{ '/about/nonhuman/' | url }}), and to add a new fursona to [the furry page]({{ '/about/furry/' | url }}).
 
 {% figure caption='Artwork by <a href="https://ko-fi.com/epsilonphi">EpsilonPhi</a>.' %}
 {% image "/images/ash-by-epsilonphi.png", "A quadrupedal mammal-like creature with a very long body and tail, long rabbit-like ears, cat-like legs and paws, and a mess of hair. It's coloured a mix of mix of black and white, except for neon green inner ears and a gooey green tail tip." %}

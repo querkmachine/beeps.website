@@ -20,7 +20,7 @@ Please **don't expect me to carry a conversation**. Ideally only start talking t
 
 ## Communicating in-person or via phone call
 
-**I generally have social anxiety and [dysphoria]({{ '/gender/' | url }}).** I will rarely show my face in photos or on video, substituting [my fursona]({{ '/about/furry/' | url }}) instead, and on some days I will avoid speaking as well.
+**I generally have social anxiety and [dysphoria]({{ '/about/gender/' | url }}).** I will rarely show my face in photos or on video, substituting [my fursona]({{ '/about/furry/' | url }}) instead, and on some days I will avoid speaking as well.
 
 **Please ask before taking any photos or recordings** and give some indication of where they will be uploaded, if they will be shared online.
 
