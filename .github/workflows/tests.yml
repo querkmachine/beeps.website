@@ -27,7 +27,7 @@ jobs:
       - name: Build Eleventy in production mode
         run: npm run build
       - name: Save artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: beeps-website-pr-${{ github.event.number }}
           path: _site
