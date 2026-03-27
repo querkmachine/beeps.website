@@ -1,0 +1,51 @@
+<div class="pageExampleContainer">
+
+	<div class="kimGrid">
+		<div class="kimGrid_column-full">
+			<div>Full width</div>
+		</div>
+	</div>
+
+	<div class="kimGrid">
+		<div class="kimGrid_column-full nx:kimGrid_column-threeQuarters">
+			<div>Full / three-quarters</div>
+		</div>
+	</div>
+
+	<div class="kimGrid">
+		<div class="kimGrid_column-full constitution:kimGrid_column-twoThirds">
+			<div>Full / two-thirds</div>
+		</div>
+	</div>
+
+	<div class="kimGrid">
+		<div class="kimGrid_column-full galaxy:kimGrid_column-oneHalf">
+			<div>Full / one-half</div>
+		</div>
+	</div>
+
+	<div class="kimGrid">
+		<div class="kimGrid_column-full defiant:kimGrid_column-oneThird">
+			<div>Full / one-third</div>
+		</div>
+	</div>
+
+	<div class="kimGrid">
+		<div class="kimGrid_column-full intrepid:kimGrid_column-oneQuarter">
+			<div>Full / one-quarter</div>
+		</div>
+	</div>
+
+</div>
+
+{% css %}
+.pageExampleContainer {
+	container-type: inline-size;
+}
+
+[class*="kimGrid_column-"] > div {
+	margin-block-end: var(--grid-gutter);
+	padding: var(--space-1);
+	background-color: var(--color-surface);
+}
+{% endcss %}

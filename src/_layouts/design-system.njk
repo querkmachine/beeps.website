@@ -1,0 +1,64 @@
+{% set cssComponents = merge(cssComponents, ['toc']) %}
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block main %}
+  <div class="kimWrapper">
+    <div class="pageSystem">
+      <nav class="pageSystem_navigation" aria-label="Design System navigation">
+        {%- for section in navigation %}
+          <h2 class="kimHeading-2xs">{{ section.name }}</h2>
+          <ul class="kimList">
+            {%- for item in section.items %}
+            <li><a class="kimLink-plain" href="{{ item.href }}">{{ item.label }}</a></li>
+            {%- endfor %}
+          </ul>
+        {%- endfor %}
+      </nav>
+
+      <article class="pageSystem_body">
+        <header class="pageSystem_header">
+          {%- if preTitle %}
+          <div class="kimSubheading-l">{{ preTitle | markdownInline | safe }}</div>
+          {%- endif %}
+          <h1 class="kimHeading-xl pageTitle">
+            {{- title | markdownInline | safe -}}
+          </h1>
+        </header>
+
+        {% block content %}
+          {{ content | safe }}
+        {% endblock %}
+      </article>
+    </div>
+  </div>
+{% endblock %}
+
+{% css %}
+  .pageSystem {
+    display: grid;
+    column-gap: var(--grid-gutter);
+    grid-template-columns: 1fr;
+    grid-template-areas: "body" "nav";
+    margin-block: var(--space-8-9);
+  }
+
+  @media (min-width: 52rem) {
+    .pageSystem {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas: "nav body";
+    }
+  }
+
+  .pageSystem_navigation {
+    grid-area: nav;
+  }
+
+  .pageSystem_body {
+    grid-area: body;
+  }
+
+  .pageTitle {
+    margin-block-start: 0;
+  }
+{% endcss %}

@@ -13,6 +13,7 @@ async function importModuleIfPresent(name) {
   }
 }
 
+importModuleIfPresent("example");
 importModuleIfPresent("image-differ");
 importModuleIfPresent("masthead");
 importModuleIfPresent("share");

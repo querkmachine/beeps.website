@@ -18,7 +18,7 @@
   margin-block-end: var(--space-8);
   color: var(--color-text-accent);
   font-size: var(--size-5);
-  font-width: 120%;
+  font-stretch: 120%;
   line-height: 1;
 }
 
@@ -62,7 +62,7 @@
   font-family: var(--font-heading);
   font-variant-alternates: stylistic(machine);
   font-weight: 450;
-  font-width: 100%;
+  font-stretch: 100%;
   text-wrap: balance;
   letter-spacing: 0;
   line-height: 1.25;

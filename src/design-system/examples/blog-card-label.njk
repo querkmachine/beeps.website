@@ -1,0 +1,19 @@
+---
+cssComponents: [blog-card]
+demoDate: 2026-04-01
+demoUpdated: 2026-04-06
+---
+
+{% from "src/_includes/blog-card.njk" import kimBlogCard %}
+
+{{ kimBlogCard({
+  url: "#",
+  date: demoDate,
+  data: {
+    title: "Blog post title",
+    updated: demoUpdated
+  }
+}, {
+  element: "div",
+  prelabel: "Next post"
+}) }}

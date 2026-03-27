@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-GB" class="kimPage">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url | cachebust }}" media="all">
+  <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+  {%- for item in cssComponents %}
+    <link rel="stylesheet" href="{{ '/assets/components/' + item + '.css' | url | cachebust }}" media="all">
+  {%- endfor %}
+  <style>
+    .kimPage_body { padding: var(--space-4); }
+    {% getBundle "css" %}
+  </style>
+</head>
+<body class="kimPage_body">
+  {{ content | safe }}
+</body>
+</html>

@@ -20,14 +20,6 @@ cssComponents:
   { name: "Page furniture", dark: "#7c56fc", light: "#786999" }
 ] %}
 
-<style>
-:root {
-  {%- for n, c in palette %}
-  --brand-color-{{ n }}: {{ c }};
-  {%- endfor %}
-}
-</style>
-
 {% macro _swatch(hex) %}
 <span class="pageSwatch">
 <span class="pageSwatch_preview" style="background-color: {{ hex }};"></span>

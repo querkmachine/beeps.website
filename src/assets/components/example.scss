@@ -1,0 +1,26 @@
+.kimExample {
+  margin-block-end: var(--space-5);
+  border: var(--border-hairline) solid var(--color-furniture);
+  position: relative;
+}
+
+.kimExample_link {
+  display: inline-block;
+  padding-inline: var(--space-2);
+  border: var(--border-hairline) solid var(--color-furniture);
+  position: absolute;
+  inset-block-start: calc(0px - var(--border-hairline));
+  inset-inline-end: calc(0px - var(--border-hairline));
+  background-color: var(--color-surface);
+  font-size: var(--size--1);
+}
+
+.kimExample_iframe {
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-block-size: 10rem;
+  border: none;
+  outline: var(--border-hairline) solid var(--color-furniture);
+  vertical-align: middle;
+  resize: horizontal;
+}

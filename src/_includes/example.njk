@@ -1,0 +1,11 @@
+{% macro kimExample(slug, name) %}
+  {% set url = "/design-system/examples/" + slug + "/" %}
+  {% set fileUrl = "../design-system/examples/" + slug + ".njk" %}
+  <div class="kimExample" data-js="example">
+    <a class="kimLink-plain kimExample_link" href="{{ url }}" target="_blank">
+      <span class="kim-!-visually-hidden">{{ name }}:</span>
+      Open in new tab
+    </a>
+    <iframe class="kimExample_iframe" src="{{ url }}" title="Example of {{ name }}" border="0"></iframe>
+  </div>
+{% endmacro %}

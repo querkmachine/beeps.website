@@ -1,0 +1,16 @@
+<div class="spacing">
+  <div style="padding-block-end: var(--space-1);"></div>
+  <div style="padding-block-end: var(--space-2);"></div>
+  <div style="padding-block-end: var(--space-3);"></div>
+  <div style="padding-block-end: var(--space-4);"></div>
+  <div style="padding-block-end: var(--space-5);"></div>
+  <div style="padding-block-end: var(--space-6);"></div>
+  <div style="padding-block-end: var(--space-7);"></div>
+  <div style="padding-block-end: var(--space-8);"></div>
+  <div style="padding-block-end: var(--space-9);"></div>
+</div>
+
+{% css %}
+.spacing div { background-color: var(--color-text); margin-block-end: 1px; }
+.spacing div:nth-child(odd) { background-color: var(--color-text-subtle); }
+{% endcss %}

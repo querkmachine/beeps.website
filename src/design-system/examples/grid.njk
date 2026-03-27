@@ -1,0 +1,67 @@
+<div class="kimGrid">
+	<div class="kimGrid_column-full">
+		<div>Full width</div>
+	</div>
+</div>
+
+<div class="kimGrid">
+	<div class="kimGrid_column-oneHalf">
+		<div>Half</div>
+	</div>
+	<div class="kimGrid_column-oneHalf">
+		<div>Half</div>
+	</div>
+</div>
+
+<div class="kimGrid">
+	<div class="kimGrid_column-oneThird">
+		<div>One-third</div>
+	</div>
+	<div class="kimGrid_column-oneThird">
+		<div>One-third</div>
+	</div>
+	<div class="kimGrid_column-oneThird">
+		<div>One-third</div>
+	</div>
+</div>
+
+<div class="kimGrid">
+	<div class="kimGrid_column-oneQuarter">
+		<div>One-quarter</div>
+	</div>
+	<div class="kimGrid_column-oneQuarter">
+		<div>One-quarter</div>
+	</div>
+	<div class="kimGrid_column-oneQuarter">
+		<div>One-quarter</div>
+	</div>
+	<div class="kimGrid_column-oneQuarter">
+		<div>One-quarter</div>
+	</div>
+</div>
+
+<div class="kimGrid">
+	<div class="kimGrid_column-twoThirds">
+		<div>Two-thirds</div>
+	</div>
+	<div class="kimGrid_column-oneThird">
+		<div>One-third</div>
+	</div>
+</div>
+
+<div class="kimGrid">
+	<div class="kimGrid_column-threeQuarters">
+		<div>Three-quarters</div>
+	</div>
+	<div class="kimGrid_column-oneQuarter">
+		<div>One-quarter</div>
+	</div>
+</div>
+
+{% css %}
+[class*="kimGrid_column-"] > div {
+	margin-block-end: var(--grid-gutter);
+	padding: var(--space-1);
+	background-color: var(--color-surface);
+}
+{% endcss %}
