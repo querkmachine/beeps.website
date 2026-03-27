@@ -5,16 +5,6 @@ cssComponents:
   - code
 ---
 
-## Design
-
-### One thing per page
-
-### Replay everything for review and amendment
-
-If a form is quite long, it can
-
-### Size inputs according to their expected answers
-
 ## Technical implementation
 
 ### Input, label, ID
@@ -60,6 +50,8 @@ Asking for user's first name? Use the `given-name` autocomplete hint.
 Asking for a payment card's security code? Use the `numberic` input mode, `cc-csc` autocomplete hint, and style the input fit 3 or 4 characters.
 
 Using these things together allows credential managers to fill things out automatically, mobile devices to display context-specific keyboards, and users to intuit what kind of information they need to provide based on the amount of space provided. Unsurprisingly, that makes filling out forms faster!
+
+### Don't limit the length of inputs (on the client side)
 
 ### Avoid validating values when the user is still providing them
 
