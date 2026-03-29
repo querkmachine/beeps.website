@@ -87,7 +87,7 @@ export default [
     url: "//sigmucron.neocities.org/",
   },
   {
-    src: "/assets/images/buttons/sirlan.png",
+    src: "/assets/images/buttons/sirlan.gif",
     alt: "Sirlan",
     url: "//dragon-vi.be/",
   },
@@ -233,5 +233,10 @@ export default [
   {
     alt: "Halfy",
     url: "//half-shot.uk/",
+  },
+  {
+    src: "/assets/images/buttons/briarpatch.gif",
+    alt: "Briar Patch",
+    url: "//balloonpup.com",
   },
 ];
