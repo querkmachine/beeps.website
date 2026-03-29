@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: beeps NOW!
-updated: 2025-12-23
+updated: 2026-03-29
 metadata:
   description: A basic overview of what I'm up to at the moment.
 ---
@@ -10,26 +10,32 @@ A "now" page is [a conceptual accompaniment to an about page](https://nownownow.
 
 ## Now
 
-💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team. I'm also writing WCAG understanding documents for the [WCAG Primer](https://alphagov.github.io/wcag-primer/).
+💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team. I'm also writing WCAG understanding documents for the [Guide to WCAG](https://alphagov.github.io/guide-to-wcag/).
 
-🇸🇪 I'm learning to speak Swedish! <span lang="sv">Jag pratar en lite svenska.</span>
+🇸🇪 I'm learning to speak Swedish! <span lang="sv">Jag pratar lite svenska.</span>
 
-🎶 [I've been listening](https://www.last.fm/user/robomilk/library) to a lot of stuff. See [this recent blog post]({{ '/blog/2025-12-20-in-2025/#a-musical-interlude' | url }}) for some of my favourites from 2025.
+🎶 [I've been listening](https://www.last.fm/user/robomilk/library) to a lot of stuff. Currently on heavy rotation are Daði Freyr, Gorillaz' new album _The Mountain_, Montaigne, Self Esteem, and Vylet Pony.
 
-📺 [I'm watching](https://trakt.tv/users/batbeeps/history) _Pluribus_, _The Bear_, _The Boys_, _Only Connect_, and various Dropout shows. As per usual, I'm rewatching _Star Trek: Enterprise_ along with [_The Greatest Generation_ podcast](https://maximumfun.org/podcasts/greatest-generation/).
+📺 [I'm currently watching](https://trakt.tv/users/batbeeps/history) _Invincible_, _The Bear_, _Jet Lag: The Game_, Amazon's _Fallout_ show, and Formula 1 (as usual).
 
-📚 I'm currently (slowly) reading _All Systems Red_ by Martha Wells and _The Anthropocene Reviewed: Essays on a Human-Centered Planet_ by John Green.
+🎮 I've mostly been playing [Cities Skylines 2](https://www.paradoxinteractive.com/games/cities-skylines-ii/about), which is definitely nowhere near as bad as it was at launch. I've also been dipping back into _Cassette Beasts_ and _Super Animal Royale_ a bit more lately.
 
-🎮 I've mostly been playing [Factorio](https://factorio.com/), having fallen down that well **again**. I've also gotten into playing _Cassette Beasts_ and _Super Animal Royale_ again, which are awesome games.
+🏥 I continue to undergo a bunch of medical assessments, now mainly trying to figure out why I have such severe hypertension even when I'm so heavily medicated.
 
 ## Recently
 
-🩵 At work, I've spent much of the last year working on the GOV.UK brand refresh (i.e. "it's blue now"). [I wrote a blog post about it]({{ '/blog/2025-06-25-the-not-quite-new-govuk-brand/' | url }}) that popped off a bit as well.
+🩵 At work I spent much of 2025 working on the GOV.UK brand refresh (i.e. "it's blue now"). [I wrote a blog post about it]({{ '/blog/2025-06-25-the-not-quite-new-govuk-brand/' | url }}) that popped off a bit as well.
 
-📣 I'm undergoing voice training and laser hair removal so that I can Be More Trans.
+📣 I've been undergoing voice training and laser hair removal so that I can Be More Trans.
+
+🏴󠁧󠁢󠁳󠁣󠁴󠁿 I attended Scotiacon in Glasgow in February. It was alright; a bit of a mixed bag.
+
+🌲 I did some volunteering work planting mature trees in a nearby park. Turns out planting trees is more physically laborious than you might think.
 
 ## Soon
 
 🐕‍🦺 [The Year of Service.]({{ '/blog/2025-12-20-in-2025/#2026-is-the-year-of%E2%80%A6' | url }})
 
-🐾 I'll be attending Scotiacon in Glasgow in February, and ConFuzzled in Birmingham in May.
+🚄 Bit of travel coming up. I'm already booked to be making leisure trips to London in April and September, attending [ConFuzzled](//confuzzled.org.uk) in Birmingham in May, and heading to Manchester in July and October.
+
+🎵 I'm queued up to see Jazz Emu and Ben Folds live later this year. (Separately, not at the same time.)
