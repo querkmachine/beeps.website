@@ -42,6 +42,16 @@ metadata:
       </h2>
       <div class="kimGrid">
         {% call _item({
+          title: "Color Contrast Grid",
+          href: "//colors.beeps.gay/",
+          image: {
+            src: "/assets/images/projects/color-contrast-grid.png",
+            alt: "Screenshot of a grid of green and purple colours (the colours of this website) in a grid layout, with each colour being put in text and background colour combinations and scored."
+          }
+        }) %}
+          A tool for rapidly comparing every colour in a palette for accessibility compliance.
+        {% endcall %}
+        {% call _item({
           title: "Randomize Everything",
           href: "//extensions.panic.com/extensions/querkmachine/querkmachine.RandomizeEverything/",
           image: {
@@ -82,16 +92,6 @@ metadata:
         A simple [Eleventy](//11ty.dev)-based framework for building webrings with no client-side JavaScript needed.
         {% endcall %}
         {% call _item({
-          title: "One Stylesheet",
-          href: "//github.com/querkmachine/one-stylesheet",
-          image: {
-            src: "/assets/images/projects/one-stylesheet.png",
-            alt: "Green text on a dark purple background reading 'One Stylesheet'."
-          }
-        }) %}
-        A classless CSS library for building simple websites that look an awful lot [like this website]({{ '/brand/' | url }}).
-        {% endcall %}
-        {% call _item({
           title: "Vanilla Validation",
           href: "//www.npmjs.com/package/@querkmachine/vanilla-validation",
           image: {
@@ -101,13 +101,43 @@ metadata:
         }) %}
         JavaScript package that extends HTML's validation rules to make client-side validation work a little more like [GOV.UK's validation pattern](https://design-system.service.gov.uk/patterns/validation/).
         {% endcall %}
+        {% call _item({
+          title: "One Stylesheet",
+          href: "//github.com/querkmachine/one-stylesheet",
+          image: {
+            src: "/assets/images/projects/one-stylesheet.png",
+            alt: "Green text on a dark purple background reading 'One Stylesheet'."
+          }
+        }) %}
+        A classless CSS library for building simple websites that [look an awful lot like this website]({{ '/brand/' | url }}).
+        {% endcall %}
       </div>
       
       <h2 class="kimHeading-l">
         Communities
       </h2>
       <div class="kimGrid">
-      {% call _item({
+        {% call _item({
+          title: "ConFuzzled",
+          href: "//confuzzled.org.uk",
+          image: {
+            src: "/assets/images/projects/confuzzled.png",
+            alt: "Illustration of an anthropomorphic crocodile, European badger, and honey badger dressed in 80s style clothing and with music equipment."
+          }
+        }) %}
+        Volunteering on the IT and website team of the UK's largest furry convention, with a particular focus on accessibility.
+        {% endcall %}
+        {% call _item({
+          title: "BristolFurs",
+          href: "//bristolfurs.co.uk",
+          image: {
+            src: "/assets/images/projects/bristolfurs.png",
+            alt: "White logo of a tower of the Clifton Suspension Bridge in the negative space of a paw shape."
+          }
+        }) %}
+        Website designer, developer and content writer for Bristol's local furmeet group.
+        {% endcall %}
+        {% call _item({
           title: "Severn Bronies",
           href: "//severnbronies.co.uk",
           image: {
@@ -115,7 +145,7 @@ metadata:
             alt: "Illustration of many pony characters, both canon and original creations, celebrating together."
           }
         }) %}
-        Operating regular social events for pony-inclined people in south west England and south Wales since 2012.
+        Co-founder and long-time managing director, operating regular social events for pony-inclined people in south west England and south Wales since 2012.
         {% endcall %}
         {% call _item({
           title: "Amphimorpho Webring",
@@ -125,7 +155,7 @@ metadata:
             alt: "Illustration of several amphimorpho hanging out in a large bowl."
           }
         }) %}
-        A webring for people with amphimorpho characters and fursonas.
+        A webring for critters with amphimorpho fursonas and characters.
         {% endcall %}
         {% call _item({
           title: "Star Trek Furs",
