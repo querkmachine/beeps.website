@@ -1,30 +1,33 @@
 ---
-title: "A newbie's guide to designing good web forms: the design bit"
+title: "A newbie's guide to designing good web forms: the design part"
 tags: [web development, design]
-date: 2026-03-20
+date: 2026-03-30
 cssComponents:
   - character
   - code
+  - figure
 ---
 
 The second in my mini series about web form design. See [part one, which focused on the kinds of questions you ask]({{ '/blog/2026-03-17-newbies-guide-to-forms-structure/' | url }}) if you haven't already. This post is going to cover some bits about **how you lay out those questions**.
 
 ## Make inputs look like inputs
 
-This sounds like an obvious one, but once you start looking you might be surprised at how often you find websites where a text input doesn't look like a text input or a radio button doesn't look like a radio button.
+This sounds like an obvious one, but once you start looking you might be surprised how often you find websites where a text input doesn't look like a text input or a radio button doesn't look like a radio button.
 
 This was probably at least somewhat influenced by the early versions of Google's Material Design, which designed text inputs with... underlines?
 
+{% figure caption="Text fields in Material Design 1 and 2." %}
 {% image "/images/forms-material-inputs.png", "Side-by-side screenshots of text inputs in Material Design versions 1 and 2. The left shows a simple dark grey underline with similarly dark grey 'Label' text appearing where the user is expected to place their input. The right shows a similar input, now with a lighter grey background and extra spacing between the text and border." %}
+{% endfigure %}
 
 This does not look like an input; it looks like a line. Where do I click to focus it—on the text? But that's not how labels for inputs normally work. Maybe the input is below the line?
 
 Even with their attempts to right the ship in Material Design 2 by adding a background colour, this is rubbish. If you want people to put something into a box, step one is making it look like a box!
 
-Material 3 has at least gotten this message and introduced an 'outlined' version of their component, which better aligns with more traditional text input designs.
+Material 2 at least provided the option of an 'outlined' version of their component, which better aligns with more traditional text input designs, which Material 3 has retained.
 
 {% character character="ash", variant="alarmed" %}
-Some of the more techy amongst you might be thinking that this is all very "appealing to the lowest common denominator", that only a fraction of the population would be so unfamiliar with technology as to not recognise a form input just because it looks a bit different.
+Some of the more techy among you might be thinking that this is all very "appealing to the lowest common denominator", that only a fraction of the population would be so unfamiliar with technology as to not recognise a form input just because it looks a bit different.
 
 Yeah, nah. A lot more people than you probably expect, with much more technical experience than you probably think, struggle to use interfaces that look different to what they're used to.
 
@@ -52,7 +55,7 @@ Placeholder text suffers from the same issue of making unpopulated fields look p
 {% character character="ash", variant="thinking" %}
 There are a few exceptions to this, the primary among them being 'compact' examples such as sign-in and search forms.
 
-Users don't tend to go through the same providing and reviewing phases, and their usual placement in space-limited parts of a page means that using floating or placeholder style labels is often necessary. They should still have actual `<label>` elements in your code though; just make sure you're [inclusively hiding them](https://css-tricks.com/inclusively-hidden/).
+Users don't tend to go through the same providing and reviewing phases, and their usual placement in space-limited parts of a page means that using floating or placeholder-style labels is often necessary. They should still have actual `<label>` elements in your code though; just make sure you're [inclusively hiding them](https://css-tricks.com/inclusively-hidden/).
 {% endcharacter %}
 
 ## Size inputs according to their expected answers
@@ -91,7 +94,7 @@ It prevents users feeling overwhelmed by breaking long pages down into bite-size
 
 It allows questions that require more detailed guidance to have the space they need.
 
-It makes pages to load faster.
+It makes pages load faster.
 
 It simplifies development for error validation, creating branching routes if some questions are conditional upon others, looping if more than one answer can be provided for a given question, and allows users the option to save their place and return later.
 
@@ -99,7 +102,7 @@ Speaking of which...
 
 ## Repeat information back for review and amendment
 
-If a form is quite long, of if a user has resumed from a previously saved state, there's a decent chance that they won't remember all of the answers they've given.
+If a form is quite long, or if a user has resumed from a previously saved state, there's a decent chance that they won't remember all of the answers they've given.
 
 It's useful to play back the answers they've provided prior to the final form submission and give them a chance to amend anything that's incorrect; be that due to previously unnoticed errors or a change in circumstances.
 
