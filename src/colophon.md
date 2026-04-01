@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Colophon
-updated: 2025-09-24
+updated: 2026-04-01
 metadata:
   description: Giving credit to the people and tools that made this website possible.
 cssComponents:
@@ -21,29 +21,37 @@ I use the static site generator [Eleventy](http://11ty.dev) with the following p
 - [eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss)
 - [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc)
 
-Markdown content is parsed by [markdown-it](https://github.com/markdown-it/markdown-it) with the [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) plugin.
+Markdown content is parsed by a heavily customised instance of [markdown-it](https://github.com/markdown-it/markdown-it) with the [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) plugin. Many customisations are derived from [markdown-it-govuk](https://github.com/x-govuk/markdown-it-govuk).
 
 Code is highlighted using [highlight.js](https://highlightjs.org/) using a custom theme.
-
-The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images.
 
 Certain aspects of the code, in particular the CSS architectural style, is cribbed from [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)—a project I now work on!—which itself is a modified version of [ITCSS](https://itcss.io). Spacing and type scales were generated using [Utopia](https://utopia.fyi). [Sass](https://sass-lang.com/) and [PostCSS](https://postcss.org) are used for CSS generation.
 
 [Prettier](https://prettier.io/) is used to keep the code beautiful.
 
-Hat tips to the following folks for contributing something that currently exists in the site's code: [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), [Juneum](https://juneum.com/articles/eleventy-drafts/), [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/), [Una Kravets](https://una.im/scroll-target-group) and [Zach Leatherman](https://www.zachleat.com/web/automatic-opengraph/).
+Hat tips to the following folks for contributing code or concepts that currently exist in the site's code:
+
+- [Brian Mitchell](https://brianm.me/posts/eleventy-redirect-from/), for redirects in Eleventy
+- [Juneum](https://juneum.com/articles/eleventy-drafts/), for draft blog posts handling
+- [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/), for asset cache busting
+- [Una Kravets](https://una.im/scroll-target-group), for a method of highlighting the current section in tables of contents
+- [Zach Leatherman](https://www.zachleat.com/web/automatic-opengraph/), for OpenGraph image generation
 
 ## Design
 
 Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans) typeface released by GitHub.
 
-## Tools and services
+## Software
 
-I use Panic's [Nova](http://nova.app) as my code editor of choice, accompanied by [iTerm](https://iterm2.com/), [Oh My Zsh](https://ohmyz.sh/) and the [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k).
+I use [Sublime Text](https://www.sublimetext.com/) as my code editor of choice, accompanied by [iTerm](https://iterm2.com/), [Oh My Zsh](https://ohmyz.sh/) and the [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k) for terminal operations.
+
+## Infrastructure
 
 This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
 
 Domain names (of which I have too many) are managed by [Namecheap](https://www.namecheap.com/) and [Glauca Digital](https://glauca.digital/).
+
+The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images. The [Mastodon API](https://docs.joinmastodon.org/api/) is used for displaying favourites and shares on blog posts.
 
 ## Content
 
