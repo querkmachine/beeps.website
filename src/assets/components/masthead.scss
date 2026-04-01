@@ -26,6 +26,11 @@
     );
   }
 
+  // April Fools Day
+  &[data-date="04-01"] ~ main .kimSplash {
+    rotate: 180deg;
+  }
+
   // First Contact Day
   &[data-date="04-05"]::before {
     background-image: linear-gradient(
