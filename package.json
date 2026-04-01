@@ -1,7 +1,7 @@
 {
   "name": "beeps.website",
   "version": "3.0.0",
-  "description": "beep's funky website.",
+  "description": "beeps' funky website.",
   "type": "module",
   "scripts": {
     "start": "npm run serve",
