@@ -6,7 +6,7 @@ I'm a [apothi](https://www.lgbtqia.wiki/wiki/Apothisexual) [asexual](https://www
 
 This has been the case for my entire life. I have never experienced physical attraction to anyone. This could be attributed to [my attitudes to the human form in general]({{ '/about/nonhuman/' | url }}), although it is described as early as 2013 in ["On Gender and Sexuality"]({{ '/blog/2014-07-16-on-gender-and-sexuality/' | url }}).
 
-However, I'm also [panromantic](https://www.lgbtqia.wiki/wiki/Panromantic) and still seek out non-sexual romantic relationships. Where I do, sex and gender don't come into consideration.
+I'm also [aromantic](https://www.lgbtqia.wiki/wiki/Aromantic), meaning I'm not interested in romantic relationships, though I may still be involved in [queerplatonic relationships](https://lgbtqia.wiki/wiki/Queerplatonic_Relationship).
 
 The separation of sexual attraction from romantic attraction is called the [Split Attraction Model](<https://www.lgbtqia.wiki/wiki/Split_Attraction_Model_(SAM)>).
 
