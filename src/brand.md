@@ -1,7 +1,7 @@
 ---
 layout: brand.njk
 title: beeps' brand
-updated: 2025-09-24
+updated: 2026-04-06
 metadata:
   description: The style guide for my personal projects, including this website.
 cssComponents:
@@ -91,9 +91,29 @@ The logo of the website (and pretty much just this website). This has been a sym
   <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Silhouette of a stylised bat's head, within which the cutout of a mechanical gear is visible.">
 </div>
 
+### About page icons
+
+Detailed icons used on the about page to illustrate each section. These adapt their colours according to the current theme of the page. Designed for use at 80&times;80 pixels.
+
+{%- set bigIcons = [
+  "ace",
+  "id",
+  "idic",
+  "loudhailer",
+  "nonhuman",
+  "paws",
+  "plural",
+  "trans",
+  "website"
+] -%}
+
+<div class="pageIconGrid">
+{%- for i in bigIcons -%}<span>{% include "./assets/icons/" + i + ".svg" %}</span>{% endfor -%}
+</div>
+
 ### Utility icons
 
-Some custom made icons for custom made uses.
+Some custom made icons for generic uses. These are all designed to be used at 20&times;20 pixels.
 
 {%- set icons = [
   "arrow-n",
