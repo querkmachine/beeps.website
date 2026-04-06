@@ -8,16 +8,17 @@ metadata:
 {% extends 'src/_layouts/layout.njk' %}
 
 {% css%}
-.pageEmoji {
+.pageIcon svg {
   display: block;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 3em;
+  inline-size: 80px;
+  block-size: 80px;
+  margin-block-end: var(--space-1);
 }
 {% endcss %}
 
-{% macro _item(emoji) %}
+{% macro _item(icon) %}
 <div class="kimGrid_column kimGrid_column-full galaxy:kimGrid_column-oneHalf defiant:kimGrid_column-oneThird">
-  <span class="pageEmoji">{{ emoji }}</span>
+  <div class="pageIcon">{% include "../assets/icons/" + icon + ".svg" %}</div>
   {% markdown %}{{- caller() -}}{% endmarkdown %}
 </div>
 {% endmacro %}
@@ -29,31 +30,31 @@ metadata:
         {{ title }}
       </h1>
       <div class="kimGrid">
-        {% call _item("🪪") %}
+        {% call _item("id") %}
         [My name is beeps.]({{ '/about/name/' | url }}) I also go by Kim, but in more casual settings I prefer that folks call me beeps.
         {% endcall %}
-        {% call _item("🤖") %}
+        {% call _item("nonhuman") %}
         [I don't consider myself human.]({{ '/about/nonhuman/' | url }}) Rather a transhumanist or posthumanist. I don't relate well to my physical humanity.
         {% endcall %}
-        {% call _item("🏳️‍⚧️") %}
+        {% call _item("trans") %}
         [I'm trans and agender.]({{ '/about/gender/' | url }}) I don't consider myself to be female, male, or anything in-between. I use it/its pronouns.
         {% endcall %}
-        {% call _item("♠️") %}
-        [I'm asexual.]({{ '/about/asexuality/' | url }}) This doesn't affect day-to-day life that much, but it's still a reasonably important part of who I am!
+        {% call _item("ace") %}
+        [I'm aro-ace.]({{ '/about/asexuality/' | url }}) This doesn't affect day-to-day life that much, but it's still a reasonably important part of who I am!
         {% endcall %}
-        {% call _item("🧠") %}
+        {% call _item("idic") %}
         [I'm neurodivergent.]({{ '/about/neurodivergent/' | url }}) I deal with a lot of anxiety and my brain works a little differently to most. I can struggle to operate in some situations.
         {% endcall %}
-        {% call _item("🐾") %}
+        {% call _item("paws") %}
         [I'm a furry.]({{ '/about/furry/' | url }}) I've been in the furry fandom for over half my life and I owe it a lot for giving me the skills and experience I have today.
         {% endcall %}
-        {% call _item("💜") %}
+        {% call _item("plural") %}
         [I host a plural system.]({{ '/about/olive/' | url }}) My subconscious decided to say hello and told me their name is Olive. We get on rather well!
         {% endcall %}
-        {% call _item("🕸️") %}
+        {% call _item("website") %}
         [I make websites.]({{ '/about/work/' | url }}) I've been doing web things since 2003, coming to specialise in front-end development, accessibility, and design systems.
         {% endcall %}
-        {% call _item("💬") %}
+        {% call _item("loudhailer") %}
         With all that in mind, here's some guidance on [how to talk to me effectively]({{ '/about/how-to-talk-to-me/' | url }}) and what my limitations are.
         {% endcall %}
       </div>
