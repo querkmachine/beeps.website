@@ -239,4 +239,9 @@ export default [
     alt: "Briar Patch",
     url: "//balloonpup.com",
   },
+  {
+    src: "/assets/images/buttons/rabbithawk256.png",
+    alt: "rabbithawk256",
+    url: "//rabbithawk256.dev?ref=button",
+  },
 ];
