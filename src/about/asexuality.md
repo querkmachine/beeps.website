@@ -1,5 +1,5 @@
 ---
-title: I'm a panromantic asexual
+title: I'm an aromantic asexual
 ---
 
 I'm a [apothi](https://www.lgbtqia.wiki/wiki/Apothisexual) [asexual](https://www.lgbtqia.wiki/wiki/Asexuality). This means I do not experience sexual or physical attraction. I find the very idea of sexual relations to be off-putting.
