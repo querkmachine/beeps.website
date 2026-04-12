@@ -110,6 +110,9 @@ export default function (eleventyConfig) {
   // Copy .htaccess
   eleventyConfig.addPassthroughCopy(paths.src + "/.htaccess");
 
+  // Copy cow.txt - https://moooo.farm/
+  eleventyConfig.addPassthroughCopy(paths.src + "/cow.txt");
+
   // Copy Google Search Console verification file, don't compile it
   eleventyConfig.ignores.add(paths.src + "/googlea3140dc71dc0155f.html");
   eleventyConfig.addPassthroughCopy(paths.src + "/googlea3140dc71dc0155f.html");
