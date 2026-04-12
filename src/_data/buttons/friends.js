@@ -244,4 +244,9 @@ export default [
     alt: "rabbithawk256",
     url: "//rabbithawk256.dev?ref=button",
   },
+  {
+    src: "/assets/images/buttons/xaselgio.gif",
+    alt: "Indigo's Den",
+    url: "//xaselgio.net/",
+  },
 ];
