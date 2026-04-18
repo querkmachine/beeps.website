@@ -35,7 +35,7 @@ export default [
     url: "//freeplay.floof.company/",
   },
   { alt: "Halley Starbun", url: "//halley.systems/" },
-  { alt: "Unilobito", url: "//lobi.to/" },
+  { alt: "unlobito", url: "//lobi.to/" },
   { alt: "Harsh Browns", url: "//visitmy.website/" },
   { alt: "Ji'hyn", url: "//jihyn.com/" },
   {
@@ -248,5 +248,10 @@ export default [
     src: "/assets/images/buttons/xaselgio.gif",
     alt: "Indigo's Den",
     url: "//xaselgio.net/",
+  },
+  {
+    src: "/assets/images/buttons/maff.png",
+    alt: "Maff",
+    url: "//maff.scot/",
   },
 ];

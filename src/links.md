@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2026-04-12
+updated: 2026-04-18
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -29,9 +29,9 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 {%- for i in buttons.friendsitesButtons %}{{- kim88x31Button(i) -}}{%- endfor %}
 </div>
 
-<ul class="kimList kimList-bulleted pageLinkColumns">
+<ul class="kimList pageLinkColumns">
   {%- for i in buttons.friendsites %}
-  <li><a class="kimLink" href="{{ i.url }}">{{ i.alt }}</a></li>
+  <li><a class="kimLink" href="{{ i.url }}"><img class="pageLinkFavicon" loading="lazy" alt="" src="{{ i.icon }}"> {{ i.alt }}</a></li>
   {%- endfor %}
 </ul>
 
@@ -105,5 +105,16 @@ Use any of these buttons, if you so desire. You can acquire these buttons progra
 .pageLinkColumns {
 column-width: 20ch;
 column-gap: var(--grid-gutter);
+}
+.pageLinkColumns a {
+display: inline-flex;
+align-items: baseline;
+gap: var(--space-1);
+}
+.pageLinkFavicon {
+display: inline-block;
+inline-size: 16px;
+block-size: 16px;
+margin: 0;
 }
 {% endcss %}
