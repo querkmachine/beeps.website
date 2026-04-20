@@ -213,7 +213,6 @@ export default [
     src: "/assets/images/buttons/no_planet_b.gif",
     alt: "There is no Planet B.",
   },
-  ,
   {
     src: "/assets/images/buttons/bravenet.gif",
     alt: "Bravenet",
