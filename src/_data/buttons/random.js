@@ -98,13 +98,15 @@ export default [
     url: "//social.beeps.gay/@beeps",
   },
   {
+    src: "/assets/images/buttons/kagi_small_web.gif",
+    alt: "Listed in Kagi's Small Web index",
+    url: "//kagi.com/smallweb",
+    showOnHomepage: true,
+  },
+  {
     src: "/assets/images/buttons/i_was_on_cohost.gif",
     alt: "I was on Cohost",
     url: "/blog/2024-09-12-in-memory-of-cohost/",
-  },
-  {
-    src: "/assets/images/buttons/no_planet_b.gif",
-    alt: "There is no Planet B.",
   },
   { src: "/assets/images/buttons/no_paywalls.gif", alt: "No paywalls" },
   {
@@ -158,7 +160,6 @@ export default [
     src: "/assets/images/buttons/github.png",
     alt: "Check out my GitHub",
     url: "//github.com/querkmachine",
-    showOnHomepage: true,
   },
   { src: "/assets/images/buttons/enhanced_html.gif", alt: "Enhanced HTML" },
   {
@@ -174,6 +175,11 @@ export default [
   {
     src: "/assets/images/buttons/responsive.png",
     alt: "Responsive design",
+  },
+  {
+    src: "/assets/images/buttons/sublime_text.png",
+    alt: "Made with Sublime Text editor",
+    url: "//www.sublimetext.com",
   },
   {
     src: "/assets/images/buttons/made_with_macintosh.gif",
@@ -203,6 +209,11 @@ export default [
     url: "/links/#buttons",
     showOnHomepage: true,
   },
+  {
+    src: "/assets/images/buttons/no_planet_b.gif",
+    alt: "There is no Planet B.",
+  },
+  ,
   {
     src: "/assets/images/buttons/bravenet.gif",
     alt: "Bravenet",
