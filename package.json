@@ -28,7 +28,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-directory-output": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
-    "cssnano": "^7.1.7",
+    "cssnano": "^8.0.1",
     "glob": "^13.0.6",
     "highlight.js": "^11.11.1",
     "husky": "^9.1.7",
