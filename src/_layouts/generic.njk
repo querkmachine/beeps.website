@@ -35,7 +35,7 @@
         {%- if preTitle %}
         <div class="kimSubheading-l">{{ preTitle | markdownInline | safe }}</div>
         {%- endif %}
-        <h1 class="kimHeading-xl pageTitle">
+        <h1 class="kimHeading-xl pageTitle"{%- if titleLang %} lang="{{ titleLang }}"{% endif %}>
           {{- title | markdownInline | safe -}}
         </h1>
       </header>
@@ -47,7 +47,7 @@
         </div>
       {%- endif %}
       
-      <div class="pageGeneric_body">
+      <div class="pageGeneric_body"{%- if lang %} lang="{{ lang }}"{% endif %}>
         {% block content %}
           {{ content | safe }}
         {% endblock %}
