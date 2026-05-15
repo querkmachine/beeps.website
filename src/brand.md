@@ -43,7 +43,7 @@ I don't wear exactly the same clothes every day, but when it comes to building r
 
 ## General principles
 
-- Be unaplogetically square and blocky. There aren't many circles or curves here.
+- Be unapologetically square and blocky. There aren't many circles or curves here.
 - Follow good accessibility practices. Use contrasting colours, write good copy.
 
 ## Colours

@@ -48,6 +48,6 @@ Because, like generative AI, microwave lasagne is a washed-out average of the so
 
 Because, like generative AI, microwave food is kind of bad.
 
-Generative AI is not the future, at least not in the form that everyone pushing it down your throat says that it is. It's shit. It's a net contributor to human mystery and environmental collapse. Can we please stop pretending like it's actually good for anything?
+Generative AI is not the future, at least not in the form that everyone pushing it down your throat says that it is. It's shit. It's a net contributor to human misery and environmental collapse. Can we please stop pretending like it's actually good for anything?
 
 The sooner that Big Tech's bubble of delusion bursts, the better off we'll all be for it, and I'll happily be one of those holding a pin.
