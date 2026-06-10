@@ -1,7 +1,3 @@
-<Files "discord">
-ForceType text/plain
-</Files>
-
 <Files "fursona">
 ForceType application/json
 </Files>
