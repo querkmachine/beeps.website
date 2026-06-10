@@ -5,7 +5,6 @@
   margin-block-end: var(--space-5);
 }
 
-.kimWebring_name,
 .kimWebring_link {
   @include links.link-helper(
     $color: var(--color-link),
@@ -15,7 +14,9 @@
 }
 
 .kimWebring_name {
-  display: inline-block;
+  margin: 0;
+  position: relative;
+  font-size: var(--size-0);
   font-weight: bold;
 
   svg {
@@ -23,9 +24,10 @@
     block-size: 1.5em;
     forced-color-adjust: auto;
   }
+}
 
-  &:focus-visible svg {
-    --color-text: var(--color-focus-text);
-    --color-text-accent: var(--color-focus-text);
-  }
+.kimWebring_name .kimWebring_link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }

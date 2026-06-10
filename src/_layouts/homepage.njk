@@ -64,10 +64,10 @@
           {%- for ring in webrings %}
           <div class="kimGrid_column kimGrid_column-oneHalf constitution:kimGrid_column-oneThird">
             <div class="kimWebring">
-              <a class="kimWebring_name" href="{{ ring.url }}">
+              <h3 class="kimWebring_name">
                 {% include "../assets/icons/" + ring.icon + ".svg" %}<br>
-                {{ ring.name }}
-              </a><br>
+                <a class="kimWebring_link" href="{{ ring.url }}">{{ ring.name }}</a>
+              </h3>
               <a class="kimLink-plain kimWebring_link kimWebring_link-next kim-!-noPrint" href="{{ ring.nextUrl }}" aria-label="Next site in the {{ ring.name }}">
                 {% include "../assets/icons/arrow-e.svg" %}
                 Next
