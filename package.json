@@ -32,14 +32,14 @@
     "glob": "^13.0.6",
     "highlight.js": "^11.11.1",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.5",
+    "lint-staged": "^17.0.7",
     "luxon": "^3.7.2",
     "markdown-it": "^14.2.0",
     "markdown-it-anchor": "^9.2.0",
     "node-html-parser": "^7.1.0",
     "postcss": "^8.5.9",
     "postcss-preset-env": "^11.3.0",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "sass": "^1.100.0"
   },
   "lint-staged": {
