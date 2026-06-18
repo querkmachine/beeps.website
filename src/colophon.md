@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Colophon
-updated: 2026-04-01
+updated: 2026-06-18
 metadata:
   description: Giving credit to the people and tools that made this website possible.
 cssComponents:
@@ -45,13 +45,15 @@ Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans
 
 I use [Sublime Text](https://www.sublimetext.com/) as my code editor of choice, accompanied by [iTerm](https://iterm2.com/), [Oh My Zsh](https://ohmyz.sh/) and the [Powerlevel10k theme](https://github.com/romkatv/powerlevel10k) for terminal operations.
 
+Most prosaic content gets written in [iA Writer](https://ia.net/writer), which has been my text editor of choice since 2012.
+
 ## Infrastructure
 
 This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
 
 Domain names (of which I have too many) are managed by [Namecheap](https://www.namecheap.com/) and [Glauca Digital](https://glauca.digital/).
 
-The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images. The [Mastodon API](https://docs.joinmastodon.org/api/) is used for displaying favourites and shares on blog posts.
+The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images.
 
 ## Content
 
