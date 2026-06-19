@@ -73,6 +73,17 @@
     );
   }
 
+  // International Non-Binary People's Day
+  &[data-date="07-05"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(255, 244, 51),
+      rgb(255, 255, 255),
+      rgb(155, 89, 208),
+      rgb(45, 45, 45)
+    );
+  }
+
   // Birthday
   &[data-date="09-22"]::before {
     background-image: linear-gradient(
