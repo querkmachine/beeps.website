@@ -63,6 +63,21 @@
     );
   }
 
+  // Stonewall Day
+  &[data-date="06-28"]::before,
+  // Birthday
+  &[data-date="09-22"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(210, 67, 95),
+      rgb(255, 125, 69),
+      rgb(245, 223, 133),
+      rgb(118, 193, 150),
+      rgb(98, 150, 202),
+      rgb(97, 59, 143)
+    );
+  }
+
   // Otherkin Day
   &[data-date="07-05"]::before {
     background-image: linear-gradient(
@@ -74,26 +89,13 @@
   }
 
   // International Non-Binary People's Day
-  &[data-date="07-05"]::before {
+  &[data-date="07-14"]::before {
     background-image: linear-gradient(
       to right in lch,
       rgb(255, 244, 51),
       rgb(255, 255, 255),
       rgb(155, 89, 208),
       rgb(45, 45, 45)
-    );
-  }
-
-  // Birthday
-  &[data-date="09-22"]::before {
-    background-image: linear-gradient(
-      to right in lch,
-      rgb(210, 67, 95),
-      rgb(255, 125, 69),
-      rgb(245, 223, 133),
-      rgb(118, 193, 150),
-      rgb(98, 150, 202),
-      rgb(97, 59, 143)
     );
   }
 
