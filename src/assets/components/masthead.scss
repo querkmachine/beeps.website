@@ -175,6 +175,7 @@
 
 .kimMasthead_section {
   margin-block: var(--bottom-spacing);
+  font-weight: 750;
 
   @include links.link-helper(
     $color: var(--color-link),
