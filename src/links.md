@@ -9,7 +9,7 @@ cssComponents:
   - button-grid
 ---
 
-{% from "src/_includes/88x31-button.njk" import kim88x31Button %}
+{% from "src/_macros/88x31-button.njk" import kim88x31Button %}
 
 I am remiss that [websites these days don't just link to cool things anymore]({{ '/blog/2023-11-27-buttons/' | url }}). Of course, when I wrote that article, this website didn't do that either, so let's right that wrong.
 

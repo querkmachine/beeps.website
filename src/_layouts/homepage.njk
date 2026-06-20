@@ -2,8 +2,8 @@
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% from "src/_includes/blog-card.njk" import kimBlogCard %}
-{% from "src/_includes/jump-link.njk" import kimJumpLink %}
+{% from "src/_macros/blog-card.njk" import kimBlogCard %}
+{% from "src/_macros/jump-link.njk" import kimJumpLink %}
 
 {% block main %}
 <header class="kimSplash">
@@ -84,7 +84,7 @@
       </section>
       {%- endif %}
       {%- if buttons.homepage %}
-        {% from "src/_includes/88x31-button.njk" import kim88x31Button %}
+        {% from "src/_macros/88x31-button.njk" import kim88x31Button %}
         <section class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
           <h2 class="kimHeading-xs pageSection_heading">Buttons</h2>
           <div class="kimButtonGrid">

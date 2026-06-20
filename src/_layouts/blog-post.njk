@@ -7,8 +7,8 @@
 
 {% extends 'src/_layouts/layout.njk' %}
 
-{% from "src/_includes/blog-card.njk" import kimBlogCard %}
-{% from "src/_includes/interaction-list.njk" import kimInteractionList %}
+{% from "src/_macros/blog-card.njk" import kimBlogCard %}
+{% from "src/_macros/interaction-list.njk" import kimInteractionList %}
 
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}

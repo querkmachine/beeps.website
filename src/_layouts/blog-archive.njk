@@ -1,6 +1,6 @@
 {% extends 'src/_layouts/layout.njk' %}
 
-{% from "src/_includes/blog-card.njk" import kimBlogCard %}
+{% from "src/_macros/blog-card.njk" import kimBlogCard %}
 
 {% set yearList = postsList | getArchiveYears | reverse %}
 
