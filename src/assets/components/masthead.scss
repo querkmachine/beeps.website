@@ -27,8 +27,8 @@
   }
 
   // April Fools Day
-  &[data-date="04-01"] ~ main .kimSplash {
-    rotate: 180deg;
+  &[data-date="04-01"] ~ main .kimSplash_image {
+    transform: rotateX(180deg);
   }
 
   // First Contact Day
