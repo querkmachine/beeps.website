@@ -91,3 +91,12 @@
     transform: translateY(0);
   }
 }
+
+.kimNoodleBowl__ying {
+  block-size: var(--height);
+  position: relative;
+  inset-block-end: -26px;
+  background-image: url("/assets/images/yinglet-footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}

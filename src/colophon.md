@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Colophon
-updated: 2026-06-18
+updated: 2026-06-20
 metadata:
   description: Giving credit to the people and tools that made this website possible.
 cssComponents:
@@ -73,6 +73,8 @@ Ash's headshots were illustrated by [Caius Nocturne](https://nocturne.works/).
 
 {% character character="yinglet", variant="happy" %}
 Ash's yinglet form is depicted using customised [Yingmotes](https://github.com/mynotaurus/yingmotes), created by my friend, [Myno](https://zatzhing.me/)!
+
+Artwork used in zhe yinglet easter egg is by [CrossBunBun](https://sfw.furaffinity.net/user/hotcrossbunnie/) and [MysteryCryptid](https://lenoratheyinglet.carrd.co/).
 
 Za yinglet species was created by [Valsalia](https://www.valsalia.com/).
 {% endcharacter %}

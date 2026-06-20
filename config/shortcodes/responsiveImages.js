@@ -5,6 +5,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
   const defaultArgs = {
     lazy: true,
     classes: "",
+    attributes: {},
     link: false,
     sizes: "100vi",
   };
@@ -35,6 +36,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     class: settings.classes,
     loading: settings.lazy ? "lazy" : "eager",
     decoding: "async",
+    ...settings.attributes,
   });
 
   // If a link is configured, create that too

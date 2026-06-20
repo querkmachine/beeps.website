@@ -97,5 +97,5 @@ And what about [my fursona, Ash]({{ '/ash/' | url }})? Well, Ash is staying Ash.
 I don't have any plans to permanently present as a yinglet in my online presence, but at this point I outta know better than to say 'never'.
 
 {% character character="ash", variant="tongue" %}
-And if you're on a keyboard equipped device, enter the Konami code — <kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>B</kbd> <kbd>A</kbd> — on this page to read it in yinglet.
+And if you're on a keyboard equipped device, type 'ZATZHING' on this page to read it in yinglet.
 {% endcharacter %}

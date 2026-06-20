@@ -14,18 +14,7 @@ export default class ZhatYingZhing {
   }
 
   bindKeyActivation() {
-    const activationSequence = [
-      "ARROWUP",
-      "ARROWUP",
-      "ARROWDOWN",
-      "ARROWDOWN",
-      "ARROWLEFT",
-      "ARROWRIGHT",
-      "ARROWLEFT",
-      "ARROWRIGHT",
-      "B",
-      "A",
-    ];
+    const activationSequence = ["Z", "A", "T", "Z", "H", "I", "N", "G"];
     const keypresses = [];
 
     document.addEventListener("keyup", (event) => {
@@ -92,6 +81,12 @@ export default class ZhatYingZhing {
     // Inject zhe special CSS
     this.injectCSS();
 
+    // If zhis is za homepage, swap out za splash image
+    this.swapSplashImages();
+
+    // Swap out footer image too
+    this.swapFooterImage();
+
     // Find all zhe text nodes on zhe page so we can zhing 'em
     const nodes = this.findTextNodes(this.$element);
 
@@ -113,5 +108,34 @@ export default class ZhatYingZhing {
     });
 
     this.alreadyRan = true;
+  }
+
+  swapSplashImages() {
+    const $noodlImage = document.querySelector(
+      ".kimSplash_image:not(.kimSplash_image--zatzhinged)",
+    );
+    const $yinglImage = document.querySelector(
+      ".kimSplash_image.kimSplash_image--zatzhinged",
+    );
+
+    if (!$noodlImage || !$yinglImage) {
+      return;
+    }
+
+    $noodlImage.setAttribute("hidden", "hidden");
+    $yinglImage.removeAttribute("hidden");
+  }
+
+  swapFooterImage() {
+    const $bowl = document.querySelector(".kimNoodleBowl");
+
+    while ($bowl.firstChild) {
+      $bowl.removeChild($bowl.firstChild);
+    }
+
+    const $yingl = document.createElement("div");
+    $yingl.className = "kimNoodleBowl__ying";
+
+    $bowl.insertAdjacentElement("beforeend", $yingl);
   }
 }
