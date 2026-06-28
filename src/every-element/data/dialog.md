@@ -9,4 +9,18 @@ Container element for content that appears in a dialog (variably known as a 'mod
 
 Useful examples of dialogs include confirmations that a user wants to do something, or certain multitasking situations, such as writing an email whilst still navigating around their inbox. Less useful examples include cookie consent dialogs and newsletter sign up forms.
 
-Dialogs currently require JavaScript to be shown and hidden.
+Dialogs can be opened and closed using JavaScript, or by using HTML `command` and `commandfor` attributes.
+
+<!-- prettier-ignore-start -->
+```html
+<button command="show-modal" commandfor="confirm-dialog">Launch rocket</button>
+
+<dialog id="confirm-dialog">
+  <p>Are you sure about that?</p>
+  <form>
+    <button type="button" command="close" commandfor="confirm-dialog">Abort!</button>
+    <button type="submit">Launch!</button>
+  </form>
+</dialog>
+```
+<!-- prettier-ignore-end -->
