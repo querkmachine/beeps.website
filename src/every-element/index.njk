@@ -12,7 +12,6 @@ cssComponents:
 {% extends 'src/_layouts/layout.njk' %}
 
 {% macro _item(params) %}
-  {%- set mdnLink = params.data.mdn | default("https://developer.mozilla.org/en-US/docs/Web/HTML/Element/" + tag) -%}
   <div class="kimGrid" id="{{ params.data.tag }}">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
       <h2 class="kimBody">
@@ -34,7 +33,7 @@ cssComponents:
     {%- if not params.data.obsolete %}
       <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
         <ul class="kimList">
-          <li><a class="kimLink" href="{{ mdnLink }}">MDN reference</a></li>
+          <li><a class="kimLink" href="{{ params.data.mdn }}">MDN reference</a></li>
           {%- if params.data.spec %}
           <li><a class="kimLink" href="{{ params.data.spec }}">HTML specification</a></li>
           {%- endif %}
