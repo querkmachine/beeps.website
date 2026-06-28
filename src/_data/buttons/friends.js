@@ -254,4 +254,9 @@ export default [
     alt: "Maff",
     url: "//maff.scot/",
   },
+  {
+    src: "/assets/images/buttons/planet_clue.gif",
+    alt: "Planet Clue",
+    url: "//planetclue.com/",
+  },
 ];
