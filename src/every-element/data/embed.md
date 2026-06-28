@@ -7,4 +7,4 @@ spec: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-
 
 Used for embedding external content into a page, usually from an external application or a browser plugin, in conjunction with [`object`](#object).
 
-Historically, this was commonly used for embedding Flash and Java content but has fallen out of use since. It has largely been superceded in modern times by more discrete elements like [`canvas`](#canvas), [`audio`](#audio), and [`video`](#video).
+Historically, this was commonly used for embedding Flash and Java content but has fallen out of use since. It has largely been superseded in modern times by more discrete elements like [`canvas`](#canvas), [`audio`](#audio), and [`video`](#video).

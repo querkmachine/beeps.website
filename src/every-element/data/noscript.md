@@ -18,4 +18,4 @@ Provides fallback content for browsers that do not support JavaScript or where J
 ```
 <!-- prettier-ignore-end -->
 
-Notably, `noscript` does _not_ display for browsers where JavaScript is available, but scripts failed to load or run without erroring. You need to handle those use cases yourself.
+Notably, `noscript` content does _not_ display for browsers where JavaScript is available but scripts failed to load or run. You need to handle those use cases yourself.

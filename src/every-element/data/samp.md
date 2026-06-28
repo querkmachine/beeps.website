@@ -13,4 +13,4 @@ In the event that Panel F7 reads <samp>HYD PRESS</samp>, the hydraulics system p
 ```
 <!-- prettier-ignore-end -->
 
-`samp` is intended for static output samples. For showing the _actual_ output of a program that is running or has just been ran, use [`output`](#output) instead.
+`samp` is intended for static output samples. For showing the _actual_ output of a program that is running or has just been run, use [`output`](#output) instead.

@@ -7,7 +7,7 @@ obsolete: true
 
 Displayed text in a monospace font, akin to teletype machines, before CSS was really a thing.
 
-Superceded by several semantic alternatives:
+Superseded by several semantic alternatives:
 
 - [`code`](#code) for code snippets.
 - [`kbd`](#kbd) for keyboard inputs.

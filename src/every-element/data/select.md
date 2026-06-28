@@ -9,7 +9,7 @@ Allows a user to select an [`option`](#option) from a list. By default, a user c
 
 <!-- prettier-ignore-start -->
 ```html
-<label for="planets">Your one absolutele most favourite planet</label>
+<label for="planets">Your one absolutely most favourite planet</label>
 <select id="planets">
   <option>Mercury</option>
   <option>Venus</option>

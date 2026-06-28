@@ -9,7 +9,7 @@ Represents the label for a form control, such as [`input`](#input), [`select`](#
 
 `label` elements are typically associated to the form control using a `for` attribute that matches the `id` of the associated element. The control may also be wrapped in the `label` element, though this tends to limit styling options.
 
-A `label` should only be associated to a single form control, and every control should have a label.
+A `label` should only be associated with a single form control, and every control should have a label.
 
 <!-- prettier-ignore-start -->
 ```html

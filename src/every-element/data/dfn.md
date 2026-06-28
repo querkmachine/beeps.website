@@ -11,6 +11,6 @@ It should be used as part of a [`p`](#p), [`section`](#section), or [`dt`](#dt)/
 
 <!-- prettier-ignore-start -->
 ```html
-<p>A <dfn>light-year</dfn> is a unit of length equivalent to 9.46 billion kilometres.</p>
+<p>The period of maximum dynamic pressure, commonly referred to as <dfn>max q</dfn>, is the most dangerous part of a spacecraft's launch.</p>
 ```
 <!-- prettier-ignore-end -->

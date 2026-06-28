@@ -31,3 +31,5 @@ A mechanism for passing HTML attributes to the columns in a [`table`](#table) wi
 </table>
 ```
 <!-- prettier-ignore-end -->
+
+`col` elements are applied on the inline axis (for example, left-to-right in English, right-to-left in Arabic). If you want to skip a column, add a `col` element with no attributes.

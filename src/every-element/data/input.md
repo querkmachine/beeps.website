@@ -86,7 +86,7 @@ Colour inputs usually only support the sRGB colour space and returns values in h
 
 ### The `checkbox` and `radio` types
 
-Renders selection boxes for a list of options. Checkboxes allow multiple option to be chosen, whereas radio buttons only allow one.
+Renders selection boxes for a list of options. Checkboxes allow multiple options to be chosen, whereas radio buttons only allow one.
 
 These options should all have the same `name` attribute, individual [`label`s](#label), and be wrapped within a [`fieldset`](#fieldset).
 

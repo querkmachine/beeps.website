@@ -7,4 +7,4 @@ obsolete: true
 
 Specified the default font family, size and colour to use on a document. Like [`font`](#font), but it automatically applied to everything.
 
-These days, just use CSS.
+These days, you can just use CSS.

@@ -14,4 +14,4 @@ Unsurprisingly, surrounds a paragraph of content.
 ```
 <!-- prettier-ignore-end -->
 
-You pretty much always want to surround sizeable blocks of text in a `p`, as it allows assistive technology users to rapidly move between paragraphs of text. Don't use multiple [`br`](#br) elements to emulate paragraphs, and don't use empty `p` elements to emulate spacing—use CSS instead.
+You pretty much always want to surround sizable blocks of text in a `p`, as it allows assistive technology users to rapidly move between paragraphs of text. Don't use multiple [`br`](#br) elements to emulate paragraphs, and don't use empty `p` elements to emulate spacing—use CSS instead.
