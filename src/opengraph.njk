@@ -1,15 +1,11 @@
 ---js
 {
   pagination: {
-    data: "collections.all",
+    data: "collections.contentPages",
     size: 1,
     alias: "preview"
   },
-  permalink: function (data) {
-    return data.preview.data.page.url 
-      ? `/.opengraph${data.preview.data.page.url}`
-      : false 
-  },
+  permalink: "/.opengraph{{preview.url}}",
   eleventyExcludeFromCollections: true
 }
 ---

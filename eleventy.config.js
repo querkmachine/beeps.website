@@ -101,6 +101,9 @@ export default function (eleventyConfig) {
     eleventyConfig.ignores.add(paths.src + "/blog/drafts/**/*");
   }
 
+  // Ignore macros directory
+  eleventyConfig.ignores.add(paths.src + "/_macros");
+
   // Copy JS and assets
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/fonts");
   eleventyConfig.addPassthroughCopy(paths.srcAssets + "/images");
@@ -132,6 +135,9 @@ export default function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("tags", getAllTags);
+  eleventyConfig.addCollection("contentPages", (collection) =>
+    collection.getAll().filter((item) => item.url && item.url !== false),
+  );
 
   // Bundles
   eleventyConfig.addBundle("css");
