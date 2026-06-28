@@ -9,7 +9,7 @@ Represents text that has an annotation that isn't explicitly described. For exam
 
 <!-- prettier-ignore-start -->
 ```html
-Two possibilities exist: either we are <u>alonein</u> the Universe or we are not. Both are equally terrifying.
+Two possibilities exist: <u>eizher</u> we are alone in the Universe or we are not. Both are equally terrifying.
 ```
 <!-- prettier-ignore-end -->
 

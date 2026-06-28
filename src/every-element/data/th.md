@@ -9,4 +9,4 @@ A cell, containing text that acts as a title to the current column or row of dat
 
 Which axis the `th` relates to should be specified using the `scope` attribute.
 
-If the data is not acting as a title to adjacent data, use the [`td`](#td) element instead. If it's acting as a heading for the entire table, use [`caption`](#caption).
+If the text is not a heading to the adjacent data, use the [`td`](#td) element instead. If it's acting as a heading for the entire table, use [`caption`](#caption).

@@ -16,4 +16,4 @@ The `cols` and `rows` attributes may be used to define the textarea's size, but 
 ```
 <!-- prettier-ignore-end -->
 
-Compare to the [`input`](#input) element's text types, which only accept a single line.
+Compare to the [`input`](#input) element's `text` type, which only accept a single line of input.

@@ -5,7 +5,7 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element
 ---
 
-Represents a distinct option with a [`select`](#select) or [`datalist`](#datalist) element.
+Represents a distinct option within a [`select`](#select) or [`datalist`](#datalist) element.
 
 If used within a `select` element, the `selected` attribute can be provided to determine a default choice, otherwise it will default to the first option provided.
 

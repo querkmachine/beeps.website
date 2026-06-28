@@ -9,4 +9,4 @@ Rendered its contents as plain text, not parsing any HTML or collapsing whitespa
 
 Like [`plaintext`](#plaintext), but could be closed this time.
 
-Is now deprecated. Use the [`pre`](#pre) and [`code`](#code) elements with manually escaped HTML tags instead.
+Use the [`pre`](#pre) and [`code`](#code) elements with manually escaped HTML tags instead.

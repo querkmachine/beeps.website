@@ -13,4 +13,4 @@ Represents text that is important, relative to the other content.
 ```
 <!-- prettier-ignore-end -->
 
-For text that should have visually prominence, but isn't important to the content, use [`b`](#b).
+For text that should have visual prominence, but isn't important to the content, use [`b`](#b).

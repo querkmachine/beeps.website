@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-e
 
 Represents an opportunity to insert a line break, if one is required to avoid the text overflowing the element.
 
-Useful for long, compound words that might be displayed in a constrained space, allowing you to define word boundaries where it's least disruptive to break the word.
+Useful for long, compound words that might be displayed in a constrained space, allowing you to define word boundaries where it's least disruptive for the reader.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -15,4 +15,4 @@ The German Space Agency has their own interest in starting a <span lang="de">Wel
 ```
 <!-- prettier-ignore-end -->
 
-If a word is broken across lines, `wbr` will not introduce a hyphen. Use a soft hyphen (`&shy;`) instead of `wbr` if you want line breaks to be hyphenated.
+`wbr` will not introduce a hyphen when it breaks across lines. Use a soft hyphen (`&shy;`) instead of `wbr` if you want line breaks to be hyphenated.

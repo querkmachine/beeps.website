@@ -63,7 +63,7 @@ Browsers will usually also provide a calendar interface to pick a date and a lis
 
 Browsers adapt the format to match the user's language and locale (for example, rendering as `MM/DD/YYYY` in the United States and `DD/MM/YYYY` in most other English-speaking locales).
 
-Date values sent to the server in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+Date values are sent to the server in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
 
 - Dates: `YYYY-MM-DD`, for example, `1969-07-16`.
 - Times: `hh:mm`, in the 24-hour clock, for example, `13:32`.

@@ -32,4 +32,4 @@ If `pre` is being used to produce a visual, such as ASCII art, then it should be
 ```
 <!-- prettier-ignore-end -->
 
-`pre` is often used in confunction with [`code`](#code) to display code snippets.
+`pre` is often used in conjunction with [`code`](#code) to display code snippets.

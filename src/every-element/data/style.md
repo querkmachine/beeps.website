@@ -5,7 +5,7 @@ category: Metadata
 spec: https://html.spec.whatwg.org/multipage/semantics.html#the-style-element
 ---
 
-Allows for inserting CSS style information directly into the current page. CSS inserted using `style` have a higher priority than CSS in external stylesheets, but lower priority than elements with inline `style` attributes.
+Allows for inserting CSS style rules directly into the current page. CSS inserted using `style` has a higher priority than CSS in external stylesheets, but lower priority than elements with inline `style` attributes.
 
 <!-- prettier-ignore-start -->
 ```html

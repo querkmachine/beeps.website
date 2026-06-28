@@ -30,7 +30,7 @@ There are many, many more semantic alternatives to `section`. For a non-exhausti
 - For navigation elements, use [`nav`](#nav).
 - For wrapping the primary content of the page, use [`main`](#main).
 - For the main heading of a page, or headings within a section, use [`header`](#header).
-- For the main footer of a page, or
+- For the main footer of a page, or metadata within a section, use [`footer`](#footer).
 - For a piece of content that makes sense outside of the context of the rest of the page, use [`article`](#article).
 - For content that is supplemental to the page's content, use [`aside`](#aside).
 - For search functionality, use [`search`](#search).
