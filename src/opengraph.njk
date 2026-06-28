@@ -1,10 +1,13 @@
----
-pagination:
-  data: collections.all
-  size: 1
-  alias: preview
-permalink: "/.opengraph{{ preview.data.page.url }}"
-eleventyExcludeFromCollections: true
+---js
+{
+  pagination: {
+    data: "collections.contentPages",
+    size: 1,
+    alias: "preview"
+  },
+  permalink: "/.opengraph{{preview.url}}",
+  eleventyExcludeFromCollections: true
+}
 ---
 
 {% extends 'src/_layouts/opengraph.njk' %}

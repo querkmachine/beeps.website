@@ -61,6 +61,11 @@ export default function () {
             description: "Collated links about website design and development.",
           },
           {
+            href: "/every-element/",
+            text: "Every HTML element",
+            description: "A one-page guide to HTML semantics.",
+          },
+          {
             href: "/govuk-browser-data/",
             text: "GOV.UK browser data",
             description:
