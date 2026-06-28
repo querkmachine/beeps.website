@@ -51,25 +51,19 @@ export default function () {
         heading: "Web development",
         links: [
           {
-            href: "/accessibility-for-furries/",
-            text: "Accessibility for furries",
-            description: "Free web accessibility audits for the fandom.",
-          },
-          {
             href: "/stash/",
             text: "The stash",
             description: "Collated links about website design and development.",
           },
           {
+            href: "/accessibility-for-furries/",
+            text: "Accessibility for furries",
+            description: "Free web accessibility audits for the furry fandom.",
+          },
+          {
             href: "/every-element/",
             text: "Every HTML element",
             description: "A one-page guide to HTML semantics.",
-          },
-          {
-            href: "/govuk-browser-data/",
-            text: "GOV.UK browser data",
-            description:
-              "Monthly analytics data from one of the UK's busiest websites.",
           },
         ],
       },
