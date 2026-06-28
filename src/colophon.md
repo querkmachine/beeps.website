@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Colophon
-updated: 2026-06-20
+updated: 2026-06-28
 metadata:
   description: Giving credit to the people and tools that made this website possible.
 cssComponents:
@@ -9,6 +9,12 @@ cssComponents:
 ---
 
 A colophon is a short section you can find at the back of some books, giving some details about the creation of the book. I quite like making these for some of my websites, as a little exercise in being thankful and giving some link love to the open source projects and individual contributors that helped make it happen.
+
+## Design
+
+I've rambled a little about this website's design before, most notably, pointing out that [it's a little bit crap on purpose]({{ '/blog/2023-06-21-some-untamed-rambling-about-how-this-website-is-built/' | url }}). I also sometimes write posts about major design updates under the [meta tag]({{ '/blog/meta/' | url }}).
+
+Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans) typeface released by GitHub.
 
 ## Code
 
@@ -36,10 +42,6 @@ Hat tips to the following folks for contributing code or concepts that currently
 - [Rob Hudson](https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/), for asset cache busting
 - [Una Kravets](https://una.im/scroll-target-group), for a method of highlighting the current section in tables of contents
 - [Zach Leatherman](https://www.zachleat.com/web/automatic-opengraph/), for OpenGraph image generation
-
-## Design
-
-Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans) typeface released by GitHub.
 
 ## Software
 
