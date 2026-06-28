@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-eleme
 
 Embeds an image into the document.
 
-Images should include an `alt` attribute that [succinctly describes the contents of the image]({{ '/blog/2024-12-02-alt-text/' | url }}').
+Images should include an `alt` attribute that [succinctly describes the contents of the image]({{ '/blog/2024-12-02-alt-text/' | url }}).
 
 <!-- prettier-ignore-start -->
 ```html
