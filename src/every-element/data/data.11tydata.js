@@ -4,7 +4,9 @@ export default function () {
     tags: ["every-element"],
     eleventyComputed: {
       mdn: async (data) =>
-        `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${data.tag}`,
+        data.mdn
+          ? data.mdn
+          : `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${data.tag}`,
     },
   };
 }

@@ -5,7 +5,7 @@ category: Media
 spec: https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
 ---
 
-A container for an [`img`](#img) and any number of [`source`](#sources) elements, that allows for conditionally changing the image being displayed by the `img` based on screen resolution, viewport size, and browser support.
+A container for an [`img`](#img) and any number of [`source`](#source) elements, that allows for conditionally changing the image being displayed by the `img` based on screen resolution, viewport size, and browser support.
 
 `picture` must contain a single `img` element, which comes last in the element. This `img` is used as a fallback if the browser doesn't support the `picture` element or none of the provided `source`s are able to be used.
 
