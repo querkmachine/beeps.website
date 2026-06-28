@@ -6,6 +6,7 @@ metadata:
 cssComponents:
   - code
   - tag
+  - meta
 ---
 
 {% extends 'src/_layouts/layout.njk' %}
@@ -52,6 +53,19 @@ cssComponents:
 <div class="kimWrapper kim-!-margin-block-8-9">
   <div class="kimGrid"> 
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+      {%- if updated %}
+      <dl class="kimMeta">
+        <div class="kimMeta_item">
+          <dt class="kimMeta_key">Last updated</dt>
+          <dd class="kimMeta_value">
+            <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
+              {{- updated | formatDate('human') -}}
+            </time>
+          </dd>
+        </div>
+      </dl>
+      {%- endif %}
+    
       <h1 class="kimHeading-xl">{{ title }}</h1>
       <p class="kimBody">HTML is a semantic language. Nearly every element provides a specific meaning to its contents or function. This is a quick reference for what those meanings are.</p>
       <p class="kimBody">Well-written HTML will use the most appropriate element for the job, but you don't need to know every single element from memory!</p>
