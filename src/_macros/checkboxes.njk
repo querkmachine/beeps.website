@@ -1,0 +1,36 @@
+{% macro _checkbox(params, item, index) %}
+  {%- set itemId = params.id + "-" + index if index > 1 else params.id %}
+  {%- set hintId = itemId + "-Hint" if params.hint else "" -%}
+  
+  <div class="kimCheckbox {%- if item.classes %} {{ item.classes }}{% endif %}">
+    <input
+      class="kimCheckbox_input"
+      type="checkbox" 
+      name="{{ params.name if params.name else params.id }}" 
+      id="{{ itemId }}" 
+      value="{{ item.value }}" 
+      {%- if hintId %} aria-describedby="{{ hintId }}"{% endif %}
+      {%- if item.checked %} checked{% endif %}
+      {%- if item.disabled %} disabled{% endif %}
+      {%- for attribute, value in item.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+    <label class="kimLabel kimCheckbox_label" for="{{ itemId }}">
+      {{- item.label | safe -}}
+    </label>
+    {%- if hintId %}
+    <div class="kimHint kimCheckbox_hint" id="{{ hintId }}">
+      {{- item.hint | safe -}}
+    </div>
+    {%- endif %}
+  </div>
+{% endmacro %}
+
+{% macro kimCheckboxes(params) %}  
+  <fieldset class="kimFieldset">
+    <legend class="kimFieldset_legend">{{ params.legend }}</legend>
+    <div>
+      {%- for item in params.items %}
+        {{ _checkbox(params, item, loop.index) }}
+      {%- endfor %}
+    </div>
+  </fieldset>
+{% endmacro %}

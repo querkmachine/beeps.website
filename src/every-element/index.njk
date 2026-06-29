@@ -7,41 +7,49 @@ cssComponents:
   - code
   - tag
   - meta
+  - checkboxes
 ---
 
 {% extends 'src/_layouts/layout.njk' %}
 
+{% from "src/_macros/checkboxes.njk" import kimCheckboxes %}
+
 {% macro _item(params) %}
-  <div class="kimGrid" id="{{ params.data.tag }}">
-    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
-      <h2 class="kimBody">
-        {{ _e(params.data.tag) }}
-        {%- if params.data.name %}:<br>the {{ params.data.name }} element{% endif %}
-      </h2>
-      {%- if params.data.category %}
-        <p class="kimBody-s">{{ params.data.category }}</p>
-      {%- endif %}
-    </div>
-    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
-      {%- if params.data.experimental %}
-        <p class="kimBody"><span class="kimTag kimTag-accent">Experimental</span></p>
-      {%- elif params.data.obsolete %}
-        <p class="kimBody"><span class="kimTag">Obsolete</span></p>
-      {%- endif %}
-      {{ params.content | safe }}
-    </div>
-    {%- if not params.data.obsolete %}
+  <article
+    class="pageItem"
+    id="{{ params.data.tag }}" 
+    data-category="{{ params.data.category | slugify if params.data.category }}">
+    <div class="kimGrid">
       <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
-        <ul class="kimList">
-          <li><a class="kimLink" href="{{ params.data.mdn }}">MDN reference</a></li>
-          {%- if params.data.spec %}
-          <li><a class="kimLink" href="{{ params.data.spec }}">HTML specification</a></li>
-          {%- endif %}
-        </ul>
+        <h2 class="kimBody">
+          {{ _e(params.data.tag) }}
+          {%- if params.data.name %}:<br>the {{ params.data.name }} element{% endif %}
+        </h2>
+        {%- if params.data.category %}
+          <p class="kimBody-s">{{ params.data.category }}</p>
+        {%- endif %}
       </div>
-    {%- endif %}
-  </div>
-  <hr class="kimRule kimRule-hairline">
+      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
+        {%- if params.data.experimental %}
+          <p class="kimBody"><span class="kimTag kimTag-accent">Experimental</span></p>
+        {%- elif params.data.obsolete %}
+          <p class="kimBody"><span class="kimTag">Obsolete</span></p>
+        {%- endif %}
+        {{ params.content | safe }}
+      </div>
+      {%- if not params.data.obsolete %}
+        <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
+          <ul class="kimList">
+            <li><a class="kimLink" href="{{ params.data.mdn }}">MDN reference</a></li>
+            {%- if params.data.spec %}
+            <li><a class="kimLink" href="{{ params.data.spec }}">HTML specification</a></li>
+            {%- endif %}
+          </ul>
+        </div>
+      {%- endif %}
+    </div>
+    <hr class="kimRule kimRule-hairline">
+  </article>
 {% endmacro %}
 
 {% macro _e(tag) -%}
@@ -66,9 +74,36 @@ cssComponents:
       {%- endif %}
     
       <h1 class="kimHeading-xl">{{ title }}</h1>
+    </div>
+  </div>
+    
+  <div class="kimGrid"> 
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
       <p class="kimBody">HTML is a semantic language. Nearly every element provides a specific meaning to its contents or function. This is a quick reference for what those meanings are.</p>
       <p class="kimBody">Well-written HTML will use the most appropriate element for the job, but you don't need to know every single element from memory!</p>
       <p class="kimBody">I highly encourage you to use your browser's find-in-page feature on this page.</p>
+    </div>
+    
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird" id="filters-container">
+      {{ kimCheckboxes({
+        id: "filters",
+        legend: "Filter the list",
+        items: [
+          { value: "embedded-content", label: "Embedded content", checked: true },
+          { value: "forms", label: "Forms", checked: true },
+          { value: "grouping-content", label: "Grouping content", checked: true },
+          { value: "image-maps", label: "Image maps", checked: true },
+          { value: "interactive-elements", label: "Interactive elements", checked: true },
+          { value: "lists", label: "Lists", checked: true },
+          { value: "media", label: "Media", checked: true },
+          { value: "metadata", label: "Metadata", checked: true },
+          { value: "ruby-text", label: "Ruby text", checked: true },
+          { value: "sections-of-a-page", label: "Sections of a page", checked: true },
+          { value: "scripting", label: "Scripting", checked: true },
+          { value: "tables", label: "Tables", checked: true },
+          { value: "text-semantics", label: "Text semantics", checked: true }
+        ]
+      }) }}
     </div>
   </div>
   
@@ -86,4 +121,61 @@ cssComponents:
 {% css %}
 /* Disable smooth scrolling cuz it's kinda fucked on a page this long. */
 .kimPage { scroll-behavior: auto; }
+
+.pageItem { display: block; }
+.pageItem[hidden]:not(:target) { display: none; }
 {% endcss %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    const $container = document.getElementById("filters-container")
+    const $filters = document.querySelectorAll("[name='filters']")
+    const $listItems = document.querySelectorAll(".pageItem")
+    const activeFilters = new Set()
+    
+    // Populate activeFilters with initial state
+    $filters.forEach($filter => {
+      if($filter.checked) {
+        activeFilters.add($filter.value)
+      }
+    })
+    
+    // Set up status element
+    const $status = document.createElement("span")
+    $status.className = "kim-!-sr"
+    $status.setAttribute("aria-live", "polite")
+    $container.insertAdjacentElement("beforeend", $status)
+    
+    // Function to do the actual filtering
+    const filterList = () => {
+      // Wipe out the hash cuz otherwise the currently targetted thing will stay visible 
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+      
+      $listItems.forEach($item => {
+        const itemCategory = $item.dataset?.category
+        console.log(activeFilters, itemCategory, activeFilters.has(itemCategory))
+        if(activeFilters.has(itemCategory)) {
+          $item.removeAttribute("hidden")
+        }
+        else {
+          $item.setAttribute("hidden", "hidden")
+        }
+      })
+    }
+    
+    // Bind event handler
+    $filters.forEach($filter => {
+      $filter.addEventListener("change", () => {
+        if($filter.checked) {
+          activeFilters.add($filter.value)
+        }
+        else {
+          activeFilters.delete($filter.value)
+        }
+        filterList()
+      })
+    })
+    
+  </script>
+{% endblock %}
