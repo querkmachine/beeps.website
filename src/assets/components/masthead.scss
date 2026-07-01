@@ -78,6 +78,20 @@
     );
   }
 
+  // Disability Pride Month
+  &[data-date="07-01"]::before {
+    background-image: linear-gradient(
+      to right in lch,
+      rgb(80, 80, 80),
+      rgb(207, 114, 123),
+      rgb(238, 223, 119),
+      rgb(233, 233, 233),
+      rgb(122, 193, 224),
+      rgb(58, 175, 125),
+      rgb(80, 80, 80)
+    );
+  }
+
   // Otherkin Day
   &[data-date="07-05"]::before {
     background-image: linear-gradient(
