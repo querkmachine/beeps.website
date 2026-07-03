@@ -1,6 +1,5 @@
 ---
 title: How to talk to me
-redirect_from: /m4m/
 metadata:
   description: Some detailed information on how best to communicate with me.
 ---
