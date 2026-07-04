@@ -45,7 +45,7 @@ cssComponents:
 {% endmacro %}
 
 {% macro _e(tag) -%}
-<code class="kimCode"><a class="kimLink-noVisited" href="#{{ tag }}">&lt;{{ tag }}&gt;</a></code>
+<code class="kimCode"><a class="kimLink-noVisited" href="#{{ tag | slugify }}">&lt;{{ tag }}&gt;</a></code>
 {%- endmacro %}
 
 {% block main %}
