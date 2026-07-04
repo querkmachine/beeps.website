@@ -12,7 +12,7 @@ cssComponents:
 {% extends 'src/_layouts/layout.njk' %}
 
 {% macro _item(params) %}
-  <div class="kimGrid" id="{{ params.data.tag }}">
+  <div class="kimGrid" id="{{ params.data.tag | slugify }}">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
       <h2 class="kimBody">
         {{ _e(params.data.tag) }}

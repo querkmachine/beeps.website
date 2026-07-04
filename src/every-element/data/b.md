@@ -13,4 +13,4 @@ Text that requires visual prominence, but is not important in the context of the
 ```
 <!-- prettier-ignore-end -->
 
-If the text is important to the content, use [`strong`](#strong). For headings, use [`h1`–`h6`](#h%23).
+If the text is important to the content, use [`strong`](#strong). For headings, use [`h1`–`h6`](#h).
