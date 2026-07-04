@@ -9,7 +9,7 @@
     "serve": "npm run clean && ENVIRONMENT=dev npx @11ty/eleventy --serve --incremental",
     "build": "npm run clean && ENVIRONMENT=prod npx @11ty/eleventy && npm run lint:build",
     "lint": "npx prettier --write --ignore-unknown . '!_site/**/*'",
-    "lint:build": "cd '_site' && npx prettier --write --ignore-unknown --use-tabs=true '.'",
+    "lint:build": "cd '_site' && npx prettier --write --no-config --print-width=1000 --ignore-unknown --use-tabs=true '.'",
     "prepare": "husky"
   },
   "repository": {
