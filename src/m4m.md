@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Manual for beeps
-updated: 2026-07-03
+updated: 2026-07-04
 metadata:
   noRobots: true
   description: Advice for my coworkers.
@@ -25,17 +25,17 @@ I’m currently undergoing investigations related to a number of health issues, 
 
 - severe hypertension
 - hearing loss
-- thoracic outlet syndrome (aka, my arms keep going numb for some reason)
+- thoracic outlet syndrome (aka my arms keep going numb for some reason)
 
 I also have occasional appointments relating to gender transition.
 
-Consequently, I have quite a lot of hospital and GP appointments. When I can, I schedule these to be on my non-working day or, if they’re more substantial, will move my non-working day to cover them off. Medical appointments will be listed in my calendar if they land during work hours.
+Consequently I have quite a lot of hospital and GP appointments. When I can, I schedule these to be on my non-working day or, if they’re more substantial, will move my non-working day to cover them off. Medical appointments will be listed in my calendar if they land during work hours.
 
 Due to lethargy introduced by having severe obstructive sleep apnea, I may sometimes struggle to maintain energy levels and need to take breaks or stop working earlier than normal. I also experience episodes of [microsleep](https://en.wikipedia.org/wiki/Microsleep), where I will suddenly fall asleep without warning for short periods of time.
 
 ## Conditions I like to work in
 
-I deal with a lot of **anxiety and dysphoria** and will rarely (if ever) show my face on camera or in [profile images](#avatars). On days where it’s particularly bad, I may also refrain from speaking and solely use written communication instead. If we’re meeting in person, please ask before taking any photographs with me in them.
+I deal with a lot of **anxiety and dysphoria** and will rarely (if ever) show my face on camera or in [profile images](#avatars). On days when it’s particularly bad, I may also refrain from speaking and solely use written communication instead. If we’re meeting in person, please ask before taking any photographs with me in them.
 
 I prefer to **work from home**. Having a fine level of control over my environment helps me to concentrate, easily remedy distractions, and permits me to more readily take a break if I feel I need it.
 
@@ -43,9 +43,9 @@ I prefer to **work from home**. Having a fine level of control over my environme
 
 ## My working hours
 
-I currently work **compressed hours** at home and will typically be online between 8am and 7pm. My non-working day is Wednesday, unless otherwise noted in my calendar.
+I currently work **compressed hours** at home and will typically be online between 8am and 7pm. My non-working day is Wednesday unless otherwise noted in my calendar.
 
-When **working from the Bristol hub** I tend to work a truncated day of 9:30am until 4:30pm, due to commuting time, awkwardly scheduled trains, and generally struggling to work in that environment.
+When **working from the Bristol hub** I tend to work a truncated day of 9:30am until 4:30pm due to commuting time, awkwardly scheduled trains, and generally struggling to work in that environment.
 
 **Lunch breaks** are typically 1pm to 2pm, but time and length may vary from day to day.
 
@@ -81,9 +81,9 @@ Preferably give any **feedback to me directly**, ideally via Slack private messa
 
 **I _despise_ presenting at and facilitating meetings.** They basically combine all of my issues with dysphoria, real-time communication and anxiety into one thing.
 
-**I have audio processing issues and am partially deaf** in one ear. I find it really difficult to listen, read and/or write simultaneously, so I avoid volunteering for note taking duties. I also struggle to understand strong accents or pick voices out of a noisy environment, so I may need you to repeat things sometimes.
+**I have audio processing issues and am partially deaf** in one ear. I find it really difficult to listen, read and/or write simultaneously, so I avoid volunteering for note-taking duties. I also struggle to understand strong accents or pick voices out of a noisy environment, so I may need you to repeat things sometimes.
 
-I’m often overly-conscious about ‘butting in’ during meetings, and will often wait until there’s an extended period of quiet before raising a hand or speaking up. **Prompting me to contribute** can sometimes help, but usually if I have something to add to a busy discussion, I’ll add it to the text chat.
+I’m often overly conscious about ‘butting in’ during meetings, and will often wait until there’s an extended period of quiet before raising a hand or speaking up. **Prompting me to contribute** can sometimes help, but usually if I have something to add to a busy discussion, I’ll add it to the text chat.
 
 **I’m pretty bad at ‘small talk’ and remembering names**, though the latter is only really an issue when in person, as there isn’t a name label floating next to you then!
 
@@ -115,7 +115,7 @@ I’m weirdly into **psephology**: the statistical analysis of elections and ele
 
 I actively maintain a website with a blog and other random stuff I like to publish: [beeps.website](/) (you're on it right now!)
 
-You can find other social media channels [the contact page]({{ '/contact/' | url }}).
+You can find other social media channels on [the contact page]({{ '/contact/' | url }}).
 
 ## Other bits 'n' bobs
 
@@ -129,12 +129,13 @@ You can find other social media channels [the contact page]({{ '/contact/' | url
 
 ### Random trivia
 
+- I'm half-Malaysian. 🇲🇾
+- In addition to that, members of my family live in or originate from 🇲🇾 Malaysia, 🇨🇦 Canada, 🇮🇪 Ireland, 🇳🇿 New Zealand, and the 🇺🇸 United States.
 - I’ve been slowly learning Swedish since mid-2025. 🇸🇪
 - I built my first website during Easter break in 2003, when I was 11. It was about The Sims.
 - I have a book dedicated to me. It’s a history book about the medieval history of the north of England.
 - Things I’ve written have been quoted in _Design Week_, _Brand New_, and _.net Magazine_.
 - Things I’ve made have somehow ended up on BBC News more than once.
-- Fun near death (or near serious injury) experiences include nearly drowning in the sea, swimming off a waterfall, and falling off a cliff. All three times I was rescued by a family member.
 
 ### Avatars
 
