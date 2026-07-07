@@ -119,18 +119,18 @@
  */ 
  
 .pageTransRights {
-  --pink: light-dark(#C92EBF, #F7A8B8);
-  --blue: light-dark(#2E68FF, #55CDFC);
   padding-block: var(--space-7);
   padding-inline: var(--space-4);
   position: relative;
   background-color: var(--color-surface);
+  background-image: linear-gradient(to bottom in lch, #F7A8B8, #FFF, #55CDFC);
+  background-attachment: fixed;
 }
 
 .pageTransRights p {
   margin: 0;
   padding-block: var(--space-1);
-  color: var(--pink);
+  color: #C92EBF;
   font-size: var(--size-4);
   font-weight: 600;
   line-height: 1;
@@ -140,7 +140,7 @@
 
 .pageTransRights span {
   font-weight: 900;
-  color: var(--blue);
+  color: #2E68FF;
 }
 
 {% endcss %}
