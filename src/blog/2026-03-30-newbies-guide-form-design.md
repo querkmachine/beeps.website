@@ -6,6 +6,10 @@ cssComponents:
   - character
   - code
   - figure
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "116320066882516555"
 ---
 
 The second in my mini series about web form design. See [part one, which focused on the kinds of questions you ask]({{ '/blog/2026-03-17-newbies-guide-to-forms-structure/' | url }}) if you haven't already. This post is going to cover some bits about **how you lay out those questions**.

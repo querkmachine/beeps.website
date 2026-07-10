@@ -5,6 +5,10 @@ tags: [random]
 cssComponents:
   - callout
   - figure
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "116518406501551876"
 ---
 
 It's a bank holiday, so have a cheap and easy blog post whilst I spend the day doing other stuff.

@@ -5,6 +5,10 @@ tags: [web development]
 cssComponents:
   - figure
   - code
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "116891985911435196"
 ---
 
 {% from "src/_macros/jump-link.njk" import kimJumpLink %}
@@ -22,6 +26,8 @@ So yeah, I built that.
 {% figure caption="Tadaaa! [Link to this grid.](https://colors.beeps.gay/?hash=MDAwLDRCNEI0QixFRUUsRkZGLDU4ODE1NywwMEUyMDAsNzg2OTk5LDdDNTZGQyxGQzA%3D)" %}
 {% image "/images/Contrast Ratio Color Grid.jpeg", "Screenshot of a webpage. The left hand side shows a list of colour hex codes that have been input by a user and a score guide. The right side shows a two-dimensional grid of all of the provided colours, showing a swatch of colour A text on top of colour B and a score grading how well the combination scores against WCAG." %}
 {% endfigure %}
+
+## Why I made this thing
 
 The [Contrast Ratio Color Grid tool](https://colors.beeps.gay/) (I never said I was good at names) is a side project that I started working on in 2024, when I first got involved in the [GOV.UK brand refresh project]({{ '/blog/2025-06-25-the-not-quite-new-govuk-brand/' | url }}).
 
