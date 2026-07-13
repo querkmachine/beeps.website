@@ -137,14 +137,16 @@
 .pagePost {
   display: grid;
   column-gap: var(--grid-gutter);
-  grid-template-columns: 1fr;
+  /* minmax() prevents code blocks from breaking out of grid columns */
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "header" "toc" "body" "tags" "postNav" "interactions";
   margin-block: var(--space-8-9);
 }
 
 @media (min-width: 52rem) {
   .pagePost {
-    grid-template-columns: 2fr 1fr;
+    /* minmax() prevents code blocks from breaking out of grid columns */
+    grid-template-columns: minmax(0, 2fr) 1fr;
     grid-template-rows: auto 1fr auto auto auto;
     grid-template-areas: "header ." "body toc" "body tags" "body postNav" "interactions interactions"; 
   }
