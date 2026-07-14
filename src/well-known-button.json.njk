@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
   "buttons": [
     {%- for b in buttons.beeps %}
     {
-      "id": "{{ loop.index0 }}",
+      "id": "{{ b.id | default(loop.index0) }}",
       "uri": "{{ b.src | absoluteUrl(site.domain) }}",
       "alt": "{{ b.schemaAlt }}",
       "link": "{{ '/' | absoluteUrl(site.domain) }}",
