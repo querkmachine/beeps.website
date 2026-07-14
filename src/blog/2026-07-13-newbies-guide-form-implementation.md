@@ -5,6 +5,10 @@ date: 2026-07-13
 cssComponents:
   - character
   - code
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "116913668563079749"
 ---
 
 The somewhat belated third (and probably final part) in my mini series about web form design.
