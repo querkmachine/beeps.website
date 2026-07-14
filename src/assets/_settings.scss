@@ -86,10 +86,9 @@
   );
 
   --color-link: var(--c-green);
-  --color-link-visited: color-mix(
-    in hsl,
-    var(--color-link) 85%,
-    var(--color-canvas)
+  --color-link-visited: light-dark(
+    color-mix(in hsl, var(--color-link), var(--color-text) 45%),
+    color-mix(in hsl, var(--color-link) 85%, var(--color-canvas))
   );
   --color-link-hover: var(--color-link-visited);
 
