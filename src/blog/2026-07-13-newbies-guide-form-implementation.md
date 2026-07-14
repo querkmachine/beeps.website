@@ -48,15 +48,15 @@ The same holds true for radio buttons and checkboxes. Each of them should have t
 </fieldset>
 ```
 
-Using labels ensures that inputs always have an explanation of what the input is for programatically associated with it.
+Using labels ensures that inputs always have an explanation of what the input is for programmatically associated with it.
 
-That association, plus it being a separate element, allows you can play around with layout more, maybe do something like a grid with labels on the left and inputs on the right, or insert other helpful text between the two of them.
+That association, plus it being a separate element, lets you play around with layout more, maybe do something like a grid with labels on the left and inputs on the right, or insert other helpful text between the two of them.
 
 Wait, that's a good idea!
 
 ## Hints and error messages
 
-Other text that relates to the input, but which isn't the label, should also be programatically associated with the input.
+Other text that relates to the input, but which isn't the label, should also be programmatically associated with the input.
 
 The approach to this is similar to what we do with labels, but instead we put our IDs in an `aria-describedby` attribute on the input.
 
@@ -76,16 +76,16 @@ On GOV.UK, we place both hints and error messages between the `<label>` and inpu
 
 This is so that there's a logical reading order to the information:
 
-1. the label, the question being asked
-2. the hint, further information about how to answer the question
-3. the error, context about why the answer given isn't suitable
-4. The input, an opportunity to fix the answer
+1. the label – the question being asked
+2. the hint – further information about how to answer the question
+3. the error – context about why the answer given isn't suitable
+4. the input – an opportunity to fix the answer
 
 This benefits users of assistive technology who may be navigating through the page sequentially and would otherwise have to reverse direction and go back on themselves in order to fix errors.
 
 ## Choose the right input (and input aids) for the job
 
-HTML comes with a variety of input elements and types, which each one coming with its own in-built capabilities and soft validation rules.
+HTML comes with a variety of input elements and types, each one coming with its own in-built capabilities and soft validation rules.
 
 Inputs can have their functionality 'extended' with the help of some optional attributes.
 
@@ -97,7 +97,7 @@ Creating the bestest, most optimal input can often be a case of using input type
 
 Asking for an email address? Use the `email` input type.
 
-Asking for user's first name? Use the `text` input type with the `given-name` autocomplete hint.
+Asking for the user's first name? Use the `text` input type with the `given-name` autocomplete hint.
 
 Asking for a payment card's security code? Use the `text` input type, `numeric` input mode, `cc-csc` autocomplete hint, and [style the input to fit 3 or 4 characters]({{ '/blog/2026-03-30-newbies-guide-form-design/' | url }}#size-inputs-according-to-their-expected-answers).
 
@@ -109,7 +109,7 @@ The list of possible options for `autocomplete` and `inputmode` are extensive, s
 
 When showing a list of options a user can pick from it can be tempting to reach for `<select>`. It's compact and can fit a bunch of options, why wouldn't you use it?
 
-In short because, generally, it performs quite poorly with less tech-literate users. There aren't a lot of form inputs where clicking on it pops open a huge, scrolling list of text, and users can struggle to navigate that list comfortably or effectively.
+In short, because generally, it performs quite poorly with less tech-literate users. There aren't a lot of form inputs where clicking on it pops open a huge, scrolling list of text, and users can struggle to navigate that list comfortably or effectively.
 
 Still, it has its uses, and the introduction of [customisable select elements](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) mitigates some of their downsides (whilst also introducing exciting new issues).
 
@@ -158,7 +158,7 @@ It works much the same way on web forms, with distinct providing and reviewing p
 
 This validation can be visually distracting—as new information is appearing on the screen, potentially shifting the locations of other content—and audibly distracting—as validation messaging interrupts users of screen reader software (assuming it informs these users of an error in the first place).
 
-Live validation can create a false sense of security. If there's no errors being shown then the information must be good, right? This assumption can actually lead to an increase in erroneous inputs.
+Live validation can create a false sense of security. If there are no errors being shown then the information must be good, right? This assumption can actually lead to an increase in erroneous inputs.
 
 Instead, online forms should **perform validation at the point the user tries to submit the form**. This keeps the providing and reviewing phases distinct and separate from one another, with the user only having to switch between them at defined points of the process.
 
