@@ -14,7 +14,7 @@ A "now" page is [a conceptual accompaniment to an about page](https://nownownow.
 
 💻 I'm working as a frontend developer on the [GOV.UK Design System](https://design-system.service.gov.uk/) team. I'm also writing WCAG understanding documents for the [Guide to WCAG](https://alphagov.github.io/guide-to-wcag/).
 
-🇸🇪 I'm learning to speak Swedish! <a lang="sv" href="{{ '/sv/' | url }}">Jag pratar lite svenska.</a>
+🇸🇪 I'm learning to speak Swedish! <span lang="sv">[Jag pratar lite svenska.]({{ '/sv/' | url }})</span>
 
 🎶 [I've been listening](https://www.last.fm/user/robomilk/library) to a lot of albums lately, as opposed to my usual 'everything on shuffle' approach. Most commonly _Too Much Not Enough_ by Daði Freyr, the _Musical Tangents_ mashup album by Psynwav and, weirdly, Coldplay. I've not listened to Coldplay in years.
 
