@@ -1,13 +1,14 @@
 ---
 layout: brand.njk
 title: beeps' brand
-updated: 2026-04-06
+updated: 2026-07-17
 metadata:
   description: The style guide for my personal projects, including this website.
 cssComponents:
-  - table
   - blockquote
   - code
+  - figure
+  - table
 ---
 
 {% set colourAssignments = [
@@ -45,6 +46,26 @@ I don't wear exactly the same clothes every day, but when it comes to building r
 
 - Be unapologetically square and blocky. There aren't many circles or curves here.
 - Follow good accessibility practices. Use contrasting colours, write good copy.
+- That's basically it. I'm not a Fortune 500 company or anything.
+
+## Logo
+
+As of July 2026, the site for this logo and related projects is the [Ash]({{ '/ash/' | url }}) tail. This has been adapted, with permission, from an emoji originally created by [Caius Nocturne](https://nocturne.works/).
+
+<div class="kimGrid">
+  <div class="kimGrid_column kimGrid_column-oneHalf">
+{% figure caption="Full colour.", classes="kim-!-padding-block-start-3" %}
+{% image "/images/logo-full.svg", "Ash's tail (white with a black strip along the top) curled into an S shape, ending with a tip of drippy green goop." %}
+{% endfigure %}
+  </div>
+  <div class="kimGrid_column kimGrid_column-oneHalf">
+{% figure caption="Monochrome.", classes="kim-!-padding-block-start-3" %}
+{% image "/images/logo-mono.svg", "Ash's tail, as in the previous image, but the body of the tail and outline is in one colour and the goopy area is transparent." %}
+{% endfigure %}
+  </div>
+</div>
+
+Given these are quite new (as of writing) they may undergo some further revisions and refinement. Watch this space. Or don't. I'm not your boss.
 
 ## Colours
 
@@ -82,14 +103,6 @@ As a variable font, it's available in all weights from heavy (900) to light (200
 Code samples are set in the device's default monospace font.
 
 ## Iconography
-
-### Robat icon
-
-The logo of the website (and pretty much just this website). This has been a symbol I've used for longer than you'd expect, [since around 2010]({{ '/blog/2023-07-25-20-years/#numbers' | url }}).
-
-<div class="pageLogo">
-  <img src="{{ '/assets/images/icons/favicon.svg' | url }}" alt="Silhouette of a stylised bat's head, within which the cutout of a mechanical gear is visible.">
-</div>
 
 ### About page icons
 
