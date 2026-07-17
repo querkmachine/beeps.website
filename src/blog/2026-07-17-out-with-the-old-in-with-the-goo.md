@@ -4,9 +4,15 @@ date: 2026-07-17
 metadata:
   description: A new logo for beeps.website
 tags: [design, meta]
+cssComponents:
+  - figure
 ---
 
 For a long time now, the primary logo of my websites has been a kind of animal head with a gear inside of it. Originally, this was a nod to, well, being a furry obviously, but also to my online handle 'querkmachine'. It's like some sorta quirky machine furry, geddit?
+
+{% figure caption="The 'robat icon'.", float="right" %}
+{% image "/images/tail-logo-before.png", "A forward-facing silhouette of an animal like head with prominent ears, within which is nested an eight-toothed gear wheel in negative space." %}
+{% endfigure %}
 
 It became even more relevant when my fursona changed to become a robot bat (or 'robat', because I'm fun like that), and the logo was adapted slightly to match the silhouette of that character. It henceforth took on the moniker of the 'robat icon'.
 
