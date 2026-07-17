@@ -94,6 +94,7 @@ export default function () {
         heading: "About this website",
         links: [
           { href: "/brand/", text: "beeps' brand" },
+          { href: "/homepage-history/", text: "Homepage history" },
           { href: "/colophon/", text: "Colophon" },
           { href: "/customise/", text: "Customise CSS" },
         ],
