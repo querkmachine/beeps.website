@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Colophon
-updated: 2026-06-28
+updated: 2026-07-17
 metadata:
   description: Giving credit to the people and tools that made this website possible.
 cssComponents:
@@ -12,9 +12,11 @@ A colophon is a short section you can find at the back of some books, giving som
 
 ## Design
 
+The [logo for this website]({{ '/brand/' | url }}#logo) is adapted from an emoji originally created by [Caius Nocturne](https://nocturne.works/). It has been modified, adapted and repurposed with permission.
+
 I've rambled a little about this website's design before, most notably, pointing out that [it's a little bit crap on purpose]({{ '/blog/2023-06-21-some-untamed-rambling-about-how-this-website-is-built/' | url }}). I also sometimes write posts about major design updates under the [meta tag]({{ '/blog/meta/' | url }}).
 
-Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans) typeface released by GitHub.
+Type is set in the open source [Hubot Sans](https://github.com/github/hubot-sans) typeface commissioned by GitHub.
 
 ## Code
 

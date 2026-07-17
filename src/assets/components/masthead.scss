@@ -3,7 +3,8 @@
 @use "../helpers/reset";
 
 .kimMasthead {
-  --logo-size: 3rem;
+  --logo-width: 3rem;
+  --logo-height: calc(var(--logo-width) * 1.1875);
   --top-spacing: var(--border-thick);
   --bottom-spacing: var(--space-2);
 
@@ -146,21 +147,20 @@
 }
 
 .kimMasthead_logo {
-  --ribbon-size: calc(var(--logo-size) * 1.5);
+  --logo-background-color: var(--color-accent);
 
   flex-shrink: 0;
   display: inline-block;
-  inline-size: calc(var(--logo-size) * 1.5);
+  inline-size: calc(var(--logo-width) * 1.5);
   margin-block-start: calc(var(--top-spacing) * -1);
   margin-inline-end: var(--space-2);
   padding-block-start: var(--space-5);
-  padding-block-end: var(--space-2);
   color: var(--color-canvas);
-  background-color: var(--color-accent);
+  background-color: var(--logo-background-color);
   text-align: center;
 
   &:hover {
-    background-color: var(--color-link-hover);
+    --logo-background-color: var(--color-link-hover);
   }
 
   &:focus-visible {
@@ -169,8 +169,8 @@
 }
 
 .kimMasthead_logo svg {
-  inline-size: var(--logo-size);
-  block-size: var(--logo-size);
+  inline-size: var(--logo-width);
+  block-size: var(--logo-height);
   fill: currentcolor;
 
   // remove line-height from the image

@@ -47,8 +47,12 @@
       }
       .pageLogo svg {
         width: 5vw;
-        height: 5vw;
+        height: calc(5vw * 1.1875);
+        margin-block-end: -1vw;
         fill: currentcolor;
+      }
+      .pageLogo svg path:nth-child(2) {
+        fill: var(--color-text-accent);
       }
       .pageTitle {
         font-size: 3vw;
