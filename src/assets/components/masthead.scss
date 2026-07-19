@@ -166,6 +166,10 @@
   &:focus-visible {
     @include a11y.focus-ring;
   }
+
+  @media (forced-colors: active) {
+    outline: 1px solid;
+  }
 }
 
 .kimMasthead_logo svg {
