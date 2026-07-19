@@ -14,6 +14,13 @@ metadata:
   block-size: 80px;
   margin-block-end: var(--space-1);
 }
+@media (forced-colors: active) {
+  .pageIcon svg {
+    --color-surface: Canvas;
+    --color-furniture: CanvasText;
+    --color-text-accent: LinkText;
+  }
+}
 {% endcss %}
 
 {% macro _item(icon) %}
