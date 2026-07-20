@@ -9,12 +9,12 @@
       {%- if options.prelabel %}{{ options.prelabel }}: {% endif -%}
       <a class="kimLink kimBlogCard_link" href="{{ post.url | absoluteUrl(site.domain) }}" itemprop="url" {%- if options.rel %} rel="{{ options.rel }}"{% endif %}>
         <span itemprop="name" {%- if post.data.titleLang %} lang="{{ post.data.titleLang }}"{% endif %}>
-          <span class="kim-!-visually-hidden">Published</span>
           {{- post.data.title | markdownInline | safe -}}
         </span>
       </a>
     </strong>
     <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
+      <span class="kim-!-visually-hidden">Published</span>
       {{- post.date | formatDate('human') -}}
     </time>
     {%- if post.data.updated %}
