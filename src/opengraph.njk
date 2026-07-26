@@ -15,17 +15,21 @@
 {% set title = preview.data.title | default("") %}
 {% set titleLength = title | length %}
 
-{% css %}
+{# This doesn't use the css Nunjucks block because using it conflicts with the 
+   one in the opengraph layout, apparently. #}
+{% block head %}
+<style>
 .pageOverrideTitleSize {
   display: -webkit-box;
   margin-block-end: 0;
   padding-block-end: .1em; /* Fix descenders being cut off */
-  font-size: var(--size-4);
+  font-size: var(--size-5);
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-{% endcss %}
+</style>
+{% endblock %}
 
 {% block title %}
   {%- if preview.data.isBlogPost %}
