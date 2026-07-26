@@ -2,6 +2,8 @@
 title: The accessible contrast ratio colour grid thing
 date: 2026-07-09
 tags: [web development]
+metadata:
+  description: I made a thing that checks entire colour palettes for contrast safety.
 cssComponents:
   - figure
   - code

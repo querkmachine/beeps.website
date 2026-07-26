@@ -2,6 +2,8 @@
 title: "A newbie's guide to designing good web forms: the technical bits"
 tags: [web development, design]
 date: 2026-07-13
+metadata:
+  description: Some wisdom on creating online forms that work well for users. Part 3 of 3.
 cssComponents:
   - character
   - code

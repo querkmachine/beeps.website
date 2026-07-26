@@ -2,6 +2,8 @@
 title: What's in my bag?
 date: 2026-05-04
 tags: [random]
+metadata:
+  description: A diversion into my daily carry habits.
 cssComponents:
   - callout
   - figure

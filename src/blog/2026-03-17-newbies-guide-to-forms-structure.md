@@ -2,6 +2,8 @@
 title: A newbie's guide to designing good web forms
 tags: [web development, design]
 date: 2026-03-17
+metadata:
+  description: Some wisdom on creating online forms that work well for users. Part 1 of 3.
 cssComponents:
   - character
 interactions:

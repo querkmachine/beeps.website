@@ -2,7 +2,7 @@
 title: Out with the old, in with the goo
 date: 2026-07-17
 metadata:
-  description: A new logo for beeps.website
+  description: A new logo for beeps.website.
 tags: [design, meta]
 cssComponents:
   - figure
