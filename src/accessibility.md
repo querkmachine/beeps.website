@@ -46,7 +46,7 @@ These issues do not constitute a failure under WCAG 2.2 Level AA criteria, howev
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 20 March 2025. It was last reviewed and updated on {{ updated | formatDate('human') }}.
+This statement was prepared on 20 March 2025. It was last reviewed and updated on {{ updated | formatDate('fullDate') }}.
 
 ## Providing feedback
 

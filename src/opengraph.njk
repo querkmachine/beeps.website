@@ -34,7 +34,7 @@
 {% block title %}
   {%- if preview.data.isBlogPost %}
     <div class="kimHeading-m kim-!-margin-block-start-0">
-      {{ preview.date | formatDate('human') }}
+      {{ preview.date | formatDate('fullDate') }}
     </div>
     <div class="kimHeading-xl kim-!-margin-block-start-0 {%- if titleLength >= 50 %} pageOverrideTitleSize{% endif %}">
       {{ title | markdownInline | safe }}

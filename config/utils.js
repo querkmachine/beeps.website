@@ -26,7 +26,7 @@ const cachebustAssetUrl = function (url) {
  * Format a JavaScript date object into one of our pre-defined formats
  *
  * @param {Date} dateObj - The JavaScript date object to format.
- * @param {"iso"|"human"|string} format - Either one of the pre-defined format keys, or a
+ * @param {"iso"|"smartDate"|"fullDate"|string} format - Either one of the pre-defined format keys, or a
  *   custom format constructed using Luxon's datetime tokens.
  *   https://moment.github.io/luxon/#/formatting?id=table-of-tokens
  * @returns {string} - The formatted date time.
@@ -35,14 +35,25 @@ const cachebustAssetUrl = function (url) {
  */
 const formatDate = function (dateObj, format) {
   const date = DateTime.fromJSDate(dateObj, { zone: "utc" });
-  if (format === "iso") {
-    return date.toISODate();
-  } else if (format === "human") {
-    return date.toFormat("d LLLL yyyy");
-  } else if (format === "humanWithTime") {
-    return date.toFormat("d LLLL yyyy; H:mm");
-  } else {
-    return date.toFormat(format);
+
+  switch (format) {
+    case "iso":
+      // e.g. 2026-01-02T14:55:26Z
+      return date.toISODate();
+      break;
+    case "smartDate":
+      // Includes year only if post was >1 year in the past
+      // e.g. 2 January or 2 January 2026
+      const oneYearAgo = DateTime.now().minus({ years: 1 });
+      return date.toFormat(`d LLLL${date < oneYearAgo ? " yyyy" : ""}`);
+      break;
+    case "fullDate":
+      // e.g. 2 January 2026
+      return date.toFormat("d LLLL yyyy");
+      break;
+    default:
+      return date.toFormat(format);
+      break;
   }
 };
 

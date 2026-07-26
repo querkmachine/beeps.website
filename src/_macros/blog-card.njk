@@ -15,11 +15,11 @@
     </strong>
     <time class="kimBlogCard_date" datetime="{{ post.date | formatDate('iso') }}" itemprop="dateCreated">
       <span class="kim-!-visually-hidden">Published</span>
-      {{- post.date | formatDate('human') -}}
+      {{- post.date | formatDate('fullDate') -}}
     </time>
     {%- if post.data.updated %}
       <time class="kimBlogCard_date" datetime="{{ post.data.updated | formatDate('iso') }}" itemprop="dateUpdated">
-        Updated {{ post.data.updated | formatDate('human') -}}
+        Updated {{ post.data.updated | formatDate('fullDate') -}}
       </time>
     {%- endif %}
   </{{ element }}>

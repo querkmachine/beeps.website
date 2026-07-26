@@ -25,7 +25,7 @@
               <dt class="kimMeta_key kim-!-visually-hidden">Published</dt>
               <dd class="kimMeta_value">
                 <time datetime="{{ date | formatDate('iso') }}" itemprop="dateCreated">
-                  {{- date | formatDate('human') -}}
+                  {{- date | formatDate('fullDate') -}}
                 </time>
               </dd>
             </div>
@@ -35,7 +35,7 @@
               <dt class="kimMeta_key">Last updated</dt>
               <dd class="kimMeta_value">
                 <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
-                  {{- updated | formatDate('human') -}}
+                  {{- updated | formatDate('fullDate') -}}
                 </time>
               </dd>
             </div>
