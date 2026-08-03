@@ -27,7 +27,8 @@ A visual record of this website's many redesigns, via screenshots of the homepag
   "2025-12",
   "2026-01",
   "2026-05",
-  "2026-06"
+  "2026-06",
+  "2026-07"
 ] %}
 
 {%- for date in dates %}
