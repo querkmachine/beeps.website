@@ -31,7 +31,7 @@ In [yesterday's post about userstyles]({{ '/blog/2023-04-26-using-userstyles-in-
 Perhaps unsurprisingly, I know a lot of folks who feel the same way and have asked how to do it, so here's the userstyle code I use, adapted from [the code by mavica](https://maple.pet/blog/fighting-otherkin-erasure-from-captchas). Replace the text with something more appropriate to your species or form!
 
 <p class="kimBody">{{ kimJumpLink({
-  href: "https://gist.github.com/querkmachine/8e34d68d5f1626387fcaf103ff1d6e08/raw/5ed59e305b178cd7823d0ec915a1bafddcc91a40/otherkin-friendly-captchas.user.css",
+  href: "https://gist.github.com/querkmachine/8e34d68d5f1626387fcaf103ff1d6e08/raw/otherkin-friendly-captchas.user.css",
   text: "View and install user style"
 }) }}</p>
 

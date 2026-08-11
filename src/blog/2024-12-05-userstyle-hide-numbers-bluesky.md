@@ -22,7 +22,7 @@ Having spent some time on Cohost, the [sadly departed social networking site]({{
 If you're not sure how to use a user style, check out [my blog post on user stylesheets from 2023]({{ '/blog/2023-04-26-using-userstyles-in-2023/' | url }}).
 
 <p class="kimBody">{{ kimJumpLink({
-  href: "https://gist.github.com/querkmachine/7de31af8c7b0324ae310a4ab97a33ec6/raw/536da53426a51176f7543061cf4228e29743b06b/hide-bluesky-stats.user.css",
+  href: "https://gist.github.com/querkmachine/7de31af8c7b0324ae310a4ab97a33ec6/raw/hide-bluesky-stats.user.css",
   text: "View and install user style"
 }) }}</p>
 
