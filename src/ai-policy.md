@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: AI policy
-updated: 2026-07-28
+updated: 2026-08-17
 metadata:
   description: Do not train your AI on my content.
 cssComponents:
@@ -37,6 +37,7 @@ Other people have made much more articulate statements on why they think generat
 - [I'm a Spotless Giraffe](https://benmyers.dev/blog/spotless-giraffe/) by Ben Myers
 - [From human hands](https://mass-driver.com/article/from-human-hands) by Mass-Driver
 - [Do I belong in tech anymore?](https://ky.fyi/posts/ai-burnout) by Ky Decker
+- [I'm done using AI](https://brettcodes.com/im-done-using-ai/) by Brett Codes 
 
 ## Generative AI's use on this website
 
