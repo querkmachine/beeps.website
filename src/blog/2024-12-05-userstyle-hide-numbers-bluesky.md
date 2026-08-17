@@ -34,5 +34,5 @@ Update: Never mind, I've ended up [back on Bluesky again](https://bsky.app/profi
 
 ## Updates
 
-- 2026-08-05: This is now hosted as a GitHub Gist. If your user style manager supports it, [clicking this link will install the style](https://gist.github.com/querkmachine/7de31af8c7b0324ae310a4ab97a33ec6/raw/536da53426a51176f7543061cf4228e29743b06b/hide-bluesky-stats.user.css) and allow future updates to be applied automatically without you having to come back here.
 - 2025-06-03: Updated to also remove follower and following counts on the popups that appear when hovering over a user name.
+- 2026-08-05: This is now hosted as a GitHub Gist. If your user style manager supports it, [clicking this link will install the style](https://gist.github.com/querkmachine/7de31af8c7b0324ae310a4ab97a33ec6/raw/hide-bluesky-stats.user.css) and allow future updates to be applied automatically without you having to come back here.

@@ -50,9 +50,9 @@ A few caveats:
 
 ## Updates
 
-- 2026-08-05: Quick lil ALTCHA fix. This is now hosted as a GitHub Gist. If your user style manager supports it, [clicking this link will install the style](https://gist.github.com/querkmachine/8e34d68d5f1626387fcaf103ff1d6e08/raw/5ed59e305b178cd7823d0ec915a1bafddcc91a40/otherkin-friendly-captchas.user.css) and allow future updates to be applied automatically without you having to come back here.
 - 2023-12-12: Updated to add [Friendly Captcha](https://friendlycaptcha.com/) support and restructure the code a little.
 - 2024-05-17: Code updated to account for updates to Cloudflare Turnstile. Thanks to rk for helping identify the changes.
 - 2025-04-29: Updated to account for changes to Friendly Captcha.
 - 2025-05-09: Added [ALTCHA](https://altcha.org/) support and caveats section.
 - 2025-08-09: Updated caveats with more information about why the userstyle doesn't always work with Cloudflare Turnstile.
+- 2026-08-05: Quick lil ALTCHA fix. This is now hosted as a GitHub Gist. If your user style manager supports it, [clicking this link will install the style](https://gist.github.com/querkmachine/8e34d68d5f1626387fcaf103ff1d6e08/raw/otherkin-friendly-captchas.user.css) and allow future updates to be applied automatically without you having to come back here.
