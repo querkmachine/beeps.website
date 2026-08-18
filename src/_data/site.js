@@ -10,7 +10,6 @@ export default function () {
       "A collated collection of resources and reading about website design and development.",
     authorName: "beeps",
     authorEmail: "hi@beeps.website",
-    twitterUsername: "@batbeeps",
     mastodonUsername: "@beeps@social.beeps.gay",
     domain: "https://beeps.website",
     environment,
