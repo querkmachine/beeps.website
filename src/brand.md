@@ -1,7 +1,7 @@
 ---
 layout: brand.njk
 title: beeps' brand
-updated: 2026-07-17
+updated: 2026-08-24
 metadata:
   description: The style guide for my personal projects, including this website.
 cssComponents:
@@ -14,7 +14,7 @@ cssComponents:
 {% set colourAssignments = [
   { name: "Text", dark: "#ffffff", light: "#4b4b4b" },
   { name: "Supporting text", dark: "#f5f5f5", light: "#6d6d6e" },
-  { name: "Accent text and links", dark: "#0ff10f", light: "#578057" },
+  { name: "Accent text and links", dark: "#0ff10f", light: "#557B54" },
   { name: "Hovered and visited links", dark: "#0bc148", light: "#6c9679" },
   { name: "Canvas", dark: "#252134", light: "#f9f9f9" },
   { name: "Surface", dark: "#302750", light: "#ffffff" },
