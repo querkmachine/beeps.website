@@ -8,6 +8,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     attributes: {},
     link: false,
     sizes: "100vi",
+    widths: [300, 600, 900, 1200, null],
   };
   const settings = { ...defaultArgs, ...args };
 
@@ -16,7 +17,7 @@ const responsiveImagesShortcode = async function (src, alt, args) {
     transformOnRequest: process.env.ELEVENTY_RUN_MODE === "serve",
 
     // Output options
-    widths: [300, 600, 900, 1200, null],
+    widths: settings.widths,
     formats: ["webp"],
     urlPath: "/images/",
     outputDir: paths.output + "/images/",
