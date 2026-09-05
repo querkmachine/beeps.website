@@ -1,0 +1,34 @@
+---
+title: This page intentionally left blank.
+metadata:
+  noRobots: true
+eleventyExcludeFromCollections: true
+---
+
+{% extends 'src/_layouts/layout.njk' %}
+
+{% block beforeMasthead %}{% endblock %}
+{% block masthead %}{% endblock %}
+{% block afterMasthead %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block main %}
+<div class="pageBlank">
+  <p class="kimBody-s pageBlank_notice">{{ title }}</p>
+</div>
+{% endblock %}
+
+{% css %}
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100svb;
+  text-align: center;
+  box-shadow: inset 0 0 0 1rem var(--color-furniture);
+}
+.pageBlank_notice {
+  margin: 0;
+  padding: var(--space-4);
+}
+{% endcss %}
