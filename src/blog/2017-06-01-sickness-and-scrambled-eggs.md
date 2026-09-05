@@ -12,7 +12,7 @@ Today I’m feeling like crap because my head, lungs and stomach hurt. Basicall
 
 I’ve previously made scrambled eggs by cracking them into a bowl, whisking in some salt and pepper, throwing it in a non-stick frying pan on a high heat until it was solid; duly scrambling them along the way, of course.
 
-This makes scrambled eggs. You took eggs and scrambled them, how could you *not* make scrambled eggs?
+This makes scrambled eggs. You took eggs and scrambled them, how could you _not_ make scrambled eggs?
 
 Despite them being scrambled eggs they tend to be fairly dry, flavourless and are annoying to clean up. I also got a strangely poor return on investment and I always ended up getting less scrambled egg than I was really expecting.
 
@@ -28,7 +28,7 @@ Scrambled eggs are simple enough, there must be a better way.
 
 I started by heating the pan on the lowest heat. After several minutes this was obviously not good enough for my old electric hob, so I cranked it up to medium and let it heat up before throwing in a generous tablespoon of butter.
 
-(Side note: *Not* cooking on high is so weird to me. I’ve always cooked for speed and convenience before and that meant doing things as quickly as possible. Guess that’s the first thing I need to change.)
+(Side note: _Not_ cooking on high is so weird to me. I’ve always cooked for speed and convenience before and that meant doing things as quickly as possible. Guess that’s the first thing I need to change.)
 
 While the butter was melting I cracked the eggs into a bowl and whisked them together with salt and pepper. In the past this would’ve been budget battery farm eggs with a pinch of table salt and fine powdery pepper added, now it’s free range eggs with coarse sea salt and ground peppercorn! Other than the jump in ingredient quality this was just like I’d done in the past.
 
@@ -40,6 +40,6 @@ By comparison to my old scrambled eggs—which were always dry and flakey—the 
 
 The new scrambled egg recipe was certainly better than what I used to make. Assuming I have the ingredients to hand in future I’d probably make them again.
 
-If I had to change anything I’d probably reduce the amount of creme fraiche, as I think it might be *too* rich. Adding chives or spring onions is a possibility too.
+If I had to change anything I’d probably reduce the amount of creme fraiche, as I think it might be _too_ rich. Adding chives or spring onions is a possibility too.
 
 And finally, I learned that the frying pan is a pain to clean no matter how you make your scrambled eggs.

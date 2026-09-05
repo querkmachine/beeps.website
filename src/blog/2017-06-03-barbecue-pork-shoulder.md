@@ -10,7 +10,7 @@ cssComponents:
 
 I had some pork shoulder steaks sitting around, which I originally intended to slice up and fry in some hot sauce. It’s not creative or healthy in any way, but it’s spicy fried pork, so it’s not that bad. (Okay, it’s kind of bad.)
 
-Grilling it seemed to be the internet’s recommended cooking method, but I don’t have a barbecue (or indeed any outdoor space to put one) or one of those cool griddle pans, so I resorted to what I *do* have—a second-hand Lean Mean, Fat Reducing Grilling Machine.
+Grilling it seemed to be the internet’s recommended cooking method, but I don’t have a barbecue (or indeed any outdoor space to put one) or one of those cool griddle pans, so I resorted to what I _do_ have—a second-hand Lean Mean, Fat Reducing Grilling Machine.
 
 {% figure caption="My kitchen is very orange. Sorry about that." %} {% image "/images/pork-shoulder.jpg", "Some saucy pork shoulders on a plate." %} {% endfigure %}
 
