@@ -6,6 +6,10 @@ metadata:
 tags: [design, meta]
 cssComponents:
   - figure
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "116936215771641331"
 ---
 
 For a long time now, the primary logo of my websites has been a kind of animal head with a gear inside of it. Originally, this was a nod to, well, being a furry obviously, but also to my online handle 'querkmachine'. It's like some sorta quirky machine furry, geddit?
