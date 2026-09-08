@@ -4,6 +4,10 @@ ErrorDocument 404 /404/
   ForceType application/atom+xml
 </Files>
 
+<Files "stash/feed.xml">
+  ForceType application/atom+xml
+</Files>
+
 <IfModule mod_headers.c>
   <FilesMatch ".(css|js|ico|svg|png|jpg|jpeg|gif|webp|woff2)$">
     Header set Cache-Control "max-age=94608000, public"
