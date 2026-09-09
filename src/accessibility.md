@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Accessibility statement
-updated: 2026-06-04
+updated: 2026-09-09
 metadata:
   description: Accessibility compliance, known issues, and how to report issues.
 ---
@@ -42,7 +42,6 @@ Some pages feature content embedded from third-party sources, such as YouTube. A
 These issues do not constitute a failure under WCAG 2.2 Level AA criteria, however may still represent a degraded experience or accessibility barrier to users.
 
 - The bottom border of the website header isn't visible in forced colours mode.
-- The now page uses system emoji as iconography. Not all devices are capable of rendering emoji or the full range of emoji. Additionally, these may create a confusing and overly verbose experience for screen reader users.
 
 ## Preparation of this accessibility statement
 
