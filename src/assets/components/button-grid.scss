@@ -4,8 +4,11 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, 88px);
+  margin: 0;
   margin-block-end: var(--space-5);
+  padding: 0;
   line-height: 0;
+  list-style-type: none;
 
   a {
     display: block;

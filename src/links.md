@@ -25,9 +25,9 @@ Personal websites are _the bomb_. In an era where so much self-expression has mo
 
 Here's some websites belonging to people I am at least vaguely familiar with, because they deserve some link love. (And yes, quite a lot of them are furries.)
 
-<div class="kimButtonGrid">
-{%- for i in buttons.friendsitesButtons %}{{- kim88x31Button(i) -}}{%- endfor %}
-</div>
+<ul class="kimButtonGrid">
+{%- for i in buttons.friendsitesButtons %}<li>{{- kim88x31Button(i) -}}</li>{%- endfor %}
+</ul>
 
 <ul class="kimList pageLinkColumns">
   {%- for i in buttons.friendsites %}
@@ -89,17 +89,17 @@ Miscellany, &c.
 
 These are largely sourced from [the 88x31 GIF Collection](https://cyber.dabamos.de/88x31/), [the 88x31 Archive](https://hellnet.work/8831/) and [Yesterweb's buttons page](https://yesterweb.org/graphics/buttons).
 
-<div class="kimButtonGrid">
-{%- for i in buttons.random %}{{- kim88x31Button(i) -}}{%- endfor %}
-</div>
+<ul class="kimButtonGrid">
+{%- for i in buttons.random %}<li>{{- kim88x31Button(i) -}}</li>{%- endfor %}
+</ul>
 
 ## Linking back to this website
 
 Use any of these buttons, if you so desire. You can acquire these buttons programatically via the [.well-known/button schema](https://codeberg.org/LunarEclipse/well-known-button).
 
-<div class="kimButtonGrid">
-{%- for i in buttons.beeps %}{{- kim88x31Button(i) -}}{%- endfor %}
-</div>
+<ul class="kimButtonGrid">
+{%- for i in buttons.beeps %}<li>{{- kim88x31Button(i) -}}</li>{%- endfor %}
+</ul>
 
 {% css %}
 .pageLinkColumns {
