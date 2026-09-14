@@ -3,29 +3,62 @@
 
   display: inline-grid;
   grid-template-columns: var(--artwork-size) 1fr;
-  grid-template-areas: "heading heading" "artwork ." "artwork ." "artwork .";
+  grid-auto-rows: min-content;
+  grid-template-areas: "artwork ." "artwork ." "artwork ." "artwork .";
   column-gap: var(--space-2);
+  row-gap: var(--space-1);
+  align-items: start;
   margin-block-end: var(--space-5);
-}
-
-.kimLastfm_heading {
-  grid-area: heading;
+  font-size: var(--size--2);
 }
 
 .kimLastfm_artwork {
   grid-area: artwork;
-  block-size: var(--artwork-size);
-  inline-size: var(--artwork-size);
-  margin: 0;
+  position: relative;
+
+  img {
+    block-size: var(--artwork-size);
+    inline-size: var(--artwork-size);
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+  }
+}
+
+.kimLastfm[data-now-listening="true"] .kimLastfm_artwork {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--border-regular) * -1);
+    background-image: linear-gradient(
+      var(--angle) in lch,
+      var(--color-accent),
+      var(--color-furniture)
+    );
+    animation-name: nowPlaying;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 }
 
 .kimLastfm_track {
-  font-size: var(--size--1);
   font-weight: 600;
 }
 
 .kimLastfm_artist,
 .kimLastfm_album {
   color: var(--color-text-subtle);
-  font-size: var(--size--2);
+}
+
+@keyframes nowPlaying {
+  100% {
+    --angle: 1turn;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0turn;
+  inherits: false;
 }

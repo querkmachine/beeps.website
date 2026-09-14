@@ -19,14 +19,16 @@ export default class Lastfm {
       track: track.name,
       artist: track.artist["#text"],
       album: track.album["#text"] ?? null,
-      artwork: track.image[2]["#text"] ?? null,
-      nowListening: false, // TODO
+      artwork: track.image[2]["#text"] ? track.image[2]["#text"] : null,
+      nowListening: track["@attr"].nowplaying ? true : false, // TODO
     };
   }
 
   async populateHtml() {
-    const { track, artist, album, artwork } = await this.getData();
+    const { track, artist, album, artwork, nowListening } =
+      await this.getData();
 
+    this.$module.dataset.nowListening = nowListening;
     this.$artwork.setAttribute("src", artwork ?? Lastfm.placeholderImage);
     this.$track.innerText = track;
     this.$artist.innerText = artist;
@@ -40,19 +42,19 @@ export default class Lastfm {
   }
 
   buildHtml() {
-    // Heading
-    const $heading = document.createElement("h2");
-    $heading.className = "kimHeading-2xs kimLastfm_heading";
-    $heading.innerText = "Now listening";
+    // Album artwork wrapper
+    const $artworkWrapper = document.createElement("div");
+    $artworkWrapper.className = "kimLastfm_artwork";
 
     // Album artwork
     const $artwork = document.createElement("img");
-    $artwork.className = "kimLastfm_artwork";
     $artwork.setAttribute("alt", "");
     $artwork.setAttribute("loading", "lazy");
     $artwork.setAttribute("decoding", "async");
     $artwork.setAttribute("src", Lastfm.placeholderImage);
     this.$artwork = $artwork;
+
+    $artworkWrapper.insertAdjacentElement("beforeend", this.$artwork);
 
     // Track name
     const $track = document.createElement("div");
@@ -70,8 +72,7 @@ export default class Lastfm {
     $album.className = "kimLastfm_album";
     this.$album = $album;
 
-    this.$module.insertAdjacentElement("beforeend", $heading);
-    this.$module.insertAdjacentElement("beforeend", this.$artwork);
+    this.$module.insertAdjacentElement("beforeend", $artworkWrapper);
     this.$module.insertAdjacentElement("beforeend", this.$track);
     this.$module.insertAdjacentElement("beforeend", this.$artist);
     this.$module.insertAdjacentElement("beforeend", this.$album);
