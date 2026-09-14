@@ -130,6 +130,10 @@ export default function () {
           { href: "#top", text: "Back to top", icon: "arrow-n" },
         ],
       },
+      {
+        heading: "Listening",
+        lastfm: true,
+      },
     ],
   };
 }

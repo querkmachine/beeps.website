@@ -137,9 +137,7 @@
     <hr class="kim-!-visually-hidden">
     <footer class="kimFooter kim-!-noPrint">
       <div class="kimWrapper kimFooter_inner">
-        {% block beforeFooter %}
-          <div class="kimLastfm" data-js="lastfm" hidden></div>
-        {% endblock%}
+        {% block beforeFooter %}{% endblock%}
         
         <div class="kimGrid">
           {%- for section in site.footerLinks %}
@@ -147,18 +145,23 @@
               {%- if section.heading %}
                 <h2 class="kimHeading-2xs">{{ section.heading }}</h2>
               {%- endif %}
-              <ul class="kimList kimBody-s">
-                {%- for link in section.links %}
-                  <li>
-                    <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                      {%- if link.icon %}
-                        {% include "../assets/icons/" + link.icon + ".svg" %}
-                      {%- endif %}
-                      {{- link.html | safe if link.html else link.text -}}
-                    </a>
-                  </li>
-                {%- endfor %}
-              </ul>
+              {%- if section.links %}
+                <ul class="kimList kimBody-s">
+                  {%- for link in section.links %}
+                    <li>
+                      <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                        {%- if link.icon %}
+                          {% include "../assets/icons/" + link.icon + ".svg" %}
+                        {%- endif %}
+                        {{- link.html | safe if link.html else link.text -}}
+                      </a>
+                    </li>
+                  {%- endfor %}
+                </ul>
+              {%- endif %}
+              {%- if section.lastfm %}
+                <div class="kimLastfm" data-js="lastfm" hidden></div>
+              {%- endif %}
             </div>
           {%- endfor %}
         </div>
