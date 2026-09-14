@@ -25,20 +25,12 @@ export default class Lastfm {
   }
 
   async populateHtml() {
-    const { track, artist, album, artwork, nowListening } =
-      await this.getData();
+    const { track, artist, artwork, nowListening } = await this.getData();
 
     this.$module.dataset.nowListening = nowListening;
     this.$artwork.setAttribute("src", artwork ?? Lastfm.placeholderImage);
     this.$track.innerText = track;
     this.$artist.innerText = artist;
-
-    if (album) {
-      this.$album.innerText = album;
-      this.$album.removeAttribute("hidden");
-    } else {
-      this.$album.setAttribute("hidden", "hidden");
-    }
   }
 
   buildHtml() {
@@ -67,15 +59,9 @@ export default class Lastfm {
     $artist.className = "kimLastfm_artist";
     this.$artist = $artist;
 
-    // Album name
-    const $album = document.createElement("div");
-    $album.className = "kimLastfm_album";
-    this.$album = $album;
-
     this.$module.insertAdjacentElement("beforeend", $artworkWrapper);
     this.$module.insertAdjacentElement("beforeend", this.$track);
     this.$module.insertAdjacentElement("beforeend", this.$artist);
-    this.$module.insertAdjacentElement("beforeend", this.$album);
 
     this.$module.removeAttribute("hidden");
   }
