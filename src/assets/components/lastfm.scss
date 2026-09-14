@@ -1,0 +1,31 @@
+.kimLastfm {
+  --artwork-size: 80px;
+
+  display: inline-grid;
+  grid-template-columns: var(--artwork-size) 1fr;
+  grid-template-areas: "heading heading" "artwork ." "artwork ." "artwork .";
+  column-gap: var(--space-2);
+  margin-block-end: var(--space-5);
+}
+
+.kimLastfm_heading {
+  grid-area: heading;
+}
+
+.kimLastfm_artwork {
+  grid-area: artwork;
+  block-size: var(--artwork-size);
+  inline-size: var(--artwork-size);
+  margin: 0;
+}
+
+.kimLastfm_track {
+  font-size: var(--size--1);
+  font-weight: 600;
+}
+
+.kimLastfm_artist,
+.kimLastfm_album {
+  color: var(--color-text-subtle);
+  font-size: var(--size--2);
+}
