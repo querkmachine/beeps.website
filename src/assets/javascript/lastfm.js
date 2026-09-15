@@ -10,29 +10,19 @@ export default class Lastfm {
   async getData() {
     // I already got a thing that queries the Last.fm API and does some cache
     //  management so might as well reuse that, yeah??
-    const response = await fetch("https://lastfm.beeps.gay/cache/data.json");
-    const data = await response.json();
-
-    const track = data.recenttracks.track[0];
-
-    return {
-      track: track.name,
-      artist: track.artist["#text"],
-      album: track.album["#text"] ?? null,
-      artwork: track.image[2]["#text"] ? track.image[2]["#text"] : null,
-      nowListening: track?.["@attr"]?.nowplaying ? true : false,
-    };
+    const response = await fetch("https://lastfm.beeps.gay/data.json");
+    return await response.json();
   }
 
   async populateHtml() {
-    const { track, artist, artwork, nowListening } = await this.getData();
+    const { track, artist, artwork, isNowListening } = await this.getData();
 
-    this.$module.dataset.nowListening = nowListening;
+    this.$module.dataset.nowListening = isNowListening;
     this.$artwork.setAttribute("src", artwork ?? Lastfm.placeholderImage);
     this.$track.innerText = track;
     this.$artist.innerText = artist;
 
-    if (nowListening) {
+    if (isNowListening) {
       this.$artwork.setAttribute("title", "Listening now");
     } else {
       this.$artwork.removeAttribute("title");
