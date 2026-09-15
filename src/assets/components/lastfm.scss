@@ -1,0 +1,62 @@
+.kimLastfm {
+  --artwork-size: 80px;
+
+  display: inline-grid;
+  grid-template-columns: var(--artwork-size) 1fr;
+  grid-auto-rows: min-content;
+  grid-template-areas: "artwork ." "artwork ." "artwork ." "artwork .";
+  column-gap: var(--space-2);
+  align-items: start;
+  margin-block-end: var(--space-5);
+  font-size: var(--size--2);
+}
+
+.kimLastfm_artwork {
+  grid-area: artwork;
+  position: relative;
+
+  img {
+    block-size: var(--artwork-size);
+    inline-size: var(--artwork-size);
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+  }
+}
+
+.kimLastfm[data-now-listening="true"] .kimLastfm_artwork {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--border-hairline) * -1);
+    background-image: linear-gradient(
+      var(--angle) in lch,
+      var(--color-furniture),
+      transparent
+    );
+    animation-name: nowPlaying;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.kimLastfm_track {
+  font-weight: 600;
+}
+
+.kimLastfm_artist {
+  color: var(--color-text-subtle);
+}
+
+@keyframes nowPlaying {
+  100% {
+    --angle: 1turn;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0turn;
+  inherits: false;
+}

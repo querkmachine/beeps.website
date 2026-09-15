@@ -4,7 +4,7 @@
 }
 
 .kimFooter_inner {
-  padding-block: var(--space-5);
+  padding-block: var(--space-6);
 }
 
 .kimFooter_links {
@@ -20,5 +20,6 @@
 
 .kimFooter_copyright {
   max-inline-size: 42em;
+  font-size: var(--size--2);
   text-wrap: balance;
 }

@@ -90,6 +90,10 @@ export default function () {
     ],
     footerLinks: [
       {
+        heading: "Listening",
+        lastfm: true,
+      },
+      {
         heading: "About this website",
         links: [
           { href: "/brand/", text: "beeps' brand" },

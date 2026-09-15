@@ -1,5 +1,5 @@
 {%- set webfontUrl = '/assets/fonts/fonts.css' | url | cachebust -%}
-{%- set cssComponents = merge(cssComponents, ["masthead", "navigation", "footer", "noodle-bowl"]) -%}
+{%- set cssComponents = merge(cssComponents, ["masthead", "navigation", "footer", "noodle-bowl", "lastfm"]) -%}
 <!doctype html>
 <html lang="en-GB" class="kimPage">
 <head>
@@ -141,12 +141,6 @@
     <footer class="kimFooter kim-!-noPrint">
       <div class="kimWrapper kimFooter_inner">
         {% block beforeFooter %}{% endblock%}
-
-        {% block copyrights %}
-        <div class="kimFooter_copyright">
-          <p class="kimBody-s">Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
-        </div>
-        {% endblock %}
         
         <div class="kimGrid">
           {%- for section in site.footerLinks %}
@@ -154,21 +148,32 @@
               {%- if section.heading %}
                 <h2 class="kimHeading-2xs">{{ section.heading }}</h2>
               {%- endif %}
-              <ul class="kimList kimBody-s">
-                {%- for link in section.links %}
-                  <li>
-                    <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
-                      {%- if link.icon %}
-                        {% include "../assets/icons/" + link.icon + ".svg" %}
-                      {%- endif %}
-                      {{- link.html | safe if link.html else link.text -}}
-                    </a>
-                  </li>
-                {%- endfor %}
-              </ul>
+              {%- if section.links %}
+                <ul class="kimList kimBody-s">
+                  {%- for link in section.links %}
+                    <li>
+                      <a class="kimLink" href="{{ link.href | url }}" {%- for attribute, value in link.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+                        {%- if link.icon %}
+                          {% include "../assets/icons/" + link.icon + ".svg" %}
+                        {%- endif %}
+                        {{- link.html | safe if link.html else link.text -}}
+                      </a>
+                    </li>
+                  {%- endfor %}
+                </ul>
+              {%- endif %}
+              {%- if section.lastfm %}
+                <div class="kimLastfm" data-js="lastfm" hidden></div>
+              {%- endif %}
             </div>
           {%- endfor %}
         </div>
+        
+        {% block copyrights %}
+          <div class="kimFooter_copyright">
+            <p>Character artwork by <a class="kimLink" href="http://tuxedodragon.art/">TuxedoDragon</a>. Text content licensed under <a class="kimLink" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Creative Commons Attribution Non-Commercial 4.0">CC BY-NC 4.0</a>. Code available under the <a class="kimLink" href="https://github.com/querkmachine/beeps.website/blob/main/LICENCE">MIT license</a>. Keep circulating <a class="kimLink" href="https://github.com/querkmachine/beeps.website">the HTML</a>.</p>
+          </div>
+        {% endblock %}
       </div>
     </footer>
   {% endblock %}

@@ -14,6 +14,7 @@ async function importModuleIfPresent(name) {
 }
 
 importModuleIfPresent("image-differ");
+importModuleIfPresent("lastfm");
 importModuleIfPresent("masthead");
 importModuleIfPresent("share");
 importModuleIfPresent("tabs");
