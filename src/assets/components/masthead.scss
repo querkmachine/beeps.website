@@ -182,12 +182,11 @@
 }
 
 .kimMasthead_section,
-.kimMasthead_menu-link,
 .kimMasthead_menu-toggle {
   font-size: var(--size-1);
   font-weight: 500;
-  text-transform: uppercase;
   font-width: 90%;
+  text-transform: uppercase;
   line-height: 1;
 }
 
@@ -216,15 +215,6 @@
   }
 }
 
-.kimMasthead_menu-link {
-  margin-block-end: var(--bottom-spacing);
-  @include links.link-helper(
-    $color: var(--color-link),
-    $visited-color: var(--color-link),
-    $hover-color: var(--color-link-hover)
-  );
-}
-
 .kimMasthead_menu-toggle {
   --icon-size: 0.9rem;
 
@@ -241,6 +231,7 @@
   background: none;
   font-family: inherit;
   font-size: var(--size-0);
+  text-decoration: none;
   cursor: pointer;
 
   svg {
@@ -263,9 +254,12 @@
   &:focus-visible {
     @include a11y.focus-ring;
   }
+
+  &[hidden] {
+    display: none;
+  }
 }
 
-.kimMasthead_menu-link,
 .kimMasthead_menu-toggle {
   margin-inline-start: auto;
 }

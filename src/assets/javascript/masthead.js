@@ -7,7 +7,9 @@ export default class Masthead {
     this.$module = $module;
 
     this.$fallbackLink = this.$module.querySelector(".kimMasthead_menu-link");
-    this.$toggle = this.$module.querySelector(".kimMasthead_menu-toggle");
+    this.$toggle = this.$module.querySelector(
+      ".kimMasthead_menu-toggle:not(.kimMasthead_menu-link)",
+    );
 
     if (!this.$fallbackLink || !this.$toggle) {
       return;

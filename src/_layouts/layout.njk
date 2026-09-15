@@ -85,7 +85,10 @@
             {{- mastheadSection.text -}}
           </a>
         {%- endif %}
-        <a class="kimMasthead_menu-link" href="{{ '/navigation/' | url }}">Sitemap</a>
+        <a class="kimMasthead_menu-toggle kimMasthead_menu-link kim-!-noPrint" href="{{ '/navigation/' | url }}">
+          {% include "../assets/icons/menu.svg" %}
+          Menu
+        </a>
         <button class="kimMasthead_menu-toggle kim-!-noPrint" type="button" aria-controls="navigation" hidden>
           {% include "../assets/icons/menu.svg" %}
           Menu
