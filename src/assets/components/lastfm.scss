@@ -18,6 +18,8 @@
     block-size: var(--artwork-size);
     inline-size: var(--artwork-size);
     margin: 0;
+    border-radius: 50%;
+    corner-shape: squircle;
     position: relative;
     vertical-align: middle;
   }
@@ -28,13 +30,15 @@
     content: "";
     position: absolute;
     inset: calc(var(--border-regular) * -1);
+    border-radius: 50%;
+    corner-shape: squircle;
     background-image: conic-gradient(
       from var(--angle) in lch,
       transparent,
       var(--color-furniture)
     );
     animation-name: nowPlaying;
-    animation-duration: 8s;
+    animation-duration: 12s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
