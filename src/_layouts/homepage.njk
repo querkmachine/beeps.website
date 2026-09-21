@@ -99,6 +99,12 @@
   </div>
 {% endblock %}
 
+{% block beforeFooter %}
+  <div class="pageFauxvertisement" data-js="fauxvertisements" hidden>
+    <div class="pageFauxvertisement_disclaimer">This isn't a real advert. I'm stupid, not evil.</div>
+  </div>
+{% endblock %}
+
 {% css %}
 /**
  * Sections
@@ -141,6 +147,21 @@
 .pageTransRights span {
   font-weight: 900;
   color: #2E68FF;
+}
+
+.pageFauxvertisement {
+  margin-block-end: var(--space-6);
+  text-align: center;
+}
+
+.pageFauxvertisement img {
+  margin-block-end: 0;
+}
+
+.pageFauxvertisement_disclaimer {
+  color: var(--color-text-subtle);
+  font-size: var(--size--2);
+  text-align: center;
 }
 
 {% endcss %}

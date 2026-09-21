@@ -13,6 +13,7 @@ async function importModuleIfPresent(name) {
   }
 }
 
+importModuleIfPresent("fauxvertisements");
 importModuleIfPresent("image-differ");
 importModuleIfPresent("lastfm");
 importModuleIfPresent("masthead");
