@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2026-06-28
+updated: 2026-09-22
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -83,6 +83,7 @@ Miscellany, &c.
 - [eightyeightthirtyone](https://eightyeightthirty.one/) maps out the connections between websites on the indie web, [including my own](https://eightyeightthirty.one/#beeps.website).
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - [Knockout](https://knockout.chat/), another forum with very chill vibes that I enjoy lurking on.
+- [Open Train Times](https://www.opentraintimes.com) has real time train locations on diagramatic network maps like staff information screens at stations have. Here because I forget the name of it constantly.
 - [Tiled Words](https://tiledwords.com/) is a crossword-like daily puzzle game where you answer the given clues by assembling the crossword grid.
 
 ## Buttons
