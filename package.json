@@ -38,9 +38,9 @@
     "markdown-it-anchor": "^10.0.0",
     "node-html-parser": "^9.0.4",
     "postcss": "^8.5.26",
-    "postcss-preset-env": "^11.5.2",
+    "postcss-preset-env": "^11.5.3",
     "prettier": "^3.9.6",
-    "sass": "^1.104.0"
+    "sass": "^1.104.1"
   },
   "lint-staged": {
     "!_site/**/*": "prettier --write --ignore-unknown"
