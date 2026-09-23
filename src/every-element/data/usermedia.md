@@ -2,6 +2,7 @@
 tag: usermedia
 name: User Media
 category: Interactive elements
+mdn: null
 spec: https://github.com/w3c/mediacapture-extensions/blob/main/media-capture-elements-explainer.md
 experimental: true
 ---
