@@ -4,7 +4,6 @@ export default function () {
     tags: ["every-element"],
     eleventyComputed: {
       mdn: async (data) => {
-        console.log(data.tag, data.mdn);
         if (data.mdn) {
           return data.mdn
             ? data.mdn
