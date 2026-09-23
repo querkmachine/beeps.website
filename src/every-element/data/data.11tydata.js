@@ -4,11 +4,11 @@ export default function () {
     tags: ["every-element"],
     eleventyComputed: {
       mdn: async (data) => {
-        if (data.mdn) {
-          return data.mdn
-            ? data.mdn
-            : `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${data.tag}`;
-        }
+        if (data.mdn === null) return null;
+
+        return data.mdn
+          ? data.mdn
+          : `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${data.tag}`;
       },
     },
   };
