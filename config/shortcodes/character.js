@@ -184,7 +184,7 @@ const variants = {
   ],
 };
 
-const characterShortcode = function (content, args) {
+const characterShortcode = async function (content, args) {
   if (!args.variant) {
     throw new Error(`Missing \`variant\` argument on character shortcode.`);
   }
@@ -201,11 +201,8 @@ const characterShortcode = function (content, args) {
   };
 
   // Process image
-  pluginImages(imagePath, imageConfig);
-
-  // Get image metadata, even if the above isn't finished yet
-  const imageMeta = pluginImages.statsSync(imagePath, imageConfig);
-  const image = imageMeta.webp[imageMeta.webp.length - 1];
+  const imageData = await pluginImages(imagePath, imageConfig);
+  const image = imageData.webp[imageData.webp.length - 1];
 
   return `<figure class="kimCharacter kimCharacter-${character}">
     <figcaption class="kimCharacter_cite">

@@ -148,7 +148,10 @@ export default function (eleventyConfig) {
 
   // Custom Nunjucks Shortcodes
   eleventyConfig.addPairedNunjucksShortcode("callout", shortcodeCallout);
-  eleventyConfig.addPairedNunjucksShortcode("character", shortcodeCharacter);
+  eleventyConfig.addPairedNunjucksAsyncShortcode(
+    "character",
+    shortcodeCharacter,
+  );
   eleventyConfig.addPairedNunjucksShortcode("figure", shortcodeFigure);
   eleventyConfig.addNunjucksAsyncShortcode("imageDiffer", shortcodeImageDiffer);
   eleventyConfig.addPairedNunjucksShortcode("markdown", markdownFilter);
