@@ -11,6 +11,7 @@ Displays a button that prompts the user to share their geolocation information, 
 
 This button's text and appearance is defined by the browser with limited customisation. It's intended to increase trust for location requests, so that the user doesn't unwittingly share their location (e.g. via clickjacking).
 
+<!-- prettier-ignore-start -->
 ```html
 <geolocation></geolocation>
 
@@ -19,10 +20,11 @@ This button's text and appearance is defined by the browser with limited customi
 
   $geolocation.addEventListener("location", () => {
     const coords = $geolocation.position.coords;
-    console.log(`Coords are ${coords.latitude}, ${coords.longitude}`);
+    console.log(`Landing coords are ${coords.latitude}, ${coords.longitude}`);
   });
 </script>
 ```
+<!-- prettier-ignore-end -->
 
 It comes with three new HTML attributes that influence how the element works:
 

@@ -6,6 +6,10 @@
   font-weight: bold;
   background-color: var(--color-surface);
   box-decoration-break: clone;
+
+  &:has(+ *) {
+    margin-inline-end: var(--space-1);
+  }
 }
 
 .kimTag-accent {

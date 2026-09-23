@@ -2,7 +2,6 @@
 tag: selectedcontent
 name: Selected Option Display
 category: Forms
-experimental: true
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element
 ---
 

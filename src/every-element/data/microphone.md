@@ -13,6 +13,7 @@ A sister element to [`camera`](#camera), which requests camera permissions, and 
 
 This button's text and appearance is defined by the browser with limited customisation. It's intended to increase trust for user media requests, so that the user doesn't unwittingly grant access to their microphone (e.g. via clickjacking).
 
+<!-- prettier-ignore-start -->
 ```html
 <audio></audio>
 <microphone></microphone>
@@ -26,6 +27,7 @@ This button's text and appearance is defined by the browser with limited customi
   });
 </script>
 ```
+<!-- prettier-ignore-end -->
 
 It comes with a new HTML attribute, `autostart`, that will attempt to begin streaming when the page loads, if the user has previously given permission.
 

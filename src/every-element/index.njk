@@ -23,23 +23,31 @@ cssComponents:
       {%- endif %}
     </div>
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneHalf">
-      {%- if params.data.experimental %}
-        <p class="kimBody"><span class="kimTag kimTag-accent">Experimental</span></p>
-      {%- elif params.data.obsolete %}
-        <p class="kimBody"><span class="kimTag">Obsolete</span></p>
-      {%- endif %}
       {{ params.content | safe }}
     </div>
-    {%- if not params.data.obsolete %}
-      <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
+      {%- if params.data.experimental %}
+        <p class="kimBody-s">
+          <span class="kimTag kimTag-accent">Experimental</span> 
+          <span>This element isn't a confirmed part of HTML yet. It may only be supported by certain browsers.</span>
+        </p>
+      {%- elif params.data.obsolete %}
+        <p class="kimBody-s">
+          <span class="kimTag">Obsolete</span>
+          <span>This element is no longer part of HTML and may not work in modern browsers.</span>
+        </p>
+      {%- endif %}
+      {%- if not params.data.obsolete %}
         <ul class="kimList">
-          <li><a class="kimLink" href="{{ params.data.mdn }}">MDN reference</a></li>
+          {%- if params.data.mdn %}
+            <li><a class="kimLink" href="{{ params.data.mdn }}">MDN reference</a></li>
+          {%- endif %}
           {%- if params.data.spec %}
           <li><a class="kimLink" href="{{ params.data.spec }}">HTML specification</a></li>
           {%- endif %}
         </ul>
-      </div>
-    {%- endif %}
+      {%- endif %}
+    </div>
   </div>
   <hr class="kimRule kimRule-hairline">
 {% endmacro %}
