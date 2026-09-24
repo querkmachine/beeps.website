@@ -80,7 +80,11 @@ export default class Fauxvertisements {
     },
     {
       file: "for-dumdus.gif",
-      alt: "Fake advertisement featuring a large collage of technical terms in a word cloud-like layout. They quickly fade out with the text 'Struggling to make sense of it all?' appearing on top. It then changes to 'Get your free guide today!' with a book cover titled 'Wood for Dumdus' and an animated, embossed 'click here' button.",
+      alt: "Fake advertisement featuring a large collage of wood-related terms in a word cloud-like layout. They quickly fade out with the text 'Struggle to make sense of it all?' appearing on top. It then changes to 'Get your free guide today!' with a book cover titled 'Wood for Dumdus' and an animated, embossed 'click here' button.",
+    },
+    {
+      file: "visit-second-severn-crossing.gif",
+      alt: "Fake advertisement featuring a panoramic photo of the Second Severn Crossing, a large cable-stayed bridge over the Severn Estuary. Written on it is 'Visit scenic Severn Second Crossing. Find us between England and Wales.'",
     },
   ];
 }
