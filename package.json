@@ -40,7 +40,7 @@
     "postcss": "^8.5.26",
     "postcss-preset-env": "^11.5.3",
     "prettier": "^3.9.6",
-    "sass": "^1.104.1"
+    "sass": "^1.105.0"
   },
   "lint-staged": {
     "!_site/**/*": "prettier --write --ignore-unknown"
