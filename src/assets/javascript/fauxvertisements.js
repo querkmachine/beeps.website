@@ -86,5 +86,13 @@ export default class Fauxvertisements {
       file: "visit-second-severn-crossing.gif",
       alt: "Fake advertisement featuring a panoramic photo of the Second Severn Crossing, a large cable-stayed bridge over the Severn Estuary. Written on it is 'Visit scenic Severn Second Crossing. Find us between England and Wales.'",
     },
+    {
+      file: "cheese-temperature.gif",
+      alt: "Fake advertisement showing multiple wedges of cheese, followed by large text reading 'How hot is your cheddar?' It then transitions to text reading 'Claim your free cheese temperature survey today', with the quotation 'Frigid or fondue, we'll tell you' flanked by illustrated cliparts of hot and cold thermometers.",
+    },
+    {
+      file: "styrofoam-nuns.gif",
+      alt: "Fake advertisement showing two nuns with grey/white skin and generally pockmarked appearances. One of the nuns looks deep in contemplation, whilst the other is smiling cheekily whilst drinking from a bottle of wine. Text reads 'StyrofoamNuns.com'.",
+    },
   ];
 }
