@@ -24,7 +24,7 @@ Generative AI's attempts to write are so often painfully average or incredibly e
 
 My vague attempts to use coding assistants like GitHub Copilot and Cursor (because I'm going to try and use a tool before decrying how useless it is) didn't even last half an hour, because they would only ever suggest the wrong thing. Having incorrect suggestions appearing constantly, each time requiring me to stop to review them to make sure they were still incorrect, massively slowed down doing any actual work.
 
-Taking an existing thing and slapping an 'AI chat' interface onto it is not an act of innovatation, it's a tascit admission that your existing thing was too rubbish for people to be able to use it as intended.
+Taking an existing thing and slapping an 'AI chat' interface onto it is not an act of innovation, it's a tascit admission that your existing thing was too rubbish for people to be able to use it as intended.
 
 That AI chat bot probably needs a disclaimer pointing out that it's going to be wrong a bunch of the time anyway, because, again, generative AI does not understand the semantics of what it's doing or saying.
 
