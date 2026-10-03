@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2026-09-22
+updated: 2026-10-03
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -65,6 +65,18 @@ Blogs that I actively keep tabs on and read at least some quantity of the posts.
 - [Dhole Moments](https://soatok.blog/) mostly writes about cryptography, technology, the furry fandom, and all the ways those things frequently intersect.
 - [Food is Stupid](https://foodisstupid.substack.com/). This blog is cursed. This food is cursed. None of you are without sin. (Half the posts are behind a paywall, such is the business of blogging, but the rest of them are still excellent.)
 - [Xe Iaso](https://xeiaso.net/) writes about all sorts of software things that I barely understand but find interesting anyway. Also where I stole the idea of having character callouts in blog posts, though my reasons are far less Socratic.
+
+## Podroll
+
+Podcasts are like radio you can listen to whenever you want.
+
+I don't listen to anywhere as many podcasts as I used to, and many of the ones I did listen to are no longer being made, but here's some of the ones that persist.
+
+- _[The Beef and Dairy Network Podcast](https://pod.link/1022024768)_ is an industry podcast for beef and dairy farmers, set in a universe where cattle farming is the most important and influential job on Earth. It's pretty funny.
+- _[The Greatest Generation](https://pod.link/1078225050)_ is a watchalong podcast covering _Star Trek: The Next Generation_ through to _Enterprise_. Simultaneously also a podcast about working in Hollywood, mens health, and dick and fart jokes. Highly encouraged.
+- _[Greatest Trek](https://pod.link/1288323368)_ is another podcast by the same folks, covering the newer _Star Trek_ shows and also, weirdly, _The Original Series_.
+- _[Three Bean Salad](https://pod.link/1564066507)_ is your run of the mill middle-aged white guys having a chat and trying to be funny podcast, except these guys are British stand-up comedians and therefore actually pretty funny. Comes with a weird amount of lore and [far too many weird jingles](https://www.youtube.com/watch?v=3D9oWDbqc1w). Pompidou.
+- _[What's All This Then?](https://pod.link/1812045307)_ is a podcast discussing British culture with non-British guests, hosted by two British people who no longer live in Britain.
 
 ## Webcomics
 
