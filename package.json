@@ -28,7 +28,7 @@
     "@11ty/eleventy-img": "^7.0.0",
     "@11ty/eleventy-plugin-directory-output": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
-    "cssnano": "^9.0.5",
+    "cssnano": "^9.1.2",
     "glob": "^13.0.6",
     "highlight.js": "^11.12.0",
     "husky": "^9.1.7",
@@ -38,9 +38,9 @@
     "markdown-it-anchor": "^10.0.0",
     "node-html-parser": "^9.0.4",
     "postcss": "^8.5.26",
-    "postcss-preset-env": "^11.5.3",
+    "postcss-preset-env": "^11.5.4",
     "prettier": "^3.9.6",
-    "sass": "^1.104.1"
+    "sass": "^1.105.1"
   },
   "lint-staged": {
     "!_site/**/*": "prettier --write --ignore-unknown"
