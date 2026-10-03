@@ -4,6 +4,10 @@ date: 2026-10-02
 tags: [web development]
 metadata:
   description: Rambles from near the front line.
+interactions:
+  host: social.beeps.gay
+  username: beeps
+  id: "117370643637535972"
 ---
 
 As of writing, I have the particular privilege of working on open source code as a full-time, salary-paying job.
