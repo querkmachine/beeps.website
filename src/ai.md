@@ -1,7 +1,8 @@
 ---
 layout: generic.njk
-title: AI policy
+title: AI statement
 updated: 2026-08-17
+redirect_from: /ai-policy/
 metadata:
   description: Do not train your AI on my content.
 cssComponents:
