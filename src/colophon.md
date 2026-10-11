@@ -53,9 +53,7 @@ Most prosaic content gets written in [iA Writer](https://ia.net/writer), which h
 
 ## Infrastructure
 
-This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support.
-
-Domain names (of which I have too many) are managed by [Namecheap](https://www.namecheap.com/) and [Glauca Digital](https://glauca.digital/).
+This website is hosted by [Opalstack](http://opalstack.com/), who have obscenely good customer support. The beeps.website domain name is registered with [Namecheap](https://www.namecheap.com/).
 
 The [Eleventy screenshot service](https://www.11ty.dev/docs/services/screenshots/) is used to generate OpenGraph images.
 

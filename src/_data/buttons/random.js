@@ -190,11 +190,6 @@ export default [
     alt: "Powered by Linux",
   },
   {
-    src: "/assets/images/buttons/glauca.gif",
-    alt: "Glauca Digital",
-    url: "//glauca.digital/",
-  },
-  {
     src: "/assets/images/buttons/rss.png",
     alt: "RSS feed",
     url: "/feed.xml",
