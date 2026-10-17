@@ -39,7 +39,7 @@
     "node-html-parser": "^9.0.4",
     "postcss": "^8.5.26",
     "postcss-preset-env": "^11.6.1",
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "sass": "^1.105.1"
   },
   "lint-staged": {
