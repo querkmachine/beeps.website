@@ -1,6 +1,7 @@
 ---
 tag: acronym
 name: Acronym
+category: Text semantics
 obsolete: true
 ---
 

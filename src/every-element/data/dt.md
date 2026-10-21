@@ -1,7 +1,7 @@
 ---
 tag: dt
 name: Definition Term
-category: Grouping content
+category: Lists
 spec: https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element
 ---
 

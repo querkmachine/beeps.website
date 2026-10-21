@@ -1,7 +1,7 @@
 ---
 tag: menuitem
 name: Menu Item
-category: Lists? Forms?
+category: Lists
 obsolete: true
 ---
 

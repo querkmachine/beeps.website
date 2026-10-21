@@ -1,7 +1,7 @@
 ---
 tag: style
 name: Style
-category: Metadata
+category: Styling
 spec: https://html.spec.whatwg.org/multipage/semantics.html#the-style-element
 ---
 

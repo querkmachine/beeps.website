@@ -1,6 +1,7 @@
 ---
 tag: frameset
 name: Frame Set
+category: Frames
 obsolete: true
 ---
 

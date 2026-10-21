@@ -1,0 +1,54 @@
+{% extends 'src/_layouts/layout.njk' %}
+{% set cssComponents = merge(cssComponents, ['code', 'tag']) %}
+
+{% set title = tag + (': the ' + name + ' element' if name) %}
+
+{% block main %}
+<div class="kimWrapper kim-!-margin-block-8-9">
+  <div class="kimGrid"> 
+    <div class="kimGrid_column kimGrid_column-full">
+      <h1 class="kimHeading-xl">
+        <code class="kimCode">{{ tag }}</code>
+        {%- if name %}:<br> the {{ name }} element{%- endif %}
+      </h1>
+      {%- if category %}
+        <p class="kimBody-l kim-!-margin-0">{{ category }}</p>
+      {%- endif %}
+    </div>
+  </div>
+  
+  <hr class="kimRule kimRule-regular">
+  
+  <div class="kimGrid">
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
+      {{ content | safe }}
+    </div>
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneThird">
+      {%- if experimental %}
+        <p class="kimBody-s">
+          <span class="kimTag kimTag-accent">Experimental</span> 
+          <span>This element isn't a confirmed part of HTML yet. It may only be supported by certain browsers.</span>
+        </p>
+      {%- elif obsolete %}
+        <p class="kimBody-s">
+          <span class="kimTag">Obsolete</span>
+          <span>This element is no longer part of HTML and may not work in modern browsers.</span>
+        </p>
+      {%- endif %}
+      {%- if not obsolete %}
+        <ul class="kimList">
+          {%- if mdn %}
+            <li><a class="kimLink" href="{{ mdn }}">MDN reference</a></li>
+          {%- endif %}
+          {%- if spec %}
+          <li><a class="kimLink" href="{{ spec }}">HTML specification</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
+    </div>
+  </div>
+  
+</div>
+{% endblock %}
+
+{% block footerDecor %}{% endblock %}

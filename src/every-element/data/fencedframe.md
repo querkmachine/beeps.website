@@ -1,6 +1,6 @@
 ---
 tag: fencedframe
-name: Fenced Frame
+name: Fenced Inline Frame
 category: Embedded content
 spec: https://wicg.github.io/fenced-frame/#the-fencedframe-element
 obsolete: true

@@ -1,6 +1,6 @@
 ---
 tag: footer
-name: Footer
+name: Content Footer
 category: Sections of a page
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-footer-element
 ---

@@ -1,7 +1,7 @@
 ---
 tag: dd
 name: Definition Detail
-category: Grouping content
+category: Lists
 spec: https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element
 ---
 

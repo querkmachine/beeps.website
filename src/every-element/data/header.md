@@ -1,6 +1,6 @@
 ---
 tag: header
-name: Header
+name: Content Header
 category: Sections of a page
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-header-element
 ---

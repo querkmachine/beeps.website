@@ -1,7 +1,7 @@
 ---
 tag: geolocation
 name: Geolocation
-category: Interactive elements
+category: Scripting
 mdn: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation
 spec: https://w3c.github.io/geolocation/
 experimental: true

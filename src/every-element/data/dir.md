@@ -1,6 +1,7 @@
 ---
 tag: dir
 name: Directory List
+category: Lists
 obsolete: true
 ---
 

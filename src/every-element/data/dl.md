@@ -1,7 +1,7 @@
 ---
 tag: dl
 name: Definition List
-category: Grouping content
+category: Lists
 spec: https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element
 ---
 

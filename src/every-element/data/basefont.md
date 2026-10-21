@@ -1,7 +1,7 @@
 ---
 tag: basefont
 name: Base Font
-category: Metadata
+category: Styling
 obsolete: true
 ---
 

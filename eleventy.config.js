@@ -177,6 +177,20 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("markdownInline", markdownFilterInline);
   eleventyConfig.addFilter("urlizeOpenGraphImage", urlizeOpenGraphImage);
 
+  eleventyConfig.addFilter(
+    "filterEveryElementList",
+    function (elements, property, value) {
+      if (value === false) {
+        return elements.filter((item) => !item.data[property]);
+      }
+      return elements.filter((item) => item.data[property] === value);
+    },
+  );
+
+  eleventyConfig.addNunjucksGlobal("eeTag", (element) => {
+    return `<code class="kimCode"><a class="kimLink" href="/every-element/${element.data.tagSafe ?? element.data.tag}/">&lt;${element.data.tag}&gt;</a></code>`;
+  });
+
   return {
     markdownTemplateEngine: "njk",
     dir: {

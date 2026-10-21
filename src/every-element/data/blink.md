@@ -1,6 +1,7 @@
 ---
 tag: blink
 name: Blinking
+category: Styling
 obsolete: true
 ---
 

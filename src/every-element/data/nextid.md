@@ -1,6 +1,7 @@
 ---
 tag: nextid
 name: NeXT ID
+category: Metadata
 obsolete: true
 ---
 

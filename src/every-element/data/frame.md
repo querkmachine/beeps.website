@@ -1,6 +1,7 @@
 ---
 tag: frame
 name: Frame
+category: Frames
 obsolete: true
 ---
 

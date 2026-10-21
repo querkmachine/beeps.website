@@ -1,8 +1,9 @@
 export default function () {
   return {
-    permalink: false,
+    layout: "every-element.njk",
     tags: ["every-element"],
     eleventyComputed: {
+      permalink: (data) => `/every-element/${data.tagSafe ?? data.tag}/`,
       mdn: async (data) => {
         if (data.mdn === null) return null;
 
