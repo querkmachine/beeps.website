@@ -11,6 +11,13 @@ export default function () {
           ? data.mdn
           : `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${data.tag}`;
       },
+      caniuse: async (data) => {
+        if (data.caniuse === null) return null;
+
+        return data.caniuse
+          ? data.caniuse
+          : `https://caniuse.com/mdn-html_elements_${data.tag}`;
+      },
     },
   };
 }

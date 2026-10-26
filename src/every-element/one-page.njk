@@ -44,6 +44,9 @@ cssComponents:
           {%- if params.data.spec %}
           <li><a class="kimLink" href="{{ params.data.spec }}">HTML specification</a></li>
           {%- endif %}
+          {%- if params.data.caniuse %}
+          <li><a class="kimLink" href="{{ params.data.caniuse }}">Browser compatibility</a></li>
+          {%- endif %}
         </ul>
       {%- endif %}
     </div>
