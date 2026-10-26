@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Manual for beeps
-updated: 2026-07-04
+updated: 2026-10-26
 metadata:
   noRobots: true
   description: Advice for my coworkers.
@@ -21,25 +21,23 @@ I am a **frontend developer** on the **GOV.UK Design System** team.
 If you’re interested in a general overview of what I’m up to lately, see my [/now]({{ '/now/' | url }}) page.
 {% endcallout %}
 
-I’m currently undergoing investigations related to a number of health issues, including:
+### Moving house
 
-- severe hypertension
-- hearing loss
-- thoracic outlet syndrome (aka my arms keep going numb for some reason)
+I'm currently in the process of [buying a house halfway across the country]({{ '/blog/2026-10-21-bye-bye-bristol/' | url }}). It's stressful and naturally a bit distracting as an ongoing background event.
 
-I also have occasional appointments relating to gender transition.
+I'm currently expecting to move around mid-December.
 
-Consequently I have quite a lot of hospital and GP appointments. When I can, I schedule these to be on my non-working day or, if they’re more substantial, will move my non-working day to cover them off. Medical appointments will be listed in my calendar if they land during work hours.
+### Medical appointments
 
-Due to lethargy introduced by having severe obstructive sleep apnea, I may sometimes struggle to maintain energy levels and need to take breaks or stop working earlier than normal. I also experience episodes of [microsleep](https://en.wikipedia.org/wiki/Microsleep), where I will suddenly fall asleep without warning for short periods of time.
+I’m currently undergoing medical investigations for a number of health issues. I also have occasional appointments relating to gender transition.
+
+Consequently I have quite a lot of lengthy hospital appointments. When I can, I schedule these to be on my non-working day or, if they’re more substantial, will move my non-working day to cover them off. Medical appointments that land during work hours will be listed in my calendar.
 
 ## Conditions I like to work in
 
 I deal with a lot of **anxiety and dysphoria** and will rarely (if ever) show my face on camera or in [profile images](#avatars). On days when it’s particularly bad, I may also refrain from speaking and solely use written communication instead. If we’re meeting in person, please ask before taking any photographs with me in them.
 
 I prefer to **work from home**. Having a fine level of control over my environment helps me to concentrate, easily remedy distractions, and permits me to more readily take a break if I feel I need it.
-
-**My partner** also works from home two days a week. He works in a heavily phone- and meeting-based job, often dealing with sensitive customer information. If this is the case, I may also have to avoid contributing vocally.
 
 ## My working hours
 
@@ -63,7 +61,7 @@ If you’d prefer a **phone call**, drop me a message first asking if I’m able
 
 Preferably give any **feedback to me directly**, ideally via Slack private messages. If you’d rather provide feedback anonymously, [I have a form for that](https://forms.cloud.microsoft/e/4EpWSk5djD).
 
-**Be upfront.** A cryptic ‘we need to talk about something’ will just trigger my anxiety.
+**Be upfront.** A mystery calendar event or a cryptic ‘we need to talk about something’ will just trigger my anxiety.
 
 **Be constructive.** Knowing how I could remedy an issue, rather than just telling me that there is one, will go a long way to resolving it faster.
 
@@ -81,7 +79,9 @@ Preferably give any **feedback to me directly**, ideally via Slack private messa
 
 **I _despise_ presenting at and facilitating meetings.** They basically combine all of my issues with dysphoria, real-time communication and anxiety into one thing.
 
-**I have audio processing issues and am partially deaf** in one ear. I find it really difficult to listen, read and/or write simultaneously, so I avoid volunteering for note-taking duties. I also struggle to understand strong accents or pick voices out of a noisy environment, so I may need you to repeat things sometimes.
+**I have audio processing issues and am partially deaf** in one ear. I find it really difficult to listen, read and/or write simultaneously, so I avoid volunteering for note-taking duties. I can also struggle to understand unfamiliar accents or pick voices out of a noisy environment, so I may need you to repeat things sometimes.
+
+Due to having severe obstructive sleep apnea, **I sometimes struggle to maintain energy levels** and need to take breaks or stop working earlier than normal. I also experience episodes of [microsleep](https://en.wikipedia.org/wiki/Microsleep), where I will suddenly fall asleep without warning for short periods of time.
 
 I’m often overly conscious about ‘butting in’ during meetings, and will often wait until there’s an extended period of quiet before raising a hand or speaking up. **Prompting me to contribute** can sometimes help, but usually if I have something to add to a busy discussion, I’ll add it to the text chat.
 
