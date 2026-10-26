@@ -25,8 +25,8 @@ export default {
   },
   eleventyComputed: {
     stats: async (data) => {
-      // Skip if there's no usable metadata on this post
-      if (!data.interactions) return null;
+      // Skip if there's no usable metadata on this post or this is developer mode
+      if (!data.interactions || process.env.ENVIRONMENT !== "prod") return null;
 
       const metadata = await EleventyFetch(
         `https://${data.interactions.host}/api/v1/statuses/${data.interactions.id}`,
@@ -46,8 +46,8 @@ export default {
       };
     },
     favourites: async (data) => {
-      // Skip if there's no usable metadata on this post
-      if (!data.interactions) return null;
+      // Skip if there's no usable metadata on this post or this is developer mode
+      if (!data.interactions || process.env.ENVIRONMENT !== "prod") return null;
 
       const favourites = await EleventyFetch(
         `https://${data.interactions.host}/api/v1/statuses/${data.interactions.id}/favourited_by`,
@@ -74,8 +74,8 @@ export default {
       });
     },
     shares: async (data) => {
-      // Skip if there's no usable metadata on this post
-      if (!data.interactions) return null;
+      // Skip if there's no usable metadata on this post or this is developer mode
+      if (!data.interactions || process.env.ENVIRONMENT !== "prod") return null;
 
       const shares = await EleventyFetch(
         `https://${data.interactions.host}/api/v1/statuses/${data.interactions.id}/reblogged_by`,

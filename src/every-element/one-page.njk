@@ -1,6 +1,5 @@
 ---
-title: Every HTML element
-updated: 2026-10-12
+title: Every HTML element (on one page)
 metadata:
   description: Every element in HTML and a brief description of what it's used for.
 cssComponents:
@@ -15,7 +14,7 @@ cssComponents:
   <div class="kimGrid" id="{{ params.data.tag | slugify }}">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
       <h2 class="kimBody">
-        {{ _e(params.data.tag) }}
+        {{ eeTagHtml(params) | safe }}
         {%- if params.data.name %}:<br>the {{ params.data.name }} element{% endif %}
       </h2>
       {%- if params.data.category %}
@@ -45,6 +44,9 @@ cssComponents:
           {%- if params.data.spec %}
           <li><a class="kimLink" href="{{ params.data.spec }}">HTML specification</a></li>
           {%- endif %}
+          {%- if params.data.caniuse %}
+          <li><a class="kimLink" href="{{ params.data.caniuse }}">Browser compatibility</a></li>
+          {%- endif %}
         </ul>
       {%- endif %}
     </div>
@@ -52,38 +54,18 @@ cssComponents:
   <hr class="kimRule kimRule-hairline">
 {% endmacro %}
 
-{% macro _e(tag) -%}
-<code class="kimCode"><a class="kimLink-noVisited" href="#{{ tag | slugify }}">&lt;{{ tag }}&gt;</a></code>
-{%- endmacro %}
-
 {% block main %}
 <div class="kimWrapper kim-!-margin-block-8-9">
   <div class="kimGrid"> 
-    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">
-      {%- if updated %}
-      <dl class="kimMeta">
-        <div class="kimMeta_item">
-          <dt class="kimMeta_key">Last updated</dt>
-          <dd class="kimMeta_value">
-            <time datetime="{{ updated | formatDate('iso') }}" itemprop="dateModified">
-              {{- updated | formatDate('fullDate') -}}
-            </time>
-          </dd>
-        </div>
-      </dl>
-      {%- endif %}
-    
+    <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-twoThirds">    
       <h1 class="kimHeading-xl">{{ title }}</h1>
       <p class="kimBody">HTML is a semantic language. Nearly every element provides a specific meaning to its contents or function. This is a quick reference for what those meanings are.</p>
       <p class="kimBody">Well-written HTML will use the most appropriate element for the job, but you don't need to know every single element from memory!</p>
-      <p class="kimBody">I highly encourage you to use your browser's find-in-page feature on this page.</p>
     </div>
   </div>
   
   <hr class="kimRule kimRule-thick">
-  
-  {{ collections.elements }}
-  
+    
   {%- for element in collections['every-element'] | sort(false, false, "data.tag") %}
     {{ _item(element) }}
   {%- endfor %}

@@ -1,13 +1,13 @@
 ---
 tag: dl
 name: Definition List
-category: Grouping content
+category: Lists
 spec: https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element
 ---
 
-A container for a list of keys and values, defined by a single [`dt`](#dt) followed by one or more [`dd`](#dd) elements.
+A container for a list of keys and values, defined by a single {{ eeTag("dt") }} followed by one or more {{ eeTag("dd") }} elements.
 
-Each set of `dt` and `dd` elements may optionally be wrapped in a [`div`](#div) for ease of styling.
+Each set of `dt` and `dd` elements may optionally be wrapped in a {{ eeTag("div") }} for ease of styling.
 
 <!-- prettier-ignore-start -->
 ```html

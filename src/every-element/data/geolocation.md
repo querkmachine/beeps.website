@@ -1,7 +1,7 @@
 ---
 tag: geolocation
 name: Geolocation
-category: Interactive elements
+category: Scripting
 mdn: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation
 spec: https://w3c.github.io/geolocation/
 experimental: true
@@ -34,4 +34,4 @@ It comes with three new HTML attributes that influence how the element works:
 
 Content inside of the element is used as a fallback in case the browser doesn't support the `geolocation` element. This can be used to display a button falling back to `navigator.geolocation`.
 
-Along with the [`usermedia`](#usermedia) element, it's a spin-off from the [`<permission>` element](https://github.com/WICG/PEPC/blob/main/explainer.md) that never made it past the concept phase.
+Along with the {{ eeTag("usermedia") }} element, it's a spin-off from the [`<permission>` element](https://github.com/WICG/PEPC/blob/main/explainer.md) that never made it past the concept phase.

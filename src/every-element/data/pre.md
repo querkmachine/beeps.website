@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-eleme
 
 Represents text that should be presented exactly as written, without collapsing or removing spaces, tabs, and line breaks.
 
-If `pre` is being used to produce a visual, such as ASCII art, then it should be hidden from assistive technologies and furnished with a text alternative as though it were an image. You can use [`figure`](#figure) and [`figcaption`](#figcaption) for this purpose.
+If `pre` is being used to produce a visual, such as ASCII art, then it should be hidden from assistive technologies and furnished with a text alternative as though it were an image. You can use {{ eeTag("figure") }} and {{ eeTag("figcaption") }} for this purpose.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -32,4 +32,4 @@ If `pre` is being used to produce a visual, such as ASCII art, then it should be
 ```
 <!-- prettier-ignore-end -->
 
-`pre` is often used in conjunction with [`code`](#code) to display code snippets.
+`pre` is often used in conjunction with {{ eeTag("code") }} to display code snippets.

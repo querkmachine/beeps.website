@@ -1,6 +1,7 @@
 ---
 tag: big
 name: Bigger Text
+category: Styling
 obsolete: true
 ---
 

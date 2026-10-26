@@ -5,7 +5,7 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element
 ---
 
-Creates a group of [`option`s](#option) within a [`select`](#select) element. A name can be given to the group using the `label` attribute.
+Creates a group of {{ eeTag("option") }} elements within a {{ eeTag("select") }} element. A visible name can be given to the group using the `label` attribute.
 
 <!-- prettier-ignore-start -->
 ```html

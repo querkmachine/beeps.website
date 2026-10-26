@@ -1,6 +1,7 @@
 ---
 tag: font
 name: Font
+category: Styling
 obsolete: true
 ---
 

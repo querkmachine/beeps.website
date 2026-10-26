@@ -7,4 +7,4 @@ obsolete: true
 
 Rendered pre-formatted text, maintaining whitespace and line breaks from the source code.
 
-Today, use the [`pre`](#pre) element instead.
+Today, use the {{ eeTag("pre") }} element instead.

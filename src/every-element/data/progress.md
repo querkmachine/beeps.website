@@ -9,7 +9,7 @@ Provides a visual representation of how complete a task is.
 
 The upper bound is provided by the `max` attribute, with the lower bound being fixed at 0. The current value is provided using the `value` attribute, but may be omitted if there is an indeterminate amount of progress remaining, such as uploading a file when you don't know how large the file is.
 
-Text inside of the `progress` element is announced by screen readers and shown as a fallback for browsers that cannot display the element. As it's technically a form control, `progress` should have an accompanying [`label`](#label) element.
+Text inside of the `progress` element is announced by screen readers and shown as a fallback for browsers that cannot display the element. As it's technically a form control, `progress` should have an accompanying {{ eeTag("label") }} element.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -18,4 +18,4 @@ Text inside of the `progress` element is announced by screen readers and shown a
 ```
 <!-- prettier-ignore-end -->
 
-`progress` is only intended to show progression when there is a distinct start and end point. To show a visual representation of other values, use [`meter`](#meter). To accept user input using a visual range, use [`input`](#input) with the `range` type.
+`progress` is only intended to show progression when there is a distinct start and end point. To show a visual representation of other values, use {{ eeTag("meter") }}. To accept user input using a visual range, use {{ eeTag("input") }} with the `range` type.

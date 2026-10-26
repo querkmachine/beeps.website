@@ -5,7 +5,7 @@ category: Scripting
 spec: https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element
 ---
 
-`slot`, along with [`template`](#template), is part of the [Web Components suite of technologies](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). They represent an area where content can be injected into a web component, based on a given `name` attribute.
+`slot`, along with {{ eeTag("template") }}, is part of the [Web Components suite of technologies](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). They represent an area where content can be injected into a web component, based on a given `name` attribute.
 
 Content inside of the `slot` element is displayed as a fallback if no content has been injected into it.
 

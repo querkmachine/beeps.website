@@ -9,7 +9,7 @@ Provides a read-only visual representation of a value within a numerical range.
 
 The lower and upper bounds are provided using the `min` and `max` attributes, respectively. The current value is provided using the `value` attribute.
 
-Any text inside of the `meter` element is announced by screen readers and used as a fallback for browsers that cannot display the element. As it's technically a form control, `meter` should have an accompanying [`label`](#label) element.
+Any text inside of the `meter` element is announced by screen readers and used as a fallback for browsers that cannot display the element. As it's technically a form control, `meter` should have an accompanying {{ eeTag("label") }} element.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -22,4 +22,4 @@ Optional `low` and `high` attributes can be specified to change the default appe
 
 An optional `optimal` attribute may also be set to indicate the ideal range. If the value of `optimal` is between `min` and `low`, it means that lower values are preferred. If it's between `high` and `max`, higher values are preferred.
 
-Meter is intended for showing a relatively static representation of a value. To show a visual representation of progression, such as though a process or file upload, use [`progress`](#progress). To accept user input using a visual range, use [`input`](#input) with the `range` type.
+Meter is intended for showing a relatively static representation of a value. To show a visual representation of progression, such as though a process or file upload, use {{ eeTag("progress") }}. To accept user input using a visual range, use {{ eeTag("input") }} with the `range` type.

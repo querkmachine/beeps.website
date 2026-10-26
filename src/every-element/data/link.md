@@ -31,4 +31,4 @@ This is typically used for defining style sheets, icons, alternative versions of
 ```
 <!-- prettier-ignore-end -->
 
-External resource links should always appear in the [`head`](#head) of the page.
+External resource links should always appear in the {{ eeTag("head") }} of the page.

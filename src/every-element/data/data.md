@@ -15,4 +15,4 @@ Find out <data value="42">the Answer to Life, the Universe, and Everything</data
 
 There is no specification for how scripts consume this information. It is up to the webpage author and the data consumer to agree on the standard.
 
-For providing machine-readable dates and times, use [`time`](#time) instead.
+For providing machine-readable dates and times, use {{ eeTag("time") }} instead.
