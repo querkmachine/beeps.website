@@ -7,6 +7,6 @@ obsolete: true
 
 Rendered its contents as plain text, not parsing any HTML or collapsing whitespace characters, for the purposes of displaying code snippets.
 
-Like [`plaintext`](#plaintext), but could be closed this time.
+Like {{ eeTag("plaintext") }}, but could be closed this time.
 
-Use the [`pre`](#pre) and [`code`](#code) elements with manually escaped HTML tags instead.
+Use the {{ eeTag("pre") }} and {{ eeTag("code") }} elements with manually escaped HTML tags instead.

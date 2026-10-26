@@ -23,4 +23,4 @@ The `for` attribute contains a space-separated list of input `id`s that affect t
 
 Many assistive technologies will announce the content of `output` automatically when it's changed, without requiring users to move focus to the element.
 
-Only intended for the actual outputs of an operation. For examples of outputs, use [`samp`](#samp).
+Only intended for the actual outputs of an operation. For examples of outputs, use {{ eeTag("samp") }}.

@@ -5,4 +5,4 @@ category: Text semantics
 obsolete: true
 ---
 
-Was used for marking up acronyms. Use [`abbr`](#abbr) instead.
+Was used for marking up acronyms. Use {{ eeTag('abbr') }} instead.

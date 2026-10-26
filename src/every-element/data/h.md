@@ -5,6 +5,7 @@ name: Heading
 category: Text semantics
 mdn: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements
+caniuse: https://caniuse.com/mdn-html_elements_h1,mdn-html_elements_h2,mdn-html_elements_h3,mdn-html_elements_h4,mdn-html_elements_h5,mdn-html_elements_h6
 ---
 
 The heading elements—`h1`, `h2`, `h3`, `h4`, `h5`, and `h6`—represent a descending hierarchy that is used to structure the content that follows them.

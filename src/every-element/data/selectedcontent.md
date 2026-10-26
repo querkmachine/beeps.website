@@ -5,7 +5,7 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element
 ---
 
-Contains the content of the currently selected [`option`](#option) within a [`select`](#select), _if_ [customised selects](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) are being used.
+Contains the content of the currently selected {{ eeTag("option") }} within a {{ eeTag("select") }}, _if_ [customised selects](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) are being used.
 
 <!-- prettier-ignore-start -->
 ```html

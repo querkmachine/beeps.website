@@ -9,7 +9,7 @@ experimental: true
 
 Displays a button that prompts the user to share access to their device's camera, as a replacement for requesting it using `navigator.getUserMedia` in JavaScript, though it still requires JavaScript to be useful.
 
-A sister element to [`microphone`](#microphone), which requests microphone permissions, and [`usermedia`](#usermedia), which requests access to both the camera and microphone.
+A sister element to {{ eeTag("microphone") }}, which requests microphone permissions, and {{ eeTag("usermedia") }}, which requests access to both the camera and microphone.
 
 This button's text and appearance is defined by the browser with limited customisation. It's intended to increase trust for user media requests, so that the user doesn't unwittingly grant access to their camera (e.g. via clickjacking).
 

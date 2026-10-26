@@ -5,7 +5,7 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element
 ---
 
-Allows a user to select an [`option`](#option) from a list. By default, a user can only select a single option and one option must always be selected. These options may be grouped into [`optgroup`s](#optgroup).
+Allows a user to select an {{ eeTag("option") }} from a list. By default, a user can only select a single option and one option must always be selected. These options may be grouped into {{ eeTag("optgroup") }}s.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -25,4 +25,4 @@ Allows a user to select an [`option`](#option) from a list. By default, a user c
 
 The appearance and functionality of `select` elements differs between browsers and operating systems, but is most commonly displayed as a list below the select or overlaid on the page.
 
-Selects have many usability and accessibility issues, especially if the `multiple` attribute is used. It's better to treat a select as an 'input of last resort' and try to gather input using an alternative method, such as radio [`input`s](#input) instead.
+Selects have many usability and accessibility issues, especially if the `multiple` attribute is used. It's better to treat a select as an 'input of last resort' and try to gather input using an alternative method, such as radio {{ eeTag("input") }}s instead.

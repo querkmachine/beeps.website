@@ -19,6 +19,6 @@ Allows for inserting CSS style rules directly into the current page. CSS inserte
 ```
 <!-- prettier-ignore-end -->
 
-This can be used anywhere on the page, but best practice is to include it in the [`head`](#head) so that the browser renderer encounters it sooner. This avoids the browser having to restart rendering the page when it encounters new `style` elements.
+This can be used anywhere on the page, but best practice is to include it in the {{ eeTag("head") }} so that the browser renderer encounters it sooner. This avoids the browser having to restart rendering the page when it encounters new `style` elements.
 
-To link to an external stylesheet, use [`link`](#link).
+To link to an external stylesheet, use {{ eeTag("link") }}.

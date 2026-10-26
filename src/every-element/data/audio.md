@@ -5,7 +5,7 @@ category: Media
 spec: https://html.spec.whatwg.org/multipage/media.html#the-audio-element
 ---
 
-An embedded audio file, defined using the `src` attribute or one or more [`source`](#source) elements.
+An embedded audio file, defined using the `src` attribute or one or more {{ eeTag('source') }} elements.
 
 By default, the element renders invisibly. The `controls` attribute must be included to provide visible playback controls.
 
@@ -20,4 +20,4 @@ Any HTML inside of the element, that aren't `source` elements, will be displayed
 ```
 <!-- prettier-ignore-end -->
 
-[`track`](#track) elements can be used to provide transcriptions and translations of audio content.
+{{ eeTag('track') }} elements can be used to provide transcriptions and translations of audio content.

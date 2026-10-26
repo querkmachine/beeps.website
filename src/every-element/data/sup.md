@@ -13,4 +13,4 @@ Inline text that needs to be displayed in superscript (above the text baseline) 
 ```
 <!-- prettier-ignore-end -->
 
-Companion to [`sub`](#sub), the subscript element.
+Companion to {{ eeTag("sub") }}, the subscript element.

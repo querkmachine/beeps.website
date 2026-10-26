@@ -18,4 +18,4 @@ Container element for a disclosure widget that can show or hide content on a pag
 
 Content is hidden by default. Add the `open` HTML attribute to have it start open.
 
-Details should include a [`summary`](#summary) element that describes the content. All content within the details element other than the `summary` will be shown and hidden when interacting with it.
+Details should include a {{ eeTag("summary") }} element that describes the content. All content within the details element other than the `summary` will be shown and hidden when interacting with it.

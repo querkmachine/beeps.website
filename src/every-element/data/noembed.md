@@ -5,6 +5,6 @@ category: Embedded content
 obsolete: true
 ---
 
-Rendered fallback content for browsers that did not support [`embed`](#embed) elements.
+Rendered fallback content for browsers that did not support {{ eeTag("embed") }} elements.
 
-Much like `embed`, it's largely obsolete these days. Fallback content is now provided as part of the [`object`](#object) element instead.
+Much like `embed`, it's largely obsolete these days. Fallback content is now provided as part of the {{ eeTag("object") }} element instead.

@@ -3,6 +3,7 @@ tag: svg
 name: Scalable Vector Graphic
 category: Embedded content
 mdn: https://developer.mozilla.org/en-US/docs/Web/SVG
+caniuse: https://caniuse.com/svg
 ---
 
 Scalable Vector Graphics are image files that can be embedded directly within HTML, rather than being included from an external file.

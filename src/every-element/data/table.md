@@ -57,11 +57,11 @@ Element that wraps around tabular data—content that's being presented as a set
 
 Tables have several unique elements used for defining their content:
 
-- [`tr`](#tr) wraps around each row.
-- [`th`](#th) contains column and row headings.
-- [`td`](#td) contains tabular data.
-- [`thead`](#thead), [`tbody`](#tbody), and [`tfoot`](#tfoot) separates the table's header and footer rows from the main content.
-- [`caption`](#caption) provides an overview of the table contents.
-- [`colgroup`](#colgroup) and [`col`](#col) help to make styling columns easier.
+- {{ eeTag("tr") }} wraps around each row.
+- {{ eeTag("th") }} contains column and row headings.
+- {{ eeTag("td") }} contains tabular data.
+- {{ eeTag("thead") }}, {{ eeTag("tbody") }}, and {{ eeTag("tfoot") }} separates the table's header and footer rows from the main content.
+- {{ eeTag("caption") }} provides an overview of the table contents.
+- {{ eeTag("colgroup") }} and {{ eeTag("col") }} help to make styling columns easier.
 
 Don't use tables for laying out content. That's not what they're for and it can mess up assistive technology users.

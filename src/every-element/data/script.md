@@ -36,4 +36,4 @@ JavaScript code can also be written inline, directly inside of the `script` elem
 
 Script elements cannot contain both inline code and a `src` attribute. If you need a mixture of both, use multiple `script` elements.
 
-The `script` element is 'render blocking', meaning the browser stops and waits for scripts it encounters to load and run before continuing to render the rest of the page, making pages seem to load slower. You usually want to put `script` elements as one of the last things inside of your [`body`](#body) element so that everything else loads before it, or you can use the `defer` attribute to delay loading instead.
+The `script` element is 'render blocking', meaning the browser stops and waits for scripts it encounters to load and run before continuing to render the rest of the page, making pages seem to load slower. You usually want to put `script` elements as one of the last things inside of your {{ eeTag("body") }} element so that everything else loads before it, or you can use the `defer` attribute to delay loading instead.

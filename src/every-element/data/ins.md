@@ -13,4 +13,4 @@ VY Canis Majoris is the <ins datetime="2006">second</ins> largest star in the Mi
 ```
 <!-- prettier-ignore-end -->
 
-The companion to [`del`](#del), which is for text that has been removed from a document.
+The companion to {{ eeTag("del") }}, which is for text that has been removed from a document.

@@ -5,9 +5,9 @@ category: Sections of a page
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element
 ---
 
-Groups together a heading ([`h1`–`h6`](#h)) with related content, such as a subtitle, version number or revision date.
+Groups together a heading {{ eeTag("h", "`h1`–`h6`") }} with related content, such as a subtitle, version number or revision date.
 
-An `hgroup` can only contain a single heading, and other content must be contained within [`p`](#p) elements.
+An `hgroup` can only contain a single heading, and other content must be contained within {{ eeTag("p") }} elements.
 
 <!-- prettier-ignore-start -->
 ```html

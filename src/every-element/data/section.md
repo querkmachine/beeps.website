@@ -27,12 +27,12 @@ Sections should always contain a heading or an accessible label that identifies 
 
 There are many, many more semantic alternatives to `section`. For a non-exhaustive list of examples:
 
-- For navigation elements, use [`nav`](#nav).
-- For wrapping the primary content of the page, use [`main`](#main).
-- For the main heading of a page, or headings within a section, use [`header`](#header).
-- For the main footer of a page, or metadata within a section, use [`footer`](#footer).
-- For a piece of content that makes sense outside of the context of the rest of the page, use [`article`](#article).
-- For content that is supplemental to the page's content, use [`aside`](#aside).
-- For search functionality, use [`search`](#search).
+- For navigation elements, use {{ eeTag("nav") }}.
+- For wrapping the primary content of the page, use {{ eeTag("main") }}.
+- For the main heading of a page, or headings within a section, use {{ eeTag("header") }}.
+- For the main footer of a page, or metadata within a section, use {{ eeTag("footer") }}.
+- For a piece of content that makes sense outside of the context of the rest of the page, use {{ eeTag("article") }}.
+- For content that is supplemental to the page's content, use {{ eeTag("aside") }}.
+- For search functionality, use {{ eeTag("search") }}.
 
-If you're looking for an element solely to use as a styling hook, use [`div`](#div).
+If you're looking for an element solely to use as a styling hook, use {{ eeTag("div") }}.

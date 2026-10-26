@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-e
 
 A word or phrase that is being defined, such as in a dictionary or glossary of terms.
 
-It should be used as part of a [`p`](#p), [`section`](#section), or [`dt`](#dt)/[`dd`](#dd) pairing.
+It should be used as part of a {{ eeTag("p") }}, {{ eeTag("section") }}, or {{ eeTag("dt") }}/{{ eeTag("dd") }} pairing.
 
 <!-- prettier-ignore-start -->
 ```html
