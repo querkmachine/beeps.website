@@ -187,7 +187,13 @@ export default function (eleventyConfig) {
     },
   );
 
-  eleventyConfig.addNunjucksGlobal("eeTag", (element) => {
+  eleventyConfig.addNunjucksGlobal("eeTag", (tag, tagName) => {
+    if (!tagName) tagName = `\`${tag}\``;
+
+    return `[${tagName}](/every-element/${tag}/)`;
+  });
+
+  eleventyConfig.addNunjucksGlobal("eeTagHtml", (element) => {
     return `<code class="kimCode"><a class="kimLink" href="/every-element/${element.data.tagSafe ?? element.data.tag}/">&lt;${element.data.tag}&gt;</a></code>`;
   });
 

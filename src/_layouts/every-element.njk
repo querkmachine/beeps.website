@@ -7,13 +7,11 @@
 <div class="kimWrapper kim-!-margin-block-8-9">
   <div class="kimGrid"> 
     <div class="kimGrid_column kimGrid_column-full">
+      {%- if category %}<div class="kimSubheading-m kim-!-margin-block-end-2">{{ category }}</div>{% endif %}
       <h1 class="kimHeading-xl">
-        <code class="kimCode">{{ tag }}</code>
+        <code class="kimCode">&lt;{{ tag }}&gt;</code>
         {%- if name %}:<br> the {{ name }} element{%- endif %}
       </h1>
-      {%- if category %}
-        <p class="kimBody-l kim-!-margin-0">{{ category }}</p>
-      {%- endif %}
     </div>
   </div>
   

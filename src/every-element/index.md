@@ -14,7 +14,7 @@ cssComponents:
   <dl class="pageElementList">
     {%- for element in collections['every-element'] | filterEveryElementList("category", category) | sort(false, false, "data.tag") %}
       <div class="pageElementList_item">
-        <dt class="pageElementList_tag">{{ eeTag(element) | safe }}</dt>
+        <dt class="pageElementList_tag">{{ eeTagHtml(element) | safe }}</dt>
         <dd class="pageElementList_name">{{ element.data.name }}</dd>
         {%- if element.data.experimental %}
           <dd class="pageElementList_status"><span class="kimTag kimTag-accent">Experimental</span></dd>

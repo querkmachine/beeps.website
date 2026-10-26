@@ -14,7 +14,7 @@ cssComponents:
   <div class="kimGrid" id="{{ params.data.tag | slugify }}">
     <div class="kimGrid_column kimGrid_column-full defiant:kimGrid_column-oneQuarter">
       <h2 class="kimBody">
-        {{ eeTag(params) | safe }}
+        {{ eeTagHtml(params) | safe }}
         {%- if params.data.name %}:<br>the {{ params.data.name }} element{% endif %}
       </h2>
       {%- if params.data.category %}
