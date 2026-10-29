@@ -51,8 +51,25 @@
     </div>
   </div>
   
-  <section class="pageTransRights">
+  {#<section class="pageTransRights">
     <p>Transformation is part of being alive. <span>Transgender rights are human rights.</span></p>
+  </section>#}
+  
+  <section class="pageSirPatStew">
+    <svg class="pageSirPatStew_combadge" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131.4 139.9">
+      <path d="M131.4 74.6q-.75-6.9-2.4-14.7c-.8-3.9-1.8-7.6-2.7-11-.7-2.6-2.9-4.5-5.5-5-15-2.7-33-4.8-53.3-4.9-21.8-.1-41 2.1-56.8 4.9-2.6.5-4.7 2.4-5.5 4.9-1.1 3.8-2.2 7.9-3.1 12.4C1.1 66 .5 70.5 0 74.6c-.4 3.7 2.1 7 5.7 7.7 16.8 3.1 37.1 5.5 60.3 5.5 22.9 0 43-2.4 59.7-5.5 3.6-.7 6.1-4 5.7-7.7M116.5 65h-101c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5h101c1.9 0 3.5 1.6 3.5 3.5s-1.6 3.5-3.5 3.5" style="fill:#d4af37"/>
+      <path d="M23.6 130.1c1-18.8 4.4-44.5 14.7-73.1 7.4-20.4 16.4-37 24.5-49.9 8.7 12.1 18.9 28.8 27.1 50.1 9.8 25.4 13.3 48.2 14.5 64.6C97.2 112.2 84.6 94 76 94.9c-18.3 1.9-33.1 16.8-52.5 35.1Z" style="fill:#c0c0c0"/>
+      <path d="M21.6 130c1.3-25.3 6.3-50.1 14.8-73.7C42.7 38.7 51.1 21.8 61.1 6l1.6-2.5 1.7 2.4c11.2 15.6 20.4 32.6 27.4 50.6 8.1 20.9 13 42.8 14.6 65.2l.5 6.7-4.1-5.4c-.7-.9-1.5-2-2.3-3-6.4-8.6-17.2-23.1-23.9-23.1h-.4c-16.6 1.7-30.5 14.9-48.1 31.6l-6.8 6.5z" style="fill:#c0c0c0"/>
+      <path d="M62.8 7.1c8.7 12.1 18.9 28.8 27.1 50.1 9.8 25.4 13.3 48.2 14.5 64.6-7.1-9.3-19.2-26.9-27.8-26.9H76c-18.3 1.9-33.1 16.8-52.5 35.1 1-18.8 4.4-44.5 14.7-73.1 7.4-20.4 16.4-37 24.5-49.9ZM62.6 0l-3.2 5C49.3 20.9 40.9 38 34.5 55.7c-8.6 23.8-13.6 48.8-15 74.3l-.5 10 7.3-6.9c1.1-1 2.1-2 3.2-3 17.3-16.4 31-29.4 46.9-31h.2c1 0 4 .7 10.1 7.1 4.4 4.6 8.7 10.5 12.3 15.2.8 1.1 1.6 2.1 2.3 3.1l8.2 10.8-1-13.5c-1.6-22.6-6.6-44.7-14.7-65.7-7-18.1-16.3-35.2-27.6-51L62.8.3Z" style="fill:#c93"/>
+    </svg>
+    <figure class="pageSirPatStew_figure">
+      <blockquote class="pageSirPatStew_quote">
+        <p class="kimBody-l">Someone once told me that time was a predator that stalked us all our lives, but I&rsquo;d rather believe that time is a companion who goes with us on the journey and reminds us to cherish every moment&hellip; because they&rsquo;ll never come again.</p>
+        <p class="kimBody-l">What we leave behind is not as important as how we lived.</p>
+      </blockquote>
+    </figure>
+    <figcaption class="kimBody-s pageSirPatStew_cite">&mdash; Captain Jean-Luc Picard</figcaption>
+    <p class="kimBody kim-!-margin-0">Rest in peace, mon capitaine.</p>
   </section>
 
   {%- if webrings or buttons.homepage %}
@@ -147,6 +164,51 @@
 .pageTransRights span {
   font-weight: 900;
   color: #2E68FF;
+}
+
+.pageSirPatStew {
+  --combadge-size: 5rem;
+
+  margin-block-start: calc(var(--combadge-size) / 2);
+  padding-block-start: calc(var(--space-6) + (var(--combadge-size) / 2));
+  padding-block-end: var(--space-6);
+  padding-inline: var(--space-6);
+  position: relative;
+  background-color: var(--color-surface);
+  text-align: center;
+}
+
+.pageSirPatStew_combadge {
+  inline-size: var(--combadge-size);
+  block-size: var(--combadge-size);
+  position: absolute;
+  inset-block-start: calc(var(--combadge-size) * -.5);
+  inset-inline-start: calc(50% - (var(--combadge-size) / 2));
+}
+
+.pageSirPatStew_figure {
+  margin: 0;
+}
+
+.pageSirPatStew_quote {
+  margin: 0;
+}
+
+.pageSirPatStew_quote p {
+  text-wrap: balance;
+}
+
+.pageSirPatStew_quote p::before {
+  content: "\201C";
+}
+
+.pageSirPatStew_quote p::after {
+  content: "\201D";
+}
+
+.pageSirPatStew_cite {
+  letter-spacing: .35em;
+  text-transform: uppercase;
 }
 
 .pageFauxvertisement {
