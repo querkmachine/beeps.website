@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Homepage history
-updated: 2026-08-03
+updated: 2026-10-05
 metadata:
   description: A visual record of this website's many redesigns, via the homepage.
 ---
