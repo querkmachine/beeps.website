@@ -13,7 +13,7 @@ I prefer you [call me **beeps**]({{ '/about/name/' | url }}). My government name
 
 [I am agender]({{ '/about/gender/' | url }}) and use **it/its pronouns**. They/them is also acceptable in a pinch.
 
-I am a **frontend developer** on the **GOV.UK Design System** team.
+I am a **senior frontend developer** on the **GOV.UK Design System** team.
 
 ## Notices
 

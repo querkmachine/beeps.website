@@ -3,7 +3,7 @@ title: I'm a frontend developer
 redirect_from: /work/
 ---
 
-I work for the [Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS) on the [GOV.UK Design System](http://design-system.service.gov.uk/) team. I'm not currently looking for a new role, please stop asking.
+I work for the [Government Digital Service](https://www.gov.uk/government/organisations/government-digital-service) (GDS), where I'm a senior frontend developer on the [GOV.UK Design System](http://design-system.service.gov.uk/) team. I'm not currently looking for a new role, please stop asking.
 
 I've been making websites professionally since 2012 and as a hobby since 2003. Yes, I've somehow been at this for [over 20 years]({{ '/blog/2023-07-25-20-years/' | url }}).
 
@@ -37,15 +37,15 @@ For the benefit of my memory as much as yours, here's some of the projects and c
 
 The Government Digital Service is part of the UK Government and is responsible for enabling the digital transformation of government services. We do this by creating the tools and guidance that other departments need to build cohesive, accessible and inclusive online services.
 
-To date, I've been the primary developer for [adding full support for localisation](https://frontend.design-system.service.gov.uk/localise-govuk-frontend/#localise-gov-uk-frontend) to Frontend and the [password input component](https://design-system.service.gov.uk/components/password-input/) contribution.
+To date, I've been the primary developer for [adding full support for localisation](https://frontend.design-system.service.gov.uk/localise-govuk-frontend/#localise-gov-uk-frontend) to Frontend and the [password input component](https://design-system.service.gov.uk/components/password-input/) contribution, and a developer on the ["exit this page" component](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/)
 
-I was a major developer on the ["exit this page" component](https://designnotes.blog.gov.uk/2023/08/14/exit-this-page-fast-with-the-design-systems-new-component/) and was responsible for the Frontend implementation, optimisation and release of [King Charles III's Tudor Crown logo](https://insidegovuk.blog.gov.uk/2024/02/19/updating-gov-uks-crown/).
+I was responsible for the Frontend implementation, optimisation and release of [King Charles III's Tudor Crown logo](https://insidegovuk.blog.gov.uk/2024/02/19/updating-gov-uks-crown/) and played a significant role in [the development and release of the refreshed GOV.UK branding]({{ '/blog/2025-06-25-the-not-quite-new-govuk-brand/' | url }}).
 
 This is in addition to all sorts of other small stories, accessibility improvements, writing documentation and guidance, providing user support, and so much more.
 
 I've also [discovered and reported a healthy cache of browser and assistive technology bugs](https://github.com/alphagov/reported-bugs/issues?q=+is:issue+author:querkmachine) to the likes of Apple, Google and Mozilla.
 
-Apart from development-y tasks, I've been staff and moderator for both of the [Design System Day 2022](https://design-system.service.gov.uk/community/design-system-day-2022/) and [Design System Day 2023](https://design-system.service.gov.uk/community/design-system-day-2023/) conferences organised by the Design System team, and contribute to the [WCAG Primer](https://github.com/alphagov/wcag-primer) project.
+Apart from development-y tasks, I've been staff and moderator the Design System Day conferences organised by the Design System team, and contribute to the [WCAG Primer](https://github.com/alphagov/wcag-primer) project.
 
 ### At Felinesoft (2014–2022)
 
