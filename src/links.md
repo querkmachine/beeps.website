@@ -1,7 +1,7 @@
 ---
 layout: generic.njk
 title: Cool links
-updated: 2026-10-03
+updated: 2026-10-31
 metadata:
   description: Cool sites on the information cyber highway that I like.
 cssComponents:
@@ -39,10 +39,10 @@ Here's some websites belonging to people I am at least vaguely familiar with, be
 
 These channels are neat, and most of them don't even have a million subscribers, which is somehow not a lot these days.
 
-- [Auto Schenanigans](https://www.youtube.com/@AutoShenanigans) has a bloke drive around the UK and sardonically tell you things about roads and petrol. He's kinda like one of those train YouTubers but for motorways.
 - [Benjamin Partridge](https://www.youtube.com/@beefanddairynetwork9273) is known for several of comedy podcasts, but for some reason his YouTube channel consists almost entirely of Magnum ice cream reviews.
 - [Chain Bear](https://www.youtube.com/@chainbear) makes video essays about Formula 1 and motorsport, usually to explain some piece of technology or weird application of the rules. They're pretty calming, and proved quite useful when I was first getting into F1.
 - [Eddache](https://www.youtube.com/@eddache) makes animated video essays about animation. Also sometimes non-animated things.
+- [elliotisacoolguy](https://www.youtube.com/@elliotisacoolguyTV), a self-described 'stand-up graphic designer' (if I were to paraphrase his self-description). Makes videos about graphic design, unsurprisingly.
 - [FUNKe](https://www.youtube.com/@FUNKe) makes cool, animated video essays about video games (and somehow the band Weezer without ever actually making a video _about_ Weezer). I can't say I play games (or Weezer) enough to really get it, but the presentation style is da bomb y'all.
 - [Homemade Ecosystems](https://www.youtube.com/@HomemadeEcosystems) is a biologist who builds terrariums with insects in a deadpan, monotone style.
 - [The Infinite Review](https://www.youtube.com/@TheInfiniteReview) seeks to make a review about everything in the universe ever. It might take a while.
@@ -64,7 +64,6 @@ Blogs that I actively keep tabs on and read at least some quantity of the posts.
 - [Adrian Roselli](https://adrianroselli.com/) is a specialist in web accessibility, unafraid of doing deep dives into the nitty-gritty and loudly calling out the failures of major corporations alike. Truly an inspiration.
 - [Dhole Moments](https://soatok.blog/) mostly writes about cryptography, technology, the furry fandom, and all the ways those things frequently intersect.
 - [Food is Stupid](https://foodisstupid.substack.com/). This blog is cursed. This food is cursed. None of you are without sin. (Half the posts are behind a paywall, such is the business of blogging, but the rest of them are still excellent.)
-- [Xe Iaso](https://xeiaso.net/) writes about all sorts of software things that I barely understand but find interesting anyway. Also where I stole the idea of having character callouts in blog posts, though my reasons are far less Socratic.
 
 ## Podroll
 
@@ -96,6 +95,7 @@ Miscellany, &c.
 - [Every Noise at Once](https://everynoise.com/) is a journey through the history of music genres all the way from Russian choir to 'deep deep tech house', all of them with example clips and a huge array of artist information and statistics.
 - [Knockout](https://knockout.chat/), another forum with very chill vibes that I enjoy lurking on.
 - [Open Train Times](https://www.opentraintimes.com) has real time train locations on diagramatic network maps like staff information screens at stations have. Here because I forget the name of it constantly.
+- [Puzzmo](https://puzzmo.com/) is the newspaper's puzzles page but on your computer. New puzzles every day, many of them twists on classics that can't be done anywhere but digitally. [Maybe join me?](https://www.puzzmo.com/user/la/beeps)
 - [Tiled Words](https://tiledwords.com/) is a crossword-like daily puzzle game where you answer the given clues by assembling the crossword grid.
 
 ## Buttons

@@ -259,4 +259,5 @@ export default [
     alt: "Planet Clue",
     url: "//planetclue.com/",
   },
+  { alt: "Kasran", url: "//typh.zone/" },
 ];
