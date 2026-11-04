@@ -22,7 +22,10 @@ import {
   markdownFilter,
   markdownFilterInline,
 } from "./config/markdown.js";
-import { urlizeOpenGraphImage } from "./config/opengraph.js";
+import {
+  urlizeOpenGraphImage,
+  collectionToOpenGraphJson,
+} from "./config/opengraph.js";
 import { compileStylesheets } from "./config/sass.js";
 import { getTableOfContents } from "./config/tableOfContents.js";
 import {
@@ -163,19 +166,29 @@ export default function (eleventyConfig) {
   );
   eleventyConfig.addNunjucksShortcode("youtube", shortcodeYouTube);
 
-  // Filters
+  // Filters - Assets
   eleventyConfig.addFilter("cachebust", cachebustAssetUrl);
+  eleventyConfig.addFilter("urlizeOpenGraphImage", urlizeOpenGraphImage);
+  eleventyConfig.addFilter(
+    "collectionToOpenGraphJson",
+    collectionToOpenGraphJson,
+  );
+
+  // Filters - Blog
   eleventyConfig.addFilter("filterTagList", filterCommonTags);
-  eleventyConfig.addFilter("formatDate", formatDate);
-  eleventyConfig.addFilter("formatISODate", formatISODate);
-  eleventyConfig.addFilter("head", getFirstNItems);
   eleventyConfig.addFilter("tagify", formatAsTag);
   eleventyConfig.addFilter("getArchiveYears", getArchiveYears);
   eleventyConfig.addFilter("getArchivePostsByYear", getArchivePostsByYear);
+
+  // Filters - Stash
   eleventyConfig.addFilter("getDomainFromURL", getDomainFromURL);
+
+  // Filters - General utilities
+  eleventyConfig.addFilter("formatDate", formatDate);
+  eleventyConfig.addFilter("formatISODate", formatISODate);
+  eleventyConfig.addFilter("head", getFirstNItems);
   eleventyConfig.addFilter("markdown", markdownFilter);
   eleventyConfig.addFilter("markdownInline", markdownFilterInline);
-  eleventyConfig.addFilter("urlizeOpenGraphImage", urlizeOpenGraphImage);
 
   return {
     markdownTemplateEngine: "njk",
