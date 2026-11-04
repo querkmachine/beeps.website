@@ -1,53 +1,141 @@
----js
-{
-  pagination: {
-    data: "collections.contentPages",
-    size: 1,
-    alias: "preview"
-  },
-  permalink: "/.opengraph{{preview.url}}",
+---
+  permalink: "/.opengraph/"
   eleventyExcludeFromCollections: true
-}
 ---
 
-{% extends 'src/_layouts/opengraph.njk' %}
-
-{% set title = preview.data.title | default("") %}
-{% set titleLength = title | length %}
-
-{# This doesn't use the css Nunjucks block because using it conflicts with the 
-   one in the opengraph layout, apparently. #}
-{% block head %}
-<style>
-.pageOverrideTitleSize {
-  display: -webkit-box;
-  margin-block-end: 0;
-  padding-block-end: .1em; /* Fix descenders being cut off */
-  font-size: var(--size-5);
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>
-{% endblock %}
-
-{% block title %}
-  {%- if preview.data.isBlogPost %}
-    <div class="kimHeading-m kim-!-margin-block-start-0">
-      {{ preview.date | formatDate('fullDate') }}
+<!doctype html>
+<html lang="en-GB" class="kimPage">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url | cachebust }}" media="all">
+    <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+    <link rel="stylesheet" href="{{ '/assets/components/tag.css' | url | cachebust }}" media="all">
+    <style>
+      .kimPage {
+        overflow: hidden;
+        color-scheme: dark;
+      }
+      .kimPage_body {
+        width: 1200px;
+        height: 630px;
+        min-block-size: unset;
+        position: relative;
+      }
+      .pageNoodle {
+        width: 30%;
+        position: absolute;
+        bottom: -1rem;
+        right: 3rem;
+      }
+      .pageWrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        position: relative;
+      }
+      .pageMeta {
+        display: flex;
+        align-items: baseline;
+      }
+      :is(.pageTag, .pageDate) {
+        margin-block-start: 0;
+        margin-block-end: var(--space-5);
+      }
+      :is(.pageTag, .pageDate)[hidden] {
+        display: none;
+      }
+      .pageDate {
+        margin-inline-start: auto;
+      }
+      .pageHeading {
+        margin-inline-end: 22rem;
+      }
+      .pageFooter {
+        display: flex;
+        align-items: center;
+        padding: 1rem 4rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: var(--color-canvas);
+        background-color: var(--color-text-accent);
+      }
+      .pageLogo {
+        margin-right: 2rem;
+        line-height: 0;
+      }
+      .pageLogo svg {
+        width: 4rem;
+        height: calc(4rem * 1.1875);
+        margin-block-end: -1rem;
+        fill: currentcolor;
+      }
+      .pageLogo svg path:nth-child(2) {
+        fill: var(--color-text-accent);
+      }
+      .pageTitle {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      .pageHeading {
+        margin-block-start: 0;
+      }
+      .pageHeading-overrideSize {
+        font-size: var(--size-4);
+      }
+    </style>
+  </head>
+  <body class="kimPage_body">
+    <div class="pageWrapper">
+      <div class="pageMeta">
+        <div class="kimHeading-s kimTag pageTag" id="section" hidden></div>
+        <div class="kimHeading-s pageDate" id="date" hidden></div>
+      </div>
+      <h1 class="kimHeading-xl pageHeading" id="title">
+        Cryptid critter makes websites &amp; writes stuff.
+      </h1>
     </div>
-    <div class="kimHeading-xl kim-!-margin-block-start-0 {%- if titleLength >= 50 %} pageOverrideTitleSize{% endif %}">
-      {{ title | markdownInline | safe }}
+    <div class="pageFooter">
+      <span class="pageLogo">{% include "logo.njk" %}</span>
+      <span class="pageTitle">beeps.website</span>
     </div>
-  {%- elif preview.url == '/' %}
-    <div class="kimHeading-xl">
-      Cryptid critter<br>
-      builds websites<br>
-      and writes stuff.
-    </div>
-  {%- else %}
-    <div class="kimHeading-xl">
-      {{ (preview.data.title or "") | markdownInline | safe }}
-    </div>
-  {%- endif %}
-{% endblock %}
+    <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.webp' | url }}" class="pageNoodle">
+    
+    <script type="application/json" id="pageData">
+      {{- collections.all | collectionToOpenGraphJson | dump | safe -}}
+    </script>
+    <script>
+      const $title = document.getElementById("title")
+      const $date = document.getElementById("date")
+      const $section = document.getElementById("section")
+      
+      const pageData = JSON.parse(document.getElementById("pageData")?.innerText)
+      const requestedPath = new URLSearchParams(document.location.search).get("page")
+      const thisPageData = pageData[requestedPath]
+      
+      if(thisPageData.title && requestedPath !== "/") {
+        $title.innerText = thisPageData.title
+        
+        if(thisPageData.title.length > 70) {
+          $title.classList.add("pageHeading-overrideSize")
+        }
+      }
+      
+      if(thisPageData.section) {
+        $section.innerText = thisPageData.section 
+        $section.removeAttribute("hidden")
+      }
+      
+      if(thisPageData.date) {
+        $date.innerText = new Intl.DateTimeFormat("en-gb", {
+          day: "numeric", 
+          month: "long", 
+          year: "numeric"
+        }).format(new Date(thisPageData.date))
+        $date.removeAttribute("hidden")
+      }
+    </script>
+  </body>
+</html>
