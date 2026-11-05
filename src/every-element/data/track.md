@@ -5,7 +5,7 @@ category: Media
 spec: https://html.spec.whatwg.org/multipage/media.html#the-track-element
 ---
 
-Provides accessible text alternatives and other metadata to [`audio`](#audio) and [`video`](#video), such as adding closed captions, audio description, or chapter information.
+Provides accessible text alternatives and other metadata to {{ eeTag("audio") }} and {{ eeTag("video") }}, such as adding closed captions, audio description, or chapter information.
 
 Text tracks are provided as files in [WebVTT format](https://en.wikipedia.org/wiki/WebVTT).
 

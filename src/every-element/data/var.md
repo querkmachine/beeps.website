@@ -13,4 +13,4 @@ The total energy required to move something (<var>E</var>) is equal to the mass 
 ```
 <!-- prettier-ignore-end -->
 
-To represent code snippets, use [`code`](#code). For a keyboard key, use [`kbd`](#kbd). For example output of a process, use [`samp`](#samp), or for actual output use [`output`](#output).
+To represent code snippets, use {{ eeTag("code") }}. For a keyboard key, use {{ eeTag("kbd") }}. For example output of a process, use {{ eeTag("samp") }}, or for actual output use {{ eeTag("output") }}.

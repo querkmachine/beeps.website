@@ -5,7 +5,7 @@ category: Grouping content
 spec: https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element
 ---
 
-Defines a section of the page that contains search functionality, typically implemented via a [`form`](#form).
+Defines a section of the page that contains search functionality, typically implemented via a {{ eeTag("form") }}.
 
 This doesn't do much other than inform assistive technology users of where they can find search functionality.
 

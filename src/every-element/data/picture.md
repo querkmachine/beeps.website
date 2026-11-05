@@ -5,11 +5,11 @@ category: Media
 spec: https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
 ---
 
-A container for an [`img`](#img) and any number of [`source`](#source) elements, that allows for conditionally changing the image being displayed by the `img` based on screen resolution, viewport size, and browser support.
+A container for an {{ eeTag("img") }} and any number of {{ eeTag("source") }} elements, that allows for conditionally changing the image being displayed by the `img` based on screen resolution, viewport size, and browser support.
 
 `picture` must contain a single `img` element, which comes last in the element. This `img` is used as a fallback if the browser doesn't support the `picture` element or none of the provided `source`s are able to be used.
 
-Unlike the similar looking [`audio`](#audio) and [`video`](#video) elements, `picture` is _only_ a container. All attributes relating to the image, like `class`es or `alt` text, must be placed on the `img` element, not the `picture` element.
+Unlike the similar looking {{ eeTag("audio") }} and {{ eeTag("video") }} elements, `picture` is _only_ a container. All attributes relating to the image, like `class`es or `alt` text, must be placed on the `img` element, not the `picture` element.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -32,4 +32,4 @@ Unlike the similar looking [`audio`](#audio) and [`video`](#video) elements, `pi
 ```
 <!-- prettier-ignore-end -->
 
-Using `picture` is only beneficial if you're leveraging its ability to replace the source image, otherwise, it's simpler to use [`img`](#img).
+Using `picture` is only beneficial if you're leveraging its ability to replace the source image, otherwise, it's simpler to use {{ eeTag("img") }}.

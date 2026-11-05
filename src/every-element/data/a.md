@@ -11,4 +11,4 @@ Short for 'anchor'. A link that, when clicked, directs the user to a different p
 <a href="mission.html">About our mission</a>
 ```
 
-If submitting a form or activating custom functionality, use a [`button`](#button), instead.
+If submitting a form or activating custom functionality, use a {{ eeTag('button') }}, instead.

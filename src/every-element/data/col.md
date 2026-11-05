@@ -5,7 +5,7 @@ category: Tables
 spec: https://html.spec.whatwg.org/multipage/tables.html#the-col-element
 ---
 
-A mechanism for passing HTML attributes to the columns in a [`table`](#table) without having to repeat them for each table cell. Cols can only be used within a [`colgroup`](#colgroup).
+A mechanism for passing HTML attributes to the columns in a {{ eeTag("table") }} without having to repeat them for each table cell. Cols can only be used within a {{ eeTag("colgroup") }}.
 
 <!-- prettier-ignore-start -->
 ```html

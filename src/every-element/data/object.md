@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object
 
 Represents an external file to embed within the page. The `data` and `type` attributes are required.
 
-Any content inside of the `object`, except for [`embed`](#embed) and [`param`](#param) elements, will be used as fallback content in case the embedded media is unable to be displayed.
+Any content inside of the `object`, except for {{ eeTag("embed") }} and {{ eeTag("param") }} elements, will be used as fallback content in case the embedded media is unable to be displayed.
 
 <!-- prettier-ignore-start -->
 ```html
@@ -17,4 +17,4 @@ Any content inside of the `object`, except for [`embed`](#embed) and [`param`](#
 ```
 <!-- prettier-ignore-end -->
 
-Although still valid, it has largely been replaced by discrete elements like [`canvas`](#canvas), [`audio`](#audio), and [`video`](#video).
+Although still valid, it has largely been replaced by discrete elements like {{ eeTag("canvas") }}, {{ eeTag("audio") }}, and {{ eeTag("video") }}.

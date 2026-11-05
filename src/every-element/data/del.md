@@ -15,4 +15,4 @@ The Higgs-Boson has <del datetime="2013-03-14">not</del> been proven to exist.
 
 Screen readers do not announce the presence of `del` elements, so you may want to use [custom CSS to provide additional context](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/del#accessibility).
 
-The companion to [`ins`](#ins), which is for text that has been added to a document. If something has been stricken entirely, use [`s`](#s).
+The companion to {{ eeTag("ins") }}, which is for text that has been added to a document. If something has been stricken entirely, use {{ eeTag("s") }}.

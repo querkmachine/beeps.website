@@ -9,7 +9,7 @@ A self-contained piece of content, optionally with a caption, that is referenced
 
 Figures can contain any kind of content, but common examples include images, charts and diagrams.
 
-Figures may have a [`figcaption`](#figcaption). If present, the `figcaption` element must be the first or last element in `figure`.
+Figures may have a {{ eeTag("figcaption") }}. If present, the `figcaption` element must be the first or last element in `figure`.
 
 <!-- prettier-ignore-start -->
 ```html

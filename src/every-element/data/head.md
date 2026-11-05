@@ -9,4 +9,4 @@ Surrounds all 'invisible' content on a webpage, that is machine-readable informa
 
 All webpages must contain a `head` element, even if it's empty, and there can only be one `head` element. If omitted, the browser will try to insert one when rendering the page.
 
-Not to be confused with the visible [`header`](#header) element.
+Not to be confused with the visible {{ eeTag("header") }} element.

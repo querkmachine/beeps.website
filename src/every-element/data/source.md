@@ -5,7 +5,7 @@ category: Media
 spec: https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element
 ---
 
-Specifies a media resource to use with [`audio`](#audio), [`video`](#video), and [`picture`](#picture) elements.
+Specifies a media resource to use with {{ eeTag("audio") }}, {{ eeTag("video") }}, and {{ eeTag("picture") }} elements.
 
 When used with `audio` and `video`, `source` elements typically include `src` and `type` attributes that link to the media files and describe what the [media type](https://en.wikipedia.org/wiki/Media_type) of the file is. Browsers will select the earliest listed `source` that the browser and operating system supports playback for.
 

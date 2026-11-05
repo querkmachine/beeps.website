@@ -5,7 +5,7 @@ category: Media
 spec: https://html.spec.whatwg.org/multipage/media.html#the-video-element
 ---
 
-An embedded video file, defined using the `src` attribute or one or more [`source`](#source) elements.
+An embedded video file, defined using the `src` attribute or one or more {{ eeTag("source") }} elements.
 
 By default, the video renders without any controls. The `controls` attribute must be included to provide visible playback controls.
 
@@ -21,4 +21,4 @@ Any HTML inside of the element, that aren't `source` elements, will be displayed
 ```
 <!-- prettier-ignore-end -->
 
-[`track`](#track) elements can be used to provide captions, subtitles, and audio description of video content.
+{{ eeTag("track") }} elements can be used to provide captions, subtitles, and audio description of video content.

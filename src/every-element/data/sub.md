@@ -13,4 +13,4 @@ Inline text that needs to be displayed in subscript (below the text baseline) fo
 ```
 <!-- prettier-ignore-end -->
 
-Companion to [`sup`](#sup), the superscript element.
+Companion to {{ eeTag("sup") }}, the superscript element.

@@ -5,7 +5,7 @@ category: Image maps
 spec: https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
 ---
 
-Defines a clickable region within a [`map`](#map), defined using the `shape`, `coords` and `href` attributes.
+Defines a clickable region within a {{ eeTag('map') }}, defined using the `shape`, `coords` and `href` attributes.
 
 If `shape="rect"`, the `coords` value is the starting X and Y axes coordinates, followed by the ending X and Y axes coordinates.
 

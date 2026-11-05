@@ -1,10 +1,10 @@
 ---
 tag: basefont
 name: Base Font
-category: Metadata
+category: Styling
 obsolete: true
 ---
 
-Specified the default font family, size and colour to use on a document. Like [`font`](#font), but it automatically applied to everything.
+Specified the default font family, size and colour to use on a document. Like {{ eeTag("font") }}, but it automatically applied to everything.
 
 These days, you can just use CSS.

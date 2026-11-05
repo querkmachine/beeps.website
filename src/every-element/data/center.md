@@ -1,6 +1,7 @@
 ---
 tag: center
 name: Centered Text
+category: Styling
 obsolete: true
 ---
 

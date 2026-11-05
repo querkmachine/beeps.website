@@ -1,6 +1,7 @@
 ---
 tag: marquee
 name: Marquee
+category: Styling
 obsolete: true
 ---
 

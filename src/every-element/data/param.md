@@ -5,6 +5,6 @@ category: Embedded content
 obsolete: true
 ---
 
-Represented metadata within [`object`](#object) elements.
+Represented metadata within {{ eeTag("object") }} elements.
 
 This has since been replaced by attributes on the `object` element itself.

@@ -5,7 +5,7 @@ category: Tables
 spec: https://html.spec.whatwg.org/multipage/tables.html#the-caption-element
 ---
 
-The title or caption of a [`table`](#table). A table may only have one caption.
+The title or caption of a {{ eeTag("table") }}. A table may only have one caption.
 
 The caption must be the first element in the table. The location of the caption can be changed using the `caption-side` CSS property.
 

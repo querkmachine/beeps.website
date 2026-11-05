@@ -1,11 +1,11 @@
 ---
 tag: footer
-name: Footer
+name: Content Footer
 category: Sections of a page
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-footer-element
 ---
 
-Represents the footer of the nearest parent section (such as [`article`](#article) or [`section`](#section)) or the document [`body`](#body).
+Represents the footer of the nearest parent section (such as {{ eeTag("article") }} or {{ eeTag("section") }}) or the document {{ eeTag("body") }}.
 
 When used in an article or section, the footer typically contains metadata about the contained content, such as the author, publishing date, and tags.
 

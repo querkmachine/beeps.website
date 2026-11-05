@@ -1,6 +1,7 @@
 ---
 tag: spacer
 name: Spacer
+category: Styling
 obsolete: true
 ---
 

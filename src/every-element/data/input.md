@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/input.html#the-input-element
 
 Inserts an interactive control that can accept input from a user and send it to a server. The appearance, functionality, and restrictions of an input are determined by the `type` attribute.
 
-Inputs must be within a [`form`](#form) and have a `name` attribute to send their data to a server. Inputs should have a [`label`](#label) element associated with them that describes what the user is expected to enter or select.
+Inputs must be within a {{ eeTag("form") }} and have a `name` attribute to send their data to a server. Inputs should have a {{ eeTag("label") }} element associated with them that describes what the user is expected to enter or select.
 
 It is one of the most powerful and complex HTML elements.
 
@@ -25,7 +25,7 @@ The maximum length of the content can be restricted by setting a `maxlength` att
 ```
 <!-- prettier-ignore-end -->
 
-If values longer than one line are accepted, use the [`textarea`](#textarea) element instead.
+If values longer than one line are accepted, use the {{ eeTag("textarea") }} element instead.
 
 ### The `password` type
 
@@ -88,7 +88,7 @@ Colour inputs usually only support the sRGB colour space and returns values in h
 
 Renders selection boxes for a list of options. Checkboxes allow multiple options to be chosen, whereas radio buttons only allow one.
 
-These options should all have the same `name` attribute, individual [`label`s](#label), and be wrapped within a [`fieldset`](#fieldset).
+These options should all have the same `name` attribute, individual {{ eeTag("label") }} elements, and be wrapped within a {{ eeTag("fieldset") }}.
 
 Both checkboxes and radios may be pre-selected by passing the `checked` attribute.
 
@@ -138,13 +138,13 @@ Unlike other input types, setting `value` does nothing on the `file` type.
 
 ### The `button`, `submit` and `reset` types
 
-These work identically to the [`button`](#button) element. See that element for information.
+These work identically to the {{ eeTag("button") }} element. See that element for information.
 
 An `input` with these types can only show plain text text, whereas the `button` element can display a wide range of HTML elements, usually making it preferable.
 
 ### The `image` type
 
-Shows a button with an image in it. This is largely unused in the modern era. Use a [`button`](#button) with CSS or an [`img`](#img) element instead.
+Shows a button with an image in it. This is largely unused in the modern era. Use a {{ eeTag("button") }} with CSS or an {{ eeTag("img") }} element instead.
 
 If you want a user to upload an image, use the `file` type instead.
 

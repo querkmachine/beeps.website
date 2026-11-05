@@ -1,6 +1,7 @@
 ---
 tag: multicol
 name: Multiple Column
+category: Styling
 obsolete: true
 ---
 

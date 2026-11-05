@@ -13,4 +13,4 @@ Encloses a quotation that is inline with other, non-quoted text content.
 ```
 <!-- prettier-ignore-end -->
 
-For quotations that stand by themselves, like pullquotes, use [`blockquote`](#blockquote) instead.
+For quotations that stand by themselves, like pullquotes, use {{ eeTag("blockquote") }} instead.

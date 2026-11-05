@@ -5,7 +5,7 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
 ---
 
-Used to group together multiple related inputs within a [`form`](#form), usually accompanied by a [`legend`](#legend).
+Used to group together multiple related inputs within a {{ eeTag("form") }}, usually accompanied by a {{ eeTag("legend") }}.
 
 This is particularly common with checkboxes and radio buttons, but may apply to any group of several inputs, such as when asking for an address.
 

@@ -16,4 +16,4 @@ A piece of text that should be highlighted because of its relevance to the curre
 ```
 <!-- prettier-ignore-end -->
 
-`mark` is only to highlight content relevant to the user's current context. To highlight text as being important, use [`strong`](#strong). To emphasise text generally, use [`em`](#em).
+`mark` is only to highlight content relevant to the user's current context. To highlight text as being important, use {{ eeTag("strong") }}. To emphasise text generally, use {{ eeTag("em") }}.

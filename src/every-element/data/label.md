@@ -5,7 +5,7 @@ category: Forms
 spec: https://html.spec.whatwg.org/multipage/forms.html#the-label-element
 ---
 
-Represents the label for a form control, such as [`input`](#input), [`select`](#select), or [`textarea`](#textarea).
+Represents the label for a form control, such as {{ eeTag("input") }}, {{ eeTag("select") }}, or {{ eeTag("textarea") }}.
 
 `label` elements are typically associated to the form control using a `for` attribute that matches the `id` of the associated element. The control may also be wrapped in the `label` element, though this tends to limit styling options.
 
@@ -18,4 +18,4 @@ A `label` should only be associated with a single form control, and every contro
 ```
 <!-- prettier-ignore-end -->
 
-To provide a 'label' for a group of inputs, such as checkboxes or radio buttons, use a [`fieldset`](#fieldset) and [`legend`](#legend).
+To provide a 'label' for a group of inputs, such as checkboxes or radio buttons, use a {{ eeTag("fieldset") }} and {{ eeTag("legend") }}.

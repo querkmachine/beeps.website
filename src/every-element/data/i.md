@@ -7,7 +7,7 @@ spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-ele
 
 Represents text that is offset from normal text for readability purposes, such as terms borrowed from other languages, technical terms, and the names of publications, creative works, and vehicles.
 
-Unlike [`em`](#em), `i` does not convey any difference in tone of voice.
+Unlike {{ eeTag("em") }}, `i` does not convey any difference in tone of voice.
 
 <!-- prettier-ignore-start -->
 ```html
