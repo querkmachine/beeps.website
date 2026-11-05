@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB" class="kimPage">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | url | cachebust }}" media="all">
+    <link rel="stylesheet" href="{{ '/assets/stylesheet.css' | url | cachebust }}" media="all">
+    <style>
+      .kimPage {
+        overflow: hidden;
+        color-scheme: dark;
+      }
+      .kimPage_body {
+        position: relative;
+      }
+      .pageNoodle {
+        width: 30vw;
+        position: absolute;
+        bottom: -2vw;
+        right: 3vw;
+      }
+      .pageWrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin-inline-end: 30vw;
+        padding: 6vw;
+        position: relative;
+      }
+      .kimHeading-xl {
+        font-size: 6.5vw;
+      }
+      .pageFooter {
+        display: flex;
+        align-items: center;
+        padding: 1vw 6vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: var(--color-canvas);
+        background-color: var(--color-text-accent);
+      }
+      .pageLogo {
+        margin-right: 2vw;
+        line-height: 0;
+      }
+      .pageLogo svg {
+        width: 5vw;
+        height: calc(5vw * 1.1875);
+        margin-block-end: -1vw;
+        fill: currentcolor;
+      }
+      .pageLogo svg path:nth-child(2) {
+        fill: var(--color-text-accent);
+      }
+      .pageTitle {
+        font-size: 3vw;
+        font-weight: 600;
+      }
+    </style>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="kimPage_body">    
+    <div class="pageWrapper">
+      {% block title %}{% endblock %}
+    </div>
+    <div class="pageFooter">
+      <span class="pageLogo">{% include "logo.njk" %}</span>
+      <span class="pageTitle">{% block metadata %}beeps.website{% endblock %}</span>
+    </div>
+    <img alt="An amphimorpho flashing you the peace sign." src="{{ '/assets/images/noodle-opengraph.webp' | url }}" class="pageNoodle">
+  </body>
+</html>
