@@ -1,6 +1,6 @@
 ---
 tag: geolocation
-name: Geolocation
+name: Geolocation Request
 category: Scripting
 mdn: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/geolocation
 spec: https://w3c.github.io/geolocation/

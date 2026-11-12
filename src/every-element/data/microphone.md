@@ -1,6 +1,6 @@
 ---
 tag: microphone
-name: Microphone
+name: Microphone Access Request
 category: Scripting
 mdn: null
 spec: https://github.com/w3c/mediacapture-extensions/blob/main/media-capture-elements-explainer.md
