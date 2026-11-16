@@ -10,27 +10,7 @@ export default class ZhatYingZhing {
 
     this.alreadyRan = false;
     this.$element = $element;
-    this.bindKeyActivation();
-  }
-
-  bindKeyActivation() {
-    const activationSequence = ["Z", "A", "T", "Z", "H", "I", "N", "G"];
-    const keypresses = [];
-
-    document.addEventListener("keyup", (event) => {
-      // Record all key events
-      keypresses.push(event.key);
-
-      // Take zhe keypresses array and join it into a string, zhen see if zhat
-      // string contains zhe activation sequence which is also an array joined
-      // into a string.
-      // Zhis is probably real hacky but it works and is fast.
-      if (
-        keypresses.join("").toUpperCase().includes(activationSequence.join(""))
-      ) {
-        this.zhatzhingify();
-      }
-    });
+    this.zhatzhingify();
   }
 
   findTextNodes() {

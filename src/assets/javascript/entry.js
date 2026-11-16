@@ -13,10 +13,29 @@ async function importModuleIfPresent(name) {
   }
 }
 
+async function importEggy(name, activationPhrase) {
+  let keypresses = [];
+
+  if (localStorage.getItem(activationPhrase) === "true") {
+    await importModule(name);
+  }
+
+  document.addEventListener("keyup", async (event) => {
+    keypresses.push(event.key);
+    keypresses = keypresses.slice(0 - activationPhrase.length);
+
+    if (
+      keypresses.join("").toUpperCase().includes(activationPhrase.toUpperCase())
+    ) {
+      await importModule(name);
+    }
+  });
+}
+
 importModuleIfPresent("fauxvertisements");
 importModuleIfPresent("image-differ");
 importModuleIfPresent("lastfm");
 importModuleIfPresent("masthead");
 importModuleIfPresent("share");
 importModuleIfPresent("tabs");
-importModule("zhat-ying-zhing");
+importEggy("zhat-ying-zhing", "zatzhing");
