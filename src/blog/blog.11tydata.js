@@ -11,7 +11,7 @@ async function cacheFediverseAvatar(avatarUrl, avatarFilename) {
     const avatar = await EleventyFetch(avatarUrl, { type: "buffer" });
     await writeFile(path.join(folder, avatarFilename), avatar);
   } catch (err) {
-    // Suppress errors, I don't really care if this fails
+    console.log(err);
   }
 }
 

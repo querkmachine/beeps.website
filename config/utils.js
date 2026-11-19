@@ -40,20 +40,17 @@ const formatDate = function (dateObj, format) {
     case "iso":
       // e.g. 2026-01-02T14:55:26Z
       return date.toISODate();
-      break;
-    case "smartDate":
+    case "smartDate": {
       // Includes year only if post was >1 year in the past
       // e.g. 2 January or 2 January 2026
       const oneYearAgo = DateTime.now().minus({ years: 1 });
       return date.toFormat(`d LLLL${date < oneYearAgo ? " yyyy" : ""}`);
-      break;
+    }
     case "fullDate":
       // e.g. 2 January 2026
       return date.toFormat("d LLLL yyyy");
-      break;
     default:
       return date.toFormat(format);
-      break;
   }
 };
 
