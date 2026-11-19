@@ -30,7 +30,7 @@
     "@11ty/eleventy-plugin-rss": "^3.1.0",
     "@eslint/js": "^9.39.5",
     "@eslint/json": "^0.14.0",
-    "cssnano": "^9.4.0",
+    "cssnano": "^9.9.0",
     "eslint": "^9.39.5",
     "glob": "^13.0.6",
     "globals": "^17.14.0",
@@ -42,9 +42,9 @@
     "markdown-it-anchor": "^10.0.0",
     "node-html-parser": "^9.0.4",
     "postcss": "^8.5.26",
-    "postcss-preset-env": "^11.6.1",
+    "postcss-preset-env": "^11.6.2",
     "prettier": "^3.9.10",
-    "sass": "^1.105.1"
+    "sass": "^1.108.2"
   },
   "lint-staged": {
     "!_site/**/*": "prettier --write --ignore-unknown"
